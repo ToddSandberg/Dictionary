@@ -1,0 +1,22 @@
+package ai.legendary;
+
+import java.io.Serializable;
+
+public class Interjection implements PartOfSpeech,Serializable{
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -8206020155454902728L;
+    public String Interjection = "Interjection";
+	public int interjectionTypeID = -1;
+	public Interjection(){
+		this("");
+	}
+	public Interjection(String word) {
+		// TODO Auto-generated constructor stub
+	}
+	public String toString(){
+	    return "Interjection: InterjectionTypeID=" + interjectionTypeID;
+	}
+
+}
