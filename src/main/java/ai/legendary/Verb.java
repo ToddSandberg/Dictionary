@@ -1,18 +1,11 @@
 package ai.legendary;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Verb implements PartOfSpeech ,Serializable{
     /**
@@ -177,7 +170,29 @@ public class Verb implements PartOfSpeech ,Serializable{
             }
     }
     public void addCompliments(ArrayList<String> comp){
-        
+        for(int x=0;x<comp.size();x++){
+            String s = comp.get(x);
+            if(transivity.equals("--")){
+                transivity = "";
+            }
+            if(transivity.length()>1){
+                transivity+="+";
+            }
+            if(s.contains("pphr")){
+                String[] split = s.split(",");
+                transivity += split[0] +"+";
+                if(split.length>2){
+                    transivity+=split[1]+"+"+split[2];
+                }
+                else{
+                    transivity+=split[1];
+                }
+            }
+            else{
+                transivity+=s;
+            }
+
+        }
     }
     public String toString(){
         return "Verb: VerbType="+verbType + ", Transivity="

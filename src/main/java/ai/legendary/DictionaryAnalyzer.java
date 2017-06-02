@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
@@ -170,7 +169,7 @@ public class DictionaryAnalyzer {
 					    if(!n.baseForm.equals("--")){
 					        definedbaseform++;
 					    }
-					    if(!n.animacy.equals("--")){
+					    if(n.animacy != null){
 					        definedanimacy++;
 					    }
 					    

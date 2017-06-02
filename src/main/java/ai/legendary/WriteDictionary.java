@@ -2,10 +2,12 @@ package ai.legendary;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -41,6 +43,7 @@ public class WriteDictionary {
     public static HashMap<String, Pronoun> pronounDictionary = new HashMap<String, Pronoun>();
     public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
 
+    public static HashMap<String,String> animacy;
     static int seconds = 0;
     static Timer time = new Timer();
     static TimerTask ttask = new TimerTask(){
@@ -51,6 +54,18 @@ public class WriteDictionary {
     };
     public static void main(String[] args) {
         try {
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.txt"));
+            animacy=(HashMap<String,String>)in.readObject();  
+            in.close();
+            /*animacy=new HashMap<String,String>();
+
+            FileOutputStream fout=new FileOutputStream("outputs/animacyquery.txt");  
+            ObjectOutputStream out=new ObjectOutputStream(fout);  
+            out.writeObject(animacy);  
+            out.flush();  
+            out.close();  
+            fout.close();  */
+            //counts seconds until the program finishes
             time.scheduleAtFixedRate(ttask,1000,1000);
             File f = new File("README.md");
             PrintWriter printed = new PrintWriter(f);
@@ -106,7 +121,13 @@ public class WriteDictionary {
             toHashMap("prep");
             toHashMap("verb");
             
-           
+            FileOutputStream fout=new FileOutputStream("outputs/animacyquery.txt");  
+            ObjectOutputStream out=new ObjectOutputStream(fout);  
+            out.writeObject(animacy);  
+            out.flush();  
+            out.close();  
+            fout.close();  
+            
             printer.println("## Current Dictionary Write Time: " +seconds/60 + " minutes and "+seconds%60+" seconds");
             printer.close();
         }
@@ -114,7 +135,10 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * Serializes all dictionarys to hashmap files
+     * @param string name of the dictionary to be serialized
+     */
     private static void toHashMap(String string) {
         try {
             FileOutputStream fout = new FileOutputStream(
@@ -130,7 +154,9 @@ public class WriteDictionary {
         }
 
     }
-
+    /**
+     * Prints all dictionarys to .csv format
+     */
     private static void toCSV() {
         try {
             // nounprinter setup
@@ -314,7 +340,9 @@ public class WriteDictionary {
         }
 
     }
-
+    /**
+     * Implements all subordinate conjunctions
+     */
     private static void subordinateConjunctions() {
         File f = new File("inputs/subordinateConjunctions.txt");
         try {
@@ -332,7 +360,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * implements gender specific nouns
+     */
     private static void nounGender() {
         File f = new File("inputs/NounGenderList.txt");
         try {
@@ -353,10 +383,12 @@ public class WriteDictionary {
 
                         if (masculine) {
                             Noun pos = new Noun(words[i] + "#~~");
+                            animacy = pos.checkAnimacy(word, animacy);
                             merge(word, pos);
                         }
                         else if (!masculine) {
                             Noun pos = new Noun(words[i] + "@~~");
+                            animacy = pos.checkAnimacy(word, animacy);
                             merge(word, pos);
                         }
 
@@ -416,7 +448,7 @@ try{
                 if (p.irregularPluralForm.equals("--")) {
                     p.irregularPluralForm = ((Noun) part).irregularPluralForm;
                 }
-                if(!p.animacy.equals("--")){
+                if(p.animacy == null){
                     p.animacy = ((Noun) part).animacy;
                 }
             }
@@ -618,6 +650,7 @@ catch(Exception e){
             while (scan.hasNext()) {
                 String scanIn = scan.nextLine();
                 if (!scanIn.equals("\n") && !scanIn.equals("")) {
+                    //seperates the part of speech from the word
                     String[] input = scanIn.split("\\$");
                     if (input.length > 0 && input.length < 3) {
                         String word = input[0];
@@ -630,13 +663,19 @@ catch(Exception e){
                             System.out.println(word);
                             /* Check what part of speech it is */
                             if (pos.equals("N")) {
-                                merge(word, new Noun(word));
+                                Noun n = new Noun(word);
+                                animacy = n.checkAnimacy(word, animacy);
+                                merge(word, n);
                             }
                             else if (pos.equals("p")) {
-                                merge(word, new Noun(word + "~~@"));
+                                Noun n = new Noun(word + "~~@");
+                                animacy = n.checkAnimacy(word, animacy);
+                                merge(word, n);
                             }
                             else if (pos.equals("h")) {
-                                merge(word, new Noun(word + "~@~"));
+                                Noun n = new Noun(word + "~@~");
+                                animacy = n.checkAnimacy(word, animacy);
+                                merge(word, n);
                             }
                             else if (pos.equals("V")) {
                                 merge(word, new Verb(word));
@@ -750,10 +789,16 @@ catch(Exception e){
                     }
                     else if (pos.equals("noun")) {
                         if (eElement.getElementsByTagName("nonCount")
-                                .getLength() > 0)
-                            merge(word, new Noun(word + "#~"));
-                        else
-                            merge(word, new Noun(word));
+                                .getLength() > 0){
+                            Noun n = new Noun(word + "#~");
+                            animacy = n.checkAnimacy(word, animacy);
+                            merge(word, n);
+                        }
+                        else{
+                            Noun n = new Noun(word);
+                            animacy = n.checkAnimacy(word, animacy);
+                            merge(word, n);
+                        }
                     }
                     else if (pos.equals("adjective")) {
                         String temp = word;
@@ -815,7 +860,9 @@ catch(Exception e){
                 String word = scan2.nextLine();
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
-                    merge(word, new Noun(word + "@~"));
+                    Noun n = new Noun(word + "@~");
+                    animacy = n.checkAnimacy(word, animacy);
+                    merge(word, n);
                 }
             }
             scan2.close();
@@ -826,7 +873,9 @@ catch(Exception e){
                 String word = scan.nextLine();
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
-                    merge(word, new Noun(word + "#~"));
+                    Noun n = new Noun(word + "#~");
+                    animacy = n.checkAnimacy(word,animacy);
+                    merge(word, n);
                 }
             }
             scan.close();
@@ -979,8 +1028,11 @@ catch(Exception e){
                         parts.add(n);
 
                     }
-                    if (pos.equals("verb"))
-                        parts.add(new Verb(word));
+                    if (pos.equals("verb")){
+                        Verb v = new Verb(word);
+                        v.addCompliments(compliments);
+                        parts.add(v);
+                    }
                     if (pos.equals("adj")) {
                         String temp = word;
                         // attrib position

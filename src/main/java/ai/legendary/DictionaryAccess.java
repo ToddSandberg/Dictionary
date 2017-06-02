@@ -2,12 +2,10 @@ package ai.legendary;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
-import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
@@ -156,11 +154,8 @@ public class DictionaryAccess {
 
         for(CoreMap sentence: sentences) {
             for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
-                // this is the text of the token
                 String w = token.get(TextAnnotation.class);
-                // this is the POS tag of the token
                 String pos = token.get(PartOfSpeechAnnotation.class);
-                
                 output += getWordInfo(w,convertnlp(pos)) + "\n";
               }
         }

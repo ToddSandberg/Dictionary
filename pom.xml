@@ -29,7 +29,6 @@
     <dependency>
     	<groupId>edu.stanford.nlp</groupId>
     	<artifactId>stanford-corenlp</artifactId>
-    	<version>3.7.0</version>
     </dependency>
     <dependency>
     	<groupId>org.json</groupId>
@@ -41,5 +40,25 @@
     	<artifactId>commons-io</artifactId>
     	<version>2.5</version>
     </dependency>
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>6.0.6</version>
+    </dependency>
   </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>edu.stanford.nlp</groupId>
+  			<artifactId>standford-corenlp</artifactId>
+  			<version>3.7.0</version>
+  			<classifier>models</classifier>
+  		</dependency>
+  		<dependency>
+  			<groupId>edu.stanford.nlp</groupId>
+  			<artifactId>stanford-corenlp</artifactId>
+  			<version>3.7.0</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
