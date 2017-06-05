@@ -233,8 +233,10 @@ public class Noun implements PartOfSpeech,Serializable{
 
         }
         catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Waiting for 1 hour");
             try {
-                Thread.sleep(360000);
+                Thread.sleep(3600000);
                 return checker(add);
             }
             catch (InterruptedException e1) {

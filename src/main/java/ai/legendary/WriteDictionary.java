@@ -348,6 +348,7 @@ public class WriteDictionary {
                 String word = scan.nextLine();
                 if (!word.equals("") && !word.equals("\n")) {
                     Conjunction pos = new Conjunction(word + "@");
+                    System.out.println(word);
                     merge(word, pos);
                 }
             }
@@ -377,7 +378,7 @@ public class WriteDictionary {
                     String[] words = d.split(",");
                     for (int i = 0; i < words.length; i++) {
                         String word = words[i];
-
+                        System.out.println(word);
                         if (masculine) {
                             Noun pos = new Noun(words[i] + "#~~");
                             animacy = pos.checkAnimacy(word, animacy);
