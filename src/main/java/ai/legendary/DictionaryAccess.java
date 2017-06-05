@@ -16,16 +16,16 @@ import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 
 public class DictionaryAccess {
-    public static HashMap<String, Noun> nounDictionary = new HashMap<String, Noun>();
-    public static HashMap<String, Verb> verbDictionary = new HashMap<String, Verb>();
-    public static HashMap<String, Adjective> adjectiveDictionary = new HashMap<String, Adjective>();
-    public static HashMap<String, Adverb> adverbDictionary = new HashMap<String, Adverb>();
-    public static HashMap<String, Conjunction> conjunctionDictionary = new HashMap<String, Conjunction>();
-    public static HashMap<String, Determiner> determinerDictionary = new HashMap<String, Determiner>();
-    public static HashMap<String, Interjection> interjectionDictionary = new HashMap<String, Interjection>();
-    public static HashMap<String, Preposition> prepositionDictionary = new HashMap<String, Preposition>();
-    public static HashMap<String, Pronoun> pronounDictionary = new HashMap<String, Pronoun>();
-    public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
+    public static HashMap<String, Noun> nounDictionary;
+    public static HashMap<String, Verb> verbDictionary;
+    public static HashMap<String, Adjective> adjectiveDictionary;
+    public static HashMap<String, Adverb> adverbDictionary;
+    public static HashMap<String, Conjunction> conjunctionDictionary;
+    public static HashMap<String, Determiner> determinerDictionary;
+    public static HashMap<String, Interjection> interjectionDictionary;
+    public static HashMap<String, Preposition> prepositionDictionary;
+    public static HashMap<String, Pronoun> pronounDictionary;
+    public static HashMap<String, Quantifier> quantifierDictionary;
 
     public DictionaryAccess() {
         ObjectInputStream in;
@@ -34,61 +34,61 @@ public class DictionaryAccess {
             in = new ObjectInputStream(
                     new FileInputStream("outputs/nounDictHashMap.txt"));
             System.out.println("Loading noun dictionary...");
-            nounDictionary = (HashMap) in.readObject();
+            nounDictionary = (HashMap<String, Noun>) in.readObject();
             in.close();
             //load verbs
             in = new ObjectInputStream(
                     new FileInputStream("outputs/verbDictHashMap.txt"));
             System.out.println("Loading verbdictionary...");
-            verbDictionary = (HashMap) in.readObject();
+            verbDictionary = (HashMap<String, Verb>) in.readObject();
             in.close();
             //adjectives
             in = new ObjectInputStream(
                     new FileInputStream("outputs/adjDictHashMap.txt"));
             System.out.println("Loading adjective dictionary...");
-            adjectiveDictionary = (HashMap) in.readObject();
+            adjectiveDictionary = (HashMap<String, Adjective>) in.readObject();
             in.close();
             //adverbs
             in = new ObjectInputStream(
                     new FileInputStream("outputs/advDictHashMap.txt"));
             System.out.println("Loading adverb dictionary...");
-            adverbDictionary = (HashMap) in.readObject();
+            adverbDictionary = (HashMap<String, Adverb>) in.readObject();
             in.close();
             //conjunction
             in = new ObjectInputStream(
                     new FileInputStream("outputs/conjDictHashMap.txt"));
             System.out.println("Loading conjunction dictionary...");
-            conjunctionDictionary = (HashMap) in.readObject();
+            conjunctionDictionary = (HashMap<String, Conjunction>) in.readObject();
             in.close();
             //determiners
             in = new ObjectInputStream(
                     new FileInputStream("outputs/detDictHashMap.txt"));
             System.out.println("Loading determiner dictionary...");
-            determinerDictionary = (HashMap) in.readObject();
+            determinerDictionary = (HashMap<String, Determiner>) in.readObject();
             in.close();
             //interjection
             in = new ObjectInputStream(
                     new FileInputStream("outputs/interjectionDictHashMap.txt"));
             System.out.println("Loading interjection dictionary...");
-            interjectionDictionary = (HashMap) in.readObject();
+            interjectionDictionary = (HashMap<String, Interjection>) in.readObject();
             in.close();
             //prepositions
             in = new ObjectInputStream(
                     new FileInputStream("outputs/prepDictHashMap.txt"));
             System.out.println("Loading preposition dictionary...");
-            prepositionDictionary = (HashMap) in.readObject();
+            prepositionDictionary = (HashMap<String, Preposition>) in.readObject();
             in.close();
             //pronouns
             in = new ObjectInputStream(
                     new FileInputStream("outputs/pronDictHashMap.txt"));
             System.out.println("Loading pronoun dictionary...");
-            pronounDictionary = (HashMap) in.readObject();
+            pronounDictionary = (HashMap<String, Pronoun>) in.readObject();
             in.close();
             //quantifiers
             in = new ObjectInputStream(
                     new FileInputStream("outputs/quantifierDictHashMap.txt"));
             System.out.println("Loading quantifier dictionary...");
-            quantifierDictionary = (HashMap) in.readObject();
+            quantifierDictionary = (HashMap<String, Quantifier>) in.readObject();
             in.close();
             
             System.out.println("Loaded");
@@ -104,40 +104,40 @@ public class DictionaryAccess {
             return "Word: "+word+  "\n"+getdictionary(pos).get(word).toString() + "\n";
         }
         else
-            return word + " " + getdictionary(pos) + " is not in Dictionary\n";
+            return word + " " + pos + " is not in Dictionary\n";
     }
 
     public String getWordInfo(String word) {
         String p = "Word: "+word+"\n";
         if (nounDictionary.containsKey(word)){
-            p+=nounDictionary.get(word) + "\n";
+            p+=nounDictionary.get(word).toString() + "\n";
         }
         if(verbDictionary.containsKey(word)){
-            p+=verbDictionary.get(word) + "\n";
+            p+=verbDictionary.get(word).toString() + "\n";
         }
         if(adjectiveDictionary.containsKey(word)){
-            p+=adjectiveDictionary.get(word) + "\n";
+            p+=adjectiveDictionary.get(word).toString() + "\n";
         }
         if(adverbDictionary.containsKey(word)){
-            p+=adverbDictionary.get(word)+ "\n";
+            p+=adverbDictionary.get(word).toString()+ "\n";
         }
         if(conjunctionDictionary.containsKey(word)){
-            p+=conjunctionDictionary.get(word)+ "\n";
+            p+=conjunctionDictionary.get(word).toString()+ "\n";
         }
         if(determinerDictionary.containsKey(word)){
-            p+=determinerDictionary.get(word)+ "\n";
+            p+=determinerDictionary.get(word).toString()+ "\n";
         }
         if(interjectionDictionary.containsKey(word)){
-            p+=interjectionDictionary.get(word)+ "\n";
+            p+=interjectionDictionary.get(word).toString()+ "\n";
         }
         if(prepositionDictionary.containsKey(word)){
-            p+=prepositionDictionary.get(word)+ "\n";
+            p+=prepositionDictionary.get(word).toString()+ "\n";
         }
         if(pronounDictionary.containsKey(word)){
-            p+=pronounDictionary.get(word)+ "\n";
+            p+=pronounDictionary.get(word).toString()+ "\n";
         }
         if(quantifierDictionary.containsKey(word)){
-            p+=quantifierDictionary.get(word)+ "\n";
+            p+=quantifierDictionary.get(word).toString()+ "\n";
         }
 
             return p;
@@ -145,7 +145,7 @@ public class DictionaryAccess {
 
     public String getMultipleWordInfo(String word) {
         Properties props = new Properties();
-        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
+        props.setProperty("annotators", "tokenize, ssplit, pos, parse");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
         Annotation document = new Annotation(word);
         pipeline.annotate(document);
@@ -159,6 +159,7 @@ public class DictionaryAccess {
                 output += getWordInfo(w,convertnlp(pos)) + "\n";
               }
         }
+        sentences.clear();
         return output;
     }
     private String convertnlp(String pos) {
@@ -195,7 +196,7 @@ public class DictionaryAccess {
         else return null;
     }
 
-    private static HashMap getdictionary(String pos){
+    private static HashMap<String, ?> getdictionary(String pos){
         if(pos.equals("noun")){
             return nounDictionary;
         }

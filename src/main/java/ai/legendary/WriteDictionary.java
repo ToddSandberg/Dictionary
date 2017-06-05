@@ -11,7 +11,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -24,9 +23,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 public class WriteDictionary {
     /**
@@ -57,8 +53,9 @@ public class WriteDictionary {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.txt"));
             animacy=(HashMap<String,String>)in.readObject();  
             in.close();
+            System.out.println("Starting");
             /*animacy=new HashMap<String,String>();
-
+            
             FileOutputStream fout=new FileOutputStream("outputs/animacyquery.txt");  
             ObjectOutputStream out=new ObjectOutputStream(fout);  
             out.writeObject(animacy);  

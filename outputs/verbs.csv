@@ -591,7 +591,7 @@ resicken,--,--,--,--,N/A,No,null
 transhipping,--,Ambitransitive,--,--,N/A,No,null
 diffusing,--,--,--,--,N/A,No,null
 overelaborating,--,--,--,--,N/A,No,null
-have out,--,Transitive,--,--,N/A,NotSeperable,null
+have out,--,Transitive,--,--,N/A,Seperable,null
 reshaken,--,--,--,--,N/A,No,null
 made,--,--,--,--,N/A,No,null
 hoeing,--,--,--,--,N/A,No,null
@@ -1954,7 +1954,7 @@ unchain,--,Transitive,--,--,N/A,No,null
 misconceived,--,Ambitransitive,Past,--,N/A,No,null
 unchair,--,Transitive,--,--,N/A,No,null
 sensualized,--,Transitive,Past,--,N/A,No,null
-make believe,--,--,--,--,N/A,Seperable,null
+make believe,--,--,--,--,N/A,NotSeperable,null
 reaffiliating,--,--,--,--,N/A,No,null
 disentitled,--,Transitive,Past,--,N/A,No,null
 hang together,--,Intransitive,--,--,N/A,Seperable,null
@@ -4905,7 +4905,7 @@ waggon,--,--,--,--,N/A,No,null
 marinade,--,tran=np+ditran=np+pphr(in+np),--,--,N/A,No,null
 promoting,--,Transitive,--,--,N/A,No,null
 vein,--,Transitive,--,--,N/A,No,null
-hold together,--,--,--,--,N/A,Seperable,null
+hold together,--,--,--,--,N/A,NotSeperable,null
 outcut,--,Transitive,--,--,N/A,No,null
 urging,--,--,--,--,N/A,No,null
 veil,--,Transitive,--,--,N/A,No,null
@@ -7135,7 +7135,7 @@ phosphorising,--,Transitive,--,--,N/A,No,null
 concede,--,Transitive,--,--,N/A,No,null
 syntonise,--,Transitive,--,--,N/A,No,null
 cinchonizing,--,Transitive,--,--,N/A,No,null
-have at,--,Intransitive,--,--,N/A,NotSeperable,null
+have at,--,Intransitive,--,--,N/A,Seperable,null
 outpromising,--,Transitive,--,--,N/A,No,null
 sulfonate,--,Transitive,--,--,N/A,No,null
 decentralised,--,Transitive,Past,--,N/A,No,null
@@ -7305,7 +7305,7 @@ embower,--,Transitive,--,--,N/A,No,null
 curl up,--,Intransitive,--,--,N/A,NotSeperable,null
 embowel,--,tran=np,--,--,N/A,No,null
 porrect,--,Transitive,--,--,N/A,No,null
-have on,--,Transitive,--,--,N/A,NotSeperable,null
+have on,--,Transitive,--,--,N/A,Seperable,null
 opacify,--,Ambitransitive,--,--,N/A,No,null
 fracturing,--,--,--,--,N/A,No,null
 mistyping,--,--,--,--,N/A,No,null
@@ -7446,7 +7446,7 @@ handseled,--,--,Past,--,N/A,No,null
 pollinating,--,Transitive,--,--,N/A,No,null
 reheel,--,Transitive,--,--,N/A,No,null
 twitch,--,Intransitive,--,--,N/A,No,null
-have in,--,Transitive,--,--,N/A,NotSeperable,null
+have in,--,Transitive,--,--,N/A,Seperable,null
 reseek,--,Transitive,--,--,N/A,No,null
 reseed,--,tran=np,Past,--,N/A,No,null
 outsmart,--,Transitive,--,--,N/A,No,null
@@ -7711,7 +7711,7 @@ phonate,--,Intransitive,--,--,N/A,No,null
 preoblige,--,Transitive,--,--,N/A,No,null
 undid,--,--,--,--,N/A,No,null
 familiarize,--,Transitive,--,--,N/A,No,null
-have up,--,Transitive,--,--,N/A,NotSeperable,null
+have up,--,Transitive,--,--,N/A,Seperable,null
 poppled,--,--,Past,--,N/A,No,null
 systematising,--,Transitive,--,--,N/A,No,null
 recancel,--,Transitive,--,--,N/A,No,null
@@ -8369,7 +8369,7 @@ kennelling,--,--,--,--,N/A,No,null
 gall,--,Transitive,--,--,N/A,No,null
 emceeing,--,--,--,--,N/A,No,null
 diminish,--,Transitive,--,--,N/A,No,null
-head for,--,--,--,--,N/A,NotSeperable,null
+head for,--,--,--,--,N/A,Seperable,null
 leant,--,--,--,--,N/A,No,null
 reword,--,Transitive,--,--,N/A,No,null
 alchemizing,--,Transitive,--,--,N/A,No,null
@@ -8932,7 +8932,7 @@ install,--,Ditransitive,--,--,N/A,No,null
 professionalized,--,--,Past,--,N/A,No,null
 underbalance,--,Transitive,--,--,N/A,No,null
 centupled,--,--,Past,--,N/A,No,null
-help out,--,--,--,--,N/A,NotSeperable,null
+help out,--,--,--,--,N/A,Seperable,null
 bulk,--,tran=np,--,--,N/A,No,null
 anteceded,--,Transitive,Past,--,N/A,No,null
 bull,--,Ambitransitive,--,--,N/A,No,null
@@ -9223,7 +9223,7 @@ attest,--,Transitive,--,--,N/A,No,null
 entice,--,Transitive,--,--,N/A,No,null
 tire,--,Ambitransitive,--,--,N/A,No,null
 preinsure,--,Transitive,--,--,N/A,No,null
-look up,--,Intransitive,--,--,N/A,Seperable,null
+look up,--,Intransitive,--,--,N/A,NotSeperable,null
 redivided,--,--,Past,--,N/A,No,null
 unify,--,tran=np,--,--,N/A,No,null
 repolarize,--,Transitive,--,--,N/A,No,null
@@ -9658,7 +9658,7 @@ unblade,--,Transitive,--,--,N/A,No,null
 overcloud,--,tran=np,--,--,N/A,No,null
 burble,--,Intransitive,--,--,N/A,No,null
 dagger,--,Transitive,--,--,N/A,No,null
-hold off,--,Intransitive,--,--,N/A,Seperable,null
+hold off,--,Intransitive,--,--,N/A,NotSeperable,null
 preomitting,--,Transitive,--,--,N/A,No,null
 refueling,--,--,--,--,N/A,No,null
 stenciled,--,--,Past,--,N/A,No,null
@@ -9667,7 +9667,7 @@ routinize,--,Transitive,--,--,N/A,No,null
 reendorse,--,Transitive,--,--,N/A,No,null
 remitted,--,--,Past,--,N/A,No,null
 gunkholed,--,Intransitive,Past,--,N/A,No,null
-make with,--,Intransitive,--,--,N/A,Seperable,null
+make with,--,Intransitive,--,--,N/A,NotSeperable,null
 coerced,--,Transitive,Past,--,N/A,No,null
 lackey,--,--,--,--,N/A,No,null
 wriggle,--,Intransitive,--,--,N/A,No,null
@@ -9835,7 +9835,7 @@ rehumanized,--,--,Past,--,N/A,No,null
 spatting,--,--,--,--,N/A,No,null
 rearising,--,Intransitive,--,--,N/A,No,null
 factorize,--,Transitive,--,--,N/A,No,null
-hold out,--,Intransitive,--,--,N/A,Seperable,null
+hold out,--,Intransitive,--,--,N/A,NotSeperable,null
 innovate,--,tran=np,--,--,N/A,No,null
 hyperdeified,--,Transitive,Past,--,N/A,No,null
 yield,--,Ambitransitive,--,--,N/A,No,null
@@ -10109,7 +10109,7 @@ persevere,--,Intransitive,--,--,N/A,No,null
 reenergized,--,Transitive,Past,--,N/A,No,null
 skeletonise,--,Transitive,--,--,N/A,No,null
 menaced,--,--,Past,--,N/A,No,null
-hold back,--,Transitive,--,--,N/A,Seperable,null
+hold back,--,Transitive,--,--,N/A,NotSeperable,null
 influence,--,Transitive,--,--,N/A,No,null
 subcompensate,--,Transitive,--,--,N/A,No,null
 acerbate,--,Transitive,--,--,N/A,No,null
@@ -12957,7 +12957,7 @@ run up,--,Transitive,--,--,N/A,NotSeperable,null
 scrimmage,--,Intransitive,--,--,N/A,No,null
 reedifying,--,Transitive,--,--,N/A,No,null
 ransack,--,Transitive,--,--,N/A,No,null
-hunt down,--,Intransitive,--,--,N/A,Seperable,null
+hunt down,--,Intransitive,--,--,N/A,NotSeperable,null
 astound,--,Transitive,--,--,N/A,No,null
 Harveyized,--,Transitive,Past,--,N/A,No,null
 verbify,--,tran=np,--,--,N/A,No,null
@@ -12981,7 +12981,7 @@ monograph,--,Transitive,--,--,N/A,No,null
 immoralising,--,Transitive,--,--,N/A,No,null
 true,--,Transitive,--,--,N/A,No,null
 glow,--,Intransitive,--,--,N/A,No,null
-make for,--,Intransitive,--,--,N/A,Seperable,null
+make for,--,Intransitive,--,--,N/A,NotSeperable,null
 prealleged,--,Transitive,Past,--,N/A,No,null
 groove,--,Ambitransitive,--,--,N/A,No,null
 recategorized,--,Transitive,Past,--,N/A,No,null
@@ -13600,7 +13600,7 @@ card,--,Transitive,--,--,N/A,No,null
 care,--,Intransitive,--,--,N/A,No,null
 preconsent,--,Intransitive,--,--,N/A,No,null
 annunciating,--,Transitive,--,--,N/A,No,null
-hold down,--,Transitive,--,--,N/A,Seperable,null
+hold down,--,Transitive,--,--,N/A,NotSeperable,null
 unclogged,--,Transitive,Past,--,N/A,No,null
 hocus-pocusing,--,--,--,--,N/A,No,null
 localized,--,--,Past,--,N/A,No,null
@@ -14219,7 +14219,7 @@ tusk,--,--,--,--,N/A,No,null
 superquoted,--,--,Past,--,N/A,No,null
 shoot through,--,Intransitive,--,--,N/A,NotSeperable,null
 importune,--,Transitive,--,--,N/A,No,null
-look through,--,Intransitive,--,--,N/A,Seperable,null
+look through,--,Intransitive,--,--,N/A,NotSeperable,null
 perambulated,--,--,Past,--,N/A,No,null
 subterraneanizing,--,Transitive,--,--,N/A,No,null
 preincorporate,--,Transitive,--,--,N/A,No,null
@@ -15780,7 +15780,7 @@ croquet,--,--,--,--,N/A,No,null
 insulating,--,Transitive,--,--,N/A,No,null
 preobstruct,--,Transitive,--,--,N/A,No,null
 rimpled,--,--,Past,--,N/A,No,null
-look over,--,Intransitive,--,--,N/A,Seperable,null
+look over,--,Intransitive,--,--,N/A,NotSeperable,null
 cogging,--,--,--,--,N/A,No,null
 decollating,--,Transitive,--,--,N/A,No,null
 issuing,--,--,--,--,N/A,No,null
@@ -15886,7 +15886,7 @@ force,--,Transitive,--,--,N/A,No,null
 nutted,--,--,Past,--,N/A,No,null
 undersee,--,Intransitive,--,--,N/A,No,null
 outstartling,--,Transitive,--,--,N/A,No,null
-rub in,--,Transitive,--,--,N/A,Seperable,null
+rub in,--,Transitive,--,--,N/A,NotSeperable,null
 count on,--,Intransitive,--,--,N/A,NotSeperable,null
 localize,--,Transitive,--,--,N/A,No,null
 scorify,--,--,--,--,N/A,No,null
@@ -15932,7 +15932,7 @@ beflagging,--,Transitive,--,--,N/A,No,null
 catheterising,--,Transitive,--,--,N/A,No,null
 stroking,--,--,--,--,N/A,No,null
 sexualized,--,Transitive,Past,--,N/A,No,null
-hold with,--,Intransitive,--,--,N/A,Seperable,null
+hold with,--,Intransitive,--,--,N/A,NotSeperable,null
 bandsawed,--,Transitive,Past,--,N/A,No,null
 replay,--,tran=np,--,--,N/A,No,null
 debouch,--,Intransitive,--,--,N/A,No,null
@@ -16954,7 +16954,7 @@ unshade,--,Transitive,--,--,N/A,No,null
 nill,--,Ambitransitive,--,--,N/A,No,null
 marshalled,--,--,Past,--,N/A,No,null
 exchanging,--,--,--,--,N/A,No,null
-make out,--,Ambitransitive,--,--,N/A,Seperable,null
+make out,--,Ambitransitive,--,--,N/A,NotSeperable,null
 yike,--,--,--,--,N/A,No,null
 burred,--,--,Past,--,N/A,No,null
 unkink,--,tran=np+ditran=np+pphr(from+np),--,--,N/A,No,null
@@ -17158,7 +17158,7 @@ alcoholising,--,Transitive,--,--,N/A,No,null
 alkalinised,--,Transitive,Past,--,N/A,No,null
 underdevelope,--,Transitive,--,--,N/A,No,null
 ablated,--,--,Past,--,N/A,No,null
-make off,--,Intransitive,--,--,N/A,Seperable,null
+make off,--,Intransitive,--,--,N/A,NotSeperable,null
 testimonialized,--,Transitive,Past,--,N/A,No,null
 abrogated,--,Transitive,Past,--,N/A,No,null
 obviating,--,Transitive,--,--,N/A,No,null
@@ -17854,7 +17854,7 @@ reacclimate,--,tran=np+tran=pphr(to+np)+ditran=np+pphr(to+np),--,--,N/A,No,null
 pregratified,--,Transitive,Past,--,N/A,No,null
 sousing,--,--,--,--,N/A,No,null
 dentalised,--,Transitive,Past,--,N/A,No,null
-make of,--,Transitive,--,--,N/A,Seperable,null
+make of,--,Transitive,--,--,N/A,NotSeperable,null
 repaving,--,Transitive,--,--,N/A,No,null
 tranquillize,--,tran=np,--,--,N/A,No,null
 hocussed,--,Transitive,Past,--,N/A,No,null
@@ -18364,7 +18364,7 @@ intersqueezing,--,Transitive,--,--,N/A,No,null
 attemper,--,Transitive,--,--,N/A,No,null
 cannibalizing,--,--,--,--,N/A,No,null
 field,--,Ambitransitive,--,--,N/A,No,null
-hold in,--,Transitive,--,--,N/A,Seperable,null
+hold in,--,Transitive,--,--,N/A,NotSeperable,null
 readopt,--,Transitive,--,--,N/A,No,null
 synchronise,--,Intransitive,--,--,N/A,No,null
 unsectarianizing,--,Transitive,--,--,N/A,No,null
@@ -18448,7 +18448,7 @@ prealleging,--,Transitive,--,--,N/A,No,null
 fire away,--,Intransitive,--,--,N/A,NotSeperable,null
 centrifuging,--,--,--,--,N/A,No,null
 readorn,--,Transitive,--,--,N/A,No,null
-hold on,--,Intransitive,--,--,N/A,Seperable,null
+hold on,--,Intransitive,--,--,N/A,NotSeperable,null
 revoted,--,--,Past,--,N/A,No,null
 swaddle,--,Transitive,--,--,N/A,No,null
 blent,--,--,--,--,N/A,No,null
@@ -18922,7 +18922,7 @@ unshroud,--,Transitive,--,--,N/A,No,null
 dissipate,--,Ambitransitive,--,--,N/A,No,null
 jauk,--,Intransitive,--,--,N/A,No,null
 drouk,--,Transitive,--,--,N/A,No,null
-head off,--,Transitive,--,--,N/A,NotSeperable,null
+head off,--,Transitive,--,--,N/A,Seperable,null
 overpollinating,--,Transitive,--,--,N/A,No,null
 soul-kiss,--,Ambitransitive,--,--,N/A,No,null
 reexecute,--,Transitive,--,--,N/A,No,null
@@ -19662,7 +19662,7 @@ wine,--,Intransitive,--,--,N/A,No,null
 wind,--,Transitive,--,--,N/A,No,null
 reinscribe,--,Transitive,--,--,N/A,No,null
 suffumigate,--,Transitive,--,--,N/A,No,null
-hang up,--,Transitive,--,--,N/A,NotSeperable,null
+hang up,--,Transitive,--,--,N/A,Seperable,null
 achieve,--,Transitive,--,--,N/A,No,null
 yellow,--,tran=np,--,--,N/A,No,null
 secularising,--,Transitive,--,--,N/A,No,null
@@ -21652,7 +21652,7 @@ warring,--,--,--,--,N/A,No,null
 revitalizing,--,Transitive,--,--,N/A,No,null
 cross-index,--,Intransitive,--,--,N/A,No,null
 outbalancing,--,Transitive,--,--,N/A,No,null
-spell out,--,Transitive,--,--,N/A,Seperable,null
+spell out,--,Transitive,--,--,N/A,NotSeperable,null
 etherializing,--,Transitive,--,--,N/A,No,null
 boohoos,--,--,--,--,N/A,No,null
 fustigating,--,Transitive,--,--,N/A,No,null
@@ -24194,7 +24194,7 @@ panhandle,--,--,--,--,N/A,No,null
 upthrowing,--,--,--,--,N/A,No,null
 braising,--,Transitive,--,--,N/A,No,null
 outlaunch,--,Transitive,--,--,N/A,No,null
-rule out,--,Transitive,--,--,N/A,Seperable,null
+rule out,--,Transitive,--,--,N/A,NotSeperable,null
 regrade,--,Transitive,--,--,N/A,No,null
 objectivize,--,Transitive,--,--,N/A,No,null
 preplan,--,tran=np,--,--,N/A,No,null
@@ -24522,7 +24522,7 @@ come across,--,Intransitive,--,--,N/A,NotSeperable,null
 entomologise,--,Intransitive,--,--,N/A,No,null
 disclaim,--,Transitive,--,--,N/A,No,null
 exonerating,--,Transitive,--,--,N/A,No,null
-hear out,--,Transitive,--,--,N/A,NotSeperable,null
+hear out,--,Transitive,--,--,N/A,Seperable,null
 euphemized,--,--,Past,--,N/A,No,null
 plant,--,Transitive,--,--,N/A,No,null
 luff,--,Intransitive,--,--,N/A,No,null
@@ -25428,7 +25428,7 @@ subgaped,--,Intransitive,Past,--,N/A,No,null
 chew up,--,Transitive,--,--,N/A,NotSeperable,null
 depeopling,--,Transitive,--,--,N/A,No,null
 overrun,--,Ambitransitive,--,--,N/A,No,null
-make over,--,Transitive,--,--,N/A,Seperable,null
+make over,--,Transitive,--,--,N/A,NotSeperable,null
 Gallicise,--,Ambitransitive,--,--,N/A,No,null
 briquet,--,Transitive,--,--,N/A,No,null
 feminized,--,Ambitransitive,Past,--,N/A,No,null
@@ -27992,7 +27992,7 @@ expropriated,--,Transitive,Past,--,N/A,No,null
 aromatising,--,Transitive,--,--,N/A,No,null
 esteem,--,Transitive,--,--,N/A,No,null
 rise above,--,Intransitive,--,--,N/A,NotSeperable,null
-hit out,--,Intransitive,--,--,N/A,Seperable,null
+hit out,--,Intransitive,--,--,N/A,NotSeperable,null
 regularize,--,Transitive,--,--,N/A,No,null
 meliorating,--,Ambitransitive,--,--,N/A,No,null
 pelorizing,--,Transitive,--,--,N/A,No,null

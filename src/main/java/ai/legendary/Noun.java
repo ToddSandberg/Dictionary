@@ -1,16 +1,17 @@
 package ai.legendary;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.apache.commons.io.IOUtils;
+//import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 public class Noun implements PartOfSpeech,Serializable{
     /**
@@ -184,9 +185,9 @@ public class Noun implements PartOfSpeech,Serializable{
             // get inputstream from httpurlconnection
             InputStream is = hp.getInputStream();
             // get text from inputstream using IOUtils
-            String jsonText = IOUtils.toString(is, Charset.forName("UTF-8"));
+            JSONTokener tokener = new JSONTokener(is);
             // get json object from the json String
-            JSONObject json = new JSONObject(jsonText);
+            JSONObject json = new JSONObject(tokener);
             // get the edges array from the JSONObject which contains all
             // content
             JSONArray edges = json.getJSONArray("edges");
@@ -230,6 +231,16 @@ public class Noun implements PartOfSpeech,Serializable{
                 return "Inanimate";
             }
 
+        }
+        catch(IOException e){
+            try {
+                Thread.sleep(360000);
+                return checker(add);
+            }
+            catch (InterruptedException e1) {
+               return null;
+            }
+            
         }
         catch (Exception e) {
             e.printStackTrace();
