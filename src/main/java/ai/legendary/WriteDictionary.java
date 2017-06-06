@@ -54,14 +54,6 @@ public class WriteDictionary {
             animacy=(HashMap<String,String>)in.readObject();  
             in.close();
             System.out.println("Starting");
-            /*animacy=new HashMap<String,String>();
-            
-            FileOutputStream fout=new FileOutputStream("outputs/animacyquery.txt");  
-            ObjectOutputStream out=new ObjectOutputStream(fout);  
-            out.writeObject(animacy);  
-            out.flush();  
-            out.close();  
-            fout.close();  */
             //counts seconds until the program finishes
             time.scheduleAtFixedRate(ttask,1000,1000);
             File f = new File("README.md");
@@ -117,7 +109,7 @@ public class WriteDictionary {
             toHashMap("quantifier");
             toHashMap("prep");
             toHashMap("verb");
-            
+            /*store animacy querys for future runs*/
             FileOutputStream fout=new FileOutputStream("outputs/animacyquery.txt");  
             ObjectOutputStream out=new ObjectOutputStream(fout);  
             out.writeObject(animacy);  
@@ -653,10 +645,9 @@ catch(Exception e){
                     if (input.length > 0 && input.length < 3) {
                         String word = input[0];
                         String[] poses = input[1].split("");
-                        ArrayList<PartOfSpeech> parts = new ArrayList<PartOfSpeech>();
                         int i = 0;
+                        //goes through each part of speech
                         while (i < poses.length) {
-
                             String pos = poses[i];
                             System.out.println(word);
                             /* Check what part of speech it is */
@@ -746,7 +737,6 @@ catch(Exception e){
             for (int i = 0; i < nList.getLength(); i++) {
                 Node nNode = nList.item(i);
                 String word = "";
-                ArrayList<PartOfSpeech> parts = new ArrayList<PartOfSpeech>();
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
                     /* Get the word */
@@ -854,7 +844,6 @@ catch(Exception e){
             Scanner scan2 = new Scanner(f2);
 
             while (scan2.hasNext()) {
-                ArrayList<PartOfSpeech> parts = new ArrayList<PartOfSpeech>();
                 String word = scan2.nextLine();
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
@@ -867,7 +856,6 @@ catch(Exception e){
             File f = new File("inputs/NounList_MassNounsOnly.txt");
             Scanner scan = new Scanner(f);
             while (scan.hasNext()) {
-                ArrayList<PartOfSpeech> parts = new ArrayList<PartOfSpeech>();
                 String word = scan.nextLine();
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
@@ -922,7 +910,7 @@ catch(Exception e){
                     System.out.println(word + " contains:"
                             + getdictionary(pos).containsKey(word));
                 }
-                // get the pelling variant of the word
+                // get the spelling variant of the word
                 else if(split[0].endsWith("spelling_variant")){
                     wordvariant = split[1];
                 }

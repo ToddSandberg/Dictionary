@@ -7,45 +7,78 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>legendary</name>
-  <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+<name>DictionaryWriter</name>
+<description>This application writes a lexicon using a variety of sources, then allows easy access to it.</description>
+<url>https://github.com/ToddSandberg/Dictionary</url>
+
+<developers>
+    <developer>
+      <name>Todd Sandberg</name>
+      <organization>Legendary AI</organization>
+      <organizationUrl>http://www.legendary.ai</organizationUrl>
+    </developer>
+  </developers>
+
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
     	<groupId>com.google.code.gson</groupId>
     	<artifactId>gson</artifactId>
+<scope>compile</scope>
     	<version>2.8.0</version>
     </dependency>
 <dependency>
     <groupId>edu.stanford.nlp</groupId>
     <artifactId>stanford-corenlp</artifactId>
+<scope>compile</scope>
     <version>3.2.0</version>
 </dependency>
 <dependency>
     <groupId>edu.stanford.nlp</groupId>
     <artifactId>stanford-corenlp</artifactId>
+<scope>compile</scope>
     <version>3.2.0</version>
     <classifier>models</classifier>
 </dependency>
     <dependency>
     	<groupId>org.json</groupId>
     	<artifactId>json</artifactId>
+<scope>compile</scope>
     	<version>20170516</version>
     </dependency>
     <dependency>
     	<groupId>mysql</groupId>
     	<artifactId>mysql-connector-java</artifactId>
+	<scope>compile</scope>
     	<version>6.0.6</version>
     </dependency>
   </dependencies>
+
+<build>
+  <plugins>
+    <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>ai.legendary.WriteDictionary</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
+<licenses>
+  <license>
+    <name>The Apache License, Version 2.0</name>
+    <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+  </license>
+</licenses>
 </project>
