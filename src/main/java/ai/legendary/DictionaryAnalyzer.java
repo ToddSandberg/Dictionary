@@ -58,6 +58,7 @@ public class DictionaryAnalyzer {
 	public double nounBaseForm;
 	public double adverbIrreg;
 	public double nounanimacy;
+	public double adjectiveItensifierID;
 	public DictionaryAnalyzer (HashMap<String, Noun> nounDictionary,HashMap<String, Verb> verbDictionary,HashMap<String, Adjective> adjectiveDictionary,HashMap<String, Adverb> adverbDictionary,HashMap<String, Conjunction> conjunctionDictionary,HashMap<String, Determiner> determinerDictionary,HashMap<String, Interjection> interjectionDictionary,HashMap<String, Preposition> prepositionDictionary,HashMap<String, Pronoun> pronounDictionary,HashMap<String, Quantifier> quantifierDictionary){
 		try {
 		    double totalNouns =0;
@@ -117,6 +118,7 @@ public class DictionaryAnalyzer {
             double definedbaseform=0;
             double definedairreg=0;
             double definedanimacy=0;
+            double definedaintens=0;
             
             double nounmasc=0;
             double nounfem=0;
@@ -241,6 +243,9 @@ public class DictionaryAnalyzer {
 						if(a.mustUseMoreMost != null){
                             definedamustusemoremost++;
                         }
+						if(a.adjectiveIntensifierID != -1){
+						    definedaintens++;
+						}
 					}
             Iterator advit = adverbDictionary.entrySet().iterator();
             while(advit.hasNext()) {
@@ -451,6 +456,9 @@ public class DictionaryAnalyzer {
             /*Adjective must use more most*/
             amustUseMoreMost = definedamustusemoremost/totalAdjectives;
             printer.println("- Percentage of mustUseMoreMost defined: "+df.format((amustUseMoreMost*100))+"%");
+            /*Adjective intensifier*/
+            adjectiveItensifierID = definedaintens/totalAdjectives;
+            printer.println("- Percentage of adjectiveItensifierID defined: "+df.format((adjectiveItensifierID*100))+"%");
             
             
             /*Adverbs:*/

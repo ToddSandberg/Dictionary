@@ -14,6 +14,10 @@ public class Adjective implements PartOfSpeech, Serializable {
      * 5=SizeOrShape 6=Age 7=Color 8=Material 9=Qualifier
      */
     public int adjectiveOrderID = -1;
+    /**
+     * base ID = 2
+     */
+    public int adjectiveIntensifierID = -1;
     public String comparisonType = "--", quantifier = "--";
     public Boolean isQualitative = null, isClassifying = null,
             commonlyPrecededWithAnd = null, worksInAttributivePosition = null,

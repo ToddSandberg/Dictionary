@@ -20,7 +20,8 @@ public class Noun implements PartOfSpeech,Serializable{
     private static final long serialVersionUID = -8185217038014096172L;
     public String Noun = "Noun";
 	public String plurality = "--",gender= "--",anAbbreviationFor="--", abbreviatedFrom="--",anAcronymFor="--",irregularPluralForm="--";
-	public Boolean isCompound=null,isCountable=null,acceptsZeroArticle=null,isProperName=null;
+	public Boolean isCompound=null,isCountable=null,acceptsZeroArticle=null,isProperName=null,location = null;
+	private transient static boolean l =false;
 	public String compliments = "--";
     public String baseForm= "--" ,animacy = null;
     public transient static String c = "";
@@ -143,6 +144,7 @@ public class Noun implements PartOfSpeech,Serializable{
                 String thing = checker(query);
                 hm.put(query,thing);
                 animacy = thing;
+                location = l;
             }
             else{
                 animacy = hm.get(query);
@@ -214,6 +216,9 @@ public class Noun implements PartOfSpeech,Serializable{
                     }
                     else if (checkString("human") || checkString("person") || checkString("girl") || checkString("boy") || checkString("man") || checkString("woman")) {
                         human = true;
+                    }
+                    else if(checkString("room")||checkString("city")||checkString("continent")||checkString("country")||checkString("area")||checkString("state")||checkString("building")||checkString("place")||checkString("street")||checkString("body")||checkString("appendage")||checkString("body part")){
+                        l = true;
                     }
                 }
 

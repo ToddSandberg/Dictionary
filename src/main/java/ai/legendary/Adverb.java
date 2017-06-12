@@ -8,6 +8,9 @@ public class Adverb implements PartOfSpeech,Serializable{
      */
     private static final long serialVersionUID = -3581083482214729589L;
     public String Adverb = "Adverb";
+    /**
+     * Base ID = 2
+     */
 	public int advIntensiferID = -1;
 	public Boolean isRelativeAdverb=false,isComparativeAdverb=null,isSuperlativeAdverb=null,noCompOrSuperForm=null,mustUseMoreMost=null;
 	public String advIntensifier = "--";

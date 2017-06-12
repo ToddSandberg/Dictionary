@@ -9,6 +9,6 @@ public class Accesser {
         System.out.println(acc.getMultipleWordInfo("I like big pizza"));
         System.out.println(acc.getMultipleWordInfo("I booked a room two weeks ago"));
         System.out.println(acc.getMultipleWordInfo("there must be a bath telephone and TV in the room"));
-        
+        System.out.println(acc.getMultipleWordInfo("what is going on ?"));
     }
 }

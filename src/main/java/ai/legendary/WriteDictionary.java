@@ -39,7 +39,9 @@ public class WriteDictionary {
     public static HashMap<String, Pronoun> pronounDictionary = new HashMap<String, Pronoun>();
     public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
 
-    public static HashMap<String,String> animacy;
+    public static HashMap<String,String> animacy = new HashMap<String,String>();
+    static FileOutputStream fout;
+    static ObjectOutputStream out;
     static int seconds = 0;
     static Timer time = new Timer();
     static TimerTask ttask = new TimerTask(){
@@ -50,10 +52,11 @@ public class WriteDictionary {
     };
     public static void main(String[] args) {
         try {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.txt"));
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.ser"));
             animacy=(HashMap<String,String>)in.readObject();  
             in.close();
             System.out.println("Starting");
+            
             //counts seconds until the program finishes
             time.scheduleAtFixedRate(ttask,1000,1000);
             File f = new File("README.md");
@@ -67,12 +70,27 @@ public class WriteDictionary {
             // Adds all subordinate conjunctions to the dictionary
             subordinateConjunctions();
             printer.println("- subordinateConjunctions.txt Implemented");
+            /*store animacy querys for future runs*/
+            fout=new FileOutputStream("outputs/animacyquery.ser");  
+            out=new ObjectOutputStream(fout);  
+            out.writeObject(animacy);  
+            out.flush();  
+            out.close();  
+            fout.close(); 
             // Adds all specific gender nouns to the dictionary
             nounGender();
             printer.println("- nounGenderList.txt Implemented ");
+            /*store animacy querys for future runs*/
+            fout=new FileOutputStream("outputs/animacyquery.ser");  
+            out=new ObjectOutputStream(fout);  
+            out.writeObject(animacy);  
+            out.flush();  
+            out.close();  
+            fout.close(); 
             // Implements MobyWordListWithPOS.txt to the dictionary
             mobyListPOS();
             printer.println("- MobyWordListWithPOS.txt Implemented");
+            
             // Implements default-lexion.xml
             defLexicon();
             printer.println("- default-lexicon.xml Implemented");
@@ -83,6 +101,9 @@ public class WriteDictionary {
             // Implements SPECIALIST LEXICON
             speclexicon();
             printer.println("- LEXICON.txt semiImplemented");
+            // Implements Adverb Scales
+            adverbIntensifiers();
+            printer.println("- AdverbScales-Manual.xlsx semiImplemented");
 
             printer.println("## Document Output Formats:");
             printer.println(
@@ -110,8 +131,8 @@ public class WriteDictionary {
             toHashMap("prep");
             toHashMap("verb");
             /*store animacy querys for future runs*/
-            FileOutputStream fout=new FileOutputStream("outputs/animacyquery.txt");  
-            ObjectOutputStream out=new ObjectOutputStream(fout);  
+            fout=new FileOutputStream("outputs/animacyquery.ser");  
+            out=new ObjectOutputStream(fout);  
             out.writeObject(animacy);  
             out.flush();  
             out.close();  
@@ -131,7 +152,7 @@ public class WriteDictionary {
     private static void toHashMap(String string) {
         try {
             FileOutputStream fout = new FileOutputStream(
-                    "outputs/" + string + "DictHashMap.txt");
+                    "outputs/" + string + "DictHashMap.ser");
             ObjectOutputStream out = new ObjectOutputStream(fout);
             out.writeObject(getdictionary(string));
             out.flush();
@@ -157,7 +178,7 @@ public class WriteDictionary {
             File adjectives = new File("outputs/adjectives.csv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word,AdjectiveOrderID,ComparisonType,Quantifier,IsQualitative,IsClassifying,CommonlyPrecededWithAnd,WorksInAttributivePosition,WorksInPredicativePosition,HasDiminutiveSuffix,IsProper,Compliments,MustUseMoreMost");
+                    "Word,AdjectiveOrderID,ComparisonType,Quantifier,IsQualitative,IsClassifying,CommonlyPrecededWithAnd,WorksInAttributivePosition,WorksInPredicativePosition,HasDiminutiveSuffix,IsProper,Compliments,MustUseMoreMost,AdjectiveIntensifierID");
             // verbprinter setup
             File verbs = new File("outputs/verbs.csv");
             PrintWriter verbprinter = new PrintWriter(verbs);
@@ -223,7 +244,7 @@ public class WriteDictionary {
                         + a.worksInAttributivePosition + ","
                         + a.worksInPredicativePosition + ","
                         + a.hasDiminutiveSuffix + "," + a.isProper + ","
-                        + a.compliments + "," + a.mustUseMoreMost);
+                        + a.compliments + "," + a.mustUseMoreMost+ ","+a.adjectiveIntensifierID);
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while (verbit.hasNext()) {
@@ -487,6 +508,9 @@ try{
                 if (p.mustUseMoreMost == null) {
                     p.mustUseMoreMost = ((Adjective) part).mustUseMoreMost;
                 }
+                if(p.adjectiveIntensifierID == -1){
+                    p.adjectiveIntensifierID = ((Adjective) part).adjectiveIntensifierID;
+                }
             }
             else {
                 adjectiveDictionary.put(w, (Adjective) part);
@@ -637,6 +661,7 @@ catch(Exception e){
         try {
             File f = new File("inputs/MobyWordListWithPOS.txt");
             Scanner scan = new Scanner(f);
+            int x = 0;
             while (scan.hasNext()) {
                 String scanIn = scan.nextLine();
                 if (!scanIn.equals("\n") && !scanIn.equals("")) {
@@ -714,10 +739,21 @@ catch(Exception e){
                             }
                             i++;
                         }
-
+                        if(x==5000){
+                        /*store animacy querys for future runs*/
+                        fout=new FileOutputStream("outputs/animacyquery.ser");  
+                        out=new ObjectOutputStream(fout);  
+                        out.writeObject(animacy);  
+                        out.flush();  
+                        out.close();  
+                        fout.close();
+                        x=0;
+                        }
+                        x++;
                     }
                 }
             }
+            
             scan.close();
         }
         catch (Exception e) {
@@ -1116,6 +1152,36 @@ catch(Exception e){
 
     }
 
+    public static void adverbIntensifiers(){
+        try {
+            Scanner scan = new Scanner(new File("inputs/AdverbsScales-Manual.xlsx"));
+            scan.nextLine();
+            while(scan.hasNextLine()){
+                String s = scan.nextLine();
+                String [] split = s.split(",");
+                if(split.length>1){
+                String word = split[0];
+                Adverb adv = new Adverb(word);
+                adv.advIntensiferID = (Integer.parseInt(split[2]))+2;
+                adv.advIntensifier = split[1];
+                merge(word,adv);
+                if(word.endsWith("ly")){
+                    String wordadj = word.substring(0, word.length()-2);
+                    if(adjectiveDictionary.containsKey(wordadj)){
+                    Adjective adj = new Adjective(wordadj);
+                    adj.adjectiveIntensifierID =(Integer.parseInt(split[2]))+2;
+                    merge(wordadj,adj);
+                    }
+                }
+                }
+            }
+            scan.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    
     public static PartOfSpeech determinerSorter(String s) {
         if (s.equals("a") || s.equals("an") || s.equals("the")
                 || s.equals("this") || s.equals("these") || s.equals("that")
@@ -1194,4 +1260,6 @@ catch(Exception e){
         else
             return null;
     }
+    
+
 }

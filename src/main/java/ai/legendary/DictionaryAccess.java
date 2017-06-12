@@ -156,7 +156,9 @@ public class DictionaryAccess {
             for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
                 String w = token.get(TextAnnotation.class);
                 String pos = token.get(PartOfSpeechAnnotation.class);
+                if(convertnlp(pos) != null)
                 output += getWordInfo(w,convertnlp(pos)) + "\n";
+                else output += "Puncuation";
               }
         }
         sentences.clear();
