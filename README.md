@@ -32,15 +32,15 @@
 - Percentage of hasDiminutiveSuffix defined: 100%
 - Percentage of ajectiveOrderID defined: 0.13%
 - Percentage of mustUseMoreMost defined: 27.35%
-- Percentage of adjectiveItensifierID defined: 0%
-### Adverb Analysis (Total Adverbs: 13,426): 
-- Percentage of IntensiferId defined: 0%
+- Percentage of adjectiveItensifierID defined: 0.92%
+### Adverb Analysis (Total Adverbs: 13,475): 
+- Percentage of IntensiferId defined: 5.42%
 - Percentage of isRelativeAdverb defined: 100%
-- Percentage of isComparativeAdverb defined: 0.77%
-- Percentage of isSuperlativeAdverb defined: 0.77%
-- Percentage of advIntensifier defined: 0%
-- Percentage of noCompOrSuperForm defined: 17.15%
-- Percentage of mustUseMoreMost defined: 17.15%
+- Percentage of isComparativeAdverb defined: 0.78%
+- Percentage of isSuperlativeAdverb defined: 0.78%
+- Percentage of advIntensifier defined: 5.42%
+- Percentage of noCompOrSuperForm defined: 17.09%
+- Percentage of mustUseMoreMost defined: 17.09%
 - Percentage of Irregular Form defined: 0.03%
 ### Determiner Analysis (Total Determiners: 11): 
 - Percentage of determinerTypeID defined: 100%
@@ -68,4 +68,4 @@
 ## Document Output Formats:
 - csv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 4699 minutes and 31 seconds
+## Current Dictionary Write Time: 5 minutes and 21 seconds

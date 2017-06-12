@@ -931,7 +931,7 @@ catch(Exception e){
             while (scan.hasNextLine()) {
                 String s = scan.nextLine();
                 // set word
-                if (s.charAt(0) == '{') {
+                if (s.charAt(0) == '{' && s.length()>6) {
                     word = s.substring(6, s.length());
                 }
                 String[] split = s.split("=");
@@ -1154,7 +1154,7 @@ catch(Exception e){
 
     public static void adverbIntensifiers(){
         try {
-            Scanner scan = new Scanner(new File("inputs/AdverbsScales-Manual.xlsx"));
+            Scanner scan = new Scanner(new File("inputs/AdverbScales-Manual.csv"));
             scan.nextLine();
             while(scan.hasNextLine()){
                 String s = scan.nextLine();

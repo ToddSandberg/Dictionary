@@ -32,61 +32,61 @@ public class DictionaryAccess {
         try {
             //load nouns
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/nounDictHashMap.txt"));
+                    new FileInputStream("outputs/nounDictHashMap.ser"));
             System.out.println("Loading noun dictionary...");
             nounDictionary = (HashMap<String, Noun>) in.readObject();
             in.close();
             //load verbs
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/verbDictHashMap.txt"));
+                    new FileInputStream("outputs/verbDictHashMap.ser"));
             System.out.println("Loading verbdictionary...");
             verbDictionary = (HashMap<String, Verb>) in.readObject();
             in.close();
             //adjectives
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/adjDictHashMap.txt"));
+                    new FileInputStream("outputs/adjDictHashMap.ser"));
             System.out.println("Loading adjective dictionary...");
             adjectiveDictionary = (HashMap<String, Adjective>) in.readObject();
             in.close();
             //adverbs
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/advDictHashMap.txt"));
+                    new FileInputStream("outputs/advDictHashMap.ser"));
             System.out.println("Loading adverb dictionary...");
             adverbDictionary = (HashMap<String, Adverb>) in.readObject();
             in.close();
             //conjunction
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/conjDictHashMap.txt"));
+                    new FileInputStream("outputs/conjDictHashMap.ser"));
             System.out.println("Loading conjunction dictionary...");
             conjunctionDictionary = (HashMap<String, Conjunction>) in.readObject();
             in.close();
             //determiners
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/detDictHashMap.txt"));
+                    new FileInputStream("outputs/detDictHashMap.ser"));
             System.out.println("Loading determiner dictionary...");
             determinerDictionary = (HashMap<String, Determiner>) in.readObject();
             in.close();
             //interjection
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/interjectionDictHashMap.txt"));
+                    new FileInputStream("outputs/interjectionDictHashMap.ser"));
             System.out.println("Loading interjection dictionary...");
             interjectionDictionary = (HashMap<String, Interjection>) in.readObject();
             in.close();
             //prepositions
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/prepDictHashMap.txt"));
+                    new FileInputStream("outputs/prepDictHashMap.ser"));
             System.out.println("Loading preposition dictionary...");
             prepositionDictionary = (HashMap<String, Preposition>) in.readObject();
             in.close();
             //pronouns
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/pronDictHashMap.txt"));
+                    new FileInputStream("outputs/pronDictHashMap.ser"));
             System.out.println("Loading pronoun dictionary...");
             pronounDictionary = (HashMap<String, Pronoun>) in.readObject();
             in.close();
             //quantifiers
             in = new ObjectInputStream(
-                    new FileInputStream("outputs/quantifierDictHashMap.txt"));
+                    new FileInputStream("outputs/quantifierDictHashMap.ser"));
             System.out.println("Loading quantifier dictionary...");
             quantifierDictionary = (HashMap<String, Quantifier>) in.readObject();
             in.close();
