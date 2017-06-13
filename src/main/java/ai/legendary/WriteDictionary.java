@@ -103,7 +103,10 @@ public class WriteDictionary {
             printer.println("- LEXICON.txt semiImplemented");
             // Implements Adverb Scales
             adverbIntensifiers();
-            printer.println("- AdverbScales-Manual.xlsx semiImplemented");
+            printer.println("- AdverbScales-Manual.csv Implemented");
+            // Implements locations
+            locations();
+            printer.println("- locations.txt implemented");
 
             printer.println("## Document Output Formats:");
             printer.println(
@@ -173,7 +176,7 @@ public class WriteDictionary {
             File nouns = new File("outputs/nouns.csv");
             PrintWriter nounprinter = new PrintWriter(nouns);
             nounprinter.println(
-                    "Word,Plurality,Gender,AnAbbreviationFor,AbbreviatedFrom,AnAcronymFor,irregularPluralForm,IsCompound,IsCountable,AcceptsZeroArticle,IsProperName,Compliments,BaseForm,Animacy");
+                    "Word,Plurality,Gender,AnAbbreviationFor,AbbreviatedFrom,AnAcronymFor,irregularPluralForm,IsCompound,IsCountable,AcceptsZeroArticle,IsProperName,Compliments,BaseForm,Animacy,location");
             // adjectiveprinter setup
             File adjectives = new File("outputs/adjectives.csv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
@@ -227,7 +230,7 @@ public class WriteDictionary {
                         + "," + n.anAcronymFor + "," + n.irregularPluralForm
                         + "," + n.isCompound + "," + n.isCountable + ","
                         + n.acceptsZeroArticle + "," + n.isProperName + ","
-                        + n.compliments + "," + n.baseForm+","+n.animacy);
+                        + n.compliments + "," + n.baseForm+","+n.animacy+","+n.location);
             }
             Iterator adjit = adjectiveDictionary.entrySet().iterator();
             while (adjit.hasNext()) {
@@ -461,6 +464,9 @@ try{
                 }
                 if(p.animacy == null){
                     p.animacy = ((Noun) part).animacy;
+                }
+                if(p.location == null){
+                    p.location = ((Noun) part).location;
                 }
             }
             else {
@@ -1178,6 +1184,22 @@ catch(Exception e){
             scan.close();
         }
         catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void locations(){
+        try{
+            Scanner s = new Scanner(new File("inputs/locations.txt"));
+            while(s.hasNext()){
+                String stuff = s.next();
+                Noun n = new Noun(stuff);
+                n.location = true;
+                n.animacy = "Inanimate";
+                merge(stuff,n);
+            }
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
     }

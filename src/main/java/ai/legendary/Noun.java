@@ -144,7 +144,7 @@ public class Noun implements PartOfSpeech,Serializable{
                 String thing = checker(query);
                 hm.put(query,thing);
                 animacy = thing;
-                location = l;
+                this.isProperName = l;
             }
             else{
                 animacy = hm.get(query);
@@ -175,7 +175,7 @@ public class Noun implements PartOfSpeech,Serializable{
             }
             // url containing the word to be indexed
             Thread.sleep(100);
-            String obj = "http://api.conceptnet.io/c/en/"+add;
+            String obj = "http://api.conceptnet.io/c/en/"+add+"?offset=0&limit=999999999&query?node=/c/en";
             // open HttpURLConnection
             HttpURLConnection hp = (HttpURLConnection) new URL(obj)
                     .openConnection();
@@ -211,14 +211,17 @@ public class Noun implements PartOfSpeech,Serializable{
                         return checker(c.substring(i+1, c.length()-2));
                         }
                     }*/
-                    if (checkString("animal") || checkString("insect") || checkString("mammal") || checkString("an animal") || checkString("bird") || checkString("fish") || checkString("amphibian")) {
+                    if(checkString("name")){
+                        l = true;
+                        human = true;
+                    }
+                    else if (checkString("animal") || checkString("insect") || checkString("mammal") || checkString("an animal") || checkString("bird") || checkString("fish") || checkString("amphibian")) {
                         animatebutnothuman = true;
+                        l = false;
                     }
                     else if (checkString("human") || checkString("person") || checkString("girl") || checkString("boy") || checkString("man") || checkString("woman")) {
                         human = true;
-                    }
-                    else if(checkString("room")||checkString("city")||checkString("continent")||checkString("country")||checkString("area")||checkString("state")||checkString("building")||checkString("place")||checkString("street")||checkString("body")||checkString("appendage")||checkString("body part")){
-                        l = true;
+                        l = false;
                     }
                 }
 

@@ -59,6 +59,7 @@ public class DictionaryAnalyzer {
 	public double adverbIrreg;
 	public double nounanimacy;
 	public double adjectiveItensifierID;
+	public double nounlocation;
 	public DictionaryAnalyzer (HashMap<String, Noun> nounDictionary,HashMap<String, Verb> verbDictionary,HashMap<String, Adjective> adjectiveDictionary,HashMap<String, Adverb> adverbDictionary,HashMap<String, Conjunction> conjunctionDictionary,HashMap<String, Determiner> determinerDictionary,HashMap<String, Interjection> interjectionDictionary,HashMap<String, Preposition> prepositionDictionary,HashMap<String, Pronoun> pronounDictionary,HashMap<String, Quantifier> quantifierDictionary){
 		try {
 		    double totalNouns =0;
@@ -119,6 +120,7 @@ public class DictionaryAnalyzer {
             double definedairreg=0;
             double definedanimacy=0;
             double definedaintens=0;
+            double definedloca=0;
             
             double nounmasc=0;
             double nounfem=0;
@@ -173,6 +175,9 @@ public class DictionaryAnalyzer {
 					    }
 					    if(n.animacy != null){
 					        definedanimacy++;
+					    }
+					    if(n.location != null){
+					        definedloca++;
 					    }
 					    
             }
@@ -397,6 +402,9 @@ public class DictionaryAnalyzer {
             /*Noun animacy*/
             nounanimacy = (definedanimacy/totalNouns);
             printer.println("- Percentage of Noun Animacy defined: "+df.format((nounanimacy*100))+"%");
+            /*Noun location*/
+            nounlocation = (definedloca/totalNouns);
+            printer.println("- Percentage of Noun Location defined: "+df.format((nounlocation*100))+"%");
             
             
 			/*Verbs:*/

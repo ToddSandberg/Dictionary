@@ -1,20 +1,21 @@
 # DictionaryMaker
 ## Analysis
-### Noun Analysis (Total Nouns: 155,480):
-- Percentage of Noun Plurality defined: 6%
+### Noun Analysis (Total Nouns: 155,554):
+- Percentage of Noun Plurality defined: 6.15%
 - Percentage of Noun Gender defined: 100%(0.67% Masculine 0.43% Feminine 98.92% Neuter)
 - Percentage of Noun isCompound defined: 100%
-- Percentage of Noun isCountable defined: 46.05%
+- Percentage of Noun isCountable defined: 51.41%
 - Percentage of Noun isProperName defined: 0%
-- Percentage of Noun acceptsZeroArticle defined: 12.07%
+- Percentage of Noun acceptsZeroArticle defined: 14.97%
 - Percentage of Noun acronymFor defined: 0%
 - Percentage of Noun abbreviationFor defined: 0%
 - Percentage of Noun abbreviatedFrom defined: 0%
-- Percentage of Noun irregularPluralForm defined: 0.5%
+- Percentage of Noun irregularPluralForm defined: 0.66%
 - Percentage of Noun base form defined: 0.01%
-- Percentage of Noun Animacy defined: 100%
+- Percentage of Noun Animacy defined: 99.96%
+- Percentage of Noun Location defined: 0.28%
 ### Verb analysis (Total Verbs: 28,624):
-- Percentage of Transivity Defined: 71.7%
+- Percentage of Transivity Defined: 72.35%
 - Percentage of verb Tense Defined: 23%
 - Percentage of verb aspect Defined: 0%
 - Percentage of verb type Defined: 0.1%
@@ -22,26 +23,26 @@
 - Percentage of verb phrasal Defined: 100%
 - Percentage of verb isInfinitive Defined: 0.1%
 ### Adjective analysis (Total Adjectives: 50,508):
-- Percentage of Position (Works in predicative and Attributive) Defined for Adjectives : 54.96%
-- Percentage of isQualitative defined: 27.62%
-- Percentage of isClassifying defined: 27.62%
+- Percentage of Position (Works in predicative and Attributive) Defined for Adjectives : 74.39%
+- Percentage of isQualitative defined: 37.31%
+- Percentage of isClassifying defined: 37.31%
 - Percentage of commonlyPrecededWithAnd defined: 0%
 - Percentage of Quantifier defined: 0%
 - Percentage of IsProper defined: 100%
 - Percentage of comparison type defined: 100%
 - Percentage of hasDiminutiveSuffix defined: 100%
-- Percentage of ajectiveOrderID defined: 0.13%
-- Percentage of mustUseMoreMost defined: 27.35%
+- Percentage of ajectiveOrderID defined: 0.15%
+- Percentage of mustUseMoreMost defined: 37.08%
 - Percentage of adjectiveItensifierID defined: 0.92%
-### Adverb Analysis (Total Adverbs: 13,475): 
+### Adverb Analysis (Total Adverbs: 13,478): 
 - Percentage of IntensiferId defined: 5.42%
 - Percentage of isRelativeAdverb defined: 100%
-- Percentage of isComparativeAdverb defined: 0.78%
-- Percentage of isSuperlativeAdverb defined: 0.78%
+- Percentage of isComparativeAdverb defined: 0.8%
+- Percentage of isSuperlativeAdverb defined: 0.8%
 - Percentage of advIntensifier defined: 5.42%
-- Percentage of noCompOrSuperForm defined: 17.09%
-- Percentage of mustUseMoreMost defined: 17.09%
-- Percentage of Irregular Form defined: 0.03%
+- Percentage of noCompOrSuperForm defined: 28.82%
+- Percentage of mustUseMoreMost defined: 28.82%
+- Percentage of Irregular Form defined: 0.05%
 ### Determiner Analysis (Total Determiners: 11): 
 - Percentage of determinerTypeID defined: 100%
 ### Interjection Analysis (Total Interjections: 428): 
@@ -64,8 +65,9 @@
 - default-lexicon.xml Implemented
 - NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt implemented
 - LEXICON.txt semiImplemented
-- AdverbScales-Manual.xlsx semiImplemented
+- AdverbScales-Manual.csv Implemented
+- locations.txt implemented
 ## Document Output Formats:
 - csv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 5 minutes and 21 seconds
+## Current Dictionary Write Time: 5 minutes and 12 seconds
