@@ -3,7 +3,7 @@ mistreat,--,Transitive,--,--,N/A,No,null
 undermining,--,Transitive,--,--,N/A,No,null
 collocate,--,Transitive,--,--,N/A,No,null
 bejeweling,--,Transitive,--,--,N/A,No,null
-salary,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
+salary,--,--,--,--,N/A,No,null
 naturalized,--,--,Past,--,N/A,No,null
 pretend,--,Ambitransitive,--,--,N/A,No,null
 redischarged,--,--,Past,--,N/A,No,null
@@ -32,7 +32,7 @@ bogue,--,Intransitive,--,--,N/A,No,null
 evaporate,--,tran=np,--,--,N/A,No,null
 flocculated,--,--,Past,--,N/A,No,null
 reindoctrinating,--,Transitive,--,--,N/A,No,null
-ratoon,--,tran=np,--,--,N/A,No,null
+ratoon,--,--,--,--,N/A,No,null
 flip,--,Intransitive,--,--,N/A,No,null
 imbedded,--,Transitive,Past,--,N/A,No,null
 nibble,--,Intransitive,--,--,N/A,No,null
@@ -103,7 +103,7 @@ homologizing,--,--,--,--,N/A,No,null
 bayonetting,--,--,--,--,N/A,No,null
 collocated,--,Transitive,Past,--,N/A,No,null
 better,--,Transitive,--,--,N/A,No,null
-jellify,--,tran=np,--,--,N/A,No,null
+jellify,--,--,--,--,N/A,No,null
 refold,--,tran=np,--,--,N/A,No,null
 puncture,--,Transitive,--,--,N/A,No,null
 scorifying,--,Transitive,--,--,N/A,No,null
@@ -474,7 +474,7 @@ unmysticise,--,Transitive,--,--,N/A,No,null
 compare,--,Ambitransitive,--,--,N/A,No,null
 edulcorate,--,Transitive,--,--,N/A,No,null
 proselytising,--,Ambitransitive,--,--,N/A,No,null
-unlatch,--,tran=np,--,--,N/A,No,null
+unlatch,--,--,--,--,N/A,No,null
 outflamed,--,Transitive,Past,--,N/A,No,null
 housebroken,--,Transitive,--,--,N/A,No,null
 pluralise,--,Ambitransitive,--,--,N/A,No,null
@@ -801,7 +801,7 @@ nickelise,--,Transitive,--,--,N/A,No,null
 backsplice,--,Transitive,--,--,N/A,No,null
 circumvallated,--,--,Past,--,N/A,No,null
 mash,--,Transitive,--,--,N/A,No,null
-bath,--,tran=np,--,--,N/A,No,null
+bath,--,--,--,--,N/A,No,null
 bate,--,Intransitive,--,--,N/A,No,null
 admix,--,Transitive,--,--,N/A,No,null
 Anglified,--,Transitive,Past,--,N/A,No,null
@@ -986,7 +986,7 @@ predestined,--,Transitive,Past,--,N/A,No,null
 stub,--,Transitive,--,--,N/A,No,null
 predeclining,--,Transitive,--,--,N/A,No,null
 kindle,--,tran=np+tran=pphr(with+np)+tran=np|seizure|+tran=np|convulsion|,--,--,N/A,No,null
-redictate,--,tran=np,--,--,N/A,No,null
+redictate,--,--,--,--,N/A,No,null
 overchased,--,--,Past,--,N/A,No,null
 fictionizing,--,Transitive,--,--,N/A,No,null
 faint,--,Intransitive,--,--,N/A,No,null
@@ -1229,7 +1229,7 @@ overprovided,--,Transitive,Past,--,N/A,No,null
 reguaranteeing,--,Transitive,--,--,N/A,No,null
 occupy,--,Transitive,--,--,N/A,No,null
 back out,--,Intransitive,--,--,N/A,NotSeperable,null
-totalize,--,tran=np,--,--,N/A,No,null
+totalize,--,--,--,--,N/A,No,null
 rebake,--,Transitive,--,--,N/A,No,null
 penalized,--,Transitive,Past,--,N/A,No,null
 bio-assay,--,Transitive,--,--,N/A,No,null
@@ -1249,7 +1249,7 @@ unhumanise,--,Transitive,--,--,N/A,No,null
 etherialized,--,Transitive,Past,--,N/A,No,null
 sugg,--,Intransitive,--,--,N/A,No,null
 sugh,--,Transitive,--,--,N/A,No,null
-expertize,--,tran=np,--,--,N/A,No,null
+expertize,--,--,--,--,N/A,No,null
 submersed,--,Transitive,Past,--,N/A,No,null
 disannulling,--,Transitive,--,--,N/A,No,null
 fork out,--,--,--,--,N/A,NotSeperable,null
@@ -1285,14 +1285,14 @@ retrogress,--,Intransitive,--,--,N/A,No,null
 rectifying,--,Transitive,--,--,N/A,No,null
 reorganising,--,Ambitransitive,--,--,N/A,No,null
 sulk,--,Intransitive,--,--,N/A,No,null
-preaccept,--,tran=np,--,--,N/A,No,null
+preaccept,--,--,--,--,N/A,No,null
 sterilize,--,Transitive,--,--,N/A,No,null
 dial,--,tran=np,--,--,N/A,No,null
 unbuckling,--,Transitive,--,--,N/A,No,null
 duped,--,Transitive,Past,--,N/A,No,null
 misperceiving,--,Transitive,--,--,N/A,No,null
 postsign,--,Transitive,--,--,N/A,No,null
-metathesize,--,tran=np+tran=pphr(with+np)+ditran=np+pphr(to+np),--,--,N/A,No,null
+metathesize,--,--,--,--,N/A,No,null
 recelebrating,--,--,--,--,N/A,No,null
 skate over,--,Intransitive,--,--,N/A,NotSeperable,null
 finalize,--,Ambitransitive,--,--,N/A,No,null
@@ -1312,7 +1312,7 @@ section,--,Transitive,--,--,N/A,No,null
 discontent,--,Transitive,--,--,N/A,No,null
 overhandicap,--,Transitive,--,--,N/A,No,null
 originated,--,--,Past,--,N/A,No,null
-precondense,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
+precondense,--,--,--,--,N/A,No,null
 recategorize,--,Transitive,--,--,N/A,No,null
 provoke,--,Transitive,--,--,N/A,No,null
 free-associated,--,Intransitive,Past,--,N/A,No,null
@@ -1570,10 +1570,10 @@ remediate,--,Transitive,--,--,N/A,No,null
 contest,--,Transitive,--,--,N/A,No,null
 tinge,--,Transitive,--,--,N/A,No,null
 misfit,--,tran=np,--,--,N/A,No,null
-mistype,--,tran=np,--,--,N/A,No,null
+mistype,--,--,--,--,N/A,No,null
 defervescing,--,Intransitive,--,--,N/A,No,null
 dish,--,Transitive,--,--,N/A,No,null
-disc,--,tran=np,--,--,N/A,No,null
+disc,--,--,--,--,N/A,No,null
 catch out,--,Transitive,--,--,N/A,NotSeperable,null
 outwrite,--,Transitive,--,--,N/A,No,null
 oxidate,--,tran=np,--,--,N/A,No,null
@@ -1631,7 +1631,7 @@ scything,--,--,--,--,N/A,No,null
 adore,--,Transitive,--,--,N/A,No,null
 Sinicize,--,Transitive,--,--,N/A,No,null
 lecture,--,Transitive,--,--,N/A,No,null
-silicify,--,tran=np,--,--,N/A,No,null
+silicify,--,--,--,--,N/A,No,null
 syllabified,--,Transitive,Past,--,N/A,No,null
 transessentiated,--,Transitive,Past,--,N/A,No,null
 gluttonising,--,Intransitive,--,--,N/A,No,null
@@ -1672,7 +1672,7 @@ unpedestal,--,Transitive,--,--,N/A,No,null
 prefacing,--,--,--,--,N/A,No,null
 sanitized,--,Transitive,Past,--,N/A,No,null
 misreflect,--,--,--,--,N/A,No,null
-ghostwrite,--,tran=np,--,--,N/A,No,null
+ghostwrite,--,--,--,--,N/A,No,null
 stratifying,--,--,--,--,N/A,No,null
 quake,--,Intransitive,--,--,N/A,No,null
 silhouette,--,Transitive,--,--,N/A,No,null
@@ -1727,7 +1727,7 @@ tubercularising,--,Ambitransitive,--,--,N/A,No,null
 cross-refer,--,tran=np+ditran=np+pphr(to+np),--,--,N/A,No,null
 phase,--,Transitive,--,--,N/A,No,null
 berimed,--,Transitive,Past,--,N/A,No,null
-segue,--,tran=pphr(into+np)+tran=pphr(from+np)+tran=pphr(to+np)+ditran=pphr(from+np)+pphr(to+ditran=pphr(from+np)+pphr(into,--,--,N/A,No,null
+segue,--,--,--,--,N/A,No,null
 aquaplaned,--,--,Past,--,N/A,No,null
 aggrandise,--,Transitive,--,--,N/A,No,null
 mingling,--,--,--,--,N/A,No,null
@@ -1743,7 +1743,7 @@ befogging,--,Transitive,--,--,N/A,No,null
 wiredrawing,--,Transitive,--,--,N/A,No,null
 gravitate,--,Intransitive,--,--,N/A,No,null
 squelch,--,Intransitive,--,--,N/A,No,null
-scape,--,tran=np,--,--,N/A,No,null
+scape,--,--,--,--,N/A,No,null
 outstolen,--,Transitive,--,--,N/A,No,null
 zipping,--,--,--,--,N/A,No,null
 predetermine,--,Transitive,--,--,N/A,No,null
@@ -1769,7 +1769,7 @@ handsetting,--,--,--,--,N/A,No,null
 sited,--,--,Past,--,N/A,No,null
 underdressing,--,--,--,--,N/A,No,null
 familiarised,--,Ambitransitive,Past,--,N/A,No,null
-tailgate,--,tran=np,--,--,N/A,No,null
+tailgate,--,--,--,--,N/A,No,null
 cognized,--,Transitive,Past,--,N/A,No,null
 broadcasted,--,--,Past,--,N/A,No,null
 overgratify,--,Transitive,--,--,N/A,No,null
@@ -1932,7 +1932,7 @@ squinnied,--,--,Past,--,N/A,No,null
 sneer,--,Intransitive,--,--,N/A,No,null
 belaying,--,--,--,--,N/A,No,null
 reengaged,--,--,Past,--,N/A,No,null
-incurve,--,tran=np,--,--,N/A,No,null
+incurve,--,--,--,--,N/A,No,null
 understand,--,Transitive,--,--,N/A,No,null
 prescind,--,Intransitive,--,--,N/A,No,null
 groping,--,--,--,--,N/A,No,null
@@ -2066,7 +2066,7 @@ high-pressuring,--,--,--,--,N/A,No,null
 huddled,--,--,Past,--,N/A,No,null
 scanning,--,--,--,--,N/A,No,null
 prelimitating,--,Transitive,--,--,N/A,No,null
-combust,--,tran=np,--,--,N/A,No,null
+combust,--,--,--,--,N/A,No,null
 absterging,--,Transitive,--,--,N/A,No,null
 disillusionized,--,Transitive,Past,--,N/A,No,null
 elided,--,Transitive,Past,--,N/A,No,null
@@ -2163,7 +2163,7 @@ aggravating,--,Transitive,--,--,N/A,No,null
 concinnate,--,Transitive,--,--,N/A,No,null
 pick off,--,Transitive,--,--,N/A,Seperable,null
 lesson,--,Transitive,--,--,N/A,No,null
-ingurgitate,--,tran=np,--,--,N/A,No,null
+ingurgitate,--,--,--,--,N/A,No,null
 forestall,--,Transitive,--,--,N/A,No,null
 munition,--,Transitive,--,--,N/A,No,null
 hand in,--,Transitive,--,--,N/A,Seperable,null
@@ -2248,7 +2248,7 @@ mean,--,Intransitive,--,--,N/A,No,null
 juggling,--,--,--,--,N/A,No,null
 eagling,--,--,--,--,N/A,No,null
 anthropomorphizing,--,Ambitransitive,--,--,N/A,No,null
-beep,--,tran=np,--,--,N/A,No,null
+beep,--,--,--,--,N/A,No,null
 been,--,--,--,--,N/A,No,null
 overrationalized,--,--,Past,--,N/A,No,null
 appall,--,Transitive,--,--,N/A,No,null
@@ -2351,7 +2351,7 @@ dropped,--,--,Past,--,N/A,No,null
 rebaptized,--,--,Past,--,N/A,No,null
 imprecated,--,Transitive,Past,--,N/A,No,null
 reposit,--,Transitive,--,--,N/A,No,null
-kitten,--,tran=np,--,--,N/A,No,null
+kitten,--,--,--,--,N/A,No,null
 melt,--,Ambitransitive,--,--,N/A,No,null
 solvate,--,tran=np,--,--,N/A,No,null
 disspreading,--,Ambitransitive,--,--,N/A,No,null
@@ -2510,12 +2510,12 @@ overspeculated,--,Intransitive,Past,--,N/A,No,null
 seise,--,--,--,--,N/A,No,null
 resonated,--,--,Past,--,N/A,No,null
 prewound,--,Transitive,--,--,N/A,No,null
-restraighten,--,tran=np,--,--,N/A,No,null
+restraighten,--,--,--,--,N/A,No,null
 mercurialised,--,Transitive,Past,--,N/A,No,null
 elapsing,--,--,--,--,N/A,No,null
 carry off,--,Transitive,--,--,N/A,Seperable,null
 crumble,--,Intransitive,--,--,N/A,No,null
-readvise,--,tran=np+ditran=np+pphr(of+np),--,--,N/A,No,null
+readvise,--,--,--,--,N/A,No,null
 loped,--,--,Past,--,N/A,No,null
 preinhere,--,Intransitive,--,--,N/A,No,null
 spike,--,Transitive,--,--,N/A,No,null
@@ -2630,7 +2630,7 @@ unhand,--,Transitive,--,--,N/A,No,null
 skinny-dipped,--,Intransitive,Past,--,N/A,No,null
 machicolate,--,Transitive,--,--,N/A,No,null
 culture,--,Transitive,--,--,N/A,No,null
-miscut,--,tran=np,--,--,N/A,No,null
+miscut,--,--,--,--,N/A,No,null
 subvened,--,Intransitive,Past,--,N/A,No,null
 forswearing,--,--,--,--,N/A,No,null
 labialise,--,Transitive,--,--,N/A,No,null
@@ -2711,7 +2711,7 @@ progged,--,--,Past,--,N/A,No,null
 sapped,--,--,Past,--,N/A,No,null
 transhipped,--,Ambitransitive,Past,--,N/A,No,null
 smudged,--,--,Past,--,N/A,No,null
-pretermit,--,tran=np,--,--,N/A,No,null
+pretermit,--,--,--,--,N/A,No,null
 charged,--,--,Past,--,N/A,No,null
 edified,--,Transitive,Past,--,N/A,No,null
 palatalize,--,Transitive,--,--,N/A,No,null
@@ -2821,7 +2821,7 @@ eviscerating,--,--,--,--,N/A,No,null
 repaginating,--,Transitive,--,--,N/A,No,null
 force-ripe,--,Transitive,--,--,N/A,No,null
 gypping,--,--,--,--,N/A,No,null
-preextend,--,tran=np,--,--,N/A,No,null
+preextend,--,--,--,--,N/A,No,null
 deluged,--,--,Past,--,N/A,No,null
 outlaying,--,--,--,--,N/A,No,null
 hyperoxygenized,--,Transitive,Past,--,N/A,No,null
@@ -3148,7 +3148,7 @@ relaced,--,--,Past,--,N/A,No,null
 laugh off,--,Transitive,--,--,N/A,Seperable,null
 reshook,--,--,--,--,N/A,No,null
 overcommercialized,--,Transitive,Past,--,N/A,No,null
-reshoot,--,tran=np,--,--,N/A,No,null
+reshoot,--,--,--,--,N/A,No,null
 splay,--,Transitive,--,--,N/A,No,null
 illuviated,--,Intransitive,Past,--,N/A,No,null
 reauthenticated,--,Transitive,Past,--,N/A,No,null
@@ -3204,7 +3204,7 @@ freeze-dry,--,tran=np,--,--,N/A,No,null
 subdate,--,Transitive,--,--,N/A,No,null
 speak to,--,Intransitive,--,--,N/A,Seperable,null
 stamp out,--,Transitive,--,--,N/A,Seperable,null
-superproduce,--,tran=np,--,--,N/A,No,null
+superproduce,--,--,--,--,N/A,No,null
 crash out,--,Intransitive,--,--,N/A,NotSeperable,null
 bureaucratize,--,Transitive,--,--,N/A,No,null
 flat-sawn,--,Transitive,--,--,N/A,No,null
@@ -3787,7 +3787,7 @@ dethrone,--,Transitive,--,--,N/A,No,null
 collapsed,--,--,Past,--,N/A,No,null
 emotionalized,--,Transitive,Past,--,N/A,No,null
 proving,--,Ambitransitive,--,--,N/A,No,null
-revest,--,tran=np,--,--,N/A,No,null
+revest,--,--,--,--,N/A,No,null
 prespeculate,--,Intransitive,--,--,N/A,No,null
 settle with,--,Intransitive,--,--,N/A,Seperable,null
 promote,--,Transitive,--,--,N/A,No,null
@@ -3836,7 +3836,7 @@ superpraise,--,Transitive,--,--,N/A,No,null
 acquired,--,Transitive,Past,--,N/A,No,null
 misgauged,--,Transitive,Past,--,N/A,No,null
 sleuth,--,Transitive,--,--,N/A,No,null
-angulate,--,tran=np,--,--,N/A,No,null
+angulate,--,--,--,--,N/A,No,null
 doff,--,Transitive,--,--,N/A,No,null
 decoke,--,Transitive,--,--,N/A,No,null
 fossick,--,Intransitive,--,--,N/A,No,null
@@ -4175,7 +4175,7 @@ repromulgated,--,Transitive,Past,--,N/A,No,null
 herald,--,Transitive,--,--,N/A,No,null
 preobtruding,--,Transitive,--,--,N/A,No,null
 recombine,--,tran=np+tran=pphr(with+np)+ditran=np+pphr(with+np),--,--,N/A,No,null
-reconsult,--,tran=np+tran=pphr(with+np)+tran=pphr(about+np),--,--,N/A,No,null
+reconsult,--,--,--,--,N/A,No,null
 carry away,--,Transitive,--,--,N/A,NotSeperable,null
 contemplated,--,--,Past,--,N/A,No,null
 rouging,--,--,--,--,N/A,No,null
@@ -4463,7 +4463,7 @@ tautomerized,--,--,Past,--,N/A,No,null
 blubber,--,tran=np;part(out)+tran=fincomp(t):subj;part(out)+tran=whinfcomp:arbc;part(out),--,--,N/A,No,null
 encapsule,--,Ambitransitive,--,--,N/A,No,null
 fliting,--,--,--,--,N/A,No,null
-preinvestigate,--,tran=np,--,--,N/A,No,null
+preinvestigate,--,--,--,--,N/A,No,null
 disject,--,Transitive,--,--,N/A,No,null
 go off,--,Intransitive,--,--,N/A,NotSeperable,null
 inculcated,--,Transitive,Past,--,N/A,No,null
@@ -4534,7 +4534,7 @@ theologize,--,Intransitive,--,--,N/A,No,null
 zincify,--,Transitive,--,--,N/A,No,null
 remill,--,Transitive,--,--,N/A,No,null
 deep-fried,--,Transitive,Past,--,N/A,No,null
-two-time,--,tran=np,--,--,N/A,No,null
+two-time,--,--,--,--,N/A,No,null
 peptize,--,Transitive,--,--,N/A,No,null
 eulogised,--,Transitive,Past,--,N/A,No,null
 narrate,--,tran=np,--,--,N/A,No,null
@@ -4705,7 +4705,7 @@ cold-chiselled,--,Transitive,Past,--,N/A,No,null
 rallied,--,Transitive,Past,--,N/A,No,null
 recommend,--,Transitive,--,--,N/A,No,null
 Latinised,--,Ambitransitive,Past,--,N/A,No,null
-nitrify,--,tran=np,--,--,N/A,No,null
+nitrify,--,--,--,--,N/A,No,null
 permitted,--,--,Past,--,N/A,No,null
 convolved,--,Intransitive,Past,--,N/A,No,null
 disinherit,--,Transitive,--,--,N/A,No,null
@@ -4962,7 +4962,7 @@ unnaturalize,--,Transitive,--,--,N/A,No,null
 reportion,--,Transitive,--,--,N/A,No,null
 checkmating,--,--,--,--,N/A,No,null
 portray,--,Transitive,--,--,N/A,No,null
-carnify,--,tran=np,--,--,N/A,No,null
+carnify,--,--,--,--,N/A,No,null
 nebulise,--,Ambitransitive,--,--,N/A,No,null
 oxygenating,--,Transitive,--,--,N/A,No,null
 confute,--,Transitive,--,--,N/A,No,null
@@ -5062,7 +5062,7 @@ skintling,--,Transitive,--,--,N/A,No,null
 drudged,--,--,Past,--,N/A,No,null
 boggle,--,Intransitive,--,--,N/A,No,null
 outkill,--,Transitive,--,--,N/A,No,null
-uncurl,--,tran=np+ditran=np+pphr(from+np),--,--,N/A,No,null
+uncurl,--,--,--,--,N/A,No,null
 windmill,--,Intransitive,--,--,N/A,No,null
 letterspaced,--,Transitive,Past,--,N/A,No,null
 pretry,--,Transitive,--,--,N/A,No,null
@@ -5337,7 +5337,7 @@ preassume,--,Transitive,--,--,N/A,No,null
 houselling,--,--,--,--,N/A,No,null
 prereceive,--,Transitive,--,--,N/A,No,null
 framed,--,--,Past,--,N/A,No,null
-Russianize,--,tran=np,--,--,N/A,No,null
+Russianize,--,--,--,--,N/A,No,null
 fluoridate,--,tran=np,--,--,N/A,No,null
 feazed,--,Ambitransitive,Past,--,N/A,No,null
 predemonstrating,--,Transitive,--,--,N/A,No,null
@@ -5426,7 +5426,7 @@ compiled,--,Transitive,Past,--,N/A,No,null
 surrogated,--,--,Past,--,N/A,No,null
 brachiated,--,--,Past,--,N/A,No,null
 miaou,--,--,--,--,N/A,No,null
-outgas,--,tran=np,--,--,N/A,No,null
+outgas,--,--,--,--,N/A,No,null
 realign,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
 miaow,--,Intransitive,--,--,N/A,No,null
 ventured,--,--,Past,--,N/A,No,null
@@ -5496,7 +5496,7 @@ neoterizing,--,Intransitive,--,--,N/A,No,null
 maculated,--,--,Past,--,N/A,No,null
 popularised,--,Transitive,Past,--,N/A,No,null
 restriving,--,Intransitive,--,--,N/A,No,null
-overcast,--,tran=np,--,--,N/A,No,null
+overcast,--,--,--,--,N/A,No,null
 parried,--,--,Past,--,N/A,No,null
 melodramatising,--,Transitive,--,--,N/A,No,null
 syntonized,--,Transitive,Past,--,N/A,No,null
@@ -5756,7 +5756,7 @@ preadopt,--,Transitive,--,--,N/A,No,null
 denitrify,--,tran=np,--,--,N/A,No,null
 debased,--,Transitive,Past,--,N/A,No,null
 fractionizing,--,Ambitransitive,--,--,N/A,No,null
-tauten,--,tran=np,--,--,N/A,No,null
+tauten,--,--,--,--,N/A,No,null
 happed,--,Transitive,Past,--,N/A,No,null
 opaqued,--,--,Past,--,N/A,No,null
 rally,--,Intransitive,--,--,N/A,No,null
@@ -5916,7 +5916,7 @@ gravelled,--,--,Past,--,N/A,No,null
 equating,--,Transitive,--,--,N/A,No,null
 individualized,--,Transitive,Past,--,N/A,No,null
 re-form,--,tran=np,--,--,N/A,No,null
-hoarsen,--,tran=np,--,--,N/A,No,null
+hoarsen,--,--,--,--,N/A,No,null
 presatisfying,--,Transitive,--,--,N/A,No,null
 subintroducing,--,Transitive,--,--,N/A,No,null
 guzzled,--,Intransitive,Past,--,N/A,No,null
@@ -5938,7 +5938,7 @@ capsuling,--,--,--,--,N/A,No,null
 prerouting,--,Transitive,--,--,N/A,No,null
 indoctrinating,--,Transitive,--,--,N/A,No,null
 racket,--,Intransitive,--,--,N/A,No,null
-remodify,--,tran=np,--,--,N/A,No,null
+remodify,--,--,--,--,N/A,No,null
 preadorn,--,Transitive,--,--,N/A,No,null
 delete,--,Transitive,--,--,N/A,No,null
 wifed,--,--,Past,--,N/A,No,null
@@ -6091,7 +6091,7 @@ ankylose,--,tran=np,--,--,N/A,No,null
 interworked,--,--,Past,--,N/A,No,null
 uniform,--,Transitive,--,--,N/A,No,null
 patrolled,--,--,Past,--,N/A,No,null
-retear,--,tran=np,--,--,N/A,No,null
+retear,--,--,--,--,N/A,No,null
 recapturing,--,--,--,--,N/A,No,null
 finger,--,Ambitransitive,--,--,N/A,No,null
 sympathize,--,Intransitive,--,--,N/A,No,null
@@ -6423,7 +6423,7 @@ micturate,--,Intransitive,--,--,N/A,No,null
 communicated,--,--,Past,--,N/A,No,null
 mistitled,--,Transitive,Past,--,N/A,No,null
 dull,--,tran=np,--,--,N/A,No,null
-syncretize,--,tran=np+tran=pphr(with+np)+ditran=np+pphr(with+np),--,--,N/A,No,null
+syncretize,--,--,--,--,N/A,No,null
 renotarize,--,Transitive,--,--,N/A,No,null
 deoxygenizing,--,Transitive,--,--,N/A,No,null
 caseated,--,Intransitive,Past,--,N/A,No,null
@@ -6739,7 +6739,7 @@ litter,--,Transitive,--,--,N/A,No,null
 bousing,--,Transitive,--,--,N/A,No,null
 lugged,--,--,Past,--,N/A,No,null
 put out,--,Transitive,--,--,N/A,Seperable,null
-vise,--,tran=np+tran=pphr(in+np),--,--,N/A,No,null
+vise,--,--,--,--,N/A,No,null
 plasticized,--,Ambitransitive,Past,--,N/A,No,null
 overromanticizing,--,--,--,--,N/A,No,null
 visa,--,Transitive,--,--,N/A,No,null
@@ -6755,7 +6755,7 @@ mispracticing,--,--,--,--,N/A,No,null
 buckle down,--,Intransitive,--,--,N/A,NotSeperable,null
 deglamorizing,--,Transitive,--,--,N/A,No,null
 predecline,--,Transitive,--,--,N/A,No,null
-transistorize,--,tran=np,--,--,N/A,No,null
+transistorize,--,--,--,--,N/A,No,null
 reallot,--,Transitive,--,--,N/A,No,null
 flued,--,Intransitive,Past,--,N/A,No,null
 sneezed,--,--,Past,--,N/A,No,null
@@ -7043,7 +7043,7 @@ resituating,--,Transitive,--,--,N/A,No,null
 quizzes,--,--,--,--,N/A,No,null
 outflying,--,Transitive,--,--,N/A,No,null
 slalom,--,Intransitive,--,--,N/A,No,null
-redecorate,--,tran=np,--,--,N/A,No,null
+redecorate,--,--,--,--,N/A,No,null
 reaccommodated,--,--,Past,--,N/A,No,null
 flump,--,Intransitive,--,--,N/A,No,null
 bouse,--,Transitive,--,--,N/A,No,null
@@ -7146,7 +7146,7 @@ connect,--,Ambitransitive,--,--,N/A,No,null
 rescind,--,Transitive,--,--,N/A,No,null
 overmultiplied,--,--,Past,--,N/A,No,null
 shingled,--,Transitive,Past,--,N/A,No,null
-tatter,--,tran=np,--,--,N/A,No,null
+tatter,--,--,--,--,N/A,No,null
 preemploy,--,Transitive,--,--,N/A,No,null
 interlope,--,Intransitive,--,--,N/A,No,null
 violating,--,Transitive,--,--,N/A,No,null
@@ -7172,7 +7172,7 @@ instil,--,Transitive,--,--,N/A,No,null
 tattle,--,Intransitive,--,--,N/A,No,null
 dispraise,--,Transitive,--,--,N/A,No,null
 cinder,--,Transitive,--,--,N/A,No,null
-fantasy,--,tran=np,--,--,N/A,No,null
+fantasy,--,--,--,--,N/A,No,null
 iodate,--,Transitive,--,--,N/A,No,null
 bewwept,--,Transitive,--,--,N/A,No,null
 deform,--,Transitive,--,--,N/A,No,null
@@ -7261,7 +7261,7 @@ disapproved,--,--,Past,--,N/A,No,null
 overdramatize,--,--,--,--,N/A,No,null
 including,--,Transitive,--,--,N/A,No,null
 quipped,--,--,Past,--,N/A,No,null
-scrimshaw,--,tran=np,--,--,N/A,No,null
+scrimshaw,--,--,--,--,N/A,No,null
 summarizing,--,Transitive,--,--,N/A,No,null
 alluding,--,Intransitive,--,--,N/A,No,null
 driftbolt,--,Transitive,--,--,N/A,No,null
@@ -7303,7 +7303,7 @@ redivorce,--,--,--,--,N/A,No,null
 atomized,--,Transitive,Past,--,N/A,No,null
 embower,--,Transitive,--,--,N/A,No,null
 curl up,--,Intransitive,--,--,N/A,NotSeperable,null
-embowel,--,tran=np,--,--,N/A,No,null
+embowel,--,--,--,--,N/A,No,null
 porrect,--,Transitive,--,--,N/A,No,null
 have on,--,Transitive,--,--,N/A,Seperable,null
 opacify,--,Ambitransitive,--,--,N/A,No,null
@@ -7537,7 +7537,7 @@ flaked,--,--,Past,--,N/A,No,null
 send down,--,Transitive,--,--,N/A,Seperable,null
 pretaste,--,Transitive,--,--,N/A,No,null
 scavenge,--,Transitive,--,--,N/A,No,null
-pancake,--,tran=np,--,--,N/A,No,null
+pancake,--,--,--,--,N/A,No,null
 poulticing,--,--,--,--,N/A,No,null
 effloresced,--,Intransitive,Past,--,N/A,No,null
 back down,--,Transitive,--,--,N/A,Seperable,null
@@ -7590,7 +7590,7 @@ undersplice,--,Transitive,--,--,N/A,No,null
 inveigling,--,Transitive,--,--,N/A,No,null
 pulsing,--,--,--,--,N/A,No,null
 repacify,--,Transitive,--,--,N/A,No,null
-overconcentrate,--,tran=np+tran=pphr(on+np)+tran=pphr(upon+np),--,--,N/A,No,null
+overconcentrate,--,--,--,--,N/A,No,null
 peroxidizing,--,Ambitransitive,--,--,N/A,No,null
 test,--,Ambitransitive,--,--,N/A,No,null
 bray,--,Intransitive,--,--,N/A,No,null
@@ -7626,7 +7626,7 @@ schedule,--,Transitive,--,--,N/A,No,null
 undam,--,Transitive,--,--,N/A,No,null
 parathyroidectomizing,--,Transitive,--,--,N/A,No,null
 Aryanised,--,Transitive,Past,--,N/A,No,null
-mischarge,--,tran=np,--,--,N/A,No,null
+mischarge,--,--,--,--,N/A,No,null
 blue-pencilled,--,Transitive,Past,--,N/A,No,null
 oversensitized,--,--,Past,--,N/A,No,null
 spaeing,--,Transitive,--,--,N/A,No,null
@@ -7663,12 +7663,12 @@ scaffold,--,Transitive,--,--,N/A,No,null
 budging,--,--,--,--,N/A,No,null
 uptear,--,Transitive,--,--,N/A,No,null
 fortifying,--,--,--,--,N/A,No,null
-pantomime,--,tran=np,--,--,N/A,No,null
+pantomime,--,--,--,--,N/A,No,null
 underdrying,--,Transitive,--,--,N/A,No,null
 interblent,--,Ambitransitive,--,--,N/A,No,null
 prenoting,--,Transitive,--,--,N/A,No,null
 approximating,--,--,--,--,N/A,No,null
-guesstimate,--,tran=fincomp(o)+tran=np,--,--,N/A,No,null
+guesstimate,--,--,--,--,N/A,No,null
 overemphasized,--,Transitive,Past,--,N/A,No,null
 berhyme,--,Transitive,--,--,N/A,No,null
 remediating,--,Transitive,--,--,N/A,No,null
@@ -7726,7 +7726,7 @@ crammed,--,--,Past,--,N/A,No,null
 immortalised,--,Transitive,Past,--,N/A,No,null
 observed,--,--,Past,--,N/A,No,null
 look back,--,Intransitive,--,--,N/A,NotSeperable,null
-prelocate,--,tran=np,--,--,N/A,No,null
+prelocate,--,--,--,--,N/A,No,null
 wincing,--,--,--,--,N/A,No,null
 air-cool,--,Transitive,--,--,N/A,No,null
 mischarging,--,--,--,--,N/A,No,null
@@ -8242,7 +8242,7 @@ deposed,--,--,Past,--,N/A,No,null
 metrized,--,Transitive,Past,--,N/A,No,null
 preconceded,--,Transitive,Past,--,N/A,No,null
 chroming,--,--,--,--,N/A,No,null
-outcross,--,tran=np,--,--,N/A,No,null
+outcross,--,--,--,--,N/A,No,null
 reitemizing,--,Transitive,--,--,N/A,No,null
 hepatise,--,Transitive,--,--,N/A,No,null
 flocculate,--,tran=np,--,--,N/A,No,null
@@ -8430,7 +8430,7 @@ chromeplating,--,Transitive,--,--,N/A,No,null
 observe,--,Transitive,--,--,N/A,No,null
 furnish,--,Transitive,--,--,N/A,No,null
 aspirating,--,--,--,--,N/A,No,null
-intercrop,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
+intercrop,--,--,--,--,N/A,No,null
 preceded,--,--,Past,--,N/A,No,null
 re-sound,--,--,--,--,N/A,No,null
 enlighten,--,Transitive,--,--,N/A,No,null
@@ -8438,7 +8438,7 @@ outquibbling,--,Transitive,--,--,N/A,No,null
 gash,--,Transitive,--,--,N/A,No,null
 assibilated,--,--,Past,--,N/A,No,null
 preaccumulate,--,Transitive,--,--,N/A,No,null
-preenroll,--,tran=np+ditran=np+pphr(in+np),--,--,N/A,No,null
+preenroll,--,--,--,--,N/A,No,null
 overreprimand,--,Transitive,--,--,N/A,No,null
 misaddress,--,Transitive,--,--,N/A,No,null
 militarize,--,Transitive,--,--,N/A,No,null
@@ -8615,7 +8615,7 @@ jump on,--,Intransitive,--,--,N/A,Seperable,null
 freelancing,--,--,--,--,N/A,No,null
 mistrust,--,tran=np,--,--,N/A,No,null
 rebating,--,--,--,--,N/A,No,null
-knob,--,tran=np,--,--,N/A,No,null
+knob,--,--,--,--,N/A,No,null
 ensilaging,--,--,--,--,N/A,No,null
 re-prove,--,Ambitransitive,--,--,N/A,No,null
 Anglicised,--,Ambitransitive,Past,--,N/A,No,null
@@ -8637,7 +8637,7 @@ single,--,Transitive,--,--,N/A,No,null
 hornswoggling,--,Transitive,--,--,N/A,No,null
 superordain,--,Intransitive,--,--,N/A,No,null
 sprauchling,--,Intransitive,--,--,N/A,No,null
-cross-pollinate,--,tran=np,--,--,N/A,No,null
+cross-pollinate,--,--,--,--,N/A,No,null
 interclash,--,--,--,--,N/A,No,null
 superreward,--,Transitive,--,--,N/A,No,null
 curette,--,Transitive,--,--,N/A,No,null
@@ -8748,7 +8748,7 @@ forcing,--,--,--,--,N/A,No,null
 braid,--,Transitive,--,--,N/A,No,null
 jack in,--,Transitive,--,--,N/A,Seperable,null
 gum up,--,Transitive,--,--,N/A,NotSeperable,null
-mishear,--,tran=np,--,--,N/A,No,null
+mishear,--,--,--,--,N/A,No,null
 machine-gunned,--,Transitive,Past,--,N/A,No,null
 fluorspar,--,--,--,--,N/A,No,null
 toe-dance,--,Intransitive,--,--,N/A,No,null
@@ -8954,7 +8954,7 @@ preentitling,--,Transitive,--,--,N/A,No,null
 snaking,--,--,--,--,N/A,No,null
 exsanguinated,--,--,Past,--,N/A,No,null
 hoodwink,--,Transitive,--,--,N/A,No,null
-prenegotiate,--,tran=np,--,--,N/A,No,null
+prenegotiate,--,--,--,--,N/A,No,null
 gratulate,--,Transitive,--,--,N/A,No,null
 bung,--,Transitive,--,--,N/A,No,null
 jutted,--,--,Past,--,N/A,No,null
@@ -9019,7 +9019,7 @@ combat,--,Ambitransitive,--,--,N/A,No,null
 overdramatized,--,--,Past,--,N/A,No,null
 pipping,--,Transitive,--,--,N/A,No,null
 chromed,--,--,Past,--,N/A,No,null
-tier,--,tran=np+ditran=np+pphr(on+np),--,--,N/A,No,null
+tier,--,--,--,--,N/A,No,null
 ties,--,Transitive,--,--,N/A,No,null
 filigreeing,--,--,--,--,N/A,No,null
 busy,--,tran=np+tran=pphr(with+np)+tran=ingcomp:subjc+tran=pphr(with+ingcomp:subjc),--,--,N/A,No,null
@@ -9217,7 +9217,7 @@ resile,--,Intransitive,--,--,N/A,No,null
 concurring,--,Intransitive,--,--,N/A,No,null
 overindulging,--,Ambitransitive,--,--,N/A,No,null
 rebound,--,Intransitive,--,--,N/A,No,null
-underspend,--,tran=np,--,--,N/A,No,null
+underspend,--,--,--,--,N/A,No,null
 bibbing,--,--,--,--,N/A,No,null
 attest,--,Transitive,--,--,N/A,No,null
 entice,--,Transitive,--,--,N/A,No,null
@@ -9335,7 +9335,7 @@ preworship,--,--,--,--,N/A,No,null
 rematerialized,--,--,Past,--,N/A,No,null
 waffle,--,Intransitive,--,--,N/A,No,null
 popple,--,Intransitive,--,--,N/A,No,null
-reevacuate,--,tran=np,--,--,N/A,No,null
+reevacuate,--,--,--,--,N/A,No,null
 preaffiliating,--,--,--,--,N/A,No,null
 concave,--,Transitive,--,--,N/A,No,null
 unhorsed,--,Transitive,Past,--,N/A,No,null
@@ -9500,7 +9500,7 @@ luteinize,--,Ambitransitive,--,--,N/A,No,null
 preprovoke,--,Transitive,--,--,N/A,No,null
 splatter,--,tran=np,--,--,N/A,No,null
 let off,--,Transitive,--,--,N/A,Seperable,null
-prequalify,--,tran=infcomp:subjr+tran=np+ditran=np+pphr(for+np),--,--,N/A,No,null
+prequalify,--,--,--,--,N/A,No,null
 divulsed,--,Transitive,Past,--,N/A,No,null
 coved,--,--,Past,--,N/A,No,null
 cover,--,Intransitive,--,--,N/A,No,null
@@ -9693,7 +9693,7 @@ fatigate,--,Transitive,--,--,N/A,No,null
 tonsure,--,Transitive,--,--,N/A,No,null
 staged,--,--,Past,--,N/A,No,null
 disfiguring,--,Transitive,--,--,N/A,No,null
-restring,--,tran=np,--,--,N/A,No,null
+restring,--,--,--,--,N/A,No,null
 blasphemed,--,--,Past,--,N/A,No,null
 underlining,--,--,--,--,N/A,No,null
 untune,--,Transitive,--,--,N/A,No,null
@@ -9797,7 +9797,7 @@ dialyzed,--,--,Past,--,N/A,No,null
 preform,--,Transitive,--,--,N/A,No,null
 outteasing,--,Transitive,--,--,N/A,No,null
 pasquinading,--,--,--,--,N/A,No,null
-reapprehend,--,tran=np,--,--,N/A,No,null
+reapprehend,--,--,--,--,N/A,No,null
 shent,--,Transitive,--,--,N/A,No,null
 underwriting,--,--,--,--,N/A,No,null
 re-echo,--,Transitive,--,--,N/A,No,null
@@ -10166,7 +10166,7 @@ resewed,--,Transitive,Past,--,N/A,No,null
 finessed,--,--,Past,--,N/A,No,null
 disenabling,--,Transitive,--,--,N/A,No,null
 depilated,--,Transitive,Past,--,N/A,No,null
-overdilate,--,tran=np,--,--,N/A,No,null
+overdilate,--,--,--,--,N/A,No,null
 outthrob,--,Transitive,--,--,N/A,No,null
 baronetized,--,Transitive,Past,--,N/A,No,null
 carillon,--,--,--,--,N/A,No,null
@@ -10432,7 +10432,7 @@ saunter,--,Intransitive,--,--,N/A,No,null
 circumvallate,--,Transitive,--,--,N/A,No,null
 dislimn,--,Transitive,--,--,N/A,No,null
 chinsing,--,Transitive,--,--,N/A,No,null
-precirculate,--,tran=np,--,--,N/A,No,null
+precirculate,--,--,--,--,N/A,No,null
 combatting,--,--,--,--,N/A,No,null
 disembarrass,--,Transitive,--,--,N/A,No,null
 routinized,--,Transitive,Past,--,N/A,No,null
@@ -10462,7 +10462,7 @@ housekeep,--,Intransitive,--,--,N/A,No,null
 preagree,--,Intransitive,--,--,N/A,No,null
 premeasure,--,Transitive,--,--,N/A,No,null
 overemotionalizing,--,Transitive,--,--,N/A,No,null
-immerge,--,tran=np+tran=pphr(into+np),--,--,N/A,No,null
+immerge,--,--,--,--,N/A,No,null
 municipalized,--,Transitive,Past,--,N/A,No,null
 suberize,--,Transitive,--,--,N/A,No,null
 aspersing,--,Transitive,--,--,N/A,No,null
@@ -10530,7 +10530,7 @@ interfiled,--,Transitive,Past,--,N/A,No,null
 enforce,--,Transitive,--,--,N/A,No,null
 glitter,--,Intransitive,--,--,N/A,No,null
 preabsorb,--,tran=np,--,--,N/A,No,null
-reticulate,--,tran=np,--,--,N/A,No,null
+reticulate,--,--,--,--,N/A,No,null
 uncatholicizing,--,Transitive,--,--,N/A,No,null
 bowsed,--,Intransitive,Past,--,N/A,No,null
 rehumanize,--,tran=np,--,--,N/A,No,null
@@ -10929,7 +10929,7 @@ pull off,--,Transitive,--,--,N/A,Seperable,null
 dispelling,--,Transitive,--,--,N/A,No,null
 allocate,--,Transitive,--,--,N/A,No,null
 delegalized,--,Transitive,Past,--,N/A,No,null
-redisperse,--,tran=np,--,--,N/A,No,null
+redisperse,--,--,--,--,N/A,No,null
 poor-will,--,Transitive,--,--,N/A,No,null
 jetting,--,--,--,--,N/A,No,null
 pumice,--,Transitive,--,--,N/A,No,null
@@ -11509,7 +11509,7 @@ wrote,--,--,--,--,N/A,No,null
 bullyragged,--,Transitive,Past,--,N/A,No,null
 unplan,--,Transitive,--,--,N/A,No,null
 insist,--,Ambitransitive,--,--,N/A,No,null
-reoffend,--,tran=pphr(against+np),--,--,N/A,No,null
+reoffend,--,--,--,--,N/A,No,null
 disunify,--,Transitive,--,--,N/A,No,null
 kaolinised,--,Transitive,Past,--,N/A,No,null
 surf casting,--,Ambitransitive,--,--,N/A,NotSeperable,null
@@ -11579,7 +11579,7 @@ preshow,--,Transitive,--,--,N/A,No,null
 rehabilitating,--,Transitive,--,--,N/A,No,null
 centuplicate,--,Transitive,--,--,N/A,No,null
 jemmying,--,--,--,--,N/A,No,null
-bewail,--,tran=np,--,--,N/A,No,null
+bewail,--,--,--,--,N/A,No,null
 circumvolve,--,Ambitransitive,--,--,N/A,No,null
 wived,--,--,Past,--,N/A,No,null
 reobligated,--,Transitive,Past,--,N/A,No,null
@@ -11619,7 +11619,7 @@ de-excite,--,Transitive,--,--,N/A,No,null
 unpeg,--,--,--,--,N/A,No,null
 guddle,--,Ambitransitive,--,--,N/A,No,null
 podsolized,--,--,Past,--,N/A,No,null
-tope,--,tran=np,--,--,N/A,No,null
+tope,--,--,--,--,N/A,No,null
 interceded,--,Transitive,Past,--,N/A,No,null
 disanoint,--,Transitive,--,--,N/A,No,null
 toot,--,tran=np,--,--,N/A,No,null
@@ -11855,7 +11855,7 @@ divulsing,--,Transitive,--,--,N/A,No,null
 enunciating,--,--,--,--,N/A,No,null
 reweave,--,tran=np+ditran=np+pphr(into+np)+ditran=np+pphr(for+np);datmvt+cplxtran=np,advbl,--,--,N/A,No,null
 yodeled,--,--,Past,--,N/A,No,null
-cinematograph,--,tran=np,--,--,N/A,No,null
+cinematograph,--,--,--,--,N/A,No,null
 preside,--,Intransitive,--,--,N/A,No,null
 repeople,--,Transitive,--,--,N/A,No,null
 Anglicized,--,Ambitransitive,Past,--,N/A,No,null
@@ -11986,7 +11986,7 @@ rappelled,--,--,Past,--,N/A,No,null
 carboxylating,--,--,--,--,N/A,No,null
 reillustrated,--,Transitive,Past,--,N/A,No,null
 exclude,--,Transitive,--,--,N/A,No,null
-miswire,--,tran=np,--,--,N/A,No,null
+miswire,--,--,--,--,N/A,No,null
 recarved,--,--,Past,--,N/A,No,null
 nol-pros,--,Transitive,--,--,N/A,No,null
 douse,--,Transitive,--,--,N/A,No,null
@@ -12012,7 +12012,7 @@ incarcerate,--,Transitive,--,--,N/A,No,null
 shuttling,--,--,--,--,N/A,No,null
 sleaving,--,--,--,--,N/A,No,null
 cliquing,--,--,--,--,N/A,No,null
-overhand,--,tran=np+ditran=np+pphr(into+np),--,--,N/A,No,null
+overhand,--,--,--,--,N/A,No,null
 burking,--,Transitive,--,--,N/A,No,null
 overhang,--,Transitive,--,--,N/A,No,null
 sanction,--,Transitive,--,--,N/A,No,null
@@ -12188,7 +12188,7 @@ paradropped,--,Transitive,Past,--,N/A,No,null
 fill away,--,Intransitive,--,--,N/A,NotSeperable,null
 overcentralize,--,tran=np+tran=pphr(in+np)+ditran=np+pphr(in+np),--,--,N/A,No,null
 mutilating,--,Transitive,--,--,N/A,No,null
-disaffiliate,--,tran=pphr(from+np),--,--,N/A,No,null
+disaffiliate,--,--,--,--,N/A,No,null
 outglaring,--,Transitive,--,--,N/A,No,null
 genapped,--,Transitive,Past,--,N/A,No,null
 shinnying,--,Intransitive,--,--,N/A,No,null
@@ -12573,7 +12573,7 @@ photo layout,--,Transitive,--,--,N/A,NotSeperable,null
 drizzling,--,--,--,--,N/A,No,null
 disfavor,--,Transitive,--,--,N/A,No,null
 apprentice,--,Transitive,--,--,N/A,No,null
-redemonstrate,--,tran=np+tran=fincomp(t),--,--,N/A,No,null
+redemonstrate,--,--,--,--,N/A,No,null
 catenated,--,Transitive,Past,--,N/A,No,null
 begat,--,--,--,--,N/A,No,null
 about-faced,--,--,Past,--,N/A,No,null
@@ -12960,7 +12960,7 @@ ransack,--,Transitive,--,--,N/A,No,null
 hunt down,--,Intransitive,--,--,N/A,Seperable,null
 astound,--,Transitive,--,--,N/A,No,null
 Harveyized,--,Transitive,Past,--,N/A,No,null
-verbify,--,tran=np,--,--,N/A,No,null
+verbify,--,--,--,--,N/A,No,null
 foreshorten,--,Transitive,--,--,N/A,No,null
 kippen,--,--,--,--,N/A,No,null
 recalcitrating,--,Intransitive,--,--,N/A,No,null
@@ -13005,7 +13005,7 @@ prespecified,--,Transitive,Past,--,N/A,No,null
 badger,--,Transitive,--,--,N/A,No,null
 preevaporated,--,--,Past,--,N/A,No,null
 bollix,--,Transitive,--,--,N/A,No,null
-caravan,--,tran=np,--,--,N/A,No,null
+caravan,--,--,--,--,N/A,No,null
 superastonish,--,--,--,--,N/A,No,null
 forbearing,--,--,--,--,N/A,No,null
 preindemnified,--,Transitive,Past,--,N/A,No,null
@@ -13481,7 +13481,7 @@ rotary wing,--,Intransitive,--,--,N/A,NotSeperable,null
 refile,--,tran=np+tran=np;part(away)+tran=np;part(down)+cplxtran=np,advbl,--,--,N/A,No,null
 crick,--,Transitive,--,--,N/A,No,null
 esquiring,--,--,--,--,N/A,No,null
-air-dry,--,tran=np,--,--,N/A,No,null
+air-dry,--,--,--,--,N/A,No,null
 holden,--,--,--,--,N/A,No,null
 call,--,Ambitransitive,--,--,N/A,No,null
 refilm,--,Transitive,--,--,N/A,No,null
@@ -13654,7 +13654,7 @@ revenging,--,--,--,--,N/A,No,null
 rogue,--,Transitive,--,--,N/A,No,null
 cave,--,Transitive,--,--,N/A,No,null
 shatter,--,Transitive,--,--,N/A,No,null
-decollate,--,tran=np,--,--,N/A,No,null
+decollate,--,--,--,--,N/A,No,null
 pig's ear,--,Intransitive,--,--,N/A,NotSeperable,null
 snowshoe,--,--,--,--,N/A,No,null
 scramb,--,Transitive,--,--,N/A,No,null
@@ -13737,7 +13737,7 @@ unfeudalised,--,Transitive,Past,--,N/A,No,null
 run over,--,Ambitransitive,--,--,N/A,Seperable,null
 outring,--,Ambitransitive,--,--,N/A,No,null
 obnounced,--,Intransitive,Past,--,N/A,No,null
-intercross,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
+intercross,--,--,--,--,N/A,No,null
 pregratifying,--,Transitive,--,--,N/A,No,null
 edulcorated,--,Transitive,Past,--,N/A,No,null
 misreferring,--,--,--,--,N/A,No,null
@@ -13748,7 +13748,7 @@ practiced,--,--,Past,--,N/A,No,null
 bed,--,tran=np,Past,--,N/A,No,null
 de-emphasized,--,Transitive,Past,--,N/A,No,null
 beg,--,Intransitive,--,--,N/A,No,null
-crosscut,--,tran=np,--,--,N/A,No,null
+crosscut,--,--,--,--,N/A,No,null
 welsh,--,Intransitive,--,--,N/A,No,null
 bet,--,Ambitransitive,--,--,N/A,No,null
 outstagger,--,Transitive,--,--,N/A,No,null
@@ -13917,7 +13917,7 @@ spanned,--,--,Past,--,N/A,No,null
 stereochrome,--,Transitive,--,--,N/A,No,null
 drawl,--,tran=np+tran=np;part(out),--,--,N/A,No,null
 ached,--,--,Past,--,N/A,No,null
-pleasure,--,tran=np,--,--,N/A,No,null
+pleasure,--,--,--,--,N/A,No,null
 exculpate,--,Transitive,--,--,N/A,No,null
 desulphurate,--,Transitive,--,--,N/A,No,null
 alchemise,--,Transitive,--,--,N/A,No,null
@@ -13930,7 +13930,7 @@ epimerizing,--,Transitive,--,--,N/A,No,null
 hustle,--,Ambitransitive,--,--,N/A,No,null
 smuggle,--,Transitive,--,--,N/A,No,null
 tableting,--,--,--,--,N/A,No,null
-Nazify,--,tran=np,--,--,N/A,No,null
+Nazify,--,--,--,--,N/A,No,null
 overspicing,--,--,--,--,N/A,No,null
 tarry,--,tran=np,--,--,N/A,No,null
 underflood,--,--,--,--,N/A,No,null
@@ -14415,7 +14415,7 @@ distribute,--,Transitive,--,--,N/A,No,null
 shout,--,Intransitive,--,--,N/A,No,null
 think,--,Intransitive,--,--,N/A,No,null
 Sanforize,--,Transitive,--,--,N/A,No,null
-reproject,--,tran=np+ditran=np+pphr(into+np)+ditran=np+pphr(onto+np)+ditran=np+pphr(on+np),--,--,N/A,No,null
+reproject,--,--,--,--,N/A,No,null
 intertouch,--,Intransitive,--,--,N/A,No,null
 shove,--,Transitive,--,--,N/A,No,null
 sleepwalk,--,Intransitive,--,--,N/A,No,null
@@ -14533,7 +14533,7 @@ overslip,--,Transitive,--,--,N/A,No,null
 dab,--,Transitive,--,--,N/A,No,null
 reswallow,--,--,--,--,N/A,No,null
 self-chastising,--,Transitive,--,--,N/A,No,null
-dag,--,tran=np,--,--,N/A,No,null
+dag,--,--,--,--,N/A,No,null
 encrust,--,Transitive,--,--,N/A,No,null
 counselling,--,--,--,--,N/A,No,null
 dam,--,tran=np+tran=np;part(up)+ditran=np+pphr(with+np),--,--,N/A,No,null
@@ -14568,7 +14568,7 @@ outfeed,--,Transitive,Past,--,N/A,No,null
 distill,--,Ambitransitive,--,--,N/A,No,null
 deracinated,--,Transitive,Past,--,N/A,No,null
 two-sticker,--,Transitive,--,--,N/A,No,null
-chauffeur,--,tran=np,--,--,N/A,No,null
+chauffeur,--,--,--,--,N/A,No,null
 hinged,--,--,Past,--,N/A,No,null
 canalize,--,Transitive,--,--,N/A,No,null
 further,--,Transitive,--,--,N/A,No,null
@@ -14578,7 +14578,7 @@ rebellow,--,--,--,--,N/A,No,null
 instigate,--,Transitive,--,--,N/A,No,null
 misorganizing,--,--,--,--,N/A,No,null
 computerized,--,Transitive,Past,--,N/A,No,null
-den,--,tran=np,--,--,N/A,No,null
+den,--,--,--,--,N/A,No,null
 tramcar,--,Transitive,--,--,N/A,No,null
 strangulate,--,Transitive,--,--,N/A,No,null
 unsensitise,--,Transitive,--,--,N/A,No,null
@@ -14794,7 +14794,7 @@ renominating,--,Transitive,--,--,N/A,No,null
 tampon,--,Transitive,--,--,N/A,No,null
 jeopardized,--,Transitive,Past,--,N/A,No,null
 interfiling,--,Transitive,--,--,N/A,No,null
-hyperbolize,--,tran=np,--,--,N/A,No,null
+hyperbolize,--,--,--,--,N/A,No,null
 overdosing,--,--,--,--,N/A,No,null
 preconfusing,--,Transitive,--,--,N/A,No,null
 unkennelled,--,--,Past,--,N/A,No,null
@@ -14893,7 +14893,7 @@ exemplified,--,Transitive,Past,--,N/A,No,null
 side-step,--,Intransitive,--,--,N/A,No,null
 foreknow,--,tran=np+tran=fincomp(o)+tran=whinfcomp:subjc+tran=whfincomp+cplxtran=np,infcomp:objc,--,--,N/A,No,null
 reaccentuating,--,Transitive,--,--,N/A,No,null
-enthuse,--,tran=np+ditran=np+pphr(about+np),--,--,N/A,No,null
+enthuse,--,--,--,--,N/A,No,null
 reevaluate,--,Transitive,--,--,N/A,No,null
 outsteal,--,Transitive,--,--,N/A,No,null
 outsteam,--,Transitive,--,--,N/A,No,null
@@ -15107,7 +15107,7 @@ skiving,--,Transitive,--,--,N/A,No,null
 dehydrogenating,--,Transitive,--,--,N/A,No,null
 exhale,--,tran=np,--,--,N/A,No,null
 anathematised,--,Ambitransitive,Past,--,N/A,No,null
-stablish,--,tran=fincomp(t)+tran=whfincomp,--,--,N/A,No,null
+stablish,--,--,--,--,N/A,No,null
 overaggravated,--,Transitive,Past,--,N/A,No,null
 cede,--,Transitive,--,--,N/A,No,null
 pregrade,--,Transitive,--,--,N/A,No,null
@@ -15243,7 +15243,7 @@ overprint,--,Transitive,--,--,N/A,No,null
 reinscribed,--,Transitive,Past,--,N/A,No,null
 hemorrhage,--,Intransitive,--,--,N/A,No,null
 reimaging,--,Transitive,--,--,N/A,No,null
-predeposit,--,tran=np,--,--,N/A,No,null
+predeposit,--,--,--,--,N/A,No,null
 reallotted,--,Transitive,Past,--,N/A,No,null
 re-dress,--,Transitive,--,--,N/A,No,null
 prepersuade,--,Transitive,--,--,N/A,No,null
@@ -15291,10 +15291,10 @@ disembodying,--,Transitive,--,--,N/A,No,null
 render,--,Transitive,--,--,N/A,No,null
 derange,--,Transitive,--,--,N/A,No,null
 depersonalise,--,Transitive,--,--,N/A,No,null
-teasel,--,tran=np,--,--,N/A,No,null
+teasel,--,--,--,--,N/A,No,null
 endeavor,--,Intransitive,--,--,N/A,No,null
 overqualifying,--,Transitive,--,--,N/A,No,null
-incross,--,tran=np+ditran=np+pphr(onto+np),--,--,N/A,No,null
+incross,--,--,--,--,N/A,No,null
 revolutionised,--,Transitive,Past,--,N/A,No,null
 back-light,--,Transitive,--,--,N/A,No,null
 preinitiate,--,Transitive,--,--,N/A,No,null
@@ -15473,7 +15473,7 @@ fed,--,--,Past,--,N/A,No,null
 mutualising,--,Ambitransitive,--,--,N/A,No,null
 retrace,--,Transitive,--,--,N/A,No,null
 fee,--,tran=np,--,--,N/A,No,null
-retrack,--,tran=np,--,--,N/A,No,null
+retrack,--,--,--,--,N/A,No,null
 prededicate,--,Transitive,--,--,N/A,No,null
 disassemble,--,Transitive,--,--,N/A,No,null
 preeliminating,--,Transitive,--,--,N/A,No,null
@@ -15503,7 +15503,7 @@ outsift,--,Transitive,--,--,N/A,No,null
 butter,--,Transitive,--,--,N/A,No,null
 prespecify,--,Transitive,--,--,N/A,No,null
 disarticulating,--,Ambitransitive,--,--,N/A,No,null
-substantialize,--,tran=np,--,--,N/A,No,null
+substantialize,--,--,--,--,N/A,No,null
 agglomerate,--,tran=np,--,--,N/A,No,null
 starboard,--,--,--,--,N/A,No,null
 unmould,--,Transitive,--,--,N/A,No,null
@@ -15608,7 +15608,7 @@ rubber-stamp,--,Transitive,--,--,N/A,No,null
 silver-plated,--,Transitive,Past,--,N/A,No,null
 amerced,--,Transitive,Past,--,N/A,No,null
 remarshaling,--,Transitive,--,--,N/A,No,null
-subirrigate,--,tran=np,--,--,N/A,No,null
+subirrigate,--,--,--,--,N/A,No,null
 easing,--,--,--,--,N/A,No,null
 fox,--,Ambitransitive,--,--,N/A,No,null
 plow,--,tran=np+tran=np;part(up)+cplxtran=np+pphr(through+np)+cplxtran=np,advbl,--,--,N/A,No,null
@@ -15766,7 +15766,7 @@ gradated,--,--,Past,--,N/A,No,null
 cabbling,--,Transitive,--,--,N/A,No,null
 perfusing,--,Transitive,--,--,N/A,No,null
 predischarging,--,Transitive,--,--,N/A,No,null
-belly,--,tran=np+tran=np;part(out)+tran=pphr(to+np);part(up),--,--,N/A,No,null
+belly,--,--,--,--,N/A,No,null
 waded,--,--,Past,--,N/A,No,null
 metallising,--,Transitive,--,--,N/A,No,null
 remerging,--,--,--,--,N/A,No,null
@@ -15858,7 +15858,7 @@ interosculate,--,Intransitive,--,--,N/A,No,null
 interassured,--,Transitive,Past,--,N/A,No,null
 underpoint,--,Intransitive,--,--,N/A,No,null
 hierarchised,--,Transitive,Past,--,N/A,No,null
-belay,--,tran=np,--,--,N/A,No,null
+belay,--,--,--,--,N/A,No,null
 preapproving,--,--,--,--,N/A,No,null
 capriole,--,Intransitive,--,--,N/A,No,null
 versifying,--,--,--,--,N/A,No,null
@@ -16165,7 +16165,7 @@ defoliated,--,--,Past,--,N/A,No,null
 mischoose,--,Intransitive,--,--,N/A,No,null
 maffick,--,Intransitive,--,--,N/A,No,null
 interassure,--,Transitive,--,--,N/A,No,null
-overfly,--,tran=np,--,--,N/A,No,null
+overfly,--,--,--,--,N/A,No,null
 redisposed,--,Transitive,Past,--,N/A,No,null
 outfame,--,Transitive,--,--,N/A,No,null
 reassumed,--,Transitive,Past,--,N/A,No,null
@@ -16500,7 +16500,7 @@ commeasure,--,Transitive,--,--,N/A,No,null
 Aryanising,--,Transitive,--,--,N/A,No,null
 restrapped,--,Transitive,Past,--,N/A,No,null
 chip,--,tran=np+tran=np;part(away)+tran=pphr(at+np);part(away);noprtmvt+tran=pphr(with+np);part(in);noprtmvt+tran=pphr(off+np)+tran=infcomp:arbc;part(in)+cplxtran=np+pphr(of+np);part(off),--,--,N/A,No,null
-chin,--,tran=np+tran=np;part(up);nopass,--,--,N/A,No,null
+chin,--,--,--,--,N/A,No,null
 prewrap,--,Transitive,--,--,N/A,No,null
 reindorse,--,Transitive,--,--,N/A,No,null
 dragged,--,--,Past,--,N/A,No,null
@@ -16757,7 +16757,7 @@ reforecast,--,Transitive,--,--,N/A,No,null
 boohooing,--,--,--,--,N/A,No,null
 abut,--,tran=pphr(on+np);nopass+tran=np;nopass,--,--,N/A,No,null
 attune,--,Transitive,--,--,N/A,No,null
-reamend,--,tran=np,--,--,N/A,No,null
+reamend,--,--,--,--,N/A,No,null
 brangle,--,Intransitive,--,--,N/A,No,null
 judging,--,--,--,--,N/A,No,null
 overhandling,--,Transitive,--,--,N/A,No,null
@@ -16957,7 +16957,7 @@ exchanging,--,--,--,--,N/A,No,null
 make out,--,Ambitransitive,--,--,N/A,Seperable,null
 yike,--,--,--,--,N/A,No,null
 burred,--,--,Past,--,N/A,No,null
-unkink,--,tran=np+ditran=np+pphr(from+np),--,--,N/A,No,null
+unkink,--,--,--,--,N/A,No,null
 lactonize,--,Ambitransitive,--,--,N/A,No,null
 undercoursed,--,--,Past,--,N/A,No,null
 mismade,--,--,--,--,N/A,No,null
@@ -17224,7 +17224,7 @@ jib,--,--,--,--,N/A,No,null
 noising,--,--,--,--,N/A,No,null
 prereferred,--,Transitive,Past,--,N/A,No,null
 reenclosed,--,Transitive,Past,--,N/A,No,null
-jig,--,tran=np,--,--,N/A,No,null
+jig,--,--,--,--,N/A,No,null
 enslaving,--,Transitive,--,--,N/A,No,null
 presearch,--,Transitive,--,--,N/A,No,null
 verminating,--,Intransitive,--,--,N/A,No,null
@@ -17283,7 +17283,7 @@ nominating,--,--,--,--,N/A,No,null
 chousing,--,--,--,--,N/A,No,null
 dissipating,--,--,--,--,N/A,No,null
 prespeculated,--,Intransitive,Past,--,N/A,No,null
-job,--,tran=np,--,--,N/A,No,null
+job,--,--,--,--,N/A,No,null
 underbrace,--,Transitive,--,--,N/A,No,null
 buffaloed,--,--,Past,--,N/A,No,null
 jog,--,Intransitive,--,--,N/A,No,null
@@ -17387,7 +17387,7 @@ transilluminated,--,Transitive,Past,--,N/A,No,null
 overarch,--,Transitive,--,--,N/A,No,null
 lunging,--,--,--,--,N/A,No,null
 prettified,--,Transitive,Past,--,N/A,No,null
-denudate,--,tran=np,--,--,N/A,No,null
+denudate,--,--,--,--,N/A,No,null
 reliberate,--,Transitive,--,--,N/A,No,null
 adjust,--,Transitive,--,--,N/A,No,null
 astrogate,--,Intransitive,--,--,N/A,No,null
@@ -17568,7 +17568,7 @@ miswrote,--,Transitive,--,--,N/A,No,null
 aminated,--,Transitive,Past,--,N/A,No,null
 preconfide,--,--,--,--,N/A,No,null
 renaming,--,Transitive,--,--,N/A,No,null
-transvalue,--,tran=np,--,--,N/A,No,null
+transvalue,--,--,--,--,N/A,No,null
 napalm,--,Transitive,--,--,N/A,No,null
 pasteurised,--,Transitive,Past,--,N/A,No,null
 subtract,--,tran=np+ditran=np+pphr(from+np),--,--,N/A,No,null
@@ -17620,7 +17620,7 @@ dismay,--,Transitive,--,--,N/A,No,null
 economizing,--,--,--,--,N/A,No,null
 paddock,--,Transitive,--,--,N/A,No,null
 carpet,--,Transitive,--,--,N/A,No,null
-interlay,--,tran=np,--,--,N/A,No,null
+interlay,--,--,--,--,N/A,No,null
 leapfrog,--,Intransitive,--,--,N/A,No,null
 overidentifying,--,--,--,--,N/A,No,null
 get into,--,Intransitive,--,--,N/A,Seperable,null
@@ -17846,11 +17846,11 @@ schmoosing,--,Intransitive,--,--,N/A,No,null
 entangling,--,Transitive,--,--,N/A,No,null
 miswired,--,--,Past,--,N/A,No,null
 solvating,--,--,--,--,N/A,No,null
-repropose,--,tran=fincomp(ts)+tran=infcomp:subjc+tran=ingcomp:arbc+tran=np,--,--,N/A,No,null
+repropose,--,--,--,--,N/A,No,null
 unsphere,--,Transitive,--,--,N/A,No,null
 lent,--,--,--,--,N/A,No,null
 delocalising,--,Transitive,--,--,N/A,No,null
-reacclimate,--,tran=np+tran=pphr(to+np)+ditran=np+pphr(to+np),--,--,N/A,No,null
+reacclimate,--,--,--,--,N/A,No,null
 pregratified,--,Transitive,Past,--,N/A,No,null
 sousing,--,--,--,--,N/A,No,null
 dentalised,--,Transitive,Past,--,N/A,No,null
@@ -17898,7 +17898,7 @@ reburied,--,Transitive,Past,--,N/A,No,null
 went,--,--,--,--,N/A,No,null
 spearhead,--,Transitive,--,--,N/A,No,null
 interembrace,--,--,--,--,N/A,No,null
-predevelop,--,tran=np,--,--,N/A,No,null
+predevelop,--,--,--,--,N/A,No,null
 call off,--,Transitive,--,--,N/A,Seperable,null
 wend,--,tran=np,--,--,N/A,No,null
 blotch,--,Intransitive,--,--,N/A,No,null
@@ -17912,7 +17912,7 @@ japing,--,--,--,--,N/A,No,null
 masculinized,--,Transitive,Past,--,N/A,No,null
 concelebrate,--,--,--,--,N/A,No,null
 reglaze,--,Transitive,--,--,N/A,No,null
-outwork,--,tran=np,--,--,N/A,No,null
+outwork,--,--,--,--,N/A,No,null
 palladiumize,--,Transitive,--,--,N/A,No,null
 outword,--,Transitive,--,--,N/A,No,null
 relaunch,--,Transitive,--,--,N/A,No,null
@@ -18091,7 +18091,7 @@ merit,--,Transitive,--,--,N/A,No,null
 push off,--,Intransitive,--,--,N/A,Seperable,null
 develop,--,Transitive,--,--,N/A,No,null
 Roneo,--,--,--,--,N/A,No,null
-reinterrogate,--,tran=np,--,--,N/A,No,null
+reinterrogate,--,--,--,--,N/A,No,null
 sunburning,--,--,--,--,N/A,No,null
 pregenerate,--,Transitive,--,--,N/A,No,null
 aching,--,--,--,--,N/A,No,null
@@ -18215,7 +18215,7 @@ puzzling,--,--,--,--,N/A,No,null
 fumble,--,Intransitive,--,--,N/A,No,null
 correlate,--,Transitive,--,--,N/A,No,null
 fetter,--,Transitive,--,--,N/A,No,null
-recool,--,tran=np,--,--,N/A,No,null
+recool,--,--,--,--,N/A,No,null
 recook,--,--,--,--,N/A,No,null
 relied,--,Intransitive,Past,--,N/A,No,null
 inactivated,--,Transitive,Past,--,N/A,No,null
@@ -18651,16 +18651,16 @@ overtiming,--,--,--,--,N/A,No,null
 shipped,--,--,Past,--,N/A,No,null
 intertinging,--,Transitive,--,--,N/A,No,null
 sleaved,--,--,Past,--,N/A,No,null
-fractionize,--,tran=np,--,--,N/A,No,null
+fractionize,--,--,--,--,N/A,No,null
 invaded,--,--,Past,--,N/A,No,null
 outshaped,--,Transitive,Past,--,N/A,No,null
 mud,--,--,--,--,N/A,No,null
 mug,--,tran=np,--,--,N/A,No,null
 bounce back,--,Intransitive,--,--,N/A,NotSeperable,null
 mum,--,--,--,--,N/A,No,null
-interfuse,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
+interfuse,--,--,--,--,N/A,No,null
 chackling,--,Intransitive,--,--,N/A,No,null
-jade,--,tran=np,--,--,N/A,No,null
+jade,--,--,--,--,N/A,No,null
 marry off,--,Transitive,--,--,N/A,NotSeperable,null
 bombard,--,Transitive,--,--,N/A,No,null
 missort,--,tran=np,--,--,N/A,No,null
@@ -18675,7 +18675,7 @@ reapportion,--,Transitive,--,--,N/A,No,null
 subcontract,--,Intransitive,--,--,N/A,No,null
 overestimate,--,Transitive,--,--,N/A,No,null
 piked,--,--,Past,--,N/A,No,null
-misfile,--,tran=np,--,--,N/A,No,null
+misfile,--,--,--,--,N/A,No,null
 jack,--,Transitive,--,--,N/A,No,null
 overbait,--,Transitive,--,--,N/A,No,null
 misshaped,--,Transitive,Past,--,N/A,No,null
@@ -19068,7 +19068,7 @@ redrugged,--,Transitive,Past,--,N/A,No,null
 alkalizing,--,Transitive,--,--,N/A,No,null
 reinfuse,--,Transitive,--,--,N/A,No,null
 writhen,--,--,--,--,N/A,No,null
-misadjust,--,tran=np,--,--,N/A,No,null
+misadjust,--,--,--,--,N/A,No,null
 orthogonalize,--,Transitive,--,--,N/A,No,null
 outgrown,--,--,--,--,N/A,No,null
 macadamize,--,Transitive,--,--,N/A,No,null
@@ -19077,7 +19077,7 @@ emblematizing,--,Transitive,--,--,N/A,No,null
 secundus,--,Ambitransitive,--,--,N/A,No,null
 brasqued,--,--,Past,--,N/A,No,null
 casseroling,--,--,--,--,N/A,No,null
-nut,--,tran=np,--,--,N/A,No,null
+nut,--,--,--,--,N/A,No,null
 whir,--,Intransitive,--,--,N/A,No,null
 barding,--,--,--,--,N/A,No,null
 whip,--,Transitive,--,--,N/A,No,null
@@ -19765,7 +19765,7 @@ peg,--,tran=np+tran=np;part(out)+tran=np;part(up)+tran=np;part(down)+tran=pphr(a
 allegorizing,--,--,--,--,N/A,No,null
 rescrutinized,--,Transitive,Past,--,N/A,No,null
 pen,--,tran=np;part(up)+tran=np;part(in)+tran=pphr(in+np)+ditran=np+pphr(to+np),--,--,N/A,No,null
-pep,--,tran=np;part(up)+tran=np,--,--,N/A,No,null
+pep,--,--,--,--,N/A,No,null
 pettled,--,Transitive,Past,--,N/A,No,null
 pet,--,tran=np,--,--,N/A,No,null
 Newmanise,--,Intransitive,--,--,N/A,No,null
@@ -19827,14 +19827,14 @@ snapped,--,--,Past,--,N/A,No,null
 coiffure,--,Transitive,--,--,N/A,No,null
 underprized,--,Transitive,Past,--,N/A,No,null
 guaranteed,--,--,Past,--,N/A,No,null
-higgle,--,tran=pphr(about+np)+tran=pphr(over+np)+tran=pphr(with+np)+ditran=pphr(with+np)+pphr(about+ditran=pphr(with+np)+pphr(over,--,--,N/A,No,null
+higgle,--,--,--,--,N/A,No,null
 scandalise,--,Transitive,--,--,N/A,No,null
 disagreed,--,Intransitive,Past,--,N/A,No,null
 nonplussing,--,--,--,--,N/A,No,null
 sunbathe,--,Intransitive,--,--,N/A,No,null
 vapourise,--,Ambitransitive,--,--,N/A,No,null
 overdazzled,--,--,Past,--,N/A,No,null
-limber,--,tran=np+tran=np;part(up),--,--,N/A,No,null
+limber,--,--,--,--,N/A,No,null
 commercializing,--,Transitive,--,--,N/A,No,null
 lotted,--,--,Past,--,N/A,No,null
 absolve,--,Transitive,--,--,N/A,No,null
@@ -19948,7 +19948,7 @@ misgraded,--,--,Past,--,N/A,No,null
 ensanguine,--,Transitive,--,--,N/A,No,null
 slotting,--,--,--,--,N/A,No,null
 Xerox,--,tran=np,--,--,N/A,No,null
-sideswipe,--,tran=np,--,--,N/A,No,null
+sideswipe,--,--,--,--,N/A,No,null
 misrating,--,--,--,--,N/A,No,null
 universalizing,--,Transitive,--,--,N/A,No,null
 centrifuge,--,Transitive,--,--,N/A,No,null
@@ -20490,7 +20490,7 @@ overstoring,--,--,--,--,N/A,No,null
 round,--,Transitive,--,--,N/A,No,null
 outwrangle,--,Transitive,--,--,N/A,No,null
 brattling,--,--,--,--,N/A,No,null
-reacidify,--,tran=np,--,--,N/A,No,null
+reacidify,--,--,--,--,N/A,No,null
 hurries,--,--,--,--,N/A,No,null
 unswear,--,--,--,--,N/A,No,null
 deterge,--,Transitive,--,--,N/A,No,null
@@ -20507,7 +20507,7 @@ ran,--,--,--,--,N/A,No,null
 ram,--,tran=np+tran=np;part(down)+tran=np;part(in)+tran=np;part(through)+cplxtran=np,advbl,--,--,N/A,No,null
 rap,--,Intransitive,--,--,N/A,No,null
 undereate,--,Intransitive,--,--,N/A,No,null
-rat,--,tran=np;part(out)+tran=np+tran=np;part(on),--,--,N/A,No,null
+rat,--,--,--,--,N/A,No,null
 missupposing,--,--,--,--,N/A,No,null
 pacificated,--,Transitive,Past,--,N/A,No,null
 curying,--,Transitive,--,--,N/A,No,null
@@ -20794,7 +20794,7 @@ justified,--,--,Past,--,N/A,No,null
 run,--,Intransitive,--,--,N/A,No,null
 somnambulated,--,--,Past,--,N/A,No,null
 enact,--,Transitive,--,--,N/A,No,null
-eradiate,--,tran=np,--,--,N/A,No,null
+eradiate,--,--,--,--,N/A,No,null
 rut,--,tran=np,--,--,N/A,No,null
 defalcated,--,Intransitive,Past,--,N/A,No,null
 fluidizing,--,Transitive,--,--,N/A,No,null
@@ -20856,7 +20856,7 @@ clinch,--,Ambitransitive,--,--,N/A,No,null
 cleave,--,Intransitive,--,--,N/A,No,null
 preescaped,--,Intransitive,Past,--,N/A,No,null
 toled,--,Transitive,Past,--,N/A,No,null
-metricate,--,tran=np,--,--,N/A,No,null
+metricate,--,--,--,--,N/A,No,null
 lumining,--,Transitive,--,--,N/A,No,null
 programing,--,--,--,--,N/A,No,null
 serialize,--,Transitive,--,--,N/A,No,null
@@ -20989,7 +20989,7 @@ sew,--,Transitive,--,--,N/A,No,null
 idolatrising,--,Ambitransitive,--,--,N/A,No,null
 sex,--,Transitive,--,--,N/A,No,null
 bobbing,--,--,--,--,N/A,No,null
-overbuild,--,tran=np,--,--,N/A,No,null
+overbuild,--,--,--,--,N/A,No,null
 subrogating,--,Transitive,--,--,N/A,No,null
 sample,--,Transitive,--,--,N/A,No,null
 uncoring,--,Transitive,--,--,N/A,No,null
@@ -21162,7 +21162,7 @@ shaded,--,--,Past,--,N/A,No,null
 enrobe,--,Transitive,--,--,N/A,No,null
 reenlarged,--,--,Past,--,N/A,No,null
 quarrel,--,Intransitive,--,--,N/A,No,null
-winterfeed,--,tran=np,Past,--,N/A,No,null
+winterfeed,--,--,Past,--,N/A,No,null
 necrotized,--,--,Past,--,N/A,No,null
 postmultiplied,--,Transitive,Past,--,N/A,No,null
 close out,--,--,--,--,N/A,NotSeperable,null
@@ -21175,7 +21175,7 @@ hand down,--,Transitive,--,--,N/A,Seperable,null
 scandal,--,Transitive,--,--,N/A,No,null
 friend,--,Transitive,--,--,N/A,No,null
 buries,--,--,--,--,N/A,No,null
-intercut,--,tran=np,--,--,N/A,No,null
+intercut,--,--,--,--,N/A,No,null
 chondrify,--,--,--,--,N/A,No,null
 revalorize,--,Transitive,--,--,N/A,No,null
 mushroom,--,Intransitive,--,--,N/A,No,null
@@ -21375,7 +21375,7 @@ precertify,--,Transitive,--,--,N/A,No,null
 inputted,--,--,Past,--,N/A,No,null
 keep down,--,Intransitive,--,--,N/A,Seperable,null
 decentralise,--,Transitive,--,--,N/A,No,null
-halo,--,tran=np,--,--,N/A,No,null
+halo,--,--,--,--,N/A,No,null
 ochre,--,Transitive,--,--,N/A,No,null
 whack off,--,Intransitive,--,--,N/A,NotSeperable,null
 dishonor,--,Transitive,--,--,N/A,No,null
@@ -21567,7 +21567,7 @@ crinkling,--,--,--,--,N/A,No,null
 subspecializing,--,--,--,--,N/A,No,null
 gasconade,--,Intransitive,--,--,N/A,No,null
 preconfer,--,Intransitive,--,--,N/A,No,null
-reradiate,--,tran=np+ditran=np+pphr(into+np)+ditran=np+pphr(to+np),--,--,N/A,No,null
+reradiate,--,--,--,--,N/A,No,null
 tortured,--,--,Past,--,N/A,No,null
 preshowed,--,Transitive,Past,--,N/A,No,null
 reverberate,--,Intransitive,--,--,N/A,No,null
@@ -21875,7 +21875,7 @@ scaring,--,--,--,--,N/A,No,null
 overorganizing,--,Transitive,--,--,N/A,No,null
 meddle,--,Intransitive,--,--,N/A,No,null
 outstunt,--,Transitive,--,--,N/A,No,null
-denazify,--,tran=np,--,--,N/A,No,null
+denazify,--,--,--,--,N/A,No,null
 mildew,--,tran=np,--,--,N/A,No,null
 reaccumulate,--,tran=np,--,--,N/A,No,null
 milden,--,--,--,--,N/A,No,null
@@ -21961,7 +21961,7 @@ enrapturing,--,Transitive,--,--,N/A,No,null
 redisinfect,--,Transitive,--,--,N/A,No,null
 stridulate,--,Intransitive,--,--,N/A,No,null
 interdifferentiate,--,Transitive,--,--,N/A,No,null
-rediffuse,--,tran=np,--,--,N/A,No,null
+rediffuse,--,--,--,--,N/A,No,null
 emancipating,--,Transitive,--,--,N/A,No,null
 aluminising,--,Transitive,--,--,N/A,No,null
 grant,--,Transitive,--,--,N/A,No,null
@@ -22032,7 +22032,7 @@ lunge,--,Intransitive,--,--,N/A,No,null
 recoagulated,--,--,Past,--,N/A,No,null
 peg out,--,Intransitive,--,--,N/A,NotSeperable,null
 rub out,--,Transitive,--,--,N/A,NotSeperable,null
-superextend,--,tran=np,--,--,N/A,No,null
+superextend,--,--,--,--,N/A,No,null
 understrapping,--,Transitive,--,--,N/A,No,null
 concentrated,--,--,Past,--,N/A,No,null
 relance,--,Transitive,--,--,N/A,No,null
@@ -22099,7 +22099,7 @@ cure,--,Ambitransitive,--,--,N/A,No,null
 sorrow,--,Intransitive,--,--,N/A,No,null
 bullshit,--,--,--,--,N/A,No,null
 curb,--,Transitive,--,--,N/A,No,null
-reharvest,--,tran=np,--,--,N/A,No,null
+reharvest,--,--,--,--,N/A,No,null
 outgleam,--,Transitive,--,--,N/A,No,null
 surprint,--,Transitive,--,--,N/A,No,null
 reassure,--,Transitive,--,--,N/A,No,null
@@ -22173,7 +22173,7 @@ untranquilized,--,Transitive,Past,--,N/A,No,null
 recrudesced,--,Intransitive,Past,--,N/A,No,null
 scar,--,Ambitransitive,--,--,N/A,No,null
 contraindicating,--,Transitive,--,--,N/A,No,null
-scat,--,tran=np,--,--,N/A,No,null
+scat,--,--,--,--,N/A,No,null
 overweigh,--,Transitive,--,--,N/A,No,null
 stickling,--,Intransitive,--,--,N/A,No,null
 innerved,--,Transitive,Past,--,N/A,No,null
@@ -22208,7 +22208,7 @@ reassembling,--,--,--,--,N/A,No,null
 unsepulchre,--,Transitive,--,--,N/A,No,null
 act on,--,Intransitive,--,--,N/A,NotSeperable,null
 delabializing,--,--,--,--,N/A,No,null
-callus,--,tran=np,--,--,N/A,No,null
+callus,--,--,--,--,N/A,No,null
 gargle,--,tran=pphr(with+np),--,--,N/A,No,null
 brocade,--,Transitive,--,--,N/A,No,null
 jink,--,--,--,--,N/A,No,null
@@ -22569,7 +22569,7 @@ re-lease,--,Transitive,--,--,N/A,No,null
 betake,--,--,--,--,N/A,No,null
 blotting,--,--,--,--,N/A,No,null
 demobilize,--,--,--,--,N/A,No,null
-mismeasure,--,tran=np,--,--,N/A,No,null
+mismeasure,--,--,--,--,N/A,No,null
 centred,--,--,Past,--,N/A,No,null
 premanufacturing,--,Transitive,--,--,N/A,No,null
 decancellating,--,Transitive,--,--,N/A,No,null
@@ -22589,7 +22589,7 @@ dwell,--,tran=pphr(on+np),--,--,N/A,No,null
 baized,--,--,Past,--,N/A,No,null
 recapture,--,Transitive,--,--,N/A,No,null
 acculturate,--,Transitive,--,--,N/A,No,null
-white,--,tran=np+tran=np;part(out),--,--,N/A,No,null
+white,--,--,--,--,N/A,No,null
 apostrophised,--,Ambitransitive,Past,--,N/A,No,null
 fillagree,--,--,--,--,N/A,No,null
 menacing,--,--,--,--,N/A,No,null
@@ -22714,7 +22714,7 @@ collectivize,--,Transitive,--,--,N/A,No,null
 miscategorize,--,Transitive,--,--,N/A,No,null
 viva voce,--,--,--,--,N/A,NotSeperable,null
 depone,--,--,--,--,N/A,No,null
-electroform,--,tran=np,--,--,N/A,No,null
+electroform,--,--,--,--,N/A,No,null
 unnaturalizing,--,Transitive,--,--,N/A,No,null
 remonstrate,--,Intransitive,--,--,N/A,No,null
 preconcur,--,Intransitive,--,--,N/A,No,null
@@ -22806,7 +22806,7 @@ preadmit,--,Transitive,--,--,N/A,No,null
 interview,--,Transitive,--,--,N/A,No,null
 outwrestled,--,Transitive,Past,--,N/A,No,null
 retyping,--,Transitive,--,--,N/A,No,null
-reapproach,--,tran=np,--,--,N/A,No,null
+reapproach,--,--,--,--,N/A,No,null
 mistraced,--,--,Past,--,N/A,No,null
 rusticating,--,--,--,--,N/A,No,null
 supersulfurized,--,Transitive,Past,--,N/A,No,null
@@ -22910,7 +22910,7 @@ tantalised,--,Transitive,Past,--,N/A,No,null
 pull together,--,Intransitive,--,--,N/A,Seperable,null
 formalised,--,Ambitransitive,Past,--,N/A,No,null
 reprint,--,Transitive,--,--,N/A,No,null
-incapsulate,--,tran=np+ditran=np+pphr(in+np)+ditran=np+pphr(into+np),--,--,N/A,No,null
+incapsulate,--,--,--,--,N/A,No,null
 precopied,--,Transitive,Past,--,N/A,No,null
 overglazed,--,--,Past,--,N/A,No,null
 calibrating,--,Transitive,--,--,N/A,No,null
@@ -23289,7 +23289,7 @@ kenneled,--,--,Past,--,N/A,No,null
 reproceed,--,Intransitive,Past,--,N/A,No,null
 undraping,--,Transitive,--,--,N/A,No,null
 avenge,--,tran=np+ditran=np+pphr(on+np)+ditran=np+pphr(upon+np),--,--,N/A,No,null
-convolve,--,tran=np+ditran=np+pphr(with+np),--,--,N/A,No,null
+convolve,--,--,--,--,N/A,No,null
 disenfranchise,--,tran=np,--,--,N/A,No,null
 infiltrated,--,--,Past,--,N/A,No,null
 misteaching,--,Transitive,--,--,N/A,No,null
@@ -23464,7 +23464,7 @@ yaw,--,Intransitive,--,--,N/A,No,null
 diphthongizing,--,--,--,--,N/A,No,null
 charm,--,Transitive,--,--,N/A,No,null
 chark,--,Transitive,--,--,N/A,No,null
-reanchor,--,tran=pphr(to+np)+ditran=np+pphr(to+np),--,--,N/A,No,null
+reanchor,--,--,--,--,N/A,No,null
 bayoneted,--,--,Past,--,N/A,No,null
 sharecropped,--,Ambitransitive,Past,--,N/A,No,null
 chart,--,Transitive,--,--,N/A,No,null
@@ -23535,7 +23535,7 @@ signalized,--,Transitive,Past,--,N/A,No,null
 overadvancing,--,--,--,--,N/A,No,null
 Iricising,--,Transitive,--,--,N/A,No,null
 overdecorate,--,--,--,--,N/A,No,null
-unrealise,--,tran=np,--,--,N/A,No,null
+unrealise,--,--,--,--,N/A,No,null
 superinsist,--,Intransitive,--,--,N/A,No,null
 nickelizing,--,Transitive,--,--,N/A,No,null
 outprying,--,Transitive,--,--,N/A,No,null
@@ -23607,7 +23607,7 @@ kyoodling,--,Intransitive,--,--,N/A,No,null
 overinfluence,--,Transitive,--,--,N/A,No,null
 tabbed,--,--,Past,--,N/A,No,null
 maturate,--,--,--,--,N/A,No,null
-stall-feed,--,tran=np+ditran=np,np;datmvt+ditran=np+pphr(with+np),Past,--,N/A,No,null
+stall-feed,--,--,Past,--,N/A,No,null
 corralling,--,--,--,--,N/A,No,null
 airdropped,--,--,Past,--,N/A,No,null
 indemnified,--,Transitive,Past,--,N/A,No,null
@@ -24220,7 +24220,7 @@ baulk,--,--,--,--,N/A,No,null
 debussing,--,Ambitransitive,--,--,N/A,No,null
 divaricated,--,--,Past,--,N/A,No,null
 frounced,--,--,Past,--,N/A,No,null
-tassel,--,tran=np,--,--,N/A,No,null
+tassel,--,--,--,--,N/A,No,null
 construing,--,--,--,--,N/A,No,null
 outstartled,--,Transitive,Past,--,N/A,No,null
 rediffused,--,--,Past,--,N/A,No,null
@@ -24315,7 +24315,7 @@ rusticate,--,Transitive,--,--,N/A,No,null
 do with,--,--,--,--,N/A,Seperable,null
 trapping,--,--,--,--,N/A,No,null
 bestrow,--,Transitive,--,--,N/A,No,null
-shit,--,tran=np,--,--,N/A,No,null
+shit,--,--,--,--,N/A,No,null
 disfeaturing,--,Transitive,--,--,N/A,No,null
 preundertook,--,Transitive,--,--,N/A,No,null
 solace,--,Transitive,--,--,N/A,No,null
@@ -24373,7 +24373,7 @@ anchylose,--,--,--,--,N/A,No,null
 unbrutalizing,--,Transitive,--,--,N/A,No,null
 grind,--,Intransitive,--,--,N/A,No,null
 discomfort,--,Transitive,--,--,N/A,No,null
-overtop,--,tran=np,--,--,N/A,No,null
+overtop,--,--,--,--,N/A,No,null
 dabbling,--,--,--,--,N/A,No,null
 parrying,--,--,--,--,N/A,No,null
 flounce,--,Intransitive,--,--,N/A,No,null
@@ -24580,7 +24580,7 @@ inosculated,--,Intransitive,Past,--,N/A,No,null
 munch,--,tran=np+tran=pphr(at+np);part(away),--,--,N/A,No,null
 subbed,--,--,Past,--,N/A,No,null
 dry-salt,--,--,--,--,N/A,No,null
-interdiffuse,--,tran=pphr(with+np)+tran=pphr(between+np),--,--,N/A,No,null
+interdiffuse,--,--,--,--,N/A,No,null
 plaster,--,Transitive,--,--,N/A,No,null
 overtax,--,Transitive,--,--,N/A,No,null
 plash,--,--,--,--,N/A,No,null
@@ -24928,7 +24928,7 @@ restate,--,Transitive,--,--,N/A,No,null
 phosphatizing,--,Transitive,--,--,N/A,No,null
 assert,--,Transitive,--,--,N/A,No,null
 place,--,Intransitive,--,--,N/A,No,null
-rewater,--,tran=np,--,--,N/A,No,null
+rewater,--,--,--,--,N/A,No,null
 deflated,--,--,Past,--,N/A,No,null
 hobnob,--,--,--,--,N/A,No,null
 restart,--,tran=np,--,--,N/A,No,null
@@ -24949,7 +24949,7 @@ circumrotate,--,Intransitive,--,--,N/A,No,null
 platinise,--,Transitive,--,--,N/A,No,null
 coinsure,--,tran=np,--,--,N/A,No,null
 sanitize,--,Transitive,--,--,N/A,No,null
-dulcify,--,tran=np,--,--,N/A,No,null
+dulcify,--,--,--,--,N/A,No,null
 filibuster,--,Intransitive,--,--,N/A,No,null
 ego trip,--,--,--,--,N/A,NotSeperable,null
 barraging,--,--,--,--,N/A,No,null
@@ -25130,7 +25130,7 @@ precertified,--,Transitive,Past,--,N/A,No,null
 cheek,--,Transitive,--,--,N/A,No,null
 reclimb,--,Transitive,--,--,N/A,No,null
 cheep,--,Intransitive,--,--,N/A,No,null
-redry,--,tran=np,--,--,N/A,No,null
+redry,--,--,--,--,N/A,No,null
 cheer,--,Ambitransitive,--,--,N/A,No,null
 picturized,--,Transitive,Past,--,N/A,No,null
 unfetter,--,Transitive,--,--,N/A,No,null
@@ -25160,7 +25160,7 @@ classicised,--,Ambitransitive,Past,--,N/A,No,null
 outrivaled,--,Transitive,Past,--,N/A,No,null
 straddling,--,--,--,--,N/A,No,null
 deionizing,--,Transitive,--,--,N/A,No,null
-redilate,--,tran=np,--,--,N/A,No,null
+redilate,--,--,--,--,N/A,No,null
 precompile,--,Transitive,--,--,N/A,No,null
 redye,--,Transitive,--,--,N/A,No,null
 convalescing,--,Intransitive,--,--,N/A,No,null
@@ -25446,7 +25446,7 @@ depredated,--,--,Past,--,N/A,No,null
 outplotting,--,Transitive,--,--,N/A,No,null
 tided,--,Intransitive,Past,--,N/A,No,null
 vitriolled,--,--,Past,--,N/A,No,null
-machinate,--,tran=np,--,--,N/A,No,null
+machinate,--,--,--,--,N/A,No,null
 interloping,--,Intransitive,--,--,N/A,No,null
 evolved,--,--,Past,--,N/A,No,null
 outsweep,--,Transitive,--,--,N/A,No,null
@@ -25455,7 +25455,7 @@ godded,--,--,Past,--,N/A,No,null
 outmarrying,--,Transitive,--,--,N/A,No,null
 commutated,--,Transitive,Past,--,N/A,No,null
 grousing,--,--,--,--,N/A,No,null
-reincrease,--,tran=np,--,--,N/A,No,null
+reincrease,--,--,--,--,N/A,No,null
 inscroll,--,Transitive,--,--,N/A,No,null
 spruik,--,Intransitive,--,--,N/A,No,null
 bunker,--,Transitive,--,--,N/A,No,null
@@ -25663,7 +25663,7 @@ rehypnotize,--,Transitive,--,--,N/A,No,null
 lazing,--,--,--,--,N/A,No,null
 cadying,--,--,--,--,N/A,No,null
 parlay,--,Transitive,--,--,N/A,No,null
-comminute,--,tran=np+ditran=np+pphr(into+np),--,--,N/A,No,null
+comminute,--,--,--,--,N/A,No,null
 outsat,--,Transitive,--,--,N/A,No,null
 outsaw,--,Transitive,--,--,N/A,No,null
 whittle,--,Transitive,--,--,N/A,No,null
@@ -26404,7 +26404,7 @@ resublimated,--,Transitive,Past,--,N/A,No,null
 uncatholicized,--,Transitive,Past,--,N/A,No,null
 bandying,--,--,--,--,N/A,No,null
 evoked,--,Transitive,Past,--,N/A,No,null
-succuss,--,tran=np,--,--,N/A,No,null
+succuss,--,--,--,--,N/A,No,null
 ribbon,--,Transitive,--,--,N/A,No,null
 undercircled,--,Transitive,Past,--,N/A,No,null
 lyse,--,tran=np,--,--,N/A,No,null
@@ -26693,7 +26693,7 @@ cinematize,--,Ambitransitive,--,--,N/A,No,null
 desulfurise,--,Transitive,--,--,N/A,No,null
 evidenced,--,--,Past,--,N/A,No,null
 nid-nod,--,--,--,--,N/A,No,null
-reexercise,--,tran=np,--,--,N/A,No,null
+reexercise,--,--,--,--,N/A,No,null
 wish on,--,Transitive,--,--,N/A,Seperable,null
 pretraced,--,Transitive,Past,--,N/A,No,null
 anagrammatize,--,--,--,--,N/A,No,null
@@ -26826,8 +26826,8 @@ revolutionising,--,Transitive,--,--,N/A,No,null
 incaging,--,Transitive,--,--,N/A,No,null
 redefining,--,Transitive,--,--,N/A,No,null
 outhowl,--,Transitive,--,--,N/A,No,null
-reenlarge,--,tran=np,--,--,N/A,No,null
-kernel,--,tran=np,--,--,N/A,No,null
+reenlarge,--,--,--,--,N/A,No,null
+kernel,--,--,--,--,N/A,No,null
 prepricing,--,Transitive,--,--,N/A,No,null
 vitrifying,--,Ambitransitive,--,--,N/A,No,null
 cackling,--,--,--,--,N/A,No,null
@@ -26839,7 +26839,7 @@ lionised,--,Ambitransitive,Past,--,N/A,No,null
 charcoal,--,Transitive,--,--,N/A,No,null
 chirm,--,Intransitive,--,--,N/A,No,null
 preendorse,--,Transitive,--,--,N/A,No,null
-facet,--,tran=np,--,--,N/A,No,null
+facet,--,--,--,--,N/A,No,null
 chirk,--,Intransitive,--,--,N/A,No,null
 snib,--,Transitive,--,--,N/A,No,null
 sulfate,--,Ambitransitive,--,--,N/A,No,null
@@ -26962,7 +26962,7 @@ chide,--,tran=np+ditran=np+pphr(for+np)+ditran=np+pphr(for+ingcomp:objc)+ditran=
 appropriated,--,--,Past,--,N/A,No,null
 parallelized,--,Transitive,Past,--,N/A,No,null
 reign,--,Intransitive,--,--,N/A,No,null
-deadlock,--,tran=np+tran=pphr(on+np),--,--,N/A,No,null
+deadlock,--,--,--,--,N/A,No,null
 outspan,--,tran=np,--,--,N/A,No,null
 outspat,--,Transitive,--,--,N/A,No,null
 anaesthetize,--,Transitive,--,--,N/A,No,null
@@ -27037,7 +27037,7 @@ tussling,--,--,--,--,N/A,No,null
 smooth over,--,Transitive,--,--,N/A,Seperable,null
 snug,--,tran=np,--,--,N/A,No,null
 denuding,--,Transitive,--,--,N/A,No,null
-precontemplate,--,tran=np,--,--,N/A,No,null
+precontemplate,--,--,--,--,N/A,No,null
 overpromise,--,Transitive,--,--,N/A,No,null
 snub,--,tran=np,--,--,N/A,No,null
 dynamited,--,--,Past,--,N/A,No,null
@@ -27470,7 +27470,7 @@ illustrate,--,Transitive,--,--,N/A,No,null
 demoralizing,--,Transitive,--,--,N/A,No,null
 hollow-forging,--,Transitive,--,--,N/A,No,null
 hose,--,tran=np+tran=np;part(down),--,--,N/A,No,null
-logroll,--,tran=np,--,--,N/A,No,null
+logroll,--,--,--,--,N/A,No,null
 film,--,Ambitransitive,--,--,N/A,No,null
 sort,--,Ambitransitive,--,--,N/A,No,null
 fill,--,Ambitransitive,--,--,N/A,No,null
@@ -27622,7 +27622,7 @@ undercurved,--,Intransitive,Past,--,N/A,No,null
 overman,--,Transitive,--,--,N/A,No,null
 presharpen,--,Transitive,--,--,N/A,No,null
 handball,--,Transitive,--,--,N/A,No,null
-lattice,--,tran=np,--,--,N/A,No,null
+lattice,--,--,--,--,N/A,No,null
 cast down,--,Transitive,--,--,N/A,NotSeperable,null
 denunciating,--,Ambitransitive,--,--,N/A,No,null
 pander,--,Intransitive,--,--,N/A,No,null
@@ -27688,7 +27688,7 @@ run after,--,Intransitive,--,--,N/A,NotSeperable,null
 reived,--,Ambitransitive,Past,--,N/A,No,null
 spag,--,--,--,--,N/A,No,null
 spake,--,--,--,--,N/A,No,null
-sufflate,--,tran=np,--,--,N/A,No,null
+sufflate,--,--,--,--,N/A,No,null
 cannot,Modal,--,Present,--,N/A,No,false
 poking,--,--,--,--,N/A,No,null
 spar,--,tran=pphr(with+np),--,--,N/A,No,null
@@ -28075,7 +28075,7 @@ botanized,--,--,Past,--,N/A,No,null
 carry over,--,Transitive,--,--,N/A,NotSeperable,null
 desquamated,--,Intransitive,Past,--,N/A,No,null
 disgaveling,--,Transitive,--,--,N/A,No,null
-finesse,--,tran=np,--,--,N/A,No,null
+finesse,--,--,--,--,N/A,No,null
 reorganised,--,Ambitransitive,Past,--,N/A,No,null
 typewritten,--,Ambitransitive,--,--,N/A,No,null
 sticky,--,Transitive,--,--,N/A,No,null
@@ -28352,7 +28352,7 @@ unbutton,--,tran=np,--,--,N/A,No,null
 outstrutted,--,Transitive,Past,--,N/A,No,null
 apotheosizing,--,Transitive,--,--,N/A,No,null
 comprised,--,Transitive,Past,--,N/A,No,null
-quintuplicate,--,tran=np,--,--,N/A,No,null
+quintuplicate,--,--,--,--,N/A,No,null
 preresolving,--,--,--,--,N/A,No,null
 reinvigorated,--,Transitive,Past,--,N/A,No,null
 throve,--,--,--,--,N/A,No,null
@@ -28404,7 +28404,7 @@ overspeculate,--,Intransitive,--,--,N/A,No,null
 dispauper,--,Transitive,--,--,N/A,No,null
 dent,--,tran=np,--,--,N/A,No,null
 recage,--,Transitive,--,--,N/A,No,null
-stope,--,tran=np,--,--,N/A,No,null
+stope,--,--,--,--,N/A,No,null
 joggle,--,Transitive,--,--,N/A,No,null
 detour,--,tran=pphr(around+np)+tran=pphr(round+np),--,--,N/A,No,null
 gurgle,--,Intransitive,--,--,N/A,No,null
@@ -28475,7 +28475,7 @@ transmuted,--,Ambitransitive,Past,--,N/A,No,null
 fluoridising,--,Transitive,--,--,N/A,No,null
 tailor-make,--,Transitive,--,--,N/A,No,null
 shagging,--,Transitive,--,--,N/A,No,null
-throne,--,tran=np,--,--,N/A,No,null
+throne,--,--,--,--,N/A,No,null
 matriculating,--,--,--,--,N/A,No,null
 throng,--,Transitive,--,--,N/A,No,null
 rehoning,--,Transitive,--,--,N/A,No,null
@@ -28578,7 +28578,7 @@ reelect,--,Transitive,--,--,N/A,No,null
 concelebrated,--,Intransitive,Past,--,N/A,No,null
 insurrectionising,--,Transitive,--,--,N/A,No,null
 clothed,--,Transitive,Past,--,N/A,No,null
-subjectify,--,tran=np,--,--,N/A,No,null
+subjectify,--,--,--,--,N/A,No,null
 outffed,--,Transitive,Past,--,N/A,No,null
 reprobated,--,--,Past,--,N/A,No,null
 hallmark,--,Transitive,--,--,N/A,No,null
@@ -28590,7 +28590,7 @@ broach,--,Ambitransitive,--,--,N/A,No,null
 swimming podling,--,--,--,--,N/A,NotSeperable,null
 recast,--,Transitive,--,--,N/A,No,null
 transect,--,Transitive,--,--,N/A,No,null
-refracture,--,tran=np,--,--,N/A,No,null
+refracture,--,--,--,--,N/A,No,null
 put through,--,Transitive,--,--,N/A,Seperable,null
 sagging,--,--,--,--,N/A,No,null
 hemstitch,--,--,--,--,N/A,No,null

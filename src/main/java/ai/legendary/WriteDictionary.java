@@ -52,9 +52,13 @@ public class WriteDictionary {
     };
     public static void main(String[] args) {
         try {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.ser"));
+            try{ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.ser"));
             animacy=(HashMap<String,String>)in.readObject();  
             in.close();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
             System.out.println("Starting");
             
             //counts seconds until the program finishes
