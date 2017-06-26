@@ -11,7 +11,7 @@
 - Percentage of Noun abbreviationFor defined: 0%
 - Percentage of Noun abbreviatedFrom defined: 0%
 - Percentage of Noun irregularPluralForm defined: 0.66%
-- Percentage of Noun base form defined: 0.01%
+- Percentage of Noun base form defined: 36.51%
 - Percentage of Noun Animacy defined: 100%
 - Percentage of Noun Location defined: 0.28%
 ### Verb analysis (Total Verbs: 28,624):
@@ -71,4 +71,4 @@
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 5 minutes and 20 seconds
+## Current Dictionary Write Time: 5 minutes and 27 seconds

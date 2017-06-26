@@ -24,6 +24,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import net.sf.extjwnl.data.IndexWord;
+import net.sf.extjwnl.data.POS;
+import net.sf.extjwnl.dictionary.Dictionary;
+
 public class WriteDictionary {
     /**
      * Dictionarys
@@ -50,9 +54,10 @@ public class WriteDictionary {
             seconds++;
         }
     };
-
+    static Dictionary dictionary;
     public static void main(String[] args) {
         try {
+            dictionary = Dictionary.getDefaultResourceInstance();
             try {
                 ObjectInputStream in = new ObjectInputStream(
                         new FileInputStream("outputs/animacyquery.ser"));
@@ -767,16 +772,34 @@ public class WriteDictionary {
                             if (pos.equals("N")) {
                                 Noun n = new Noun(word);
                                 animacy = n.checkAnimacy(word, animacy);
+                                try{
+                                n.baseForm = dictionary.getIndexWord(POS.NOUN,word).getLemma();
+                                }
+                                catch(Exception e){
+                                    //e.printStackTrace();
+                                }
                                 merge(word, n);
                             }
                             else if (pos.equals("p")) {
                                 Noun n = new Noun(word + "~~@");
                                 animacy = n.checkAnimacy(word, animacy);
+                                try{
+                                    n.baseForm = dictionary.getIndexWord(POS.NOUN,word).getLemma();
+                                    }
+                                    catch(Exception e){
+                                        //e.printStackTrace();
+                                    }
                                 merge(word, n);
                             }
                             else if (pos.equals("h")) {
                                 Noun n = new Noun(word + "~@~");
                                 animacy = n.checkAnimacy(word, animacy);
+                                try{
+                                    n.baseForm = dictionary.getIndexWord(POS.NOUN,word).getLemma();
+                                    }
+                                    catch(Exception e){
+                                        //e.printStackTrace();
+                                    }
                                 merge(word, n);
                             }
                             else if (pos.equals("V")) {

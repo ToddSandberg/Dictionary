@@ -13,6 +13,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import net.sf.extjwnl.data.IndexWord;
+import net.sf.extjwnl.data.POS;
+import net.sf.extjwnl.dictionary.Dictionary;
+
 public class Noun implements PartOfSpeech,Serializable{
     /**
      * 
@@ -44,7 +48,6 @@ public class Noun implements PartOfSpeech,Serializable{
 		else if(s.charAt(s.length()-1)=='~'){
             s=s.substring(0,s.length()-1);
         }
-		/*Is Proper Name?*/
 		/*is countable*/
 		if(s.charAt(s.length()-1)=='@'){
             isCountable = true;
