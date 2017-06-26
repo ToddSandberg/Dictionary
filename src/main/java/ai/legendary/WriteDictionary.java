@@ -39,30 +39,33 @@ public class WriteDictionary {
     public static HashMap<String, Pronoun> pronounDictionary = new HashMap<String, Pronoun>();
     public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
 
-    public static HashMap<String,String> animacy = new HashMap<String,String>();
+    public static HashMap<String, String> animacy = new HashMap<String, String>();
     static FileOutputStream fout;
     static ObjectOutputStream out;
     static int seconds = 0;
     static Timer time = new Timer();
-    static TimerTask ttask = new TimerTask(){
+    static TimerTask ttask = new TimerTask() {
         @Override
         public void run() {
             seconds++;
         }
     };
+
     public static void main(String[] args) {
         try {
-            try{ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/animacyquery.ser"));
-            animacy=(HashMap<String,String>)in.readObject();  
-            in.close();
+            try {
+                ObjectInputStream in = new ObjectInputStream(
+                        new FileInputStream("outputs/animacyquery.ser"));
+                animacy = (HashMap<String, String>) in.readObject();
+                in.close();
             }
-            catch(Exception e){
+            catch (Exception e) {
                 e.printStackTrace();
             }
             System.out.println("Starting");
-            
-            //counts seconds until the program finishes
-            time.scheduleAtFixedRate(ttask,1000,1000);
+
+            // counts seconds until the program finishes
+            time.scheduleAtFixedRate(ttask, 1000, 1000);
             File f = new File("README.md");
             PrintWriter printed = new PrintWriter(f);
             printed.println("# DictionaryMaker");
@@ -74,27 +77,27 @@ public class WriteDictionary {
             // Adds all subordinate conjunctions to the dictionary
             subordinateConjunctions();
             printer.println("- subordinateConjunctions.txt Implemented");
-            /*store animacy querys for future runs*/
-            fout=new FileOutputStream("outputs/animacyquery.ser");  
-            out=new ObjectOutputStream(fout);  
-            out.writeObject(animacy);  
-            out.flush();  
-            out.close();  
-            fout.close(); 
+            /* store animacy querys for future runs */
+            fout = new FileOutputStream("outputs/animacyquery.ser");
+            out = new ObjectOutputStream(fout);
+            out.writeObject(animacy);
+            out.flush();
+            out.close();
+            fout.close();
             // Adds all specific gender nouns to the dictionary
             nounGender();
             printer.println("- nounGenderList.txt Implemented ");
-            /*store animacy querys for future runs*/
-            fout=new FileOutputStream("outputs/animacyquery.ser");  
-            out=new ObjectOutputStream(fout);  
-            out.writeObject(animacy);  
-            out.flush();  
-            out.close();  
-            fout.close(); 
+            /* store animacy querys for future runs */
+            fout = new FileOutputStream("outputs/animacyquery.ser");
+            out = new ObjectOutputStream(fout);
+            out.writeObject(animacy);
+            out.flush();
+            out.close();
+            fout.close();
             // Implements MobyWordListWithPOS.txt to the dictionary
             mobyListPOS();
             printer.println("- MobyWordListWithPOS.txt Implemented");
-            
+
             // Implements default-lexion.xml
             defLexicon();
             printer.println("- default-lexicon.xml Implemented");
@@ -111,14 +114,16 @@ public class WriteDictionary {
             // Implements locations
             locations();
             printer.println("- locations.txt implemented");
+            // implements which words are common
+            frequency();
+            printer.println("- Word_frequency_list.txt implemented");
 
             printer.println("## Document Output Formats:");
             printer.println(
                     "- tsv files for each part of speech with words and their properties");
             printer.println(
                     "- serialized dictionary classes for each part of speech");
-            
-            
+
             // ToTSV
             toTSV();
             // ToHashMap
@@ -132,30 +137,34 @@ public class WriteDictionary {
             toHashMap("quantifier");
             toHashMap("prep");
             toHashMap("verb");
-            /*store animacy querys for future runs*/
-            fout=new FileOutputStream("outputs/animacyquery.ser");  
-            out=new ObjectOutputStream(fout);  
-            out.writeObject(animacy);  
-            out.flush();  
-            out.close();  
-            fout.close();  
-          //prints dictionary analysis to the read m
+            /* store animacy querys for future runs */
+            fout = new FileOutputStream("outputs/animacyquery.ser");
+            out = new ObjectOutputStream(fout);
+            out.writeObject(animacy);
+            out.flush();
+            out.close();
+            fout.close();
+            // prints dictionary analysis to the read m
             DictionaryAnalyzer temp = new DictionaryAnalyzer(nounDictionary,
                     verbDictionary, adjectiveDictionary, adverbDictionary,
                     conjunctionDictionary, determinerDictionary,
                     interjectionDictionary, prepositionDictionary,
                     pronounDictionary, quantifierDictionary);
-            
-            printer.println("## Current Dictionary Write Time: " +seconds/60 + " minutes and "+seconds%60+" seconds");
+
+            printer.println("## Current Dictionary Write Time: " + seconds / 60
+                    + " minutes and " + seconds % 60 + " seconds");
             printer.close();
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     /**
      * Serializes all dictionarys to hashmap files
-     * @param string name of the dictionary to be serialized
+     * 
+     * @param string
+     *            name of the dictionary to be serialized
      */
     private static void toHashMap(String string) {
         try {
@@ -172,6 +181,7 @@ public class WriteDictionary {
         }
 
     }
+
     /**
      * Prints all dictionarys to .tsv format
      */
@@ -181,69 +191,71 @@ public class WriteDictionary {
             File nouns = new File("outputs/nouns.tsv");
             PrintWriter nounprinter = new PrintWriter(nouns);
             nounprinter.println(
-                    "Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation");
+                    "Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank");
             // adjectiveprinter setup
             File adjectives = new File("outputs/adjectives.tsv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID");
+                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank");
             // verbprinter setup
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
             adverbprinter.println(
-                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm");
+                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm\thowCommon\tcommonRank");
             // conjunctionprinter setup
             File conjunctions = new File("outputs/conjunctions.tsv");
             PrintWriter conjunctionprinter = new PrintWriter(conjunctions);
-            conjunctionprinter.println("Word\tConjunctionType");
+            conjunctionprinter.println("Word\tConjunctionType\thowCommon\tcommonRank");
             // determinerprinter setup
             File determiners = new File("outputs/determiners.tsv");
             PrintWriter determinerprinter = new PrintWriter(determiners);
-            determinerprinter.println("Word\tDeterminerTypeID");
+            determinerprinter.println("Word\tDeterminerTypeID\thowCommon\tcommonRank");
             // Interjectionprinter setup
             File interjections = new File("outputs/interjections.tsv");
             PrintWriter interjectionprinter = new PrintWriter(interjections);
-            interjectionprinter.println("Word\tInterjectionTypeID");
+            interjectionprinter.println("Word\tInterjectionTypeID\thowCommon\tcommonRank");
             // prepositionprinter setup
             File prepositions = new File("outputs/prepositions.tsv");
             PrintWriter prepositionprinter = new PrintWriter(prepositions);
-            prepositionprinter.println("Word\tHasAdverbForm");
+            prepositionprinter.println("Word\tHasAdverbForm\thowCommon\tcommonRank");
             // pronounprinter setup
             File pronouns = new File("outputs/pronouns.tsv");
             PrintWriter pronounprinter = new PrintWriter(pronouns);
-            pronounprinter.println("Word\tPlurality\tGender\tPronounCase\tType");
+            pronounprinter
+                    .println("Word\tPlurality\tGender\tPronounCase\tType\thowCommon\tcommonRank");
             // quantifierprinter setup
             File quantifiers = new File("outputs/quantifiers.tsv");
             PrintWriter quantifierprinter = new PrintWriter(quantifiers);
-            quantifierprinter.println("Word\tQuantifierID");
-            
+            quantifierprinter.println("Word\tQuantifierID\thowCommon\tcommonRank");
+
             Iterator nounit = nounDictionary.entrySet().iterator();
             while (nounit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) nounit.next();
                 String w = (String) pair.getKey();
                 Noun n = (Noun) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
                 nounprinter.println(w + "\t" + n.plurality + "\t" + n.gender
                         + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
                         + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
                         + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
                         + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
-                        + n.compliments + "\t" + n.baseForm+"\t"+n.animacy+"\t"+n.location);
+                        + n.compliments + "\t" + n.baseForm + "\t" + n.animacy
+                        + "\t" + n.location + "\t" + n.howCommon + "\t"+ n.commonRank);
             }
             Iterator adjit = adjectiveDictionary.entrySet().iterator();
             while (adjit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) adjit.next();
                 String w = (String) pair.getKey();
                 Adjective a = (Adjective) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
                 adjectiveprinter.println(w + "\t" + a.adjectiveOrderID + "\t"
                         + a.comparisonType + "\t" + a.quantifier + "\t"
@@ -252,94 +264,95 @@ public class WriteDictionary {
                         + a.worksInAttributivePosition + "\t"
                         + a.worksInPredicativePosition + "\t"
                         + a.hasDiminutiveSuffix + "\t" + a.isProper + "\t"
-                        + a.compliments + "\t" + a.mustUseMoreMost+ "\t"+a.adjectiveIntensifierID);
+                        + a.compliments + "\t" + a.mustUseMoreMost + "\t"
+                        + a.adjectiveIntensifierID+ "\t" + a.howCommon + "\t" + a.commonRank);
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while (verbit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) verbit.next();
                 String w = (String) pair.getKey();
                 Verb v = (Verb) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
                 verbprinter.println(w + "\t" + v.verbType + "\t" + v.transivity
-                        + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person + "\t"
-                        + v.phrasal + "\t" + v.isInfinitive);
+                        + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
+                        + "\t" + v.phrasal + "\t" + v.isInfinitive+ "\t" + v.howCommon + "\t" + v.commonRank);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) advit.next();
                 String w = (String) pair.getKey();
                 Adverb a = (Adverb) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
                 adverbprinter.println(w + "\t" + a.advIntensiferID + "\t"
                         + a.isRelativeAdverb + "\t" + a.isComparativeAdverb
-                        + "\t" + a.isSuperlativeAdverb + "\t" + a.advIntensifier
-                        + "\t" + a.noCompOrSuperForm + "\t" + a.mustUseMoreMost
-                        + "\t" + a.irregularForm);
+                        + "\t" + a.isSuperlativeAdverb + "\t"
+                        + a.advIntensifier + "\t" + a.noCompOrSuperForm + "\t"
+                        + a.mustUseMoreMost + "\t" + a.irregularForm + "\t" + a.howCommon + "\t" + a.commonRank);
             }
             Iterator conjit = conjunctionDictionary.entrySet().iterator();
             while (conjit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) conjit.next();
                 String w = (String) pair.getKey();
                 Conjunction c = (Conjunction) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
-                conjunctionprinter.println(w + "\t" + c.conjunctionType);
+                conjunctionprinter.println(w + "\t" + c.conjunctionType + "\t" + c.howCommon + "\t" + c.commonRank);
             }
             Iterator detit = determinerDictionary.entrySet().iterator();
             while (detit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) detit.next();
                 String w = (String) pair.getKey();
                 Determiner d = (Determiner) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
-                determinerprinter.println(w + "\t" + d.determinerTypeID);
+                determinerprinter.println(w + "\t" + d.determinerTypeID + "\t" + d.howCommon + "\t" + d.commonRank);
             }
             Iterator intit = interjectionDictionary.entrySet().iterator();
             while (intit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) intit.next();
                 String w = (String) pair.getKey();
                 Interjection a = (Interjection) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
-                interjectionprinter.println(w + "\t" + a.interjectionTypeID);
+                interjectionprinter.println(w + "\t" + a.interjectionTypeID + "\t" + a.howCommon + "\t" + a.commonRank);
             }
             Iterator prepit = prepositionDictionary.entrySet().iterator();
             while (prepit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) prepit.next();
                 String w = (String) pair.getKey();
                 Preposition p = (Preposition) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
-                prepositionprinter.println(w + "\t" + p.hasAdverbForm);
+                prepositionprinter.println(w + "\t" + p.hasAdverbForm + "\t" + p.howCommon + "\t" + p.commonRank);
             }
             Iterator proit = pronounDictionary.entrySet().iterator();
             while (proit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) proit.next();
                 String w = (String) pair.getKey();
                 Pronoun p = (Pronoun) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
                 pronounprinter.println(w + "\t" + p.plurality + "\t" + p.gender
-                        + " " + p.pronounCase + "\t" + p.type);
+                        + " " + p.pronounCase + "\t" + p.type + "\t" + p.howCommon + "\t" + p.commonRank);
             }
             Iterator quantit = quantifierDictionary.entrySet().iterator();
             while (quantit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) quantit.next();
                 String w = (String) pair.getKey();
                 Quantifier q = (Quantifier) pair.getValue();
-                if(w.endsWith(",")){
-                    w=w.substring(0,w.length()-1);
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
                 }
-                quantifierprinter.println(w + "\t" + q.quantifierID);
+                quantifierprinter.println(w + "\t" + q.quantifierID + "\t" + q.howCommon + "\t" + q.commonRank);
             }
 
             nounprinter.close();
@@ -358,6 +371,7 @@ public class WriteDictionary {
         }
 
     }
+
     /**
      * Implements all subordinate conjunctions
      */
@@ -379,6 +393,7 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
+
     /**
      * implements gender specific nouns
      */
@@ -430,239 +445,301 @@ public class WriteDictionary {
      */
     private static void merge(String w, PartOfSpeech part) {
         // Check the part of speech
-try{
-        if (part instanceof Noun) {
-            if (nounDictionary.containsKey(w)) {
-                Noun p = (Noun) nounDictionary.get(w);
-                if (p.plurality.equals("--")) {
-                    p.plurality = ((Noun) part).plurality;
+        try {
+            if (part instanceof Noun) {
+                if (nounDictionary.containsKey(w)) {
+                    Noun p = (Noun) nounDictionary.get(w);
+                    if (p.plurality.equals("--")) {
+                        p.plurality = ((Noun) part).plurality;
+                    }
+                    if (p.gender.equals("--")) {
+                        p.gender = ((Noun) part).gender;
+                    }
+                    if (p.anAbbreviationFor.equals("--")) {
+                        p.anAbbreviationFor = ((Noun) part).anAbbreviationFor;
+                    }
+                    if (p.abbreviatedFrom.equals("--")) {
+                        p.abbreviatedFrom = ((Noun) part).abbreviatedFrom;
+                    }
+                    if (p.anAcronymFor.equals("--")) {
+                        p.anAcronymFor = ((Noun) part).anAcronymFor;
+                    }
+                    if (p.isCompound == null) {
+                        p.isCompound = ((Noun) part).isCompound;
+                    }
+                    if (p.isCountable == null) {
+                        p.isCountable = ((Noun) part).isCountable;
+                    }
+                    if (p.acceptsZeroArticle == null) {
+                        p.acceptsZeroArticle = ((Noun) part).acceptsZeroArticle;
+                    }
+                    if (p.isProperName == null) {
+                        p.isProperName = ((Noun) part).isProperName;
+                    }
+                    if (p.compliments.equals("--")) {
+                        p.compliments = ((Noun) part).compliments;
+                    }
+                    if (p.irregularPluralForm.equals("--")) {
+                        p.irregularPluralForm = ((Noun) part).irregularPluralForm;
+                    }
+                    if (p.animacy == null) {
+                        p.animacy = ((Noun) part).animacy;
+                    }
+                    if (p.location == null) {
+                        p.location = ((Noun) part).location;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Noun) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Noun) part).howCommon;
+                    }
                 }
-                if (p.gender.equals("--")) {
-                    p.gender = ((Noun) part).gender;
+                else {
+                    nounDictionary.put(w, (Noun) part);
                 }
-                if (p.anAbbreviationFor.equals("--")) {
-                    p.anAbbreviationFor = ((Noun) part).anAbbreviationFor;
-                }
-                if (p.abbreviatedFrom.equals("--")) {
-                    p.abbreviatedFrom = ((Noun) part).abbreviatedFrom;
-                }
-                if (p.anAcronymFor.equals("--")) {
-                    p.anAcronymFor = ((Noun) part).anAcronymFor;
-                }
-                if (p.isCompound == null) {
-                    p.isCompound = ((Noun) part).isCompound;
-                }
-                if (p.isCountable == null) {
-                    p.isCountable = ((Noun) part).isCountable;
-                }
-                if (p.acceptsZeroArticle == null) {
-                    p.acceptsZeroArticle = ((Noun) part).acceptsZeroArticle;
-                }
-                if (p.isProperName == null) {
-                    p.isProperName = ((Noun) part).isProperName;
-                }
-                if (p.compliments.equals("--")) {
-                    p.compliments = ((Noun) part).compliments;
-                }
-                if (p.irregularPluralForm.equals("--")) {
-                    p.irregularPluralForm = ((Noun) part).irregularPluralForm;
-                }
-                if(p.animacy == null){
-                    p.animacy = ((Noun) part).animacy;
-                }
-                if(p.location == null){
-                    p.location = ((Noun) part).location;
-                }
-            }
-            else {
-                nounDictionary.put(w, (Noun) part);
-            }
 
-        }
-        else if (part instanceof Adjective) {
+            }
+            else if (part instanceof Adjective) {
 
-            if (adjectiveDictionary.containsKey(w)) {
-                Adjective p = (Adjective) adjectiveDictionary.get(w);
-                if (p.adjectiveOrderID == -1) {
-                    p.adjectiveOrderID = ((Adjective) part).adjectiveOrderID;
+                if (adjectiveDictionary.containsKey(w)) {
+                    Adjective p = (Adjective) adjectiveDictionary.get(w);
+                    if (p.adjectiveOrderID == -1) {
+                        p.adjectiveOrderID = ((Adjective) part).adjectiveOrderID;
+                    }
+                    if (p.comparisonType.equals("--")) {
+                        p.comparisonType = ((Adjective) part).comparisonType;
+                    }
+                    if (p.quantifier.equals("--")) {
+                        p.quantifier = ((Adjective) part).quantifier;
+                    }
+                    if (p.isQualitative == null) {
+                        p.isQualitative = ((Adjective) part).isQualitative;
+                    }
+                    if (p.isClassifying == null) {
+                        p.isClassifying = ((Adjective) part).isClassifying;
+                    }
+                    if (p.commonlyPrecededWithAnd == null) {
+                        p.commonlyPrecededWithAnd = ((Adjective) part).commonlyPrecededWithAnd;
+                    }
+                    if (p.worksInAttributivePosition == null) {
+                        p.worksInAttributivePosition = ((Adjective) part).worksInAttributivePosition;
+                    }
+                    if (p.worksInPredicativePosition == null) {
+                        p.worksInPredicativePosition = ((Adjective) part).worksInPredicativePosition;
+                    }
+                    if (p.hasDiminutiveSuffix == null) {
+                        p.hasDiminutiveSuffix = ((Adjective) part).hasDiminutiveSuffix;
+                    }
+                    if (p.isProper == null) {
+                        p.isProper = ((Adjective) part).isProper;
+                    }
+                    if (p.compliments.equals("--")) {
+                        p.compliments = ((Adjective) part).compliments;
+                    }
+                    if (p.mustUseMoreMost == null) {
+                        p.mustUseMoreMost = ((Adjective) part).mustUseMoreMost;
+                    }
+                    if (p.adjectiveIntensifierID == -1) {
+                        p.adjectiveIntensifierID = ((Adjective) part).adjectiveIntensifierID;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Adjective) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Adjective) part).howCommon;
+                    }
                 }
-                if (p.comparisonType.equals("--")) {
-                    p.comparisonType = ((Adjective) part).comparisonType;
-                }
-                if (p.quantifier.equals("--")) {
-                    p.quantifier = ((Adjective) part).quantifier;
-                }
-                if (p.isQualitative == null) {
-                    p.isQualitative = ((Adjective) part).isQualitative;
-                }
-                if (p.isClassifying == null) {
-                    p.isClassifying = ((Adjective) part).isClassifying;
-                }
-                if (p.commonlyPrecededWithAnd == null) {
-                    p.commonlyPrecededWithAnd = ((Adjective) part).commonlyPrecededWithAnd;
-                }
-                if (p.worksInAttributivePosition == null) {
-                    p.worksInAttributivePosition = ((Adjective) part).worksInAttributivePosition;
-                }
-                if (p.worksInPredicativePosition == null) {
-                    p.worksInPredicativePosition = ((Adjective) part).worksInPredicativePosition;
-                }
-                if (p.hasDiminutiveSuffix == null) {
-                    p.hasDiminutiveSuffix = ((Adjective) part).hasDiminutiveSuffix;
-                }
-                if (p.isProper == null) {
-                    p.isProper = ((Adjective) part).isProper;
-                }
-                if (p.compliments.equals("--")) {
-                    p.compliments = ((Adjective) part).compliments;
-                }
-                if (p.mustUseMoreMost == null) {
-                    p.mustUseMoreMost = ((Adjective) part).mustUseMoreMost;
-                }
-                if(p.adjectiveIntensifierID == -1){
-                    p.adjectiveIntensifierID = ((Adjective) part).adjectiveIntensifierID;
+                else {
+                    adjectiveDictionary.put(w, (Adjective) part);
                 }
             }
-            else {
-                adjectiveDictionary.put(w, (Adjective) part);
+            else if (part instanceof Adverb) {
+                if (adverbDictionary.containsKey(w)) {
+                    Adverb p = (Adverb) adverbDictionary.get(w);
+                    if (p.advIntensiferID == -1) {
+                        p.advIntensiferID = ((Adverb) part).advIntensiferID;
+                    }
+                    if (p.advIntensifier.equals("--")) {
+                        p.advIntensifier = ((Adverb) part).advIntensifier;
+                    }
+                    if (p.isComparativeAdverb == null) {
+                        p.isComparativeAdverb = ((Adverb) part).isComparativeAdverb;
+                    }
+                    if (p.isSuperlativeAdverb == null) {
+                        p.isSuperlativeAdverb = ((Adverb) part).isSuperlativeAdverb;
+                    }
+                    if (p.noCompOrSuperForm == null) {
+                        p.noCompOrSuperForm = ((Adverb) part).noCompOrSuperForm;
+                    }
+                    if (p.mustUseMoreMost == null) {
+                        p.mustUseMoreMost = ((Adverb) part).mustUseMoreMost;
+                    }
+                    if (p.irregularForm.equals("--")) {
+                        p.irregularForm = ((Adverb) part).irregularForm;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Adverb) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Adverb) part).howCommon;
+                    }
+                }
+                else {
+                    adverbDictionary.put(w, (Adverb) part);
+                }
+            }
+            else if (part instanceof Conjunction) {
+                if (conjunctionDictionary.containsKey(w)) {
+                    Conjunction p = (Conjunction) conjunctionDictionary.get(w);
+                    if (p.conjunctionType.equals("--")) {
+                        p.conjunctionType = ((Conjunction) part).conjunctionType;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Conjunction) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Conjunction) part).howCommon;
+                    }
+                }
+                else {
+                    conjunctionDictionary.put(w, (Conjunction) part);
+                }
+            }
+            else if (part instanceof Determiner) {
+                if (determinerDictionary.containsKey(w)) {
+                    Determiner p = (Determiner) determinerDictionary.get(w);
+                    if (p.determinerTypeID == -1) {
+                        p.determinerTypeID = ((Determiner) part).determinerTypeID;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Determiner) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Determiner) part).howCommon;
+                    }
+                }
+                else {
+                    determinerDictionary.put(w, (Determiner) part);
+                }
+            }
+            else if (part instanceof Interjection) {
+                if (interjectionDictionary.containsKey(w)) {
+                    Interjection p = (Interjection) interjectionDictionary
+                            .get(w);
+                    if (p.interjectionTypeID == -1) {
+                        p.interjectionTypeID = ((Interjection) part).interjectionTypeID;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Interjection) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Interjection) part).howCommon;
+                    }
+                }
+                else {
+                    interjectionDictionary.put(w, (Interjection) part);
+                }
+            }
+            else if (part instanceof Preposition) {
+                if (prepositionDictionary.containsKey(w)) {
+                    Preposition p = (Preposition) prepositionDictionary.get(w);
+                    if (p.hasAdverbForm == null) {
+                        p.hasAdverbForm = ((Preposition) part).hasAdverbForm;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Preposition) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Preposition) part).howCommon;
+                    }
+                }
+                else {
+                    prepositionDictionary.put(w, (Preposition) part);
+                }
+            }
+            else if (part instanceof Pronoun) {
+                if (pronounDictionary.containsKey(w)) {
+                    Pronoun p = (Pronoun) pronounDictionary.get(w);
+                    if (p.plurality.equals("--")) {
+                        p.plurality = ((Pronoun) part).plurality;
+                    }
+                    if (p.gender.equals("--")) {
+                        p.gender = ((Pronoun) part).gender;
+                    }
+                    if (p.pronounCase.equals("--")) {
+                        p.pronounCase = ((Pronoun) part).pronounCase;
+                    }
+                    if (p.type.equals("--")) {
+                        p.type = ((Pronoun) part).type;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Pronoun) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Pronoun) part).howCommon;
+                    }
+                }
+                else {
+                    pronounDictionary.put(w, (Pronoun) part);
+                }
+            }
+            else if (part instanceof Verb) {
+                if (verbDictionary.containsKey(w)) {
+                    Verb p = (Verb) verbDictionary.get(w);
+                    if (p.verbType.equals("--")) {
+                        p.verbType = ((Verb) part).verbType;
+                    }
+                    if (p.transivity.equals("--")) {
+                        p.transivity = ((Verb) part).transivity;
+                    }
+                    if (p.tense.equals("--")) {
+                        p.tense = ((Verb) part).tense;
+                    }
+                    if (p.aspect.equals("--")) {
+                        p.aspect = ((Verb) part).aspect;
+                    }
+                    if (p.person.equals("--")) {
+                        p.person = ((Verb) part).person;
+                    }
+                    if (p.phrasal.equals("--")) {
+                        p.phrasal = ((Verb) part).phrasal;
+                    }
+                    if (p.isInfinitive != null) {
+                        p.isInfinitive = ((Verb) part).isInfinitive;
+                    }
+                    if(p.commonRank==-1){
+                        p.commonRank = ((Verb) part).commonRank;
+                    }
+                    if(p.howCommon==-1){
+                        p.howCommon = ((Verb) part).howCommon;
+                    }
+                }
+                else {
+                    verbDictionary.put(w, (Verb) part);
+                }
+            }
+            else if (part instanceof Quantifier) {
+                if (quantifierDictionary.containsKey(w)) {
+                    Quantifier q = (Quantifier) quantifierDictionary.get(w);
+                    if (q.quantifierID == -1) {
+                        q.quantifierID = ((Quantifier) part).quantifierID;
+                    }
+                    if(q.commonRank==-1){
+                        q.commonRank = ((Quantifier) part).commonRank;
+                    }
+                    if(q.howCommon==-1){
+                        q.howCommon = ((Quantifier) part).howCommon;
+                    }
+                }
+                else {
+                    quantifierDictionary.put(w, (Quantifier) part);
+                }
             }
         }
-        else if (part instanceof Adverb) {
-            if (adverbDictionary.containsKey(w)) {
-                Adverb p = (Adverb) adverbDictionary.get(w);
-                if (p.advIntensiferID == -1) {
-                    p.advIntensiferID = ((Adverb) part).advIntensiferID;
-                }
-                if (p.advIntensifier.equals("--")) {
-                    p.advIntensifier = ((Adverb) part).advIntensifier;
-                }
-                if (p.isComparativeAdverb == null) {
-                    p.isComparativeAdverb = ((Adverb) part).isComparativeAdverb;
-                }
-                if (p.isSuperlativeAdverb == null) {
-                    p.isSuperlativeAdverb = ((Adverb) part).isSuperlativeAdverb;
-                }
-                if(p.noCompOrSuperForm == null){
-                    p.noCompOrSuperForm = ((Adverb)part).noCompOrSuperForm;
-                }
-                if(p.mustUseMoreMost == null){
-                    p.mustUseMoreMost = ((Adverb)part).mustUseMoreMost;
-                }
-                if(p.irregularForm.equals("--")){
-                    p.irregularForm = ((Adverb)part).irregularForm;
-                }
-            }
-            else {
-                adverbDictionary.put(w, (Adverb) part);
-            }
+        catch (Exception e) {
+            e.printStackTrace();
         }
-        else if (part instanceof Conjunction) {
-            if (conjunctionDictionary.containsKey(w)) {
-                Conjunction p = (Conjunction) conjunctionDictionary.get(w);
-                if (p.conjunctionType.equals("--")) {
-                    p.conjunctionType = ((Conjunction) part).conjunctionType;
-                }
-            }
-            else {
-                conjunctionDictionary.put(w, (Conjunction) part);
-            }
-        }
-        else if (part instanceof Determiner) {
-            if (determinerDictionary.containsKey(w)) {
-                Determiner p = (Determiner) determinerDictionary.get(w);
-                if (p.determinerTypeID == -1) {
-                    p.determinerTypeID = ((Determiner) part).determinerTypeID;
-                }
-            }
-            else {
-                determinerDictionary.put(w, (Determiner) part);
-            }
-        }
-        else if (part instanceof Interjection) {
-            if (interjectionDictionary.containsKey(w)) {
-                Interjection p = (Interjection) interjectionDictionary.get(w);
-                if (p.interjectionTypeID == -1) {
-                    p.interjectionTypeID = ((Interjection) part).interjectionTypeID;
-                }
-            }
-            else {
-                interjectionDictionary.put(w, (Interjection) part);
-            }
-        }
-        else if (part instanceof Preposition) {
-            if (prepositionDictionary.containsKey(w)) {
-                Preposition p = (Preposition) prepositionDictionary.get(w);
-                if (p.hasAdverbForm == null) {
-                    p.hasAdverbForm = ((Preposition) part).hasAdverbForm;
-                }
-            }
-            else {
-                prepositionDictionary.put(w, (Preposition) part);
-            }
-        }
-        else if (part instanceof Pronoun) {
-            if (pronounDictionary.containsKey(w)) {
-                Pronoun p = (Pronoun) pronounDictionary.get(w);
-                if (p.plurality.equals("--")) {
-                    p.plurality = ((Pronoun) part).plurality;
-                }
-                if (p.gender.equals("--")) {
-                    p.gender = ((Pronoun) part).gender;
-                }
-                if (p.pronounCase.equals("--")) {
-                    p.pronounCase = ((Pronoun) part).pronounCase;
-                }
-                if (p.type.equals("--")) {
-                    p.type = ((Pronoun) part).type;
-                }
-            }
-            else {
-                pronounDictionary.put(w, (Pronoun) part);
-            }
-        }
-        else if (part instanceof Verb) {
-            if (verbDictionary.containsKey(w)) {
-                Verb p = (Verb) verbDictionary.get(w);
-                if (p.verbType.equals("--")) {
-                    p.verbType = ((Verb) part).verbType;
-                }
-                if (p.transivity.equals("--")) {
-                    p.transivity = ((Verb) part).transivity;
-                }
-                if (p.tense.equals("--")) {
-                    p.tense = ((Verb) part).tense;
-                }
-                if (p.aspect.equals("--")) {
-                    p.aspect = ((Verb) part).aspect;
-                }
-                if (p.person.equals("--")) {
-                    p.person = ((Verb) part).person;
-                }
-                if (p.phrasal.equals("--")) {
-                    p.phrasal = ((Verb) part).phrasal;
-                }
-                if (p.isInfinitive != null) {
-                    p.isInfinitive = ((Verb) part).isInfinitive;
-                }
-            }
-            else {
-                verbDictionary.put(w, (Verb) part);
-            }
-        }
-        else if (part instanceof Quantifier) {
-            if (quantifierDictionary.containsKey(w)) {
-                Quantifier q = (Quantifier) quantifierDictionary.get(w);
-                if (q.quantifierID == -1) {
-                    q.quantifierID = ((Quantifier) part).quantifierID;
-                }
-            }
-            else {
-                quantifierDictionary.put(w, (Quantifier) part);
-            }
-        }}
-catch(Exception e){
-    e.printStackTrace();
-}
     }
 
     /**
@@ -676,13 +753,13 @@ catch(Exception e){
             while (scan.hasNext()) {
                 String scanIn = scan.nextLine();
                 if (!scanIn.equals("\n") && !scanIn.equals("")) {
-                    //seperates the part of speech from the word
+                    // seperates the part of speech from the word
                     String[] input = scanIn.split("\\$");
                     if (input.length > 0 && input.length < 3) {
                         String word = input[0];
                         String[] poses = input[1].split("");
                         int i = 0;
-                        //goes through each part of speech
+                        // goes through each part of speech
                         while (i < poses.length) {
                             String pos = poses[i];
                             System.out.println(word);
@@ -750,21 +827,22 @@ catch(Exception e){
                             }
                             i++;
                         }
-                        if(x==5000){
-                        /*store animacy querys for future runs*/
-                        fout=new FileOutputStream("outputs/animacyquery.ser");  
-                        out=new ObjectOutputStream(fout);  
-                        out.writeObject(animacy);  
-                        out.flush();  
-                        out.close();  
-                        fout.close();
-                        x=0;
+                        if (x == 5000) {
+                            /* store animacy querys for future runs */
+                            fout = new FileOutputStream(
+                                    "outputs/animacyquery.ser");
+                            out = new ObjectOutputStream(fout);
+                            out.writeObject(animacy);
+                            out.flush();
+                            out.close();
+                            fout.close();
+                            x = 0;
                         }
                         x++;
                     }
                 }
             }
-            
+
             scan.close();
         }
         catch (Exception e) {
@@ -824,12 +902,12 @@ catch(Exception e){
                     }
                     else if (pos.equals("noun")) {
                         if (eElement.getElementsByTagName("nonCount")
-                                .getLength() > 0){
+                                .getLength() > 0) {
                             Noun n = new Noun(word + "#~");
                             animacy = n.checkAnimacy(word, animacy);
                             merge(word, n);
                         }
-                        else{
+                        else {
                             Noun n = new Noun(word);
                             animacy = n.checkAnimacy(word, animacy);
                             merge(word, n);
@@ -907,7 +985,7 @@ catch(Exception e){
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
                     Noun n = new Noun(word + "#~");
-                    animacy = n.checkAnimacy(word,animacy);
+                    animacy = n.checkAnimacy(word, animacy);
                     merge(word, n);
                 }
             }
@@ -942,7 +1020,7 @@ catch(Exception e){
             while (scan.hasNextLine()) {
                 String s = scan.nextLine();
                 // set word
-                if (s.charAt(0) == '{' && s.length()>6) {
+                if (s.charAt(0) == '{' && s.length() > 6) {
                     word = s.substring(6, s.length());
                 }
                 String[] split = s.split("=");
@@ -958,10 +1036,12 @@ catch(Exception e){
                             + getdictionary(pos).containsKey(word));
                 }
                 // get the spelling variant of the word
-                else if(split[0].endsWith("spelling_variant")){
+                else if (split[0].endsWith("spelling_variant")) {
                     wordvariant = split[1];
                 }
-                else if(pos.length()>0 && !getdictionary(pos).containsKey(word) && getdictionary(pos).containsKey(wordvariant)){
+                else if (pos.length() > 0
+                        && !getdictionary(pos).containsKey(word)
+                        && getdictionary(pos).containsKey(wordvariant)) {
                     word = wordvariant;
                 }
                 // if dictionary contains the word
@@ -1025,7 +1105,7 @@ catch(Exception e){
                         compliments.add("tran=" + split[1]);
                     }
                 }
-                else if (s.equals("}")&&pos.length()>0
+                else if (s.equals("}") && pos.length() > 0
                         && getdictionary(pos).containsKey(word)) {
                     wordsseen++;
                     // add nouns
@@ -1061,7 +1141,7 @@ catch(Exception e){
                         parts.add(n);
 
                     }
-                    if (pos.equals("verb")){
+                    if (pos.equals("verb")) {
                         Verb v = new Verb(word);
                         v.addCompliments(compliments);
                         parts.add(v);
@@ -1131,7 +1211,7 @@ catch(Exception e){
                         parts.add(new Preposition(word));
                     if (pos.equals("conj"))
                         parts.add(new Conjunction(word));
-                    if(pos.equals("det"))
+                    if (pos.equals("det"))
                         parts.add(determinerSorter(word));
 
                     merge(word, parts.get(0));
@@ -1163,27 +1243,29 @@ catch(Exception e){
 
     }
 
-    public static void adverbIntensifiers(){
+    public static void adverbIntensifiers() {
         try {
-            Scanner scan = new Scanner(new File("inputs/AdverbScales-Manual.csv"));
+            Scanner scan = new Scanner(
+                    new File("inputs/AdverbScales-Manual.csv"));
             scan.nextLine();
-            while(scan.hasNextLine()){
+            while (scan.hasNextLine()) {
                 String s = scan.nextLine();
-                String [] split = s.split(",");
-                if(split.length>1){
-                String word = split[0];
-                Adverb adv = new Adverb(word);
-                adv.advIntensiferID = (Integer.parseInt(split[2]))+2;
-                adv.advIntensifier = split[1];
-                merge(word,adv);
-                if(word.endsWith("ly")){
-                    String wordadj = word.substring(0, word.length()-2);
-                    if(adjectiveDictionary.containsKey(wordadj)){
-                    Adjective adj = new Adjective(wordadj);
-                    adj.adjectiveIntensifierID =(Integer.parseInt(split[2]))+2;
-                    merge(wordadj,adj);
+                String[] split = s.split(",");
+                if (split.length > 1) {
+                    String word = split[0];
+                    Adverb adv = new Adverb(word);
+                    adv.advIntensiferID = (Integer.parseInt(split[2])) + 2;
+                    adv.advIntensifier = split[1];
+                    merge(word, adv);
+                    if (word.endsWith("ly")) {
+                        String wordadj = word.substring(0, word.length() - 2);
+                        if (adjectiveDictionary.containsKey(wordadj)) {
+                            Adjective adj = new Adjective(wordadj);
+                            adj.adjectiveIntensifierID = (Integer
+                                    .parseInt(split[2])) + 2;
+                            merge(wordadj, adj);
+                        }
                     }
-                }
                 }
             }
             scan.close();
@@ -1192,23 +1274,105 @@ catch(Exception e){
             e.printStackTrace();
         }
     }
-    
-    public static void locations(){
-        try{
+
+    public static void locations() {
+        try {
             Scanner s = new Scanner(new File("inputs/locations.txt"));
-            while(s.hasNext()){
+            while (s.hasNext()) {
                 String stuff = s.next();
                 Noun n = new Noun(stuff);
                 n.location = true;
                 n.animacy = "Inanimate";
-                merge(stuff,n);
+                merge(stuff, n);
             }
+            s.close();
         }
-        catch(Exception e){
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
+
+    public static void frequency() {
+        try {
+            Scanner s = new Scanner(
+                    new File("inputs/Word_frequency_list.txt"));
+
+            while (s.hasNextLine()) {
+                String stuff = s.nextLine();
+                //System.out.println(stuff);
+                String[] split = stuff.split(",");
+                String word = split[0].substring(1,split[0].length());
+                Float c = Float.parseFloat(split[1].substring(1, split[1].length()));
+                long rank = Long.parseLong(split[2].substring(1, split[2].length()-1));
+                System.out.println(word +":" +nounDictionary.containsKey(word)+":"+c +":"+ rank);
+                if (nounDictionary.containsKey(word)) {
+                    Noun n = new Noun(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (verbDictionary.containsKey(word)) {
+                    Verb n = new Verb(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (adjectiveDictionary.containsKey(word)) {
+                    Adjective n = new Adjective(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (adverbDictionary.containsKey(word)) {
+                    Adverb n = new Adverb(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (conjunctionDictionary.containsKey(word)) {
+                    Conjunction n = new Conjunction(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (determinerDictionary.containsKey(word)) {
+                    Determiner n = new Determiner(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (interjectionDictionary.containsKey(word)) {
+                    Interjection n = new Interjection(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (prepositionDictionary.containsKey(word)) {
+                    Preposition n = new Preposition(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (pronounDictionary.containsKey(word)) {
+                    Pronoun n = new Pronoun(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+                if (quantifierDictionary.containsKey(word)) {
+                    Quantifier n = new Quantifier(word);
+                    n.howCommon = c;
+                    n.commonRank = rank;
+                    merge(word,n);
+                }
+            }
+            s.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static PartOfSpeech determinerSorter(String s) {
         if (s.equals("a") || s.equals("an") || s.equals("the")
                 || s.equals("this") || s.equals("these") || s.equals("that")
@@ -1228,27 +1392,23 @@ catch(Exception e){
                 || s.endsWith("ten") || s.endsWith("eleven")
                 || s.endsWith("twelve") || s.endsWith("teen")
                 || s.endsWith("billion") || s.endsWith("dozen")
-                || (s.endsWith("ty")&&!s.endsWith("plenty")) || s.endsWith("trillion")
-                || s.endsWith("thousand") || s.endsWith("quadrillion")
-                || s.endsWith("zillion") || s.equals("ane")
-                || s.equals("fourscore") || s.endsWith("hundred")
-                || s.endsWith("million") || s.endsWith("threescore")) {
+                || (s.endsWith("ty") && !s.endsWith("plenty"))
+                || s.endsWith("trillion") || s.endsWith("thousand")
+                || s.endsWith("quadrillion") || s.endsWith("zillion")
+                || s.equals("ane") || s.equals("fourscore")
+                || s.endsWith("hundred") || s.endsWith("million")
+                || s.endsWith("threescore")) {
             return new Quantifier(s);
         }
         else {
-            /*try {
-                FileWriter fw = new FileWriter("outputs/infs.txt", true);
-                BufferedWriter bw = new BufferedWriter(fw);
-                PrintWriter printer = new PrintWriter(bw);
-                printer.println(s);
-                printer.close();
-                bw.close();
-                fw.close();
-
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }*/
+            /*
+             * try { FileWriter fw = new FileWriter("outputs/infs.txt", true);
+             * BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+             * new PrintWriter(bw); printer.println(s); printer.close();
+             * bw.close(); fw.close();
+             * 
+             * } catch (IOException e) { e.printStackTrace(); }
+             */
             return new Adjective(s + "~~~");
         }
     }
@@ -1287,6 +1447,5 @@ catch(Exception e){
         else
             return null;
     }
-    
 
 }

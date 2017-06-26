@@ -16,6 +16,8 @@ public class Verb implements PartOfSpeech ,Serializable{
     public String verbType = "--", transivity = "--", tense = "--",
             aspect = "--", person = "--", phrasal = "--";
     public Boolean isInfinitive;
+    public float howCommon = -1;
+    public long commonRank = -1;
     public Verb() {
         this("");
     }
@@ -139,9 +141,11 @@ public class Verb implements PartOfSpeech ,Serializable{
         ResultSet rs = stmt.executeQuery("SELECT Word1,word3 FROM NGrams.3Grams"+
         " where word1 = '"+s[0]+"' and word3 = '"+s[1]+"'");
         if(rs.next()){
+            conn.close();
             return true;
         }
         else
+            conn.close();
             return false;
         }
         catch(Exception e){
@@ -159,9 +163,11 @@ public class Verb implements PartOfSpeech ,Serializable{
             ResultSet rs = stmt.executeQuery("SELECT Word1,word2 FROM NGrams.2Grams"+
             " where word1 = '"+s[0]+"' and word2 = '"+s[1]+"'");
             if(rs.next()){
+                conn.close();
                 return true;
             }
             else
+                conn.close();
                 return false;
             }
             catch(Exception e){
@@ -198,6 +204,6 @@ public class Verb implements PartOfSpeech ,Serializable{
         return "Verb: VerbType="+verbType + ", Transivity="
                 + transivity + ", Tense=" + tense + ", Aspect=" + aspect
                 + ", Person=" + person + ", Phrasal=" + phrasal + ", isInfinitive="
-                + isInfinitive;
+                + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank;
     }
 }

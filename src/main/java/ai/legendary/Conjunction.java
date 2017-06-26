@@ -9,6 +9,8 @@ public class Conjunction implements PartOfSpeech,Serializable{
     private static final long serialVersionUID = 5399780922764479253L;
     public String Conjunction = "Conjunction";
 	public String conjunctionType = "--";
+    public float howCommon = -1;
+    public long commonRank = -1;
 	public Conjunction(){
 	}
 	public Conjunction(String s){
@@ -29,6 +31,6 @@ public class Conjunction implements PartOfSpeech,Serializable{
 	    }
 	}
 	public String toString(){
-	    return "Conjunction: ConjunctionType=" + conjunctionType;
+	    return "Conjunction: ConjunctionType=" + conjunctionType + ", howCommon="+howCommon+ ", commonRank="+commonRank;
 	}
 }

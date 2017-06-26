@@ -17,7 +17,9 @@ public class Determiner implements PartOfSpeech,Serializable{
 	 * 6=Demonstrative, Far Plural
 	 * 7=Interrogative
 	 */
-	public int determinerTypeID = -1; 
+	public int determinerTypeID = -1;
+    public float howCommon = -1;
+    public long commonRank = -1; 
 	public Determiner(){
 		this("");
 	}
@@ -47,6 +49,6 @@ public class Determiner implements PartOfSpeech,Serializable{
 		}
 	}
 	public String toString(){
-	    return "Determiner: DeterminerTypeID=" + determinerTypeID;
+	    return "Determiner: DeterminerTypeID=" + determinerTypeID + ", howCommon=" + howCommon+ ", commonRank="+commonRank;
 	}
 }

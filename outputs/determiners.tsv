@@ -1,12 +1,12 @@
-Word	DeterminerTypeID
-these	4
-the	2
-which	7
-a	1
-that	5
-what	7
-this	3
-whichever	7
-an	1
-those	6
-whatever	7
+Word	DeterminerTypeID	howCommon	commonRank
+these	4	0.131991	77
+the	2	6.510891	0
+which	7	0.391452	30
+a	1	2.263141	4
+that	5	1.173595	6
+what	7	0.262502	45
+this	3	0.487417	22
+whichever	7	9.16E-4	7792
+an	1	0.362002	33
+those	6	0.0935	109
+whatever	7	0.013927	740

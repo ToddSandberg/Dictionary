@@ -15,6 +15,8 @@ public class Adverb implements PartOfSpeech,Serializable{
 	public Boolean isRelativeAdverb=false,isComparativeAdverb=null,isSuperlativeAdverb=null,noCompOrSuperForm=null,mustUseMoreMost=null;
 	public String advIntensifier = "--";
     public String irregularForm = "--";
+    public float howCommon = -1;
+    public long commonRank = -1;
 	public Adverb(){
 		this("");
 	}
@@ -39,7 +41,8 @@ public class Adverb implements PartOfSpeech,Serializable{
 	   return "Adverb: AdvIntensifierID=" + advIntensiferID + ", IsRelativeAdverb="
                 + isRelativeAdverb + ", IsComparativeAdverb=" + isComparativeAdverb
                 + ", IsSuperlativeAdverb=" + isSuperlativeAdverb + ", AdvIntensifier="
-                + advIntensifier +", NoCompOrSupForm="+noCompOrSuperForm +", MustUseMoreMost="+mustUseMoreMost+ ", IrregularForm="+irregularForm;
+                + advIntensifier +", NoCompOrSupForm="+noCompOrSuperForm +", MustUseMoreMost="+mustUseMoreMost+ ", IrregularForm="+irregularForm
+                + ", howCommon="+howCommon+ ", commonRank="+commonRank;
 	}
 
 }

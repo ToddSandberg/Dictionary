@@ -15,6 +15,8 @@ public class Interjection implements PartOfSpeech,Serializable{
      * 4 Happy or Excited
      */
 	public int interjectionTypeID = -1;
+    public float howCommon = -1;
+    public long commonRank = -1;
 	public Interjection(){
 		this("");
 	}
@@ -22,7 +24,7 @@ public class Interjection implements PartOfSpeech,Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	public String toString(){
-	    return "Interjection: InterjectionTypeID=" + interjectionTypeID;
+	    return "Interjection: InterjectionTypeID=" + interjectionTypeID + ", howCommon="+howCommon+ ", commonRank="+commonRank;
 	}
 
 }

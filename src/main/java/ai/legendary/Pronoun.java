@@ -9,6 +9,8 @@ public class Pronoun implements PartOfSpeech,Serializable {
     private static final long serialVersionUID = -3166547793615971528L;
     public String Pronoun = "Pronoun";
 	public String plurality="--",gender="--",pronounCase="--",type="--";
+    public float howCommon = -1;
+    public long commonRank = -1;
 	public Pronoun(){
 		this("");
 	}
@@ -206,7 +208,7 @@ public class Pronoun implements PartOfSpeech,Serializable {
 	}
 	public String toString(){
 	    return "Pronoun: Plurality=" + plurality + ", Gender=" + gender
-        + ", PronounCase=" + pronounCase + ", Type=" + type;
+        + ", PronounCase=" + pronounCase + ", Type=" + type + ", howCommon="+howCommon+ ", commonRank="+commonRank;
 	}
 
 }

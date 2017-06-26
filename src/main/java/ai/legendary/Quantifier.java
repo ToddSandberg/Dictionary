@@ -13,6 +13,8 @@ public class Quantifier implements PartOfSpeech,Serializable {
      *  2 = cardinal number
      */
     public int quantifierID = -1;
+    public float howCommon = -1;
+    public long commonRank = -1;
     public Quantifier(String s) {
         if(s.endsWith("one")||s.endsWith("two")||s.endsWith("three")||s.endsWith("four")||s.endsWith("five")||s.endsWith("six")||s.endsWith("seven")||s.endsWith("eight")||s.endsWith("nine")||s.endsWith("zero")||s.endsWith("ten")||s.endsWith("eleven")||s.endsWith("twelve")||s.endsWith("teen")||s.contains("billion")||s.endsWith("dozen")||s.endsWith("ty")||s.endsWith("trillion")||s.endsWith("thousand")||s.endsWith("quadrillion")||s.endsWith("zillion")||s.equals("ane")||s.equals("fourscore")||s.endsWith("hundred")||s.endsWith("million")||s.endsWith("threescore")){
             quantifierID = 2;
@@ -22,7 +24,7 @@ public class Quantifier implements PartOfSpeech,Serializable {
         }
     }
     public String toString(){
-        return "Quantifier: QuantifierID=" + quantifierID;
+        return "Quantifier: QuantifierID=" + quantifierID + ", howCommon="+howCommon+ ", commonRank="+commonRank;
     }
 
 }
