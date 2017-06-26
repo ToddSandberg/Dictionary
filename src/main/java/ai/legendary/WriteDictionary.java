@@ -114,7 +114,7 @@ public class WriteDictionary {
 
             printer.println("## Document Output Formats:");
             printer.println(
-                    "- csv files for each part of speech with words and their properties");
+                    "- tsv files for each part of speech with words and their properties");
             printer.println(
                     "- serialized dictionary classes for each part of speech");
             
@@ -181,46 +181,46 @@ public class WriteDictionary {
             File nouns = new File("outputs/nouns.tsv");
             PrintWriter nounprinter = new PrintWriter(nouns);
             nounprinter.println(
-                    "Word   Plurality   Gender  AnAbbreviationFor   AbbreviatedFrom AnAcronymFor    irregularPluralForm IsCompound  IsCountable AcceptsZeroArticle  IsProperName    Compliments BaseForm    Animacy location");
+                    "Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation");
             // adjectiveprinter setup
             File adjectives = new File("outputs/adjectives.tsv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word   AdjectiveOrderID    ComparisonType  Quantifier  IsQualitative   IsClassifying   CommonlyPrecededWithAnd WorksInAttributivePosition  WorksInPredicativePosition  HasDiminutiveSuffix IsProper    Compliments MustUseMoreMost AdjectiveIntensifierID");
+                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID");
             // verbprinter setup
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word   VerbType    Transivity  Tense   Aspect  Person  Phrasal IsInfinitive");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
             adverbprinter.println(
-                    "Word   AdvIntensifierID    IsRelativeAdverb    IsComperativeAdverb IsSuperlativeAdverb AdvIntensifier  NoCompOrSupForm MustUseMoreMost IrregularForm");
+                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm");
             // conjunctionprinter setup
             File conjunctions = new File("outputs/conjunctions.tsv");
             PrintWriter conjunctionprinter = new PrintWriter(conjunctions);
-            conjunctionprinter.println("Word    ConjunctionType");
+            conjunctionprinter.println("Word\tConjunctionType");
             // determinerprinter setup
             File determiners = new File("outputs/determiners.tsv");
             PrintWriter determinerprinter = new PrintWriter(determiners);
-            determinerprinter.println("Word DeterminerTypeID");
+            determinerprinter.println("Word\tDeterminerTypeID");
             // Interjectionprinter setup
             File interjections = new File("outputs/interjections.tsv");
             PrintWriter interjectionprinter = new PrintWriter(interjections);
-            interjectionprinter.println("Word   InterjectionTypeID");
+            interjectionprinter.println("Word\tInterjectionTypeID");
             // prepositionprinter setup
             File prepositions = new File("outputs/prepositions.tsv");
             PrintWriter prepositionprinter = new PrintWriter(prepositions);
-            prepositionprinter.println("Word    HasAdverbForm");
+            prepositionprinter.println("Word\tHasAdverbForm");
             // pronounprinter setup
             File pronouns = new File("outputs/pronouns.tsv");
             PrintWriter pronounprinter = new PrintWriter(pronouns);
-            pronounprinter.println("Word    Plurality  Gender   PronounCase Type");
+            pronounprinter.println("Word\tPlurality\tGender\tPronounCase\tType");
             // quantifierprinter setup
             File quantifiers = new File("outputs/quantifiers.tsv");
             PrintWriter quantifierprinter = new PrintWriter(quantifiers);
-            quantifierprinter.println("Word QuantifierID");
+            quantifierprinter.println("Word\tQuantifierID");
             
             Iterator nounit = nounDictionary.entrySet().iterator();
             while (nounit.hasNext()) {
@@ -230,12 +230,12 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                nounprinter.println(w + "   " + n.plurality + " " + n.gender
-                        + " " + n.anAbbreviationFor + " " + n.abbreviatedFrom
-                        + " " + n.anAcronymFor + "  " + n.irregularPluralForm
-                        + " " + n.isCompound + "    " + n.isCountable + "   "
-                        + n.acceptsZeroArticle + "  " + n.isProperName + "  "
-                        + n.compliments + " " + n.baseForm+"    "+n.animacy+"  "+n.location);
+                nounprinter.println(w + "\t" + n.plurality + "\t" + n.gender
+                        + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
+                        + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
+                        + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
+                        + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
+                        + n.compliments + "\t" + n.baseForm+"\t"+n.animacy+"\t"+n.location);
             }
             Iterator adjit = adjectiveDictionary.entrySet().iterator();
             while (adjit.hasNext()) {
@@ -245,14 +245,14 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                adjectiveprinter.println(w + "  " + a.adjectiveOrderID + "  "
-                        + a.comparisonType + "  " + a.quantifier + "    "
-                        + a.isQualitative + "   " + a.isClassifying + "   "
-                        + a.commonlyPrecededWithAnd + " "
-                        + a.worksInAttributivePosition + "  "
-                        + a.worksInPredicativePosition + "  "
-                        + a.hasDiminutiveSuffix + " " + a.isProper + "  "
-                        + a.compliments + " " + a.mustUseMoreMost+ "    "+a.adjectiveIntensifierID);
+                adjectiveprinter.println(w + "\t" + a.adjectiveOrderID + "\t"
+                        + a.comparisonType + "\t" + a.quantifier + "\t"
+                        + a.isQualitative + "\t" + a.isClassifying + "\t"
+                        + a.commonlyPrecededWithAnd + "\t"
+                        + a.worksInAttributivePosition + "\t"
+                        + a.worksInPredicativePosition + "\t"
+                        + a.hasDiminutiveSuffix + "\t" + a.isProper + "\t"
+                        + a.compliments + "\t" + a.mustUseMoreMost+ "\t"+a.adjectiveIntensifierID);
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while (verbit.hasNext()) {
@@ -262,9 +262,9 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                verbprinter.println(w + "   " + v.verbType + "  " + v.transivity
-                        + " " + v.tense + " " + v.aspect + "    " + v.person + "    "
-                        + v.phrasal + " " + v.isInfinitive);
+                verbprinter.println(w + "\t" + v.verbType + "\t" + v.transivity
+                        + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person + "\t"
+                        + v.phrasal + "\t" + v.isInfinitive);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
@@ -274,11 +274,11 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                adverbprinter.println(w + " " + a.advIntensiferID + "   "
-                        + a.isRelativeAdverb + "    " + a.isComparativeAdverb
-                        + " " + a.isSuperlativeAdverb + "   " + a.advIntensifier
-                        + " " + a.noCompOrSuperForm + " " + a.mustUseMoreMost
-                        + " " + a.irregularForm);
+                adverbprinter.println(w + "\t" + a.advIntensiferID + "\t"
+                        + a.isRelativeAdverb + "\t" + a.isComparativeAdverb
+                        + "\t" + a.isSuperlativeAdverb + "\t" + a.advIntensifier
+                        + "\t" + a.noCompOrSuperForm + "\t" + a.mustUseMoreMost
+                        + "\t" + a.irregularForm);
             }
             Iterator conjit = conjunctionDictionary.entrySet().iterator();
             while (conjit.hasNext()) {
@@ -288,7 +288,7 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                conjunctionprinter.println(w + "    " + c.conjunctionType);
+                conjunctionprinter.println(w + "\t" + c.conjunctionType);
             }
             Iterator detit = determinerDictionary.entrySet().iterator();
             while (detit.hasNext()) {
@@ -298,7 +298,7 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                determinerprinter.println(w + " " + d.determinerTypeID);
+                determinerprinter.println(w + "\t" + d.determinerTypeID);
             }
             Iterator intit = interjectionDictionary.entrySet().iterator();
             while (intit.hasNext()) {
@@ -308,7 +308,7 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                interjectionprinter.println(w + "   " + a.interjectionTypeID);
+                interjectionprinter.println(w + "\t" + a.interjectionTypeID);
             }
             Iterator prepit = prepositionDictionary.entrySet().iterator();
             while (prepit.hasNext()) {
@@ -318,7 +318,7 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                prepositionprinter.println(w + "    " + p.hasAdverbForm);
+                prepositionprinter.println(w + "\t" + p.hasAdverbForm);
             }
             Iterator proit = pronounDictionary.entrySet().iterator();
             while (proit.hasNext()) {
@@ -328,8 +328,8 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                pronounprinter.println(w + "    " + p.plurality + " " + p.gender
-                        + " " + p.pronounCase + "   " + p.type);
+                pronounprinter.println(w + "\t" + p.plurality + "\t" + p.gender
+                        + " " + p.pronounCase + "\t" + p.type);
             }
             Iterator quantit = quantifierDictionary.entrySet().iterator();
             while (quantit.hasNext()) {
@@ -339,7 +339,7 @@ public class WriteDictionary {
                 if(w.endsWith(",")){
                     w=w.substring(0,w.length()-1);
                 }
-                quantifierprinter.println(w + " " + q.quantifierID);
+                quantifierprinter.println(w + "\t" + q.quantifierID);
             }
 
             nounprinter.close();

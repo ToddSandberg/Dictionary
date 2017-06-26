@@ -70,4 +70,4 @@
 ## Document Output Formats:
 - csv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 6 minutes and 8 seconds
+## Current Dictionary Write Time: 5 minutes and 6 seconds
