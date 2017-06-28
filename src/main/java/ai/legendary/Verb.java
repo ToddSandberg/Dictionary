@@ -18,6 +18,7 @@ public class Verb implements PartOfSpeech ,Serializable{
     public Boolean isInfinitive;
     public float howCommon = -1;
     public long commonRank = -1;
+    public String baseForm = "--";
     public Verb() {
         this("");
     }
@@ -204,6 +205,6 @@ public class Verb implements PartOfSpeech ,Serializable{
         return "Verb: VerbType="+verbType + ", Transivity="
                 + transivity + ", Tense=" + tense + ", Aspect=" + aspect
                 + ", Person=" + person + ", Phrasal=" + phrasal + ", isInfinitive="
-                + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank;
+                + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank +", baseForm="+baseForm;
     }
 }

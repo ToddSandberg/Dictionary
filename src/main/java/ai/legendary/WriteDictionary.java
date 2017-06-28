@@ -24,7 +24,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
 
@@ -42,10 +41,14 @@ public class WriteDictionary {
     public static HashMap<String, Preposition> prepositionDictionary = new HashMap<String, Preposition>();
     public static HashMap<String, Pronoun> pronounDictionary = new HashMap<String, Pronoun>();
     public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
-
-    public static HashMap<String, String> animacy = new HashMap<String, String>();
+    /**
+     * Saves progress in animacy from concept net
+     */
+    static AnimacySave animacy = new AnimacySave();
+    public static HashMap<String,String> roots = new HashMap<String,String>();
     static FileOutputStream fout;
     static ObjectOutputStream out;
+    // determines the runtime
     static int seconds = 0;
     static Timer time = new Timer();
     static TimerTask ttask = new TimerTask() {
@@ -54,14 +57,16 @@ public class WriteDictionary {
             seconds++;
         }
     };
+    // wordnet dictionary
     static Dictionary dictionary;
+
     public static void main(String[] args) {
         try {
             dictionary = Dictionary.getDefaultResourceInstance();
             try {
                 ObjectInputStream in = new ObjectInputStream(
                         new FileInputStream("outputs/animacyquery.ser"));
-                animacy = (HashMap<String, String>) in.readObject();
+                animacy = (AnimacySave) in.readObject();
                 in.close();
             }
             catch (Exception e) {
@@ -128,7 +133,19 @@ public class WriteDictionary {
                     "- tsv files for each part of speech with words and their properties");
             printer.println(
                     "- serialized dictionary classes for each part of speech");
-
+            //print out roots HashMap
+            try {
+                FileOutputStream fout = new FileOutputStream(
+                        "outputs/roots.ser");
+                ObjectOutputStream out = new ObjectOutputStream(fout);
+                out.writeObject(roots);
+                out.flush();
+                out.close();
+                fout.close();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
             // ToTSV
             toTSV();
             // ToHashMap
@@ -159,6 +176,8 @@ public class WriteDictionary {
             printer.println("## Current Dictionary Write Time: " + seconds / 60
                     + " minutes and " + seconds % 60 + " seconds");
             printer.close();
+            ttask.cancel();
+            time.cancel();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -201,42 +220,47 @@ public class WriteDictionary {
             File adjectives = new File("outputs/adjectives.tsv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank");
+                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm");
             // verbprinter setup
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
             adverbprinter.println(
-                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm\thowCommon\tcommonRank");
+                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm\thowCommon\tcommonRank\tbaseForm");
             // conjunctionprinter setup
             File conjunctions = new File("outputs/conjunctions.tsv");
             PrintWriter conjunctionprinter = new PrintWriter(conjunctions);
-            conjunctionprinter.println("Word\tConjunctionType\thowCommon\tcommonRank");
+            conjunctionprinter
+                    .println("Word\tConjunctionType\thowCommon\tcommonRank");
             // determinerprinter setup
             File determiners = new File("outputs/determiners.tsv");
             PrintWriter determinerprinter = new PrintWriter(determiners);
-            determinerprinter.println("Word\tDeterminerTypeID\thowCommon\tcommonRank");
+            determinerprinter
+                    .println("Word\tDeterminerTypeID\thowCommon\tcommonRank");
             // Interjectionprinter setup
             File interjections = new File("outputs/interjections.tsv");
             PrintWriter interjectionprinter = new PrintWriter(interjections);
-            interjectionprinter.println("Word\tInterjectionTypeID\thowCommon\tcommonRank");
+            interjectionprinter.println(
+                    "Word\tInterjectionTypeID\thowCommon\tcommonRank");
             // prepositionprinter setup
             File prepositions = new File("outputs/prepositions.tsv");
             PrintWriter prepositionprinter = new PrintWriter(prepositions);
-            prepositionprinter.println("Word\tHasAdverbForm\thowCommon\tcommonRank");
+            prepositionprinter
+                    .println("Word\tHasAdverbForm\thowCommon\tcommonRank");
             // pronounprinter setup
             File pronouns = new File("outputs/pronouns.tsv");
             PrintWriter pronounprinter = new PrintWriter(pronouns);
-            pronounprinter
-                    .println("Word\tPlurality\tGender\tPronounCase\tType\thowCommon\tcommonRank");
+            pronounprinter.println(
+                    "Word\tPlurality\tGender\tPronounCase\tType\thowCommon\tcommonRank");
             // quantifierprinter setup
             File quantifiers = new File("outputs/quantifiers.tsv");
             PrintWriter quantifierprinter = new PrintWriter(quantifiers);
-            quantifierprinter.println("Word\tQuantifierID\thowCommon\tcommonRank");
+            quantifierprinter
+                    .println("Word\tQuantifierID\thowCommon\tcommonRank");
 
             Iterator nounit = nounDictionary.entrySet().iterator();
             while (nounit.hasNext()) {
@@ -252,7 +276,8 @@ public class WriteDictionary {
                         + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
                         + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
                         + n.compliments + "\t" + n.baseForm + "\t" + n.animacy
-                        + "\t" + n.location + "\t" + n.howCommon + "\t"+ n.commonRank);
+                        + "\t" + n.location + "\t" + n.howCommon + "\t"
+                        + n.commonRank);
             }
             Iterator adjit = adjectiveDictionary.entrySet().iterator();
             while (adjit.hasNext()) {
@@ -270,7 +295,8 @@ public class WriteDictionary {
                         + a.worksInPredicativePosition + "\t"
                         + a.hasDiminutiveSuffix + "\t" + a.isProper + "\t"
                         + a.compliments + "\t" + a.mustUseMoreMost + "\t"
-                        + a.adjectiveIntensifierID+ "\t" + a.howCommon + "\t" + a.commonRank);
+                        + a.adjectiveIntensifierID + "\t" + a.howCommon + "\t"
+                        + a.commonRank + "\t" + a.baseForm);
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while (verbit.hasNext()) {
@@ -282,7 +308,9 @@ public class WriteDictionary {
                 }
                 verbprinter.println(w + "\t" + v.verbType + "\t" + v.transivity
                         + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
-                        + "\t" + v.phrasal + "\t" + v.isInfinitive+ "\t" + v.howCommon + "\t" + v.commonRank);
+                        + "\t" + v.phrasal + "\t" + v.isInfinitive + "\t"
+                        + v.howCommon + "\t" + v.commonRank + "\t"
+                        + v.baseForm);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
@@ -296,7 +324,9 @@ public class WriteDictionary {
                         + a.isRelativeAdverb + "\t" + a.isComparativeAdverb
                         + "\t" + a.isSuperlativeAdverb + "\t"
                         + a.advIntensifier + "\t" + a.noCompOrSuperForm + "\t"
-                        + a.mustUseMoreMost + "\t" + a.irregularForm + "\t" + a.howCommon + "\t" + a.commonRank);
+                        + a.mustUseMoreMost + "\t" + a.irregularForm + "\t"
+                        + a.howCommon + "\t" + a.commonRank + "\t"
+                        + a.baseForm);
             }
             Iterator conjit = conjunctionDictionary.entrySet().iterator();
             while (conjit.hasNext()) {
@@ -306,7 +336,8 @@ public class WriteDictionary {
                 if (w.endsWith(",")) {
                     w = w.substring(0, w.length() - 1);
                 }
-                conjunctionprinter.println(w + "\t" + c.conjunctionType + "\t" + c.howCommon + "\t" + c.commonRank);
+                conjunctionprinter.println(w + "\t" + c.conjunctionType + "\t"
+                        + c.howCommon + "\t" + c.commonRank);
             }
             Iterator detit = determinerDictionary.entrySet().iterator();
             while (detit.hasNext()) {
@@ -316,7 +347,8 @@ public class WriteDictionary {
                 if (w.endsWith(",")) {
                     w = w.substring(0, w.length() - 1);
                 }
-                determinerprinter.println(w + "\t" + d.determinerTypeID + "\t" + d.howCommon + "\t" + d.commonRank);
+                determinerprinter.println(w + "\t" + d.determinerTypeID + "\t"
+                        + d.howCommon + "\t" + d.commonRank);
             }
             Iterator intit = interjectionDictionary.entrySet().iterator();
             while (intit.hasNext()) {
@@ -326,7 +358,8 @@ public class WriteDictionary {
                 if (w.endsWith(",")) {
                     w = w.substring(0, w.length() - 1);
                 }
-                interjectionprinter.println(w + "\t" + a.interjectionTypeID + "\t" + a.howCommon + "\t" + a.commonRank);
+                interjectionprinter.println(w + "\t" + a.interjectionTypeID
+                        + "\t" + a.howCommon + "\t" + a.commonRank);
             }
             Iterator prepit = prepositionDictionary.entrySet().iterator();
             while (prepit.hasNext()) {
@@ -336,7 +369,8 @@ public class WriteDictionary {
                 if (w.endsWith(",")) {
                     w = w.substring(0, w.length() - 1);
                 }
-                prepositionprinter.println(w + "\t" + p.hasAdverbForm + "\t" + p.howCommon + "\t" + p.commonRank);
+                prepositionprinter.println(w + "\t" + p.hasAdverbForm + "\t"
+                        + p.howCommon + "\t" + p.commonRank);
             }
             Iterator proit = pronounDictionary.entrySet().iterator();
             while (proit.hasNext()) {
@@ -347,7 +381,8 @@ public class WriteDictionary {
                     w = w.substring(0, w.length() - 1);
                 }
                 pronounprinter.println(w + "\t" + p.plurality + "\t" + p.gender
-                        + " " + p.pronounCase + "\t" + p.type + "\t" + p.howCommon + "\t" + p.commonRank);
+                        + " " + p.pronounCase + "\t" + p.type + "\t"
+                        + p.howCommon + "\t" + p.commonRank);
             }
             Iterator quantit = quantifierDictionary.entrySet().iterator();
             while (quantit.hasNext()) {
@@ -357,7 +392,8 @@ public class WriteDictionary {
                 if (w.endsWith(",")) {
                     w = w.substring(0, w.length() - 1);
                 }
-                quantifierprinter.println(w + "\t" + q.quantifierID + "\t" + q.howCommon + "\t" + q.commonRank);
+                quantifierprinter.println(w + "\t" + q.quantifierID + "\t"
+                        + q.howCommon + "\t" + q.commonRank);
             }
 
             nounprinter.close();
@@ -422,12 +458,14 @@ public class WriteDictionary {
                         System.out.println(word);
                         if (masculine) {
                             Noun pos = new Noun(words[i] + "#~~");
-                            animacy = pos.checkAnimacy(word, animacy);
+                            animacy.animacy = pos.checkAnimacy(word,
+                                    animacy.animacy);
                             merge(word, pos);
                         }
                         else if (!masculine) {
                             Noun pos = new Noun(words[i] + "@~~");
-                            animacy = pos.checkAnimacy(word, animacy);
+                            animacy.animacy = pos.checkAnimacy(word,
+                                    animacy.animacy);
                             merge(word, pos);
                         }
 
@@ -493,10 +531,10 @@ public class WriteDictionary {
                     if (p.location == null) {
                         p.location = ((Noun) part).location;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Noun) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Noun) part).howCommon;
                     }
                 }
@@ -548,11 +586,14 @@ public class WriteDictionary {
                     if (p.adjectiveIntensifierID == -1) {
                         p.adjectiveIntensifierID = ((Adjective) part).adjectiveIntensifierID;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Adjective) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Adjective) part).howCommon;
+                    }
+                    if (p.baseForm.equals("--")) {
+                        p.baseForm = ((Adjective) part).baseForm;
                     }
                 }
                 else {
@@ -583,11 +624,14 @@ public class WriteDictionary {
                     if (p.irregularForm.equals("--")) {
                         p.irregularForm = ((Adverb) part).irregularForm;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Adverb) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Adverb) part).howCommon;
+                    }
+                    if (!p.baseForm.equals("--")) {
+                        p.baseForm = ((Adverb) part).baseForm;
                     }
                 }
                 else {
@@ -600,10 +644,10 @@ public class WriteDictionary {
                     if (p.conjunctionType.equals("--")) {
                         p.conjunctionType = ((Conjunction) part).conjunctionType;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Conjunction) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Conjunction) part).howCommon;
                     }
                 }
@@ -617,10 +661,10 @@ public class WriteDictionary {
                     if (p.determinerTypeID == -1) {
                         p.determinerTypeID = ((Determiner) part).determinerTypeID;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Determiner) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Determiner) part).howCommon;
                     }
                 }
@@ -635,10 +679,10 @@ public class WriteDictionary {
                     if (p.interjectionTypeID == -1) {
                         p.interjectionTypeID = ((Interjection) part).interjectionTypeID;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Interjection) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Interjection) part).howCommon;
                     }
                 }
@@ -652,10 +696,10 @@ public class WriteDictionary {
                     if (p.hasAdverbForm == null) {
                         p.hasAdverbForm = ((Preposition) part).hasAdverbForm;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Preposition) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Preposition) part).howCommon;
                     }
                 }
@@ -678,10 +722,10 @@ public class WriteDictionary {
                     if (p.type.equals("--")) {
                         p.type = ((Pronoun) part).type;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Pronoun) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Pronoun) part).howCommon;
                     }
                 }
@@ -713,11 +757,14 @@ public class WriteDictionary {
                     if (p.isInfinitive != null) {
                         p.isInfinitive = ((Verb) part).isInfinitive;
                     }
-                    if(p.commonRank==-1){
+                    if (p.commonRank == -1) {
                         p.commonRank = ((Verb) part).commonRank;
                     }
-                    if(p.howCommon==-1){
+                    if (p.howCommon == -1) {
                         p.howCommon = ((Verb) part).howCommon;
+                    }
+                    if (p.baseForm.equals("--")) {
+                        p.baseForm = ((Verb) part).baseForm;
                     }
                 }
                 else {
@@ -730,10 +777,10 @@ public class WriteDictionary {
                     if (q.quantifierID == -1) {
                         q.quantifierID = ((Quantifier) part).quantifierID;
                     }
-                    if(q.commonRank==-1){
+                    if (q.commonRank == -1) {
                         q.commonRank = ((Quantifier) part).commonRank;
                     }
-                    if(q.howCommon==-1){
+                    if (q.howCommon == -1) {
                         q.howCommon = ((Quantifier) part).howCommon;
                     }
                 }
@@ -771,56 +818,283 @@ public class WriteDictionary {
                             /* Check what part of speech it is */
                             if (pos.equals("N")) {
                                 Noun n = new Noun(word);
-                                animacy = n.checkAnimacy(word, animacy);
-                                try{
-                                n.baseForm = dictionary.getIndexWord(POS.NOUN,word).getLemma();
+                                animacy.animacy = n.checkAnimacy(word,
+                                        animacy.animacy);
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(nounDictionary);
+                                    m.breakApart();
+                                    try {
+                                        n.baseForm = dictionary
+                                                .lookupIndexWord(POS.NOUN,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        n.baseForm = m.getRoot();
+                                    }
+                                    if (m.getTraits().contains("plural")) {
+                                        n.plurality = "plural";
+                                    }
+                                    if(!roots.containsKey(n.baseForm+":noun"))
+                                        roots.put(n.baseForm+":noun", word);
+                                    else
+                                        roots.put(n.baseForm+":noun", roots.get(n.baseForm) + word);
                                 }
-                                catch(Exception e){
-                                    //e.printStackTrace();
+                                catch (Exception e) {
+                                    e.printStackTrace();
                                 }
+
                                 merge(word, n);
                             }
                             else if (pos.equals("p")) {
                                 Noun n = new Noun(word + "~~@");
-                                animacy = n.checkAnimacy(word, animacy);
-                                try{
-                                    n.baseForm = dictionary.getIndexWord(POS.NOUN,word).getLemma();
+                                animacy.animacy = n.checkAnimacy(word,
+                                        animacy.animacy);
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(nounDictionary);
+                                    m.breakApart();
+                                    try {
+                                        n.baseForm = dictionary
+                                                .lookupIndexWord(POS.NOUN,
+                                                        m.getRoot())
+                                                .getLemma();
                                     }
-                                    catch(Exception e){
-                                        //e.printStackTrace();
+                                    catch (Exception e) {
+                                        n.baseForm = m.getRoot();
                                     }
+                                    if (m.getTraits().contains("plural")) {
+                                        n.plurality = "plural";
+                                    }
+                                    if(!roots.containsKey(n.baseForm+":noun"))
+                                        roots.put(n.baseForm+":noun", word);
+                                    else
+                                        roots.put(n.baseForm+":noun", roots.get(n.baseForm) + "|"+word);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 merge(word, n);
                             }
                             else if (pos.equals("h")) {
                                 Noun n = new Noun(word + "~@~");
-                                animacy = n.checkAnimacy(word, animacy);
-                                try{
-                                    n.baseForm = dictionary.getIndexWord(POS.NOUN,word).getLemma();
+                                animacy.animacy = n.checkAnimacy(word,
+                                        animacy.animacy);
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(nounDictionary);
+                                    m.breakApart();
+                                    try {
+                                        n.baseForm = dictionary
+                                                .lookupIndexWord(POS.NOUN,
+                                                        m.getRoot())
+                                                .getLemma();
                                     }
-                                    catch(Exception e){
-                                        //e.printStackTrace();
+                                    catch (Exception e) {
+                                        n.baseForm = m.getRoot();
                                     }
+                                    if (m.getTraits().contains("plural")) {
+                                        n.plurality = "plural";
+                                    }
+                                    if(!roots.containsKey(n.baseForm+":noun"))
+                                        roots.put(n.baseForm+":noun", word);
+                                    else
+                                        roots.put(n.baseForm+":noun", roots.get(n.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 merge(word, n);
                             }
                             else if (pos.equals("V")) {
-                                merge(word, new Verb(word));
+                                Verb v = new Verb(word);
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(verbDictionary);
+                                    m.breakApart();
+                                    try {
+                                        v.baseForm = dictionary
+                                                .lookupIndexWord(POS.VERB,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        v.baseForm = m.getRoot();
+                                    }
+                                    if (m.getTraits().contains("past tense")) {
+                                        v.tense = "past tense";
+                                    }
+                                    else if (m.getTraits()
+                                            .contains("present tense")) {
+                                        v.tense = "present tense";
+                                    }
+                                    if(!roots.containsKey(v.baseForm+":verb"))
+                                        roots.put(v.baseForm+":verb", word);
+                                    else
+                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                merge(word, v);
                             }
                             else if (pos.equals("t") && i < poses.length - 1
                                     && poses[i + 1].equals("i")) {
-                                merge(word, new Verb(word + "%"));
+                                Verb v = new Verb(word + "%");
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(verbDictionary);
+                                    m.breakApart();
+                                    try {
+                                        v.baseForm = dictionary
+                                                .lookupIndexWord(POS.VERB,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        v.baseForm = m.getRoot();
+                                    }
+                                    if (m.getTraits().contains("past tense")) {
+                                        v.tense = "past tense";
+                                    }
+                                    else if (m.getTraits()
+                                            .contains("present tense")) {
+                                        v.tense = "present tense";
+                                    }
+                                    if(!roots.containsKey(v.baseForm+":verb"))
+                                        roots.put(v.baseForm+":verb", word);
+                                    else
+                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                merge(word, v);
                                 i++;
                             }
                             else if (pos.equals("t")) {
-                                merge(word, new Verb(word + "@"));
+                                Verb v = new Verb(word + "@");
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(verbDictionary);
+                                    m.breakApart();
+                                    try {
+                                        v.baseForm = dictionary
+                                                .lookupIndexWord(POS.VERB,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        v.baseForm = m.getRoot();
+                                    }
+                                    if (m.getTraits().contains("past tense")) {
+                                        v.tense = "past tense";
+                                    }
+                                    else if (m.getTraits()
+                                            .contains("present tense")) {
+                                        v.tense = "present tense";
+                                    }
+                                    if(!roots.containsKey(v.baseForm+":verb"))
+                                        roots.put(v.baseForm+":verb", word);
+                                    else
+                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                merge(word, v);
                             }
                             else if (pos.equals("i")) {
-                                merge(word, new Verb(word + "="));
+                                Verb v = new Verb(word + "=");
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(verbDictionary);
+                                    m.breakApart();
+                                    try {
+                                        v.baseForm = dictionary
+                                                .lookupIndexWord(POS.VERB,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        v.baseForm = m.getRoot();
+                                    }
+                                    if (m.getTraits().contains("past tense")) {
+                                        v.tense = "past tense";
+                                    }
+                                    else if (m.getTraits()
+                                            .contains("present tense")) {
+                                        v.tense = "present tense";
+                                    }
+                                    if(!roots.containsKey(v.baseForm+":verb"))
+                                        roots.put(v.baseForm+":verb", word);
+                                    else
+                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                     e.printStackTrace();
+                                }
+                                merge(word, v);
                             }
                             else if (pos.equals("A")) {
-                                merge(word, new Adjective(word));
+                                Adjective a = new Adjective(word);
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.breakApart();
+                                    try {
+                                        a.baseForm = dictionary
+                                                .lookupIndexWord(POS.ADJECTIVE,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        a.baseForm = m.getRoot();
+                                    }
+                                    if(!roots.containsKey(a.baseForm+":adjective"))
+                                        roots.put(a.baseForm+":adjective", word);
+                                    else
+                                        roots.put(a.baseForm+":adjective", roots.get(a.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                     e.printStackTrace();
+                                }
+                                merge(word, a);
                             }
                             else if (pos.equals("v")) {
-                                merge(word, new Adverb(word));
+                                Adverb a = new Adverb(word);
+                                try {
+                                    MorphologyFinder m = new MorphologyFinder(
+                                            word);
+                                    m.loadDictionary(adverbDictionary);
+                                    m.breakApart();
+                                    try {
+                                        a.baseForm = dictionary
+                                                .lookupIndexWord(POS.ADVERB,
+                                                        m.getRoot())
+                                                .getLemma();
+                                    }
+                                    catch (Exception e) {
+                                        a.baseForm = m.getRoot();
+                                    }
+                                    if(!roots.containsKey(a.baseForm+":adverb"))
+                                        roots.put(a.baseForm+":adverb", word);
+                                    else
+                                        roots.put(a.baseForm+":adverb", roots.get(a.baseForm) +"|"+ word);
+                                }
+                                catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                merge(word, a);
                             }
                             else if (pos.equals("C")) {
                                 if (!word.equals("")
@@ -905,34 +1179,222 @@ public class WriteDictionary {
                                 && eElement
                                         .getElementsByTagName("intransitive")
                                         .getLength() > 0) {
-                            merge(word, new Verb(word + "%"));
+                            Verb v = new Verb(word + "%");
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(verbDictionary);
+                                m.breakApart();
+                                try {
+                                    v.baseForm = dictionary.lookupIndexWord(
+                                            POS.VERB, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    v.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("past tense")) {
+                                    v.tense = "past tense";
+                                }
+                                else if (m.getTraits()
+                                        .contains("present tense")) {
+                                    v.tense = "present tense";
+                                }
+                                if(!roots.containsKey(v.baseForm+":verb"))
+                                    roots.put(v.baseForm+":verb", word);
+                                else
+                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            merge(word, v);
                         }
                         else if (eElement.getElementsByTagName("ditransitive")
                                 .getLength() > 0) {
-                            merge(word, new Verb(word + "~"));
+                            Verb v = new Verb(word + "~");
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(verbDictionary);
+                                m.breakApart();
+                                try {
+                                    v.baseForm = dictionary.lookupIndexWord(
+                                            POS.VERB, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    v.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("past tense")) {
+                                    v.tense = "past tense";
+                                }
+                                else if (m.getTraits()
+                                        .contains("present tense")) {
+                                    v.tense = "present tense";
+                                }
+                                if(!roots.containsKey(v.baseForm+":verb"))
+                                    roots.put(v.baseForm+":verb", word);
+                                else
+                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            merge(word, v);
                         }
                         else if (eElement.getElementsByTagName("transitive")
                                 .getLength() > 0) {
-                            merge(word, new Verb(word + "@"));
+                            Verb v = new Verb(word + "@");
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(verbDictionary);
+                                m.breakApart();
+                                try {
+                                    v.baseForm = dictionary.lookupIndexWord(
+                                            POS.VERB, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    v.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("past tense")) {
+                                    v.tense = "past tense";
+                                }
+                                else if (m.getTraits()
+                                        .contains("present tense")) {
+                                    v.tense = "present tense";
+                                }
+                                if(!roots.containsKey(v.baseForm+":verb"))
+                                    roots.put(v.baseForm+":verb", word);
+                                else
+                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            merge(word, v);
                         }
                         else if (eElement.getElementsByTagName("intransitive")
                                 .getLength() > 0) {
-                            merge(word, new Verb(word + "="));
+                            Verb v = new Verb(word + "=");
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(verbDictionary);
+                                m.breakApart();
+                                try {
+                                    v.baseForm = dictionary.lookupIndexWord(
+                                            POS.VERB, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    v.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("past tense")) {
+                                    v.tense = "past tense";
+                                }
+                                else if (m.getTraits()
+                                        .contains("present tense")) {
+                                    v.tense = "present tense";
+                                }
+                                if(!roots.containsKey(v.baseForm+":verb"))
+                                    roots.put(v.baseForm+":verb", word);
+                                else
+                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            merge(word, v);
                         }
                         else {
-                            merge(word, new Verb(word));
+                            Verb v = new Verb(word);
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(verbDictionary);
+                                m.breakApart();
+                                try {
+                                    v.baseForm = dictionary.lookupIndexWord(
+                                            POS.VERB, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    v.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("past tense")) {
+                                    v.tense = "past tense";
+                                }
+                                else if (m.getTraits()
+                                        .contains("present tense")) {
+                                    v.tense = "present tense";
+                                }
+                                if(!roots.containsKey(v.baseForm+":verb"))
+                                    roots.put(v.baseForm+":verb", word);
+                                else
+                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                               e.printStackTrace();
+                            }
+                            merge(word, v);
                         }
                     }
                     else if (pos.equals("noun")) {
                         if (eElement.getElementsByTagName("nonCount")
                                 .getLength() > 0) {
                             Noun n = new Noun(word + "#~");
-                            animacy = n.checkAnimacy(word, animacy);
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(nounDictionary);
+                                m.breakApart();
+                                try {
+                                    n.baseForm = dictionary.lookupIndexWord(
+                                            POS.NOUN, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    n.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("plural")) {
+                                    n.plurality = "plural";
+                                }
+                                if(!roots.containsKey(n.baseForm+":noun"))
+                                    roots.put(n.baseForm+":noun", word);
+                                else
+                                    roots.put(n.baseForm+":noun", roots.get(n.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            animacy.animacy = n.checkAnimacy(word,
+                                    animacy.animacy);
                             merge(word, n);
                         }
                         else {
                             Noun n = new Noun(word);
-                            animacy = n.checkAnimacy(word, animacy);
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(nounDictionary);
+                                m.breakApart();
+                                try {
+                                    n.baseForm = dictionary.lookupIndexWord(
+                                            POS.NOUN, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    n.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("plural")) {
+                                    n.plurality = "plural";
+                                }
+                                if(!roots.containsKey(n.baseForm+":noun"))
+                                    roots.put(n.baseForm+":noun", word);
+                                else
+                                    roots.put(n.baseForm+":noun", roots.get(n.baseForm) +"|"+ word);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            animacy.animacy = n.checkAnimacy(word,
+                                    animacy.animacy);
                             merge(word, n);
                         }
                     }
@@ -959,10 +1421,50 @@ public class WriteDictionary {
                         else {
                             temp += "#";
                         }
-                        merge(word, new Adjective(temp));
+                        Adjective a = new Adjective(temp);
+                        try {
+                            MorphologyFinder m = new MorphologyFinder(word);
+                            m.loadDictionary(adjectiveDictionary);
+                            m.breakApart();
+                            try {
+                                a.baseForm = dictionary.lookupIndexWord(
+                                        POS.ADJECTIVE, m.getRoot()).getLemma();
+                            }
+                            catch (Exception e) {
+                                a.baseForm = m.getRoot();
+                            }
+                            if(!roots.containsKey(a.baseForm+":adjective"))
+                                roots.put(a.baseForm+":adjective", word);
+                            else
+                                roots.put(a.baseForm+":adjective", roots.get(a.baseForm) +"|"+ word);
+                        }
+                        catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        merge(word, a);
                     }
                     else if (pos.equals("adverb")) {
-                        merge(word, new Adverb(word));
+                        Adverb a = new Adverb(word);
+                        try {
+                            MorphologyFinder m = new MorphologyFinder(word);
+                            m.loadDictionary(adverbDictionary);
+                            m.breakApart();
+                            try {
+                                a.baseForm = dictionary.lookupIndexWord(
+                                        POS.ADVERB, m.getRoot()).getLemma();
+                            }
+                            catch (Exception e) {
+                                a.baseForm = m.getRoot();
+                            }
+                            if(!roots.containsKey(a.baseForm+":adverb"))
+                                roots.put(a.baseForm+":adverb", word);
+                            else
+                                roots.put(a.baseForm+":adverb", roots.get(a.baseForm) +"|"+ word);
+                        }
+                        catch (Exception e) {
+                           e.printStackTrace();
+                        }
+                        merge(word, a);
                     }
                     else if (pos.equals("conjunction")) {
                         merge(word, new Conjunction(word));
@@ -996,7 +1498,30 @@ public class WriteDictionary {
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
                     Noun n = new Noun(word + "@~");
-                    animacy = n.checkAnimacy(word, animacy);
+                    try {
+                        MorphologyFinder m = new MorphologyFinder(word);
+                        m.loadDictionary(nounDictionary);
+                        m.breakApart();
+                        try {
+                            n.baseForm = dictionary
+                                    .lookupIndexWord(POS.NOUN, m.getRoot())
+                                    .getLemma();
+                        }
+                        catch (Exception e) {
+                            n.baseForm = m.getRoot();
+                        }
+                        if (m.getTraits().contains("plural")) {
+                            n.plurality = "plural";
+                        }
+                        if(!roots.containsKey(n.baseForm+":noun"))
+                            roots.put(n.baseForm+":noun", word);
+                        else
+                            roots.put(n.baseForm+":noun", roots.get(n.baseForm) + "|"+word);
+                    }
+                    catch (Exception e) {
+                         e.printStackTrace();
+                    }
+                    animacy.animacy = n.checkAnimacy(word, animacy.animacy);
                     merge(word, n);
                 }
             }
@@ -1008,7 +1533,30 @@ public class WriteDictionary {
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
                     Noun n = new Noun(word + "#~");
-                    animacy = n.checkAnimacy(word, animacy);
+                    try {
+                        MorphologyFinder m = new MorphologyFinder(word);
+                        m.loadDictionary(nounDictionary);
+                        m.breakApart();
+                        try {
+                            n.baseForm = dictionary
+                                    .lookupIndexWord(POS.NOUN, m.getRoot())
+                                    .getLemma();
+                        }
+                        catch (Exception e) {
+                            n.baseForm = m.getRoot();
+                        }
+                        if (m.getTraits().contains("plural")) {
+                            n.plurality = "plural";
+                        }
+                        if(!roots.containsKey(n.baseForm+":noun"))
+                            roots.put(n.baseForm+":noun", word);
+                        else
+                            roots.put(n.baseForm+":noun", roots.get(n.baseForm) + "|"+word);
+                    }
+                    catch (Exception e) {
+                         e.printStackTrace();
+                    }
+                    animacy.animacy = n.checkAnimacy(word, animacy.animacy);
                     merge(word, n);
                 }
             }
@@ -1322,71 +1870,75 @@ public class WriteDictionary {
 
             while (s.hasNextLine()) {
                 String stuff = s.nextLine();
-                //System.out.println(stuff);
+                // System.out.println(stuff);
                 String[] split = stuff.split(",");
-                String word = split[0].substring(1,split[0].length());
-                Float c = Float.parseFloat(split[1].substring(1, split[1].length()));
-                long rank = Long.parseLong(split[2].substring(1, split[2].length()-1));
-                System.out.println(word +":" +nounDictionary.containsKey(word)+":"+c +":"+ rank);
+                String word = split[0].substring(1, split[0].length());
+                Float c = Float
+                        .parseFloat(split[1].substring(1, split[1].length()));
+                long rank = Long.parseLong(
+                        split[2].substring(1, split[2].length() - 1));
+                System.out
+                        .println(word + ":" + nounDictionary.containsKey(word)
+                                + ":" + c + ":" + rank);
                 if (nounDictionary.containsKey(word)) {
                     Noun n = new Noun(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (verbDictionary.containsKey(word)) {
                     Verb n = new Verb(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (adjectiveDictionary.containsKey(word)) {
                     Adjective n = new Adjective(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (adverbDictionary.containsKey(word)) {
                     Adverb n = new Adverb(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (conjunctionDictionary.containsKey(word)) {
                     Conjunction n = new Conjunction(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (determinerDictionary.containsKey(word)) {
                     Determiner n = new Determiner(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (interjectionDictionary.containsKey(word)) {
                     Interjection n = new Interjection(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (prepositionDictionary.containsKey(word)) {
                     Preposition n = new Preposition(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (pronounDictionary.containsKey(word)) {
                     Pronoun n = new Pronoun(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
                 if (quantifierDictionary.containsKey(word)) {
                     Quantifier n = new Quantifier(word);
                     n.howCommon = c;
                     n.commonRank = rank;
-                    merge(word,n);
+                    merge(word, n);
                 }
             }
             s.close();

@@ -26,6 +26,7 @@ public class Adjective implements PartOfSpeech, Serializable {
     public String compliments = "";
     public float howCommon = -1;
     public long commonRank = -1;
+    public String baseForm = "--";
 
     public Adjective() {
         this("");
@@ -140,7 +141,8 @@ public class Adjective implements PartOfSpeech, Serializable {
                 + worksInAttributivePosition + ", WorksInPredicativePosition="
                 + worksInPredicativePosition + ", HasDiminutiveSuffix="
                 + hasDiminutiveSuffix + ", IsProper=" + isProper + ", Compliments="
-                + compliments+ ", MustUseMoreMost="+mustUseMoreMost + ", howCommon="+howCommon + ", commonRank="+commonRank;
+                + compliments+ ", MustUseMoreMost="+mustUseMoreMost + ", howCommon="+howCommon + ", commonRank="+commonRank
+                + ", baseForm="+baseForm;
     }
 
 }

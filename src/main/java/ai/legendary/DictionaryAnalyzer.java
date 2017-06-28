@@ -60,6 +60,9 @@ public class DictionaryAnalyzer {
 	public double nounanimacy;
 	public double adjectiveItensifierID;
 	public double nounlocation;
+	public double verbBaseForm;
+	public double adjectiveBaseForm;
+	public double adverbBaseForm;
 	public DictionaryAnalyzer (HashMap<String, Noun> nounDictionary,HashMap<String, Verb> verbDictionary,HashMap<String, Adjective> adjectiveDictionary,HashMap<String, Adverb> adverbDictionary,HashMap<String, Conjunction> conjunctionDictionary,HashMap<String, Determiner> determinerDictionary,HashMap<String, Interjection> interjectionDictionary,HashMap<String, Preposition> prepositionDictionary,HashMap<String, Pronoun> pronounDictionary,HashMap<String, Quantifier> quantifierDictionary){
 		try {
 		    double totalNouns =0;
@@ -121,6 +124,9 @@ public class DictionaryAnalyzer {
             double definedanimacy=0;
             double definedaintens=0;
             double definedloca=0;
+            double vbase = 0;
+            double abase = 0;
+            double advbase = 0;
             
             double nounmasc=0;
             double nounfem=0;
@@ -208,6 +214,9 @@ public class DictionaryAnalyzer {
 						if (v.isInfinitive != null) {
 						    definedisinf++;
                         }
+						if(!v.baseForm.equals("--")){
+						    vbase++;
+						}
 					}
             Iterator adjit = adjectiveDictionary.entrySet().iterator();
             while(adjit.hasNext()) {
@@ -251,6 +260,9 @@ public class DictionaryAnalyzer {
 						if(a.adjectiveIntensifierID != -1){
 						    definedaintens++;
 						}
+						if(!a.baseForm.equals("--")){
+						    abase++;
+						}
 					}
             Iterator advit = adverbDictionary.entrySet().iterator();
             while(advit.hasNext()) {
@@ -281,6 +293,9 @@ public class DictionaryAnalyzer {
                         }
                         if(!a.irregularForm.equals("--")){
                             definedairreg++;
+                        }
+                        if(!a.baseForm.equals("--")){
+                            advbase++;
                         }
 					}
             Iterator detit = determinerDictionary.entrySet().iterator();
@@ -430,6 +445,9 @@ public class DictionaryAnalyzer {
             /*verb is infinitive percentage*/
             verbIsInfinitive = (definedisinf/totalVerbs);
             printer.println("- Percentage of verb isInfinitive Defined: "+df.format((verbIsInfinitive*100))+"%");
+            /*verb is base form*/
+            verbBaseForm = (vbase/totalVerbs);
+            printer.println("- Percentage of verb base form Defined: "+df.format((verbBaseForm*100))+"%");
 			
 			
 			/*Adjectives:*/
@@ -467,7 +485,9 @@ public class DictionaryAnalyzer {
             /*Adjective intensifier*/
             adjectiveItensifierID = definedaintens/totalAdjectives;
             printer.println("- Percentage of adjectiveItensifierID defined: "+df.format((adjectiveItensifierID*100))+"%");
-            
+            /*Adjective base form*/
+            adjectiveBaseForm = abase/totalAdjectives;
+            printer.println("- Percentage of base form defined: "+df.format((adjectiveBaseForm*100))+"%");
             
             /*Adverbs:*/
             printer.println("### Adverb Analysis (Total Adverbs: "+NumberFormat.getNumberInstance(Locale.US).format(totalAdverbs)+"): ");
@@ -495,6 +515,9 @@ public class DictionaryAnalyzer {
             /*Adverb irregular form*/
             adverbIrreg = definedairreg/totalAdverbs;
             printer.println("- Percentage of Irregular Form defined: "+df.format((adverbIrreg*100))+"%");
+            /*Adverb base form*/
+            adverbBaseForm = advbase/totalAdverbs;
+            printer.println("- Percentage of base form defined: "+df.format((adverbBaseForm*100))+"%");
             
             
             

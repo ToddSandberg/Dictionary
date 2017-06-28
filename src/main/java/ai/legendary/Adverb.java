@@ -17,6 +17,7 @@ public class Adverb implements PartOfSpeech,Serializable{
     public String irregularForm = "--";
     public float howCommon = -1;
     public long commonRank = -1;
+    public String baseForm = "--";
 	public Adverb(){
 		this("");
 	}
@@ -42,7 +43,7 @@ public class Adverb implements PartOfSpeech,Serializable{
                 + isRelativeAdverb + ", IsComparativeAdverb=" + isComparativeAdverb
                 + ", IsSuperlativeAdverb=" + isSuperlativeAdverb + ", AdvIntensifier="
                 + advIntensifier +", NoCompOrSupForm="+noCompOrSuperForm +", MustUseMoreMost="+mustUseMoreMost+ ", IrregularForm="+irregularForm
-                + ", howCommon="+howCommon+ ", commonRank="+commonRank;
+                + ", howCommon="+howCommon+ ", commonRank="+commonRank + ", baseForm="+baseForm;
 	}
 
 }
