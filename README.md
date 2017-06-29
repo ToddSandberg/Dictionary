@@ -1,28 +1,28 @@
 # DictionaryMaker
 ## Analysis
 ### Noun Analysis (Total Nouns: 155,554):
-- Percentage of Noun Plurality defined: 6.16%
+- Percentage of Noun Plurality defined: 6.15%
 - Percentage of Noun Gender defined: 100%(0.67% Masculine 0.43% Feminine 98.92% Neuter)
 - Percentage of Noun isCompound defined: 100%
 - Percentage of Noun isCountable defined: 51.41%
-- Percentage of Noun isProperName defined: 66.38%
+- Percentage of Noun isProperName defined: 0%
 - Percentage of Noun acceptsZeroArticle defined: 14.97%
 - Percentage of Noun acronymFor defined: 0%
 - Percentage of Noun abbreviationFor defined: 0%
 - Percentage of Noun abbreviatedFrom defined: 0%
 - Percentage of Noun irregularPluralForm defined: 0.66%
-- Percentage of Noun base form defined: 99.77%
+- Percentage of Noun base form defined: 99.84%
 - Percentage of Noun Animacy defined: 100%
 - Percentage of Noun Location defined: 0.28%
 ### Verb analysis (Total Verbs: 28,624):
 - Percentage of Transivity Defined: 72.35%
-- Percentage of verb Tense Defined: 44.1%
+- Percentage of verb Tense Defined: 44.11%
 - Percentage of verb aspect Defined: 0%
 - Percentage of verb type Defined: 0.1%
 - Percentage of verb person Defined: 100%
 - Percentage of verb phrasal Defined: 100%
 - Percentage of verb isInfinitive Defined: 0.1%
-- Percentage of verb base form Defined: 99.94%
+- Percentage of verb base form Defined: 100%
 ### Adjective analysis (Total Adjectives: 50,508):
 - Percentage of Position (Works in predicative and Attributive) Defined for Adjectives : 74.39%
 - Percentage of isQualitative defined: 37.31%
@@ -32,10 +32,10 @@
 - Percentage of IsProper defined: 100%
 - Percentage of comparison type defined: 100%
 - Percentage of hasDiminutiveSuffix defined: 100%
-- Percentage of ajectiveOrderID defined: 0.15%
+- Percentage of ajectiveOrderID defined: 0.22%
 - Percentage of mustUseMoreMost defined: 37.08%
 - Percentage of adjectiveItensifierID defined: 0.92%
-- Percentage of base form defined: 99.88%
+- Percentage of base form defined: 99.92%
 ### Adverb Analysis (Total Adverbs: 13,478): 
 - Percentage of IntensiferId defined: 5.42%
 - Percentage of isRelativeAdverb defined: 100%
@@ -45,7 +45,7 @@
 - Percentage of noCompOrSuperForm defined: 28.82%
 - Percentage of mustUseMoreMost defined: 28.82%
 - Percentage of Irregular Form defined: 0.05%
-- Percentage of base form defined: 65.53%
+- Percentage of base form defined: 65.57%
 ### Determiner Analysis (Total Determiners: 11): 
 - Percentage of determinerTypeID defined: 100%
 ### Interjection Analysis (Total Interjections: 428): 
@@ -71,7 +71,8 @@
 - AdverbScales-Manual.csv Implemented
 - locations.txt implemented
 - Word_frequency_list.txt implemented
+- colors.txt implemented
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 1251 minutes and 49 seconds
+## Current Dictionary Write Time: 4 minutes and 59 seconds

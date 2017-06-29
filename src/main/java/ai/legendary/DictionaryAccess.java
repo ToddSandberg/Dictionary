@@ -2,6 +2,7 @@ package ai.legendary;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -107,7 +108,7 @@ public class DictionaryAccess {
             in = new ObjectInputStream(
                     new FileInputStream("outputs/roots.ser"));
             System.out.println("Loading roots...");
-            quantifierDictionary = (HashMap<String, Quantifier>) in
+            roots = (HashMap<String, String>) in
                     .readObject();
             in.close();
 
@@ -169,7 +170,9 @@ public class DictionaryAccess {
         if (quantifierDictionary.containsKey(word)) {
             p += quantifierDictionary.get(word).toString() + "\n";
         }
-
+        if(p.equals("Word: " + word + "\n")){
+            p+= "not in dictionary";
+        }
         return p;
     }
     /**
@@ -280,6 +283,7 @@ public class DictionaryAccess {
         else
             return null;
     }
+    
     /**
      * changes the word from one part of speech to another
      * @param word1 original word
@@ -287,7 +291,7 @@ public class DictionaryAccess {
      * @param pos2 final part of speech
      * @return a list of words with pos2 and the same base word as word1
      */
-    public String changePOS(String word1, String pos1, String pos2){
+    public ArrayList<String> changePOS(String word1,String pos1, String pos2){
         pos1 = pos1.toLowerCase();
         pos2 = pos2.toLowerCase();
         if(getdictionary(pos1).containsKey(word1)){
@@ -305,94 +309,111 @@ public class DictionaryAccess {
             else if(pos1.equals("adjective")){
                 base = ((Adjective)getdictionary(pos1).get(word1)).baseForm;
             }
-            if(pos2.equals("noun")){
-                if(getdictionary(pos2).containsKey(base)){
-                    results+=base;
-                }
-                HashMap<String,Noun> temp = (HashMap<String, Noun>) getdictionary(pos2);
-                Iterator it = temp.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry pair = (Map.Entry)it.next();
-                    if(((Noun)pair.getValue()).baseForm.equals(base) && !base.equals("--")){
-                        results+= ", " + pair.getKey();
-                    }
-                    it.remove(); // avoids a ConcurrentModificationException
-                }
-            }
-            else if(pos2.equals("verb")){
-                if(getdictionary(pos2).containsKey(base)){
-                    results+=base;
-                }
-                HashMap<String,Noun> temp = (HashMap<String, Noun>) getdictionary(pos2);
-                Iterator it = temp.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry pair = (Map.Entry)it.next();
-                    if(((Verb)pair.getValue()).baseForm.equals(base)&& !base.equals("--")){
-                        results+= ", " +pair.getKey();
-                    }
-                    it.remove(); // avoids a ConcurrentModificationException
-                }
-            }
-            else if(pos2.equals("adverb")){
-                if(getdictionary(pos2).containsKey(base)){
-                    results+=base;
-                }
-                HashMap<String,Noun> temp = (HashMap<String, Noun>) getdictionary(pos2);
-                Iterator it = temp.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry pair = (Map.Entry)it.next();
-                    if(((Adverb)pair.getValue()).baseForm.equals(base)&& !base.equals("--")){
-                        results+= ", " + pair.getKey();
-                    }
-                    it.remove(); // avoids a ConcurrentModificationException
-                }
-            }
-            else if(pos2.equals("adjective")){
-                if(getdictionary(pos2).containsKey(base)){
-                    results+=base;
-                }
-                HashMap<String,Noun> temp = (HashMap<String, Noun>) getdictionary(pos2);
-                Iterator it = temp.entrySet().iterator();
-                while (it.hasNext()) {
-                    Map.Entry pair = (Map.Entry)it.next();
-                    if(((Adjective)pair.getValue()).baseForm.equals(base)&& !base.equals("--")){
-                        results+= ", " + pair.getKey();
-                    }
-                    it.remove(); // avoids a ConcurrentModificationException
-                }
-            }
-            return results;
-        }
-        else{
-            return word1 + ":" + pos1 + " is not in the dictionary";
-        }
-    }
-    
-    public String changePOSw(String word1,String pos1, String pos2){
-        pos1 = pos1.toLowerCase();
-        pos2 = pos2.toLowerCase();
-        if(getdictionary(pos1).containsKey(word1)){
-            String results = "";
-            String base = "";
-            if(pos1.equals("noun")){
-                base = ((Noun)getdictionary(pos1).get(word1)).baseForm;
-            }
-            else if(pos1.equals("verb")){
-                base = ((Verb)getdictionary(pos1).get(word1)).baseForm;
-            }
-            else if(pos1.equals("adverb")){
-                base = ((Adverb)getdictionary(pos1).get(word1)).baseForm;
-            }
-            else if(pos1.equals("adjective")){
-                base = ((Adjective)getdictionary(pos1).get(word1)).baseForm;
-            }
+            System.out.println(word1+" converted to a "+pos2);
             if(roots.containsKey(base+":"+pos2)){
                 results = roots.get(base+":"+pos2);
             }
-            return results;
+            String[]  letters = results.split("\\|");
+            ArrayList<String> finalresults = new ArrayList<String>();
+            for(int x=0;x<letters.length;x++){
+                if(!finalresults.contains(letters[x])){
+                    finalresults.add(letters[x]);
+                }
+            }
+            if(finalresults.get(0).equals("")){
+                finalresults.remove(0);
+                finalresults.add("no "+pos2+"s relating to "+word1+" in the dictionary. Base word was: "+base);
+            }
+            return finalresults;
         }
         else{
-            return word1 + ":" + pos1 + " is not in the dictionary";
+            ArrayList<String> finalresults = new ArrayList<String>();
+            finalresults.add(word1 + ":" + pos1 + " is not in the dictionary");
+            return finalresults;
         }
+    }
+    public String changeVerbTense(String word, String tense){
+        Noun v = (Noun)nounDictionary.get(word);
+        String base = v.baseForm;
+        HashMap<String,Verb> temp = verbDictionary;
+        Iterator it = temp.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            if(((Verb)pair.getValue()).baseForm.equals(base)&& !base.equals("--")){
+                if(((Verb)pair.getValue()).tense.equals(tense)){
+                    return (String) pair.getKey();
+                }
+            }
+            it.remove(); // avoids a ConcurrentModificationException
+        }
+        return null;
+    }
+    public String clean(String s){
+        Properties props = new Properties();
+        props.setProperty("annotators", "tokenize, ssplit, pos, parse");
+        StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+        Annotation document = new Annotation(s);
+        pipeline.annotate(document);
+        String output = "\n";
+        List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+        boolean lightsentence = false;
+        String tense = "";
+        String object = "";
+        boolean dettrigger = false;
+        for (CoreMap sentence : sentences) {
+            for (CoreLabel token : sentence.get(TokensAnnotation.class)) {
+                String w = token.get(TextAnnotation.class);
+                String pos = token.get(PartOfSpeechAnnotation.class);
+                if (convertnlp(pos) != null){
+                    System.out.print(output+" + "+w+" ("+convertnlp(pos)+") light:" + lightsentence);
+                    if(getdictionary(convertnlp(pos)).containsKey(w)){
+                        System.out.println("doot");
+                        if(convertnlp(pos).equals("verb")){
+                            if(((Verb)verbDictionary.get(w)).light){
+                                lightsentence = true;
+                                tense = ((Verb)getdictionary(convertnlp(pos)).get(w)).tense;
+                            }
+                            else{
+                                
+                                output+= w+ " ";
+                            }
+                        }
+                        else if(convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun")){
+                            if(lightsentence){
+                                
+                                if(dettrigger){
+                                 output+= changeVerbTense(w,tense)+ " ";
+                                    if(!object.equals("")){
+                                        output += object;
+                                    }
+                                }
+                                else{
+                                    object = w; 
+                                }
+                            }
+                            else{
+                                output+= w+ " ";
+                            }
+                        }
+                        else if(convertnlp(pos).equals("determiner")){
+                            if(lightsentence){
+                                dettrigger = true;
+                            }
+                            else{
+                                output += w+ " ";
+                            }
+                        }
+                        else{
+                            output+=w+ " ";
+                        }
+                    }
+                    
+                }
+                else
+                    output += "Puncuation";
+            }
+        }
+        sentences.clear();
+        return output;
     }
 }

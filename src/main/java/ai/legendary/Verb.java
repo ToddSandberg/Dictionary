@@ -19,6 +19,7 @@ public class Verb implements PartOfSpeech ,Serializable{
     public float howCommon = -1;
     public long commonRank = -1;
     public String baseForm = "--";
+    public boolean light = false;
     public Verb() {
         this("");
     }
@@ -74,7 +75,7 @@ public class Verb implements PartOfSpeech ,Serializable{
             isInfinitive = true;
             verbType = "Auxilary";
             tense = "Present";
-            person = "N/A";
+            person = "First";
         }
         else if(s.equals("is") || s.equals("'s") || s.equals("isn't")||s.equals("does")||s.equals("doesn't")||s.equals("has")||s.equals("hasn't")){
             verbType = "Auxilary";
@@ -131,6 +132,21 @@ public class Verb implements PartOfSpeech ,Serializable{
             tense = "Past";
             isInfinitive = false;
         }
+        if(s.equals("do") || s.equals("give") || s.equals("have") || s.equals("make") || s.equals("take")){
+            light = true;
+            tense = "Present";
+            person = "First";
+        }
+        if(s.equals("does") || s.equals("gives") || s.equals("has") || s.equals("makes") || s.equals("takes")){
+            light = true;
+            tense = "Present";
+            person = "Third";
+        }
+        if(s.equals("did") || s.equals("gave") || s.equals("had") || s.equals("made") || s.equals("took")){
+            light = true;
+            tense = "Past";
+        }
+        
     }
 
     private boolean check3gram(String [] s) {
@@ -205,6 +221,7 @@ public class Verb implements PartOfSpeech ,Serializable{
         return "Verb: VerbType="+verbType + ", Transivity="
                 + transivity + ", Tense=" + tense + ", Aspect=" + aspect
                 + ", Person=" + person + ", Phrasal=" + phrasal + ", isInfinitive="
-                + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank +", baseForm="+baseForm;
+                + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank 
+                +", baseForm="+baseForm + ", light="+light;
     }
 }

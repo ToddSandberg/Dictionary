@@ -127,6 +127,9 @@ public class WriteDictionary {
             // implements which words are common
             frequency();
             printer.println("- Word_frequency_list.txt implemented");
+         // implements colors
+            colors();
+            printer.println("- colors.txt implemented");
 
             printer.println("## Document Output Formats:");
             printer.println(
@@ -220,7 +223,7 @@ public class WriteDictionary {
             File adjectives = new File("outputs/adjectives.tsv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm");
+                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm\tlight");
             // verbprinter setup
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
@@ -310,7 +313,7 @@ public class WriteDictionary {
                         + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
                         + "\t" + v.phrasal + "\t" + v.isInfinitive + "\t"
                         + v.howCommon + "\t" + v.commonRank + "\t"
-                        + v.baseForm);
+                        + v.baseForm + "\t" + v.light);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
@@ -835,12 +838,14 @@ public class WriteDictionary {
                                         n.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("plural")) {
-                                        n.plurality = "plural";
+                                        n.plurality = "Plural";
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
                                         roots.put(n.baseForm+":noun", word);
-                                    else
-                                        roots.put(n.baseForm+":noun", roots.get(n.baseForm) + word);
+                                    else{
+                                        String e = roots.get(n.baseForm+":noun");
+                                        roots.put(n.baseForm+":noun", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -867,12 +872,14 @@ public class WriteDictionary {
                                         n.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("plural")) {
-                                        n.plurality = "plural";
+                                        n.plurality = "Plural";
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
                                         roots.put(n.baseForm+":noun", word);
-                                    else
-                                        roots.put(n.baseForm+":noun", roots.get(n.baseForm) + "|"+word);
+                                    else{
+                                        String e = roots.get(n.baseForm+":noun");
+                                        roots.put(n.baseForm+":noun", e + "|"+word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -898,12 +905,14 @@ public class WriteDictionary {
                                         n.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("plural")) {
-                                        n.plurality = "plural";
+                                        n.plurality = "Plural";
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
                                         roots.put(n.baseForm+":noun", word);
-                                    else
-                                        roots.put(n.baseForm+":noun", roots.get(n.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(n.baseForm+":noun");
+                                        roots.put(n.baseForm+":noun",  e+"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -927,16 +936,18 @@ public class WriteDictionary {
                                         v.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("past tense")) {
-                                        v.tense = "past tense";
+                                        v.tense = "Past";
                                     }
                                     else if (m.getTraits()
                                             .contains("present tense")) {
-                                        v.tense = "present tense";
+                                        v.tense = "Present";
                                     }
                                     if(!roots.containsKey(v.baseForm+":verb"))
                                         roots.put(v.baseForm+":verb", word);
-                                    else
-                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(v.baseForm+":verb");
+                                        roots.put(v.baseForm+":verb", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -961,16 +972,18 @@ public class WriteDictionary {
                                         v.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("past tense")) {
-                                        v.tense = "past tense";
+                                        v.tense = "Past";
                                     }
                                     else if (m.getTraits()
                                             .contains("present tense")) {
-                                        v.tense = "present tense";
+                                        v.tense = "Present";
                                     }
                                     if(!roots.containsKey(v.baseForm+":verb"))
                                         roots.put(v.baseForm+":verb", word);
-                                    else
-                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(v.baseForm+":verb");
+                                        roots.put(v.baseForm+":verb", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -995,16 +1008,18 @@ public class WriteDictionary {
                                         v.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("past tense")) {
-                                        v.tense = "past tense";
+                                        v.tense = "Past";
                                     }
                                     else if (m.getTraits()
                                             .contains("present tense")) {
-                                        v.tense = "present tense";
+                                        v.tense = "Present";
                                     }
                                     if(!roots.containsKey(v.baseForm+":verb"))
                                         roots.put(v.baseForm+":verb", word);
-                                    else
-                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(v.baseForm+":verb");
+                                        roots.put(v.baseForm+":verb", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -1028,16 +1043,18 @@ public class WriteDictionary {
                                         v.baseForm = m.getRoot();
                                     }
                                     if (m.getTraits().contains("past tense")) {
-                                        v.tense = "past tense";
+                                        v.tense = "Past";
                                     }
                                     else if (m.getTraits()
                                             .contains("present tense")) {
-                                        v.tense = "present tense";
+                                        v.tense = "Present";
                                     }
                                     if(!roots.containsKey(v.baseForm+":verb"))
                                         roots.put(v.baseForm+":verb", word);
-                                    else
-                                        roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(v.baseForm+":verb");
+                                        roots.put(v.baseForm+":verb", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                      e.printStackTrace();
@@ -1062,8 +1079,10 @@ public class WriteDictionary {
                                     }
                                     if(!roots.containsKey(a.baseForm+":adjective"))
                                         roots.put(a.baseForm+":adjective", word);
-                                    else
-                                        roots.put(a.baseForm+":adjective", roots.get(a.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(a.baseForm+":adjective");
+                                        roots.put(a.baseForm+":adjective", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                      e.printStackTrace();
@@ -1088,8 +1107,10 @@ public class WriteDictionary {
                                     }
                                     if(!roots.containsKey(a.baseForm+":adverb"))
                                         roots.put(a.baseForm+":adverb", word);
-                                    else
-                                        roots.put(a.baseForm+":adverb", roots.get(a.baseForm) +"|"+ word);
+                                    else{
+                                        String e = roots.get(a.baseForm+":adverb");
+                                        roots.put(a.baseForm+":adverb", e +"|"+ word);
+                                    }
                                 }
                                 catch (Exception e) {
                                     e.printStackTrace();
@@ -1193,16 +1214,18 @@ public class WriteDictionary {
                                     v.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("past tense")) {
-                                    v.tense = "past tense";
+                                    v.tense = "Past";
                                 }
                                 else if (m.getTraits()
                                         .contains("present tense")) {
-                                    v.tense = "present tense";
+                                    v.tense = "Present";
                                 }
                                 if(!roots.containsKey(v.baseForm+":verb"))
                                     roots.put(v.baseForm+":verb", word);
-                                else
-                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                else{
+                                    String e = roots.get(v.baseForm+":verb");
+                                    roots.put(v.baseForm+":verb", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -1225,16 +1248,18 @@ public class WriteDictionary {
                                     v.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("past tense")) {
-                                    v.tense = "past tense";
+                                    v.tense = "Past";
                                 }
                                 else if (m.getTraits()
                                         .contains("present tense")) {
-                                    v.tense = "present tense";
+                                    v.tense = "Present";
                                 }
                                 if(!roots.containsKey(v.baseForm+":verb"))
                                     roots.put(v.baseForm+":verb", word);
-                                else
-                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                else{
+                                    String e = roots.get(v.baseForm+":verb");
+                                    roots.put(v.baseForm+":verb", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -1257,16 +1282,18 @@ public class WriteDictionary {
                                     v.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("past tense")) {
-                                    v.tense = "past tense";
+                                    v.tense = "Past";
                                 }
                                 else if (m.getTraits()
                                         .contains("present tense")) {
-                                    v.tense = "present tense";
+                                    v.tense = "Present";
                                 }
                                 if(!roots.containsKey(v.baseForm+":verb"))
                                     roots.put(v.baseForm+":verb", word);
-                                else
-                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                else{
+                                    String e = roots.get(v.baseForm+":verb");
+                                    roots.put(v.baseForm+":verb", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -1289,16 +1316,18 @@ public class WriteDictionary {
                                     v.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("past tense")) {
-                                    v.tense = "past tense";
+                                    v.tense = "Past";
                                 }
                                 else if (m.getTraits()
                                         .contains("present tense")) {
-                                    v.tense = "present tense";
+                                    v.tense = "Present";
                                 }
                                 if(!roots.containsKey(v.baseForm+":verb"))
                                     roots.put(v.baseForm+":verb", word);
-                                else
-                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                else{
+                                    String e = roots.get(v.baseForm+":verb");
+                                    roots.put(v.baseForm+":verb", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -1320,16 +1349,18 @@ public class WriteDictionary {
                                     v.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("past tense")) {
-                                    v.tense = "past tense";
+                                    v.tense = "Past";
                                 }
                                 else if (m.getTraits()
                                         .contains("present tense")) {
-                                    v.tense = "present tense";
+                                    v.tense = "Present";
                                 }
                                 if(!roots.containsKey(v.baseForm+":verb"))
                                     roots.put(v.baseForm+":verb", word);
-                                else
-                                    roots.put(v.baseForm+":verb", roots.get(v.baseForm) +"|"+ word);
+                                else{
+                                    String e = roots.get(v.baseForm+":verb");
+                                    roots.put(v.baseForm+":verb", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                e.printStackTrace();
@@ -1354,12 +1385,15 @@ public class WriteDictionary {
                                     n.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("plural")) {
-                                    n.plurality = "plural";
+                                    n.plurality = "Plural";
                                 }
                                 if(!roots.containsKey(n.baseForm+":noun"))
                                     roots.put(n.baseForm+":noun", word);
                                 else
-                                    roots.put(n.baseForm+":noun", roots.get(n.baseForm) +"|"+ word);
+                                {
+                                    String e = roots.get(n.baseForm+":noun");
+                                    roots.put(n.baseForm+":noun", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -1383,12 +1417,14 @@ public class WriteDictionary {
                                     n.baseForm = m.getRoot();
                                 }
                                 if (m.getTraits().contains("plural")) {
-                                    n.plurality = "plural";
+                                    n.plurality = "Plural";
                                 }
                                 if(!roots.containsKey(n.baseForm+":noun"))
                                     roots.put(n.baseForm+":noun", word);
-                                else
-                                    roots.put(n.baseForm+":noun", roots.get(n.baseForm) +"|"+ word);
+                                else{
+                                    String e = roots.get(n.baseForm+":noun");
+                                    roots.put(n.baseForm+":noun", e +"|"+ word);
+                                }
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -1435,8 +1471,10 @@ public class WriteDictionary {
                             }
                             if(!roots.containsKey(a.baseForm+":adjective"))
                                 roots.put(a.baseForm+":adjective", word);
-                            else
-                                roots.put(a.baseForm+":adjective", roots.get(a.baseForm) +"|"+ word);
+                            else{
+                                String e = roots.get(a.baseForm+":adjective");
+                                roots.put(a.baseForm+":adjective", e +"|"+ word);
+                            }
                         }
                         catch (Exception e) {
                             e.printStackTrace();
@@ -1458,8 +1496,10 @@ public class WriteDictionary {
                             }
                             if(!roots.containsKey(a.baseForm+":adverb"))
                                 roots.put(a.baseForm+":adverb", word);
-                            else
-                                roots.put(a.baseForm+":adverb", roots.get(a.baseForm) +"|"+ word);
+                            else{
+                                String e = roots.get(a.baseForm+":adverb");
+                                roots.put(a.baseForm+":adverb", e +"|"+ word);
+                            }
                         }
                         catch (Exception e) {
                            e.printStackTrace();
@@ -1515,8 +1555,10 @@ public class WriteDictionary {
                         }
                         if(!roots.containsKey(n.baseForm+":noun"))
                             roots.put(n.baseForm+":noun", word);
-                        else
-                            roots.put(n.baseForm+":noun", roots.get(n.baseForm) + "|"+word);
+                        else{
+                            String e = roots.get(n.baseForm+":noun");
+                            roots.put(n.baseForm+":noun", e + "|"+word);
+                        }
                     }
                     catch (Exception e) {
                          e.printStackTrace();
@@ -1550,8 +1592,10 @@ public class WriteDictionary {
                         }
                         if(!roots.containsKey(n.baseForm+":noun"))
                             roots.put(n.baseForm+":noun", word);
-                        else
-                            roots.put(n.baseForm+":noun", roots.get(n.baseForm) + "|"+word);
+                        else{
+                            String e = roots.get(n.baseForm+":noun");
+                            roots.put(n.baseForm+":noun", e + "|"+word);
+                        }
                     }
                     catch (Exception e) {
                          e.printStackTrace();
@@ -1944,6 +1988,26 @@ public class WriteDictionary {
             s.close();
         }
         catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void colors(){
+        try{
+            Scanner scan = new Scanner(new File("inputs/colors.txt"));
+            while(scan.hasNextLine()){
+                String [] split = scan.nextLine().split(" ");
+                String word = "";
+                for(int x = 0;x<split.length-1;x++){
+                    word += split[x];
+                }
+                if(adjectiveDictionary.containsKey(word)){
+                    Adjective a = new Adjective(word);
+                    a.adjectiveOrderID=7;
+                    merge(word,a);
+                }
+            }
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
     }
