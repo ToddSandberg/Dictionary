@@ -3,7 +3,7 @@ package ai.legendary;
 public class Accesser {
     public static void main(String [] args){
         DictionaryAccess acc = new DictionaryAccess();
-        //System.out.println(acc.getWordInfo("a"));
+        System.out.println(acc.getWordInfo("dog"));
         //System.out.println(acc.changePOS("reaccept", "verb", "noun").toString());
         System.out.println(acc.changePOS("forgetting", "verb", "adjective").toString());
         System.out.println(acc.changePOS("frog", "noun", "adjective").toString());
