@@ -1,88 +1,110 @@
 Word	ConjunctionType	howCommon	commonRank
-but	Coordinating	0.479875	24
-till	Subordinate Conjunction	0.00587	1830
 whene'er	Subordinate Conjunction	-1.0	-1
-before	Subordinate Conjunction	0.092882	110
-cos	Subordinate Conjunction	0.017198	593
 forasmuch as	Subordinate Conjunction	-1.0	-1
-fore	Subordinate Conjunction	5.15E-4	11463
-while	Subordinate Conjunction	0.059598	152
-sobeit	Subordinate Conjunction	-1.0	-1
+whensoever	Subordinate Conjunction	-1.0	-1
 when	Subordinate Conjunction	0.225465	48
 without	Subordinate Conjunction	0.04859	183
 even if	Subordinate Conjunction	-1.0	-1
-that	Subordinate Conjunction	1.173595	6
 where's	Subordinate Conjunction	-1.0	-1
-whenever	Subordinate Conjunction	0.003345	3034
-as soon as	Subordinate Conjunction	-1.0	-1
 the first time	Subordinate Conjunction	-1.0	-1
 whenas	Subordinate Conjunction	-1.0	-1
-whether	Correlative Conjunction	0.0349	261
-than	Coordinating	0.114526	89
-whiles	Subordinate Conjunction	1.3E-5	79745
 afore	Subordinate Conjunction	1.08E-4	28822
 because	Subordinate Conjunction	0.089631	112
 whereas	Subordinate Conjunction	0.006561	1655
-directly	Subordinate Conjunction	0.009242	1170
 if	Subordinate Conjunction	0.249481	46
-otherwise	Subordinate Conjunction	0.009257	1169
-only if	Subordinate Conjunction	-1.0	-1
-like	Subordinate Conjunction	0.161876	66
 considering	Subordinate Conjunction	0.004319	2450
-lest	Subordinate Conjunction	4.42E-4	12575
-syne	Subordinate Conjunction	1.7E-5	70088
 an	Coordinating	0.362002	33
 now that	Subordinate Conjunction	-1.0	-1
 saving	Subordinate Conjunction	0.002517	3762
 as	Subordinate Conjunction	0.544812	17
 forasmuch	Subordinate Conjunction	-1.0	-1
-once	Subordinate Conjunction	0.028989	313
-in the event that	Subordinate Conjunction	-1.0	-1
+howsoever	Coordinating	2.7E-5	56664
 except	Subordinate Conjunction	0.007519	1439
 If	Subordinate Conjunction	-1.0	-1
 forwhy	Subordinate Conjunction	-1.0	-1
-since	Subordinate Conjunction	0.05284	168
 as if	Subordinate Conjunction	-1.0	-1
 providing	Subordinate Conjunction	0.007591	1429
-whencesoever	Subordinate Conjunction	-1.0	-1
-provided	Subordinate Conjunction	0.016752	609
+nevertheless	Coordinating	0.007614	1423
 save	Subordinate Conjunction	0.007575	1431
-for	Coordinating	0.896176	11
-why	Subordinate Conjunction	0.053532	165
+whithersoever	Correlative Conjunction	-1.0	-1
 immediately	Subordinate Conjunction	0.011027	970
 whereupon	Subordinate Conjunction	2.98E-4	16161
-where'er	Subordinate Conjunction	-1.0	-1
-nor	Coordinating	0.013121	790
 howbeit	Subordinate Conjunction	-1.0	-1
 seeing	Subordinate Conjunction	0.006829	1589
 unless	Subordinate Conjunction	0.011586	916
 whereunto	Subordinate Conjunction	-1.0	-1
-and	Coordinating	2.822903	2
-now	Subordinate Conjunction	0.145005	73
+moreover	Coordinating	0.004553	2339
 ere	Subordinate Conjunction	1.75E-4	22141
 just in case	Subordinate Conjunction	-1.0	-1
-and/or	Coordinating	-1.0	-1
 where	Subordinate Conjunction	0.114289	90
 after	Subordinate Conjunction	0.123252	87
 so	Coordinating	0.22323	49
 in case	Subordinate Conjunction	-1.0	-1
 wherever	Subordinate Conjunction	0.002404	3895
-or	Coordinating	0.390211	31
 though	Subordinate Conjunction	0.036184	251
 excepting	Subordinate Conjunction	9.2E-5	31469
+whether or not	Subordinate Conjunction	-1.0	-1
+howe'er	Coordinating	-1.0	-1
+by the time	Subordinate Conjunction	-1.0	-1
+tho	Subordinate Conjunction	1.45E-4	24547
+ergo	Coordinating	5.1E-5	42230
+ubi	Subordinate Conjunction	1.2E-5	82665
+sith	Subordinate Conjunction	1.1E-5	83557
+but	Coordinating	0.479875	24
+till	Subordinate Conjunction	0.00587	1830
+before	Subordinate Conjunction	0.092882	110
+cos	Subordinate Conjunction	0.017198	593
+fore	Subordinate Conjunction	5.15E-4	11463
+while	Subordinate Conjunction	0.059598	152
+sobeit	Subordinate Conjunction	-1.0	-1
+that	Subordinate Conjunction	1.173595	6
+either	Correlative Conjunction	0.029215	309
+fer	Coordinating	2.64E-4	17380
+whenever	Subordinate Conjunction	0.003345	3034
+as soon as	Subordinate Conjunction	-1.0	-1
+whether	Correlative Conjunction	0.0349	261
+than	Coordinating	0.114526	89
+whiles	Subordinate Conjunction	1.3E-5	79745
+directly	Subordinate Conjunction	0.009242	1170
+vel	Subordinate Conjunction	-1.0	-1
+otherwise	Subordinate Conjunction	0.009257	1169
+whither	Correlative Conjunction	5.3E-5	41430
+only if	Subordinate Conjunction	-1.0	-1
+like	Subordinate Conjunction	0.161876	66
+lest	Subordinate Conjunction	4.42E-4	12575
+syne	Subordinate Conjunction	1.7E-5	70088
+opuscule	Subordinate Conjunction	-1.0	-1
+both	Preconjunction	0.072397	131
+et	Coordinating	0.00114	6721
+once	Subordinate Conjunction	0.028989	313
+in the event that	Subordinate Conjunction	-1.0	-1
+quoties	Subordinate Conjunction	-1.0	-1
+therefore	Coordinating	0.02443	391
+nonetheless	Coordinating	0.00138	5876
+since	Subordinate Conjunction	0.05284	168
+however	Coordinating	0.063656	146
+Ophiuchus	Subordinate Conjunction	-1.0	-1
+whencesoever	Subordinate Conjunction	-1.0	-1
+provided	Subordinate Conjunction	0.016752	609
+for	Coordinating	0.896176	11
+why	Subordinate Conjunction	0.053532	165
+where'er	Subordinate Conjunction	-1.0	-1
+nor	Coordinating	0.013121	790
+and	Coordinating	2.822903	2
+now	Subordinate Conjunction	0.145005	73
+and/or	Coordinating	-1.0	-1
+hence	Coordinating	0.005027	2117
+or	Coordinating	0.390211	31
 notwithstanding	Subordinate Conjunction	7.65E-4	8818
 every time	Subordinate Conjunction	-1.0	-1
 wheresoever	Subordinate Conjunction	1.1E-5	84929
+yet	Coordinating	0.035514	257
 inasmuch as	Subordinate Conjunction	-1.0	-1
 whilst	Subordinate Conjunction	0.006144	1757
-whether or not	Subordinate Conjunction	-1.0	-1
 although	Subordinate Conjunction	0.045912	193
 wherethrough	Subordinate Conjunction	-1.0	-1
-by the time	Subordinate Conjunction	-1.0	-1
-tho	Subordinate Conjunction	1.45E-4	24547
+neither	Preconjunction	0.008675	1248
 until	Subordinate Conjunction	0.042913	203
 whensoever	Subordinate Conjunction	-1.0	-1
 even though	Subordinate Conjunction	-1.0	-1
-ubi	Subordinate Conjunction	1.2E-5	82665
 albeit	Subordinate Conjunction	0.001481	5591
-sith	Subordinate Conjunction	1.1E-5	83557
