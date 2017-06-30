@@ -11,18 +11,18 @@
 - Percentage of Noun abbreviationFor defined: 0%
 - Percentage of Noun abbreviatedFrom defined: 0%
 - Percentage of Noun irregularPluralForm defined: 0.66%
-- Percentage of Noun base form defined: 99.84%
+- Percentage of Noun base form defined: 99.96%
 - Percentage of Noun Animacy defined: 100%
 - Percentage of Noun Location defined: 0.28%
-### Verb analysis (Total Verbs: 28,624):
-- Percentage of Transivity Defined: 72.35%
-- Percentage of verb Tense Defined: 44.11%
+### Verb analysis (Total Verbs: 28,995):
+- Percentage of Transivity Defined: 71.42%
+- Percentage of verb Tense Defined: 43.56%
 - Percentage of verb aspect Defined: 0%
 - Percentage of verb type Defined: 0.1%
 - Percentage of verb person Defined: 100%
 - Percentage of verb phrasal Defined: 100%
 - Percentage of verb isInfinitive Defined: 0.1%
-- Percentage of verb base form Defined: 100%
+- Percentage of verb base form Defined: 98.73%
 ### Adjective analysis (Total Adjectives: 50,508):
 - Percentage of Position (Works in predicative and Attributive) Defined for Adjectives : 74.39%
 - Percentage of isQualitative defined: 37.31%
@@ -72,7 +72,8 @@
 - locations.txt implemented
 - Word_frequency_list.txt implemented
 - colors.txt implemented
+- verbnet implemented
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 4 minutes and 59 seconds
+## Current Dictionary Write Time: 5 minutes and 24 seconds

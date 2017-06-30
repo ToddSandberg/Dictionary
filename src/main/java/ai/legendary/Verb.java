@@ -20,6 +20,7 @@ public class Verb implements PartOfSpeech ,Serializable{
     public long commonRank = -1;
     public String baseForm = "--";
     public boolean light = false;
+    public String verbnet = "--";
     public Verb() {
         this("");
     }

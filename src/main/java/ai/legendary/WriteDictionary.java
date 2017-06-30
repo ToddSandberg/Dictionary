@@ -10,9 +10,11 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -24,6 +26,16 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import edu.mit.jverbnet.data.FrameType;
+import edu.mit.jverbnet.data.IFrame;
+import edu.mit.jverbnet.data.IMember;
+import edu.mit.jverbnet.data.IVerbClass;
+import edu.mit.jverbnet.data.semantics.IPredicateDesc;
+import edu.mit.jverbnet.data.semantics.ISemanticDesc;
+import edu.mit.jverbnet.data.syntax.ISyntaxArgDesc;
+import edu.mit.jverbnet.data.syntax.ISyntaxDesc;
+import edu.mit.jverbnet.index.IVerbIndex;
+import edu.mit.jverbnet.index.VerbIndex;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
 
@@ -70,6 +82,12 @@ public class WriteDictionary {
                 in.close();
             }
             catch (Exception e) {
+                e.printStackTrace();
+            }
+            try{
+                ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/nounDictHashMap.ser"));
+                
+            }catch(Exception e){
                 e.printStackTrace();
             }
             System.out.println("Starting");
@@ -130,6 +148,9 @@ public class WriteDictionary {
          // implements colors
             colors();
             printer.println("- colors.txt implemented");
+            //implement verbnet
+            verbnet();
+            printer.println("- verbnet implemented");
 
             printer.println("## Document Output Formats:");
             printer.println(
@@ -228,7 +249,7 @@ public class WriteDictionary {
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tverbNet");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
@@ -313,7 +334,7 @@ public class WriteDictionary {
                         + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
                         + "\t" + v.phrasal + "\t" + v.isInfinitive + "\t"
                         + v.howCommon + "\t" + v.commonRank + "\t"
-                        + v.baseForm + "\t" + v.light);
+                        + v.baseForm + "\t" + v.light + "\t" + v.verbnet);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
@@ -460,16 +481,68 @@ public class WriteDictionary {
                         String word = words[i];
                         System.out.println(word);
                         if (masculine) {
-                            Noun pos = new Noun(words[i] + "#~~");
-                            animacy.animacy = pos.checkAnimacy(word,
+                            Noun n = new Noun(words[i] + "#~~");
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(nounDictionary);
+                                m.breakApart();
+                                try {
+                                    n.baseForm = dictionary.lookupIndexWord(
+                                            POS.NOUN, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    n.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("plural")) {
+                                    n.plurality = "Plural";
+                                }
+                                if(!roots.containsKey(n.baseForm+":noun"))
+                                    roots.put(n.baseForm+":noun", word);
+                                else
+                                {
+                                    String e = roots.get(n.baseForm+":noun");
+                                    roots.put(n.baseForm+":noun", e +"|"+ word);
+                                }
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            animacy.animacy = n.checkAnimacy(word,
                                     animacy.animacy);
-                            merge(word, pos);
+                            merge(word, n);
                         }
                         else if (!masculine) {
-                            Noun pos = new Noun(words[i] + "@~~");
-                            animacy.animacy = pos.checkAnimacy(word,
+                            Noun n = new Noun(words[i] + "@~~");
+                            try {
+                                MorphologyFinder m = new MorphologyFinder(
+                                        word);
+                                m.loadDictionary(nounDictionary);
+                                m.breakApart();
+                                try {
+                                    n.baseForm = dictionary.lookupIndexWord(
+                                            POS.NOUN, m.getRoot()).getLemma();
+                                }
+                                catch (Exception e) {
+                                    n.baseForm = m.getRoot();
+                                }
+                                if (m.getTraits().contains("plural")) {
+                                    n.plurality = "Plural";
+                                }
+                                if(!roots.containsKey(n.baseForm+":noun"))
+                                    roots.put(n.baseForm+":noun", word);
+                                else
+                                {
+                                    String e = roots.get(n.baseForm+":noun");
+                                    roots.put(n.baseForm+":noun", e +"|"+ word);
+                                }
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            animacy.animacy = n.checkAnimacy(word,
                                     animacy.animacy);
-                            merge(word, pos);
+                            merge(word, n);
                         }
 
                     }
@@ -540,6 +613,7 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Noun) part).howCommon;
                     }
+                    nounDictionary.put(w,p);
                 }
                 else {
                     nounDictionary.put(w, (Noun) part);
@@ -768,6 +842,9 @@ public class WriteDictionary {
                     }
                     if (p.baseForm.equals("--")) {
                         p.baseForm = ((Verb) part).baseForm;
+                    }
+                    if(p.verbnet.equals("--")){
+                        p.verbnet = ((Verb) part).verbnet;
                     }
                 }
                 else {
@@ -2000,12 +2077,72 @@ public class WriteDictionary {
                 for(int x = 0;x<split.length-1;x++){
                     word += split[x];
                 }
+                
                 if(adjectiveDictionary.containsKey(word)){
+                    System.out.println(word);
                     Adjective a = new Adjective(word);
                     a.adjectiveOrderID=7;
                     merge(word,a);
                 }
             }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public static void verbnet(){
+        try{
+            String pathToVerbnet = "inputs/verbnet";
+            URL url = new URL("file", null, pathToVerbnet);
+            //constructs index and opens it
+            IVerbIndex index = new VerbIndex(url);
+            index.open();
+            // look up a verb class and print out some info
+            Iterator it = index.iterator();
+            while(it.hasNext()){
+            IVerbClass verb = (IVerbClass) it.next();
+            
+            
+            System.out.println("");
+            String format = "{\n";
+            List l = verb.getFrames();
+            for(int x=0;x<l.size();x++){
+                IFrame frame = (IFrame) l.get(x);
+                FrameType type = frame.getPrimaryType();
+                ISemanticDesc semantics = frame.getSemantics();
+                List<IPredicateDesc> predicates = semantics.getPredicates();
+                String semantic = predicates.toString();
+                ISyntaxDesc syntaxes = frame.getSyntax();
+                List<ISyntaxArgDesc> pre = syntaxes.getPreVerbDescriptors();
+                String presyntax = "";
+                for(int i=0;i<pre.size();i++){
+                    presyntax += pre.get(i).getValue()+" ";
+                }
+                List<ISyntaxArgDesc> post = syntaxes.getPostVerbDescriptors();
+                String postsyntax = "";
+                for(int i=0;i<post.size();i++){
+                    postsyntax += post.get(i).getValue()+" ";
+                }
+                format+="\"frame\" id = "+type.getID()+":{\n";
+                format+="\"semantics\":\""+semantic+"\",";
+                format+="\"presyntax\":\""+presyntax+"\",";
+                format+="\"postsyntax\":\""+postsyntax+"\",";
+                format+="\n},\n";
+            }
+            format+="}\n";
+            List members = verb.getMembers();
+            for(int x=0;x<members.size();x++){
+                IMember member = (IMember) members.get(x);
+                String word = member.getName();
+                System.out.println(word);
+                Verb v = new Verb(word);
+                v.verbnet = format;
+                merge(word,v);
+            }
+            }
+            
+            
         }
         catch(Exception e){
             e.printStackTrace();
