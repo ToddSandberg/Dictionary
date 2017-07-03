@@ -354,6 +354,24 @@ public class MorphologyFinder {
                 traits.add("plural/ownership");
             }
         }
+        
+        if(ends("i")){
+            removeX(1);
+            letters.add('u');
+            letters.add('s');
+            String p = "";
+            for (int i = 0; i < letters.size(); i++) {
+                p += letters.get(i);
+            }
+            if (!english.isEmpty() && english.containsKey(p)) {
+                suffs.add("i");
+                traits.add("plural");
+            }
+            else{
+                removeX(2);
+                letters.add('i');
+            }
+        }
         // past tense
         if (ends("eed")) {
             if (m("eed") > 0) {

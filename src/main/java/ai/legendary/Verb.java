@@ -120,9 +120,7 @@ public class Verb implements PartOfSpeech ,Serializable{
             person = "N/A";
             isInfinitive = false;
         }
-        else{
-            person = "N/A";
-        }
+
         if(s.equals("can't") || s.equals("cannot") || s.equals("mayn't") || s.equals("mustn't")||s.equals("oughtn't")||s.equals("shan't")||s.equals("can") || s.equals("dare") || s.equals("may") || s.equals("must") || s.equals("ought")||s.equals("shall")||s.equals("will")||s.equals("won't")||s.equals("'ll")||s.equals("need")||s.equals("needn't")){
             verbType = "Modal";
             tense = "Present";
@@ -223,6 +221,6 @@ public class Verb implements PartOfSpeech ,Serializable{
                 + transivity + ", Tense=" + tense + ", Aspect=" + aspect
                 + ", Person=" + person + ", Phrasal=" + phrasal + ", isInfinitive="
                 + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank 
-                +", baseForm="+baseForm + ", light="+light;
+                +", baseForm="+baseForm + ", light="+light + ", verbnet="+verbnet;
     }
 }

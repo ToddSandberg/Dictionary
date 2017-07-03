@@ -130,8 +130,9 @@ public class DictionaryAccess {
             return "Word: " + word + "\n"
                     + getdictionary(pos).get(word).toString() + "\n";
         }
-        else
+        else{
             return word + " " + pos + " is not in Dictionary\n";
+        }
     }
     /**
      * gets the info on a singular word with any part of speech

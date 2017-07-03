@@ -133,9 +133,7 @@ public class WriteDictionary {
             countNounOrNot();
             printer.println(
                     "- NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt implemented");
-            // Implements SPECIALIST LEXICON
-            speclexicon();
-            printer.println("- LEXICON.txt semiImplemented");
+            
             // Implements Adverb Scales
             adverbIntensifiers();
             printer.println("- AdverbScales-Manual.csv Implemented");
@@ -145,12 +143,18 @@ public class WriteDictionary {
             // implements which words are common
             frequency();
             printer.println("- Word_frequency_list.txt implemented");
-         // implements colors
+            // implements colors
             colors();
             printer.println("- colors.txt implemented");
             //implement verbnet
             verbnet();
             printer.println("- verbnet implemented");
+            //implements ADJADV.txt from nombank
+            adjadv();
+            printer.println("- ADJADV.txt from nombank implemented");
+            // Implements SPECIALIST LEXICON
+            speclexicon();
+            printer.println("- LEXICON.txt semiImplemented");
 
             printer.println("## Document Output Formats:");
             printer.println(
@@ -528,6 +532,9 @@ public class WriteDictionary {
                                 }
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
+                                    Noun temp = new Noun(n.baseForm);
+                                    temp.plurality = "Singular";
+                                    merge(n.baseForm,temp);
                                 }
                                 if(!roots.containsKey(n.baseForm+":noun"))
                                     roots.put(n.baseForm+":noun", word);
@@ -916,6 +923,11 @@ public class WriteDictionary {
                                     }
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
+                                        if(nounDictionary.containsKey(n.baseForm)){
+                                        Noun temp = new Noun(n.baseForm);
+                                        temp.plurality = "Singular";
+                                        merge(n.baseForm,temp);
+                                        }
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
                                         roots.put(n.baseForm+":noun", word);
@@ -931,7 +943,8 @@ public class WriteDictionary {
                                 merge(word, n);
                             }
                             else if (pos.equals("p")) {
-                                Noun n = new Noun(word + "~~@");
+                                Noun n = new Noun(word);
+                                n.plurality = "Plural";
                                 animacy.animacy = n.checkAnimacy(word,
                                         animacy.animacy);
                                 try {
@@ -950,6 +963,11 @@ public class WriteDictionary {
                                     }
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
+                                        if(nounDictionary.containsKey(n.baseForm)){
+                                        Noun temp = new Noun(n.baseForm);
+                                        temp.plurality = "Singular";
+                                        merge(n.baseForm,temp);
+                                        }
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
                                         roots.put(n.baseForm+":noun", word);
@@ -964,7 +982,8 @@ public class WriteDictionary {
                                 merge(word, n);
                             }
                             else if (pos.equals("h")) {
-                                Noun n = new Noun(word + "~@~");
+                                Noun n = new Noun(word);
+                                n.isCountable = true;
                                 animacy.animacy = n.checkAnimacy(word,
                                         animacy.animacy);
                                 try {
@@ -983,6 +1002,11 @@ public class WriteDictionary {
                                     }
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
+                                        if(nounDictionary.containsKey(n.baseForm)){
+                                        Noun temp = new Noun(n.baseForm);
+                                        temp.plurality = "Singular";
+                                        merge(n.baseForm,temp);
+                                        }
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
                                         roots.put(n.baseForm+":noun", word);
@@ -1033,7 +1057,8 @@ public class WriteDictionary {
                             }
                             else if (pos.equals("t") && i < poses.length - 1
                                     && poses[i + 1].equals("i")) {
-                                Verb v = new Verb(word + "%");
+                                Verb v = new Verb(word);
+                                v.transivity = "Ambitransitive";
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
@@ -1069,7 +1094,8 @@ public class WriteDictionary {
                                 i++;
                             }
                             else if (pos.equals("t")) {
-                                Verb v = new Verb(word + "@");
+                                Verb v = new Verb(word);
+                                v.transivity = "transitive";
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
@@ -1104,7 +1130,8 @@ public class WriteDictionary {
                                 merge(word, v);
                             }
                             else if (pos.equals("i")) {
-                                Verb v = new Verb(word + "=");
+                                Verb v = new Verb(word);
+                                v.transivity = "intransitive";
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
@@ -1277,7 +1304,8 @@ public class WriteDictionary {
                                 && eElement
                                         .getElementsByTagName("intransitive")
                                         .getLength() > 0) {
-                            Verb v = new Verb(word + "%");
+                            Verb v = new Verb(word);
+                            v.transivity = "Ambitransitive";
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
@@ -1311,7 +1339,8 @@ public class WriteDictionary {
                         }
                         else if (eElement.getElementsByTagName("ditransitive")
                                 .getLength() > 0) {
-                            Verb v = new Verb(word + "~");
+                            Verb v = new Verb(word);
+                            v.transivity = "Ditransitive";
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
@@ -1345,7 +1374,8 @@ public class WriteDictionary {
                         }
                         else if (eElement.getElementsByTagName("transitive")
                                 .getLength() > 0) {
-                            Verb v = new Verb(word + "@");
+                            Verb v = new Verb(word);
+                            v.transivity = "Transitive";
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
@@ -1379,7 +1409,8 @@ public class WriteDictionary {
                         }
                         else if (eElement.getElementsByTagName("intransitive")
                                 .getLength() > 0) {
-                            Verb v = new Verb(word + "=");
+                            Verb v = new Verb(word);
+                            v.transivity = "Intransitive";
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
@@ -1448,7 +1479,8 @@ public class WriteDictionary {
                     else if (pos.equals("noun")) {
                         if (eElement.getElementsByTagName("nonCount")
                                 .getLength() > 0) {
-                            Noun n = new Noun(word + "#~");
+                            Noun n = new Noun(word);
+                            n.isCountable = true;
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
@@ -1463,6 +1495,11 @@ public class WriteDictionary {
                                 }
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
+                                    if(nounDictionary.containsKey(n.baseForm)){
+                                    Noun temp = new Noun(n.baseForm);
+                                    temp.plurality = "Singular";
+                                    merge(n.baseForm,temp);
+                                    }
                                 }
                                 if(!roots.containsKey(n.baseForm+":noun"))
                                     roots.put(n.baseForm+":noun", word);
@@ -1495,6 +1532,11 @@ public class WriteDictionary {
                                 }
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
+                                    if(nounDictionary.containsKey(n.baseForm)){
+                                    Noun temp = new Noun(n.baseForm);
+                                    temp.plurality = "Singular";
+                                    merge(n.baseForm,temp);
+                                    }
                                 }
                                 if(!roots.containsKey(n.baseForm+":noun"))
                                     roots.put(n.baseForm+":noun", word);
@@ -1512,29 +1554,29 @@ public class WriteDictionary {
                         }
                     }
                     else if (pos.equals("adjective")) {
-                        String temp = word;
+                        Adjective a = new Adjective(word);
                         if (eElement.getElementsByTagName("classifying")
                                 .getLength() > 0) {
-                            temp += "@";
+                            a.isClassifying = true;
                         }
                         else {
-                            temp += "#";
+                            a.isClassifying = false;
                         }
                         if (eElement.getElementsByTagName("predicative")
                                 .getLength() > 0) {
-                            temp += "@";
+                            a.worksInPredicativePosition = true;
                         }
                         else {
-                            temp += "#";
+                            a.worksInPredicativePosition = false;
                         }
                         if (eElement.getElementsByTagName("qualitative")
                                 .getLength() > 0) {
-                            temp += "@";
+                            a.isQualitative = true;
                         }
                         else {
-                            temp += "#";
+                            a.isQualitative = false;
                         }
-                        Adjective a = new Adjective(temp);
+                        
                         try {
                             MorphologyFinder m = new MorphologyFinder(word);
                             m.loadDictionary(adjectiveDictionary);
@@ -1614,7 +1656,8 @@ public class WriteDictionary {
                 String word = scan2.nextLine();
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
-                    Noun n = new Noun(word + "@~");
+                    Noun n = new Noun(word);
+                    n.isCountable = true;
                     try {
                         MorphologyFinder m = new MorphologyFinder(word);
                         m.loadDictionary(nounDictionary);
@@ -1629,6 +1672,11 @@ public class WriteDictionary {
                         }
                         if (m.getTraits().contains("plural")) {
                             n.plurality = "plural";
+                            if(nounDictionary.containsKey(n.baseForm)){
+                            Noun temp = new Noun(n.baseForm);
+                            temp.plurality = "Singular";
+                            merge(n.baseForm,temp);
+                            }
                         }
                         if(!roots.containsKey(n.baseForm+":noun"))
                             roots.put(n.baseForm+":noun", word);
@@ -1651,7 +1699,8 @@ public class WriteDictionary {
                 String word = scan.nextLine();
                 System.out.println(word);
                 if (!word.equals("") && !word.equals("\n")) {
-                    Noun n = new Noun(word + "#~");
+                    Noun n = new Noun(word);
+                    n.isCountable = false;
                     try {
                         MorphologyFinder m = new MorphologyFinder(word);
                         m.loadDictionary(nounDictionary);
@@ -1667,8 +1716,14 @@ public class WriteDictionary {
                         if (m.getTraits().contains("plural")) {
                             n.plurality = "plural";
                         }
-                        if(!roots.containsKey(n.baseForm+":noun"))
+                        if(!roots.containsKey(n.baseForm+":noun")){
                             roots.put(n.baseForm+":noun", word);
+                            if(nounDictionary.containsKey(n.baseForm)){
+                            Noun temp = new Noun(n.baseForm);
+                            temp.plurality = "Singular";
+                            merge(n.baseForm,temp);
+                            }
+                        }
                         else{
                             String e = roots.get(n.baseForm+":noun");
                             roots.put(n.baseForm+":noun", e + "|"+word);
@@ -1802,23 +1857,20 @@ public class WriteDictionary {
                     wordsseen++;
                     // add nouns
                     if (pos.equals("noun")) {
-                        String temp = word;
+                        Noun n = new Noun(word);
                         if (count) {
-                            temp += "@";
+                            n.isCountable = true;
                         }
                         else {
-                            temp += "#";
+                            n.isCountable = false;
                         }
                         if (plurality.equals("Singular")) {
-                            temp += "#";
+                            n.plurality = "Singular";
                         }
                         else if (plurality.equals("Plural")) {
-                            temp += "@";
+                            n.plurality = "Plural";
                         }
-                        else {
-                            temp += "~";
-                        }
-                        Noun n = new Noun(temp);
+                        
                         if (compliments.size() > 0) {
                             n.addCompliments(compliments);
                         }
@@ -1839,36 +1891,36 @@ public class WriteDictionary {
                         parts.add(v);
                     }
                     if (pos.equals("adj")) {
-                        String temp = word;
+                        Adjective a = new Adjective(word);
                         // attrib position
                         if (attribposition) {
-                            temp += "@";
+                            a.worksInAttributivePosition = true;
                         }
                         else {
-                            temp += "#";
+                            a.worksInAttributivePosition = false;
                         }
                         // is classifying
                         if (classifying) {
-                            temp += "@";
+                            a.isClassifying = true;
                         }
                         else {
-                            temp += "#";
+                            a.isClassifying = false;
                         }
                         // predic pos
                         if (predposition) {
-                            temp += "@";
+                            a.worksInPredicativePosition = true;
                         }
                         else {
-                            temp += "#";
+                            a.worksInPredicativePosition = false;
                         }
                         // is qualitative
                         if (qualitative) {
-                            temp += "@";
+                            a.isQualitative = true;
                         }
                         else {
-                            temp += "#";
+                            a.isQualitative = false;
                         }
-                        Adjective a = new Adjective(temp);
+                        
                         if (compliments.size() > 0) {
                             a.addCompliments(compliments);
                         }
@@ -1924,7 +1976,15 @@ public class WriteDictionary {
                     mustUseMoreMost = false;
                     compliments = new ArrayList<String>();
                 }
-                else {
+                else if(s.equals("}") && pos.length() > 0
+                        && !getdictionary(pos).containsKey(word)){
+                    /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                    new PrintWriter(bw); printer.println("Specialist Lexicon: " + word); printer.close();
+                    bw.close(); fw.close();
+                     
+                     } 
+                    catch (IOException e) { e.printStackTrace(); }*/
                 }
             }
             scan.close();
@@ -1999,8 +2059,7 @@ public class WriteDictionary {
                 long rank = Long.parseLong(
                         split[2].substring(1, split[2].length() - 1));
                 System.out
-                        .println(word + ":" + nounDictionary.containsKey(word)
-                                + ":" + c + ":" + rank);
+                        .println(word + ":" + c + ":" + rank);
                 if (nounDictionary.containsKey(word)) {
                     Noun n = new Noun(word);
                     n.howCommon = c;
@@ -2061,6 +2120,18 @@ public class WriteDictionary {
                     n.commonRank = rank;
                     merge(word, n);
                 }
+                if(!quantifierDictionary.containsKey(word) && !pronounDictionary.containsKey(word) && !prepositionDictionary.containsKey(word) && !interjectionDictionary.containsKey(word) && !determinerDictionary.containsKey(word) && !conjunctionDictionary.containsKey(word) && !adverbDictionary.containsKey(word) && !adjectiveDictionary.containsKey(word) && !verbDictionary.containsKey(word) && !nounDictionary.containsKey(word)){
+                    try { 
+                        FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        BufferedWriter bw = new BufferedWriter(fw); 
+                        PrintWriter printer = new PrintWriter(bw); 
+                        printer.println("Word Frequency: " + word); 
+                        printer.close();
+                        bw.close();
+                        fw.close();
+                     } 
+                    catch (IOException e) { e.printStackTrace(); }
+                }
             }
             s.close();
         }
@@ -2072,17 +2143,27 @@ public class WriteDictionary {
         try{
             Scanner scan = new Scanner(new File("inputs/colors.txt"));
             while(scan.hasNextLine()){
-                String [] split = scan.nextLine().split(" ");
-                String word = "";
-                for(int x = 0;x<split.length-1;x++){
+                String [] split = scan.nextLine().split("\t");
+                String word = split[0];
+                word = word.toLowerCase();
+                /*for(int x = 0;x<split.length-1;x++){
                     word += split[x];
-                }
+                }*/
                 
                 if(adjectiveDictionary.containsKey(word)){
                     System.out.println(word);
                     Adjective a = new Adjective(word);
                     a.adjectiveOrderID=7;
                     merge(word,a);
+                }
+                else{
+                    try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                    new PrintWriter(bw); printer.println("Colors: " + word); printer.close();
+                    bw.close(); fw.close();
+                     
+                     } 
+                    catch (IOException e) { e.printStackTrace(); }
                 }
             }
         }
@@ -2102,10 +2183,10 @@ public class WriteDictionary {
             Iterator it = index.iterator();
             while(it.hasNext()){
             IVerbClass verb = (IVerbClass) it.next();
-            
-            
-            System.out.println("");
-            String format = "{\n";
+            String ID = verb.getID();
+            System.out.println(ID);
+            String IDtype = verbnetType(ID);
+            String format = "\"Type\":\""+IDtype+"\"{\n";
             List l = verb.getFrames();
             for(int x=0;x<l.size();x++){
                 IFrame frame = (IFrame) l.get(x);
@@ -2124,7 +2205,7 @@ public class WriteDictionary {
                 for(int i=0;i<post.size();i++){
                     postsyntax += post.get(i).getValue()+" ";
                 }
-                format+="\"frame\" id = "+type.getID()+":{\n";
+                format+="\"frame id\":\""+type.getID()+"\":{\n";
                 format+="\"semantics\":\""+semantic+"\",";
                 format+="\"presyntax\":\""+presyntax+"\",";
                 format+="\"postsyntax\":\""+postsyntax+"\",";
@@ -2134,11 +2215,13 @@ public class WriteDictionary {
             List members = verb.getMembers();
             for(int x=0;x<members.size();x++){
                 IMember member = (IMember) members.get(x);
-                String word = member.getName();
+                String word = fixSpaces(member.getName());
                 System.out.println(word);
                 Verb v = new Verb(word);
                 v.verbnet = format;
-                merge(word,v);
+
+                    merge(word,v);
+
             }
             }
             
@@ -2148,7 +2231,86 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    
+    public static void adjadv(){
+        try{
+            Scanner s = new Scanner(new File("inputs/ADJADV.txt"));
+            String adj = "";
+            String adv = "";
+            Boolean gradable = null;
+            
+            while(s.hasNextLine()){
+                String line = s.nextLine();
+                System.out.println(line);
+                String []split = line.split(":");
+                if(split[1].startsWith("ORTH")){
+                    if(!adj.equals("") && adjectiveDictionary.containsKey(adj)){
+                        Adjective a = new Adjective(adj);
+                        if(gradable != null){
+                            a.isQualitative = true;
+                            a.isClassifying = false;
+                        }
+                        System.out.println(adj + gradable);
+                        merge(adj,a);
+                        adj = "";
+                        gradable = null;
+                    }
+                    else if(!adj.equals("") && !adjectiveDictionary.containsKey(adj)){
+                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                        new PrintWriter(bw); printer.println("ADJADV: " + adj); printer.close();
+                        bw.close(); fw.close();
+                         
+                         } 
+                        catch (IOException e) { e.printStackTrace(); }
+                    }
+                    if(!adv.equals("") && adverbDictionary.containsKey(adv)){
+                        Adverb a = new Adverb(adv);
+                        merge(adv,a);
+                        adv = "";
+                    }
+                    else if(!adv.equals("") && !adverbDictionary.containsKey(adv)){
+                            try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                            BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                            new PrintWriter(bw); printer.println("ADJADV: " + adv); printer.close();
+                            bw.close(); fw.close();
+                             
+                             } 
+                            catch (IOException e) { e.printStackTrace(); }
+                    }
+                    adj = split[1].substring(6, split[1].length()-1);
+                    if(adj.endsWith("\"")){
+                        adj = adj.substring(0, adj.length()-1);
+                    }
+                }
+                else if(split[1].startsWith("ADV")){
+                    adv = split[1].substring(5, split[1].length()-1);
+                    if(adv.endsWith("\"")){
+                        adv = adv.substring(0, adv.length()-1);
+                    }
+                }
+                else if(split[1].startsWith("FEATURES")){
+                    while(!line.contains("))")){
+                        if(line.contains("GRADABLE")){
+                            gradable = true;
+                        }
+                        line = s.nextLine();
+                    }
+                    if(line.contains("GRADABLE")){
+                        gradable = true;
+                    }
+                    if(gradable == null){
+                        gradable = false;
+                    }
+                }
+            }
+            s.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     public static PartOfSpeech determinerSorter(String s) {
         if (s.equals("a") || s.equals("an") || s.equals("the")
                 || s.equals("this") || s.equals("these") || s.equals("that")
@@ -2223,5 +2385,326 @@ public class WriteDictionary {
         else
             return null;
     }
-
+    
+    public static String fixSpaces(String s){
+        String temp = "";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i) == '_'){
+                temp += " ";
+            }
+            else{
+                temp += s.charAt(i);
+            }
+        }
+        return temp;
+    }
+    public static String verbnetType(String s){
+        String type = "";
+        String[]split = s.split("-");
+        String[] num = split[1].split("\\.");
+        if(num[0].equals("9")){
+            type = "putting";
+        }
+        else if(num[0].equals("10")){
+            type = "removing";
+        }
+        else if(num[0].equals("11")){
+            type = "sending/carrying";
+        }
+        else if(num[0].equals("12")){
+            type = "push/pull";
+        }
+        else if(num[0].equals("13")){
+            type = "change of possesion";
+        }
+        else if(num[0].equals("14")){
+            type = "learn";
+        }
+        else if(num[0].equals("15")){
+            type = "hold/keep";
+        }
+        else if(num[0].equals("16")){
+            type = "concealment";
+        }
+        else if(num[0].equals("17")){
+            type = "throwing";
+        }
+        else if(num[0].equals("18")){
+            type = "contact by impact";
+        }
+        else if(num[0].equals("19")){
+            type = "poke";
+        }
+        else if(num[0].equals("20")){
+            type = "touch";
+        }
+        else if(num[0].equals("21")){
+            type = "cutting";
+        }
+        else if(num[0].equals("22")){
+            type = "combining/attaching";
+        }
+        else if(num[0].equals("23")){
+            type = "seperating/disassembling";
+        }
+        else if(num[0].equals("24")){
+            type = "coloring";
+        }
+        else if(num[0].equals("25")){
+            type = "image creation";
+        }
+        else if(num[0].equals("26")){
+            type = "creation/transformation";
+        }
+        else if(num[0].equals("27")){
+            type = "engender";
+        }
+        else if(num[0].equals("28")){
+            type = "calve";
+        }
+        else if(num[0].equals("29")){
+            type = "w/ predicative compliments";
+        }
+        else if(num[0].equals("30")){
+            type = "perception";
+        }
+        else if(num[0].equals("31")){
+            type = "psychological state";
+        }
+        else if(num[0].equals("32")){
+            type = "desire";
+        }
+        else if(num[0].equals("33")){
+            type = "judgement";
+        }
+        else if(num[0].equals("34")){
+            type = "assessment";
+        }
+        else if(num[0].equals("35")){
+            type = "searching";
+        }
+        else if(num[0].equals("36")){
+            type = "social interaction";
+        }
+        else if(num[0].equals("37")){
+            type = "communication";
+        }
+        else if(num[0].equals("38")){
+            type = "sounds made by animals";
+        }
+        else if(num[0].equals("39")){
+            type = "ingesting";
+        }
+        else if(num[0].equals("40")){
+            type = "involving the body";
+        }
+        else if(num[0].equals("41")){
+            type = "grooming and bodily care";
+        }
+        else if(num[0].equals("42")){
+            type = "killing";
+        }
+        else if(num[0].equals("43")){
+            type = "emission";
+        }
+        else if(num[0].equals("44")){
+            type = "destroy";
+        }
+        else if(num[0].equals("45")){
+            type = "change of state";
+        }
+        else if(num[0].equals("46")){
+            type = "lodge";
+        }
+        else if(num[0].equals("47")){
+            type = "existence";
+        }
+        else if(num[0].equals("48")){
+            type = "appearance/disappearance/occurrence";
+        }
+        else if(num[0].equals("49")){
+            type = "body-internal motion";
+        }
+        else if(num[0].equals("50")){
+            type = "assumin a position";
+        }
+        else if(num[0].equals("51")){
+            type = "motion";
+        }
+        else if(num[0].equals("52")){
+            type = "avoid";
+        }
+        else if(num[0].equals("53")){
+            type = "lingering/rushing";
+        }
+        else if(num[0].equals("54")){
+            type = "measure";
+        }
+        else if(num[0].equals("55")){
+            type = "aspectual";
+        }
+        else if(num[0].equals("56")){
+            type = "weekend";
+        }
+        else if(num[0].equals("57")){
+            type = "weather";
+        }
+        else if(num[0].equals("58")){
+            type = "urging/begging";
+        }
+        else if(num[0].equals("59")){
+            type = "force";
+        }
+        else if(num[0].equals("60")){
+            type = "order";
+        }
+        else if(num[0].equals("61")){
+            type = "try";
+        }
+        else if(num[0].equals("62")){
+            type = "wish";
+        }
+        else if(num[0].equals("63")){
+            type = "enforce";
+        }
+        else if(num[0].equals("64")){
+            type = "allow";
+        }
+        else if(num[0].equals("65")){
+            type = "admit";
+        }
+        else if(num[0].equals("66")){
+            type = "consume";
+        }
+        else if(num[0].equals("67")){
+            type = "forbid";
+        }
+        else if(num[0].equals("68")){
+            type = "pay";
+        }
+        else if(num[0].equals("69")){
+            type = "refrain";
+        }
+        else if(num[0].equals("70")){
+            type = "rely";
+        }
+        else if(num[0].equals("71")){
+            type = "conspire";
+        }
+        else if(num[0].equals("72")){
+            type = "help";
+        }
+        else if(num[0].equals("73")){
+            type = "cooperate";
+        }
+        else if(num[0].equals("74")){
+            type = "succeed";
+        }
+        else if(num[0].equals("75")){
+            type = "neglect";
+        }
+        else if(num[0].equals("76")){
+            type = "limit";
+        }
+        else if(num[0].equals("77")){
+            type = "approve";
+        }
+        else if(num[0].equals("78")){
+            type = "indicate";
+        }
+        else if(num[0].equals("79")){
+            type = "dedicate";
+        }
+        else if(num[0].equals("80")){
+            type = "free";
+        }
+        else if(num[0].equals("81")){
+            type = "suspect";
+        }
+        else if(num[0].equals("82")){
+            type = "withdraw";
+        }
+        else if(num[0].equals("83")){
+            type = "cope";
+        }
+        else if(num[0].equals("84")){
+            type = "discover";
+        }
+        else if(num[0].equals("85")){
+            type = "defend";
+        }
+        else if(num[0].equals("86")){
+            type = "correlating/relating";
+        }
+        else if(num[0].equals("87")){
+            type = "focusing/comprehending";
+        }
+        else if(num[0].equals("88")){
+            type = "caring/empathizing";
+        }
+        else if(num[0].equals("89")){
+            type = "settle";
+        }
+        else if(num[0].equals("90")){
+            type = "exceed";
+        }
+        else if(num[0].equals("91")){
+            type = "matter";
+        }
+        else if(num[0].equals("92")){
+            type = "confine";
+        }
+        else if(num[0].equals("93")){
+            type = "adopt";
+        }
+        else if(num[0].equals("94")){
+            type = "risk";
+        }
+        else if(num[0].equals("95")){
+            type = "acquiesce";
+        }
+        else if(num[0].equals("96")){
+            type = "addict";
+        }
+        else if(num[0].equals("97")){
+            type = "basing/deducing";
+        }
+        else if(num[0].equals("98")){
+            type = "confront";
+        }
+        else if(num[0].equals("99")){
+            type = "ensure";
+        }
+        else if(num[0].equals("100")){
+            type = "own";
+        }
+        else if(num[0].equals("101")){
+            type = "patent";
+        }
+        else if(num[0].equals("102")){
+            type = "promote";
+        }
+        else if(num[0].equals("103")){
+            type = "require";
+        }
+        else if(num[0].equals("104")){
+            type = "spending time";
+        }
+        else if(num[0].equals("105")){
+            type = "use";
+        }
+        else if(num[0].equals("106")){
+            type = "void";
+        }
+        else if(num[0].equals("107")){
+            type = "involve";
+        }
+        else if(num[0].equals("108")){
+            type = "multiply";
+        }
+        else if(num[0].equals("109")){
+            type = "seem";
+        }
+        return type;
+    }
 }
