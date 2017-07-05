@@ -27,6 +27,7 @@ public class Adjective implements PartOfSpeech, Serializable {
     public float howCommon = -1;
     public long commonRank = -1;
     public String baseForm = "--";
+    public String propbank = "--";
 
     public Adjective() {
         this("");

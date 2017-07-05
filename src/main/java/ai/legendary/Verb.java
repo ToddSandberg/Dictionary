@@ -21,6 +21,8 @@ public class Verb implements PartOfSpeech ,Serializable{
     public String baseForm = "--";
     public boolean light = false;
     public String verbnet = "--";
+    public String wordNetID = "--";
+    public String propbank = "--";
     public Verb() {
         this("");
     }

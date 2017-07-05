@@ -22,7 +22,7 @@ inexpressively	-1	false	null	null	--	null	null	--	-1.0	-1	inexprese
 unspiritedly	-1	false	null	null	--	null	null	--	-1.0	-1	unspirite
 nonconstructively	-1	false	null	null	--	null	null	--	-1.0	-1	nonconstruct
 ungenially	-1	false	null	null	--	null	null	--	-1.0	-1	ungenial
-hurryingly	-1	false	null	null	--	null	null	--	-1.0	-1	hurrie
+hurryingly	-1	false	null	null	--	null	null	--	-1.0	-1	hurry
 impishly	-1	false	null	null	--	null	null	--	2.2E-5	61616	--
 detrimentally	-1	false	null	null	--	true	false	--	1.3E-5	78153	--
 adjectively	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -87,7 +87,7 @@ unluxuriously	-1	false	null	null	--	null	null	--	-1.0	-1	unluxury
 unmilitantly	-1	false	null	null	--	null	null	--	-1.0	-1	unmilit
 autogenously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonpalatably	-1	false	null	null	--	null	null	--	-1.0	-1	nonpalat
-swayingly	-1	false	null	null	--	null	null	--	-1.0	-1	swaye
+swayingly	-1	false	null	null	--	null	null	--	-1.0	-1	sway
 euphemiously	-1	false	null	null	--	null	null	--	-1.0	-1	euphemy
 pantological	-1	false	null	null	--	null	null	--	-1.0	-1	pantology
 crestfallenly	-1	false	null	null	--	null	null	--	-1.0	-1	crestfall
@@ -370,7 +370,7 @@ off-center	-1	false	true	false	--	null	null	--	-1.0	-1	off
 dam	-1	false	null	null	--	null	null	--	6.76E-4	9612	--
 unsonorously	-1	false	null	null	--	null	null	--	-1.0	-1	unsonore
 untopographically	-1	false	null	null	--	null	null	--	-1.0	-1	untopography
-gloryingly	-1	false	null	null	--	null	null	--	-1.0	-1	glorie
+gloryingly	-1	false	null	null	--	null	null	--	-1.0	-1	glory
 extorsively	-1	false	null	null	--	null	null	--	-1.0	-1	extors
 boundedly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 reverentially	-1	false	null	null	--	null	null	--	1.3E-5	78337	--
@@ -509,7 +509,7 @@ unfeelingly	-1	false	null	null	--	null	null	--	-1.0	-1	unfe
 nonartistically	-1	false	null	null	--	null	null	--	-1.0	-1	nonartisty
 jumpingly	-1	false	null	null	--	null	null	--	-1.0	-1	jump
 noneloquently	-1	false	null	null	--	null	null	--	-1.0	-1	noneloqu
-groaningly	-1	false	null	null	--	null	null	--	-1.0	-1	gro
+groaningly	-1	false	null	null	--	null	null	--	-1.0	-1	groan
 nonperceptibly	-1	false	null	null	--	null	null	--	-1.0	-1	nonperceptib
 lumpishly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unscandalously	-1	false	null	null	--	null	null	--	-1.0	-1	unscandale
@@ -534,7 +534,7 @@ nonbarbarously	-1	false	null	null	--	null	null	--	-1.0	-1	nonbarbare
 dearly	3	false	null	null	Manner	true	true	--	3.84E-4	13745	--
 nonidiomatically	-1	false	null	null	--	null	null	--	-1.0	-1	nonidiomaty
 containedly	-1	false	null	null	--	null	null	--	-1.0	-1	contain
-nonimmanently	-1	false	null	null	--	null	null	--	-1.0	-1	nonimm
+nonimmanently	-1	false	null	null	--	null	null	--	-1.0	-1	nonimman
 emarginately	-1	false	null	null	--	null	null	--	-1.0	-1	emarginate
 overcaptiously	-1	false	null	null	--	null	null	--	-1.0	-1	overcapty
 variformly	-1	false	null	null	--	null	null	--	-1.0	-1	variform
@@ -690,7 +690,7 @@ uniformly	2	false	null	null	Manner	true	false	--	3.1E-4	15748	--
 delectably	-1	false	null	null	--	null	null	--	-1.0	-1	delect
 unpeculiarly	-1	false	null	null	--	null	null	--	-1.0	-1	unpeculiear
 unfelicitously	-1	false	null	null	--	null	null	--	-1.0	-1	unfelicite
-obeyingly	-1	false	null	null	--	null	null	--	-1.0	-1	obeye
+obeyingly	-1	false	null	null	--	null	null	--	-1.0	-1	obey
 permissively	-1	false	null	null	--	true	false	--	-1.0	-1	--
 semiluminously	-1	false	null	null	--	null	null	--	-1.0	-1	semilumine
 quasi-doubtfully	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-doubt
@@ -803,7 +803,7 @@ nonimaginarily	-1	false	null	null	--	null	null	--	-1.0	-1	nonimaginari
 pennilessly	-1	false	null	null	--	null	null	--	-1.0	-1	penni
 preadjectivally	-1	false	null	null	--	null	null	--	-1.0	-1	preadjectival
 thrillingly	-1	false	null	null	--	null	null	--	1.7E-5	68817	--
-womanishly	-1	false	null	null	--	null	null	--	-1.0	-1	wom
+womanishly	-1	false	null	null	--	null	null	--	-1.0	-1	woman
 unseparably	-1	false	null	null	--	null	null	--	-1.0	-1	unsepar
 OK'd	-1	false	null	null	--	null	null	--	-1.0	-1	ok'd
 ununiquely	-1	false	null	null	--	null	null	--	-1.0	-1	ununique
@@ -855,7 +855,7 @@ duskily	-1	false	null	null	--	null	null	--	-1.0	-1	duski
 insolubly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 shoddily	1	false	null	null	Manner	true	true	--	-1.0	-1	--
 theologically	-1	false	null	null	--	true	false	--	4.6E-5	44291	--
-pseudogentlemanly	-1	false	null	null	--	null	null	--	-1.0	-1	pseudogentlem
+pseudogentlemanly	-1	false	null	null	--	null	null	--	-1.0	-1	pseudogentleman
 sesquicentennially	-1	false	null	null	--	null	null	--	-1.0	-1	sesquicentennial
 abstemiously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 draughtily	-1	false	null	null	--	null	null	--	-1.0	-1	draughti
@@ -960,7 +960,7 @@ pivotally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 thoroughly	3	false	null	null	Manner	true	false	--	0.002217	4140	--
 astoundingly	-1	false	null	null	--	true	false	--	1.7E-5	69783	--
 unproportionately	-1	false	null	null	--	null	null	--	-1.0	-1	unproportionate
-fleyedly	-1	false	null	null	--	null	null	--	-1.0	-1	fleye
+fleyedly	-1	false	null	null	--	null	null	--	-1.0	-1	fley
 semireflexively	-1	false	null	null	--	null	null	--	-1.0	-1	semireflexe
 prattlingly	-1	false	null	null	--	null	null	--	-1.0	-1	prat
 boundingly	-1	false	null	null	--	null	null	--	-1.0	-1	bound
@@ -999,7 +999,7 @@ brusquely	-1	false	null	null	--	false	false	--	1.26E-4	26552	--
 graciously	3	false	null	null	Manner	true	false	--	1.33E-4	25855	--
 unexpectedly	1	false	null	null	Manner	true	false	--	9.67E-4	7521	--
 nonelliptically	-1	false	null	null	--	null	null	--	-1.0	-1	nonellipty
-mystifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	mystifie
+mystifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	mystify
 transmissively	-1	false	null	null	--	true	false	--	-1.0	-1	--
 hyperconstitutionally	-1	false	null	null	--	null	null	--	-1.0	-1	constitutional
 huddlingly	-1	false	null	null	--	null	null	--	-1.0	-1	hud
@@ -1095,7 +1095,7 @@ immortally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 openly	2	false	null	null	Manner	true	true	--	0.001298	6134	--
 irately	-1	false	null	null	--	null	null	--	-1.0	-1	--
 captiously	-1	false	null	null	--	null	null	--	-1.0	-1	--
-defyingly	-1	false	null	null	--	null	null	--	-1.0	-1	defie
+defyingly	-1	false	null	null	--	null	null	--	-1.0	-1	defy
 uncruelly	-1	false	null	null	--	null	null	--	-1.0	-1	uncruel
 nonclinically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 propitiously	-1	false	null	null	--	true	true	--	-1.0	-1	--
@@ -1482,7 +1482,7 @@ feeble-mindedly	-1	false	null	null	--	null	null	--	-1.0	-1	feeble-mind
 half-savagely	-1	false	null	null	--	null	null	--	-1.0	-1	half
 scoopingly	-1	false	null	null	--	null	null	--	-1.0	-1	scoop
 unlibelously	-1	false	null	null	--	null	null	--	-1.0	-1	unlibele
-moaningly	-1	false	null	null	--	null	null	--	-1.0	-1	mo
+moaningly	-1	false	null	null	--	null	null	--	-1.0	-1	moan
 substantively	-1	false	null	null	--	true	false	--	1.8E-5	68400	--
 bullheadedly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 imitatively	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -1624,7 +1624,7 @@ unseductively	-1	false	null	null	--	null	null	--	-1.0	-1	unseduct
 scant	-1	false	null	null	--	null	null	--	2.95E-4	16273	--
 long-	-1	false	null	null	--	null	null	--	-1.0	-1	long
 demurely	-1	false	null	null	--	true	true	--	6.8E-5	36501	--
-coetaneously	-1	false	null	null	--	null	null	--	-1.0	-1	coet
+coetaneously	-1	false	null	null	--	null	null	--	-1.0	-1	coetan
 noninternationally	-1	false	null	null	--	null	null	--	-1.0	-1	noninternational
 appeasingly	-1	false	null	null	--	null	null	--	-1.0	-1	appeas
 exchangeably	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -1639,7 +1639,7 @@ mistakenly	-1	false	null	null	--	true	true	--	2.5E-4	17925	--
 nonpossessively	-1	false	null	null	--	null	null	--	-1.0	-1	nonpossese
 undersea	-1	false	null	null	--	null	null	--	6.3E-5	37999	--
 overbumptiously	-1	false	null	null	--	null	null	--	-1.0	-1	overbumpty
-noncontemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	noncontempor
+noncontemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	noncontemporan
 nonforensically	-1	false	null	null	--	null	null	--	-1.0	-1	nonforensy
 literatim	-1	false	null	null	--	null	null	--	-1.0	-1	literatim
 quasi-contrarily	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-contrari
@@ -1730,12 +1730,12 @@ serriedly	-1	false	null	null	--	null	null	--	-1.0	-1	serry
 subtly	1	false	null	null	Manner	true	true	--	3.72E-4	14045	--
 out and away	-1	false	null	null	--	null	null	--	-1.0	-1	out and away
 semisomnolently	-1	false	null	null	--	null	null	--	-1.0	-1	semisomnol
-wearyingly	-1	false	null	null	--	null	null	--	-1.0	-1	wearie
+wearyingly	-1	false	null	null	--	null	null	--	-1.0	-1	weary
 dilatably	-1	false	null	null	--	null	null	--	-1.0	-1	dilat
 nonaseptically	-1	false	null	null	--	null	null	--	-1.0	-1	nonasepty
 clankingly	-1	false	null	null	--	null	null	--	-1.0	-1	clank
 unelaborately	-1	false	null	null	--	null	null	--	-1.0	-1	unelaborate
-quasi-humanly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-hum
+quasi-humanly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-human
 acock	-1	false	null	null	--	null	null	--	-1.0	-1	acock
 judiciarily	-1	false	null	null	--	null	null	--	-1.0	-1	judiciari
 unrepentantly	-1	false	null	null	--	null	null	--	2.3E-5	60253	--
@@ -1779,7 +1779,7 @@ excusably	-1	false	null	null	--	null	null	--	-1.0	-1	--
 internationally	-1	false	null	null	--	true	false	--	7.41E-4	9018	--
 charily	-1	false	null	null	--	null	null	--	-1.0	-1	--
 portentously	-1	false	null	null	--	null	null	--	1.8E-5	67398	--
-manlessly	-1	false	null	null	--	null	null	--	-1.0	-1	m
+manlessly	-1	false	null	null	--	null	null	--	-1.0	-1	man
 ductilely	-1	false	null	null	--	null	null	--	-1.0	-1	ductile
 occidentally	-1	false	null	null	--	null	null	--	-1.0	-1	occidental
 undistrustfully	-1	false	null	null	--	null	null	--	-1.0	-1	undistrust
@@ -2082,7 +2082,7 @@ nonluminously	-1	false	null	null	--	null	null	--	-1.0	-1	nonlumine
 unprevalently	-1	false	null	null	--	null	null	--	-1.0	-1	unpreval
 square	-1	false	null	null	--	true	false	--	0.007444	1447	--
 yellowly	-1	false	null	null	--	null	null	--	-1.0	-1	yellow
-quasi-permanently	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-perm
+quasi-permanently	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-perman
 darkling	-1	false	null	null	--	true	false	--	-1.0	-1	--
 undiametrically	-1	false	null	null	--	null	null	--	-1.0	-1	undiametry
 commensurably	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -2168,7 +2168,7 @@ magnificently	-1	false	null	null	--	true	false	--	1.55E-4	23637	--
 overpowerfully	-1	false	null	null	--	null	null	--	-1.0	-1	overpower
 unobstinately	-1	false	null	null	--	null	null	--	-1.0	-1	unobstinate
 desirously	-1	false	null	null	--	null	null	--	-1.0	-1	desire
-unenvyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unenvie
+unenvyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unenvy
 quasi-indifferently	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-indif
 coeducationally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 bolographically	-1	false	null	null	--	null	null	--	-1.0	-1	bolography
@@ -2281,7 +2281,7 @@ enthrallingly	-1	false	null	null	--	null	null	--	-1.0	-1	enthral
 exiguously	-1	false	null	null	--	null	null	--	-1.0	-1	exigue
 synchronically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 braggingly	-1	false	null	null	--	null	null	--	-1.0	-1	brag
-subterraneously	-1	false	null	null	--	null	null	--	-1.0	-1	subterr
+subterraneously	-1	false	null	null	--	null	null	--	-1.0	-1	subterran
 halfheartedly	-1	false	null	null	--	null	null	--	1.1E-5	84777	--
 regardless	-1	false	null	null	--	true	false	--	0.001622	5213	--
 upward	3	false	null	null	Manner	true	false	--	7.53E-4	8906	--
@@ -2307,7 +2307,7 @@ best	-1	false	false	true	--	null	null	--	0.036726	246	--
 oughtlins	-1	false	null	null	--	null	null	--	-1.0	-1	oughtlin
 biassedly	-1	false	null	null	--	null	null	--	-1.0	-1	bias
 nonempathically	-1	false	null	null	--	null	null	--	-1.0	-1	nonempathy
-unpermanently	-1	false	null	null	--	null	null	--	-1.0	-1	unperm
+unpermanently	-1	false	null	null	--	null	null	--	-1.0	-1	unperman
 off-the-face	-1	false	null	null	--	null	null	--	-1.0	-1	off
 cursorily	-1	false	null	null	--	true	false	--	1.8E-5	68495	--
 nonethically	-1	false	null	null	--	null	null	--	-1.0	-1	nonethy
@@ -2456,7 +2456,7 @@ lickety-split	-1	false	null	null	--	null	null	--	-1.0	-1	lickety split
 overofficiously	-1	false	null	null	--	null	null	--	-1.0	-1	overofficious
 overpensively	-1	false	null	null	--	null	null	--	-1.0	-1	overpens
 nonpragmatically	-1	false	null	null	--	null	null	--	-1.0	-1	nonpragmaty
-moanfully	-1	false	null	null	--	null	null	--	-1.0	-1	mo
+moanfully	-1	false	null	null	--	null	null	--	-1.0	-1	moan
 inquiringly	-1	false	null	null	--	true	false	--	2.5E-5	58798	--
 polytonally	-1	false	null	null	--	null	null	--	-1.0	-1	polytonal
 antievolutionally	-1	false	null	null	--	null	null	--	-1.0	-1	antievolutional
@@ -2577,7 +2577,7 @@ post	-1	false	null	null	--	null	null	--	0.009826	1096	--
 slackingly	-1	false	null	null	--	null	null	--	-1.0	-1	slack
 ita	-1	false	null	null	--	null	null	--	8.4E-5	32915	--
 metallically	-1	false	null	null	--	null	null	--	-1.0	-1	metally
-inhumanly	-1	false	null	null	--	null	null	--	-1.0	-1	inhum
+inhumanly	-1	false	null	null	--	null	null	--	-1.0	-1	inhuman
 nondisingenuously	-1	false	null	null	--	null	null	--	-1.0	-1	nondisingenue
 posh	-1	false	null	null	--	null	null	--	4.37E-4	12663	--
 semichemically	-1	false	null	null	--	null	null	--	-1.0	-1	semichemy
@@ -2818,7 +2818,7 @@ phonotypically	-1	false	null	null	--	null	null	--	-1.0	-1	phonotypy
 well-nigh	-1	false	null	null	--	false	false	--	-1.0	-1	--
 calligraphy	-1	false	null	null	--	null	null	--	8.6E-5	32588	--
 sterilely	-1	false	null	null	--	true	false	--	-1.0	-1	--
-emanatively	-1	false	null	null	--	null	null	--	-1.0	-1	em
+emanatively	-1	false	null	null	--	null	null	--	-1.0	-1	eman
 indexically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 waveringly	-1	false	null	null	--	true	true	--	-1.0	-1	--
 deprecatorily	-1	false	null	null	--	null	null	--	-1.0	-1	deprecatori
@@ -2924,7 +2924,7 @@ temperately	-1	false	null	null	--	true	true	--	-1.0	-1	--
 south-southwest	-1	false	false	true	--	true	false	--	-1.0	-1	--
 questionably	2	false	null	null	Manner	true	false	--	-1.0	-1	--
 prehistorically	-1	false	null	null	--	true	false	--	-1.0	-1	--
-manlikely	-1	false	null	null	--	null	null	--	-1.0	-1	m
+manlikely	-1	false	null	null	--	null	null	--	-1.0	-1	man
 totally	4	false	null	null	Degree	true	false	--	0.006119	1765	--
 receptually	-1	false	null	null	--	null	null	--	-1.0	-1	receptual
 unnasally	-1	false	null	null	--	null	null	--	-1.0	-1	unnasal
@@ -3014,7 +3014,7 @@ ethnologically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 dispersedly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 feigningly	-1	false	null	null	--	null	null	--	-1.0	-1	feign
 plaguy	-1	false	null	null	--	null	null	--	-1.0	-1	plaguy
-intracutaneous	-1	false	null	null	--	null	null	--	-1.0	-1	intracut
+intracutaneous	-1	false	null	null	--	null	null	--	-1.0	-1	intracutan
 gibbosely	-1	false	null	null	--	null	null	--	-1.0	-1	gibbose
 overcharitably	-1	false	null	null	--	null	null	--	-1.0	-1	overcharit
 quasi-adequately	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-adequate
@@ -3469,7 +3469,7 @@ unsuperfluously	-1	false	null	null	--	null	null	--	-1.0	-1	unsuperflue
 well	3	false	null	null	Manner/Degree	false	false	e|l	0.123587	86	--
 nonprudently	-1	false	null	null	--	null	null	--	-1.0	-1	nonprud
 draconically	-1	false	null	null	--	null	null	--	-1.0	-1	dracony
-plyingly	-1	false	null	null	--	null	null	--	-1.0	-1	plie
+plyingly	-1	false	null	null	--	null	null	--	-1.0	-1	ply
 severally	-1	false	null	null	--	true	false	--	5.1E-5	42614	--
 open-handedly	-1	false	null	null	--	null	null	--	-1.0	-1	open-hand
 dendrochronologically	-1	false	null	null	--	null	null	--	-1.0	-1	dendrochronology
@@ -3495,7 +3495,7 @@ immanence	-1	false	null	null	--	null	null	--	2.1E-5	63507	--
 presto	-1	false	null	null	--	null	null	--	5.5E-5	40916	--
 unexpeditiously	-1	false	null	null	--	null	null	--	-1.0	-1	unexpedity
 gaily	-1	false	null	null	--	true	true	--	2.84E-4	16633	--
-unsimultaneously	-1	false	null	null	--	null	null	--	-1.0	-1	unsimult
+unsimultaneously	-1	false	null	null	--	null	null	--	-1.0	-1	unsimultan
 respectively	-1	false	null	null	--	true	false	--	0.003381	3008	--
 nonmathematically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 one-time	-1	false	null	null	--	null	null	--	-1.0	-1	one time
@@ -3678,7 +3678,7 @@ drivelingly	-1	false	null	null	--	null	null	--	-1.0	-1	drive
 overaffirmatively	-1	false	null	null	--	null	null	--	-1.0	-1	overaffirm
 digestively	-1	false	null	null	--	true	false	--	-1.0	-1	--
 plumb	-1	false	null	null	--	true	false	--	1.3E-4	25996	--
-envyingly	-1	false	null	null	--	null	null	--	-1.0	-1	envie
+envyingly	-1	false	null	null	--	null	null	--	-1.0	-1	envy
 unlawfully	-1	false	null	null	--	true	false	--	1.75E-4	22092	--
 unostentatiously	-1	false	null	null	--	null	null	--	-1.0	-1	unostentaty
 quasi-miserably	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-mise
@@ -3830,7 +3830,7 @@ nonsanctimoniously	-1	false	null	null	--	null	null	--	-1.0	-1	nonsanctimony
 pseudoangelically	-1	false	null	null	--	null	null	--	-1.0	-1	pseudoangely
 nonseriously	-1	false	null	null	--	null	null	--	-1.0	-1	nonserious
 nohow	-1	false	null	null	--	null	null	--	-1.0	-1	nohow
-undyingly	-1	false	null	null	--	null	null	--	-1.0	-1	undie
+undyingly	-1	false	null	null	--	null	null	--	-1.0	-1	undy
 unself-righteously	-1	false	null	null	--	null	null	--	-1.0	-1	right
 nonheritably	-1	false	null	null	--	null	null	--	-1.0	-1	nonherit
 gratefully	3	false	null	null	Manner	true	false	--	3.99E-4	13427	--
@@ -3868,7 +3868,7 @@ quasi-cheerfully	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-cheer
 nonenigmatically	-1	false	null	null	--	null	null	--	-1.0	-1	nonenigmaty
 nondoubtingly	-1	false	null	null	--	null	null	--	-1.0	-1	nondoubt
 suborbicularly	-1	false	null	null	--	null	null	--	-1.0	-1	suborbicular
-tryingly	-1	false	null	null	--	null	null	--	-1.0	-1	trie
+tryingly	-1	false	null	null	--	null	null	--	-1.0	-1	try
 noncorrectively	-1	false	null	null	--	null	null	--	-1.0	-1	noncorrect
 yestreen	-1	false	null	null	--	null	null	--	-1.0	-1	yestre
 uncooperatively	-1	false	null	null	--	null	null	--	-1.0	-1	uncoop
@@ -3892,7 +3892,7 @@ appositionally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 motivelessly	-1	false	null	null	--	null	null	--	-1.0	-1	mote
 nongeologically	-1	false	null	null	--	null	null	--	-1.0	-1	nongeology
 intellectively	-1	false	null	null	--	null	null	--	-1.0	-1	intellect
-cotemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	cotempor
+cotemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	cotemporan
 foreknowingly	-1	false	null	null	--	null	null	--	-1.0	-1	foreknowe
 correspondently	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unconformably	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -3976,7 +3976,7 @@ unforcefully	-1	false	null	null	--	null	null	--	-1.0	-1	unforce
 overabstemiously	-1	false	null	null	--	null	null	--	-1.0	-1	overabstemy
 unpredictively	-1	false	null	null	--	null	null	--	-1.0	-1	unpredict
 inexplicitly	-1	false	null	null	--	null	null	--	-1.0	-1	inexplicit
-unqualifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unqualifie
+unqualifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unqualify
 nonreadably	-1	false	null	null	--	null	null	--	-1.0	-1	nonread
 learnedly	-1	false	null	null	--	null	null	--	-1.0	-1	--
 about	2	false	null	null	Place	true	false	--	0.207403	54	--
@@ -4187,7 +4187,7 @@ hyperintellectually	-1	false	null	null	--	null	null	--	-1.0	-1	intellectual
 nonfacetiously	-1	false	null	null	--	null	null	--	-1.0	-1	nonfacety
 overclosely	-1	false	null	null	--	null	null	--	-1.0	-1	close
 unvoraciously	-1	false	null	null	--	null	null	--	-1.0	-1	unvoracy
-unmannerly	-1	false	null	null	--	null	null	--	-1.0	-1	unm
+unmannerly	-1	false	null	null	--	null	null	--	-1.0	-1	unman
 obliquely	-1	false	null	null	--	true	false	--	1.45E-4	24494	--
 overdepressively	-1	false	null	null	--	null	null	--	-1.0	-1	overdeprese
 unamatively	-1	false	null	null	--	null	null	--	-1.0	-1	unam
@@ -4236,7 +4236,7 @@ realistically	-1	false	null	null	--	true	true	--	3.76E-4	13960	--
 noncondescendingly	-1	false	null	null	--	null	null	--	-1.0	-1	noncondescend
 nonceremoniously	-1	false	null	null	--	null	null	--	-1.0	-1	nonceremony
 threateningly	-1	false	null	null	--	true	true	--	7.8E-5	34335	--
-self-denyingly	-1	false	null	null	--	null	null	--	-1.0	-1	self-denie
+self-denyingly	-1	false	null	null	--	null	null	--	-1.0	-1	self-deny
 centrally	-1	false	null	null	--	true	true	--	6.8E-4	9570	--
 fal-lalishly	-1	false	null	null	--	null	null	--	-1.0	-1	fal-lal
 quasi-democratically	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-democraty
@@ -4305,7 +4305,7 @@ jocosely	-1	false	null	null	--	null	null	--	-1.0	-1	--
 slouchingly	-1	false	null	null	--	null	null	--	-1.0	-1	slouch
 metaphrastically	-1	false	null	null	--	null	null	--	-1.0	-1	metaphrasty
 indefensibly	-1	false	null	null	--	null	null	--	-1.0	-1	indefensib
-coinstantaneously	-1	false	null	null	--	null	null	--	-1.0	-1	coinstant
+coinstantaneously	-1	false	null	null	--	null	null	--	-1.0	-1	coinstantan
 grievously	-1	false	null	null	--	true	false	--	5.1E-5	42579	--
 overstrongly	-1	false	null	null	--	null	null	--	-1.0	-1	overstrong
 contemplatively	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -4317,7 +4317,7 @@ literarily	-1	false	null	null	--	null	null	--	-1.0	-1	literari
 usefully	3	false	null	null	Manner	true	false	--	4.56E-4	12354	--
 nonjuristically	-1	false	null	null	--	null	null	--	-1.0	-1	nonjuristy
 tenderly	3	false	null	null	Manner	true	true	--	2.29E-4	18869	--
-unannoyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unannoye
+unannoyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unannoy
 nay	-1	false	null	null	--	null	null	--	3.07E-4	15852	--
 inerrably	-1	false	null	null	--	null	null	--	-1.0	-1	iner
 responsibly	3	false	null	null	Manner	true	false	--	1.23E-4	26870	--
@@ -4554,7 +4554,7 @@ pratingly	-1	false	null	null	--	null	null	--	-1.0	-1	prate
 red-facedly	-1	false	null	null	--	null	null	--	-1.0	-1	red-face
 peerlessly	-1	false	null	null	--	null	null	--	-1.0	-1	peer
 direct	2	false	null	null	Manner	true	false	--	0.012478	835	--
-Spartanly	-1	false	null	null	--	null	null	--	-1.0	-1	spart
+Spartanly	-1	false	null	null	--	null	null	--	-1.0	-1	spartan
 veloce	-1	false	null	null	--	null	null	--	-1.0	-1	veloce
 Celtically	-1	false	null	null	--	null	null	--	-1.0	-1	celty
 jokingly	-1	false	null	null	--	true	false	--	8.0E-5	33749	--
@@ -4756,7 +4756,7 @@ nonexplosively	-1	false	null	null	--	null	null	--	-1.0	-1	nonexplose
 dishonorably	-1	false	null	null	--	null	null	--	-1.0	-1	dishone
 epidemiologically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 sadly	1	false	null	null	Manner	true	false	--	0.002029	4433	--
-unhurryingly	-1	false	null	null	--	null	null	--	-1.0	-1	unhurrie
+unhurryingly	-1	false	null	null	--	null	null	--	-1.0	-1	unhurry
 unalarmingly	-1	false	null	null	--	null	null	--	-1.0	-1	unalarm
 off	-1	false	null	null	--	true	false	--	0.073827	128	--
 splenetically	-1	false	null	null	--	null	null	--	-1.0	-1	splenety
@@ -4782,7 +4782,7 @@ deucedly	-1	false	null	null	--	null	null	--	-1.0	-1	--
 next door	-1	false	null	null	--	null	null	--	-1.0	-1	next
 perchance	-1	false	null	null	--	true	false	--	4.2E-5	46113	--
 hourly	2	false	null	null	Manner/Frequency	true	false	--	3.17E-4	15562	--
-noblemanly	-1	false	null	null	--	null	null	--	-1.0	-1	noblem
+noblemanly	-1	false	null	null	--	null	null	--	-1.0	-1	nobleman
 overstoutly	-1	false	null	null	--	null	null	--	-1.0	-1	overstout
 superaesthetically	-1	false	null	null	--	null	null	--	-1.0	-1	superaesthety
 urinative	-1	false	null	null	--	null	null	--	-1.0	-1	urin
@@ -4861,7 +4861,7 @@ nonpreventively	-1	false	null	null	--	null	null	--	-1.0	-1	nonprevent
 quasi-reasonably	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-reason
 cogitatingly	-1	false	null	null	--	null	null	--	-1.0	-1	cogitate
 compulsively	-1	false	null	null	--	true	false	--	3.3E-5	51716	--
-impermanently	-1	false	null	null	--	null	null	--	-1.0	-1	imperm
+impermanently	-1	false	null	null	--	null	null	--	-1.0	-1	imperman
 nounally	-1	false	null	null	--	null	null	--	-1.0	-1	nounal
 percussively	-1	false	null	null	--	null	null	--	-1.0	-1	percuse
 inordinately	-1	false	null	null	--	true	false	--	7.7E-5	34436	--
@@ -4953,7 +4953,7 @@ neonatally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unpiratically	-1	false	null	null	--	null	null	--	-1.0	-1	unpiraty
 unvindictively	-1	false	null	null	--	null	null	--	-1.0	-1	unvindict
 perspectively	-1	false	null	null	--	true	false	--	-1.0	-1	--
-Americanly	-1	false	null	null	--	null	null	--	-1.0	-1	americ
+Americanly	-1	false	null	null	--	null	null	--	-1.0	-1	american
 understandingly	-1	false	null	null	--	null	null	--	2.2E-5	61659	--
 undiminishably	-1	false	null	null	--	null	null	--	-1.0	-1	undiminish
 unmellifluently	-1	false	null	null	--	null	null	--	-1.0	-1	unmelliflu
@@ -5005,7 +5005,7 @@ quasi-managerially	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-managerial
 begetter	-1	false	true	false	--	null	null	--	1.8E-5	67788	--
 upspringing	-1	false	null	null	--	null	null	--	-1.0	-1	upspring
 chattily	-1	false	null	null	--	null	null	--	1.2E-5	83225	--
-queryingly	-1	false	null	null	--	null	null	--	-1.0	-1	querie
+queryingly	-1	false	null	null	--	null	null	--	-1.0	-1	query
 bitterly	1	false	null	null	Manner	true	true	--	0.001154	6658	--
 like	-1	false	null	null	--	null	null	--	0.161876	66	--
 supermorosely	-1	false	null	null	--	null	null	--	-1.0	-1	supermorose
@@ -5112,7 +5112,7 @@ tragicomically	-1	false	null	null	--	null	null	--	-1.0	-1	tragicomy
 uncontumaciously	-1	false	null	null	--	null	null	--	-1.0	-1	uncontumacy
 pat	-1	false	null	null	--	true	false	--	0.002252	4075	--
 expositively	-1	false	null	null	--	null	null	--	-1.0	-1	expose
-honeyedly	-1	false	null	null	--	null	null	--	-1.0	-1	honeye
+honeyedly	-1	false	null	null	--	null	null	--	-1.0	-1	honey
 foggily	-1	false	null	null	--	null	null	--	-1.0	-1	foggi
 seasonedly	-1	false	null	null	--	null	null	--	-1.0	-1	seasone
 brilliantly	3	false	null	null	Manner	true	false	--	5.56E-4	10942	--
@@ -5126,7 +5126,7 @@ unmeasuredly	-1	false	null	null	--	null	null	--	-1.0	-1	unmeasure
 onwards	-1	false	null	null	--	true	false	--	0.001489	5568	--
 quasi-correctly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-correct
 reproachably	-1	false	null	null	--	null	null	--	-1.0	-1	reproach
-showmanly	-1	false	null	null	--	null	null	--	-1.0	-1	showm
+showmanly	-1	false	null	null	--	null	null	--	-1.0	-1	showman
 unsulkily	-1	false	null	null	--	null	null	--	-1.0	-1	unsulki
 unhideously	-1	false	null	null	--	null	null	--	-1.0	-1	unhid
 double-mindedly	-1	false	null	null	--	null	null	--	-1.0	-1	double
@@ -5262,7 +5262,7 @@ fastuously	-1	false	null	null	--	null	null	--	-1.0	-1	fastue
 unspeakably	-1	false	null	null	--	null	null	--	3.4E-5	51497	--
 unimpedingly	-1	false	null	null	--	null	null	--	-1.0	-1	unimpede
 for ever	-1	false	true	false	--	null	null	--	-1.0	-1	for eve
-lyingly	-1	false	null	null	--	null	null	--	-1.0	-1	lie
+lyingly	-1	false	null	null	--	null	null	--	-1.0	-1	ly
 outshout	-1	false	null	null	--	null	null	--	-1.0	-1	outshout
 daubingly	-1	false	null	null	--	null	null	--	-1.0	-1	daub
 assertedly	-1	false	null	null	--	null	null	--	-1.0	-1	assert
@@ -5308,7 +5308,7 @@ inalienably	-1	false	null	null	--	null	null	--	-1.0	-1	inali
 enlargedly	-1	false	null	null	--	null	null	--	-1.0	-1	enlarg
 shockingly	-1	false	null	null	--	true	false	--	6.1E-5	38818	--
 labouredly	-1	false	null	null	--	null	null	--	-1.0	-1	labour
-quasi-gentlemanly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-gentlem
+quasi-gentlemanly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-gentleman
 unstoppably	-1	false	null	null	--	null	null	--	-1.0	-1	unstop
 inexcusably	-1	false	null	null	--	true	false	--	1.1E-5	83676	--
 cenobitically	-1	false	null	null	--	null	null	--	-1.0	-1	cenobity
@@ -5585,7 +5585,7 @@ preposterously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonavoidably	-1	false	null	null	--	null	null	--	-1.0	-1	nonavoid
 uncannily	-1	false	null	null	--	true	true	--	6.1E-5	38727	--
 anti-Jesuitically	-1	false	null	null	--	null	null	--	-1.0	-1	anti-jesuity
-self-pityingly	-1	false	null	null	--	null	null	--	-1.0	-1	self-pitie
+self-pityingly	-1	false	null	null	--	null	null	--	-1.0	-1	self-pity
 painlessly	3	false	null	null	Manner	true	false	--	7.2E-5	35806	--
 irrationally	-1	false	null	null	--	true	false	--	4.9E-5	42888	--
 nonvesicularly	-1	false	null	null	--	null	null	--	-1.0	-1	nonvesicular
@@ -5639,7 +5639,7 @@ dorsally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 axiologically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nondeterminatively	-1	false	null	null	--	null	null	--	-1.0	-1	nondetermin
 self-consciously	-1	false	null	null	--	true	true	--	-1.0	-1	--
-subpermanently	-1	false	null	null	--	null	null	--	-1.0	-1	subperm
+subpermanently	-1	false	null	null	--	null	null	--	-1.0	-1	subperman
 demonologically	-1	false	null	null	--	null	null	--	-1.0	-1	demonology
 ingratiatingly	-1	false	null	null	--	null	null	--	1.3E-5	77566	--
 immunogenically	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -5657,7 +5657,7 @@ devouringly	-1	false	null	null	--	null	null	--	-1.0	-1	devour
 Jacobitely	-1	false	null	null	--	null	null	--	-1.0	-1	jacobite
 disproportionally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 overlearnedly	-1	false	null	null	--	null	null	--	-1.0	-1	overlearn
-fortifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	fortifie
+fortifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	fortify
 unreproductively	-1	false	null	null	--	null	null	--	-1.0	-1	unreproduct
 enragedly	-1	false	null	null	--	null	null	--	-1.0	-1	enr
 unfully	-1	false	null	null	--	null	null	--	-1.0	-1	un
@@ -5717,7 +5717,7 @@ cylindrically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 associatively	-1	false	null	null	--	true	false	--	1.5E-5	74794	--
 beforehand	-1	false	null	null	--	true	false	--	7.1E-4	9274	--
 quasi-apologetically	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-apologety
-mannishly	-1	false	null	null	--	null	null	--	-1.0	-1	m
+mannishly	-1	false	null	null	--	null	null	--	-1.0	-1	man
 preharmoniously	-1	false	null	null	--	null	null	--	-1.0	-1	preharmony
 amatorially	-1	false	null	null	--	null	null	--	-1.0	-1	amatorial
 rankly	-1	false	null	null	--	null	null	--	-1.0	-1	rank
@@ -5871,7 +5871,7 @@ quasi-moralistically	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-moralisty
 half-coaxingly	-1	false	null	null	--	null	null	--	-1.0	-1	half
 quasi-colloquially	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-colloquial
 bigheartedly	-1	false	null	null	--	null	null	--	-1.0	-1	bigheart
-uncontemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	uncontempor
+uncontemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	uncontemporan
 nowise	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nolens volens	-1	false	null	null	--	null	null	--	-1.0	-1	nolens vole
 blooming	-1	false	null	null	--	null	null	--	3.58E-4	14404	--
@@ -6085,7 +6085,7 @@ prelawfully	-1	false	null	null	--	null	null	--	-1.0	-1	prelaw
 nonformidably	-1	false	null	null	--	null	null	--	-1.0	-1	nonformid
 nondoctrinally	-1	false	null	null	--	null	null	--	-1.0	-1	nondoctrinal
 discriminately	-1	false	null	null	--	true	false	--	-1.0	-1	--
-unextraneously	-1	false	null	null	--	null	null	--	-1.0	-1	unextr
+unextraneously	-1	false	null	null	--	null	null	--	-1.0	-1	unextran
 apocryphally	-1	false	null	null	--	null	null	--	-1.0	-1	apocryphal
 glegly	-1	false	null	null	--	null	null	--	-1.0	-1	gleg
 duly	-1	false	null	null	--	true	false	--	0.001035	7156	--
@@ -6151,7 +6151,7 @@ englacially	-1	false	null	null	--	null	null	--	-1.0	-1	englacial
 subconsciously	-1	false	null	null	--	true	false	--	1.47E-4	24334	--
 anti-Biblically	-1	false	null	null	--	null	null	--	-1.0	-1	anti-bibly
 unubiquitously	-1	false	null	null	--	null	null	--	-1.0	-1	unubiquite
-Anglicanly	-1	false	null	null	--	null	null	--	-1.0	-1	anglic
+Anglicanly	-1	false	null	null	--	null	null	--	-1.0	-1	anglican
 nonorganically	-1	false	null	null	--	null	null	--	-1.0	-1	nonorgany
 nonplausibly	-1	false	null	null	--	null	null	--	-1.0	-1	nonplausib
 Pharisaically	-1	false	null	null	--	null	null	--	-1.0	-1	pharisay
@@ -6500,7 +6500,7 @@ tenth	-1	false	null	null	--	null	null	--	0.001198	6513	--
 flamingly	-1	false	null	null	--	null	null	--	-1.0	-1	flame
 cheerlessly	-1	false	null	null	--	true	true	--	-1.0	-1	--
 semijuridically	-1	false	null	null	--	null	null	--	-1.0	-1	semijuridy
-unsportsmanly	-1	false	null	null	--	null	null	--	-1.0	-1	unsportsm
+unsportsmanly	-1	false	null	null	--	null	null	--	-1.0	-1	unsportsman
 overtolerantly	-1	false	null	null	--	null	null	--	-1.0	-1	overtole
 uncommunicatively	-1	false	null	null	--	null	null	--	-1.0	-1	uncommune
 rompishly	-1	false	null	null	--	null	null	--	-1.0	-1	romp
@@ -6575,7 +6575,7 @@ anthropomorphously	-1	false	null	null	--	null	null	--	-1.0	-1	anthropomorphe
 fleetly	-1	false	null	null	--	null	null	--	-1.0	-1	--
 graphically	-1	false	null	null	--	true	false	--	2.56E-4	17729	--
 homocentrically	-1	false	null	null	--	null	null	--	-1.0	-1	homocentry
-sanctifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	sanctifie
+sanctifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	sanctify
 dreadfully	-1	false	null	null	--	true	true	--	2.01E-4	20376	--
 interrelatedly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 psychiatrically	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -7164,7 +7164,7 @@ tyrannously	-1	false	null	null	--	null	null	--	-1.0	-1	tyranne
 stoicheiometrically	-1	false	null	null	--	null	null	--	-1.0	-1	stoicheiometry
 darlingly	-1	false	null	null	--	null	null	--	-1.0	-1	dar
 agrobiologically	-1	false	null	null	--	null	null	--	-1.0	-1	agrobiology
-unconsentaneously	-1	false	null	null	--	null	null	--	-1.0	-1	unconsent
+unconsentaneously	-1	false	null	null	--	null	null	--	-1.0	-1	unconsentan
 rightward	-1	false	null	null	--	true	false	--	1.7E-5	69626	--
 unsuicidally	-1	false	null	null	--	null	null	--	-1.0	-1	unsuicidal
 quasi-submissively	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-submise
@@ -7198,7 +7198,7 @@ right	3	false	null	null	Manner	true	false	--	0.092207	111	--
 brimfully	-1	false	null	null	--	null	null	--	-1.0	-1	brim
 philosophically	-1	false	null	null	--	true	false	--	1.38E-4	25214	--
 rompingly	-1	false	null	null	--	null	null	--	-1.0	-1	romp
-undelayingly	-1	false	null	null	--	null	null	--	-1.0	-1	undelaye
+undelayingly	-1	false	null	null	--	null	null	--	-1.0	-1	undelay
 contemnibly	-1	false	null	null	--	null	null	--	-1.0	-1	contemnib
 overattentively	-1	false	null	null	--	null	null	--	-1.0	-1	overattent
 astuciously	-1	false	null	null	--	null	null	--	-1.0	-1	astucy
@@ -7633,7 +7633,7 @@ nonprotectively	-1	false	null	null	--	null	null	--	-1.0	-1	nonprotect
 consummately	-1	false	null	null	--	true	false	--	1.1E-5	85604	--
 uncommensurately	-1	false	null	null	--	null	null	--	-1.0	-1	uncommensurate
 implacably	-1	false	null	null	--	true	false	--	4.7E-5	43620	--
-unenjoyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unenjoye
+unenjoyingly	-1	false	null	null	--	null	null	--	-1.0	-1	unenjoy
 animatedly	-1	false	null	null	--	null	null	--	4.0E-5	47445	--
 inertly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 counterclockwise	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -7655,7 +7655,7 @@ cheerily	-1	false	null	null	--	null	null	--	7.4E-5	35144	--
 overdiligently	-1	false	null	null	--	null	null	--	-1.0	-1	overdilig
 divisively	1	false	null	null	Manner	true	false	--	-1.0	-1	--
 slightly	1	false	null	null	Degree	true	false	--	0.009336	1156	--
-cloyingly	-1	false	null	null	--	null	null	--	-1.0	-1	cloye
+cloyingly	-1	false	null	null	--	null	null	--	-1.0	-1	cloy
 overderisively	-1	false	null	null	--	null	null	--	-1.0	-1	overderise
 weatherwise	2	false	null	null	Viewpoint	null	null	--	-1.0	-1	--
 noncredulously	-1	false	null	null	--	null	null	--	-1.0	-1	noncredule
@@ -7734,9 +7734,9 @@ wheezingly	-1	false	null	null	--	null	null	--	-1.0	-1	wheez
 nonebulliently	-1	false	null	null	--	null	null	--	-1.0	-1	nonebulli
 unrestrictively	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonviscidly	-1	false	null	null	--	null	null	--	-1.0	-1	nonviscid
-pryingly	-1	false	null	null	--	null	null	--	-1.0	-1	prie
+pryingly	-1	false	null	null	--	null	null	--	-1.0	-1	pry
 endlong	-1	false	null	null	--	null	null	--	-1.0	-1	endlong
-explanatively	-1	false	null	null	--	null	null	--	-1.0	-1	expl
+explanatively	-1	false	null	null	--	null	null	--	-1.0	-1	explan
 resolutely	-1	false	null	null	--	true	true	--	2.91E-4	16383	--
 nondeficiently	-1	false	null	null	--	null	null	--	-1.0	-1	nondefici
 wrongfully	-1	false	null	null	--	true	true	--	9.8E-5	30544	--
@@ -7851,7 +7851,7 @@ quickly	3	false	null	null	Manner	true	true	--	0.01303	798	--
 pleasedly	-1	false	null	null	--	null	null	--	-1.0	-1	pleas
 unforcibly	-1	false	null	null	--	null	null	--	-1.0	-1	unforcib
 thick-wittedly	-1	false	null	null	--	null	null	--	-1.0	-1	thick
-unspontaneously	-1	false	null	null	--	null	null	--	-1.0	-1	unspont
+unspontaneously	-1	false	null	null	--	null	null	--	-1.0	-1	unspontan
 nontheosophically	-1	false	null	null	--	null	null	--	-1.0	-1	nontheosophy
 doubly	-1	false	null	null	--	true	false	--	3.74E-4	14013	--
 nonfinitely	-1	false	null	null	--	null	null	--	-1.0	-1	nonfinite
@@ -8210,7 +8210,7 @@ binomially	-1	false	null	null	--	true	false	--	-1.0	-1	--
 dolorimetrically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 observedly	-1	false	null	null	--	null	null	--	-1.0	-1	observ
 insuperably	-1	false	null	null	--	null	null	--	-1.0	-1	--
-semispontaneously	-1	false	null	null	--	null	null	--	-1.0	-1	semispont
+semispontaneously	-1	false	null	null	--	null	null	--	-1.0	-1	semispontan
 anticyclically	-1	false	null	null	--	null	null	--	-1.0	-1	anticycly
 depressingly	-1	false	null	null	--	true	true	--	7.9E-5	34082	--
 actuarially	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -8379,7 +8379,7 @@ unacerbically	-1	false	null	null	--	null	null	--	-1.0	-1	unacerby
 degradingly	-1	false	null	null	--	null	null	--	-1.0	-1	degrade
 feloniously	-1	false	null	null	--	null	null	--	-1.0	-1	felony
 semirarely	-1	false	null	null	--	null	null	--	-1.0	-1	semirare
-justifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	justifie
+justifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	justify
 overwarily	-1	false	null	null	--	null	null	--	-1.0	-1	overwari
 exceeding	-1	false	null	null	--	null	null	--	5.38E-4	11147	--
 satisfactorily	-1	false	null	null	--	true	true	--	5.79E-4	10648	--
@@ -9018,7 +9018,7 @@ thereat	-1	false	null	null	--	null	null	--	-1.0	-1	thereat
 overdescriptively	-1	false	null	null	--	null	null	--	-1.0	-1	overdescript
 superattainably	-1	false	null	null	--	null	null	--	-1.0	-1	superattain
 transcontinentally	-1	false	null	null	--	null	null	--	-1.0	-1	transcontinental
-dallyingly	-1	false	null	null	--	null	null	--	-1.0	-1	dallie
+dallyingly	-1	false	null	null	--	null	null	--	-1.0	-1	dally
 unmutinously	-1	false	null	null	--	null	null	--	-1.0	-1	unmutine
 homeopathically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonmusically	-1	false	null	null	--	null	null	--	-1.0	-1	nonmusy
@@ -9048,7 +9048,7 @@ half-frowningly	-1	false	null	null	--	null	null	--	-1.0	-1	half
 taciturnly	-1	false	null	null	--	null	null	--	-1.0	-1	taciturn
 ocker	-1	false	true	false	--	null	null	--	8.2E-5	33403	--
 bionomically	-1	false	null	null	--	null	null	--	-1.0	-1	bionomy
-edifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	edifie
+edifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	edify
 premorally	-1	false	null	null	--	null	null	--	-1.0	-1	premoral
 incompressibly	-1	false	null	null	--	null	null	--	-1.0	-1	incompressib
 half-instinctively	-1	false	null	null	--	null	null	--	-1.0	-1	half
@@ -9389,7 +9389,7 @@ bridally	-1	false	null	null	--	null	null	--	-1.0	-1	bridal
 sickly	-1	false	null	null	--	null	null	--	2.42E-4	18267	--
 atop	-1	false	null	null	--	null	null	--	1.47E-4	24306	--
 pregnantly	-1	false	null	null	--	true	false	--	-1.0	-1	--
-vilifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	vilifie
+vilifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	vilify
 Christianly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 ante-mortem	-1	false	null	null	--	null	null	--	-1.0	-1	ante-mortem
 titularly	-1	false	null	null	--	null	null	--	-1.0	-1	titular
@@ -9482,7 +9482,7 @@ wrigglingly	-1	false	null	null	--	null	null	--	-1.0	-1	wrig
 forthright	-1	false	null	null	--	null	null	--	1.94E-4	20820	--
 subtilely	-1	false	null	null	--	null	null	--	-1.0	-1	subtile
 nonsystematically	-1	false	null	null	--	true	false	--	-1.0	-1	--
-cryingly	-1	false	null	null	--	null	null	--	-1.0	-1	crie
+cryingly	-1	false	null	null	--	null	null	--	-1.0	-1	cry
 half-admittedly	-1	false	null	null	--	null	null	--	-1.0	-1	half
 dishonourably	-1	false	null	null	--	null	null	--	-1.0	-1	--
 boozily	-1	false	null	null	--	null	null	--	-1.0	-1	boozi
@@ -9548,7 +9548,7 @@ unconceitedly	-1	false	null	null	--	null	null	--	-1.0	-1	unconceite
 existentialistically	-1	false	null	null	--	null	null	--	-1.0	-1	existentialisty
 amorphously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 inventively	-1	false	null	null	--	true	true	--	-1.0	-1	--
-unmanfully	-1	false	null	null	--	null	null	--	-1.0	-1	unm
+unmanfully	-1	false	null	null	--	null	null	--	-1.0	-1	unman
 overhostilely	-1	false	null	null	--	null	null	--	-1.0	-1	overhostile
 girlishly	2	false	null	null	Manner	null	null	--	1.2E-5	82878	--
 nonfavorably	-1	false	null	null	--	null	null	--	-1.0	-1	nonfave
@@ -9754,7 +9754,7 @@ overcritically	-1	false	null	null	--	null	null	--	-1.0	-1	overcrity
 undiagrammatically	-1	false	null	null	--	null	null	--	-1.0	-1	undiagrammaty
 boastfully	1	false	null	null	Manner	null	null	--	-1.0	-1	--
 glisteningly	-1	false	null	null	--	true	false	--	-1.0	-1	--
-unclannishly	-1	false	null	null	--	null	null	--	-1.0	-1	uncl
+unclannishly	-1	false	null	null	--	null	null	--	-1.0	-1	unclan
 inadequately	-1	false	null	null	--	true	true	--	2.16E-4	19592	--
 unloathly	-1	false	null	null	--	null	null	--	-1.0	-1	unloath
 achromatically	-1	false	null	null	--	true	false	--	-1.0	-1	--
@@ -9799,7 +9799,7 @@ agonizedly	-1	false	null	null	--	null	null	--	-1.0	-1	agone
 maturely	-1	false	null	null	--	true	true	--	-1.0	-1	--
 faithfully	2	false	null	null	Manner	true	false	--	4.41E-4	12598	--
 profusely	-1	false	null	null	--	true	true	--	1.07E-4	28950	--
-bemoaningly	-1	false	null	null	--	null	null	--	-1.0	-1	bemo
+bemoaningly	-1	false	null	null	--	null	null	--	-1.0	-1	bemoan
 airtightly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 quasi-awfully	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-aw
 tantalisingly	-1	false	null	null	--	true	false	--	7.3E-5	35359	--
@@ -9901,7 +9901,7 @@ nonconcordant	-1	false	null	null	--	null	null	--	-1.0	-1	nonconcord
 mediately	-1	false	null	null	--	true	false	--	-1.0	-1	--
 encumberingly	-1	false	null	null	--	null	null	--	-1.0	-1	encumbere
 digressingly	-1	false	null	null	--	null	null	--	-1.0	-1	digres
-consentaneously	-1	false	null	null	--	null	null	--	-1.0	-1	consent
+consentaneously	-1	false	null	null	--	null	null	--	-1.0	-1	consentan
 emulously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 pseudoregally	-1	false	null	null	--	null	null	--	-1.0	-1	pseudoregal
 unwistfully	-1	false	null	null	--	null	null	--	-1.0	-1	unw
@@ -9955,7 +9955,7 @@ precosmically	-1	false	null	null	--	null	null	--	-1.0	-1	precosmy
 anyplace	2	false	null	null	Place	null	null	--	-1.0	-1	--
 fervently	2	false	null	null	Manner	true	true	--	2.03E-4	20261	--
 unversatilely	-1	false	null	null	--	null	null	--	-1.0	-1	unversatile
-vyingly	-1	false	null	null	--	null	null	--	-1.0	-1	vie
+vyingly	-1	false	null	null	--	null	null	--	-1.0	-1	vy
 nonobstetrically	-1	false	null	null	--	null	null	--	-1.0	-1	nonobstetry
 availably	-1	false	null	null	--	true	false	--	-1.0	-1	--
 noninstinctively	-1	false	null	null	--	null	null	--	-1.0	-1	noninstinct
@@ -10230,7 +10230,7 @@ lucently	-1	false	null	null	--	null	null	--	-1.0	-1	luc
 transpersonally	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unpotently	-1	false	null	null	--	null	null	--	-1.0	-1	unpot
 charlatanically	-1	false	null	null	--	null	null	--	-1.0	-1	charlatany
-mollifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	mollifie
+mollifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	mollify
 considering	-1	false	null	null	--	null	null	--	0.004319	2450	--
 unscripturally	-1	false	null	null	--	null	null	--	-1.0	-1	unscriptural
 basally	-1	false	null	null	--	true	false	--	1.1E-5	84020	--
@@ -10296,7 +10296,7 @@ nosily	1	false	null	null	Manner	null	null	--	-1.0	-1	--
 bronchially	-1	false	null	null	--	true	false	--	-1.0	-1	--
 immitigably	-1	false	null	null	--	null	null	--	-1.0	-1	immitig
 belatedly	-1	false	null	null	--	true	false	--	2.17E-4	19527	--
-precontemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	precontempor
+precontemporaneously	-1	false	null	null	--	null	null	--	-1.0	-1	precontemporan
 deceitfully	-1	false	null	null	--	true	false	--	-1.0	-1	--
 quasi-advantageously	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-advanta
 sternward	-1	false	null	null	--	null	null	--	-1.0	-1	sternward
@@ -10532,7 +10532,7 @@ alternately	-1	false	null	null	--	true	false	--	2.5E-4	17931	--
 vertically	2	false	null	null	Manner	true	false	--	4.29E-4	12842	--
 half-successfully	-1	false	null	null	--	null	null	--	-1.0	-1	half
 squeakingly	-1	false	null	null	--	null	null	--	-1.0	-1	squeak
-mortifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	mortifie
+mortifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	mortify
 part	-1	false	null	null	--	true	false	--	0.053101	167	--
 uncohesively	-1	false	null	null	--	null	null	--	-1.0	-1	uncohese
 east	-1	false	null	null	--	true	false	--	0.018552	544	--
@@ -10562,7 +10562,7 @@ inby	-1	false	null	null	--	null	null	--	-1.0	-1	inby
 chummily	-1	false	null	null	--	null	null	--	-1.0	-1	chummi
 diffractively	-1	false	null	null	--	true	false	--	-1.0	-1	--
 agamogenetically	-1	false	null	null	--	null	null	--	-1.0	-1	agamogenety
-unmannishly	-1	false	null	null	--	null	null	--	-1.0	-1	unm
+unmannishly	-1	false	null	null	--	null	null	--	-1.0	-1	unman
 blankly	-1	false	null	null	--	true	false	--	2.64E-4	17384	--
 sanitarily	-1	false	null	null	--	true	false	--	-1.0	-1	--
 delightfully	3	false	null	null	Manner	true	true	--	1.87E-4	21236	--
@@ -11060,7 +11060,7 @@ stanchlessly	-1	false	null	null	--	null	null	--	-1.0	-1	stanch
 unperceptively	-1	false	null	null	--	null	null	--	-1.0	-1	unpercept
 undogmatically	-1	false	null	null	--	null	null	--	-1.0	-1	undogmaty
 muddlingly	-1	false	null	null	--	null	null	--	-1.0	-1	mud
-prayingly	-1	false	null	null	--	null	null	--	-1.0	-1	praye
+prayingly	-1	false	null	null	--	null	null	--	-1.0	-1	pray
 preacquisitively	-1	false	null	null	--	null	null	--	-1.0	-1	preacquise
 tipsily	-1	false	null	null	--	null	null	--	-1.0	-1	tipsi
 commodiously	-1	false	null	null	--	null	null	--	-1.0	-1	commody
@@ -11279,7 +11279,7 @@ financially	2	false	null	null	Manner	true	false	--	9.08E-4	7838	--
 derelictly	-1	false	null	null	--	null	null	--	-1.0	-1	derelict
 unpreciously	-1	false	null	null	--	null	null	--	-1.0	-1	unprecy
 unsafely	-1	false	null	null	--	true	true	--	-1.0	-1	--
-delayingly	-1	false	null	null	--	null	null	--	-1.0	-1	delaye
+delayingly	-1	false	null	null	--	null	null	--	-1.0	-1	delay
 superstoically	-1	false	null	null	--	null	null	--	-1.0	-1	superstoy
 subofficially	-1	false	null	null	--	null	null	--	-1.0	-1	subofficial
 concealedly	-1	false	null	null	--	null	null	--	-1.0	-1	conceal
@@ -11337,7 +11337,7 @@ overzealously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonchivalrously	-1	false	null	null	--	null	null	--	-1.0	-1	nonchivalre
 sedately	1	false	null	null	Manner	null	null	--	5.4E-5	41311	--
 contumaciously	-1	false	null	null	--	null	null	--	-1.0	-1	--
-unhumanly	-1	false	null	null	--	null	null	--	-1.0	-1	unhum
+unhumanly	-1	false	null	null	--	null	null	--	-1.0	-1	unhuman
 unsedimentally	-1	false	null	null	--	null	null	--	-1.0	-1	unsedimental
 salutarily	-1	false	null	null	--	true	false	--	-1.0	-1	--
 inwards	-1	false	null	null	--	true	false	--	3.32E-4	15083	--
@@ -11439,7 +11439,7 @@ ceaselessly	-1	false	null	null	--	true	false	--	5.6E-5	40450	--
 quasi-validly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-valid
 nonverminously	-1	false	null	null	--	null	null	--	-1.0	-1	nonvermine
 immeasurably	2	false	null	null	Manner	true	false	--	1.1E-4	28445	--
-enjoyingly	-1	false	null	null	--	null	null	--	-1.0	-1	enjoye
+enjoyingly	-1	false	null	null	--	null	null	--	-1.0	-1	enjoy
 shiningly	-1	false	null	null	--	null	null	--	-1.0	-1	shine
 infelicitously	-1	false	null	null	--	null	null	--	-1.0	-1	--
 quasi-luxuriously	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-luxury
@@ -11621,7 +11621,7 @@ floppily	-1	false	null	null	--	null	null	--	-1.0	-1	floppi
 undefensively	-1	false	null	null	--	null	null	--	-1.0	-1	undefens
 reducibly	-1	false	null	null	--	null	null	--	-1.0	-1	reducib
 cruciformly	-1	false	null	null	--	null	null	--	-1.0	-1	cruciform
-unimmanently	-1	false	null	null	--	null	null	--	-1.0	-1	unimm
+unimmanently	-1	false	null	null	--	null	null	--	-1.0	-1	unimman
 discommodiously	-1	false	null	null	--	null	null	--	-1.0	-1	discommody
 malapertly	-1	false	null	null	--	null	null	--	-1.0	-1	malapert
 antidogmatically	-1	false	null	null	--	null	null	--	-1.0	-1	antidogmaty
@@ -11653,7 +11653,7 @@ upright	3	false	null	null	Manner	true	true	--	0.001335	6026	--
 incorrectly	1	false	null	null	Manner	true	false	--	2.81E-4	16715	--
 malignantly	-1	false	null	null	--	true	false	--	-1.0	-1	--
 quasi-inevitably	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-inevit
-open-eyedly	-1	false	null	null	--	null	null	--	-1.0	-1	open-eye
+open-eyedly	-1	false	null	null	--	null	null	--	-1.0	-1	open-ey
 underisively	-1	false	null	null	--	null	null	--	-1.0	-1	underise
 unambitiously	-1	false	null	null	--	null	null	--	-1.0	-1	unambity
 untastefully	-1	false	null	null	--	null	null	--	-1.0	-1	untaste
@@ -11793,7 +11793,7 @@ ungraciously	-1	false	null	null	--	true	false	--	3.8E-5	48384	--
 nonsocially	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unpoetically	-1	false	null	null	--	null	null	--	-1.0	-1	unpoety
 assai	-1	false	null	null	--	null	null	--	-1.0	-1	assai
-qualifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	qualifie
+qualifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	qualify
 up-to-dately	-1	false	null	null	--	null	null	--	-1.0	-1	up
 biographically	-1	false	null	null	--	true	false	--	-1.0	-1	--
 defenselessly	-1	false	null	null	--	null	null	--	-1.0	-1	defense
@@ -12398,7 +12398,7 @@ nonscholastically	-1	false	null	null	--	null	null	--	-1.0	-1	nonscholasty
 spinelessly	-1	false	null	null	--	true	true	--	-1.0	-1	--
 horridly	-1	false	null	null	--	null	null	--	-1.0	-1	--
 unenforcedly	-1	false	null	null	--	null	null	--	-1.0	-1	unenforc
-steadyingly	-1	false	null	null	--	null	null	--	-1.0	-1	steadie
+steadyingly	-1	false	null	null	--	null	null	--	-1.0	-1	steady
 homogeneously	-1	false	null	null	--	false	false	--	2.2E-5	62243	--
 dyslogistically	-1	false	null	null	--	null	null	--	-1.0	-1	dyslogisty
 noneternally	-1	false	null	null	--	null	null	--	-1.0	-1	noneternal
@@ -12572,7 +12572,7 @@ flirtatiously	-1	false	null	null	--	null	null	--	1.4E-5	76576	--
 downstream	-1	false	null	null	--	true	true	--	4.77E-4	12030	--
 sarcastically	-1	false	null	null	--	true	true	--	1.96E-4	20696	--
 indiscerptibly	-1	false	null	null	--	null	null	--	-1.0	-1	indiscerptib
-nongratifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	nongratifie
+nongratifyingly	-1	false	null	null	--	null	null	--	-1.0	-1	nongratify
 rattling	-1	false	null	null	--	true	false	--	3.45E-4	14744	--
 spryly	-1	false	null	null	--	null	null	--	-1.0	-1	spry
 memoriter	-1	false	true	false	--	null	null	--	-1.0	-1	memorite
@@ -12786,7 +12786,7 @@ faintingly	-1	false	null	null	--	null	null	--	-1.0	-1	faint
 applicably	-1	false	null	null	--	true	true	--	-1.0	-1	--
 indeterminably	-1	false	null	null	--	null	null	--	-1.0	-1	--
 antitypically	-1	false	null	null	--	null	null	--	-1.0	-1	antitypy
-superhumanly	-1	false	null	null	--	null	null	--	-1.0	-1	superhum
+superhumanly	-1	false	null	null	--	null	null	--	-1.0	-1	superhuman
 unripely	-1	false	null	null	--	null	null	--	-1.0	-1	unripe
 implicitly	-1	false	null	null	--	true	false	--	5.73E-4	10728	--
 quasi-everlastingly	-1	false	null	null	--	null	null	--	-1.0	-1	quasi-everlast
@@ -13127,7 +13127,7 @@ viscidly	-1	false	null	null	--	null	null	--	-1.0	-1	viscid
 insupportably	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unrealistically	-1	false	null	null	--	true	true	--	4.7E-5	43542	--
 consensually	-1	false	null	null	--	true	false	--	-1.0	-1	--
-yeomanly	-1	false	null	null	--	null	null	--	-1.0	-1	yeom
+yeomanly	-1	false	null	null	--	null	null	--	-1.0	-1	yeoman
 deep	1	false	null	null	Degree	false	false	--	0.011257	948	--
 biuniquely	-1	false	null	null	--	null	null	--	-1.0	-1	biunique
 elsewhither	-1	false	true	false	--	null	null	--	-1.0	-1	elsewhith
@@ -13192,7 +13192,7 @@ nonmilitantly	-1	false	null	null	--	null	null	--	-1.0	-1	nonmilit
 insatiably	-1	false	null	null	--	null	null	--	-1.0	-1	--
 sine die	-1	false	null	null	--	null	null	--	-1.0	-1	sine die
 unreflectingly	-1	false	null	null	--	null	null	--	-1.0	-1	unreflect
-subspontaneously	-1	false	null	null	--	null	null	--	-1.0	-1	subspont
+subspontaneously	-1	false	null	null	--	null	null	--	-1.0	-1	subspontan
 arrestingly	-1	false	null	null	--	null	null	--	-1.0	-1	ar
 mayhappen	-1	false	null	null	--	null	null	--	-1.0	-1	mayhapp
 barefoot	-1	false	null	null	--	true	false	--	2.42E-4	18316	--
@@ -13265,7 +13265,7 @@ overpartially	-1	false	null	null	--	null	null	--	-1.0	-1	overpartial
 kittenishly	-1	false	null	null	--	null	null	--	-1.0	-1	kitt
 inarguably	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonphonetically	-1	false	null	null	--	null	null	--	-1.0	-1	nonphonety
-nonextraneously	-1	false	null	null	--	null	null	--	-1.0	-1	nonextr
+nonextraneously	-1	false	null	null	--	null	null	--	-1.0	-1	nonextran
 stylishly	3	false	null	null	Manner	null	null	--	4.2E-5	46235	--
 hyperobtrusively	-1	false	null	null	--	null	null	--	-1.0	-1	obtruse
 circumspectively	-1	false	null	null	--	null	null	--	-1.0	-1	circumspect
@@ -13285,7 +13285,7 @@ uncaustically	-1	false	null	null	--	null	null	--	-1.0	-1	uncausty
 sublabially	-1	false	null	null	--	true	false	--	-1.0	-1	--
 nonadjustably	-1	false	null	null	--	null	null	--	-1.0	-1	nonadjust
 preoriginally	-1	false	null	null	--	null	null	--	-1.0	-1	preoriginal
-cosmopolitanly	-1	false	null	null	--	null	null	--	-1.0	-1	cosmopolit
+cosmopolitanly	-1	false	null	null	--	null	null	--	-1.0	-1	cosmopolitan
 nonsynchronously	-1	false	null	null	--	true	false	--	-1.0	-1	--
 unrobustly	-1	false	null	null	--	null	null	--	-1.0	-1	unrobust
 ungenerously	-1	false	null	null	--	null	null	--	-1.0	-1	ungenere

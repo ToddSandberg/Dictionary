@@ -30,6 +30,7 @@ public class Noun implements PartOfSpeech,Serializable{
     public String baseForm= "--" ,animacy = null;
     public float howCommon = -1;
     public long commonRank = -1;
+    public String propbank = "--";
     public transient static String c = "";
 	public Noun(){
 		this("");

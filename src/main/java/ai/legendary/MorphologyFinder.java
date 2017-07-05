@@ -437,7 +437,7 @@ public class MorphologyFinder {
                 
                 traits.add("present tense");
             }
-            if (cvc() || ends("it") || ends("ns"))
+            if ((cvc() || ends("it") || ends("ns")) && !ends("y"))
                 letters.add('e');
             else if (ends("bl"))
                 letters.add('e');
@@ -446,11 +446,11 @@ public class MorphologyFinder {
             if (doubleletter(letters.size() - 1) && cons(letters.size()-1)) {
                 removeX(1);
             }
-            if (ends("y")) {
+            /*if (ends("y")) { //slaying
                 removeX(1);
                 letters.add('i');
                 letters.add('e');
-            }
+            }*/
             if (ends("i")) {
                 removeX(1);
                 letters.add('y');
@@ -820,10 +820,7 @@ public class MorphologyFinder {
             suffs.add("an");
             removeX(3);
         }
-        if(ends("an") && !ends("ean")){
-            suffs.add("an");
-            removeX(2);
-        }
+        //an think of ran and ban
         if(ends("age") && !ends("anage")){
             checkSuff("age"); 
         }
