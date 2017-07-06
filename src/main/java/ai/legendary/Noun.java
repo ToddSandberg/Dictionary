@@ -31,6 +31,7 @@ public class Noun implements PartOfSpeech,Serializable{
     public float howCommon = -1;
     public long commonRank = -1;
     public String propbank = "--";
+    public String frame = "--";
     public transient static String c = "";
 	public Noun(){
 		this("");
@@ -167,7 +168,7 @@ public class Noun implements PartOfSpeech,Serializable{
                 + ", AnAbbreviationFor=" + anAbbreviationFor + ", AbbreviatedFrom=" + abbreviatedFrom
                 + ", AnAcronymFor=" + anAcronymFor+ ", IrregularPluralForm="+ irregularPluralForm + ", IsCompound=" + isCompound + ", IsCountable="
                 + isCountable + ", acceptsZeroArticle=" + acceptsZeroArticle + ", IsProperName="
-                + isProperName + ", Compliments=" + compliments + ", BaseForm="+baseForm + ", Animacy=" + animacy + ", location="+location+", howCommon="+howCommon+ ", commonRank="+commonRank;
+                + isProperName + ", Compliments=" + compliments + ", BaseForm="+baseForm + ", Animacy=" + animacy + ", location="+location+", howCommon="+howCommon+ ", commonRank="+commonRank + ", propBank=" + propbank + ", frame="+ frame;
 	}
 	public static String checker(String add){
         try {

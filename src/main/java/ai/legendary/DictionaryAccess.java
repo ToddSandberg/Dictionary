@@ -1,8 +1,12 @@
 package ai.legendary;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -348,6 +352,54 @@ public class DictionaryAccess {
             it.remove(); // avoids a ConcurrentModificationException
         }
         return null;
+    }
+    /**
+     * Only gets adjectives at the moment
+     * @return
+     */
+    public HashMap<Long,String> getMostFrequent(){
+        HashMap<String,Adjective> adj = adjectiveDictionary;
+        HashMap<Long,String> temp = new HashMap<Long,String>();
+        Iterator it = adj.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            temp.put(((Adjective)pair.getValue()).commonRank,(String) pair.getKey());
+            it.remove();
+        }
+        return temp;
+    }
+    /**
+     * based only on the most frequent method
+     * @param temp
+     */
+    public void sortAndPrintHashMap(HashMap temp){
+        Object[] a = temp.entrySet().toArray();
+        Arrays.sort(a, new Comparator<Object>() {
+            public int compare(Object o1, Object o2) {
+                return (((Map.Entry<Long, String>) o1).getKey()
+                           .compareTo(((Map.Entry<Long, String>) o2).getKey()));
+            }
+        });
+        try{
+        PrintWriter print = new PrintWriter(new File("outputs/MostCommonAdjective.txt"));
+        print.println("Top 500 Adjectives From Most Common to Least");
+        int y=1;
+        int z=500;
+        for (int x=0;x<z;x++) {
+            if(((Map.Entry<Long, String>) a[x]).getKey()!=-1){
+                print.println(/*((Map.Entry<Long, String>) a[x]).getKey()*/ y + " : "
+                    + ((Map.Entry<Long, String>) a[x]).getValue());
+                y++;
+            }
+            else{
+                z++;
+            }
+        }
+        print.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
     public String clean(String s){
         Properties props = new Properties();

@@ -9,6 +9,17 @@ public class Adverb implements PartOfSpeech,Serializable{
     private static final long serialVersionUID = -3581083482214729589L;
     public String Adverb = "Adverb";
     /**
+     * 1-Degree or Extent
+     * 2-Points of Time
+     * 3-Relationships in Time
+     * 4-Frequency
+     * 5-Purpose
+     * 6-Place
+     * 7-Manner
+     * 8-Other
+     */
+    public int wordSenseID = -1;
+    /**
      * Base ID = 2
      */
 	public int advIntensiferID = -1;

@@ -63,6 +63,7 @@ public class DictionaryAnalyzer {
 	public double verbBaseForm;
 	public double adjectiveBaseForm;
 	public double adverbBaseForm;
+	public double adverbWordSenseID;
 	public DictionaryAnalyzer (HashMap<String, Noun> nounDictionary,HashMap<String, Verb> verbDictionary,HashMap<String, Adjective> adjectiveDictionary,HashMap<String, Adverb> adverbDictionary,HashMap<String, Conjunction> conjunctionDictionary,HashMap<String, Determiner> determinerDictionary,HashMap<String, Interjection> interjectionDictionary,HashMap<String, Preposition> prepositionDictionary,HashMap<String, Pronoun> pronounDictionary,HashMap<String, Quantifier> quantifierDictionary){
 		try {
 		    double totalNouns =0;
@@ -127,6 +128,7 @@ public class DictionaryAnalyzer {
             double vbase = 0;
             double abase = 0;
             double advbase = 0;
+            double advwrdsns = 0;
             
             double nounmasc=0;
             double nounfem=0;
@@ -296,6 +298,9 @@ public class DictionaryAnalyzer {
                         }
                         if(!a.baseForm.equals("--")){
                             advbase++;
+                        }
+                        if(a.wordSenseID != -1){
+                            advwrdsns++;
                         }
 					}
             Iterator detit = determinerDictionary.entrySet().iterator();
@@ -518,6 +523,9 @@ public class DictionaryAnalyzer {
             /*Adverb base form*/
             adverbBaseForm = advbase/totalAdverbs;
             printer.println("- Percentage of base form defined: "+df.format((adverbBaseForm*100))+"%");
+            /*Adverb word sense*/
+            adverbWordSenseID = advwrdsns/totalAdverbs;
+            printer.println("- Percentage of wordSenseID defined: "+df.format((adverbWordSenseID*100))+"%");
             
             
             

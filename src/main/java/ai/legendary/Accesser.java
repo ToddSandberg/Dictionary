@@ -3,8 +3,8 @@ package ai.legendary;
 public class Accesser {
     public static void main(String [] args){
         DictionaryAccess acc = new DictionaryAccess();
-        System.out.println(acc.getWordInfo("withheld"));
-        System.out.println(acc.changePOS("disgusting", "adjective", "adjective").toString());
+        System.out.println(acc.getWordInfo("abandon"));
+        //System.out.println(acc.changePOS("disgusting", "adjective", "adjective").toString());
         //System.out.println(acc.changePOS("forgivable", "adjective", "verb").toString());
         //System.out.println(acc.changePOS("cat", "noun", "adjective").toString());
         //System.out.println(acc.getWordInfo("gave"));
@@ -15,5 +15,7 @@ public class Accesser {
         //System.out.println(acc.getMultipleWordInfo("you are a person"));
         //System.out.println(acc.getMultipleWordInfo("there must be a bath telephone and TV in the room"));
         //System.out.println(acc.getMultipleWordInfo("what is going on ?"));
+        //HashMap<Long,String> temp = acc.getMostFrequent();
+        //acc.sortAndPrintHashMap(temp);
     }
 }

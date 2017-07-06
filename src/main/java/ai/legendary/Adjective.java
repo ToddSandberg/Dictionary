@@ -28,6 +28,7 @@ public class Adjective implements PartOfSpeech, Serializable {
     public long commonRank = -1;
     public String baseForm = "--";
     public String propbank = "--";
+    public String frame = "--";
 
     public Adjective() {
         this("");
@@ -143,7 +144,7 @@ public class Adjective implements PartOfSpeech, Serializable {
                 + worksInPredicativePosition + ", HasDiminutiveSuffix="
                 + hasDiminutiveSuffix + ", IsProper=" + isProper + ", Compliments="
                 + compliments+ ", MustUseMoreMost="+mustUseMoreMost + ", howCommon="+howCommon + ", commonRank="+commonRank
-                + ", baseForm="+baseForm;
+                + ", baseForm="+baseForm + ", propBank="+propbank + ", frame="+frame;
     }
 
 }

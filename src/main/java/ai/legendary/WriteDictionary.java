@@ -140,21 +140,12 @@ public class WriteDictionary {
             // Implements locations
             locations();
             printer.println("- locations.txt implemented");
-            // implements which words are common
-            frequency();
-            printer.println("- Word_frequency_list.txt implemented");
-            // implements colors
-            colors();
-            printer.println("- colors.txt implemented");
             //implement verbnet
             verbnet();
             printer.println("- verbnet implemented");
             //implements ADJADV.txt from nombank
             adjadv();
             printer.println("- ADJADV.txt from nombank implemented");
-            // Implements SPECIALIST LEXICON
-            speclexicon();
-            printer.println("- LEXICON.txt implemented");
             //Implements propBank
             propBank();
             printer.println("- propBank implemented");
@@ -164,6 +155,15 @@ public class WriteDictionary {
             //implements framenet
             framenet();
             printer.println("- implementing fn16lexunits.ttl");
+            // implements colors
+            colors();
+            printer.println("- colors.txt implemented");
+            // Implements SPECIALIST LEXICON
+            speclexicon();
+            printer.println("- LEXICON.txt implemented");
+            // implements which words are common
+            frequency();
+            printer.println("- Word_frequency_list.txt implemented");
             
             printer.println("## Document Output Formats:");
             printer.println(
@@ -252,22 +252,22 @@ public class WriteDictionary {
             File nouns = new File("outputs/nouns.tsv");
             PrintWriter nounprinter = new PrintWriter(nouns);
             nounprinter.println(
-                    "Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank");
+                    "Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank\tframe");
             // adjectiveprinter setup
             File adjectives = new File("outputs/adjectives.tsv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm\tlight\tpropBank");
+                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm\tlight\tpropBank\tframe");
             // verbprinter setup
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tverbNet\twordNetID\tpropBank");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tverbNet\twordNetID\tpropBank\tframe");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
             adverbprinter.println(
-                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm\thowCommon\tcommonRank\tbaseForm");
+                    "Word\tAdvIntensifierID\tIsRelativeAdverb\tIsComperativeAdverb\tIsSuperlativeAdverb\tAdvIntensifier\tNoCompOrSupForm\tMustUseMoreMost\tIrregularForm\thowCommon\tcommonRank\tbaseForm\twordSenseID");
             // conjunctionprinter setup
             File conjunctions = new File("outputs/conjunctions.tsv");
             PrintWriter conjunctionprinter = new PrintWriter(conjunctions);
@@ -314,7 +314,7 @@ public class WriteDictionary {
                         + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
                         + n.compliments + "\t" + n.baseForm + "\t" + n.animacy
                         + "\t" + n.location + "\t" + n.howCommon + "\t"
-                        + n.commonRank);
+                        + n.commonRank + "\t" + n.frame);
             }
             Iterator adjit = adjectiveDictionary.entrySet().iterator();
             while (adjit.hasNext()) {
@@ -333,7 +333,7 @@ public class WriteDictionary {
                         + a.hasDiminutiveSuffix + "\t" + a.isProper + "\t"
                         + a.compliments + "\t" + a.mustUseMoreMost + "\t"
                         + a.adjectiveIntensifierID + "\t" + a.howCommon + "\t"
-                        + a.commonRank + "\t" + a.baseForm);
+                        + a.commonRank + "\t" + a.baseForm + "\t" + a.frame);
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while (verbit.hasNext()) {
@@ -347,7 +347,7 @@ public class WriteDictionary {
                         + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
                         + "\t" + v.phrasal + "\t" + v.isInfinitive + "\t"
                         + v.howCommon + "\t" + v.commonRank + "\t"
-                        + v.baseForm + "\t" + v.light + "\t" + v.verbnet + "\t" + v.wordNetID);
+                        + v.baseForm + "\t" + v.light + "\t" + v.verbnet + "\t" + v.wordNetID +"\t"+v.propbank +"\t"+v.frame);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
@@ -363,7 +363,7 @@ public class WriteDictionary {
                         + a.advIntensifier + "\t" + a.noCompOrSuperForm + "\t"
                         + a.mustUseMoreMost + "\t" + a.irregularForm + "\t"
                         + a.howCommon + "\t" + a.commonRank + "\t"
-                        + a.baseForm);
+                        + a.baseForm + "\t" + a.wordSenseID);
             }
             Iterator conjit = conjunctionDictionary.entrySet().iterator();
             while (conjit.hasNext()) {
@@ -629,7 +629,23 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Noun) part).howCommon;
                     }
-                    p.propbank += ((Noun) part).propbank;
+                    if(!((Noun) part).baseForm.equals("--")){
+                        p.baseForm = ((Noun) part).baseForm;
+                    }
+                    if(!((Noun) part).propbank.equals("--")){
+                        if(p.propbank.equals("--")){
+                            p.propbank = ((Noun) part).propbank + "|";
+                        }else{
+                            p.propbank += ((Noun) part).propbank + "|";
+                        }
+                    }
+                    if(!((Noun) part).frame.equals("--")){
+                        if(p.frame.equals("--")){
+                            p.frame = ((Noun) part).frame + "|";
+                        }else{
+                            p.frame += ((Noun) part).frame + "|";
+                        }
+                    }
                     nounDictionary.put(w,p);
                 }
                 else {
@@ -686,10 +702,26 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Adjective) part).howCommon;
                     }
-                    if (p.baseForm.equals("--")) {
+                    if(!((Adjective) part).baseForm.equals("--")){
                         p.baseForm = ((Adjective) part).baseForm;
                     }
-                    p.propbank += ((Adjective) part).propbank;
+                    if(!((Adjective) part).propbank.equals("--")){
+                        if(p.propbank.equals("--")){
+                            p.propbank = ((Adjective) part).propbank + "|";
+                        }
+                        else{
+                            p.propbank += ((Adjective) part).propbank + "|";
+                        }
+                    }
+                    if(!((Adjective) part).frame.equals("--")){
+                        if(p.frame.equals("--")){
+                            p.frame = ((Adjective) part).frame +"|";
+                        }
+                        else{
+                            p.frame += ((Adjective) part).frame + "|";
+                        }
+                    }
+                    adjectiveDictionary.put(w, p);
                 }
                 else {
                     adjectiveDictionary.put(w, (Adjective) part);
@@ -725,9 +757,14 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Adverb) part).howCommon;
                     }
-                    if (!p.baseForm.equals("--")) {
+                    if(p.wordSenseID == -1){
+                        p.wordSenseID = ((Adverb) part).wordSenseID;
+                    }
+                    if(!((Adverb) part).baseForm.equals("--")){
                         p.baseForm = ((Adverb) part).baseForm;
                     }
+                    
+                    adverbDictionary.put(w, p);
                 }
                 else {
                     adverbDictionary.put(w, (Adverb) part);
@@ -797,6 +834,7 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Preposition) part).howCommon;
                     }
+                    prepositionDictionary.put(w, p);
                 }
                 else {
                     prepositionDictionary.put(w, (Preposition) part);
@@ -823,6 +861,7 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Pronoun) part).howCommon;
                     }
+                    pronounDictionary.put(w, p);
                 }
                 else {
                     pronounDictionary.put(w, (Pronoun) part);
@@ -834,8 +873,11 @@ public class WriteDictionary {
                     if (p.verbType.equals("--")) {
                         p.verbType = ((Verb) part).verbType;
                     }
-                    if (p.transivity.equals("--")) {
-                        p.transivity = ((Verb) part).transivity;
+                    if(!((Verb) part).transivity.equals("--")){
+                        if(p.transivity.equals("--"))
+                            p.transivity = ((Verb) part).transivity +"|";
+                        else
+                            p.transivity += ((Verb) part).transivity+"|";
                     }
                     if (p.tense.equals("--")) {
                         p.tense = ((Verb) part).tense;
@@ -858,13 +900,34 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Verb) part).howCommon;
                     }
-                    if (p.baseForm.equals("--")) {
+                    if(!((Verb) part).baseForm.equals("--")){
                         p.baseForm = ((Verb) part).baseForm;
                     }
-                        p.wordNetID += ((Verb) part).wordNetID +" ";
-                        p.verbnet += ((Verb) part).verbnet;
-                        p.propbank += ((Verb) part).propbank;
-                    
+                    if(!((Verb) part).wordNetID.equals("--")){
+                        if(p.wordNetID.equals("--"))
+                            p.wordNetID = ((Verb) part).wordNetID + "|";
+                        else if(!p.wordNetID.contains(((Verb) part).wordNetID))
+                            p.wordNetID += ((Verb) part).wordNetID + "|";
+                    }
+                    if(!((Verb) part).verbnet.equals("--")){
+                        if(p.verbnet.equals("--"))
+                            p.verbnet = ((Verb) part).verbnet + "|";
+                        else
+                            p.verbnet += ((Verb) part).verbnet + "|";
+                    }
+                    if(!((Verb) part).propbank.equals("--")){
+                        if(p.propbank.equals("--"))
+                            p.propbank = ((Verb) part).propbank + "|";
+                        else
+                            p.propbank += ((Verb) part).propbank + "|";
+                    }
+                    if(!((Verb) part).frame.equals("--")){
+                        if(p.frame.equals("--"))
+                            p.frame = ((Verb) part).frame + "|";
+                        else
+                            p.frame += ((Verb) part).frame + "|";
+                    }
+                        verbDictionary.put(w, p);
                 }
                 else {
                     verbDictionary.put(w, (Verb) part);
@@ -882,6 +945,7 @@ public class WriteDictionary {
                     if (q.howCommon == -1) {
                         q.howCommon = ((Quantifier) part).howCommon;
                     }
+                    quantifierDictionary.put(w, q);
                 }
                 else {
                     quantifierDictionary.put(w, (Quantifier) part);
@@ -2023,12 +2087,10 @@ public class WriteDictionary {
                     merge(word, adv);
                     if (word.endsWith("ly")) {
                         String wordadj = word.substring(0, word.length() - 2);
-                        if (adjectiveDictionary.containsKey(wordadj)) {
                             Adjective adj = new Adjective(wordadj);
                             adj.adjectiveIntensifierID = (Integer
                                     .parseInt(split[2])) + 2;
                             merge(wordadj, adj);
-                        }
                     }
                 }
             }
@@ -2047,6 +2109,37 @@ public class WriteDictionary {
                 Noun n = new Noun(stuff);
                 n.location = true;
                 n.animacy = "Inanimate";
+                try {
+                    MorphologyFinder m = new MorphologyFinder(stuff);
+                    m.loadDictionary(nounDictionary);
+                    m.breakApart();
+                    try {
+                        n.baseForm = dictionary
+                                .lookupIndexWord(POS.NOUN, m.getRoot())
+                                .getLemma();
+                    }
+                    catch (Exception e) {
+                        n.baseForm = m.getRoot();
+                    }
+                    if (m.getTraits().contains("plural")) {
+                        n.plurality = "plural";
+                    }
+                    if(!roots.containsKey(n.baseForm+":noun")){
+                        roots.put(n.baseForm+":noun", stuff);
+                        if(nounDictionary.containsKey(n.baseForm)){
+                        Noun temp = new Noun(n.baseForm);
+                        temp.plurality = "Singular";
+                        merge(n.baseForm,temp);
+                        }
+                    }
+                    else{
+                        String e = roots.get(n.baseForm+":noun");
+                        roots.put(n.baseForm+":noun", e + "|"+stuff);
+                    }
+                }
+                catch (Exception e) {
+                     e.printStackTrace();
+                }
                 merge(stuff, n);
             }
             s.close();
@@ -2133,7 +2226,7 @@ public class WriteDictionary {
                     merge(word, n);
                 }
                 if(!quantifierDictionary.containsKey(word) && !pronounDictionary.containsKey(word) && !prepositionDictionary.containsKey(word) && !interjectionDictionary.containsKey(word) && !determinerDictionary.containsKey(word) && !conjunctionDictionary.containsKey(word) && !adverbDictionary.containsKey(word) && !adjectiveDictionary.containsKey(word) && !verbDictionary.containsKey(word) && !nounDictionary.containsKey(word)){
-                    /*try { 
+                    try { 
                         FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw); 
                         PrintWriter printer = new PrintWriter(bw); 
@@ -2142,7 +2235,7 @@ public class WriteDictionary {
                         bw.close();
                         fw.close();
                      } 
-                    catch (IOException e) { e.printStackTrace(); }*/
+                    catch (IOException e) { e.printStackTrace(); }
                 }
             }
             s.close();
@@ -2262,11 +2355,8 @@ public class WriteDictionary {
                    e.printStackTrace();
                 }
                     merge(word,v);
-
             }
             }
-            
-            
         }
         catch(Exception e){
             e.printStackTrace();
@@ -2279,8 +2369,9 @@ public class WriteDictionary {
             String adj = "";
             String adv = "";
             Boolean gradable = null;
-            
+            Boolean manner = null;
             while(s.hasNextLine()){
+                try{
                 String line = s.nextLine();
                 System.out.println(line);
                 String []split = line.split(":");
@@ -2291,7 +2382,10 @@ public class WriteDictionary {
                             a.isQualitative = true;
                             a.isClassifying = false;
                         }
-                        System.out.println(adj + gradable);
+                        if(manner != null){
+                            a.adjectiveOrderID = 4;
+                        }
+                        System.out.println(adj);
                         merge(adj,a);
                         adj = "";
                         gradable = null;
@@ -2307,6 +2401,9 @@ public class WriteDictionary {
                     }
                     if(!adv.equals("") && adverbDictionary.containsKey(adv)){
                         Adverb a = new Adverb(adv);
+                        if(manner != null){
+                            a.wordSenseID = 7;
+                        }
                         merge(adv,a);
                         adv = "";
                     }
@@ -2335,6 +2432,9 @@ public class WriteDictionary {
                         if(line.contains("GRADABLE")){
                             gradable = true;
                         }
+                        if(line.contains("MANNER")){
+                            manner = true;
+                        }
                         line = s.nextLine();
                     }
                     if(line.contains("GRADABLE")){
@@ -2343,6 +2443,13 @@ public class WriteDictionary {
                     if(gradable == null){
                         gradable = false;
                     }
+                    if(line.contains("MANNER")){
+                        manner = true;
+                    }
+                }
+            }
+                catch(Exception e){
+                    e.printStackTrace();
                 }
             }
             s.close();
@@ -2380,6 +2487,7 @@ public class WriteDictionary {
                             word = eElement.getAttribute("id").split("\\.")[0];
                             propbank += "id:" + eElement.getAttribute("id")+"{";
                         }
+                        word = fixSpaces(word);
                         System.out.println(word);
                         NodeList rolesetchildren = roleset.item(x).getChildNodes();
                         NodeList roles = null;
@@ -2414,20 +2522,30 @@ public class WriteDictionary {
                             if (alias.item(c).getNodeType() == Node.ELEMENT_NODE) {
                                 Element eElement = (Element) alias.item(c);
                                 pos = eElement.getAttribute("pos");
-                                if(pos.equals("v")){
+                                
+                                if(pos.equals("v") && verbDictionary.containsKey(word)){
                                     Verb v = new Verb(word);
                                     v.propbank = propbank;
                                     merge(word, v);
                                 }
-                                else if(pos.equals("j")){
+                                else if(pos.equals("j") && adjectiveDictionary.containsKey(word)){
                                     Adjective v = new Adjective(word);
                                     v.propbank = propbank;
                                     merge(word, v);
                                 }
-                                else if(pos.equals("n")){
+                                else if(pos.equals("n") && nounDictionary.containsKey(word)){
                                     Noun v = new Noun(word);
                                     v.propbank = propbank;
                                     merge(word, v);
+                                }
+                                else{
+                                    try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                                    BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                                    new PrintWriter(bw); printer.println("PropBank: " + word + " : " + pos); printer.close();
+                                    bw.close(); fw.close();
+                                     
+                                     } 
+                                    catch (IOException e) { e.printStackTrace(); }
                                 }
                             }
                         }
@@ -2469,12 +2587,65 @@ public class WriteDictionary {
                 String word = split[0].split(":")[1];
                 String frame = split[5].split(":")[1];
                 String pos = s.substring(s.length()-4, s.length()-3);
-                System.out.println(word);
+                word = word.split("\\.")[0];
+                word = fixSpaces(word);
+                frame = fixSpaces(frame);
+                System.out.println(word + ":" + frame + ":" + pos);
                 if(pos.equals("v")){
                     if(verbDictionary.containsKey(word)){
                         Verb v= new Verb(word);
-                        
+                        v.frame = frame;
+                        merge(word,v);
                     }
+                    else{
+                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                        new PrintWriter(bw); printer.println("FrameNet: " + word + " : " + pos); printer.close();
+                        bw.close(); fw.close();
+                         
+                         } 
+                        catch (IOException e) { e.printStackTrace(); }
+                    }
+                }
+                else if(pos.equals("n")){
+                    if(nounDictionary.containsKey(word)){
+                        Noun n = new Noun(word);
+                        n.frame = frame;
+                        merge(word,n);
+                    }
+                    else{
+                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                        new PrintWriter(bw); printer.println("FrameNet: " + word+ " : " + pos); printer.close();
+                        bw.close(); fw.close();
+                         
+                         } 
+                        catch (IOException e) { e.printStackTrace(); }
+                    }
+                }
+                else if(pos.equals("a")){
+                    if(adjectiveDictionary.containsKey(word)){
+                        Adjective a = new Adjective(word);
+                        a.frame = frame;
+                    }
+                    else{
+                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                        new PrintWriter(bw); printer.println("FrameNet: " + word+ " : " + pos); printer.close();
+                        bw.close(); fw.close();
+                         
+                         } 
+                        catch (IOException e) { e.printStackTrace(); }
+                    }
+                }
+                else{
+                    try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
+                    new PrintWriter(bw); printer.println("FrameNet: " + word+ " : " + pos); printer.close();
+                    bw.close(); fw.close();
+                     
+                     } 
+                    catch (IOException e) { e.printStackTrace(); }
                 }
             }
         }
