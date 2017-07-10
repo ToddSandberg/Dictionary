@@ -2169,25 +2169,134 @@ public class WriteDictionary {
                     Noun n = new Noun(word);
                     n.howCommon = c;
                     n.commonRank = rank;
+                    try {
+                        MorphologyFinder m = new MorphologyFinder(
+                                word);
+                        m.loadDictionary(nounDictionary);
+                        m.breakApart();
+                        try {
+                            n.baseForm = dictionary
+                                    .lookupIndexWord(POS.NOUN,
+                                            m.getRoot())
+                                    .getLemma();
+                        }
+                        catch (Exception e) {
+                            n.baseForm = m.getRoot();
+                        }
+                        if (m.getTraits().contains("plural")) {
+                            n.plurality = "Plural";
+                            if(nounDictionary.containsKey(n.baseForm)){
+                            Noun temp = new Noun(n.baseForm);
+                            temp.plurality = "Singular";
+                            merge(n.baseForm,temp);
+                            }
+                        }
+                        if(!roots.containsKey(n.baseForm+":noun"))
+                            roots.put(n.baseForm+":noun", word);
+                        else{
+                            String e = roots.get(n.baseForm+":noun");
+                            roots.put(n.baseForm+":noun", e +"|"+ word);
+                        }
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     merge(word, n);
                 }
                 if (verbDictionary.containsKey(word)) {
-                    Verb n = new Verb(word);
-                    n.howCommon = c;
-                    n.commonRank = rank;
-                    merge(word, n);
+                    Verb v = new Verb(word);
+                    v.howCommon = c;
+                    v.commonRank = rank;
+                    try {
+                        MorphologyFinder m = new MorphologyFinder(
+                                word);
+                        m.loadDictionary(verbDictionary);
+                        m.breakApart();
+                        try {
+                            v.baseForm = dictionary.lookupIndexWord(
+                                    POS.VERB, m.getRoot()).getLemma();
+                        }
+                        catch (Exception e) {
+                            v.baseForm = m.getRoot();
+                        }
+                        if (m.getTraits().contains("past tense")) {
+                            v.tense = "Past";
+                        }
+                        else if (m.getTraits()
+                                .contains("present tense")) {
+                            v.tense = "Present";
+                        }
+                        if(!roots.containsKey(v.baseForm+":verb"))
+                            roots.put(v.baseForm+":verb", word);
+                        else{
+                            String e = roots.get(v.baseForm+":verb");
+                            roots.put(v.baseForm+":verb", e +"|"+ word);
+                        }
+                    }
+                    catch (Exception e) {
+                       e.printStackTrace();
+                    }
+                    merge(word, v);
                 }
                 if (adjectiveDictionary.containsKey(word)) {
-                    Adjective n = new Adjective(word);
-                    n.howCommon = c;
-                    n.commonRank = rank;
-                    merge(word, n);
+                    Adjective a = new Adjective(word);
+                    a.howCommon = c;
+                    a.commonRank = rank;
+                    try {
+                        MorphologyFinder m = new MorphologyFinder(
+                                word);
+                        m.loadDictionary(adjectiveDictionary);
+                        m.breakApart();
+                        try {
+                            a.baseForm = dictionary
+                                    .lookupIndexWord(POS.ADJECTIVE,
+                                            m.getRoot())
+                                    .getLemma();
+                        }
+                        catch (Exception e) {
+                            a.baseForm = m.getRoot();
+                        }
+                        if(!roots.containsKey(a.baseForm+":adjective"))
+                            roots.put(a.baseForm+":adjective", word);
+                        else{
+                            String e = roots.get(a.baseForm+":adjective");
+                            roots.put(a.baseForm+":adjective", e +"|"+ word);
+                        }
+                    }
+                    catch (Exception e) {
+                         e.printStackTrace();
+                    }
+                    merge(word, a);
                 }
                 if (adverbDictionary.containsKey(word)) {
-                    Adverb n = new Adverb(word);
-                    n.howCommon = c;
-                    n.commonRank = rank;
-                    merge(word, n);
+                    Adverb a = new Adverb(word);
+                    a.howCommon = c;
+                    a.commonRank = rank;
+                    try {
+                        MorphologyFinder m = new MorphologyFinder(
+                                word);
+                        m.loadDictionary(adverbDictionary);
+                        m.breakApart();
+                        try {
+                            a.baseForm = dictionary
+                                    .lookupIndexWord(POS.ADVERB,
+                                            m.getRoot())
+                                    .getLemma();
+                        }
+                        catch (Exception e) {
+                            a.baseForm = m.getRoot();
+                        }
+                        if(!roots.containsKey(a.baseForm+":adverb"))
+                            roots.put(a.baseForm+":adverb", word);
+                        else{
+                            String e = roots.get(a.baseForm+":adverb");
+                            roots.put(a.baseForm+":adverb", e +"|"+ word);
+                        }
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    merge(word, a);
                 }
                 if (conjunctionDictionary.containsKey(word)) {
                     Conjunction n = new Conjunction(word);

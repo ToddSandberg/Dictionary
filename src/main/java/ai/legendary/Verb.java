@@ -174,7 +174,6 @@ public class Verb implements PartOfSpeech ,Serializable{
     }
     private boolean check2gram(String[] s){
         try{
-            
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://ngrams.cbndyymb1za5.us-east-1.rds.amazonaws.com/NGrams",
                     "MasterUser", "MasterPassword");

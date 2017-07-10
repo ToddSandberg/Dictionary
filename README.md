@@ -1,7 +1,7 @@
 # DictionaryMaker
 ## Analysis
 ### Noun Analysis (Total Nouns: 155,554):
-- Percentage of Noun Plurality defined: 6.16%
+- Percentage of Noun Plurality defined: 6.18%
 - Percentage of Noun Gender defined: 100%(0.77% Masculine 0.55% Feminine 98.69% Neuter)
 - Percentage of Noun isCompound defined: 100%
 - Percentage of Noun isCountable defined: 51.42%
@@ -35,7 +35,7 @@
 - Percentage of ajectiveOrderID defined: 5.72%
 - Percentage of mustUseMoreMost defined: 36.96%
 - Percentage of adjectiveItensifierID defined: 1.21%
-- Percentage of base form defined: 99.5%
+- Percentage of base form defined: 99.72%
 ### Adverb Analysis (Total Adverbs: 13,478): 
 - Percentage of IntensiferId defined: 5.42%
 - Percentage of isRelativeAdverb defined: 100%
@@ -45,7 +45,7 @@
 - Percentage of noCompOrSuperForm defined: 29.03%
 - Percentage of mustUseMoreMost defined: 29.03%
 - Percentage of Irregular Form defined: 0.05%
-- Percentage of base form defined: 99.57%
+- Percentage of base form defined: 99.89%
 - Percentage of wordSenseID defined: 16.48%
 ### Determiner Analysis (Total Determiners: 11): 
 - Percentage of determinerTypeID defined: 100%
@@ -81,4 +81,4 @@
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 14 minutes and 33 seconds
+## Current Dictionary Write Time: 14 minutes and 0 seconds
