@@ -16,7 +16,7 @@
 - Percentage of Noun Location defined: 0.28%
 ### Verb analysis (Total Verbs: 28,930):
 - Percentage of Transivity Defined: 71.87%
-- Percentage of verb Tense Defined: 43.67%
+- Percentage of verb Tense Defined: 43.66%
 - Percentage of verb aspect Defined: 0%
 - Percentage of verb type Defined: 0.1%
 - Percentage of verb person Defined: 0.06%
@@ -81,4 +81,4 @@
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 14 minutes and 0 seconds
+## Current Dictionary Write Time: 13 minutes and 13 seconds

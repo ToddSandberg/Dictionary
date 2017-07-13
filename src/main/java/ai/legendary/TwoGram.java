@@ -49,9 +49,7 @@ public class TwoGram {
                 }
                 
                 String combined = word1+"|"+word2;
-                if(word2.equals("and") || word2.equals("to") || word1.equals("and") || word1.equals("to")){
-                    System.out.println(combined);
-                }
+                System.out.println(combined);
                 word1 = word1+"-";
                 word2 = "-"+word2;
                 int score = rs.getInt("Count");

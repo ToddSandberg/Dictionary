@@ -372,6 +372,16 @@ public class MorphologyFinder {
                 letters.add('i');
             }
         }
+      //blasty, flashy -- not body
+        if (ends("y") && !ends("ody") && !ends("ify")) {
+            removeX(1);
+            if(cvc() || doubleletter(letters.size()-1)){
+                letters.add('y');
+            }
+            else
+                suffs.add("y");
+            
+        }
         // past tense
         if (ends("eed")) {
             if (m("eed") > 0) {
@@ -445,7 +455,7 @@ public class MorphologyFinder {
                 removeX(3);
                 traits.add("present tense");
             }
-            if ((cvc() || ends("it") || ends("ns")) && !ends("y"))
+            if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg") || ends("uir") || ends("iat") || ends("eas")) && !ends("y") && !ends("lter") && !ends("el")) //charged & substantiating & requiring & filtering, labeled 
                 letters.add('e');
             else if (ends("bl"))
                 letters.add('e');
@@ -455,7 +465,7 @@ public class MorphologyFinder {
                 removeX(1);
                 letters.add('y');
             }
-            if (doubleletter(letters.size() - 1) && cons(letters.size()-1) && !ends("ll") && !ends("ss")) {//glossing
+            if (doubleletter(letters.size() - 1) && cons(letters.size()-1) && !ends("ll") && !ends("ss")) {//glossing, falling
                 removeX(1);
             }
             /*if (ends("y")) { //slaying
@@ -510,8 +520,17 @@ public class MorphologyFinder {
         }
         // diminutive
         if (ends("ling")) {
-            checkSuff("ling");
-            traits.add("dimunitive");
+            if(ends("eling") || ends("gling") || ends("lling") || ends("ycling")){ //falling
+                checkSuff("ing");
+                if(ends("gl") || ends("cl")){
+                    letters.add('e');
+                }
+            }
+            else{
+                checkSuff("ling");
+                traits.add("dimunitive");
+            }
+            
         }
         // verb to adjective + productive
         if (ends("able") && !ends("iable")) {
@@ -572,11 +591,15 @@ public class MorphologyFinder {
         if(ends("ize")){
             checkSuff("ize");
             if(ends("g")){
-                letters.add('y'); //apologize
+                letters.add('y'); //apologize & homologize
             }
-            if(cvc() && !ends("itic")){
+            if(ends("not")){
+                letters.add('i');
+                letters.add('c');
+            }
+            /*if(cvc() && !ends("itic")){ //naturalize & magnetize & reflectorize
                 letters.add('e');
-            }
+            }*/
             if(ends("igmate")){
                 removeX(2);
             }
@@ -767,6 +790,12 @@ public class MorphologyFinder {
             removeX(3);
             //letters.add('e'); //think about monstrous or
         }
+        if(ends("ist") && letters.size()>4){ //christen
+            checkSuff("ist");
+            if(ends("log")){
+                letters.add('y'); //biologist
+            }
+        }
         if (ends("en")) {
             suffs.add("en");
             removeX(2);
@@ -813,6 +842,9 @@ public class MorphologyFinder {
             checkSuff("etic");
             letters.add('y'); // energetic
         }
+        if(ends("otic")){
+            checkSuff("tic");//hypnotic
+        }
         if (ends("ic") && !ends("ritic")) {
             suffs.add("ic");
             removeX(2);
@@ -832,20 +864,15 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
-        if(ends("ist") && letters.size()>4){
-            checkSuff("ist");
-            if(ends("log")){
-                letters.add('y'); //biologist
-            }
-        }
+        
         
         if(ends("ian")){
             suffs.add("an");
             removeX(3);
         }
         //an think of ran and ban
-        //fuage
-        if(ends("age") && !ends("anage") && !ends("uage")){
+        //fuage and pillage and manage and hemorrhage
+        if(ends("age") && !ends("anage") && !ends("uage") && !ends("illage") && !ends("hage")){
             checkSuff("age"); 
         }
         if(ends("ory")){ //consecratory
@@ -853,22 +880,14 @@ public class MorphologyFinder {
             checkSuff("or");
             letters.add('e');
         }
-        //blasty, flashy
-        if (ends("y")) {
-            removeX(1);
-            if(cvc()){
-                letters.add('y');
-            }
-            else
-                suffs.add("y");
-            
-        }
+        
     }
 
     /**
      * finds first prefixes
      */
     private void stepFour() {
+        checkPref("re");
         if (begins("dis") && letters.size() > 4) {
             checkPref("dis");
         }
@@ -959,7 +978,6 @@ public class MorphologyFinder {
         checkPref("pseudo");
         checkPref("quadri");
         checkPref("quasi");
-        checkPref("re");
         checkPref("self");
         checkPref("semi");
         checkPref("sub");
