@@ -33,9 +33,11 @@ public class MorphologyFinder {
      */
 
     public MorphologyFinder(String w) {
+        if(!w.contains(" ")){
         w = w.toLowerCase();
         for (int i = 0; i < w.length(); i++) {
             letters.add(w.charAt(i));
+        }
         }
     }
 
@@ -52,7 +54,7 @@ public class MorphologyFinder {
      * @return all info on the word in string format;
      */
     public String breakApart() {
-        if (!letters.contains(" ")) {
+        if (!letters.contains(" ") && !letters.isEmpty()) {
             stepOne();
             stepTwo();
             stepThree();
@@ -375,7 +377,7 @@ public class MorphologyFinder {
       //blasty, flashy -- not body
         if (ends("y") && !ends("ody") && !ends("ify")) {
             removeX(1);
-            if(cvc() || doubleletter(letters.size()-1)){
+            if(cvc() || doubleletter(letters.size()-1) || !cons(letters.size()-1)){
                 letters.add('y');
             }
             else
@@ -590,6 +592,9 @@ public class MorphologyFinder {
         }
         if(ends("ize")){
             checkSuff("ize");
+            if(ends("at")){ // emblematize
+                letters.add('e');
+            }
             if(ends("g")){
                 letters.add('y'); //apologize & homologize
             }
@@ -601,6 +606,7 @@ public class MorphologyFinder {
                 letters.add('e');
             }*/
             if(ends("igmate")){
+                suffs.add("ate");
                 removeX(2);
             }
         }
@@ -619,14 +625,14 @@ public class MorphologyFinder {
         if(ends("ustion")){
             checkSuff("ion");
         }
-        if (ends("tion") && !ends("ction")) {
+        if (ends("tion") && !ends("ction") && !ends("stion")) {
             suffs.add("tion");
             removeX(4);
             if(ends("n")){
                 letters.add('t');
             }
         }
-        if(ends("ion") && !ends("tion")){
+        if(ends("ion") && (!ends("tion") || ends("stion"))){
             checkSuff("ion");
             if(ends("ns")){
                 letters.add('e');
@@ -668,7 +674,7 @@ public class MorphologyFinder {
             checkSuff("sive");
             letters.add('t');
         }
-        if (ends("ive") && letters.size()>6) { //thrive
+        if (ends("ive") && letters.size()>6 && !ends("orgive")) { //thrive
             checkSuff("ive");
             if (ends("eat") || cvc()) {
                 letters.add('e');

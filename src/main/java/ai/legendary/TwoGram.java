@@ -29,7 +29,7 @@ public class TwoGram {
             while(rs.next()){
                 String word1 = rs.getString("Word1");
                 String word2 = rs.getString("Word2");
-                if(pronounDictionary.containsKey(word1)){
+                /*if(pronounDictionary.containsKey(word1)){
                     word1 = "PRONOUN";
                 }
                 if(pronounDictionary.containsKey(word2)){
@@ -46,7 +46,7 @@ public class TwoGram {
                 }
                 if(word2.equals("has") || word2.equals("have") || word2.equals("had")){
                     word2 = "HAVE/HAD/HAS";
-                }
+                }*/
                 
                 String combined = word1+"|"+word2;
                 System.out.println(combined);

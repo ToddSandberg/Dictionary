@@ -134,17 +134,17 @@ public class Verb implements PartOfSpeech ,Serializable{
             tense = "Past";
             isInfinitive = false;
         }
-        if(s.equals("do") || s.equals("give") || s.equals("have") || s.equals("make") || s.equals("take")){
+        if(s.equals("do") || s.equals("give") || s.equals("have") || s.equals("make") || s.equals("take") || s.equals("cast")){
             light = true;
             tense = "Present";
             person = "First";
         }
-        if(s.equals("does") || s.equals("gives") || s.equals("has") || s.equals("makes") || s.equals("takes")){
+        if(s.equals("does") || s.equals("gives") || s.equals("has") || s.equals("makes") || s.equals("takes") || s.equals("casts")){
             light = true;
             tense = "Present";
             person = "Third";
         }
-        if(s.equals("did") || s.equals("gave") || s.equals("had") || s.equals("made") || s.equals("took")){
+        if(s.equals("did") || s.equals("gave") || s.equals("had") || s.equals("made") || s.equals("took") || s.equals("casted")){
             light = true;
             tense = "Past";
         }

@@ -124,76 +124,82 @@ public class DictionaryAccess {
             e.printStackTrace();
         }
     }
+    /**
+     * 
+     * @return the noun dictionary
+     */
     public HashMap<String, Noun> getNounDictionary(){
         return nounDictionary;
     }
+    /**
+     * 
+     * @return the verb dictionary
+     */
     public static HashMap<String, Verb> getVerbDictionary() {
         return verbDictionary;
     }
-    public static void setVerbDictionary(HashMap<String, Verb> verbDictionary) {
-        DictionaryAccess.verbDictionary = verbDictionary;
-    }
+    /**
+     * 
+     * @return the adjective dictionary
+     */
     public static HashMap<String, Adjective> getAdjectiveDictionary() {
         return adjectiveDictionary;
     }
-    public static void setAdjectiveDictionary(
-            HashMap<String, Adjective> adjectiveDictionary) {
-        DictionaryAccess.adjectiveDictionary = adjectiveDictionary;
-    }
+    /**
+     * 
+     * @return the adverb dictionary
+     */
     public static HashMap<String, Adverb> getAdverbDictionary() {
         return adverbDictionary;
     }
-    public static void setAdverbDictionary(
-            HashMap<String, Adverb> adverbDictionary) {
-        DictionaryAccess.adverbDictionary = adverbDictionary;
-    }
+    /**
+     * 
+     * @return the conjunction dictionary
+     */
     public static HashMap<String, Conjunction> getConjunctionDictionary() {
         return conjunctionDictionary;
     }
-    public static void setConjunctionDictionary(
-            HashMap<String, Conjunction> conjunctionDictionary) {
-        DictionaryAccess.conjunctionDictionary = conjunctionDictionary;
-    }
+    /**
+     * 
+     * @return the determiner dictionary
+     */
     public static HashMap<String, Determiner> getDeterminerDictionary() {
         return determinerDictionary;
     }
-    public static void setDeterminerDictionary(
-            HashMap<String, Determiner> determinerDictionary) {
-        DictionaryAccess.determinerDictionary = determinerDictionary;
-    }
+    /**
+     * 
+     * @return the Interjection dictionary
+     */
     public static HashMap<String, Interjection> getInterjectionDictionary() {
         return interjectionDictionary;
     }
-    public static void setInterjectionDictionary(
-            HashMap<String, Interjection> interjectionDictionary) {
-        DictionaryAccess.interjectionDictionary = interjectionDictionary;
-    }
+    /**
+     * 
+     * @return the preposition dictionary
+     */
     public static HashMap<String, Preposition> getPrepositionDictionary() {
         return prepositionDictionary;
     }
-    public static void setPrepositionDictionary(
-            HashMap<String, Preposition> prepositionDictionary) {
-        DictionaryAccess.prepositionDictionary = prepositionDictionary;
-    }
+    /**
+     * 
+     * @return the pronoun dictionary
+     */
     public static HashMap<String, Pronoun> getPronounDictionary() {
         return pronounDictionary;
     }
-    public static void setPronounDictionary(
-            HashMap<String, Pronoun> pronounDictionary) {
-        DictionaryAccess.pronounDictionary = pronounDictionary;
-    }
+    /**
+     * 
+     * @return the quantifier dictionary
+     */
     public static HashMap<String, Quantifier> getQuantifierDictionary() {
         return quantifierDictionary;
     }
-    public static void setQuantifierDictionary(
-            HashMap<String, Quantifier> quantifierDictionary) {
-        DictionaryAccess.quantifierDictionary = quantifierDictionary;
-    }
+    /**
+     * 
+     * @return the list of roots in the dictionary
+     */
     public static HashMap<String, String> getRoots() {
         return roots;
-    }
-    public static void setRoots(HashMap<String, String> roots) {
-        DictionaryAccess.roots = roots;
     }
     /**
      * gets the info on a singular word with a specific part of speech
@@ -208,7 +214,7 @@ public class DictionaryAccess {
                     + getdictionary(pos).get(word).toString() + "\n";
         }
         else{
-            return word + " " + pos + " is not in Dictionary\n";
+            return "["+word + " " + pos + " is not in Dictionary]\n";
         }
     }
     /**
@@ -412,6 +418,7 @@ public class DictionaryAccess {
     }
     public String changeVerbTense(String word, String tense){
         Noun v = (Noun)nounDictionary.get(word);
+        try{
         String base = v.baseForm;
         HashMap<String,Verb> temp = verbDictionary;
         Iterator it = temp.entrySet().iterator();
@@ -423,6 +430,10 @@ public class DictionaryAccess {
                 }
             }
             it.remove(); // avoids a ConcurrentModificationException
+        }
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
         return null;
     }
@@ -504,7 +515,7 @@ public class DictionaryAccess {
                                 output+= w+ " ";
                             }
                         }
-                        else if(convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun")){
+                        else if((convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun")) && !convertnlp(pos).equals("determiner")){
                             if(lightsentence){
                                 
                                 if(dettrigger){

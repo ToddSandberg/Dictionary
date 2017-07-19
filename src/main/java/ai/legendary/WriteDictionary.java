@@ -154,7 +154,7 @@ public class WriteDictionary {
             printer.println("- shapes.csv implemented");
             //implements framenet
             framenet();
-            printer.println("- implementing fn16lexunits.ttl");
+            printer.println("- fn16lexunits.ttl implemented");
             // implements colors
             colors();
             printer.println("- colors.txt implemented");
@@ -169,7 +169,16 @@ public class WriteDictionary {
             printer.println(
                     "- tsv files for each part of speech with words and their properties");
             printer.println(
-                    "- serialized dictionary classes for each part of speech");
+                    "- serialized dictionary HashMap's for each part of speech");
+            printer.println("## Accessing the Dictionary");
+            printer.println("- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.");
+            printer.println("- The DictionaryAccess class provides access to many features of the dictionary. "
+                    + "There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. "
+                    + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
+                    + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
+                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. ");
+            printer.println("- The Accessor class is an example usage of the DictionaryAccess class.");
+            printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
             //print out roots HashMap
             try {
                 FileOutputStream fout = new FileOutputStream(

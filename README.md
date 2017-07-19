@@ -74,11 +74,16 @@
 - ADJADV.txt from nombank implemented
 - propBank implemented
 - shapes.csv implemented
-- implementing fn16lexunits.ttl
+- fn16lexunits.ttl implemented
 - colors.txt implemented
 - LEXICON.txt implemented
 - Word_frequency_list.txt implemented
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary classes for each part of speech
-## Current Dictionary Write Time: 13 minutes and 13 seconds
+## Accessing the Dictionary
+- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.
+- The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. 
+- The Accessor class is an example usage of the DictionaryAccess class.
+- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
+## Current Dictionary Write Time: 14 minutes and 0 seconds
