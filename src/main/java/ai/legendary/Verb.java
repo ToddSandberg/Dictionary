@@ -80,18 +80,33 @@ public class Verb implements PartOfSpeech ,Serializable{
             verbType = "Auxilary";
             tense = "Present";
             person = "First";
+            light = true;
         }
-        else if(s.equals("is") || s.equals("'s") || s.equals("isn't")||s.equals("does")||s.equals("doesn't")||s.equals("has")||s.equals("hasn't")){
+        else if(s.equals("is") || s.equals("'s") || s.equals("isn't")||s.equals("does")||s.equals("doesn't")){
             verbType = "Auxilary";
             tense = "Present";
             person = "Third";
             isInfinitive = false;
         }
-        else if(s.equals("are") || s.equals("'re") || s.equals("aren't")||s.equals("do")||s.equals("don't")||s.equals("have")||s.equals("haven't")||s.equals("'ve")){
+        else if(s.equals("has")||s.equals("hasn't")){
+            verbType = "Auxilary";
+            tense = "Present";
+            person = "Third";
+            isInfinitive = false;
+            light = true;
+        }
+        else if(s.equals("are") || s.equals("'re") || s.equals("aren't")||s.equals("do")||s.equals("don't")){
             verbType = "Auxilary";
             tense = "Present";
             person = "First/Second/Third";
             isInfinitive = false;
+        }
+        else if(s.equals("haven't")||s.equals("'ve")){
+            verbType = "Auxilary";
+            tense = "Present";
+            person = "First/Second/Third";
+            isInfinitive = false;
+            light = true;
         }
         else if(s.equals("am") || s.equals("'m")){
             verbType = "Auxilary";
@@ -116,12 +131,14 @@ public class Verb implements PartOfSpeech ,Serializable{
             tense = "Past";
             person = "N/A";
             isInfinitive = false;
+            light = true;
         }
-        else if(s.equals("having")){
+        else if(s.equals("having") || s.equals("taking")){
             verbType = "Auxilary";
             tense = "Present";
             person = "N/A";
             isInfinitive = false;
+            light = true;
         }
 
         if(s.equals("can't") || s.equals("cannot") || s.equals("mayn't") || s.equals("mustn't")||s.equals("oughtn't")||s.equals("shan't")||s.equals("can") || s.equals("dare") || s.equals("may") || s.equals("must") || s.equals("ought")||s.equals("shall")||s.equals("will")||s.equals("won't")||s.equals("'ll")||s.equals("need")||s.equals("needn't")){
@@ -134,7 +151,7 @@ public class Verb implements PartOfSpeech ,Serializable{
             tense = "Past";
             isInfinitive = false;
         }
-        if(s.equals("do") || s.equals("give") || s.equals("have") || s.equals("make") || s.equals("take") || s.equals("cast")){
+        if(s.equals("do") || s.equals("give") || s.equals("have") || s.equals("make") || s.equals("take") || s.equals("cast") ||s.equals("get")){
             light = true;
             tense = "Present";
             person = "First";
@@ -144,7 +161,7 @@ public class Verb implements PartOfSpeech ,Serializable{
             tense = "Present";
             person = "Third";
         }
-        if(s.equals("did") || s.equals("gave") || s.equals("had") || s.equals("made") || s.equals("took") || s.equals("casted")){
+        if(s.equals("did") || s.equals("gave") || s.equals("had") || s.equals("made") || s.equals("took") || s.equals("casted")|| s.equals("got")|| s.equals("let")){
             light = true;
             tense = "Past";
         }

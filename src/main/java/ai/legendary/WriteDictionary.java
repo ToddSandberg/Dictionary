@@ -84,14 +84,7 @@ public class WriteDictionary {
             catch (Exception e) {
                 e.printStackTrace();
             }
-            try{
-                ObjectInputStream in = new ObjectInputStream(new FileInputStream("outputs/nounDictHashMap.ser"));
-                
-            }catch(Exception e){
-                e.printStackTrace();
-            }
             System.out.println("Starting");
-
             // counts seconds until the program finishes
             time.scheduleAtFixedRate(ttask, 1000, 1000);
             File f = new File("README.md");
@@ -125,7 +118,6 @@ public class WriteDictionary {
             // Implements MobyWordListWithPOS.txt to the dictionary
             mobyListPOS();
             printer.println("- MobyWordListWithPOS.txt Implemented");
-
             // Implements default-lexion.xml
             defLexicon();
             printer.println("- default-lexicon.xml Implemented");
@@ -133,7 +125,6 @@ public class WriteDictionary {
             countNounOrNot();
             printer.println(
                     "- NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt implemented");
-            
             // Implements Adverb Scales
             adverbIntensifiers();
             printer.println("- AdverbScales-Manual.csv Implemented");
@@ -976,6 +967,7 @@ public class WriteDictionary {
             int x = 0;
             while (scan.hasNext()) {
                 String scanIn = scan.nextLine();
+                System.out.println(scanIn);
                 if (!scanIn.equals("\n") && !scanIn.equals("")) {
                     // seperates the part of speech from the word
                     String[] input = scanIn.split("\\$");
@@ -2344,7 +2336,7 @@ public class WriteDictionary {
                     merge(word, n);
                 }
                 if(!quantifierDictionary.containsKey(word) && !pronounDictionary.containsKey(word) && !prepositionDictionary.containsKey(word) && !interjectionDictionary.containsKey(word) && !determinerDictionary.containsKey(word) && !conjunctionDictionary.containsKey(word) && !adverbDictionary.containsKey(word) && !adjectiveDictionary.containsKey(word) && !verbDictionary.containsKey(word) && !nounDictionary.containsKey(word)){
-                    try { 
+                    /*try { 
                         FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw); 
                         PrintWriter printer = new PrintWriter(bw); 
@@ -2353,7 +2345,7 @@ public class WriteDictionary {
                         bw.close();
                         fw.close();
                      } 
-                    catch (IOException e) { e.printStackTrace(); }
+                    catch (IOException e) { e.printStackTrace(); }*/
                 }
             }
             s.close();

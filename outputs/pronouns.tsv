@@ -87,6 +87,7 @@ which	Singular/Plural	Neuter N/A	Interrogative/Relative	0.391452	30
 everyone	Singular	Neuter N/A	Indefinite	0.014033	731
 plenty	Plural	Neuter N/A	Indefinite	0.005174	2065
 thir	Plural	Neuter N/A	Relative	3.6E-5	49854
+my	Singular	Neuter Possesive	Personal	0.160592	68
 thae	Plural	Neuter Nominative	Personal	-1.0	-1
 whatever	Singular/Plural	Neuter N/A	Interrogative/Relative	0.013927	740
 whereinto	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1

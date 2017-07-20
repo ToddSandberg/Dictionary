@@ -375,7 +375,7 @@ public class MorphologyFinder {
             }
         }
       //blasty, flashy -- not body
-        if (ends("y") && !ends("ody") && !ends("ify")) {
+        if (ends("y") && !ends("ody") && !ends("ify") && !ends("ly")) {
             removeX(1);
             if(cvc() || doubleletter(letters.size()-1) || !cons(letters.size()-1)){
                 letters.add('y');
@@ -686,7 +686,7 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
-        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("after") && !ends("infer")) {
+        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter")) {
             suffs.add("er");
             removeX(2);
             if (ends("i")) {

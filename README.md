@@ -16,10 +16,10 @@
 - Percentage of Noun Location defined: 0.28%
 ### Verb analysis (Total Verbs: 28,930):
 - Percentage of Transivity Defined: 71.87%
-- Percentage of verb Tense Defined: 43.66%
+- Percentage of verb Tense Defined: 43.67%
 - Percentage of verb aspect Defined: 0%
 - Percentage of verb type Defined: 0.1%
-- Percentage of verb person Defined: 0.06%
+- Percentage of verb person Defined: 0.07%
 - Percentage of verb phrasal Defined: 100%
 - Percentage of verb isInfinitive Defined: 0.1%
 - Percentage of verb base form Defined: 100%
@@ -51,7 +51,7 @@
 - Percentage of determinerTypeID defined: 100%
 ### Interjection Analysis (Total Interjections: 428): 
 - Percentage of interjectionTypeID defined: 0%
-### Pronoun Analysis (Total Pronouns: 117): 
+### Pronoun Analysis (Total Pronouns: 118): 
 - Percentage of pronounPlurality defined: 100%
 - Percentage of pronounGender defined: 100%
 - Percentage of pronounCase defined: 100%
@@ -80,10 +80,10 @@
 - Word_frequency_list.txt implemented
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
-- serialized dictionary classes for each part of speech
+- serialized dictionary HashMap's for each part of speech
 ## Accessing the Dictionary
 - The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.
 - The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. 
 - The Accessor class is an example usage of the DictionaryAccess class.
 - This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
-## Current Dictionary Write Time: 14 minutes and 0 seconds
+## Current Dictionary Write Time: 13 minutes and 32 seconds

@@ -416,7 +416,7 @@ public class DictionaryAccess {
             return finalresults;
         }
     }
-    public String changeVerbTense(String word, String tense){
+    public String changeNounTense(String word, String tense){
         Noun v = (Noun)nounDictionary.get(word);
         try{
         String base = v.baseForm;
@@ -429,7 +429,30 @@ public class DictionaryAccess {
                     return (String) pair.getKey();
                 }
             }
-            it.remove(); // avoids a ConcurrentModificationException
+            //it.remove(); // avoids a ConcurrentModificationException
+        }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public String changeVerbTense(String word, String tense){
+        //System.out.println(word);
+        Verb v = (Verb)verbDictionary.get(word);
+        //System.out.println(v.toString());
+        try{
+        String base = v.baseForm;
+        HashMap<String,Verb> temp = verbDictionary;
+        Iterator it = temp.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            if(((Verb)pair.getValue()).baseForm.equals(base)&& !base.equals("--")){
+                if(((Verb)pair.getValue()).tense.equals(tense)){
+                    return (String) pair.getKey();
+                }
+            }
+            //it.remove(); // avoids a ConcurrentModificationException
         }
         }
         catch(Exception e){
@@ -486,6 +509,7 @@ public class DictionaryAccess {
         }
     }
     public String clean(String s){
+        /*annotate using coreNLP*/
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize, ssplit, pos, parse");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
@@ -493,35 +517,67 @@ public class DictionaryAccess {
         pipeline.annotate(document);
         String output = "\n";
         List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+        /*check for a light verb*/
         boolean lightsentence = false;
+        /*tense of the light verb*/
         String tense = "";
+        /*object of the sentence*/
         String object = "";
+        /*determiner in the sentence*/
+        String determiner = "";
+        /*checks if the determiner has been picked up yet*/
         boolean dettrigger = false;
+        String pphr = "";
+        String oldobj = "";
         for (CoreMap sentence : sentences) {
-            for (CoreLabel token : sentence.get(TokensAnnotation.class)) {
+            List<CoreLabel> temp = sentence.get(TokensAnnotation.class);
+            for (CoreLabel token : temp) {
+                /*word*/
                 String w = token.get(TextAnnotation.class);
+                /*part of speech*/
                 String pos = token.get(PartOfSpeechAnnotation.class);
                 if (convertnlp(pos) != null){
-                    System.out.print(output+" + "+w+" ("+convertnlp(pos)+") light:" + lightsentence);
+                    //System.out.println(output+" + "+w+" ("+convertnlp(pos)+") light:" + lightsentence + " dettrigger:"+dettrigger+ " object:"+object+" determiner:"+determiner + " dictionaryContains?:"+getdictionary(convertnlp(pos)).containsKey(w));
+                    //System.out.println(w + " : " + getdictionary(convertnlp(pos)).containsKey(w));
                     if(getdictionary(convertnlp(pos)).containsKey(w)){
-                        System.out.println("doot");
-                        if(convertnlp(pos).equals("verb")){
-                            if(((Verb)verbDictionary.get(w)).light){
-                                lightsentence = true;
-                                tense = ((Verb)getdictionary(convertnlp(pos)).get(w)).tense;
-                            }
-                            else{
-                                
-                                output+= w+ " ";
-                            }
-                        }
-                        else if((convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun")) && !convertnlp(pos).equals("determiner")){
+                        if((convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun") || temp.indexOf(token)==temp.size()-1) && !determinerDictionary.containsKey(w)){
                             if(lightsentence){
-                                
                                 if(dettrigger){
-                                 output+= changeVerbTense(w,tense)+ " ";
-                                    if(!object.equals("")){
-                                        output += object;
+                                    //System.out.println(("" +(temp.size()-1)) + " : "+ temp.indexOf(token));
+                                    if(!oldobj.equals("")){
+                                        object += w + " ";
+                                    }
+                                   
+                                    else if(temp.indexOf(token)<temp.size()-1 && object.equals("")){
+                                        object = determiner + " " + w;
+                                        
+                                    }else{
+                                        String changed = w;
+                                        if(tense.equals("past")){
+                                            changed = changeNounTense(w,tense);
+                                        }
+                                        //System.out.println(changed);
+                                        if(changed == null){
+                                            if(convertnlp(pos).equals("verb")){
+                                                //System.out.println(w);
+                                                //changed = changeVerbTense(w,tense);
+                                                if(changed == null){
+                                                    changed = w;
+                                                }
+                                            }
+                                            else{
+                                                if(tense.equals("Past") || tense.equals("past")){
+                                                    changed = w + "ed";
+                                                }
+                                                if(tense.equals("Present") || tense.equals("present")){
+                                                    changed = w;
+                                                }
+                                            }
+                                        }
+                                        output+= changed+ " ";
+                                        if(!object.equals("")){
+                                            output += object;
+                                        }
                                     }
                                 }
                                 else{
@@ -532,24 +588,69 @@ public class DictionaryAccess {
                                 output+= w+ " ";
                             }
                         }
+                        else if(convertnlp(pos).equals("verb")){
+                            if(((Verb)verbDictionary.get(w)).light){
+                                lightsentence = true;
+                                tense = ((Verb)getdictionary(convertnlp(pos)).get(w)).tense;
+                            }
+                            else{
+                                output+= w+ " ";
+                            }
+                        }
+                        
                         else if(convertnlp(pos).equals("determiner")){
                             if(lightsentence){
                                 dettrigger = true;
+                                determiner = w;
                             }
                             else{
                                 output += w+ " ";
+                            }
+                        }
+                        else if(convertnlp(pos).equals("preposition")){
+                            pphr = w;
+                            if(!object.equals("")){
+                                if(object.split(" ").length>1){
+                                    object = object.split(" ")[object.split(" ").length-1];
+                                }
+                                oldobj = object;
+                                object = "";
                             }
                         }
                         else{
                             output+=w+ " ";
                         }
                     }
-                    
+                    else{
+                        output +="["+w+" is not in dictionary] ";
+                    }
                 }
                 else
                     output += "Puncuation";
             }
         }
+        if(output.split(" ").length<2){
+            String changed = changeNounTense(oldobj,tense);
+            //System.out.println(changed);
+            if(changed == null){
+                    if(tense.equals("Past") || tense.equals("past")){
+                        changed = oldobj + "ed";
+                    }
+                    if(tense.equals("Present") || tense.equals("present")){
+                        changed = oldobj;
+                    }
+            }
+            output += changed + " ";
+            if(!object.equals("")){
+                output += object;
+            }
+        }
+        lightsentence = false;
+        tense = "";
+        object = "";
+        determiner = "";
+        dettrigger = false;
+        pipeline.clearAnnotatorPool();
         sentences.clear();
         return output;
     }
