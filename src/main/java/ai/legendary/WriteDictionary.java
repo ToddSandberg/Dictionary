@@ -15,9 +15,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.Map.Entry;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -53,6 +55,8 @@ public class WriteDictionary {
     public static HashMap<String, Preposition> prepositionDictionary = new HashMap<String, Preposition>();
     public static HashMap<String, Pronoun> pronounDictionary = new HashMap<String, Pronoun>();
     public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
+    public static HashMap<String, Noun> firstNameDictionary = new HashMap<String,Noun>();
+    public static HashMap<String, Noun> lastNameDictionary = new HashMap<String,Noun>();
     /**
      * Saves progress in animacy from concept net
      */
@@ -115,6 +119,9 @@ public class WriteDictionary {
             out.flush();
             out.close();
             fout.close();
+            // Implements First Names and Last Names
+            properNames();
+            printer.println("- First_Names.ser and Last_Names.ser Implemented");
             // Implements MobyWordListWithPOS.txt to the dictionary
             mobyListPOS();
             printer.println("- MobyWordListWithPOS.txt Implemented");
@@ -124,7 +131,7 @@ public class WriteDictionary {
             // adds count nouns and non count nouns to the dictionary
             countNounOrNot();
             printer.println(
-                    "- NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt implemented");
+                    "- NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt Implemented");
             // Implements Adverb Scales
             adverbIntensifiers();
             printer.println("- AdverbScales-Manual.csv Implemented");
@@ -196,6 +203,8 @@ public class WriteDictionary {
             toHashMap("quantifier");
             toHashMap("prep");
             toHashMap("verb");
+            toHashMap("firstName");
+            toHashMap("lastName");
             /* store animacy querys for future runs */
             fout = new FileOutputStream("outputs/animacyquery.ser");
             out = new ObjectOutputStream(fout);
@@ -208,7 +217,7 @@ public class WriteDictionary {
                     verbDictionary, adjectiveDictionary, adverbDictionary,
                     conjunctionDictionary, determinerDictionary,
                     interjectionDictionary, prepositionDictionary,
-                    pronounDictionary, quantifierDictionary);
+                    pronounDictionary, quantifierDictionary, firstNameDictionary, lastNameDictionary);
 
             printer.println("## Current Dictionary Write Time: " + seconds / 60
                     + " minutes and " + seconds % 60 + " seconds");
@@ -218,6 +227,200 @@ public class WriteDictionary {
         }
         catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void properNames() {
+        try{
+            HashMap<String, String> firstnames = new HashMap<String,String>();
+            ObjectInputStream in = new ObjectInputStream(
+                    new FileInputStream("inputs/First_Names.ser"));
+            firstnames = (HashMap<String, String>) in.readObject();
+            in.close();
+            
+            Iterator it = firstnames.entrySet().iterator();
+            while(it.hasNext()){
+                Map.Entry pair = (Entry) it.next();
+                String name = (String) pair.getKey();
+                String actualname = name.substring(0,1)+name.substring(1,name.length()).toLowerCase();
+                Noun n = new Noun(actualname);
+                System.out.println(actualname);
+                n.isProperName = true;
+                String prop = (String) pair.getValue();
+                if(prop.split("\\.")[1].equals("MALE")){
+                    n.gender = "Masculine";
+                }
+                else if(prop.split("\\.")[1].equals("FEMALE")){
+                    n.gender = "Feminine";
+                }
+                n.animacy = "Human";
+                mergeFirstName(actualname,n);
+            }
+            
+            HashMap<String, String> lastnames = new HashMap<String,String>();
+            ObjectInputStream in2 = new ObjectInputStream(
+                    new FileInputStream("inputs/Last_Names.ser"));
+            lastnames = (HashMap<String, String>) in2.readObject();
+            in2.close();
+            
+            Iterator it2 = lastnames.entrySet().iterator();
+            while(it2.hasNext()){
+                Map.Entry pair = (Entry) it2.next();
+                String name = (String) pair.getKey();
+                String actualname = name.substring(0,1)+name.substring(1,name.length()).toLowerCase();
+                Noun n = new Noun(actualname);
+                System.out.println(actualname);
+                n.isProperName = true;
+                n.animacy = "Human";
+                mergeLastName(actualname,n);
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void mergeLastName(String w, Noun part) {
+        if (lastNameDictionary.containsKey(w)) {
+            Noun p = (Noun) lastNameDictionary.get(w);
+            if (p.plurality.equals("--")) {
+                p.plurality = ((Noun) part).plurality;
+            }
+            if (p.gender.equals("--")) {
+                p.gender = ((Noun) part).gender;
+            }
+            if (p.anAbbreviationFor.equals("--")) {
+                p.anAbbreviationFor = ((Noun) part).anAbbreviationFor;
+            }
+            if (p.abbreviatedFrom.equals("--")) {
+                p.abbreviatedFrom = ((Noun) part).abbreviatedFrom;
+            }
+            if (p.anAcronymFor.equals("--")) {
+                p.anAcronymFor = ((Noun) part).anAcronymFor;
+            }
+            if (p.isCompound == null) {
+                p.isCompound = ((Noun) part).isCompound;
+            }
+            if (p.isCountable == null) {
+                p.isCountable = ((Noun) part).isCountable;
+            }
+            if (p.acceptsZeroArticle == null) {
+                p.acceptsZeroArticle = ((Noun) part).acceptsZeroArticle;
+            }
+            if (p.isProperName == null) {
+                p.isProperName = ((Noun) part).isProperName;
+            }
+            if (p.compliments.equals("--")) {
+                p.compliments = ((Noun) part).compliments;
+            }
+            if (p.irregularPluralForm.equals("--")) {
+                p.irregularPluralForm = ((Noun) part).irregularPluralForm;
+            }
+            if (p.animacy == null) {
+                p.animacy = ((Noun) part).animacy;
+            }
+            if (p.location == null) {
+                p.location = ((Noun) part).location;
+            }
+            if (p.commonRank == -1) {
+                p.commonRank = ((Noun) part).commonRank;
+            }
+            if (p.howCommon == -1) {
+                p.howCommon = ((Noun) part).howCommon;
+            }
+            if(!((Noun) part).baseForm.equals("--")){
+                p.baseForm = ((Noun) part).baseForm;
+            }
+            if(!((Noun) part).propbank.equals("--")){
+                if(p.propbank.equals("--")){
+                    p.propbank = ((Noun) part).propbank + "|";
+                }else{
+                    p.propbank += ((Noun) part).propbank + "|";
+                }
+            }
+            if(!((Noun) part).frame.equals("--")){
+                if(p.frame.equals("--")){
+                    p.frame = ((Noun) part).frame + "|";
+                }else{
+                    p.frame += ((Noun) part).frame + "|";
+                }
+            }
+            lastNameDictionary.put(w,p);
+        }
+        else {
+            lastNameDictionary.put(w, (Noun) part);
+        }
+    }
+
+    private static void mergeFirstName(String w, Noun part) {
+        if (firstNameDictionary.containsKey(w)) {
+            Noun p = (Noun) firstNameDictionary.get(w);
+            if (p.plurality.equals("--")) {
+                p.plurality = ((Noun) part).plurality;
+            }
+            if (p.gender.equals("--")) {
+                p.gender = ((Noun) part).gender;
+            }
+            if (p.anAbbreviationFor.equals("--")) {
+                p.anAbbreviationFor = ((Noun) part).anAbbreviationFor;
+            }
+            if (p.abbreviatedFrom.equals("--")) {
+                p.abbreviatedFrom = ((Noun) part).abbreviatedFrom;
+            }
+            if (p.anAcronymFor.equals("--")) {
+                p.anAcronymFor = ((Noun) part).anAcronymFor;
+            }
+            if (p.isCompound == null) {
+                p.isCompound = ((Noun) part).isCompound;
+            }
+            if (p.isCountable == null) {
+                p.isCountable = ((Noun) part).isCountable;
+            }
+            if (p.acceptsZeroArticle == null) {
+                p.acceptsZeroArticle = ((Noun) part).acceptsZeroArticle;
+            }
+            if (p.isProperName == null) {
+                p.isProperName = ((Noun) part).isProperName;
+            }
+            if (p.compliments.equals("--")) {
+                p.compliments = ((Noun) part).compliments;
+            }
+            if (p.irregularPluralForm.equals("--")) {
+                p.irregularPluralForm = ((Noun) part).irregularPluralForm;
+            }
+            if (p.animacy == null) {
+                p.animacy = ((Noun) part).animacy;
+            }
+            if (p.location == null) {
+                p.location = ((Noun) part).location;
+            }
+            if (p.commonRank == -1) {
+                p.commonRank = ((Noun) part).commonRank;
+            }
+            if (p.howCommon == -1) {
+                p.howCommon = ((Noun) part).howCommon;
+            }
+            if(!((Noun) part).baseForm.equals("--")){
+                p.baseForm = ((Noun) part).baseForm;
+            }
+            if(!((Noun) part).propbank.equals("--")){
+                if(p.propbank.equals("--")){
+                    p.propbank = ((Noun) part).propbank + "|";
+                }else{
+                    p.propbank += ((Noun) part).propbank + "|";
+                }
+            }
+            if(!((Noun) part).frame.equals("--")){
+                if(p.frame.equals("--")){
+                    p.frame = ((Noun) part).frame + "|";
+                }else{
+                    p.frame += ((Noun) part).frame + "|";
+                }
+            }
+            firstNameDictionary.put(w,p);
+        }
+        else {
+            firstNameDictionary.put(w, (Noun) part);
         }
     }
 
@@ -298,10 +501,32 @@ public class WriteDictionary {
             PrintWriter quantifierprinter = new PrintWriter(quantifiers);
             quantifierprinter
                     .println("Word\tQuantifierID\thowCommon\tcommonRank");
+            // quantifierprinter setup
+            File firstnames = new File("outputs/firstNames.tsv");
+            PrintWriter firstnameprinter = new PrintWriter(firstnames);
+            firstnameprinter
+                    .println("Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank\tframe");
 
             Iterator nounit = nounDictionary.entrySet().iterator();
             while (nounit.hasNext()) {
                 HashMap.Entry pair = (HashMap.Entry) nounit.next();
+                String w = (String) pair.getKey();
+                Noun n = (Noun) pair.getValue();
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
+                }
+                nounprinter.println(w + "\t" + n.plurality + "\t" + n.gender
+                        + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
+                        + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
+                        + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
+                        + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
+                        + n.compliments + "\t" + n.baseForm + "\t" + n.animacy
+                        + "\t" + n.location + "\t" + n.howCommon + "\t"
+                        + n.commonRank + "\t" + n.frame);
+            }
+            Iterator firstnameit = firstNameDictionary.entrySet().iterator();
+            while (firstnameit.hasNext()) {
+                HashMap.Entry pair = (HashMap.Entry) firstnameit.next();
                 String w = (String) pair.getKey();
                 Noun n = (Noun) pair.getValue();
                 if (w.endsWith(",")) {
@@ -582,7 +807,13 @@ public class WriteDictionary {
         // Check the part of speech
         try {
             if (part instanceof Noun) {
-                if (nounDictionary.containsKey(w)) {
+                if(firstNameDictionary.containsKey(w)){
+                    mergeFirstName(w,(Noun) part);
+                }
+                else if(lastNameDictionary.containsKey(w)){
+                    mergeLastName(w,(Noun) part);
+                }
+                else if (nounDictionary.containsKey(w)) {
                     Noun p = (Noun) nounDictionary.get(w);
                     if (p.plurality.equals("--")) {
                         p.plurality = ((Noun) part).plurality;
@@ -651,7 +882,7 @@ public class WriteDictionary {
                 else {
                     nounDictionary.put(w, (Noun) part);
                 }
-
+                
             }
             else if (part instanceof Adjective) {
 
@@ -967,7 +1198,7 @@ public class WriteDictionary {
             int x = 0;
             while (scan.hasNext()) {
                 String scanIn = scan.nextLine();
-                System.out.println(scanIn);
+                //System.out.println(scanIn);
                 if (!scanIn.equals("\n") && !scanIn.equals("")) {
                     // seperates the part of speech from the word
                     String[] input = scanIn.split("\\$");
@@ -2372,13 +2603,13 @@ public class WriteDictionary {
                     merge(word,a);
                 }
                 else{
-                    try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                    /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                     new PrintWriter(bw); printer.println("Colors: " + word); printer.close();
                     bw.close(); fw.close();
                      
                      } 
-                    catch (IOException e) { e.printStackTrace(); }
+                    catch (IOException e) { e.printStackTrace(); }*/
                 }
             }
         }
@@ -2501,13 +2732,13 @@ public class WriteDictionary {
                         gradable = null;
                     }
                     else if(!adj.equals("") && !adjectiveDictionary.containsKey(adj)){
-                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                         new PrintWriter(bw); printer.println("ADJADV: " + adj); printer.close();
                         bw.close(); fw.close();
                          
                          } 
-                        catch (IOException e) { e.printStackTrace(); }
+                        catch (IOException e) { e.printStackTrace(); }*/
                     }
                     if(!adv.equals("") && adverbDictionary.containsKey(adv)){
                         Adverb a = new Adverb(adv);
@@ -2518,13 +2749,13 @@ public class WriteDictionary {
                         adv = "";
                     }
                     else if(!adv.equals("") && !adverbDictionary.containsKey(adv)){
-                            try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                            /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                             BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                             new PrintWriter(bw); printer.println("ADJADV: " + adv); printer.close();
                             bw.close(); fw.close();
                              
                              } 
-                            catch (IOException e) { e.printStackTrace(); }
+                            catch (IOException e) { e.printStackTrace(); }*/
                     }
                     adj = split[1].substring(6, split[1].length()-1);
                     if(adj.endsWith("\"")){
@@ -2649,13 +2880,13 @@ public class WriteDictionary {
                                     merge(word, v);
                                 }
                                 else{
-                                    try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                                    /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                                     BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                                     new PrintWriter(bw); printer.println("PropBank: " + word + " : " + pos); printer.close();
                                     bw.close(); fw.close();
                                      
                                      } 
-                                    catch (IOException e) { e.printStackTrace(); }
+                                    catch (IOException e) { e.printStackTrace(); }*/
                                 }
                             }
                         }
@@ -2708,13 +2939,13 @@ public class WriteDictionary {
                         merge(word,v);
                     }
                     else{
-                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                         new PrintWriter(bw); printer.println("FrameNet: " + word + " : " + pos); printer.close();
                         bw.close(); fw.close();
                          
                          } 
-                        catch (IOException e) { e.printStackTrace(); }
+                        catch (IOException e) { e.printStackTrace(); }*/
                     }
                 }
                 else if(pos.equals("n")){
@@ -2724,13 +2955,13 @@ public class WriteDictionary {
                         merge(word,n);
                     }
                     else{
-                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                         new PrintWriter(bw); printer.println("FrameNet: " + word+ " : " + pos); printer.close();
                         bw.close(); fw.close();
                          
                          } 
-                        catch (IOException e) { e.printStackTrace(); }
+                        catch (IOException e) { e.printStackTrace(); }*/
                     }
                 }
                 else if(pos.equals("a")){
@@ -2739,23 +2970,23 @@ public class WriteDictionary {
                         a.frame = frame;
                     }
                     else{
-                        try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                        /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                         new PrintWriter(bw); printer.println("FrameNet: " + word+ " : " + pos); printer.close();
                         bw.close(); fw.close();
                          
                          } 
-                        catch (IOException e) { e.printStackTrace(); }
+                        catch (IOException e) { e.printStackTrace(); }*/
                     }
                 }
                 else{
-                    try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
+                    /*try { FileWriter fw = new FileWriter("outputs/NATD.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw); PrintWriter printer =
                     new PrintWriter(bw); printer.println("FrameNet: " + word+ " : " + pos); printer.close();
                     bw.close(); fw.close();
                      
                      } 
-                    catch (IOException e) { e.printStackTrace(); }
+                    catch (IOException e) { e.printStackTrace(); }*/
                 }
             }
         }
@@ -2835,6 +3066,12 @@ public class WriteDictionary {
         }
         else if (pos.equals("verb")) {
             return verbDictionary;
+        }
+        else if(pos.equals("firstName")){
+            return firstNameDictionary;
+        }
+        else if(pos.equals("lastName")){
+            return lastNameDictionary;
         }
         else
             return null;

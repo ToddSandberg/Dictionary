@@ -68,6 +68,7 @@ public class access2gram {
             HashMap<String, Preposition> prepdict = dict.getPrepositionDictionary();
             HashMap<String, Verb> verbdict = dict.getVerbDictionary();
             HashMap<String, Pronoun> prondict = dict.getPronounDictionary();
+            HashMap<String, Conjunction> conjdict = dict.getConjunctionDictionary();
 
             Iterator<Entry<String, HashMap<String, Integer>>> it = twograms
                     .entrySet().iterator();
@@ -165,7 +166,7 @@ public class access2gram {
                                     prepvhash.put(word, temp);
                                 }
                             }
-                            else if (noundict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword)) {
+                            else if (noundict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !conjdict.containsKey(beginword)) {
                                 if(nounvhash.containsKey(word)){
                                     HashMap<String,Double> temp = nounvhash.get(word);
                                     temp.put(beginword,percentages.get(key));

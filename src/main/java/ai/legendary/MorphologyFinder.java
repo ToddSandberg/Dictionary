@@ -33,12 +33,11 @@ public class MorphologyFinder {
      */
 
     public MorphologyFinder(String w) {
-        if(!w.contains(" ")){
         w = w.toLowerCase();
         for (int i = 0; i < w.length(); i++) {
             letters.add(w.charAt(i));
         }
-        }
+
     }
 
     /**
@@ -388,8 +387,17 @@ public class MorphologyFinder {
         if (ends("eed")) {
             if (m("eed") > 0) {
                 removeX(1);
+                String p = "";
+                for (int i = 0; i < letters.size(); i++) {
+                    p += letters.get(i);
+                }
+                if(english.containsKey(p)){
                 suffs.add("ed");
                 traits.add("past tense");
+                }
+                else{
+                    letters.add('d');
+                }
             }
         }
 
@@ -457,7 +465,7 @@ public class MorphologyFinder {
                 removeX(3);
                 traits.add("present tense");
             }
-            if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg") || ends("uir") || ends("iat") || ends("eas")) && !ends("y") && !ends("lter") && !ends("el")) //charged & substantiating & requiring & filtering, labeled 
+            if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg") || ends("uir") || ends("iat") || ends("eas")) && !ends("y") && !ends("lter") && !ends("el") && !ends("ffen")) //charged & substantiating & requiring & filtering, labeled,stiffening 
                 letters.add('e');
             else if (ends("bl"))
                 letters.add('e');
@@ -534,6 +542,12 @@ public class MorphologyFinder {
             }
             
         }
+        if(ends("trable")){ //demonstrable
+            checkSuff("able");
+            letters.add('a');
+            letters.add('t');
+            letters.add('e');
+        }
         // verb to adjective + productive
         if (ends("able") && !ends("iable")) {
             checkSuff("able");
@@ -543,7 +557,8 @@ public class MorphologyFinder {
         }
         if (ends("ible")) {
             checkSuff("ible");
-            letters.add('e');
+            if(!ends("st"))//digestible
+                letters.add('e');
         }
         // able + ly
         checkSuff("ably");
@@ -632,9 +647,9 @@ public class MorphologyFinder {
                 letters.add('t');
             }
         }
-        if(ends("ion") && (!ends("tion") || ends("stion"))){
+        if(ends("ion") /*&& (!ends("tion") || ends("stion") || ends("ction"))*/){//introspection, digestion
             checkSuff("ion");
-            if(ends("ns")){
+            if(ends("ns") || ends("is")){//vision
                 letters.add('e');
             }
         }
@@ -645,14 +660,19 @@ public class MorphologyFinder {
             letters.add('y'); //biological
         }
         if (ends("al")) {
+            //dismissal
             removeX(2);
-            if(english.containsKey(getRoot())){
+            suffs.add("al");
+            if(cvc()){
+                letters.add('e');
+            }
+            /*if(english.containsKey(getRoot())){
                 suffs.add("al");
             }
             else{
                 letters.add('a');
                 letters.add('l');
-            }
+            }*/
         }
 
         if (ends("ivity")) {
@@ -686,7 +706,7 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
-        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter")) {
+        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter") && !ends("mber") && !ends("eter")) { //somber/member, meter
             suffs.add("er");
             removeX(2);
             if (ends("i")) {
@@ -773,8 +793,13 @@ public class MorphologyFinder {
                 letters.add('y');
             }
         }
-        checkSuff("itis");
-        
+        if(ends("itis")){
+            checkSuff("itis");
+            if(ends("r")){ //cerebritis
+                letters.add('u');
+                letters.add('m');
+            }
+        }
         checkSuff("like");
         checkSuff("ment");
         checkSuff("geous");
@@ -802,7 +827,7 @@ public class MorphologyFinder {
                 letters.add('y'); //biologist
             }
         }
-        if (ends("en")) {
+        if (ends("en") && !ends("men")) {
             suffs.add("en");
             removeX(2);
             if(cvc()){
@@ -851,7 +876,7 @@ public class MorphologyFinder {
         if(ends("otic")){
             checkSuff("tic");//hypnotic
         }
-        if (ends("ic") && !ends("ritic")) {
+        if (ends("ic") && !ends("ritic") && !ends("toic")) { //stoic
             suffs.add("ic");
             removeX(2);
             
@@ -875,6 +900,10 @@ public class MorphologyFinder {
         if(ends("ian")){
             suffs.add("an");
             removeX(3);
+            if(ends("r")){ //umbrian
+                letters.add('i');
+                letters.add('a');
+            }
         }
         //an think of ran and ban
         //fuage and pillage and manage and hemorrhage
@@ -884,6 +913,10 @@ public class MorphologyFinder {
         if(ends("ory")){ //consecratory
             checkSuff("y");
             checkSuff("or");
+            letters.add('e');
+        }
+        if(ends("ium")){ //europium
+            checkSuff("ium");
             letters.add('e');
         }
         

@@ -37,6 +37,8 @@ public class DictionaryAccess {
     public static HashMap<String, Pronoun> pronounDictionary;
     public static HashMap<String, Quantifier> quantifierDictionary;
     public static HashMap<String, String> roots;
+    public static HashMap<String, Noun> firstNameDictionary;
+    public static HashMap<String, Noun> lastNameDictionary;
     /*
      * Loads the Dictionarys into hashmaps for easy access
      */
@@ -115,6 +117,20 @@ public class DictionaryAccess {
                     new FileInputStream(path+"/outputs/roots.ser"));
             System.out.println("Loading roots...");
             roots = (HashMap<String, String>) in
+                    .readObject();
+            in.close();
+          //firstname
+            in = new ObjectInputStream(
+                    new FileInputStream(path+"/outputs/firstNameDictHashMap.ser"));
+            System.out.println("Loading first names...");
+            firstNameDictionary = (HashMap<String, Noun>) in
+                    .readObject();
+            in.close();
+          //lastname
+            in = new ObjectInputStream(
+                    new FileInputStream(path+"/outputs/lastNameDictHashMap.ser"));
+            System.out.println("Loading last names...");
+            lastNameDictionary = (HashMap<String, Noun>) in
                     .readObject();
             in.close();
 
@@ -208,7 +224,23 @@ public class DictionaryAccess {
      * @return the info contained in the dictionary for the given word
      */
     public String getWordInfo(String word, String pos) {
-
+        if(pos.equals("noun") || pos.equals("NN") || pos.equals("n")){
+            if(firstNameDictionary.containsKey(word)){
+                return "Word: " + word + "\n"
+                        + firstNameDictionary.get(word).toString() + "\n";
+            }
+            else if(lastNameDictionary.containsKey(word)){
+                return "Word: " + word + "\n"
+                        + lastNameDictionary.get(word).toString() + "\n";
+            }
+            else if(nounDictionary.containsKey(word)){
+                return "Word: " + word + "\n"
+                        + nounDictionary.get(word).toString() + "\n";
+            }
+            else{
+                return "["+word + " " + pos + " is not in Dictionary]\n";
+            }
+        }
         if (getdictionary(pos).containsKey(word)) {
             return "Word: " + word + "\n"
                     + getdictionary(pos).get(word).toString() + "\n";
@@ -253,6 +285,12 @@ public class DictionaryAccess {
         }
         if (quantifierDictionary.containsKey(word)) {
             p += quantifierDictionary.get(word).toString() + "\n";
+        }
+        if  (firstNameDictionary.containsKey(word)){
+            p += firstNameDictionary.get(word).toString() + "\n";
+        }
+        if  (lastNameDictionary.containsKey(word)){
+            p += lastNameDictionary.get(word).toString() + "\n";
         }
         if(p.equals("Word: " + word + "\n")){
             p+= "not in dictionary";
@@ -416,6 +454,12 @@ public class DictionaryAccess {
             return finalresults;
         }
     }
+    /**
+     * changes the tense of target noun
+     * @param word noun to be changed
+     * @param tense the resulting tense
+     * @return changed words
+     */
     public String changeNounTense(String word, String tense){
         Noun v = (Noun)nounDictionary.get(word);
         try{
@@ -464,7 +508,7 @@ public class DictionaryAccess {
      * Only gets adjectives at the moment
      * @return
      */
-    public HashMap<Long,String> getMostFrequent(){
+    /*public HashMap<Long,String> getMostFrequent(){
         HashMap<String,Adjective> adj = adjectiveDictionary;
         HashMap<Long,String> temp = new HashMap<Long,String>();
         Iterator it = adj.entrySet().iterator();
@@ -474,12 +518,12 @@ public class DictionaryAccess {
             it.remove();
         }
         return temp;
-    }
+    }*/
     /**
      * based only on the most frequent method
      * @param temp
      */
-    public void sortAndPrintHashMap(HashMap temp){
+    /*public void sortAndPrintHashMap(HashMap temp){
         Object[] a = temp.entrySet().toArray();
         Arrays.sort(a, new Comparator<Object>() {
             public int compare(Object o1, Object o2) {
@@ -494,7 +538,7 @@ public class DictionaryAccess {
         int z=500;
         for (int x=0;x<z;x++) {
             if(((Map.Entry<Long, String>) a[x]).getKey()!=-1){
-                print.println(/*((Map.Entry<Long, String>) a[x]).getKey()*/ y + " : "
+                print.println( y + " : "
                     + ((Map.Entry<Long, String>) a[x]).getValue());
                 y++;
             }
@@ -507,7 +551,12 @@ public class DictionaryAccess {
         catch(Exception e){
             e.printStackTrace();
         }
-    }
+    }*/
+    /**
+     * Paraphrases light verb phrases
+     * @param s the phrase to be paraphrased
+     * @return paraphrased light verb phrase
+     */
     public String clean(String s){
         /*annotate using coreNLP*/
         Properties props = new Properties();
@@ -537,7 +586,7 @@ public class DictionaryAccess {
                 /*part of speech*/
                 String pos = token.get(PartOfSpeechAnnotation.class);
                 if (convertnlp(pos) != null){
-                    //System.out.println(output+" + "+w+" ("+convertnlp(pos)+") light:" + lightsentence + " dettrigger:"+dettrigger+ " object:"+object+" determiner:"+determiner + " dictionaryContains?:"+getdictionary(convertnlp(pos)).containsKey(w));
+                    //System.out.println(output+" + "+w+" ("+convertnlp(pos)+") light:" + lightsentence + " dettrigger:"+dettrigger+ " object:"+object+" determiner:"+determiner + " lastItem?:"+(temp.indexOf(token)<temp.size()-1));
                     //System.out.println(w + " : " + getdictionary(convertnlp(pos)).containsKey(w));
                     if(getdictionary(convertnlp(pos)).containsKey(w)){
                         if((convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun") || temp.indexOf(token)==temp.size()-1) && !determinerDictionary.containsKey(w)){
@@ -545,16 +594,20 @@ public class DictionaryAccess {
                                 if(dettrigger){
                                     //System.out.println(("" +(temp.size()-1)) + " : "+ temp.indexOf(token));
                                     if(!oldobj.equals("")){
-                                        object += w + " ";
+                                        if(!determiner.equals(""))
+                                            object += determiner+ " " + w ;
+                                        else
+                                            object += w + " ";
                                     }
                                    
                                     else if(temp.indexOf(token)<temp.size()-1 && object.equals("")){
+                                        //System.out.println(w);
                                         object = determiner + " " + w;
-                                        
+                                        determiner = "";
                                     }else{
                                         String changed = w;
-                                        if(tense.equals("past")){
-                                            changed = changeNounTense(w,tense);
+                                        if(tense.equals("Past")){
+                                            changed = changeVerbTense(w,tense);
                                         }
                                         //System.out.println(changed);
                                         if(changed == null){

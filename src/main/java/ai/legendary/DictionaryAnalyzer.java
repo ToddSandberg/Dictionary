@@ -64,7 +64,7 @@ public class DictionaryAnalyzer {
 	public double adjectiveBaseForm;
 	public double adverbBaseForm;
 	public double adverbWordSenseID;
-	public DictionaryAnalyzer (HashMap<String, Noun> nounDictionary,HashMap<String, Verb> verbDictionary,HashMap<String, Adjective> adjectiveDictionary,HashMap<String, Adverb> adverbDictionary,HashMap<String, Conjunction> conjunctionDictionary,HashMap<String, Determiner> determinerDictionary,HashMap<String, Interjection> interjectionDictionary,HashMap<String, Preposition> prepositionDictionary,HashMap<String, Pronoun> pronounDictionary,HashMap<String, Quantifier> quantifierDictionary){
+	public DictionaryAnalyzer (HashMap<String, Noun> nounDictionary,HashMap<String, Verb> verbDictionary,HashMap<String, Adjective> adjectiveDictionary,HashMap<String, Adverb> adverbDictionary,HashMap<String, Conjunction> conjunctionDictionary,HashMap<String, Determiner> determinerDictionary,HashMap<String, Interjection> interjectionDictionary,HashMap<String, Preposition> prepositionDictionary,HashMap<String, Pronoun> pronounDictionary,HashMap<String, Quantifier> quantifierDictionary, HashMap<String, Noun> firstNameDictionary, HashMap<String, Noun> lastNameDictionary){
 		try {
 		    double totalNouns =0;
 		    double totalVerbs =0;
@@ -188,6 +188,118 @@ public class DictionaryAnalyzer {
 					        definedloca++;
 					    }
 					    
+            }
+            Iterator firstnameit = firstNameDictionary.entrySet().iterator();
+            while(nounit.hasNext()) {
+                    HashMap.Entry pair = (HashMap.Entry)nounit.next();
+                    String w = (String) pair.getKey();
+                    Noun n = (Noun) pair.getValue();
+                        totalNouns++;
+                        if(!n.plurality.equals("--")){
+                            definednplurality++;
+                        }
+                        if(!n.gender.equals("--")){
+                            definedngender++;
+                            if(n.gender.equals("Masculine")){
+                                nounmasc++;
+                            }
+                            else if(n.gender.equals("Feminine")){
+                                nounfem++;
+                            }
+                            else if(n.gender.equals("Neuter")){
+                                nounneut++;
+                            }
+                        }
+                        if(n.isCompound != null){
+                            definediscompound++;
+                        }
+                        if(n.isCountable != null){
+                            definediscountable++;
+                        }
+                        if(n.isProperName != null){
+                            definedispropername++;
+                        }
+                        if(n.acceptsZeroArticle != null){
+                            definedzarticle++;
+                        }
+                        if(!n.anAcronymFor.equals("--")){
+                            definedacro++;
+                        }
+                        if(!n.anAbbreviationFor.equals("--")){
+                            definedabb++;
+                        }
+                        if(!n.abbreviatedFrom.equals("--")){
+                            definedfabb++;
+                        }
+                        if(!n.irregularPluralForm.equals("--")){
+                            definedirreg++;
+                        }
+                        if(!n.baseForm.equals("--")){
+                            definedbaseform++;
+                        }
+                        if(n.animacy != null){
+                            definedanimacy++;
+                        }
+                        if(n.location != null){
+                            definedloca++;
+                        }
+                        
+            }
+            Iterator lastnameit = lastNameDictionary.entrySet().iterator();
+            while(nounit.hasNext()) {
+                    HashMap.Entry pair = (HashMap.Entry)nounit.next();
+                    String w = (String) pair.getKey();
+                    Noun n = (Noun) pair.getValue();
+                        totalNouns++;
+                        if(!n.plurality.equals("--")){
+                            definednplurality++;
+                        }
+                        if(!n.gender.equals("--")){
+                            definedngender++;
+                            if(n.gender.equals("Masculine")){
+                                nounmasc++;
+                            }
+                            else if(n.gender.equals("Feminine")){
+                                nounfem++;
+                            }
+                            else if(n.gender.equals("Neuter")){
+                                nounneut++;
+                            }
+                        }
+                        if(n.isCompound != null){
+                            definediscompound++;
+                        }
+                        if(n.isCountable != null){
+                            definediscountable++;
+                        }
+                        if(n.isProperName != null){
+                            definedispropername++;
+                        }
+                        if(n.acceptsZeroArticle != null){
+                            definedzarticle++;
+                        }
+                        if(!n.anAcronymFor.equals("--")){
+                            definedacro++;
+                        }
+                        if(!n.anAbbreviationFor.equals("--")){
+                            definedabb++;
+                        }
+                        if(!n.abbreviatedFrom.equals("--")){
+                            definedfabb++;
+                        }
+                        if(!n.irregularPluralForm.equals("--")){
+                            definedirreg++;
+                        }
+                        if(!n.baseForm.equals("--")){
+                            definedbaseform++;
+                        }
+                        if(n.animacy != null){
+                            definedanimacy++;
+                        }
+                        if(n.location != null){
+                            definedloca++;
+                        }
+                        
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while(verbit.hasNext()) {

@@ -24,7 +24,7 @@ public class Noun implements PartOfSpeech,Serializable{
     private static final long serialVersionUID = -8185217038014096172L;
     public String Noun = "Noun";
 	public String plurality = "--",gender= "--",anAbbreviationFor="--", abbreviatedFrom="--",anAcronymFor="--",irregularPluralForm="--";
-	public Boolean isCompound=null,isCountable=null,acceptsZeroArticle=null,isProperName=null,location = null;
+	public Boolean isCompound=null,isCountable=null,acceptsZeroArticle=null,isProperName=null,location=null;
 	private transient static boolean l =false;
 	public String compliments = "--";
     public String baseForm= "--" ,animacy = null;
