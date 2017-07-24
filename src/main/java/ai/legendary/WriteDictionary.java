@@ -501,10 +501,15 @@ public class WriteDictionary {
             PrintWriter quantifierprinter = new PrintWriter(quantifiers);
             quantifierprinter
                     .println("Word\tQuantifierID\thowCommon\tcommonRank");
-            // quantifierprinter setup
+            // firstnameprinter setup
             File firstnames = new File("outputs/firstNames.tsv");
             PrintWriter firstnameprinter = new PrintWriter(firstnames);
             firstnameprinter
+                    .println("Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank\tframe");
+            // lastnameprinter setup
+            File lastnames = new File("outputs/lastNames.tsv");
+            PrintWriter lastnameprinter = new PrintWriter(lastnames);
+            lastnameprinter
                     .println("Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank\tframe");
 
             Iterator nounit = nounDictionary.entrySet().iterator();
@@ -532,7 +537,24 @@ public class WriteDictionary {
                 if (w.endsWith(",")) {
                     w = w.substring(0, w.length() - 1);
                 }
-                nounprinter.println(w + "\t" + n.plurality + "\t" + n.gender
+                firstnameprinter.println(w + "\t" + n.plurality + "\t" + n.gender
+                        + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
+                        + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
+                        + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
+                        + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
+                        + n.compliments + "\t" + n.baseForm + "\t" + n.animacy
+                        + "\t" + n.location + "\t" + n.howCommon + "\t"
+                        + n.commonRank + "\t" + n.frame);
+            }
+            Iterator lastnameit = lastNameDictionary.entrySet().iterator();
+            while (lastnameit.hasNext()) {
+                HashMap.Entry pair = (HashMap.Entry) lastnameit.next();
+                String w = (String) pair.getKey();
+                Noun n = (Noun) pair.getValue();
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
+                }
+                lastnameprinter.println(w + "\t" + n.plurality + "\t" + n.gender
                         + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
                         + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
                         + "\t" + n.isCompound + "\t" + n.isCountable + "\t"

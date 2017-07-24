@@ -190,8 +190,8 @@ public class DictionaryAnalyzer {
 					    
             }
             Iterator firstnameit = firstNameDictionary.entrySet().iterator();
-            while(nounit.hasNext()) {
-                    HashMap.Entry pair = (HashMap.Entry)nounit.next();
+            while(firstnameit.hasNext()) {
+                    HashMap.Entry pair = (HashMap.Entry)firstnameit.next();
                     String w = (String) pair.getKey();
                     Noun n = (Noun) pair.getValue();
                         totalNouns++;
@@ -246,8 +246,8 @@ public class DictionaryAnalyzer {
                         
             }
             Iterator lastnameit = lastNameDictionary.entrySet().iterator();
-            while(nounit.hasNext()) {
-                    HashMap.Entry pair = (HashMap.Entry)nounit.next();
+            while(lastnameit.hasNext()) {
+                    HashMap.Entry pair = (HashMap.Entry)lastnameit.next();
                     String w = (String) pair.getKey();
                     Noun n = (Noun) pair.getValue();
                         totalNouns++;
