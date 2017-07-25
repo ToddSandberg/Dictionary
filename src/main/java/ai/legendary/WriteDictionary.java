@@ -57,6 +57,7 @@ public class WriteDictionary {
     public static HashMap<String, Quantifier> quantifierDictionary = new HashMap<String, Quantifier>();
     public static HashMap<String, Noun> firstNameDictionary = new HashMap<String,Noun>();
     public static HashMap<String, Noun> lastNameDictionary = new HashMap<String,Noun>();
+    public static HashMap<String, Noun> properPlaceDictionary = new HashMap<String,Noun>();
     /**
      * Saves progress in animacy from concept net
      */
@@ -119,9 +120,9 @@ public class WriteDictionary {
             out.flush();
             out.close();
             fout.close();
-            // Implements First Names and Last Names
+            // Implements First Names and Last Names and Proper Places
             properNames();
-            printer.println("- First_Names.ser and Last_Names.ser Implemented");
+            printer.println("- First_Names.ser and Last_Names.ser and Proper_Places.ser Implemented");
             // Implements MobyWordListWithPOS.txt to the dictionary
             mobyListPOS();
             printer.println("- MobyWordListWithPOS.txt Implemented");
@@ -205,6 +206,7 @@ public class WriteDictionary {
             toHashMap("verb");
             toHashMap("firstName");
             toHashMap("lastName");
+            toHashMap("properPlace");
             /* store animacy querys for future runs */
             fout = new FileOutputStream("outputs/animacyquery.ser");
             out = new ObjectOutputStream(fout);
@@ -217,7 +219,7 @@ public class WriteDictionary {
                     verbDictionary, adjectiveDictionary, adverbDictionary,
                     conjunctionDictionary, determinerDictionary,
                     interjectionDictionary, prepositionDictionary,
-                    pronounDictionary, quantifierDictionary, firstNameDictionary, lastNameDictionary);
+                    pronounDictionary, quantifierDictionary, firstNameDictionary, lastNameDictionary,properPlaceDictionary);
 
             printer.println("## Current Dictionary Write Time: " + seconds / 60
                     + " minutes and " + seconds % 60 + " seconds");
@@ -254,6 +256,7 @@ public class WriteDictionary {
                     n.gender = "Feminine";
                 }
                 n.animacy = "Human";
+                n.location = false;
                 mergeFirstName(actualname,n);
             }
             
@@ -272,11 +275,104 @@ public class WriteDictionary {
                 System.out.println(actualname);
                 n.isProperName = true;
                 n.animacy = "Human";
+                n.location = false;
                 mergeLastName(actualname,n);
+            }
+            
+            HashMap<String, String> properplaces = new HashMap<String,String>();
+            ObjectInputStream in3 = new ObjectInputStream(
+                    new FileInputStream("inputs/Proper_Places.ser"));
+            properplaces = (HashMap<String, String>) in3.readObject();
+            in3.close();
+            
+            Iterator it3 = properplaces.entrySet().iterator();
+            while(it3.hasNext()){
+                Map.Entry pair = (Entry) it3.next();
+                String name = (String) pair.getKey();
+                String actualname = name.substring(0,1)+name.substring(1,name.length()).toLowerCase();
+                Noun n = new Noun(actualname);
+                System.out.println(actualname);
+                n.isProperName = true;
+                n.location = true;
+                n.animacy = "Inanimate";
+                n.gender = "Neuter";
+                mergeProperPlace(actualname,n);
             }
         }
         catch(Exception e){
             e.printStackTrace();
+        }
+    }
+
+    private static void mergeProperPlace(String w, Noun part) {
+        if (properPlaceDictionary.containsKey(w)) {
+            Noun p = (Noun) properPlaceDictionary.get(w);
+            if (p.plurality.equals("--")) {
+                p.plurality = ((Noun) part).plurality;
+            }
+            if (p.gender.equals("--")) {
+                p.gender = ((Noun) part).gender;
+            }
+            if (p.anAbbreviationFor.equals("--")) {
+                p.anAbbreviationFor = ((Noun) part).anAbbreviationFor;
+            }
+            if (p.abbreviatedFrom.equals("--")) {
+                p.abbreviatedFrom = ((Noun) part).abbreviatedFrom;
+            }
+            if (p.anAcronymFor.equals("--")) {
+                p.anAcronymFor = ((Noun) part).anAcronymFor;
+            }
+            if (p.isCompound == null) {
+                p.isCompound = ((Noun) part).isCompound;
+            }
+            if (p.isCountable == null) {
+                p.isCountable = ((Noun) part).isCountable;
+            }
+            if (p.acceptsZeroArticle == null) {
+                p.acceptsZeroArticle = ((Noun) part).acceptsZeroArticle;
+            }
+            if (p.isProperName == null) {
+                p.isProperName = ((Noun) part).isProperName;
+            }
+            if (p.compliments.equals("--")) {
+                p.compliments = ((Noun) part).compliments;
+            }
+            if (p.irregularPluralForm.equals("--")) {
+                p.irregularPluralForm = ((Noun) part).irregularPluralForm;
+            }
+            if (p.animacy == null) {
+                p.animacy = ((Noun) part).animacy;
+            }
+            if (p.location == null) {
+                p.location = ((Noun) part).location;
+            }
+            if (p.commonRank == -1) {
+                p.commonRank = ((Noun) part).commonRank;
+            }
+            if (p.howCommon == -1) {
+                p.howCommon = ((Noun) part).howCommon;
+            }
+            if(!((Noun) part).baseForm.equals("--")){
+                p.baseForm = ((Noun) part).baseForm;
+            }
+            if(!((Noun) part).propbank.equals("--")){
+                if(p.propbank.equals("--")){
+                    p.propbank = ((Noun) part).propbank + "|";
+                }else{
+                    p.propbank += ((Noun) part).propbank + "|";
+                }
+            }
+            if(!((Noun) part).frame.equals("--")){
+                if(p.frame.equals("--")){
+                    p.frame = ((Noun) part).frame + "|";
+                }else{
+                    p.frame += ((Noun) part).frame + "|";
+                }
+            }
+            properPlaceDictionary.put(w,p);
+        }
+        else {
+            properPlaceDictionary.put(w, (Noun) part);
         }
     }
 
@@ -511,6 +607,11 @@ public class WriteDictionary {
             PrintWriter lastnameprinter = new PrintWriter(lastnames);
             lastnameprinter
                     .println("Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank\tframe");
+            // properplaceprinter setup
+            File properplaces = new File("outputs/properPlaces.tsv");
+            PrintWriter properplaceprinter = new PrintWriter(properplaces);
+            properplaceprinter
+                    .println("Word\tPlurality\tGender\tAnAbbreviationFor\tAbbreviatedFrom\tAnAcronymFor\tirregularPluralForm\tIsCompound\tIsCountable\tAcceptsZeroArticle\tIsProperName\tCompliments\tBaseForm\tAnimacy\tlocation\thowCommon\tcommonRank\tpropBank\tframe");
 
             Iterator nounit = nounDictionary.entrySet().iterator();
             while (nounit.hasNext()) {
@@ -555,6 +656,23 @@ public class WriteDictionary {
                     w = w.substring(0, w.length() - 1);
                 }
                 lastnameprinter.println(w + "\t" + n.plurality + "\t" + n.gender
+                        + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
+                        + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
+                        + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
+                        + n.acceptsZeroArticle + "\t" + n.isProperName + "\t"
+                        + n.compliments + "\t" + n.baseForm + "\t" + n.animacy
+                        + "\t" + n.location + "\t" + n.howCommon + "\t"
+                        + n.commonRank + "\t" + n.frame);
+            }
+            Iterator properplaceit = properPlaceDictionary.entrySet().iterator();
+            while (properplaceit.hasNext()) {
+                HashMap.Entry pair = (HashMap.Entry) properplaceit.next();
+                String w = (String) pair.getKey();
+                Noun n = (Noun) pair.getValue();
+                if (w.endsWith(",")) {
+                    w = w.substring(0, w.length() - 1);
+                }
+                properplaceprinter.println(w + "\t" + n.plurality + "\t" + n.gender
                         + "\t" + n.anAbbreviationFor + "\t" + n.abbreviatedFrom
                         + "\t" + n.anAcronymFor + "\t" + n.irregularPluralForm
                         + "\t" + n.isCompound + "\t" + n.isCountable + "\t"
@@ -829,11 +947,16 @@ public class WriteDictionary {
         // Check the part of speech
         try {
             if (part instanceof Noun) {
+                if(firstNameDictionary.containsKey(w)||lastNameDictionary.containsKey(w)||properPlaceDictionary.containsKey(w)){
                 if(firstNameDictionary.containsKey(w)){
                     mergeFirstName(w,(Noun) part);
                 }
-                else if(lastNameDictionary.containsKey(w)){
+                if(lastNameDictionary.containsKey(w)){
                     mergeLastName(w,(Noun) part);
+                }
+                if(properPlaceDictionary.containsKey(w)){
+                    mergeProperPlace(w,(Noun) part);
+                }
                 }
                 else if (nounDictionary.containsKey(w)) {
                     Noun p = (Noun) nounDictionary.get(w);
@@ -3094,6 +3217,9 @@ public class WriteDictionary {
         }
         else if(pos.equals("lastName")){
             return lastNameDictionary;
+        }
+        else if(pos.equals("properPlace")){
+            return properPlaceDictionary;
         }
         else
             return null;

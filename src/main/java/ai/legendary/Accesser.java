@@ -9,7 +9,7 @@ public class Accesser {
         System.out.println(mf.getPrefixes());
         System.out.println(mf.getRoot());*/
         /*example usage of getWordInfo*/
-        System.out.println(acc.getWordInfo("Hamish"));
+        System.out.println(acc.getWordInfo("Junior"));
         //System.out.println(acc.getWordInfo("play","verb"));
         /*Example usage of changePOS*/
         //System.out.println(acc.changePOS("revive", "verb", "noun").toString());

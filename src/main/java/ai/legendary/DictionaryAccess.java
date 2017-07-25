@@ -39,6 +39,7 @@ public class DictionaryAccess {
     public static HashMap<String, String> roots;
     public static HashMap<String, Noun> firstNameDictionary;
     public static HashMap<String, Noun> lastNameDictionary;
+    public static HashMap<String, Noun> properPlaceDictionary;
     /*
      * Loads the Dictionarys into hashmaps for easy access
      */
@@ -133,6 +134,13 @@ public class DictionaryAccess {
             lastNameDictionary = (HashMap<String, Noun>) in
                     .readObject();
             in.close();
+            //properplace
+            in = new ObjectInputStream(
+                    new FileInputStream(path+"/outputs/properPlaceDictHashMap.ser"));
+            System.out.println("Loading proper places...");
+            properPlaceDictionary = (HashMap<String, Noun>) in
+                    .readObject();
+            in.close();
 
             System.out.println("Loaded");
         }
@@ -218,6 +226,27 @@ public class DictionaryAccess {
         return roots;
     }
     /**
+     * 
+     * @return the list of first names in the dictionary
+     */
+    public static HashMap<String, Noun> getFirstNameDictionary() {
+        return firstNameDictionary;
+    }
+    /**
+     * 
+     * @return the list of last names in the dictionary
+     */
+    public static HashMap<String, Noun> getLastNameDictionary() {
+        return lastNameDictionary;
+    }
+    /**
+     * 
+     * @return the list of proper places in the dictionary
+     */
+    public static HashMap<String, Noun> getProperPlaces() {
+        return properPlaceDictionary;
+    }
+    /**
      * gets the info on a singular word with a specific part of speech
      * @param word is the word to get info on
      * @param pos the part of speech of the word
@@ -225,23 +254,25 @@ public class DictionaryAccess {
      */
     public String getWordInfo(String word, String pos) {
         if(pos.equals("noun") || pos.equals("NN") || pos.equals("n")){
+            String p = "Word: " + word + "\n";
             if(firstNameDictionary.containsKey(word)){
-                return "Word: " + word + "\n"
-                        + firstNameDictionary.get(word).toString() + "\n";
+                p+= "First Name "+firstNameDictionary.get(word).toString() + "\n";
             }
-            else if(lastNameDictionary.containsKey(word)){
-                return "Word: " + word + "\n"
-                        + lastNameDictionary.get(word).toString() + "\n";
+            if(lastNameDictionary.containsKey(word)){
+                p+= "Last Name "+lastNameDictionary.get(word).toString() + "\n";
             }
-            else if(nounDictionary.containsKey(word)){
-                return "Word: " + word + "\n"
-                        + nounDictionary.get(word).toString() + "\n";
+            if(properPlaceDictionary.containsKey(word)){
+                p+= "Proper Place "+properPlaceDictionary.get(word).toString() + "\n";
             }
-            else{
-                return "["+word + " " + pos + " is not in Dictionary]\n";
+            if(nounDictionary.containsKey(word)){
+                p+= nounDictionary.get(word).toString() + "\n";
             }
+            if(p.equals("Word: " + word + "\n")){
+                p= "["+word + " " + pos + " is not in Dictionary]\n";
+            }
+            return p;
         }
-        if (getdictionary(pos).containsKey(word)) {
+        else if (getdictionary(pos).containsKey(word)) {
             return "Word: " + word + "\n"
                     + getdictionary(pos).get(word).toString() + "\n";
         }
@@ -287,10 +318,13 @@ public class DictionaryAccess {
             p += quantifierDictionary.get(word).toString() + "\n";
         }
         if  (firstNameDictionary.containsKey(word)){
-            p += firstNameDictionary.get(word).toString() + "\n";
+            p += "First Name "+firstNameDictionary.get(word).toString() + "\n";
         }
         if  (lastNameDictionary.containsKey(word)){
-            p += lastNameDictionary.get(word).toString() + "\n";
+            p += "Last Name "+lastNameDictionary.get(word).toString() + "\n";
+        }
+        if  (properPlaceDictionary.containsKey(word)){
+            p += "Proper Place "+properPlaceDictionary.get(word).toString() + "\n";
         }
         if(p.equals("Word: " + word + "\n")){
             p+= "not in dictionary";

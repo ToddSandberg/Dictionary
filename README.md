@@ -1,19 +1,19 @@
 # DictionaryMaker
 ## Analysis
-### Noun Analysis (Total Nouns: 243,952):
-- Percentage of Noun Plurality defined: 3.92%
-- Percentage of Noun Gender defined: 100%(4.19% Masculine 3.19% Feminine 92.64% Neuter)
+### Noun Analysis (Total Nouns: 247,148):
+- Percentage of Noun Plurality defined: 3.87%
+- Percentage of Noun Gender defined: 100%(4.14% Masculine 3.15% Feminine 92.73% Neuter)
 - Percentage of Noun isCompound defined: 100%
-- Percentage of Noun isCountable defined: 31.27%
-- Percentage of Noun isProperName defined: 42.17%
+- Percentage of Noun isCountable defined: 30.64%
+- Percentage of Noun isProperName defined: 43.36%
 - Percentage of Noun acceptsZeroArticle defined: 0%
 - Percentage of Noun acronymFor defined: 0%
 - Percentage of Noun abbreviationFor defined: 0%
 - Percentage of Noun abbreviatedFrom defined: 0%
 - Percentage of Noun irregularPluralForm defined: 0.36%
-- Percentage of Noun base form defined: 63.77%
+- Percentage of Noun base form defined: 63.94%
 - Percentage of Noun Animacy defined: 100%
-- Percentage of Noun Location defined: 0.18%
+- Percentage of Noun Location defined: 43.52%
 ### Verb analysis (Total Verbs: 28,930):
 - Percentage of Transivity Defined: 71.87%
 - Percentage of verb Tense Defined: 43.68%
@@ -65,7 +65,7 @@
 ## Document Implementation
 - subordinateConjunctions.txt Implemented
 - nounGenderList.txt Implemented 
-- First_Names.ser and Last_Names.ser Implemented
+- First_Names.ser and Last_Names.ser and Proper_Places.ser Implemented
 - MobyWordListWithPOS.txt Implemented
 - default-lexicon.xml Implemented
 - NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt Implemented
@@ -87,4 +87,4 @@
 - The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. 
 - The Accessor class is an example usage of the DictionaryAccess class.
 - This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
-## Current Dictionary Write Time: 9 minutes and 57 seconds
+## Current Dictionary Write Time: 11 minutes and 17 seconds
