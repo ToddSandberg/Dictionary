@@ -459,12 +459,12 @@ Novorossiysk	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.
 Kindu	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 San pablo	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Wuchuan	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-Akure	--	Neuter	--	--	--	--	false	null	null	true	--	akure	Inanimate	true	-1.0	-1	--
+Akure	--	Neuter	--	--	--	--	false	null	null	true	--	ak	Inanimate	true	-1.0	-1	--
 Uttaradit	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Sobral	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Maracay	--	Neuter	--	--	--	--	false	null	null	true	--	maracay	Inanimate	true	-1.0	-1	--
 Savannah	--	Neuter	--	--	--	--	false	null	null	true	--	savannah	Inanimate	true	-1.0	-1	--
-Montgomery	--	Neuter	--	--	--	--	false	null	null	true	--	montgomery	Inanimate	true	-1.0	-1	--
+Montgomery	--	Neuter	--	--	--	--	false	null	null	true	--	montgomer	Inanimate	true	-1.0	-1	--
 Krasnogorsk	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Xinyang	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Athens	--	Neuter	--	--	--	--	false	null	null	true	--	ath	Inanimate	true	-1.0	-1	--
@@ -1004,7 +1004,7 @@ Greater hobart	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	true	-1
 Juliaca	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Seremban	--	Neuter	--	--	--	--	false	null	null	true	--	seremban	Inanimate	true	-1.0	-1	--
 Inazawa	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-Florence	--	Neuter	--	--	--	--	false	null	null	true	--	fl	Inanimate	true	-1.0	-1	--
+Florence	--	Neuter	--	--	--	--	false	null	null	true	--	florent	Inanimate	true	-1.0	-1	--
 Novo gama	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Córdoba	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Santa rosa	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	true	-1.0	-1	--
@@ -1397,7 +1397,7 @@ Malaybalay	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	
 Guntakal	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Lipetsk	--	Neuter	--	--	--	--	false	null	null	true	--	lipetsk	Inanimate	true	-1.0	-1	--
 Izumo	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-France	--	Neuter	--	--	--	--	false	null	null	true	--	fr	Inanimate	true	-1.0	-1	--
+France	--	Neuter	--	--	--	--	false	null	null	true	--	frant	Inanimate	true	-1.0	-1	--
 Pforzheim	--	Neuter	--	--	--	--	false	null	null	true	--	pforzheim	Inanimate	true	-1.0	-1	--
 Novocherkassk	--	Neuter	--	--	--	--	false	null	null	true	--	novocherkassk	Inanimate	true	-1.0	-1	--
 Izumi	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
@@ -2073,7 +2073,7 @@ Maracaibo	--	Neuter	--	--	--	--	false	null	null	true	--	maracaibo	Inanimate	true
 Kohat	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Constantine	--	Neuter	--	--	--	--	false	null	null	true	--	constantine	Inanimate	true	-1.0	-1	--
 Valparaíso de goiás	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-Nancy	--	Neuter	--	--	--	--	false	null	null	true	--	nanc	Inanimate	true	-1.0	-1	--
+Nancy	--	Neuter	--	--	--	--	false	null	null	true	--	nancy	Inanimate	true	-1.0	-1	--
 Alcorcon	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Ogbomosho	--	Neuter	--	--	--	--	false	null	null	true	--	ogbomosho	Inanimate	true	-1.0	-1	--
 Novopolotsk	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
@@ -3158,7 +3158,7 @@ Mülheim an der ruhr	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	t
 Igarassu	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Dongying	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Niterói	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-Torrance	--	Neuter	--	--	--	--	false	null	null	true	--	tore	Inanimate	true	-1.0	-1	--
+Torrance	--	Neuter	--	--	--	--	false	null	null	true	--	torrant	Inanimate	true	-1.0	-1	--
 Ilesha	--	Neuter	--	--	--	--	false	null	null	true	--	ilesha	Inanimate	true	-1.0	-1	--
 Suzhou	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Monza	--	Neuter	--	--	--	--	false	null	null	true	--	monza	Inanimate	true	-1.0	-1	--
@@ -4160,7 +4160,7 @@ Sheikhupura	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0
 Miryang	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Arizona	--	Neuter	--	--	--	--	false	null	null	true	--	arizona	Inanimate	true	-1.0	-1	--
 Tsuyama	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-Mesquite	--	Neuter	--	--	--	--	false	null	null	true	--	mesquite	Inanimate	true	-1.0	-1	--
+Mesquite	--	Neuter	--	--	--	--	false	null	null	true	--	mesqu	Inanimate	true	-1.0	-1	--
 Shaoxing	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Mesquita	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Dharan	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
@@ -4228,4 +4228,4 @@ Kiselevsk	--	Neuter	--	--	--	--	false	null	null	true	--	kiselevsk	Inanimate	true
 Nakhon si thammarat	--	Neuter	--	--	--	--	true	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Sakura	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
 Silay	--	Neuter	--	--	--	--	false	null	null	true	--	--	Inanimate	true	-1.0	-1	--
-L'hospitalet	--	Neuter	--	-
+L'hospitalet	--	Neuter

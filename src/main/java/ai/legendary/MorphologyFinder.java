@@ -374,7 +374,7 @@ public class MorphologyFinder {
             }
         }
       //blasty, flashy -- not body
-        if (ends("y") && !ends("ody") && !ends("ify") && !ends("ly")) {
+        if (ends("y") && !ends("ody") && !ends("ify") && !ends("ly") && !ends("ency") && !ends("ancy")) {
             removeX(1);
             if(cvc() || doubleletter(letters.size()-1) || !cons(letters.size()-1)){
                 letters.add('y');
@@ -383,6 +383,8 @@ public class MorphologyFinder {
                 suffs.add("y");
             
         }
+        
+       
         // past tense
         if (ends("eed")) {
             if (m("eed") > 0) {
@@ -451,8 +453,17 @@ public class MorphologyFinder {
      * finds whatever is left in the suffixes
      */
     private void stepThree() {
+        if (ends("ism")) {
+            checkSuff("ism");
+            if(cvc()){
+                letters.add('e');
+            }
+            if (doubleletter(letters.size() - 1)) {
+                removeX(1);
+            }
+        }
         if ((ends("ed") /*&& vowelinstem("ed")*/ && !ends("eed"))
-                || (ends("ing") && vowelinstem("ing") && !ends("ling"))) {
+                || (ends("ing") && vowelinstem("ing") && !ends("ling")) && letters.size()>4) {//king
             // past tense
             if (ends("ed")) {
                 suffs.add("ed");
@@ -562,19 +573,22 @@ public class MorphologyFinder {
         }
         // able + ly
         checkSuff("ably");
+        if ((ends("ancy") || ends("ency")) && letters.size() > 6) {
+            removeX(1);
+            letters.add('e');
+            suffs.add("y");
+        }
         // action, state, or quality
-        checkSuff("ance");
+        if(ends("ance")){
+            removeX(2);
+            letters.add('t');
+            suffs.add("ance");
+        }
         checkSuff("osis");//anamorphosis
         if(ends("ence")){
-            checkSuff("ence");
-            if(doubleletter(letters.size()-1)){ //excellence
-                removeX(1);
-            }
-        }
-        // state or quality
-        if (ends("ancy") && letters.size() > 6) {
-            removeX(4);
-            suffs.add("ancy");
+            removeX(2);
+            letters.add('t');
+            suffs.add("ence");
         }
         // state
         checkSuff("ship");
@@ -592,12 +606,25 @@ public class MorphologyFinder {
         }
         if(ends("ent") && !ends("rent")){ //current
             checkSuff("ent");
-            if(ends("ng")){
+            if(ends("ng") || ends("rg")){
                 letters.add('e'); //astringe
             }
         }
         if (ends("ant") && (letters.size() - 3 > 1) && !ends("gnant") && !ends("rant") && !ends("ilitant")) { //militant
                checkSuff("ant");
+               if(ends("i")){ //compliant
+                   removeX(1);
+                   letters.add('y');
+               }
+               if(cvc()){
+                   letters.add('e');
+               }
+        }
+        if(ends("ure")){
+            checkSuff("ure");
+            if(cvc()){
+                letters.add('e');
+            }
         }
         checkSuff("ilation");
         if (ends("ization")) {
@@ -640,6 +667,12 @@ public class MorphologyFinder {
         if(ends("ustion")){
             checkSuff("ion");
         }
+        if(ends("ition")){
+            checkSuff("ition");
+            if(cvc() || ends("rv") || ends("rm")){ //servition
+                letters.add('e');
+            }
+        }
         if (ends("tion") && !ends("ction") && !ends("stion")) {
             suffs.add("tion");
             removeX(4);
@@ -653,6 +686,8 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
+        
+       
         if(ends("ical") && !ends("critical")){
             suffs.add("ical");
             removeX(4);
@@ -663,8 +698,11 @@ public class MorphologyFinder {
             //dismissal
             removeX(2);
             suffs.add("al");
-            if(cvc()){
+            if((cvc() || ends("ais") || ends("ous") || ends("rv")) && !ends("ray")){ //appraisal, espousal, observal
                 letters.add('e');
+            }
+            if(doubleletter(letters.size()-1)){
+                removeX(1);
             }
             /*if(english.containsKey(getRoot())){
                 suffs.add("al");
@@ -700,11 +738,34 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
-        if(ends("or")){
-            checkSuff("or");
+        if(ends("icator")){
+            checkSuff("icator");
+            letters.add('y');//scarificator, purificator
+        }
+        if(ends("ify")){
+            checkSuff("ify");
             if(cvc()){
                 letters.add('e');
             }
+        }
+        if(ends("or")){
+            checkSuff("or");
+            if(ends("it")){ //competitor, servitor, conformitor,compositor
+                letters.add('i');
+                letters.add('o');
+                letters.add('n');
+            }
+            if((cvc() || ends("ns") || ends("uat")) && !ends("dit")){
+                letters.add('e');
+            }
+        }
+        if(ends("arate") || ends("urate") || ends("ervate") || ends("uate") || ends("alate")){ // declarate assimilate dedicate
+            checkSuff("ate");
+            letters.add('e');
+        }
+        if(ends("ite")){
+            checkSuff("ite");
+            
         }
         if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter") && !ends("mber") && !ends("eter")) { //somber/member, meter
             suffs.add("er");
@@ -834,12 +895,7 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
-        if (ends("ism")) {
-            checkSuff("ism");
-            if (doubleletter(letters.size() - 1)) {
-                removeX(1);
-            }
-        }
+        
         if (ends("ar") && !ends("ear") && !ends("aar") && !ends("oar")
                 && !ends("uar")) {
 
@@ -891,7 +947,7 @@ public class MorphologyFinder {
                 letters.add('i');
                 letters.add('a');
             }
-            if (cvc() && !ends("rab")) {
+            if (cvc() && !ends("rab") && !ends("hol")) {
                 letters.add('e');
             }
         }
@@ -918,6 +974,9 @@ public class MorphologyFinder {
         if(ends("ium")){ //europium
             checkSuff("ium");
             letters.add('e');
+        }
+        if(ends("ery")){ //grocery butlery
+            checkSuff("y");
         }
         
     }

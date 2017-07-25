@@ -984,9 +984,7 @@ public class WriteDictionary {
                     if (p.acceptsZeroArticle == null) {
                         p.acceptsZeroArticle = ((Noun) part).acceptsZeroArticle;
                     }
-                    if (p.isProperName == null) {
-                        p.isProperName = ((Noun) part).isProperName;
-                    }
+                    p.isProperName = false;
                     if (p.compliments.equals("--")) {
                         p.compliments = ((Noun) part).compliments;
                     }

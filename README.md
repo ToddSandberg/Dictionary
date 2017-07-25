@@ -5,7 +5,7 @@
 - Percentage of Noun Gender defined: 100%(4.14% Masculine 3.15% Feminine 92.73% Neuter)
 - Percentage of Noun isCompound defined: 100%
 - Percentage of Noun isCountable defined: 30.64%
-- Percentage of Noun isProperName defined: 43.36%
+- Percentage of Noun isProperName defined: 63.95%
 - Percentage of Noun acceptsZeroArticle defined: 0%
 - Percentage of Noun acronymFor defined: 0%
 - Percentage of Noun abbreviationFor defined: 0%
@@ -16,7 +16,7 @@
 - Percentage of Noun Location defined: 43.52%
 ### Verb analysis (Total Verbs: 28,930):
 - Percentage of Transivity Defined: 71.87%
-- Percentage of verb Tense Defined: 43.68%
+- Percentage of verb Tense Defined: 43.65%
 - Percentage of verb aspect Defined: 0%
 - Percentage of verb type Defined: 0.1%
 - Percentage of verb person Defined: 0.07%
@@ -87,4 +87,4 @@
 - The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. 
 - The Accessor class is an example usage of the DictionaryAccess class.
 - This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
-## Current Dictionary Write Time: 11 minutes and 17 seconds
+## Current Dictionary Write Time: 8 minutes and 24 seconds

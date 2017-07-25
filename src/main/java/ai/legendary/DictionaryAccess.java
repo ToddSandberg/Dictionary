@@ -272,9 +272,9 @@ public class DictionaryAccess {
             }
             return p;
         }
-        else if (getdictionary(pos).containsKey(word)) {
+        else if (getdictionary(pos,word).containsKey(word)) {
             return "Word: " + word + "\n"
-                    + getdictionary(pos).get(word).toString() + "\n";
+                    + getdictionary(pos,word).get(word).toString() + "\n";
         }
         else{
             return "["+word + " " + pos + " is not in Dictionary]\n";
@@ -402,10 +402,21 @@ public class DictionaryAccess {
      * @param pos the part of speech of the intended dictionary
      * @return the dictionary with the intended part of speech
      */
-    private static HashMap<String, ?> getdictionary(String pos) {
+    private static HashMap<String, ?> getdictionary(String pos,String w) {
         pos = pos.toLowerCase();
         if (pos.equals("noun") || pos.equals("nn")) {
-            return nounDictionary;
+            if(firstNameDictionary.containsKey(w)){
+                return firstNameDictionary;
+            }
+            else if(lastNameDictionary.containsKey(w)){
+                return lastNameDictionary;
+            }
+            else if(properPlaceDictionary.containsKey(w)){
+                return properPlaceDictionary;
+            }
+            else{
+                return nounDictionary;
+            }
         }
         else if (pos.equals("adjective") || pos.equals("adj")
                 || pos.equals("jj")) {
@@ -450,20 +461,20 @@ public class DictionaryAccess {
     public ArrayList<String> changePOS(String word1,String pos1, String pos2){
         pos1 = pos1.toLowerCase();
         pos2 = pos2.toLowerCase();
-        if(getdictionary(pos1).containsKey(word1)){
+        if(getdictionary(pos1,word1).containsKey(word1)){
             String results = "";
             String base = "";
             if(pos1.equals("noun")){
-                base = ((Noun)getdictionary(pos1).get(word1)).baseForm;
+                base = ((Noun)getdictionary(pos1,word1).get(word1)).baseForm;
             }
             else if(pos1.equals("verb")){
-                base = ((Verb)getdictionary(pos1).get(word1)).baseForm;
+                base = ((Verb)getdictionary(pos1,word1).get(word1)).baseForm;
             }
             else if(pos1.equals("adverb")){
-                base = ((Adverb)getdictionary(pos1).get(word1)).baseForm;
+                base = ((Adverb)getdictionary(pos1,word1).get(word1)).baseForm;
             }
             else if(pos1.equals("adjective")){
-                base = ((Adjective)getdictionary(pos1).get(word1)).baseForm;
+                base = ((Adjective)getdictionary(pos1,word1).get(word1)).baseForm;
             }
             System.out.println(word1+" converted to a "+pos2);
             if(roots.containsKey(base+":"+pos2)){
@@ -622,7 +633,7 @@ public class DictionaryAccess {
                 if (convertnlp(pos) != null){
                     //System.out.println(output+" + "+w+" ("+convertnlp(pos)+") light:" + lightsentence + " dettrigger:"+dettrigger+ " object:"+object+" determiner:"+determiner + " lastItem?:"+(temp.indexOf(token)<temp.size()-1));
                     //System.out.println(w + " : " + getdictionary(convertnlp(pos)).containsKey(w));
-                    if(getdictionary(convertnlp(pos)).containsKey(w)){
+                    if(getdictionary(convertnlp(pos),w).containsKey(w)){
                         if((convertnlp(pos).equals("noun") || convertnlp(pos).equals("pronoun") || temp.indexOf(token)==temp.size()-1) && !determinerDictionary.containsKey(w)){
                             if(lightsentence){
                                 if(dettrigger){
@@ -678,7 +689,7 @@ public class DictionaryAccess {
                         else if(convertnlp(pos).equals("verb")){
                             if(((Verb)verbDictionary.get(w)).light){
                                 lightsentence = true;
-                                tense = ((Verb)getdictionary(convertnlp(pos)).get(w)).tense;
+                                tense = ((Verb)getdictionary(convertnlp(pos),w).get(w)).tense;
                             }
                             else{
                                 output+= w+ " ";
