@@ -257,6 +257,7 @@ public class WriteDictionary {
                 }
                 n.animacy = "Human";
                 n.location = false;
+                n.baseForm = actualname;
                 mergeFirstName(actualname,n);
             }
             
@@ -276,6 +277,7 @@ public class WriteDictionary {
                 n.isProperName = true;
                 n.animacy = "Human";
                 n.location = false;
+                n.baseForm = actualname;
                 mergeLastName(actualname,n);
             }
             
@@ -296,6 +298,7 @@ public class WriteDictionary {
                 n.location = true;
                 n.animacy = "Inanimate";
                 n.gender = "Neuter";
+                n.baseForm = actualname;
                 mergeProperPlace(actualname,n);
             }
         }
@@ -352,21 +355,21 @@ public class WriteDictionary {
             if (p.howCommon == -1) {
                 p.howCommon = ((Noun) part).howCommon;
             }
-            if(!((Noun) part).baseForm.equals("--")){
+            if(p.baseForm.equals("--")){
                 p.baseForm = ((Noun) part).baseForm;
             }
             if(!((Noun) part).propbank.equals("--")){
                 if(p.propbank.equals("--")){
-                    p.propbank = ((Noun) part).propbank + "|";
+                    p.propbank = ((Noun) part).propbank;
                 }else{
-                    p.propbank += ((Noun) part).propbank + "|";
+                    p.propbank += "|" +((Noun) part).propbank;
                 }
             }
             if(!((Noun) part).frame.equals("--")){
                 if(p.frame.equals("--")){
-                    p.frame = ((Noun) part).frame + "|";
+                    p.frame = ((Noun) part).frame;
                 }else{
-                    p.frame += ((Noun) part).frame + "|";
+                    p.frame +="|" + ((Noun) part).frame;
                 }
             }
             properPlaceDictionary.put(w,p);
@@ -424,21 +427,21 @@ public class WriteDictionary {
             if (p.howCommon == -1) {
                 p.howCommon = ((Noun) part).howCommon;
             }
-            if(!((Noun) part).baseForm.equals("--")){
+            if(p.baseForm.equals("--")){
                 p.baseForm = ((Noun) part).baseForm;
             }
             if(!((Noun) part).propbank.equals("--")){
                 if(p.propbank.equals("--")){
-                    p.propbank = ((Noun) part).propbank + "|";
+                    p.propbank = ((Noun) part).propbank;
                 }else{
-                    p.propbank += ((Noun) part).propbank + "|";
+                    p.propbank +="|" + ((Noun) part).propbank;
                 }
             }
             if(!((Noun) part).frame.equals("--")){
                 if(p.frame.equals("--")){
-                    p.frame = ((Noun) part).frame + "|";
+                    p.frame = ((Noun) part).frame;
                 }else{
-                    p.frame += ((Noun) part).frame + "|";
+                    p.frame += "|" +((Noun) part).frame;
                 }
             }
             lastNameDictionary.put(w,p);
@@ -496,21 +499,21 @@ public class WriteDictionary {
             if (p.howCommon == -1) {
                 p.howCommon = ((Noun) part).howCommon;
             }
-            if(!((Noun) part).baseForm.equals("--")){
+            if(p.baseForm.equals("--")){
                 p.baseForm = ((Noun) part).baseForm;
             }
             if(!((Noun) part).propbank.equals("--")){
                 if(p.propbank.equals("--")){
-                    p.propbank = ((Noun) part).propbank + "|";
+                    p.propbank = ((Noun) part).propbank;
                 }else{
-                    p.propbank += ((Noun) part).propbank + "|";
+                     p.propbank +="|" + ((Noun) part).propbank;
                 }
             }
             if(!((Noun) part).frame.equals("--")){
                 if(p.frame.equals("--")){
-                    p.frame = ((Noun) part).frame + "|";
+                    p.frame = ((Noun) part).frame;
                 }else{
-                    p.frame += ((Noun) part).frame + "|";
+                    p.frame += "|" +((Noun) part).frame;
                 }
             }
             firstNameDictionary.put(w,p);
@@ -865,13 +868,13 @@ public class WriteDictionary {
                                         word);
                                 m.loadDictionary(nounDictionary);
                                 m.breakApart();
-                                try {
+                                /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
                                             POS.NOUN, m.getRoot()).getLemma();
                                 }
-                                catch (Exception e) {
+                                catch (Exception e) {*/
                                     n.baseForm = m.getRoot();
-                                }
+                                //}
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
                                 }
@@ -897,13 +900,13 @@ public class WriteDictionary {
                                         word);
                                 m.loadDictionary(nounDictionary);
                                 m.breakApart();
-                                try {
+                                /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
                                             POS.NOUN, m.getRoot()).getLemma();
                                 }
-                                catch (Exception e) {
+                                catch (Exception e) {*/
                                     n.baseForm = m.getRoot();
-                                }
+                                //}
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
                                     Noun temp = new Noun(n.baseForm);
@@ -1003,21 +1006,21 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Noun) part).howCommon;
                     }
-                    if(!((Noun) part).baseForm.equals("--")){
+                    if(p.baseForm.equals("--")){
                         p.baseForm = ((Noun) part).baseForm;
                     }
                     if(!((Noun) part).propbank.equals("--")){
                         if(p.propbank.equals("--")){
-                            p.propbank = ((Noun) part).propbank + "|";
+                            p.propbank = ((Noun) part).propbank;
                         }else{
-                            p.propbank += ((Noun) part).propbank + "|";
+                            p.propbank += "|" +((Noun) part).propbank;
                         }
                     }
                     if(!((Noun) part).frame.equals("--")){
                         if(p.frame.equals("--")){
-                            p.frame = ((Noun) part).frame + "|";
+                            p.frame = ((Noun) part).frame;
                         }else{
-                            p.frame += ((Noun) part).frame + "|";
+                            p.frame += "|" + ((Noun) part).frame;
                         }
                     }
                     nounDictionary.put(w,p);
@@ -1081,18 +1084,18 @@ public class WriteDictionary {
                     }
                     if(!((Adjective) part).propbank.equals("--")){
                         if(p.propbank.equals("--")){
-                            p.propbank = ((Adjective) part).propbank + "|";
+                            p.propbank = ((Adjective) part).propbank;
                         }
                         else{
-                            p.propbank += ((Adjective) part).propbank + "|";
+                            p.propbank +="|" + ((Adjective) part).propbank;
                         }
                     }
                     if(!((Adjective) part).frame.equals("--")){
                         if(p.frame.equals("--")){
-                            p.frame = ((Adjective) part).frame +"|";
+                            p.frame = ((Adjective) part).frame;
                         }
                         else{
-                            p.frame += ((Adjective) part).frame + "|";
+                            p.frame += "|" +((Adjective) part).frame;
                         }
                     }
                     adjectiveDictionary.put(w, p);
@@ -1249,9 +1252,9 @@ public class WriteDictionary {
                     }
                     if(!((Verb) part).transivity.equals("--")){
                         if(p.transivity.equals("--"))
-                            p.transivity = ((Verb) part).transivity +"|";
+                            p.transivity = ((Verb) part).transivity;
                         else
-                            p.transivity += ((Verb) part).transivity+"|";
+                            p.transivity += "|" +((Verb) part).transivity;
                     }
                     if (p.tense.equals("--")) {
                         p.tense = ((Verb) part).tense;
@@ -1279,27 +1282,27 @@ public class WriteDictionary {
                     }
                     if(!((Verb) part).wordNetID.equals("--")){
                         if(p.wordNetID.equals("--"))
-                            p.wordNetID = ((Verb) part).wordNetID + "|";
+                            p.wordNetID = ((Verb) part).wordNetID ;
                         else if(!p.wordNetID.contains(((Verb) part).wordNetID))
-                            p.wordNetID += ((Verb) part).wordNetID + "|";
+                            p.wordNetID +="|" + ((Verb) part).wordNetID ;
                     }
                     if(!((Verb) part).verbnet.equals("--")){
                         if(p.verbnet.equals("--"))
-                            p.verbnet = ((Verb) part).verbnet + "|";
+                            p.verbnet = ((Verb) part).verbnet;
                         else
-                            p.verbnet += ((Verb) part).verbnet + "|";
+                            p.verbnet += "|" +((Verb) part).verbnet;
                     }
                     if(!((Verb) part).propbank.equals("--")){
                         if(p.propbank.equals("--"))
-                            p.propbank = ((Verb) part).propbank + "|";
+                            p.propbank = ((Verb) part).propbank;
                         else
-                            p.propbank += ((Verb) part).propbank + "|";
+                            p.propbank += "|" +((Verb) part).propbank;
                     }
                     if(!((Verb) part).frame.equals("--")){
                         if(p.frame.equals("--"))
-                            p.frame = ((Verb) part).frame + "|";
+                            p.frame = ((Verb) part).frame;
                         else
-                            p.frame += ((Verb) part).frame + "|";
+                            p.frame += "|" +((Verb) part).frame;
                     }
                         verbDictionary.put(w, p);
                 }
@@ -1363,15 +1366,15 @@ public class WriteDictionary {
                                             word);
                                     m.loadDictionary(nounDictionary);
                                     m.breakApart();
-                                    try {
+                                    /*try {
                                         n.baseForm = dictionary
                                                 .lookupIndexWord(POS.NOUN,
                                                         m.getRoot())
                                                 .getLemma();
                                     }
-                                    catch (Exception e) {
+                                    catch (Exception e) {*/
                                         n.baseForm = m.getRoot();
-                                    }
+                                    //}
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
                                         if(nounDictionary.containsKey(n.baseForm)){
@@ -1403,15 +1406,15 @@ public class WriteDictionary {
                                             word);
                                     m.loadDictionary(nounDictionary);
                                     m.breakApart();
-                                    try {
+                                    /*try {
                                         n.baseForm = dictionary
                                                 .lookupIndexWord(POS.NOUN,
                                                         m.getRoot())
                                                 .getLemma();
                                     }
-                                    catch (Exception e) {
+                                    catch (Exception e) {*/
                                         n.baseForm = m.getRoot();
-                                    }
+                                    //}
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
                                         if(nounDictionary.containsKey(n.baseForm)){
@@ -1442,15 +1445,15 @@ public class WriteDictionary {
                                             word);
                                     m.loadDictionary(nounDictionary);
                                     m.breakApart();
-                                    try {
+                                    /*try {
                                         n.baseForm = dictionary
                                                 .lookupIndexWord(POS.NOUN,
                                                         m.getRoot())
                                                 .getLemma();
                                     }
-                                    catch (Exception e) {
+                                    catch (Exception e) {*/
                                         n.baseForm = m.getRoot();
-                                    }
+                                    //}
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
                                         if(nounDictionary.containsKey(n.baseForm)){
@@ -1937,13 +1940,13 @@ public class WriteDictionary {
                                         word);
                                 m.loadDictionary(nounDictionary);
                                 m.breakApart();
-                                try {
+                                /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
                                             POS.NOUN, m.getRoot()).getLemma();
                                 }
-                                catch (Exception e) {
+                                catch (Exception e) {*/
                                     n.baseForm = m.getRoot();
-                                }
+                                //}
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
                                     if(nounDictionary.containsKey(n.baseForm)){
@@ -1974,13 +1977,13 @@ public class WriteDictionary {
                                         word);
                                 m.loadDictionary(nounDictionary);
                                 m.breakApart();
-                                try {
+                                /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
                                             POS.NOUN, m.getRoot()).getLemma();
                                 }
-                                catch (Exception e) {
+                                catch (Exception e) {*/
                                     n.baseForm = m.getRoot();
-                                }
+                                //}
                                 if (m.getTraits().contains("plural")) {
                                     n.plurality = "Plural";
                                     if(nounDictionary.containsKey(n.baseForm)){
@@ -2113,14 +2116,14 @@ public class WriteDictionary {
                         MorphologyFinder m = new MorphologyFinder(word);
                         m.loadDictionary(nounDictionary);
                         m.breakApart();
-                        try {
+                        /*try {
                             n.baseForm = dictionary
                                     .lookupIndexWord(POS.NOUN, m.getRoot())
                                     .getLemma();
                         }
-                        catch (Exception e) {
+                        catch (Exception e) {*/
                             n.baseForm = m.getRoot();
-                        }
+                        //}
                         if (m.getTraits().contains("plural")) {
                             n.plurality = "plural";
                             if(nounDictionary.containsKey(n.baseForm)){
@@ -2156,14 +2159,14 @@ public class WriteDictionary {
                         MorphologyFinder m = new MorphologyFinder(word);
                         m.loadDictionary(nounDictionary);
                         m.breakApart();
-                        try {
+                        /*try {
                             n.baseForm = dictionary
                                     .lookupIndexWord(POS.NOUN, m.getRoot())
                                     .getLemma();
                         }
-                        catch (Exception e) {
+                        catch (Exception e) {*/
                             n.baseForm = m.getRoot();
-                        }
+                        //}
                         if (m.getTraits().contains("plural")) {
                             n.plurality = "plural";
                         }
@@ -2488,14 +2491,14 @@ public class WriteDictionary {
                     MorphologyFinder m = new MorphologyFinder(stuff);
                     m.loadDictionary(nounDictionary);
                     m.breakApart();
-                    try {
+                    /*try {
                         n.baseForm = dictionary
                                 .lookupIndexWord(POS.NOUN, m.getRoot())
                                 .getLemma();
                     }
-                    catch (Exception e) {
+                    catch (Exception e) {*/
                         n.baseForm = m.getRoot();
-                    }
+                    //}
                     if (m.getTraits().contains("plural")) {
                         n.plurality = "plural";
                     }
@@ -2549,15 +2552,15 @@ public class WriteDictionary {
                                 word);
                         m.loadDictionary(nounDictionary);
                         m.breakApart();
-                        try {
+                        /*try {
                             n.baseForm = dictionary
                                     .lookupIndexWord(POS.NOUN,
                                             m.getRoot())
                                     .getLemma();
                         }
-                        catch (Exception e) {
+                        catch (Exception e) {*/
                             n.baseForm = m.getRoot();
-                        }
+                        //}
                         if (m.getTraits().contains("plural")) {
                             n.plurality = "Plural";
                             if(nounDictionary.containsKey(n.baseForm)){

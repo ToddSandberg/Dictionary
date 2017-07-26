@@ -11,7 +11,7 @@
 - Percentage of Noun abbreviationFor defined: 0%
 - Percentage of Noun abbreviatedFrom defined: 0%
 - Percentage of Noun irregularPluralForm defined: 0.36%
-- Percentage of Noun base form defined: 63.94%
+- Percentage of Noun base form defined: 100%
 - Percentage of Noun Animacy defined: 100%
 - Percentage of Noun Location defined: 43.52%
 ### Verb analysis (Total Verbs: 28,930):
@@ -87,4 +87,4 @@
 - The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. 
 - The Accessor class is an example usage of the DictionaryAccess class.
 - This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
-## Current Dictionary Write Time: 8 minutes and 24 seconds
+## Current Dictionary Write Time: 9 minutes and 13 seconds

@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 
 import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
@@ -476,7 +477,7 @@ public class DictionaryAccess {
             else if(pos1.equals("adjective")){
                 base = ((Adjective)getdictionary(pos1,word1).get(word1)).baseForm;
             }
-            System.out.println(word1+" converted to a "+pos2);
+            //System.out.println(word1+" converted to a "+pos2);
             if(roots.containsKey(base+":"+pos2)){
                 results = roots.get(base+":"+pos2);
             }
@@ -751,5 +752,80 @@ public class DictionaryAccess {
         pipeline.clearAnnotatorPool();
         sentences.clear();
         return output;
+    }
+    public void getBaseWords(char c){
+        HashMap<String,String> temp = new HashMap<String,String>();
+        Iterator it = nounDictionary.entrySet().iterator();
+        while(it.hasNext()){
+            Map.Entry pair = (Entry) it.next();
+            String word = (String) pair.getKey();
+            String base = ((Noun)pair.getValue()).baseForm;
+            if(base.charAt(0) == c){
+            if(temp.containsKey(base)){
+                String s = temp.get(base);
+                temp.put(base, s+" + "+word);
+            }
+            else{
+                temp.put(base, word);
+            }
+            }
+        }
+        Iterator it3 = verbDictionary.entrySet().iterator();
+        while(it3.hasNext()){
+            Map.Entry pair = (Entry) it3.next();
+            String word = (String) pair.getKey();
+            String base = ((Verb)pair.getValue()).baseForm;
+            if(base.charAt(0) == c){
+            if(temp.containsKey(base)){
+                String s = temp.get(base);
+                temp.put(base, s+" + "+word);
+            }
+            else{
+                temp.put(base, word);
+            }
+            }
+        }
+        Iterator it4 = adjectiveDictionary.entrySet().iterator();
+        while(it4.hasNext()){
+            Map.Entry pair = (Entry) it4.next();
+            String word = (String) pair.getKey();
+            String base = ((Adjective)pair.getValue()).baseForm;
+            if(base.charAt(0) == c){
+            if(temp.containsKey(base)){
+                String s = temp.get(base);
+                temp.put(base, s+" + "+word);
+            }
+            else{
+                temp.put(base, word);
+            }
+            }
+        }
+        Iterator it5 = adverbDictionary.entrySet().iterator();
+        while(it5.hasNext()){
+            Map.Entry pair = (Entry) it5.next();
+            String word = (String) pair.getKey();
+            String base = ((Adverb)pair.getValue()).baseForm;
+            if(base.charAt(0) == c){
+            if(temp.containsKey(base)){
+                String s = temp.get(base);
+                temp.put(base, s+" + "+word);
+            }
+            else{
+                temp.put(base, word);
+            }
+            }
+        }
+        try{
+            PrintWriter printer = new PrintWriter(new File("outputs/baseword.csv"));
+            Iterator it2 = temp.entrySet().iterator();
+            while(it2.hasNext()){
+                Map.Entry pair = (Entry) it2.next();
+                printer.print(pair.getKey()+","+pair.getValue()+"\n");
+            }
+            printer.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

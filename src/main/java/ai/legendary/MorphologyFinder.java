@@ -283,7 +283,7 @@ public class MorphologyFinder {
         if (ends(s) && s.length()+1<letters.size()) {
             suffs.add(s);
             removeX(s.length());
-            if(doubleletter(letters.size()-1)){ //check excellent if remove
+            if(doubleletter(letters.size()-1) && !ends("ll") && !ends("ss")){ //check excellent if remove, discuss. sell
                 removeX(1);
             }
         }
@@ -476,7 +476,7 @@ public class MorphologyFinder {
                 removeX(3);
                 traits.add("present tense");
             }
-            if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg") || ends("uir") || ends("iat") || ends("eas")) && !ends("y") && !ends("lter") && !ends("el") && !ends("ffen")) //charged & substantiating & requiring & filtering, labeled,stiffening 
+            if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg") || ends("uir") || ends("iat") || ends("eas") || ends("ng") || ends("nc")) && !ends("y") && !ends("lter") && !ends("el") && !ends("ffen") && !ends("en")) //charged & substantiating & requiring & filtering, labeled,stiffening 
                 letters.add('e');
             else if (ends("bl"))
                 letters.add('e');
@@ -620,7 +620,7 @@ public class MorphologyFinder {
                    letters.add('e');
                }
         }
-        if(ends("ure")){
+        if(ends("ure") && !ends("cure")){
             checkSuff("ure");
             if(cvc()){
                 letters.add('e');
@@ -673,7 +673,7 @@ public class MorphologyFinder {
                 letters.add('e');
             }
         }
-        if (ends("tion") && !ends("ction") && !ends("stion")) {
+        if (ends("tion") && !ends("ction") && !ends("stion") && !cons(letters.size()-5)) {
             suffs.add("tion");
             removeX(4);
             if(ends("n")){
@@ -682,6 +682,7 @@ public class MorphologyFinder {
         }
         if(ends("ion") /*&& (!ends("tion") || ends("stion") || ends("ction"))*/){//introspection, digestion
             checkSuff("ion");
+            //if add doubleletter think about discussion
             if(ends("ns") || ends("is")){//vision
                 letters.add('e');
             }
@@ -694,7 +695,7 @@ public class MorphologyFinder {
            
             letters.add('y'); //biological
         }
-        if (ends("al")) {
+        if (ends("al") && !ends("ual") && !ends("ital")) {
             //dismissal
             removeX(2);
             suffs.add("al");
@@ -767,7 +768,7 @@ public class MorphologyFinder {
             checkSuff("ite");
             
         }
-        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter") && !ends("mber") && !ends("eter")) { //somber/member, meter
+        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter") && !ends("mber") && !ends("eter") && !ends("ffer")) { //somber/member, meter, offer
             suffs.add("er");
             removeX(2);
             if (ends("i")) {
