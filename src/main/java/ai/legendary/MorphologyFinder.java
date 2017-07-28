@@ -1,6 +1,7 @@
 package ai.legendary;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class MorphologyFinder {
@@ -33,18 +34,17 @@ public class MorphologyFinder {
      */
 
     public MorphologyFinder(String w) {
-        w = w.toLowerCase();
+        // w = w.toLowerCase();
         for (int i = 0; i < w.length(); i++) {
             letters.add(w.charAt(i));
         }
-
     }
 
     /**
      * load dictionary from a file The default will not provide a backoff check
      */
     public void loadDictionary(HashMap temp) {
-        english = temp;
+        english.putAll(temp);
     }
 
     /**
@@ -53,11 +53,19 @@ public class MorphologyFinder {
      * @return all info on the word in string format;
      */
     public String breakApart() {
-        if (!letters.contains(" ") && !letters.isEmpty()) {
+        if (!letters.contains(" ") && !letters.isEmpty()
+                /*&& !Character.isUpperCase(letters.get(0))*/) {
+            //Prefixes
+            stepFour();//possibly change 
+            //Suffixes 1
             stepOne();
+            //Suffixes 2
             stepTwo();
+            //Suffixes 3
             stepThree();
-            stepFour();
+            //Prefixes again
+            stepFour();//possibly change 
+            //Return the results
             String s = "Word:";
             for (int x = 0; x < letters.size(); x++) {
                 s += letters.get(x);
@@ -122,7 +130,7 @@ public class MorphologyFinder {
      * @return if letters ends in String
      */
     private boolean ends(String s) {
-        if (s.length() < letters.size()) { //if delete the +1 look at -ist
+        if (s.length() < letters.size()) {
             for (int i = 1; i <= s.length(); i++) {
                 if (letters.get(letters.size() - i) != s
                         .charAt(s.length() - i)) {
@@ -184,44 +192,7 @@ public class MorphologyFinder {
         }
     }
 
-    /**
-     * finds the consonant vowel order
-     * 
-     * @param s
-     * @return
-     */
-    private final int m(String s) {
-        int n = 0;
-        int i = 0;
-        int j = letters.size() - s.length();
-        while (true) {
-            if (i > j)
-                return n;
-            if (!cons(i))
-                break;
-            i++;
-        }
-        i++;
-        while (true) {
-            while (true) {
-                if (i > j)
-                    return n;
-                if (cons(i))
-                    break;
-                i++;
-            }
-            i++;
-            n++;
-            while (true) {
-                if (i > j)
-                    return n;
-                if (!cons(i))
-                    break;
-                i++;
-            }
-            i++;
-        }
-    }
+    
 
     /**
      * check if vowel is in stem
@@ -280,12 +251,61 @@ public class MorphologyFinder {
      * @param s
      */
     private void checkSuff(String s) {
-        if (ends(s) && s.length()+1<letters.size()) {
-            suffs.add(s);
+        if (ends(s) && s.length() + 1 < letters.size()) {
             removeX(s.length());
-            if(doubleletter(letters.size()-1) && !ends("ll") && !ends("ss")){ //check excellent if remove, discuss. sell
-                removeX(1);
+            String p = "";
+            for (int i = 0; i < letters.size(); i++) {
+                p += letters.get(i);
             }
+            //System.out.println("word: "+p + " dictionaryContains?: "+english.containsKey(p));
+            boolean removedD = false;
+            if (doubleletter(letters.size() - 1) && (ends("vell") || !ends("ll"))
+                    && !ends("ss") && !ends("dd")) { // check excellent if remove, discuss sell add
+                removeX(1);
+                removedD=true;
+                p=p.substring(0,p.length()-1);
+            }
+            if (!english.isEmpty() && !english.containsKey(p)) {
+                if(!ends("e")){
+                    p += "e";
+                }
+                //System.out.println("word: "+p + " dictionaryContains?: "+english.containsKey(p));
+                if (!english.containsKey(p)) {
+                    p = p.substring(0, p.length() - 1);
+                    boolean haveI = false;
+                    if(ends("i")){
+                        removeX(1);
+                        p=p.substring(0,p.length()-1);
+                        haveI = true;
+                    }
+                    p += "y";
+                    //System.out.println("word: "+p + " dictionaryContains?: "+english.containsKey(p));
+                    if (!english.containsKey(p)) {
+                        p = p.substring(0, p.length() - 1);
+                        if(haveI){
+                            letters.add('i');
+                        }
+                        if(removedD){
+                            letters.add(letters.get(letters.size()-1));
+                        }
+                        for (int i = 0; i < s.length(); i++) {
+                            letters.add(letters.size(), s.charAt(i));
+                        }
+                    }
+                    else {
+                        letters.add('y');
+                        suffs.add(s);
+                    }
+                }
+                else {
+                    suffs.add(s);
+                    letters.add('e');
+                }
+            }
+
+            else
+                suffs.add(s);
+            
         }
 
     }
@@ -323,12 +343,12 @@ public class MorphologyFinder {
                 removeX(3);
                 traits.add("plural/ownership");
             }
-            else if(ends("shes") && letters.size()>4){
+            else if (ends("shes") && letters.size() > 4) {
                 suffs.add("s");
                 removeX(2);
                 traits.add("plural/ownership");
             }
-            else if(ends("xes")){
+            else if (ends("xes")) {
                 suffs.add("s");
                 removeX(2);
                 traits.add("plural/ownership");
@@ -339,24 +359,28 @@ public class MorphologyFinder {
                 letters.add('y');
                 traits.add("plural/ownership");
             }
-            else if(ends("ves")){
+            else if (ends("ves")) {
                 suffs.add("s");
                 removeX(3);
                 letters.add('f');
-                if(cvc()){
+                if (cvc()) {
                     letters.add('e');
                 }
                 traits.add("plural/ownership");
             }
+            else if (ends("oes")) {
+                suffs.add("s");
+                removeX(2);
+                traits.add("plural/ownership");
+            }
             else if ((letters.get(letters.size() - 2) != 's') && !ends("itis")
                     && !ends("ous")) {
-                suffs.add("s");
-                removeX(1);
+                checkSuff("s");
                 traits.add("plural/ownership");
             }
         }
-        
-        if(ends("i")){
+
+        if (ends("i")) {
             removeX(1);
             letters.add('u');
             letters.add('s');
@@ -368,39 +392,32 @@ public class MorphologyFinder {
                 suffs.add("i");
                 traits.add("plural");
             }
-            else{
+            else {
                 removeX(2);
                 letters.add('i');
             }
         }
-      //blasty, flashy -- not body
-        if (ends("y") && !ends("ody") && !ends("ify") && !ends("ly") && !ends("ency") && !ends("ancy")) {
-            removeX(1);
-            if(cvc() || doubleletter(letters.size()-1) || !cons(letters.size()-1)){
-                letters.add('y');
-            }
-            else
-                suffs.add("y");
-            
+        // blasty, flashy -- not body
+        if (ends("y") && !ends("ody") && !ends("ify") && !ends("ly")
+                && !ends("ency") && !ends("ancy")) {
+            checkSuff("y");
         }
-        
-       
+
         // past tense
         if (ends("eed")) {
-            if (m("eed") > 0) {
                 removeX(1);
                 String p = "";
                 for (int i = 0; i < letters.size(); i++) {
                     p += letters.get(i);
                 }
-                if(english.containsKey(p)){
-                suffs.add("ed");
-                traits.add("past tense");
+                if (english.containsKey(p)) {
+                    suffs.add("ed");
+                    traits.add("past tense");
                 }
-                else{
+                else {
                     letters.add('d');
                 }
-            }
+            
         }
 
     }
@@ -411,39 +428,39 @@ public class MorphologyFinder {
     private void stepTwo() {
         // adjective to noun +
         if (ends("ity") && !ends("ivity")) {
-            suffs.add("ity");
             removeX(3);
+            suffs.add("ity");
             if (ends("abil")) {
                 removeX(2);
                 letters.add('l');
                 letters.add('e');
             }
         }
-        if(ends("ily")){
+        if (ends("ily")) {
             checkSuff("ily");
-            letters.add('y');//peremptorily preliminarily
-            
+            //letters.add('y');// peremptorily preliminarily
+
         }
-        if(ends("scly")){
-            checkSuff("ly");
+        if (ends("scly")) {
+            removeX(2);
+            suffs.add("ly");
             letters.add('l');
             letters.add('e');
         }
         // adjective to adverb + noun to adjective
-        if (ends("ly") && !ends("ably")) { //lly detrimentally, 
+        if (ends("ly") && !ends("ably")) { // lly detrimentally,
             checkSuff("ly");
         }
         // adjective to noun
         if (ends("ness")) {
-            suffs.add("ness");
-            removeX(4);
-            if (ends("i")) {
+            checkSuff("ness");
+            /*if (ends("i")) {
                 removeX(1);
                 letters.add('y');
-            }
+            }*/
         }
         // noun to adjective + adjective to noun + verb to adjective
-        
+
         // adjective to noun
         checkSuff("dom");
 
@@ -455,28 +472,32 @@ public class MorphologyFinder {
     private void stepThree() {
         if (ends("ism")) {
             checkSuff("ism");
-            if(cvc()){
+            /*if (cvc()) {
                 letters.add('e');
             }
             if (doubleletter(letters.size() - 1)) {
                 removeX(1);
-            }
+            }*/
         }
-        if ((ends("ed") /*&& vowelinstem("ed")*/ && !ends("eed"))
-                || (ends("ing") && vowelinstem("ing") && !ends("ling")) && letters.size()>4) {//king
+        if ((ends("ed") /* && vowelinstem("ed") */ && !ends("eed"))
+                || (ends("ing") && vowelinstem("ing") && !ends("ling"))
+                        && letters.size() > 4) {// king
             // past tense
             if (ends("ed")) {
-                suffs.add("ed");
-                removeX(2);
+                checkSuff("ed");
                 traits.add("past tense");
             }
             // present tense
             if (ends("ing")) {
-                suffs.add("ing");
-                removeX(3);
+                checkSuff("ing");
                 traits.add("present tense");
             }
-            if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg") || ends("uir") || ends("iat") || ends("eas") || ends("ng") || ends("nc")) && !ends("y") && !ends("lter") && !ends("el") && !ends("ffen") && !ends("en")) //charged & substantiating & requiring & filtering, labeled,stiffening 
+            /*if ((cvc() || ends("it") || ends("ns") || ends("rg") || ends("dg")
+                    || ends("uir") || ends("iat") || ends("eas") || ends("ng")
+                    || ends("nc") || ends("uat")) && !ends("y")
+                    && !ends("lter") && !ends("el") && !ends("ffen")
+                    && !ends("en")) // charged & substantiating & requiring &
+                                    // filtering, labeled,stiffening
                 letters.add('e');
             else if (ends("bl"))
                 letters.add('e');
@@ -486,15 +507,14 @@ public class MorphologyFinder {
                 removeX(1);
                 letters.add('y');
             }
-            if (doubleletter(letters.size() - 1) && cons(letters.size()-1) && !ends("ll") && !ends("ss")) {//glossing, falling
+            if (doubleletter(letters.size() - 1) && cons(letters.size() - 1)
+                    && !ends("ll") && !ends("ss")) {// glossing, falling
                 removeX(1);
             }
-            /*if (ends("y")) { //slaying
-                removeX(1);
-                letters.add('i');
-                letters.add('e');
-            }*/
-            
+            /*
+             * if (ends("y")) { //slaying removeX(1); letters.add('i');
+             * letters.add('e'); }
+             */
 
             /*
              * else if (doublec(letters.size()-1)) { { Character ch =
@@ -505,13 +525,16 @@ public class MorphologyFinder {
         }
         checkSuff("less");
         // feminine
-        if (ends("ess")) {
-            suffs.add("ess");
+        if (ends("ess") && !ends("ness") && !ends("less") && !ends(" press")) {
             removeX(3);
+            suffs.add("ess");
             if (ends("r")) {
                 removeX(1);
                 letters.add('e');
                 letters.add('r');
+            }
+            if(doubleletter(letters.size()-1)){
+                removeX(1);
             }
             else if (ends("nc")) {
                 letters.add('e');
@@ -520,41 +543,44 @@ public class MorphologyFinder {
         }
         // feminine
         if (ends("ette")) {
-            removeX(4);
-            suffs.add("ette");
-            if (cvc()) {
+            checkSuff("ette");
+            /*if (cvc()) {
                 letters.add('e');
             }
             if (doubleletter(letters.size() - 1)) {
                 removeX(1);
-            }
+            }*/
             traits.add("feminine");
         }
         // diminutive
         if (ends("ish") && letters.size() > 5) {
-            removeX(3);
-            if (doubleletter(letters.size() - 1)) {
+            checkSuff("ish");
+            /*if (doubleletter(letters.size() - 1)) {
                 removeX(1);
             }
-            suffs.add("ish");
+            if (cvc()) { // gnomish
+                letters.add('e');
+            }*/
             traits.add("dimunitive");
         }
         // diminutive
         if (ends("ling")) {
-            if(ends("eling") || ends("gling") || ends("lling") || ends("ycling")){ //falling
+            if (ends("eling") || ends("gling") || ends("lling")
+                    || ends("ycling")) { // falling
                 checkSuff("ing");
-                if(ends("gl") || ends("cl")){
+                /*if (ends("gl") || ends("cl")) {
                     letters.add('e');
-                }
+                }*/
             }
-            else{
+            else {
                 checkSuff("ling");
                 traits.add("dimunitive");
             }
-            
+
         }
-        if(ends("trable")){ //demonstrable
-            checkSuff("able");
+        if (ends("trable")) { // demonstrable
+            removeX(4);
+            suffs.add("able");
             letters.add('a');
             letters.add('t');
             letters.add('e');
@@ -562,14 +588,15 @@ public class MorphologyFinder {
         // verb to adjective + productive
         if (ends("able") && !ends("iable")) {
             checkSuff("able");
-            if((cvc() || ends("uid") || ends("ns")) && !ends("y") && !ends("fer")){
+            /*if ((cvc() || ends("uid") || ends("ns")) && !ends("y")
+                    && !ends("fer")) {
                 letters.add('e');
-            }
+            }*/
         }
         if (ends("ible")) {
             checkSuff("ible");
-            if(!ends("st"))//digestible
-                letters.add('e');
+            /*if (!ends("st"))// digestible
+                letters.add('e');*/
         }
         // able + ly
         checkSuff("ably");
@@ -579,13 +606,13 @@ public class MorphologyFinder {
             suffs.add("y");
         }
         // action, state, or quality
-        if(ends("ance")){
+        if (ends("ance")) {
             removeX(2);
             letters.add('t');
             suffs.add("ance");
         }
-        checkSuff("osis");//anamorphosis
-        if(ends("ence")){
+        checkSuff("osis");// anamorphosis
+        if (ends("ence")) {
             removeX(2);
             letters.add('t');
             suffs.add("ence");
@@ -593,38 +620,39 @@ public class MorphologyFinder {
         // state
         checkSuff("ship");
         if (ends("ee") && letters.size() > 5) {
-            suffs.add("ee");
-            removeX(2);
-            if (cvc()) // check if it goes VC at the end
+            checkSuff("ee");
+            /*if (cvc()) // check if it goes VC at the end
             {
                 letters.add('e');
-            }
+            }*/
         }
-        if(ends("dient")){
+        if (ends("dient")) {
             checkSuff("dient");
-            letters.add('y'); //obedient
+            //letters.add('y'); // obedient
         }
-        if(ends("ent") && !ends("rent")){ //current
+        if (ends("ent") && !ends("rent") && !ends("sent")) { // current absent
             checkSuff("ent");
-            if(ends("ng") || ends("rg")){
-                letters.add('e'); //astringe
+            /*if (ends("ng") || ends("rg")) {
+                letters.add('e'); // astringe
+            }*/
+        }
+        if (ends("ant") && (letters.size() - 3 > 1) && !ends("gnant")
+                && !ends("rant") && !ends("ilitant")) { // militant
+            checkSuff("ant");
+            checkSuff("t");
+            /*if (ends("i")) { // compliant
+                removeX(1);
+                letters.add('y');
             }
-        }
-        if (ends("ant") && (letters.size() - 3 > 1) && !ends("gnant") && !ends("rant") && !ends("ilitant")) { //militant
-               checkSuff("ant");
-               if(ends("i")){ //compliant
-                   removeX(1);
-                   letters.add('y');
-               }
-               if(cvc()){
-                   letters.add('e');
-               }
-        }
-        if(ends("ure") && !ends("cure")){
-            checkSuff("ure");
-            if(cvc()){
+            if (cvc()) {
                 letters.add('e');
-            }
+            }*/
+        }
+        if (ends("ure") && !ends("cure")) {
+            checkSuff("ure");
+            /*if (cvc()) {
+                letters.add('e');
+            }*/
         }
         checkSuff("ilation");
         if (ends("ization")) {
@@ -632,86 +660,85 @@ public class MorphologyFinder {
             removeX(5);
             letters.add('e');
         }
-        if(ends("ize")){
+        if (ends("ize")) {
             checkSuff("ize");
-            if(ends("at")){ // emblematize
+            /*if (ends("at")) { // emblematize
                 letters.add('e');
             }
-            if(ends("g")){
-                letters.add('y'); //apologize & homologize
+            if (ends("g")) {
+                letters.add('y'); // apologize & homologize
             }
-            if(ends("not")){
+            if (ends("not")) {//need to fix possibly
                 letters.add('i');
                 letters.add('c');
-            }
-            /*if(cvc() && !ends("itic")){ //naturalize & magnetize & reflectorize
-                letters.add('e');
             }*/
-            if(ends("igmate")){
+            /*
+             * if(cvc() && !ends("itic")){ //naturalize & magnetize &
+             * reflectorize letters.add('e'); }
+             */
+            if (ends("igmate")) {
                 suffs.add("ate");
                 removeX(2);
             }
         }
         if (ends("ation")) {
-            suffs.add("ation");
-            removeX(5);
-            if(cvc()){
+            checkSuff("ation");
+            /*if (cvc()) {
                 letters.add('a');
                 letters.add('t');
                 letters.add('e');
             }
-            if (doubleletter(letters.size()-1)) {
+            if (doubleletter(letters.size() - 1)) {
                 removeX(1);
-            }
+            }*/
         }
-        if(ends("ustion")){
+        if (ends("ustion")) {
             checkSuff("ion");
         }
-        if(ends("ition")){
+        if (ends("ition")) {
             checkSuff("ition");
-            if(cvc() || ends("rv") || ends("rm")){ //servition
+            /*if (cvc() || ends("rv") || ends("rm")) { // servition
                 letters.add('e');
-            }
+            }*/
         }
-        if (ends("tion") && !ends("ction") && !ends("stion") && !cons(letters.size()-5)) {
+        if (ends("tion") && !ends("ction") && !ends("stion")
+                && !cons(letters.size() - 5)) {
             suffs.add("tion");
             removeX(4);
-            if(ends("n")){
+            if (ends("n")) {
                 letters.add('t');
             }
         }
-        if(ends("ion") /*&& (!ends("tion") || ends("stion") || ends("ction"))*/){//introspection, digestion
+        if (ends("ion") /*
+                         * && (!ends("tion") || ends("stion") || ends("ction"))
+                         */) {// introspection, digestion
             checkSuff("ion");
-            //if add doubleletter think about discussion
-            if(ends("ns") || ends("is")){//vision
+            // if add doubleletter think about discussion
+            /*if (ends("ns") || ends("is")) {// vision
                 letters.add('e');
-            }
+            }*/
         }
-        
-       
-        if(ends("ical") && !ends("critical")){
+
+        if (ends("ical") && !ends("critical")) {
             suffs.add("ical");
             removeX(4);
-           
-            letters.add('y'); //biological
+            if (!ends("ph"))// graphic
+                letters.add('y'); // biological
         }
         if (ends("al") && !ends("ual") && !ends("ital")) {
-            //dismissal
-            removeX(2);
-            suffs.add("al");
-            if((cvc() || ends("ais") || ends("ous") || ends("rv")) && !ends("ray")){ //appraisal, espousal, observal
+            // dismissal
+            checkSuff("al");
+            /*if ((cvc() || ends("ais") || ends("ous") || ends("rv"))
+                    && !ends("ray")) { // appraisal, espousal, observal
                 letters.add('e');
             }
-            if(doubleletter(letters.size()-1)){
+            if (doubleletter(letters.size() - 1)) {
                 removeX(1);
-            }
-            /*if(english.containsKey(getRoot())){
-                suffs.add("al");
-            }
-            else{
-                letters.add('a');
-                letters.add('l');
             }*/
+            /*
+             * if(english.containsKey(getRoot())){ suffs.add("al"); } else{
+             * letters.add('a'); letters.add('l'); }
+             */
         }
 
         if (ends("ivity")) {
@@ -719,59 +746,59 @@ public class MorphologyFinder {
             suffs.add("ity");
             letters.add('e');
         }
-        if(ends("ative")){ //manipulative
+        if (ends("ative")) { // manipulative
             suffs.add("ative");
             removeX(3);
             letters.add('e');
         }
-        if(ends("itive")){
+        if (ends("itive")) {
             suffs.add("itive");
             removeX(5);
             letters.add('e');
         }
-        if(ends("sive")){ //extorsive extensive
-            checkSuff("sive");
+        if (ends("sive")) { // extorsive extensive
+            suffs.add("sive");
+            removeX(4);
             letters.add('t');
         }
-        if (ends("ive") && letters.size()>6 && !ends("orgive")) { //thrive
+        if (ends("ive") && letters.size() > 6 && !ends("orgive")) { // thrive
             checkSuff("ive");
-            if (ends("eat") || cvc()) {
+            /*if (ends("eat") || cvc()) {
                 letters.add('e');
-            }
+            }*/
         }
-        if(ends("icator")){
+        if (ends("icator")) {
             checkSuff("icator");
-            letters.add('y');//scarificator, purificator
+            //letters.add('y');// scarificator, purificator
         }
-        if(ends("ify")){
+        if (ends("ify")) {
             checkSuff("ify");
-            if(cvc()){
+            /*if (cvc()) {
                 letters.add('e');
-            }
+            }*/
         }
-        if(ends("or")){
+        checkSuff("itor");
+        if (ends("or")) {
             checkSuff("or");
-            if(ends("it")){ //competitor, servitor, conformitor,compositor
-                letters.add('i');
-                letters.add('o');
-                letters.add('n');
-            }
-            if((cvc() || ends("ns") || ends("uat")) && !ends("dit")){
+            /*if ((cvc() || ends("ns") || ends("uat")) && !ends("dit")) {
                 letters.add('e');
-            }
+            }*/
         }
-        if(ends("arate") || ends("urate") || ends("ervate") || ends("uate") || ends("alate")){ // declarate assimilate dedicate
+        if (ends("arate") || ends("urate") || ends("ervate") || ends("uate")
+                || ends("alate")) { // declarate assimilate dedicate
             checkSuff("ate");
-            letters.add('e');
+            //letters.add('e');
         }
-        if(ends("ite")){
+        if (ends("ite")) {
             checkSuff("ite");
-            
+
         }
-        if (ends("er") && letters.size()>4 && !ends("rosper") && !ends("infer") && !ends("fter") && !ends("mber") && !ends("eter") && !ends("ffer")) { //somber/member, meter, offer
-            suffs.add("er");
-            removeX(2);
-            if (ends("i")) {
+        if (ends("er") && letters.size() > 4 && !ends("rosper")
+                && !ends("infer") && !ends("fter") && !ends("mber")
+                && !ends("eter") && !ends("ffer") && !ends("rder")) { // somber/member, meter,order
+                                                     // offer
+            checkSuff("er");
+            /*if (ends("i")) {
                 removeX(1);
                 letters.add('y');
             }
@@ -782,16 +809,17 @@ public class MorphologyFinder {
                 for (int i = 0; i < letters.size(); i++) {
                     s += letters.get(i);
                 }
-                /*if (!english.containsKey(s)) {
-                    removeX(1);
-                }*/
-            }
-            else if (doubleletter(letters.size()-1) && !ends("ss")
+                /*
+                 * if (!english.containsKey(s)) { removeX(1); }
+                 */
+            /*}
+            else if (doubleletter(letters.size() - 1) && !ends("ss")
                     && (!ends("ll") || ends("full")) && !ends("dd")) {
                 removeX(1);
             }
             if (ends("bl") || ends("rs") || ends("u") || ends("mpl")
-                    || ends("btl") || ends("uav") || ends("bl")) {
+                    || ends("btl") || ends("uav") || ends("bl")
+                    || ends("rg")) {
                 letters.add('e');
             }
             if (ends("uy")) {
@@ -805,12 +833,12 @@ public class MorphologyFinder {
                 letters.add('o');
                 letters.add('e');
                 letters.add('y');
-            }
+            }*/
             traits.add("comparative");
         }
-        else if (ends("est") && letters.size()>4) {
+        else if (ends("est") && letters.size() > 4) {
             checkSuff("est");
-            if (ends("i")) {
+            /*if (ends("i")) {
                 removeX(1);
                 letters.add('y');
             }
@@ -821,11 +849,11 @@ public class MorphologyFinder {
                 for (int i = 0; i < letters.size(); i++) {
                     s += letters.get(i);
                 }
-                /*if (!english.containsKey(s)) {
-                    removeX(1);
-                }*/
-            }
-            else if (doubleletter(letters.size()-1) && !ends("ss")
+                /*
+                 * if (!english.containsKey(s)) { removeX(1); }
+                 */
+            /*}
+            else if (doubleletter(letters.size() - 1) && !ends("ss")
                     && (!ends("ll") || ends("full")) && !ends("dd")) {
                 removeX(1);
             }
@@ -844,64 +872,60 @@ public class MorphologyFinder {
                 letters.add('o');
                 letters.add('e');
                 letters.add('y');
-            }
+            }*/
             traits.add("superlative");
         }
         if (ends("ful")) {
             suffs.add("ful");
             removeX(3);
-            if (ends("i")) {
+            /*if (ends("i")) {
                 removeX(1);
                 letters.add('y');
-            }
+            }*/
         }
-        if(ends("itis")){
-            checkSuff("itis");
-            if(ends("r")){ //cerebritis
+        if (ends("itis")) {
+            removeX(4);
+            suffs.add("itis");
+            if (ends("r")) { // cerebritis
                 letters.add('u');
                 letters.add('m');
             }
         }
         checkSuff("like");
         checkSuff("ment");
-        checkSuff("geous");
+        //checkSuff("geous");
         if (ends("ious") && letters.size() != 5 && !ends("serious")
                 && !ends("icious")) {
-            suffs.add("ious");
-            removeX(4);
-            letters.add('y'); // mystery
-            //letters.add('e'); // carious
+            checkSuff("ious");
         }
-        if(ends("eous")){
+        if (ends("eous")) {
             checkSuff("eous");
         }
-        if(ends("rous")){
+        if (ends("rous")) {
             checkSuff("rous");
         }
         if (ends("ous") && !ends("ious")) {
-            suffs.add("ous");
-            removeX(3);
-            //letters.add('e'); //think about monstrous or
+            checkSuff("ous");
+            // letters.add('e'); //think about monstrous or
         }
-        if(ends("ist") && letters.size()>4){ //christen
+        if (ends("ist") && letters.size() > 4) { // christen
             checkSuff("ist");
-            if(ends("log")){
-                letters.add('y'); //biologist
-            }
-        }
-        if (ends("en") && !ends("men")) {
-            suffs.add("en");
-            removeX(2);
-            if(cvc()){
+            /*if (cvc()) { // gnomist
                 letters.add('e');
             }
+            if (ends("log")) {
+                letters.add('y'); // biologist
+            }*/
         }
-        
+        if (ends("en") && !ends("men")) {
+            checkSuff("en");
+        }
+
         if (ends("ar") && !ends("ear") && !ends("aar") && !ends("oar")
                 && !ends("uar")) {
 
-            removeX(2);
-            if (letters.size() > 2
+            checkSuff("ar");
+            /*if (letters.size() > 2
                     && letters.get(letters.size() - 2) == letters
                             .get(letters.size() - 1)) {
                 removeX(1);
@@ -918,68 +942,67 @@ public class MorphologyFinder {
                 letters.add('r');
             }
             else
-                suffs.add("ar");
+                suffs.add("ar");*/
         }
-        if(ends("atic")){
+        if (ends("atic")) {
             checkSuff("atic");
-            if(doubleletter(letters.size()-1)){
+            /*if (doubleletter(letters.size() - 1)) {
                 removeX(1);
-            }
+            }*/
         }
-        if(ends("etic")){
+        if (ends("etic")) {
             checkSuff("etic");
-            letters.add('y'); // energetic
+            //letters.add('y'); // energetic
         }
-        if(ends("otic")){
-            checkSuff("tic");//hypnotic
+        if (ends("otic")) {
+            checkSuff("tic");// hypnotic
         }
-        if (ends("ic") && !ends("ritic") && !ends("toic")) { //stoic
-            suffs.add("ic");
-            removeX(2);
-            
-            if (ends("ct")) {
+        if (ends("ic") && !ends("ritic") && !ends("toic")) { // stoic
+            checkSuff("ic");
+
+            /*if (ends("ct")) {
                 removeX(2);
                 letters.add('x');
             }
-            if (ends("tr") || ends("log") || doubleletter(letters.size()-2) || ends("or")) {
+            else if (ends("tr") || ends("log") || doubleletter(letters.size() - 2)
+                    || ends("or")) {
                 letters.add('y');
             }
-            if(ends("x")){
+            else if (ends("x")) {
                 letters.add('i');
                 letters.add('a');
             }
-            if (cvc() && !ends("rab") && !ends("hol")) {
+            else if (cvc() && !ends("rab") && !ends("hol")) {
                 letters.add('e');
-            }
+            }*/
         }
-        
-        
-        if(ends("ian")){
+
+        if (ends("ian")) {
             suffs.add("an");
             removeX(3);
-            if(ends("r")){ //umbrian
+            if (ends("r")) { // umbrian
                 letters.add('i');
                 letters.add('a');
             }
         }
-        //an think of ran and ban
-        //fuage and pillage and manage and hemorrhage
-        if(ends("age") && !ends("anage") && !ends("uage") && !ends("illage") && !ends("hage")){
-            checkSuff("age"); 
+        // an think of ran and ban
+        // fuage and pillage and manage and hemorrhage
+        if (ends("age") && !ends("anage") && !ends("uage") && !ends("illage")
+                && !ends("hage")) {
+            checkSuff("age");
         }
-        if(ends("ory")){ //consecratory
-            checkSuff("y");
-            checkSuff("or");
-            letters.add('e');
+        if (ends("ory")) { // consecratory
+            checkSuff("ory");
+            //letters.add('e');
         }
-        if(ends("ium")){ //europium
+        if (ends("ium")) { // europium
             checkSuff("ium");
-            letters.add('e');
+            //letters.add('e');
         }
-        if(ends("ery")){ //grocery butlery
+        if (ends("ery")) { // grocery butlery
             checkSuff("y");
         }
-        
+
     }
 
     /**
@@ -996,6 +1019,7 @@ public class MorphologyFinder {
         checkPref("allo");
         checkPref("alter");
         checkPref("ante");
+        checkPref("fore");
         if (begins("anti")) {
             checkPref("anti");
             traits.add("negative");
@@ -1019,15 +1043,13 @@ public class MorphologyFinder {
             traits.add("negative");
         }
         checkPref("down");
+        checkPref("after");
         if (begins("dys")) {
             checkPref("dys");
             traits.add("negative");
         }
         checkPref("epi");
-        if (begins("extra") && !ends("extra")) {
-            prefs.add("extra");
-            removeF(5);
-        }
+        checkPref("extra");
         checkPref("hemi");
         checkPref("hexa");
         if (begins("hyper") && !ends("hyper")) {
@@ -1056,14 +1078,19 @@ public class MorphologyFinder {
         checkPref("mid");
         checkPref("mini");
         checkPref("mis");
+        checkPref("on");
         checkPref("mono");
         checkPref("multi");
         if (begins("non")) {
             checkPref("non");
             traits.add("negative");
         }
+        checkPref("out");
         checkPref("octo");
         checkPref("over");
+        checkPref("sur");
+        checkPref("meta");
+        checkPref("arch");
         checkPref("pan");
         checkPref("para");
         checkPref("penta");
@@ -1072,6 +1099,7 @@ public class MorphologyFinder {
         checkPref("poly");
         checkPref("post");
         checkPref("pre");
+        checkPref("retro");
         checkPref("proto");
         checkPref("pro");
         checkPref("pseudo");
@@ -1082,10 +1110,14 @@ public class MorphologyFinder {
         checkPref("sub");
         checkPref("super");
         checkPref("supra");
+        checkPref("up");
         checkPref("tetra");
         checkPref("tri");
         checkPref("ultra");
         checkPref("under");
+        checkPref("by");
+        checkPref("circum");
+        checkPref("off");
         if (begins("un")) {
             checkPref("un");
             traits.add("negative");

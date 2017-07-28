@@ -123,9 +123,6 @@ public class WriteDictionary {
             // Implements First Names and Last Names and Proper Places
             properNames();
             printer.println("- First_Names.ser and Last_Names.ser and Proper_Places.ser Implemented");
-            // Implements MobyWordListWithPOS.txt to the dictionary
-            mobyListPOS();
-            printer.println("- MobyWordListWithPOS.txt Implemented");
             // Implements default-lexion.xml
             defLexicon();
             printer.println("- default-lexicon.xml Implemented");
@@ -133,6 +130,9 @@ public class WriteDictionary {
             countNounOrNot();
             printer.println(
                     "- NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt Implemented");
+            // Implements MobyWordListWithPOS.txt to the dictionary
+            mobyListPOS();
+            printer.println("- MobyWordListWithPOS.txt Implemented");
             // Implements Adverb Scales
             adverbIntensifiers();
             printer.println("- AdverbScales-Manual.csv Implemented");
@@ -176,8 +176,9 @@ public class WriteDictionary {
                     + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
                     + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
                     + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. ");
-            printer.println("- The Accessor class is an example usage of the DictionaryAccess class.");
+            printer.println("- The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
             printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
+            printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary.");
             //print out roots HashMap
             try {
                 FileOutputStream fout = new FileOutputStream(
@@ -867,6 +868,9 @@ public class WriteDictionary {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
                                 m.loadDictionary(nounDictionary);
+                                m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
@@ -899,6 +903,9 @@ public class WriteDictionary {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
                                 m.loadDictionary(nounDictionary);
+                                m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
@@ -1006,7 +1013,7 @@ public class WriteDictionary {
                     if (p.howCommon == -1) {
                         p.howCommon = ((Noun) part).howCommon;
                     }
-                    if(p.baseForm.equals("--")){
+                    if(!((Noun) part).baseForm.equals("--")){
                         p.baseForm = ((Noun) part).baseForm;
                     }
                     if(!((Noun) part).propbank.equals("--")){
@@ -1365,6 +1372,9 @@ public class WriteDictionary {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
                                     m.loadDictionary(nounDictionary);
+                                    m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     /*try {
                                         n.baseForm = dictionary
@@ -1405,6 +1415,9 @@ public class WriteDictionary {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
                                     m.loadDictionary(nounDictionary);
+                                    m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     /*try {
                                         n.baseForm = dictionary
@@ -1418,9 +1431,9 @@ public class WriteDictionary {
                                     if (m.getTraits().contains("plural")) {
                                         n.plurality = "Plural";
                                         if(nounDictionary.containsKey(n.baseForm)){
-                                        Noun temp = new Noun(n.baseForm);
-                                        temp.plurality = "Singular";
-                                        merge(n.baseForm,temp);
+                                            Noun temp = new Noun(n.baseForm);
+                                            temp.plurality = "Singular";
+                                            merge(n.baseForm,temp);
                                         }
                                     }
                                     if(!roots.containsKey(n.baseForm+":noun"))
@@ -1444,6 +1457,9 @@ public class WriteDictionary {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
                                     m.loadDictionary(nounDictionary);
+                                    m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     /*try {
                                         n.baseForm = dictionary
@@ -1479,7 +1495,10 @@ public class WriteDictionary {
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
+                                    m.loadDictionary(nounDictionary);
                                     m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     try {
                                         v.baseForm = dictionary
@@ -1516,7 +1535,10 @@ public class WriteDictionary {
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
+                                    m.loadDictionary(nounDictionary);
                                     m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     try {
                                         v.baseForm = dictionary
@@ -1553,7 +1575,10 @@ public class WriteDictionary {
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
+                                    m.loadDictionary(nounDictionary);
                                     m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     try {
                                         v.baseForm = dictionary
@@ -1589,7 +1614,10 @@ public class WriteDictionary {
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
+                                    m.loadDictionary(nounDictionary);
                                     m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     try {
                                         v.baseForm = dictionary
@@ -1624,7 +1652,10 @@ public class WriteDictionary {
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
+                                    m.loadDictionary(nounDictionary);
+                                    m.loadDictionary(verbDictionary);
                                     m.loadDictionary(adjectiveDictionary);
+                                    m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     try {
                                         a.baseForm = dictionary
@@ -1652,6 +1683,9 @@ public class WriteDictionary {
                                 try {
                                     MorphologyFinder m = new MorphologyFinder(
                                             word);
+                                    m.loadDictionary(nounDictionary);
+                                    m.loadDictionary(verbDictionary);
+                                    m.loadDictionary(adjectiveDictionary);
                                     m.loadDictionary(adverbDictionary);
                                     m.breakApart();
                                     try {
@@ -1763,7 +1797,10 @@ public class WriteDictionary {
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
+                                m.loadDictionary(nounDictionary);
                                 m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 try {
                                     v.baseForm = dictionary.lookupIndexWord(
@@ -1798,7 +1835,10 @@ public class WriteDictionary {
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
+                                m.loadDictionary(nounDictionary);
                                 m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 try {
                                     v.baseForm = dictionary.lookupIndexWord(
@@ -1833,7 +1873,10 @@ public class WriteDictionary {
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
+                                m.loadDictionary(nounDictionary);
                                 m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 try {
                                     v.baseForm = dictionary.lookupIndexWord(
@@ -1868,7 +1911,10 @@ public class WriteDictionary {
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
+                                m.loadDictionary(nounDictionary);
                                 m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 try {
                                     v.baseForm = dictionary.lookupIndexWord(
@@ -1901,7 +1947,10 @@ public class WriteDictionary {
                             try {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
+                                m.loadDictionary(nounDictionary);
                                 m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 try {
                                     v.baseForm = dictionary.lookupIndexWord(
@@ -1939,6 +1988,9 @@ public class WriteDictionary {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
                                 m.loadDictionary(nounDictionary);
+                                m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
@@ -1976,6 +2028,9 @@ public class WriteDictionary {
                                 MorphologyFinder m = new MorphologyFinder(
                                         word);
                                 m.loadDictionary(nounDictionary);
+                                m.loadDictionary(verbDictionary);
+                                m.loadDictionary(adjectiveDictionary);
+                                m.loadDictionary(adverbDictionary);
                                 m.breakApart();
                                 /*try {
                                     n.baseForm = dictionary.lookupIndexWord(
@@ -2033,7 +2088,10 @@ public class WriteDictionary {
                         
                         try {
                             MorphologyFinder m = new MorphologyFinder(word);
+                            m.loadDictionary(nounDictionary);
+                            m.loadDictionary(verbDictionary);
                             m.loadDictionary(adjectiveDictionary);
+                            m.loadDictionary(adverbDictionary);
                             m.breakApart();
                             try {
                                 a.baseForm = dictionary.lookupIndexWord(
@@ -2058,6 +2116,9 @@ public class WriteDictionary {
                         Adverb a = new Adverb(word);
                         try {
                             MorphologyFinder m = new MorphologyFinder(word);
+                            m.loadDictionary(nounDictionary);
+                            m.loadDictionary(verbDictionary);
+                            m.loadDictionary(adjectiveDictionary);
                             m.loadDictionary(adverbDictionary);
                             m.breakApart();
                             try {
@@ -2115,6 +2176,9 @@ public class WriteDictionary {
                     try {
                         MorphologyFinder m = new MorphologyFinder(word);
                         m.loadDictionary(nounDictionary);
+                        m.loadDictionary(verbDictionary);
+                        m.loadDictionary(adjectiveDictionary);
+                        m.loadDictionary(adverbDictionary);
                         m.breakApart();
                         /*try {
                             n.baseForm = dictionary
@@ -2158,6 +2222,9 @@ public class WriteDictionary {
                     try {
                         MorphologyFinder m = new MorphologyFinder(word);
                         m.loadDictionary(nounDictionary);
+                        m.loadDictionary(verbDictionary);
+                        m.loadDictionary(adjectiveDictionary);
+                        m.loadDictionary(adverbDictionary);
                         m.breakApart();
                         /*try {
                             n.baseForm = dictionary
@@ -2490,6 +2557,9 @@ public class WriteDictionary {
                 try {
                     MorphologyFinder m = new MorphologyFinder(stuff);
                     m.loadDictionary(nounDictionary);
+                    m.loadDictionary(verbDictionary);
+                    m.loadDictionary(adjectiveDictionary);
+                    m.loadDictionary(adverbDictionary);
                     m.breakApart();
                     /*try {
                         n.baseForm = dictionary
@@ -2551,6 +2621,9 @@ public class WriteDictionary {
                         MorphologyFinder m = new MorphologyFinder(
                                 word);
                         m.loadDictionary(nounDictionary);
+                        m.loadDictionary(verbDictionary);
+                        m.loadDictionary(adjectiveDictionary);
+                        m.loadDictionary(adverbDictionary);
                         m.breakApart();
                         /*try {
                             n.baseForm = dictionary
@@ -2588,7 +2661,10 @@ public class WriteDictionary {
                     try {
                         MorphologyFinder m = new MorphologyFinder(
                                 word);
+                        m.loadDictionary(nounDictionary);
                         m.loadDictionary(verbDictionary);
+                        m.loadDictionary(adjectiveDictionary);
+                        m.loadDictionary(adverbDictionary);
                         m.breakApart();
                         try {
                             v.baseForm = dictionary.lookupIndexWord(
@@ -2623,7 +2699,10 @@ public class WriteDictionary {
                     try {
                         MorphologyFinder m = new MorphologyFinder(
                                 word);
+                        m.loadDictionary(nounDictionary);
+                        m.loadDictionary(verbDictionary);
                         m.loadDictionary(adjectiveDictionary);
+                        m.loadDictionary(adverbDictionary);
                         m.breakApart();
                         try {
                             a.baseForm = dictionary
@@ -2653,6 +2732,9 @@ public class WriteDictionary {
                     try {
                         MorphologyFinder m = new MorphologyFinder(
                                 word);
+                        m.loadDictionary(nounDictionary);
+                        m.loadDictionary(verbDictionary);
+                        m.loadDictionary(adjectiveDictionary);
                         m.loadDictionary(adverbDictionary);
                         m.breakApart();
                         try {
@@ -2815,7 +2897,10 @@ public class WriteDictionary {
                 try {
                     MorphologyFinder m = new MorphologyFinder(
                             word);
+                    m.loadDictionary(nounDictionary);
                     m.loadDictionary(verbDictionary);
+                    m.loadDictionary(adjectiveDictionary);
+                    m.loadDictionary(adverbDictionary);
                     m.breakApart();
                     try {
                         v.baseForm = dictionary.lookupIndexWord(

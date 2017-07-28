@@ -760,7 +760,7 @@ public class DictionaryAccess {
             Map.Entry pair = (Entry) it.next();
             String word = (String) pair.getKey();
             String base = ((Noun)pair.getValue()).baseForm;
-            if(base.charAt(0) == c){
+            if(base.charAt(0) == c&& !base.equals(word)){
             if(temp.containsKey(base)){
                 String s = temp.get(base);
                 temp.put(base, s+" + "+word);
@@ -775,7 +775,7 @@ public class DictionaryAccess {
             Map.Entry pair = (Entry) it3.next();
             String word = (String) pair.getKey();
             String base = ((Verb)pair.getValue()).baseForm;
-            if(base.charAt(0) == c){
+            if(base.charAt(0) == c&& !base.equals(word)){
             if(temp.containsKey(base)){
                 String s = temp.get(base);
                 temp.put(base, s+" + "+word);
@@ -790,7 +790,7 @@ public class DictionaryAccess {
             Map.Entry pair = (Entry) it4.next();
             String word = (String) pair.getKey();
             String base = ((Adjective)pair.getValue()).baseForm;
-            if(base.charAt(0) == c){
+            if(base.charAt(0) == c&& !base.equals(word)){
             if(temp.containsKey(base)){
                 String s = temp.get(base);
                 temp.put(base, s+" + "+word);
@@ -805,7 +805,7 @@ public class DictionaryAccess {
             Map.Entry pair = (Entry) it5.next();
             String word = (String) pair.getKey();
             String base = ((Adverb)pair.getValue()).baseForm;
-            if(base.charAt(0) == c){
+            if(base.charAt(0) == c && !base.equals(word)){
             if(temp.containsKey(base)){
                 String s = temp.get(base);
                 temp.put(base, s+" + "+word);
@@ -817,10 +817,12 @@ public class DictionaryAccess {
         }
         try{
             PrintWriter printer = new PrintWriter(new File("outputs/baseword.csv"));
+            printer.println("Base Word,Words in the Dictionary");
             Iterator it2 = temp.entrySet().iterator();
             while(it2.hasNext()){
                 Map.Entry pair = (Entry) it2.next();
-                printer.print(pair.getKey()+","+pair.getValue()+"\n");
+                
+                printer.println(pair.getKey()+","+pair.getValue());
             }
             printer.close();
         }
