@@ -151,7 +151,7 @@ public class access2gram {
                                 }
                             }
                         }
-                        if(verbdict.containsKey(word) && !noundict.containsKey(word)){
+                        if(verbdict.containsKey(word)){
                             String key = pair2.getKey();
                             String beginword = key.split("\\|")[0];
                             if (prepdict.containsKey(beginword)) {
