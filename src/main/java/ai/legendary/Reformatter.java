@@ -22,27 +22,11 @@ public class Reformatter {
      * @return new word
      */
     public String oneWhoDoes() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("er") || curr.endsWith("ant")
-                        || curr.endsWith("or")) && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("er");
+        suffs.add("ant");
+        suffs.add("or");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -51,28 +35,13 @@ public class Reformatter {
      * @return new word
      */
     public String oneWhoPractices() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("ist") || curr.endsWith("an")
-                        || curr.endsWith("eer") || curr.endsWith("ster")
-                        || curr.endsWith("meister")) && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ist");
+        suffs.add("an");
+        suffs.add("eer");
+        suffs.add("ster");
+        suffs.add("meister");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -81,26 +50,9 @@ public class Reformatter {
      * @return new word
      */
     public String oneWhoRecieves() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("ee")) && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ee");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -109,28 +61,11 @@ public class Reformatter {
      * @return new word
      */
     public String personOf() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("ite") || curr.endsWith("i")
-                        || curr.endsWith("ese") || curr.endsWith("ish"))
-                        && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ite");
+        suffs.add("ese");
+        suffs.add("ish");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -139,31 +74,18 @@ public class Reformatter {
      * @return new word
      */
     public String resultEventState() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("al") || curr.endsWith("ance")
-                        || curr.endsWith("ence") || curr.endsWith("ancy")
-                        || curr.endsWith("ency") || curr.endsWith("ment")
-                        || curr.endsWith("ure") || curr.endsWith("ing")
-                        || curr.endsWith("ion") || curr.endsWith("age")
-                        || curr.endsWith("ery")) && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("al");
+        suffs.add("ance");
+        suffs.add("ence");
+        suffs.add("ment");
+        suffs.add("ancy");
+        suffs.add("ency");
+        suffs.add("ure");
+        suffs.add("ing");
+        suffs.add("tion");
+        suffs.add("age");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -172,27 +94,10 @@ public class Reformatter {
      * @return new word
      */
     public String quality() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("ness") || curr.endsWith("ity"))
-                        && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ness");
+        suffs.add("ity");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -201,29 +106,15 @@ public class Reformatter {
      * @return new word
      */
     public String collectivesLocationsBehaviors() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("dom") || curr.endsWith("ship")
-                        || curr.endsWith("hood") || curr.endsWith("ery")
-                        || curr.endsWith("age") || curr.endsWith("ana")
-                        || curr.endsWith("ia")) && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("dom");
+        suffs.add("ship");
+        suffs.add("hood");
+        suffs.add("ery");
+        suffs.add("age");
+        suffs.add("ana");
+        suffs.add("ia");
+        return checkSuffixesNouns(suffs);
     }
 
     /**
@@ -232,29 +123,12 @@ public class Reformatter {
      * @return new word
      */
     public String fieldsOfStudy() {
-        String newwords = "";
-        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
-        for (int x = 0; x < nouns.size(); x++) {
-            String curr = nouns.get(x);
-            if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.endsWith("ism") || curr.endsWith("ology"))
-                        && !curr.endsWith(word)
-                        && !(curr.contains(" ") || curr.contains("-"))) {
-                    if (newwords.length() > 1) {
-                        newwords += " or " + curr;
-                    }
-                    else {
-                        newwords += curr;
-                    }
-                }
-            }
-        }
-        /*
-         * if(newwords.equals("")){ return "No such word in Dictionary"; }
-         */
-        return newwords;
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ism");
+        suffs.add("ology");
+        return checkSuffixesNouns(suffs);
     }
-    
+
     /**
      * Converts the word to have prefix meaning in
      * 
@@ -269,7 +143,9 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("intra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in") || curr.startsWith("intra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -282,7 +158,9 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("intra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in") || curr.startsWith("intra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -295,7 +173,9 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("intra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in") || curr.startsWith("intra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -308,7 +188,9 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("intra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in") || curr.startsWith("intra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -318,10 +200,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning out
      * 
@@ -336,7 +218,9 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("out") || curr.startsWith("extra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("out") || curr.startsWith("extra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -349,7 +233,9 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("out") || curr.startsWith("extra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("out") || curr.startsWith("extra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -362,7 +248,9 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("out") || curr.startsWith("extra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("out") || curr.startsWith("extra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -375,7 +263,9 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("out") || curr.startsWith("extra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("out") || curr.startsWith("extra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -385,10 +275,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning around
      * 
@@ -403,7 +293,10 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("by") || curr.startsWith("circum") || curr.startsWith("para") || curr.startsWith("peri")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("by") || curr.startsWith("circum")
+                        || curr.startsWith("para") || curr.startsWith("peri"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -416,7 +309,10 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("by") || curr.startsWith("circum") || curr.startsWith("para") || curr.startsWith("peri")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("by") || curr.startsWith("circum")
+                        || curr.startsWith("para") || curr.startsWith("peri"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -429,7 +325,10 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("by") || curr.startsWith("circum") || curr.startsWith("para") || curr.startsWith("peri")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("by") || curr.startsWith("circum")
+                        || curr.startsWith("para") || curr.startsWith("peri"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -442,7 +341,10 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("by") || curr.startsWith("circum") || curr.startsWith("para") || curr.startsWith("peri")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("by") || curr.startsWith("circum")
+                        || curr.startsWith("para") || curr.startsWith("peri"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -452,10 +354,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning off
      * 
@@ -470,7 +372,8 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("off")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("off")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -483,7 +386,8 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("off")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("off")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -496,7 +400,8 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("off")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("off")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -509,7 +414,8 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("off")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("off")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -519,10 +425,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning on
      * 
@@ -537,7 +443,9 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("on") || curr.startsWith("epi")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("on") || curr.startsWith("epi"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -550,7 +458,9 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("on") || curr.startsWith("epi")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("on") || curr.startsWith("epi"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -563,7 +473,9 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("on") || curr.startsWith("epi")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("on") || curr.startsWith("epi"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -576,7 +488,9 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("on") || curr.startsWith("epi")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("on") || curr.startsWith("epi"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -586,10 +500,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning together
      * 
@@ -604,7 +518,10 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("inter") || (curr.startsWith("co") && !curr.startsWith("counter"))) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("inter") || (curr.startsWith("co")
+                        && !curr.startsWith("counter")))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -617,7 +534,10 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("inter") || (curr.startsWith("co")&& !curr.startsWith("counter"))) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("inter") || (curr.startsWith("co")
+                        && !curr.startsWith("counter")))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -630,7 +550,10 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("inter") || (curr.startsWith("co")&& !curr.startsWith("counter"))) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("inter") || (curr.startsWith("co")
+                        && !curr.startsWith("counter")))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -643,7 +566,10 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("inter") || (curr.startsWith("co")&& !curr.startsWith("counter"))) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("inter") || (curr.startsWith("co")
+                        && !curr.startsWith("counter")))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -653,10 +579,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning negative
      * 
@@ -671,7 +597,14 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("un") || curr.startsWith("non") || curr.startsWith("dis") || curr.startsWith("de") || curr.startsWith("a") || curr.startsWith("an") || curr.startsWith("mis") || curr.startsWith("mal")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in")
+                        || (curr.startsWith("un") && !curr.startsWith("under"))
+                        || curr.startsWith("non") || curr.startsWith("dis")
+                        || curr.startsWith("de")
+                        || (curr.startsWith("a") && !curr.startsWith("auto"))
+                        || curr.startsWith("an") || curr.startsWith("mis")
+                        || curr.startsWith("mal")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -684,7 +617,14 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("un") || curr.startsWith("non") || curr.startsWith("dis") || curr.startsWith("de") || curr.startsWith("a") || curr.startsWith("an") || curr.startsWith("mis") || curr.startsWith("mal")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in")
+                        || (curr.startsWith("un") && !curr.startsWith("under"))
+                        || curr.startsWith("non") || curr.startsWith("dis")
+                        || curr.startsWith("de")
+                        || (curr.startsWith("a") && !curr.startsWith("auto"))
+                        || curr.startsWith("an") || curr.startsWith("mis")
+                        || curr.startsWith("mal")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -697,7 +637,14 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("un") || curr.startsWith("non") || curr.startsWith("dis") || curr.startsWith("de") || curr.startsWith("a") || curr.startsWith("an") || curr.startsWith("mis") || curr.startsWith("mal")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in")
+                        || (curr.startsWith("un") && !curr.startsWith("under"))
+                        || curr.startsWith("non") || curr.startsWith("dis")
+                        || curr.startsWith("de")
+                        || (curr.startsWith("a") && !curr.startsWith("auto"))
+                        || curr.startsWith("an") || curr.startsWith("mis")
+                        || curr.startsWith("mal")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -710,7 +657,14 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("in") || curr.startsWith("un") || curr.startsWith("non") || curr.startsWith("dis") || curr.startsWith("de") || curr.startsWith("a") || curr.startsWith("an") || curr.startsWith("mis") || curr.startsWith("mal")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("in")
+                        || (curr.startsWith("un") && !curr.startsWith("under"))
+                        || curr.startsWith("non") || curr.startsWith("dis")
+                        || curr.startsWith("de")
+                        || (curr.startsWith("a") && !curr.startsWith("auto"))
+                        || curr.startsWith("an") || curr.startsWith("mis")
+                        || curr.startsWith("mal")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -720,10 +674,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning above
      * 
@@ -738,7 +692,12 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("up") || curr.startsWith("over") || curr.startsWith("super") || curr.startsWith("supra") || curr.startsWith("sur") || curr.startsWith("meta") || curr.startsWith("arch") || curr.startsWith("ultra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("up") || curr.startsWith("over")
+                        || curr.startsWith("super") || curr.startsWith("supra")
+                        || curr.startsWith("sur") || curr.startsWith("meta")
+                        || curr.startsWith("arch") || curr.startsWith("ultra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -751,7 +710,12 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("up") || curr.startsWith("over") || curr.startsWith("super") || curr.startsWith("supra") || curr.startsWith("sur") || curr.startsWith("meta") || curr.startsWith("arch") || curr.startsWith("ultra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("up") || curr.startsWith("over")
+                        || curr.startsWith("super") || curr.startsWith("supra")
+                        || curr.startsWith("sur") || curr.startsWith("meta")
+                        || curr.startsWith("arch") || curr.startsWith("ultra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -764,7 +728,12 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("up") || curr.startsWith("over") || curr.startsWith("super") || curr.startsWith("supra") || curr.startsWith("sur") || curr.startsWith("meta") || curr.startsWith("arch") || curr.startsWith("ultra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("up") || curr.startsWith("over")
+                        || curr.startsWith("super") || curr.startsWith("supra")
+                        || curr.startsWith("sur") || curr.startsWith("meta")
+                        || curr.startsWith("arch") || curr.startsWith("ultra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -777,7 +746,12 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("up") || curr.startsWith("over") || curr.startsWith("super") || curr.startsWith("supra") || curr.startsWith("sur") || curr.startsWith("meta") || curr.startsWith("arch") || curr.startsWith("ultra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("up") || curr.startsWith("over")
+                        || curr.startsWith("super") || curr.startsWith("supra")
+                        || curr.startsWith("sur") || curr.startsWith("meta")
+                        || curr.startsWith("arch") || curr.startsWith("ultra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -787,10 +761,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning before
      * 
@@ -805,7 +779,10 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("ante") || curr.startsWith("fore") || curr.startsWith("pre") || curr.startsWith("retro")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("ante") || curr.startsWith("fore")
+                        || curr.startsWith("pre") || curr.startsWith("retro"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -818,7 +795,10 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("ante") || curr.startsWith("fore") || curr.startsWith("pre") || curr.startsWith("retro")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("ante") || curr.startsWith("fore")
+                        || curr.startsWith("pre") || curr.startsWith("retro"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -831,7 +811,10 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("ante") || curr.startsWith("fore") || curr.startsWith("pre") || curr.startsWith("retro")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("ante") || curr.startsWith("fore")
+                        || curr.startsWith("pre") || curr.startsWith("retro"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -844,7 +827,10 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("ante") || curr.startsWith("fore") || curr.startsWith("pre") || curr.startsWith("retro")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("ante") || curr.startsWith("fore")
+                        || curr.startsWith("pre") || curr.startsWith("retro"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -854,10 +840,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning below
      * 
@@ -872,7 +858,9 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("sub") || curr.startsWith("down") || curr.startsWith("under")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("sub") || curr.startsWith("down")
+                        || curr.startsWith("under")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -885,7 +873,9 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("sub") || curr.startsWith("down") || curr.startsWith("under")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("sub") || curr.startsWith("down")
+                        || curr.startsWith("under")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -898,7 +888,9 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("sub") || curr.startsWith("down") || curr.startsWith("under")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("sub") || curr.startsWith("down")
+                        || curr.startsWith("under")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -911,7 +903,9 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("sub") || curr.startsWith("down") || curr.startsWith("under")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("sub") || curr.startsWith("down")
+                        || curr.startsWith("under")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -921,10 +915,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning after
      * 
@@ -939,7 +933,9 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("after") || curr.startsWith("post")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("after") || curr.startsWith("post"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -952,7 +948,9 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("after") || curr.startsWith("post")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("after") || curr.startsWith("post"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -965,7 +963,9 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("after") || curr.startsWith("post")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("after") || curr.startsWith("post"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -978,7 +978,9 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("after") || curr.startsWith("post")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("after") || curr.startsWith("post"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -988,10 +990,10 @@ public class Reformatter {
                 }
             }
         }
-        
+
         return newwords;
     }
-    
+
     /**
      * Converts the word to have prefix meaning against
      * 
@@ -1006,7 +1008,9 @@ public class Reformatter {
         for (int x = 0; x < nouns.size(); x++) {
             String curr = nouns.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("counter") || curr.startsWith("contra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("counter") || curr.startsWith("contra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -1019,7 +1023,9 @@ public class Reformatter {
         for (int x = 0; x < adverbs.size(); x++) {
             String curr = adverbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("counter") || curr.startsWith("contra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("counter") || curr.startsWith("contra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -1032,7 +1038,9 @@ public class Reformatter {
         for (int x = 0; x < adjectives.size(); x++) {
             String curr = adjectives.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("counter") || curr.startsWith("contra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("counter") || curr.startsWith("contra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -1045,7 +1053,9 @@ public class Reformatter {
         for (int x = 0; x < verbs.size(); x++) {
             String curr = verbs.get(x);
             if (!Character.isUpperCase(curr.charAt(0))) {
-                if ((curr.startsWith("counter") || curr.startsWith("contra")) && !curr.startsWith(word)&& !(curr.contains(" ") || curr.contains("-"))) {
+                if ((curr.startsWith("counter") || curr.startsWith("contra"))
+                        && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
                     if (newwords.length() > 1) {
                         newwords += " or " + curr;
                     }
@@ -1055,7 +1065,289 @@ public class Reformatter {
                 }
             }
         }
-        
+
+        return newwords;
+    }
+
+    /**
+     * Converts the word to have prefix meaning do something again
+     * 
+     * @return new word
+     */
+    public String doAgainPrefix() {
+        String newwords = "";
+        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
+        ArrayList<String> adverbs = acc.changePOS(word, pos, "adverb");
+        ArrayList<String> adjectives = acc.changePOS(word, pos, "adjective");
+        ArrayList<String> verbs = acc.changePOS(word, pos, "verb");
+        for (int x = 0; x < nouns.size(); x++) {
+            String curr = nouns.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("re")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+        for (int x = 0; x < adverbs.size(); x++) {
+            String curr = adverbs.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("re")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+        for (int x = 0; x < adjectives.size(); x++) {
+            String curr = adjectives.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("re")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+        for (int x = 0; x < verbs.size(); x++) {
+            String curr = verbs.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("re")) && !curr.startsWith(word)
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+
+        return newwords;
+    }
+
+    /**
+     * Converts the word to resembling
+     * 
+     * @return new word
+     */
+    public String resembling() {
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("al");
+        suffs.add("esque");
+        suffs.add("ic");
+        suffs.add("oid");
+        suffs.add("like");
+        suffs.add("ary");
+        suffs.add("ish");
+        String s = "";
+        ArrayList<String> adjectives = acc.changePOS(word, pos, "adjective");
+        for(int x=0;x<adjectives.size();x++){
+            if(adjectives.get(x).startsWith("quasi") || adjectives.get(x).startsWith("pseudo")){
+                s+=adjectives.get(x) + " or ";
+            }
+        }
+        return checkSuffixesAdjectives(suffs);
+    }
+
+    /**
+     * Converts the word to thing of
+     * 
+     * @return new word
+     */
+    public String thingOf() {
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ese");
+        suffs.add("an");
+        suffs.add("ic");
+        return checkSuffixesAdjectives(suffs);
+    }
+
+    /**
+     * Converts the word to possessing/full of
+     * 
+     * @return new word
+     */
+    public String possessing() {
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("ous");
+        suffs.add("ful");
+        suffs.add("some");
+        suffs.add("ive");
+        return checkSuffixesAdjectives(suffs);
+    }
+
+    /**
+     * Converts the word to capable of
+     * 
+     * @return new word
+     */
+    public String capableOf() {
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("able");
+        suffs.add("ible");
+        return checkSuffixesAdjectives(suffs);
+    }
+
+    /**
+     * Converts the word to without
+     * 
+     * @return new word
+     */
+    public String without() {
+        ArrayList<String> suffs = new ArrayList<String>();
+        suffs.add("less");
+        return checkSuffixesAdjectives(suffs);
+    }
+    
+    public String diminutives(){
+        String newwords = "";
+        ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
+        ArrayList<String> adverbs = acc.changePOS(word, pos, "adverb");
+        ArrayList<String> adjectives = acc.changePOS(word, pos, "adjective");
+        ArrayList<String> verbs = acc.changePOS(word, pos, "verb");
+        for (int x = 0; x < nouns.size(); x++) {
+            String curr = nouns.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("hypo") || curr.startsWith("mini") || curr.startsWith("micro") || curr.startsWith("nano") || curr.endsWith("een") || curr.endsWith("ette") || curr.endsWith("ie") || curr.endsWith("kin") || curr.endsWith("let") || curr.endsWith("ling") || curr.endsWith("ish"))
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+        for (int x = 0; x < adverbs.size(); x++) {
+            String curr = adverbs.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("hypo") || curr.startsWith("mini") || curr.startsWith("micro") || curr.startsWith("nano") || curr.endsWith("een") || curr.endsWith("ette") || curr.endsWith("ie") || curr.endsWith("kin") || curr.endsWith("let") || curr.endsWith("ling")||curr.endsWith("ish"))
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+        for (int x = 0; x < adjectives.size(); x++) {
+            String curr = adjectives.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("hypo") || curr.startsWith("mini") || curr.startsWith("micro") || curr.startsWith("nano") || curr.endsWith("een") || curr.endsWith("ette") || curr.endsWith("ie") || curr.endsWith("kin") || curr.endsWith("let") || curr.endsWith("ling")||curr.endsWith("ish"))
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+        for (int x = 0; x < verbs.size(); x++) {
+            String curr = verbs.get(x);
+            if (!Character.isUpperCase(curr.charAt(0))) {
+                if ((curr.startsWith("hypo") || curr.startsWith("mini") || curr.startsWith("micro") || curr.startsWith("nano") || curr.endsWith("een") || curr.endsWith("ette") || curr.endsWith("ie") || curr.endsWith("kin") || curr.endsWith("let") || curr.endsWith("ling")||curr.endsWith("ish"))
+                        && !(curr.contains(" ") || curr.contains("-"))) {
+                    if (newwords.length() > 1) {
+                        newwords += " or " + curr;
+                    }
+                    else {
+                        newwords += curr;
+                    }
+                }
+            }
+        }
+
+        return newwords;
+    }
+    
+    /**
+     * adverb 
+     * @return
+     */
+    public String adverb_ly(){
+        String newwords = "";
+        ArrayList<String> adverbs = acc.changePOS(word, pos, "adverb");
+        for(int x=0;x<adverbs.size();x++){
+            if(adverbs.get(x).endsWith("ly")){
+                if (newwords.length() > 1) {
+                    newwords += " or " + adverbs.get(x);
+                }
+                else {
+                    newwords += adverbs.get(x);
+                }
+            }
+        }
+        return newwords;
+    }
+    
+    /**
+     * checks the given suffixes
+     */
+    public String checkSuffixesAdjectives(ArrayList<String> suffs) {
+        String newwords = "";
+        ArrayList<String> adjectives = acc.changePOS(word, pos, "adjective");
+        for (int x = 0; x < adjectives.size(); x++) {
+            String curr = adjectives.get(x);
+            for (int i = 0; i < suffs.size(); i++) {
+                /*if (!Character.isUpperCase(curr.charAt(0))) {*/
+                    if ((curr.endsWith(suffs.get(i))) && !curr.endsWith(word)
+                            && curr.startsWith(word)
+                            && !(curr.contains(" ") || curr.contains("-"))) {
+                        if (newwords.length() > 1) {
+                            newwords += " or " + curr;
+                        }
+                        else {
+                            newwords += curr;
+                        }
+                    }
+                //}
+            }
+        }
+        return newwords;
+    }
+    /**
+     * checks the given suffixes
+     */
+    public String checkSuffixesNouns(ArrayList<String> suffs) {
+        String newwords = "";
+        ArrayList<String> adjectives = acc.changePOS(word, pos, "noun");
+        for (int x = 0; x < adjectives.size(); x++) {
+            String curr = adjectives.get(x);
+            for (int i = 0; i < suffs.size(); i++) {
+                /*if (!Character.isUpperCase(curr.charAt(0))) {*/
+                    if ((curr.endsWith(suffs.get(i))) && !curr.endsWith(word)
+                            && curr.startsWith(word)
+                            && !(curr.contains(" ") || curr.contains("-"))) {
+                        if (newwords.length() > 1) {
+                            newwords += " or " + curr;
+                        }
+                        else {
+                            newwords += curr;
+                        }
+                    }
+                //}
+            }
+        }
         return newwords;
     }
 }

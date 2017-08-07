@@ -86,7 +86,7 @@ public class access2gram {
                         if (noundict.containsKey(word)) {
                             String key = pair2.getKey();
                             String beginword = key.split("\\|")[0];
-                            if (adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !prepdict.containsKey(beginword)) {
+                            if (adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !conjdict.containsKey(beginword) && !prondict.containsKey(beginword)) {
                                 if(adjnhash.containsKey(word)){
                                     HashMap<String,Double> temp = adjnhash.get(word);
                                     temp.put(beginword,percentages.get(key));
@@ -122,7 +122,7 @@ public class access2gram {
                                     prepnhash.put(word, temp);
                                 }
                             }
-                            else if(verbdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !adjdict.containsKey(beginword) && !beginword.equals("is") && !beginword.equals("be") && !beginword.equals("was")){
+                            else if(verbdict.containsKey(beginword) && !conjdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !adjdict.containsKey(beginword) && !beginword.equals("is") && !beginword.equals("be") && !beginword.equals("was")){
                                 if(vobjhash.containsKey(word)){
                                     HashMap<String,Double> temp = vobjhash.get(word);
                                     temp.put(beginword,percentages.get(key));
@@ -138,7 +138,7 @@ public class access2gram {
                         if(adjdict.containsKey(word)){
                             String key =pair2.getKey();
                             String beginword = key.split("\\|")[0];
-                            if (advdict.containsKey(beginword)&& !detdict.containsKey(beginword)&& !prepdict.containsKey(beginword) && !prondict.containsKey(beginword)) {
+                            if (advdict.containsKey(beginword)&& !detdict.containsKey(beginword)&& !prepdict.containsKey(beginword) && !prondict.containsKey(beginword) && !conjdict.containsKey(beginword)) {
                                 if(adjadvhash.containsKey(word)){
                                     HashMap<String, Double> temp = adjadvhash.get(word);
                                     temp.put(beginword,percentages.get(key));
@@ -151,7 +151,7 @@ public class access2gram {
                                 }
                             }
                         }
-                        if(verbdict.containsKey(word)){
+                        if(verbdict.containsKey(word) && !noundict.containsKey(word)){
                             String key = pair2.getKey();
                             String beginword = key.split("\\|")[0];
                             if (prepdict.containsKey(beginword)) {
@@ -166,7 +166,7 @@ public class access2gram {
                                     prepvhash.put(word, temp);
                                 }
                             }
-                            else if (noundict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !conjdict.containsKey(beginword)) {
+                            else if (noundict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !conjdict.containsKey(beginword) && !verbdict.containsKey(beginword)) {
                                 if(nounvhash.containsKey(word)){
                                     HashMap<String,Double> temp = nounvhash.get(word);
                                     temp.put(beginword,percentages.get(key));
@@ -178,7 +178,7 @@ public class access2gram {
                                     nounvhash.put(word, temp);
                                 }
                             }
-                            else if(advdict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword)){
+                            else if(advdict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !conjdict.containsKey(beginword)){
                                 if(advvhash.containsKey(word)){
                                     HashMap<String,Double> temp = advvhash.get(word);
                                     temp.put(beginword,percentages.get(key));
@@ -201,7 +201,7 @@ public class access2gram {
                             String key = pair2.getKey();
                             String beginword = key.split("\\|")[0];
                             String middleword = key.split("\\|")[1];
-                            if(verbdict.containsKey(beginword) && !prepdict.containsKey(beginword)){
+                            if(verbdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !conjdict.containsKey(beginword)){
                                 if(noundict.containsKey(word)){
                                     if(vobjhash.containsKey(word)){
                                         HashMap<String, Double> temp = vobjhash.get(word);

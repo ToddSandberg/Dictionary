@@ -217,7 +217,7 @@ public class Verb implements PartOfSpeech ,Serializable{
                 transivity = "";
             }
             if(transivity.length()>1){
-                transivity+="+";
+                transivity+="|";
             }
             if(s.contains("pphr")){
                 String[] split = s.split(",");

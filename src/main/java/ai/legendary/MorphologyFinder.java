@@ -259,8 +259,8 @@ public class MorphologyFinder {
             }
             //System.out.println("word: "+p + " dictionaryContains?: "+english.containsKey(p));
             boolean removedD = false;
-            if (doubleletter(letters.size() - 1) && (ends("vell") || !ends("ll"))
-                    && !ends("ss") && !ends("dd")) { // check excellent if remove, discuss sell add
+            if (doubleletter(letters.size() - 1) ||/*(*/ends("vell") /*|| !ends("ll"))
+                    && !ends("ss") && !ends("dd")*/) { // check excellent if remove, discuss sell add, but gassing
                 removeX(1);
                 removedD=true;
                 p=p.substring(0,p.length()-1);
@@ -283,13 +283,20 @@ public class MorphologyFinder {
                     if (!english.containsKey(p)) {
                         p = p.substring(0, p.length() - 1);
                         if(haveI){
+                            p+="i";
                             letters.add('i');
                         }
                         if(removedD){
+                            p+=p.charAt(p.length()-1);
                             letters.add(letters.get(letters.size()-1));
                         }
-                        for (int i = 0; i < s.length(); i++) {
-                            letters.add(letters.size(), s.charAt(i));
+                        if(!english.containsKey(p)){
+                            for (int i = 0; i < s.length(); i++) {
+                                letters.add(letters.size(), s.charAt(i));
+                            }
+                        }
+                        else{
+                            suffs.add(s);
                         }
                     }
                     else {
@@ -720,10 +727,7 @@ public class MorphologyFinder {
         }
 
         if (ends("ical") && !ends("critical")) {
-            suffs.add("ical");
-            removeX(4);
-            if (!ends("ph"))// graphic
-                letters.add('y'); // biological
+            checkSuff("ical");
         }
         if (ends("al") && !ends("ual") && !ends("ital")) {
             // dismissal

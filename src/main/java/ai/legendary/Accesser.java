@@ -19,8 +19,8 @@ public class Accesser {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }*/
-        DictionaryAccess acc = new DictionaryAccess();
-        /*MorphologyFinder mf = new MorphologyFinder("gi");
+        //DictionaryAccess acc = new DictionaryAccess();
+        /*MorphologyFinder mf = new MorphologyFinder("realizably");
         mf.loadDictionary(acc.getNounDictionary());
         mf.loadDictionary(acc.getAdjectiveDictionary());
         mf.loadDictionary(acc.getAdverbDictionary());
@@ -36,7 +36,7 @@ public class Accesser {
         }*/
         //System.out.println(acc.getWordInfo("alcoholic","adjective"));
         /*Example usage of changePOS*/
-        //System.out.println(acc.changePOS("alcohol", "noun", "noun").toString());
+        //System.out.println(acc.changePOS("gaming", "noun", "verb").toString());
         //System.out.println(acc.changePOS("forgivable", "adjective", "noun").toString());
         //System.out.println(acc.changePOS("cat", "noun", "adjective").toString());
         /*Unfinished methods - formats light verbs*/
@@ -57,13 +57,21 @@ public class Accesser {
         Reformatter rf = new Reformatter();
         while(true){
             String word = JOptionPane.showInputDialog("enter a word");
-            System.out.println(getAllReformatted(word,rf));
+            String pos = JOptionPane.showInputDialog("enter a part of speech");
+            System.out.println(getAllReformatted(word,rf,pos));
         }
         //acc.getBaseWords('g');
     }
-    public static String getAllReformatted(String word, Reformatter rf){
+    /**
+     * Utility method for getting all possible reformats
+     * @param word 
+     * @param rf
+     * @return
+     */
+    public static String getAllReformatted(String word, Reformatter rf, String pos){
         String result = "";
-        rf.addWord(word,"verb");
+        rf.addWord(word,pos);
+        /* Noun Forms */
         if(rf.oneWhoDoes().length()>1)
             result += "One who does: "+rf.oneWhoDoes() + "\n";
         if(rf.oneWhoPractices().length()>1)
@@ -80,6 +88,7 @@ public class Accesser {
             result += "Collectives/Locations/Behaviors: "+rf.collectivesLocationsBehaviors() + "\n";
         if(rf.fieldsOfStudy().length()>1)
             result += "Fields of Study: "+rf.fieldsOfStudy() + "\n";
+        /* Prefixes */
         if(rf.in_intraPrefix().length()>1)
             result += "In Prefixes: "+rf.in_intraPrefix() + "\n";
         if(rf.out_extraPrefix().length()>1)
@@ -102,6 +111,22 @@ public class Accesser {
             result += "After Prefixes: "+rf.after_postPrefix() + "\n";
         if(rf.againstPrefix().length()>1)
             result += "Against Prefixes: "+rf.againstPrefix() + "\n";
+        if(rf.doAgainPrefix().length()>1)
+            result += "Do Again Prefixes: "+rf.doAgainPrefix() + "\n";
+        /* Adjective Forms */
+        if(rf.resembling().length()>1)
+            result += "Resembling: "+rf.resembling() + "\n";
+        if(rf.thingOf().length()>1)
+            result += "Thing Of: "+rf.thingOf() + "\n";
+        if(rf.possessing().length()>1)
+            result += "Possessing/Full Of: "+rf.possessing() + "\n";
+        if(rf.capableOf().length()>1)
+            result += "Capable Of: "+rf.capableOf() + "\n";
+        if(rf.without().length()>1)
+            result += "Without: "+rf.without() + "\n";
+        /*Diminutive*/
+        if(rf.diminutives().length()>1)
+            result += "Diminutives: "+rf.diminutives() + "\n";
         return result;
     }
 }
