@@ -82,10 +82,11 @@
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary HashMap's for each part of speech
+- Lists of the most common word combinations in the format pos2 : {pos1=howCommon}
 ## Accessing the Dictionary
 - The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.
 - The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. 
 - The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.
 - This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
 - The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary.
-## Current Dictionary Write Time: 178 minutes and 46 seconds
+## Current Dictionary Write Time: 139 minutes and 15 seconds

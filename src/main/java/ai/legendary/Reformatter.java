@@ -1301,6 +1301,24 @@ public class Reformatter {
     }
     
     /**
+     * adverb 
+     * @return
+     */
+    public String toVerb(){
+        String newwords = "";
+        ArrayList<String> adverbs = acc.changePOS(word, pos, "verb");
+        for(int x=0;x<adverbs.size();x++){
+                if (newwords.length() > 1) {
+                    newwords += " or " + adverbs.get(x);
+                }
+                else {
+                    newwords += adverbs.get(x);
+                }
+        }
+        return newwords;
+    }
+    
+    /**
      * checks the given suffixes
      */
     public String checkSuffixesAdjectives(ArrayList<String> suffs) {

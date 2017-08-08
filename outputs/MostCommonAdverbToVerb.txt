@@ -1,0 +1,2370 @@
+cancel : {not=2.71}
+undermining : {thereby=3.41}
+prepare : {not=1.09, adequately=0.46, also=0.4, mentally=0.22, really=0.28}
+govern : {not=2.43}
+don't : {really=4.41}
+mince : {not=18.78}
+spoke : {always=0.4, some=0.13, recently=0.34, finally=0.61, also=1.54, suddenly=0.11, really=0.16, actually=0.34, ever=0.4, never=2.29, seldom=0.16, barely=0.34, rarely=0.52, hardly=0.25}
+supplant : {not=15.86}
+withdrawn : {not=1.74}
+shooting : {actually=0.19, some=0.27, not=0.71}
+discourage : {not=3.22}
+recognized : {increasingly=0.59, explicitly=0.23, quickly=0.39, universally=0.52, clearly=0.37, soon=0.21, newly=0.24, not=2.23, instantly=0.33, previously=0.17, legally=0.44, easily=0.67, fully=0.37, officially=0.97, always=0.4, commonly=0.26, already=0.39, nationally=1.59, recently=0.28, widely=2.63, finally=0.42, also=1.77, internationally=2.04, publicly=0.15, generally=1.12, never=0.61, barely=0.39, hardly=0.33, federally=0.53, formally=0.39}
+undergoing : {currently=3.23}
+resemble : {not=5.44, closely=9.14}
+pretend : {not=5.31}
+shrugged : {merely=1.26, simply=0.75}
+approved : {already=1.38, socially=0.3, recently=1.68, finally=0.67, narrowly=0.29, also=0.99, overwhelmingly=0.93, newly=0.28, never=0.8, not=2.44, unanimously=1.16, federally=0.39, formally=0.33, fully=0.36, officially=0.46}
+introduced : {actually=0.19, newly=0.53, never=0.25, ever=0.2, not=0.44, already=0.24, recently=1.82, originally=0.35, initially=0.21, also=1.99, formally=0.45}
+would : {surely=0.04, presumably=0.02, quickly=0.01, sometimes=0.01, ago=0.02, clearly=0.02, supply=0.01, soon=0.03, earlier=0.01, inevitably=0.01, basically=0.01, usually=0.01, truly=0.01, possibly=0.01, always=0.03, needs=0.01, happen=0.01, item=0.01, already=0.01, typically=0.01, literally=0.01, ordinarily=0.01, something=0.05, never=0.25, ever=0.04, personally=0.02, apparently=0.01, everywhere=0.01, absolutely=0.01, rarely=0.01, some=0.15, maybe=0.01, probably=0.46, rather=0.01, part=0.02, eventually=0.02, elsewhere=0.01, summer=0.01, lot=0.01, not=0.01, perhaps=0.01, previously=0.01, too=0.03, course=0.03, together=0.02, certainly=0.16, abroad=0.01, again=0.03, say=0.03, obviously=0.02, also=0.16, instead=0.01, exactly=0.01, ultimately=0.02, really=0.09, generally=0.01, stone=0.01, actually=0.02, alike=0.01, definitely=0.03, undoubtedly=0.01, days=0.02, essentially=0.01, heads=0.01, simply=0.03, normally=0.06}
+pick : {always=0.24, actually=0.12, never=0.19, not=0.86, maybe=0.09, probably=0.12, easily=0.09, please=0.12, also=0.23, usually=0.09, simply=0.18, really=0.13}
+wasted : {never=1.66, not=3.1}
+warrant : {not=2.75}
+calculate : {not=1.23}
+authorize : {not=10.53}
+conceal : {not=5.34}
+possess : {not=10.57, already=1.58, also=2.36}
+coincide : {always=3.64, not=16.62}
+require : {always=0.18, some=0.23, probably=0.29, typically=0.29, sometimes=0.15, also=1.84, necessarily=0.33, really=0.16, generally=0.31, actually=0.21, not=8.75, usually=0.41, simply=0.11, normally=0.11}
+size : {lot=0.15, some=0.1}
+triple : {almost=1.16, nearly=3.43}
+left : {some=0.06, mostly=0.02, probably=0.04, almost=0.03, reportedly=0.02, sometimes=0.03, quickly=0.04, ago=0.03, eventually=0.05, accidentally=0.03, soon=0.05, lot=0.06, not=0.26, largely=0.04, inadvertently=0.02, abruptly=0.05, seldom=0.02, basically=0.02, usually=0.06, always=0.15, certainly=0.02, deliberately=0.04, already=0.24, recently=0.11, finally=0.16, again=0.03, also=0.28, suddenly=0.02, ultimately=0.02, something=0.07, really=0.08, generally=0.03, actually=0.06, ever=0.11, never=0.74, apparently=0.04, barely=0.03, days=0.17, rarely=0.05, completely=0.02, simply=0.06, quietly=0.03}
+baked : {freshly=8.22}
+dawn : {almost=0.32, nearly=0.38}
+wine : {some=1.17}
+object : {some=0.48, not=1.68}
+wind : {some=0.16, not=0.13, probably=0.11, summer=0.12}
+humble : {too=0.96}
+mined : {heavily=8.32}
+flight : {some=0.14, earlier=0.16}
+entitled : {certainly=0.64, not=6.46, legally=1.41, course=0.64, also=1.01}
+hang : {not=0.7, please=0.23}
+concluded : {not=0.36, already=0.63, recently=1.29, finally=0.79, also=1.8, eventually=0.46}
+achieve : {actually=0.2, never=0.57, ever=0.24, not=2.47, really=0.16}
+overdo : {not=8.65}
+yellow : {some=0.33}
+roll : {not=0.41, gently=0.28, slowly=0.23, simply=0.23}
+suffice : {not=21.3}
+concede : {not=4.67, readily=2.02}
+turn : {some=0.04, increasingly=0.04, probably=0.06, automatically=0.04, quickly=0.12, sometimes=0.08, eventually=0.1, soon=0.09, gradually=0.03, not=1.22, easily=0.11, usually=0.06, possibly=0.04, always=0.16, carefully=0.04, finally=0.06, also=0.18, please=0.13, suddenly=0.08, slowly=0.05, really=0.13, actually=0.12, never=0.2, ever=0.08, heads=0.13, simply=0.11}
+balanced : {evenly=0.44, delicately=0.67, nicely=0.41, not=0.88, perfectly=1.23, carefully=0.56, precariously=0.75}
+elect : {not=2.5}
+result : {actually=0.06, always=0.06, not=0.74, probably=0.08, sometimes=0.05, also=0.28, eventually=0.08, usually=0.08, ultimately=0.08, necessarily=0.08}
+arrived : {newly=1.87, always=0.15, actually=0.18, never=0.62, not=0.56, already=0.72, recently=1.09, finally=2.43, also=0.24, soon=0.2}
+golf : {some=0.4}
+disgruntled : {some=6.69}
+feeding : {not=1.01}
+quiet : {always=0.12, some=0.58, mostly=0.14, remarkably=0.11, rather=0.14, fairly=0.22, unusually=0.33, suddenly=0.18, really=0.24, not=0.2, extremely=0.11, too=0.9, awfully=0.17, absolutely=0.11, surprisingly=0.12, strangely=0.24, relatively=0.92, eerily=0.43, completely=0.12, usually=0.13}
+dwindling : {rapidly=3.51}
+imbedded : {deeply=50.99}
+connect : {not=1.5, also=0.7, really=0.77}
+hand : {some=0.03, not=0.04, simply=0.02, stone=0.02}
+rebuild : {not=0.74}
+resume : {not=1.26}
+a : {unquestionably=0.0, increasingly=0.01, weekends=0.0, mostly=0.01, quickly=0.01, ago=0.01, nary=0.01, evidently=0.0, supply=0.01, wherein=0.0, soon=0.01, gradually=0.0, inevitably=0.0, largely=0.01, principally=0.0, easily=0.0, specifically=0.01, usually=0.02, truly=0.01, fully=0.01, happen=0.01, closely=0.0, fined=0.0, virtually=0.01, briefly=0.0, notably=0.0, literally=0.01, ordinarily=0.0, someday=0.0, slowly=0.0, something=0.02, ever=0.01, physically=0.0, apparently=0.01, historically=0.0, exclusively=0.0, simultaneously=0.01, completely=0.0, whereby=0.01, purely=0.01, probably=0.05, maybe=0.07, ahead=0.01, frequently=0.01, automatically=0.0, consequently=0.0, eventually=0.01, summer=0.01, lot=0.01, frankly=0.0, naturally=0.0, mornings=0.01, too=0.0, legally=0.0, seldom=0.0, occasionally=0.01, hopefully=0.0, course=0.01, plainly=0.0, smash=0.0, scarcely=0.01, merely=0.03, together=0.05, ought=0.01, apart=0.01, particularly=0.01, evenings=0.0, namely=0.0, unfortunately=0.0, anytime=0.0, lately=0.0, partly=0.01, tout=0.0, entirely=0.01, ideally=0.0, undeniably=0.0, generally=0.01, actually=0.05, likewise=0.0, traditionally=0.01, definitely=0.02, afternoons=0.0, undoubtedly=0.01, barely=0.02, days=0.05, somewhat=0.0, heads=0.01, slap=0.01, partially=0.0, surely=0.01, predominantly=0.0, presumably=0.01, presently=0.0, preferably=0.01, almost=0.07, equally=0.0, reportedly=0.0, practically=0.01, sometimes=0.03, clearly=0.02, mainly=0.01, instantly=0.0, post=0.01, earlier=0.0, roughly=0.01, basically=0.02, quite=0.15, totally=0.0, officially=0.01, possibly=0.01, needs=0.05, always=0.08, already=0.03, typically=0.01, finally=0.01, originally=0.01, please=0.0, seriously=0.0, solely=0.01, never=0.03, twice=0.05, especially=0.01, everywhere=0.0, absolutely=0.01, aloud=0.0, rarely=0.01, hardly=0.03, invariably=0.0, potentially=0.01, some=0.01, supposedly=0.01, rather=0.02, part=0.01, nearly=0.06, admittedly=0.0, inherently=0.0, necessarily=0.02, primarily=0.02, seemingly=0.0, precisely=0.0, fundamentally=0.01, not=0.89, perhaps=0.05, previously=0.0, somehow=0.01, certainly=0.03, recently=0.01, effectively=0.01, again=0.01, obviously=0.02, also=0.22, say=0.06, exactly=0.02, technically=0.01, indeed=0.02, instead=0.01, suddenly=0.02, ultimately=0.01, really=0.08, strictly=0.01, ostensibly=0.0, stone=0.0, unmistakably=0.0, currently=0.01, approximately=0.01, nights=0.01, initially=0.01, essentially=0.02, aloft=0.0, forever=0.0, formerly=0.01, simply=0.04, normally=0.01, snap=0.01}
+oversaw : {also=4.84}
+committed : {firmly=0.47, already=1.13, passionately=0.17, also=0.77, politically=0.23, publicly=0.21, allegedly=0.35, really=0.67, actually=0.35, ever=0.37, involuntarily=0.18, never=0.5, not=1.44, personally=0.18, strongly=0.48, absolutely=0.24, deeply=1.09, totally=0.6, truly=0.3, fully=0.89, highly=0.31}
+address : {not=2.81, explicitly=0.12, adequately=0.28, effectively=0.2, specifically=0.34, please=0.29, also=0.44, seriously=0.09, fully=0.09, really=0.2}
+licensed : {not=5.02, fully=1.51}
+salt : {some=0.4}
+faced : {always=0.32, ever=1.63, never=1.35, not=0.8, already=0.53, again=0.28, also=1.62, suddenly=0.39}
+blood : {some=0.47, not=0.13, homologous=0.13}
+violating : {not=2.63, allegedly=1.51}
+neighbor : {some=0.31}
+wipe : {not=1.43}
+halt : {not=1.1}
+police : {some=0.19, not=0.08, say=0.11}
+overwhelm : {not=4.85}
+throw : {always=0.18, never=0.29, not=1.3, probably=0.19, also=0.24, really=0.23, simply=0.29}
+thank : {ever=0.16, not=0.42, especially=0.17, say=3.39, also=1.3, really=0.2}
+regain : {never=2.11, not=1.51}
+combined : {thoroughly=0.51, also=0.26}
+arch : {stone=3.27}
+disguise : {not=2.11}
+discuss : {never=0.32, ever=0.3, not=3.75, openly=0.33, briefly=0.32, also=0.75, publicly=0.17, really=0.15}
+resolve : {not=3.2}
+correct : {always=0.17, certainly=0.22, perfectly=0.17, probably=0.37, also=0.25, politically=6.2, technically=0.26, exactly=0.31, entirely=0.23, morally=0.18, grammatically=0.21, anatomically=0.31, not=2.29, legally=0.15, absolutely=2.0, historically=0.14, quite=0.63, environmentally=0.25, essentially=0.16, partially=0.21}
+confront : {not=1.44, also=0.59}
+got : {some=0.04, probably=0.2, maybe=0.02, almost=0.2, reportedly=0.02, sometimes=0.04, nearly=0.06, quickly=0.09, eventually=0.13, clearly=0.02, soon=0.06, gradually=0.02, not=0.08, basically=0.03, quite=0.04, somehow=0.08, usually=0.05, always=0.36, certainly=0.09, already=0.34, recently=0.1, literally=0.02, again=0.03, finally=0.95, obviously=0.04, also=0.64, ultimately=0.03, slowly=0.02, suddenly=0.07, really=0.7, something=0.03, actually=0.34, ever=0.46, never=1.64, definitely=0.06, apparently=0.04, barely=0.06, rarely=0.04, hardly=0.03, simply=0.06}
+deploy : {not=1.96}
+dominate : {not=2.64}
+empty : {always=0.14, some=0.3, mostly=0.64, not=0.38, almost=1.33, virtually=0.34, largely=0.25, practically=0.18, nearly=1.74, quite=0.13, completely=0.55, totally=0.12}
+imitate : {not=3.08}
+compute : {not=7.63}
+wish : {always=0.12, certainly=0.09, ever=0.29, not=4.36, probably=0.09, almost=0.16, sometimes=0.15, also=0.44, truly=0.1, simply=0.1, really=0.76}
+reproduce : {not=4.48}
+tie : {not=0.5}
+wise : {always=0.78, some=0.51, not=1.97, too=0.63, also=0.63}
+exceed : {never=0.98, not=18.63, easily=1.28}
+tip : {not=0.27}
+implement : {actually=0.46, successfully=0.57, not=1.11, effectively=0.57, fully=0.75}
+pan : {not=0.24}
+export : {not=0.73}
+laugh : {always=0.23, not=0.86}
+contributed : {actually=0.43, certainly=0.64, not=0.52, probably=0.89, already=0.53, undoubtedly=0.58, also=7.84, significantly=0.62, greatly=0.52}
+murder : {not=0.59}
+pat : {not=0.34, too=0.62}
+fantasy : {some=0.54}
+pay : {always=0.15, some=0.05, typically=0.09, probably=0.09, rather=0.07, already=0.09, please=0.04, eventually=0.07, also=0.34, ultimately=0.04, really=0.19, generally=0.07, actually=0.17, never=0.17, ever=0.07, not=1.57, currently=0.05, gladly=0.06, overtime=0.22, usually=0.08, simply=0.06}
+abated : {not=22.82}
+check : {always=0.45, not=0.29, please=0.44, also=0.91, really=0.09}
+list : {not=0.24, also=0.11}
+disguised : {barely=7.05, cleverly=5.23, thinly=29.55}
+lack : {some=0.1, not=0.45, currently=0.08, also=0.26, usually=0.1, simply=0.13, generally=0.12}
+gone : {always=0.23, mostly=0.14, probably=0.15, almost=0.33, already=1.29, recently=0.11, nearly=0.14, finally=0.15, also=0.32, suddenly=0.19, entirely=0.05, really=0.37, something=0.05, actually=0.24, ever=0.43, never=0.64, not=1.5, largely=0.09, apparently=0.05, days=0.21, completely=0.21, totally=0.08, truly=0.05, simply=0.14}
+toast : {some=1.33}
+sand : {some=0.38}
+wire : {some=0.38}
+sang : {always=0.65, never=0.95, also=1.08}
+spending : {some=0.23, not=1.14, already=0.15, also=0.15}
+anticipating : {not=6.54, eagerly=5.63}
+permitting : {not=5.71}
+harm : {some=0.5, never=0.36, not=2.89}
+rope : {some=0.94}
+lent : {also=3.94}
+remove : {not=2.06, carefully=0.91, gently=0.33, also=0.47, simply=0.34}
+flown : {ever=2.0, never=2.08, already=1.11}
+muster : {not=3.19}
+arranged : {not=0.48, hastily=1.21, already=0.83, neatly=1.74, carefully=1.94, artfully=0.85, also=1.21}
+producing : {not=2.25, thereby=0.41, currently=0.36, already=0.5, also=0.67}
+motivate : {not=2.11}
+standardized : {not=1.05}
+spoil : {not=4.93}
+ensuring : {thereby=2.34}
+lend : {not=7.39, also=1.63}
+live : {always=0.1, some=0.12, mostly=0.04, rather=0.1, already=0.07, probably=0.08, again=0.05, also=0.17, really=0.15, generally=0.04, actually=0.21, ever=0.11, never=0.22, not=1.58, currently=0.05, quite=0.03, usually=0.04, truly=0.03, simply=0.04, possibly=0.04}
+ventured : {never=6.48}
+enhancing : {thereby=3.06}
+engender : {not=8.21}
+depriving : {thereby=14.37}
+perform : {actually=0.41, not=3.01, also=0.73}
+realized : {ever=0.23, never=1.49, not=0.74, already=0.12, finally=1.32, quickly=1.05, eventually=0.14, also=0.91, suddenly=1.77, really=0.18, soon=1.37, fully=1.2}
+expose : {not=1.51, also=0.92}
+concentrate : {not=1.48, really=0.68}
+room : {always=0.09, some=0.15, not=0.03, barely=0.02, supply=0.06}
+occurring : {actually=0.82, naturally=21.75, not=1.4, commonly=1.06, already=1.3, frequently=1.3}
+better : {slightly=0.25, infinitely=0.04, some=0.12, almost=0.03, maybe=0.05, probably=0.22, rather=0.03, sometimes=0.03, clearly=0.04, necessarily=0.07, lot=1.36, not=0.32, perhaps=0.1, somehow=0.03, dramatically=0.03, usually=0.05, together=0.03, needs=0.04, always=0.22, certainly=0.08, considerably=0.07, also=0.07, say=0.03, really=0.06, something=0.53, generally=0.05, actually=0.07, ever=0.02, never=0.05, vastly=0.03, definitely=0.04, relatively=0.03, somewhat=0.14, substantially=0.05, hardly=0.02, significantly=0.27, simply=0.02}
+service : {some=0.13, parcel=0.3}
+permit : {never=0.71, not=12.04, also=0.76}
+well : {some=0.02, moderately=0.02, perfectly=0.21, remarkably=0.11, probably=0.03, rather=0.09, sufficiently=0.02, equally=0.18, terribly=0.02, extraordinarily=0.04, exceedingly=0.03, not=0.58, extremely=0.29, too=0.82, surprisingly=0.07, wonderfully=0.02, quite=0.57, usually=0.02, together=0.04, amazingly=0.03, always=0.04, certainly=0.02, particularly=0.18, already=0.13, fairly=0.27, exceptionally=0.08, say=0.11, reasonably=0.16, also=0.07, really=0.46, something=0.03, generally=0.04, especially=0.12, incredibly=0.04, awfully=0.02, relatively=0.08, consistently=0.01}
+debating : {not=2.5}
+terrifying : {truly=1.5, something=1.28}
+romance : {summer=0.77}
+named : {newly=0.28, actually=0.16, never=0.19, not=0.82, already=0.14, appropriately=0.47, recently=0.77, aptly=1.49, originally=0.17, also=1.2, ironically=0.11, officially=0.27}
+catalog : {course=1.26}
+focus : {always=0.08, some=0.17, not=0.88, rather=0.08, typically=0.08, also=0.28, usually=0.08, instead=0.15, really=0.37, simply=0.06}
+hamper : {not=4.19}
+changing : {always=0.85, already=0.26, quickly=0.3, also=0.45, constantly=2.32, continually=0.18, slowly=0.4, really=0.33, rapidly=2.72, radically=0.18, actually=0.15, ever=0.62, never=0.13, fundamentally=0.15, gradually=0.15, not=0.97, dramatically=0.21, simply=0.21}
+approach : {never=0.08, developmental=0.17, not=0.47}
+overshadow : {not=21.13}
+loved : {always=3.1, never=0.74, ever=0.59, not=0.16, especially=0.17, already=0.09, absolutely=0.25, also=0.61, deeply=0.11, truly=0.41, dearly=0.25, really=1.59}
+discharged : {dishonorably=2.38, honorably=3.26}
+flour : {lightly=0.34, together=2.06}
+struck : {always=1.19, never=0.61, ever=0.23, not=0.28, particularly=0.3, recently=0.21, finally=0.29, also=0.99, suddenly=0.65, really=1.34, something=0.36}
+e-mail : {some=0.28, please=0.67, also=0.32}
+block : {not=0.52}
+hate : {always=0.23, not=0.89, probably=0.15, absolutely=0.22, really=1.59}
+write : {always=0.16, actually=0.19, ever=0.23, never=0.34, not=1.46, probably=0.07, please=0.48, also=0.49, simply=0.11, really=0.16}
+flow : {not=0.53}
+ceased : {never=13.69, not=2.71}
+order : {always=0.04, some=0.16, not=0.16, also=0.05}
+went : {some=0.07, probably=0.08, almost=0.1, nearly=0.05, sometimes=0.05, quickly=0.08, eventually=0.1, soon=0.04, too=0.02, seldom=0.02, basically=0.04, promptly=0.03, usually=0.06, always=0.18, certainly=0.03, already=0.04, recently=0.1, literally=0.03, again=0.04, finally=0.21, also=0.38, instead=0.04, ultimately=0.03, suddenly=0.08, allegedly=0.03, really=0.2, something=0.26, actually=0.33, ever=0.23, never=0.95, apparently=0.05, days=0.11, initially=0.02, rarely=0.05, simply=0.08, quietly=0.02}
+proceed : {not=3.48, please=0.63}
+understand : {probably=0.04, almost=0.03, clearly=0.13, necessarily=0.04, not=4.09, quite=0.46, easily=0.06, totally=0.09, truly=0.19, fully=0.88, possibly=0.11, always=0.13, certainly=0.17, already=0.05, finally=0.08, please=0.16, also=0.38, entirely=0.04, really=1.05, actually=0.06, never=0.58, ever=0.12, barely=0.05, completely=0.14, hardly=0.05}
+dismiss : {not=4.83, simply=1.07}
+traveling : {some=0.51, not=1.23}
+gore : {say=0.22}
+propose : {not=2.85, also=0.89}
+reform : {needs=0.12, some=0.15, not=0.14}
+cooperating : {not=7.72, fully=1.6}
+illustrated : {vividly=0.69, dramatically=0.57, also=1.35, clearly=1.13, lavishly=1.01, beautifully=1.18}
+bringing : {always=0.37, actually=0.21, not=1.54, thereby=0.21, finally=0.2, also=0.42}
+even : {surely=0.02, some=0.32, perfectly=0.02, probably=0.12, maybe=1.28, almost=0.02, sometimes=0.46, eventually=0.02, soon=0.01, not=7.38, perhaps=1.2, occasionally=0.03, course=0.02, somehow=0.01, together=0.03, possibly=0.21, happen=0.03, again=0.03, fairly=0.02, say=0.08, also=0.02, indeed=0.02, really=0.07, something=0.18, actually=0.03, ever=0.09, never=1.09, apparently=0.02, barely=0.06, relatively=0.01, days=0.02, rarely=0.03, hardly=0.08, potentially=0.02}
+penned : {also=7.42}
+analyze : {critically=0.6, not=1.19, also=0.6}
+coach : {not=0.1}
+despair : {not=1.7}
+gum : {some=1.53}
+exaggerating : {not=27.99}
+gun : {some=0.16}
+wait : {always=0.13, never=0.08, not=2.42, rather=0.16, probably=0.09, say=0.16, please=0.29, hardly=1.0, simply=0.16}
+pink : {slightly=0.4, some=0.34, not=0.24}
+woman : {some=0.21}
+pine : {some=0.55}
+fuck : {say=0.84}
+save : {always=0.12, actually=0.3, not=1.08, probably=0.16, also=0.41, please=0.14, ultimately=0.09, really=0.17, possibly=0.11}
+guy : {some=1.57}
+categorized : {easily=2.57}
+grated : {freshly=17.82, coarsely=2.38, finely=5.9}
+restrict : {not=4.68, also=1.03, severely=1.93}
+matter : {not=1.07, hardly=0.03, really=1.07}
+shaved : {freshly=2.6}
+indicating : {clearly=2.47}
+top : {some=0.18, not=0.05, mornings=0.06, easily=0.03}
+legislate : {not=11.07}
+noise : {some=1.34}
+have : {increasingly=0.01, mostly=0.01, quickly=0.01, ago=0.01, conceivably=0.01, soon=0.03, inevitably=0.01, largely=0.01, easily=0.04, usually=0.06, truly=0.01, literally=0.01, ordinarily=0.01, someday=0.01, something=0.01, ever=0.13, thereby=0.01, apparently=0.02, historically=0.02, consistently=0.01, maybe=0.02, probably=0.14, frequently=0.01, automatically=0.01, consequently=0.01, eventually=0.02, summer=0.01, frankly=0.01, naturally=0.01, too=0.02, seldom=0.01, occasionally=0.01, course=0.01, hopefully=0.01, scarcely=0.01, merely=0.01, together=0.01, honestly=0.01, unfortunately=0.01, lately=0.01, generally=0.04, actually=0.12, definitely=0.02, traditionally=0.02, undoubtedly=0.01, barely=0.01, days=0.02, heads=0.01, surely=0.02, presumably=0.01, presently=0.01, almost=0.02, reportedly=0.01, sometimes=0.03, practically=0.01, clearly=0.02, constantly=0.01, regularly=0.01, basically=0.02, quite=0.01, possibly=0.05, needs=0.01, always=0.22, repeatedly=0.01, commonly=0.01, already=0.24, typically=0.03, finally=0.03, originally=0.01, please=0.01, reasonably=0.01, allegedly=0.01, never=0.43, especially=0.01, personally=0.01, everywhere=0.01, absolutely=0.02, gladly=0.01, rarely=0.02, hardly=0.03, invariably=0.01, potentially=0.01, some=0.18, supposedly=0.01, rather=0.08, part=0.01, elsewhere=0.01, necessarily=0.04, seemingly=0.01, not=2.11, perhaps=0.01, previously=0.01, somehow=0.01, abroad=0.01, certainly=0.08, recently=0.03, effectively=0.01, again=0.02, obviously=0.02, also=0.58, say=0.01, exactly=0.01, indeed=0.02, instead=0.01, ultimately=0.01, suddenly=0.01, really=0.28, alike=0.01, currently=0.03, nights=0.01, initially=0.01, essentially=0.01, collectively=0.01, simply=0.05, normally=0.02}
+avail : {not=2.9}
+laid : {ever=0.81, never=1.23, not=0.48, already=0.66, carefully=0.7, recently=0.36, finally=0.26, gently=0.3, also=0.72, really=0.34}
+question : {never=0.04, some=0.33, ever=0.03, not=0.2, earlier=0.05, also=0.06, seriously=0.04, really=0.04}
+attributed : {not=0.7, commonly=0.7, largely=0.7, also=0.93, usually=0.9, generally=0.98}
+bought : {actually=0.28, always=0.19, never=0.88, ever=0.44, not=0.29, already=0.65, probably=0.16, recently=1.35, finally=0.2, indirectly=0.11, eventually=0.23, also=1.09}
+vinegar : {together=1.22}
+spirit : {some=0.13}
+discouraged : {not=4.95, strongly=1.84, actively=2.29}
+produce : {always=0.22, typically=0.12, automatically=0.1, sometimes=0.1, eventually=0.18, also=0.76, necessarily=0.1, generally=0.11, actually=0.23, never=0.16, not=2.91, easily=0.09, usually=0.1}
+picture : {some=0.07, not=0.13}
+cheat : {never=1.78, not=2.27}
+requiring : {not=3.61}
+charred : {slightly=3.67, lightly=4.1}
+regard : {some=0.36, not=1.21, also=0.16}
+rose : {actually=0.29, never=0.35, quickly=0.38, finally=0.19, also=0.65, suddenly=0.19, slowly=0.33}
+imagining : {never=2.46, not=3.07}
+infect : {not=5.26}
+prohibit : {not=9.0}
+imposed : {ever=0.76, not=1.73, externally=1.61, also=1.34}
+measuring : {not=1.43}
+criticizing : {not=8.36}
+minor : {seemingly=0.54, some=3.39, fairly=0.3, relatively=3.65}
+cop : {some=0.37}
+fuel : {some=0.22}
+foresee : {not=17.38}
+associate : {not=0.71, usually=0.35, normally=0.43}
+pray : {not=1.09, also=0.45, please=0.45}
+plead : {not=2.64}
+wake : {never=0.41, ever=0.18, not=1.03, please=0.28}
+detract : {not=36.44}
+function : {actually=0.17, some=0.14, not=1.58, also=0.4}
+raise : {actually=0.15, never=0.17, not=1.84, also=0.83, please=0.14, slowly=0.22, simply=0.09, really=0.1}
+stock : {some=0.37, summer=0.19}
+hated : {always=3.33, never=0.38, absolutely=0.38, also=0.4, really=1.36}
+cropped : {closely=17.38}
+tower : {stone=0.44}
+sloping : {gently=16.34}
+timed : {perfectly=9.36, carefully=5.54}
+including : {not=12.56, perhaps=0.66, probably=0.49, sometimes=0.51, also=1.06, possibly=0.99}
+lay : {never=0.19, not=0.5, ahead=0.18, also=0.21}
+introducing : {also=0.99}
+snapped : {suddenly=0.74, something=1.44}
+guaranteed : {not=5.73, virtually=2.4, almost=2.72, constitutionally=1.1, also=0.89, federally=0.95}
+disagreed : {strongly=8.83, also=2.31}
+adventure : {some=0.57}
+reconcile : {not=2.73}
+snow : {some=0.49}
+were : {surely=0.01, weekends=0.01, reportedly=0.01, sometimes=0.01, ago=0.03, clearly=0.02, soon=0.01, earlier=0.01, basically=0.01, usually=0.01, truly=0.01, always=0.03, needs=0.03, item=0.01, already=0.03, typically=0.01, literally=0.01, finally=0.01, originally=0.01, allegedly=0.01, something=0.02, never=0.04, ever=0.03, everywhere=0.01, apparently=0.02, rarely=0.01, some=0.23, maybe=0.01, rather=0.01, probably=0.04, frequently=0.01, ahead=0.01, part=0.01, eventually=0.01, elsewhere=0.01, summer=0.01, lot=0.01, not=0.01, perhaps=0.01, mornings=0.01, previously=0.01, too=0.03, course=0.02, together=0.01, abroad=0.01, certainly=0.03, evenings=0.01, recently=0.01, again=0.01, also=0.15, say=0.02, obviously=0.01, instead=0.01, exactly=0.01, indeed=0.01, ultimately=0.01, suddenly=0.01, really=0.1, stone=0.01, generally=0.02, actually=0.04, alike=0.01, definitely=0.01, nights=0.02, afternoons=0.01, days=0.09, initially=0.01, heads=0.03, simply=0.02}
+improve : {actually=0.36, vastly=0.12, not=1.69, also=0.68, dramatically=0.36, substantially=0.17, significantly=0.57, continually=0.13, greatly=0.48, really=0.2, necessarily=0.12}
+naming : {not=3.77}
+try : {always=0.6, some=0.05, certainly=0.06, maybe=0.08, probably=0.1, sometimes=0.07, again=0.03, also=0.56, please=0.18, really=0.35, generally=0.05, desperately=0.04, actually=0.12, ever=0.23, never=0.21, not=1.39, definitely=0.03, usually=0.1, simply=0.07}
+constituted : {newly=2.13, presently=2.3, also=2.48, formally=2.13}
+absolve : {not=25.22}
+became : {increasingly=0.09, some=0.1, almost=0.16, nearly=0.06, sometimes=0.05, quickly=2.04, ago=0.08, eventually=1.11, subsequently=0.13, soon=1.89, gradually=0.33, instantly=0.13, too=0.06, somehow=0.06, officially=0.12, recently=0.31, literally=0.06, again=0.22, finally=0.3, also=1.46, instead=0.07, slowly=0.11, suddenly=0.76, ultimately=0.19, rapidly=0.14, really=0.25, actually=0.24, ever=0.17, never=0.52, apparently=0.06, days=0.06, simply=0.09}
+emanate : {not=14.68}
+initiated : {not=1.5, recently=0.96, also=1.84}
+locate : {not=1.67}
+bush : {some=0.07, not=0.07, say=0.12}
+fruit : {some=1.29, summer=0.35, stone=0.46}
+cause : {always=0.06, certainly=0.07, some=0.17, probably=0.08, sometimes=0.16, also=0.89, eventually=0.16, ultimately=0.08, really=0.09, actually=0.28, never=0.06, not=1.66, potentially=0.07}
+combat : {not=0.29}
+appalled : {absolutely=2.55}
+indulge : {not=4.64}
+intimidate : {not=3.02}
+agitated : {increasingly=4.06, too=3.77}
+wound : {tightly=1.76, eventually=0.47}
+pursue : {vigorously=0.27, not=2.65, actively=0.44, aggressively=0.78}
+ties : {some=0.29}
+busy : {always=0.66, not=0.59, extremely=0.5, incredibly=0.18, already=0.44, too=15.49, quite=0.3, also=0.29, really=0.68}
+convey : {not=3.28, also=1.0}
+design : {some=0.14, not=0.18, course=0.23}
+muscle : {some=1.09}
+land : {some=0.33, never=0.07, not=0.16}
+floor : {stone=0.47}
+burn : {not=1.94, also=0.44}
+accord : {not=1.7}
+contributing : {not=1.29, thereby=0.85, also=2.25}
+cry : {ever=0.2, never=0.28, not=1.75}
+despite : {not=0.46, together=0.45}
+doctor : {some=0.16}
+tapped : {also=1.27}
+bury : {not=0.68}
+conduct : {not=1.21, also=0.34}
+obey : {not=4.32}
+stable : {not=0.73, extremely=0.27, remarkably=0.65, fairly=1.18, relatively=4.85, quite=0.5, reasonably=0.32, politically=0.37, emotionally=0.34, financially=0.84, highly=0.28}
+spoken : {always=0.42, actually=0.4, never=3.81, ever=1.11, not=4.34, already=1.0, widely=0.48, barely=0.29, also=0.59, hardly=0.26, really=0.28}
+traveled : {never=1.31, ever=0.46, not=0.41, already=0.49, recently=0.67, widely=0.47, also=1.22, heavily=1.31}
+respond : {always=0.19, not=7.67, quickly=0.14, please=0.22, also=0.32, usually=0.14, really=0.24}
+renamed : {recently=4.47}
+wall : {some=0.14, stone=1.41}
+sport : {some=0.2}
+walk : {always=0.13, actually=0.13, ever=0.13, never=0.5, not=1.01, probably=0.07, rather=0.09, barely=0.3, also=0.07, hardly=0.23, slowly=0.1, simply=0.31}
+lame : {some=4.0}
+caught : {always=0.16, already=0.21, almost=0.19, recently=0.12, quickly=0.2, finally=0.9, also=0.57, eventually=0.19, suddenly=0.15, soon=0.11, something=0.3, really=0.49, actually=0.24, ever=0.47, never=0.88, not=0.59, freshly=0.11, too=0.34, easily=0.1, quite=0.11}
+gotten : {always=0.52, certainly=0.14, already=1.17, probably=0.25, almost=0.15, recently=0.17, finally=0.89, also=0.55, really=0.92, actually=0.46, never=2.5, ever=1.32, not=2.08, barely=0.16, quite=0.26, somehow=0.33}
+japan : {not=0.13}
+marry : {never=1.69, ever=0.55, not=2.66, eventually=0.34}
+concert : {summer=1.24}
+led : {always=0.19, already=0.2, probably=0.13, recently=0.17, finally=0.19, again=0.12, quickly=0.12, sometimes=0.14, also=1.52, eventually=1.0, ultimately=0.52, soon=0.14, really=0.17, actually=0.15, never=0.19, not=0.39, personally=0.08, inevitably=0.12, usually=0.08}
+absorb : {not=2.58, also=0.77}
+supply : {not=0.69, also=0.28}
+concern : {some=1.88, not=0.63, also=0.24}
+leg : {some=0.18}
+resuscitate : {not=19.34}
+lessen : {not=5.12}
+refrain : {not=2.26}
+let : {always=0.13, almost=0.05, already=0.03, probably=0.05, rather=0.05, again=0.04, finally=0.17, sometimes=0.04, please=0.63, eventually=0.03, say=0.26, also=0.23, really=0.17, actually=0.06, never=1.74, ever=0.33, not=2.89, reluctantly=0.03, rarely=0.03, usually=0.04, simply=0.13}
+state : {some=0.17, developmental=0.04, not=0.06, explicitly=0.02, also=0.03, please=0.02, clearly=0.03, simply=0.02}
+press : {firmly=0.07, some=0.14, not=0.33, gently=0.25, simply=0.08}
+welcome : {always=1.37, certainly=0.31, some=0.31, not=2.66, particularly=0.18, especially=0.42, quite=0.57, say=0.2, also=0.47, please=1.9}
+defined : {increasingly=0.23, explicitly=0.2, sharply=0.94, clearly=5.32, newly=0.29, precisely=0.34, not=1.62, legally=0.27, culturally=0.3, largely=0.36, easily=0.27, specifically=0.36, usually=0.43, always=0.22, already=0.2, socially=0.23, typically=0.23, carefully=0.31, narrowly=1.4, also=0.49, really=0.23, strictly=0.27, generally=0.48, never=0.31, traditionally=0.37, loosely=0.7, broadly=1.54, vaguely=0.45, simply=0.23}
+began : {always=0.06, some=0.06, probably=0.06, recently=0.32, again=0.1, quickly=0.21, finally=0.29, ago=0.04, eventually=0.1, also=0.93, slowly=0.22, suddenly=0.17, something=0.04, summer=0.04, soon=0.49, really=0.38, actually=0.3, gradually=0.12, too=0.05, apparently=0.06, days=0.04, usually=0.05, quietly=0.04, officially=0.08}
+want : {some=0.05, probably=0.11, almost=0.02, sometimes=0.01, genuinely=0.02, eventually=0.02, clearly=0.02, necessarily=0.05, desperately=0.05, naturally=0.02, not=3.15, basically=0.01, usually=0.02, merely=0.02, truly=0.04, possibly=0.03, always=0.24, certainly=0.05, particularly=0.04, typically=0.01, obviously=0.02, also=0.52, ultimately=0.01, really=1.67, generally=0.02, actually=0.08, ever=0.29, never=0.26, definitely=0.06, especially=0.02, absolutely=0.01, simply=0.1}
+deteriorate : {not=5.08}
+recognize : {always=0.18, never=0.13, not=5.4, instantly=0.17, probably=0.12, quickly=0.13, barely=0.18, easily=0.12, also=1.31, hardly=0.29, fully=0.25, really=0.13}
+pack : {not=0.26}
+complied : {not=11.97}
+input : {some=2.55}
+induce : {not=2.41, also=1.46}
+creating : {actually=0.24, not=0.77, thereby=0.97, also=0.55, really=0.2}
+difference : {some=0.21}
+must : {always=0.03, needs=0.05, certainly=0.05, surely=0.09, some=0.04, typically=0.03, sometimes=0.02, also=0.54, ultimately=0.03, something=0.25, really=0.16, generally=0.03, too=0.08, absolutely=0.07, course=0.03, usually=0.03, simply=0.1}
+enroll : {not=2.63}
+infringe : {not=42.56}
+offend : {not=7.26}
+circle : {stone=0.23}
+butt : {some=0.69}
+resign : {not=2.95}
+cup : {together=0.19}
+wasting : {not=8.06}
+cut : {badly=0.05, perfectly=0.04, probably=0.07, neatly=0.06, sharply=0.09, quickly=0.07, nearly=0.05, finely=0.05, newly=0.05, not=0.82, abruptly=0.06, easily=0.07, quite=0.05, deeply=0.06, dramatically=0.08, smash=0.21, always=0.11, already=0.23, carefully=0.11, literally=0.05, effectively=0.06, recently=0.11, finally=0.05, also=0.41, suddenly=0.08, really=0.13, actually=0.14, ever=0.06, never=0.21, freshly=0.22, drastically=0.12, completely=0.11, significantly=0.05, simply=0.12}
+dispersed : {widely=15.98, geographically=6.18}
+collapsed : {finally=0.91, nearly=1.11, completely=0.65, suddenly=0.77, partially=0.74}
+document : {not=0.44}
+reside : {not=6.74}
+harass : {sexually=7.35}
+starve : {not=3.55}
+giving : {always=0.32, actually=0.22, never=0.29, ever=0.09, not=4.33, thereby=0.27, already=0.15, finally=0.22, also=0.39, slowly=0.11, simply=0.21, really=0.33}
+proving : {not=1.34}
+hitting : {not=1.78, really=0.54}
+chase : {not=0.57}
+pop : {some=0.5}
+promote : {actually=0.25, not=1.25, actively=0.32, also=0.79}
+found : {increasingly=0.03, mostly=0.02, reportedly=0.03, sometimes=0.09, quickly=0.15, ago=0.02, clearly=0.02, soon=0.36, newly=0.06, easily=0.07, usually=0.16, always=0.39, repeatedly=0.03, commonly=0.19, typically=0.12, already=0.16, finally=0.6, originally=0.02, never=0.68, ever=0.31, personally=0.02, apparently=0.04, consistently=0.08, rarely=0.09, some=0.06, probably=0.04, frequently=0.08, eventually=0.17, subsequently=0.04, naturally=0.02, not=0.84, previously=0.04, seldom=0.03, occasionally=0.03, somehow=0.07, certainly=0.03, recently=0.22, again=0.06, also=2.14, instead=0.03, indeed=0.03, ultimately=0.04, suddenly=0.21, really=0.07, generally=0.08, actually=0.15, initially=0.03, simply=0.03, normally=0.05}
+tear : {not=1.45}
+pot : {some=0.36}
+excuse : {some=1.74, not=1.71, please=2.09}
+does : {surely=0.03, almost=0.03, probably=0.23, maybe=0.02, frequently=0.02, sometimes=0.05, part=0.03, clearly=0.08, not=0.02, perhaps=0.02, too=0.04, seldom=0.02, occasionally=0.02, basically=0.02, course=0.03, somehow=0.02, usually=0.17, truly=0.04, together=0.02, always=0.23, certainly=0.33, already=0.03, typically=0.03, finally=0.04, again=0.01, obviously=0.07, say=0.02, also=0.28, exactly=0.09, suddenly=0.01, ultimately=0.02, something=0.11, really=1.03, generally=0.07, actually=0.15, never=0.12, ever=0.06, definitely=0.05, currently=0.03, apparently=0.05, absolutely=0.02, days=0.02, rarely=0.07, simply=0.21, normally=0.04}
+attack : {never=0.09, not=0.66, also=0.09}
+divorce : {not=0.42}
+distribute : {evenly=1.66}
+attach : {not=2.24}
+shout : {not=1.73}
+escape : {never=0.58, ever=0.18, not=4.76}
+convict : {not=2.97}
+emerging : {newly=2.25, some=0.36, already=0.37, also=0.38, slowly=0.57, rapidly=0.59}
+equate : {not=11.12}
+think : {some=0.07, probably=0.06, maybe=0.01, rather=0.02, almost=0.02, automatically=0.01, sometimes=0.04, clearly=0.01, necessarily=0.02, frankly=0.01, not=0.71, basically=0.01, usually=0.03, truly=0.02, possibly=0.02, always=0.13, certainly=0.05, honestly=0.03, typically=0.01, already=0.01, please=0.01, obviously=0.01, also=0.25, seriously=0.02, really=0.63, generally=0.01, actually=0.1, ever=0.18, never=0.09, definitely=0.04, personally=0.04, absolutely=0.01, mistakenly=0.01, rarely=0.01, hardly=0.02, simply=0.01, normally=0.01}
+overreact : {not=14.04}
+receive : {actually=0.23, ever=0.21, never=0.28, not=6.0, currently=0.16, probably=0.16, typically=0.2, also=1.17, usually=0.18, generally=0.16}
+clad : {scantily=42.96}
+participate : {actually=0.29, not=4.84, actively=0.99, also=0.65, fully=0.34}
+occurred : {actually=0.85, never=5.59, ever=0.85, not=1.74, probably=0.28, already=0.97, finally=0.19, also=1.2, suddenly=0.5, allegedly=0.16, really=0.27, something=0.28}
+refused : {always=0.47, never=0.35, repeatedly=0.48, absolutely=0.3, again=0.29, flatly=0.58, initially=0.6, consistently=0.43, also=1.64, stubbornly=0.41, simply=0.94, steadfastly=0.95}
+replaced : {already=0.22, recently=0.3, quickly=0.54, eventually=0.44, also=0.41, soon=0.5, gradually=0.58, never=0.25, not=0.66, largely=0.61, easily=0.46, completely=0.28, simply=0.21}
+inhibit : {not=3.53, also=3.09}
+intimate : {some=0.58, too=1.08}
+summarized : {briefly=2.72}
+team : {some=0.09}
+disclose : {not=13.53, publicly=1.33, fully=1.51}
+torture : {not=1.78}
+automated : {fully=6.63, highly=4.53}
+admitting : {not=5.78}
+watch : {always=0.12, actually=0.12, never=0.15, ever=0.18, not=0.39, rather=0.15, please=0.1, also=0.22, really=0.11, simply=0.08}
+startling : {some=4.5, rather=1.65}
+purple : {almost=0.52}
+quit : {never=1.72, ever=0.31, not=1.0, almost=0.29, recently=0.42, finally=0.51, abruptly=0.33}
+polish : {some=0.67}
+evoke : {not=2.79, also=2.18}
+fashion : {some=2.13, not=0.26}
+till : {not=3.82, again=0.86, days=1.2}
+attend : {regularly=0.37, not=4.95, also=0.43}
+lie : {always=0.17, never=0.77, ever=0.18, not=2.65, also=0.16, simply=0.14}
+voting : {not=2.42}
+had : {surely=0.01, presumably=0.01, almost=0.03, reportedly=0.02, sometimes=0.02, quickly=0.01, practically=0.01, ago=0.03, clearly=0.04, constantly=0.01, evidently=0.01, supply=0.01, soon=0.02, earlier=0.03, post=0.01, basically=0.02, usually=0.02, truly=0.01, possibly=0.01, always=0.41, needs=0.01, item=0.01, already=0.3, typically=0.01, literally=0.02, finally=0.06, originally=0.02, allegedly=0.01, something=0.11, ever=0.4, never=0.78, twice=0.01, personally=0.01, apparently=0.05, absolutely=0.01, historically=0.01, consistently=0.01, rarely=0.02, hardly=0.02, some=0.07, supposedly=0.01, maybe=0.01, probably=0.1, rather=0.01, frequently=0.01, part=0.01, nearly=0.01, eventually=0.01, subsequently=0.01, ava=0.01, summer=0.02, lot=0.01, seemingly=0.01, not=0.18, perhaps=0.01, previously=0.04, too=0.04, seldom=0.01, occasionally=0.01, course=0.02, somehow=0.01, scarcely=0.01, merely=0.01, together=0.01, certainly=0.06, honestly=0.01, recently=0.06, again=0.02, also=0.52, obviously=0.03, say=0.01, lately=0.01, exactly=0.01, instead=0.01, indeed=0.01, ultimately=0.01, suddenly=0.03, really=0.18, generally=0.02, stone=0.02, actually=0.13, traditionally=0.01, definitely=0.02, currently=0.01, nights=0.01, undoubtedly=0.01, barely=0.03, initially=0.02, days=0.03, essentially=0.01, heads=0.01, formerly=0.01, simply=0.04}
+source : {some=0.14}
+smell : {not=0.59, almost=0.59}
+secure : {not=1.34, relatively=0.34, financially=1.15, really=0.23, highly=0.22}
+guided : {also=0.81}
+circulated : {widely=18.88}
+placing : {not=0.91, carefully=1.0}
+initiate : {not=3.87}
+shook : {merely=0.21, slowly=0.64, really=0.26}
+paying : {actually=0.28, not=6.21, currently=0.15, already=0.63, finally=0.19, also=0.32, really=0.71}
+dying : {not=1.29, already=0.23, literally=0.21, slowly=0.56, really=0.24}
+school : {developmental=0.02, some=0.12, not=0.02, summer=0.19}
+ham : {some=2.01}
+continue : {certainly=0.1, some=0.06, not=1.42, probably=0.26, undoubtedly=0.07, also=0.4, please=0.19, simply=0.12}
+lit : {already=0.45, brightly=6.75, dimly=9.28, brilliantly=0.54, softly=0.63}
+preserved : {not=1.61, perfectly=3.1, carefully=1.9, beautifully=1.21}
+bias : {some=0.68, not=0.73}
+shoot : {actually=0.22, never=0.31, not=1.55, really=0.21}
+has : {surely=0.01, increasingly=0.01, presumably=0.01, almost=0.01, reportedly=0.03, sometimes=0.02, ago=0.03, clearly=0.06, evidently=0.01, supply=0.02, barr=0.01, post=0.02, largely=0.01, inevitably=0.01, basically=0.02, usually=0.04, truly=0.01, always=0.21, needs=0.01, repeatedly=0.01, item=0.01, already=0.34, typically=0.02, literally=0.01, finally=0.03, something=0.12, ever=0.05, never=0.14, twice=0.01, personally=0.01, especially=0.01, apparently=0.04, absolutely=0.01, historically=0.03, consistently=0.01, rarely=0.03, hardly=0.01, some=0.01, supposedly=0.01, maybe=0.01, probably=0.1, rather=0.01, frequently=0.01, part=0.02, eventually=0.01, elsewhere=0.01, summer=0.02, necessarily=0.01, lot=0.05, seemingly=0.01, not=0.01, perhaps=0.01, previously=0.01, too=0.03, seldom=0.01, occasionally=0.01, course=0.03, somehow=0.01, merely=0.01, together=0.01, certainly=0.11, abroad=0.01, recently=0.04, again=0.02, unfortunately=0.01, also=1.07, obviously=0.04, say=0.03, lately=0.02, exactly=0.01, instead=0.01, indeed=0.01, ultimately=0.01, suddenly=0.01, really=0.2, generally=0.03, stone=0.02, actually=0.08, likewise=0.01, traditionally=0.03, definitely=0.03, currently=0.05, undoubtedly=0.01, barely=0.01, days=0.02, essentially=0.01, simply=0.03, normally=0.01}
+acquired : {newly=4.72, never=0.44, not=0.83, previously=0.49, already=0.93, recently=3.4, also=1.73}
+realize : {always=0.11, never=0.28, not=3.2, finally=0.19, quickly=0.24, also=0.65, suddenly=0.36, soon=0.25, really=0.29, fully=0.33}
+budget : {some=0.1}
+brush : {some=0.42, lightly=1.54}
+given : {almost=0.08, probably=0.06, frequently=0.04, sometimes=0.06, ago=0.04, not=1.79, routinely=0.04, previously=0.04, largely=0.04, usually=0.15, always=0.19, certainly=0.05, particularly=0.25, already=0.49, typically=0.04, recently=0.1, finally=0.15, originally=0.05, also=0.62, really=0.13, generally=0.06, actually=0.09, ever=0.37, never=0.65, especially=0.64, apparently=0.05, rarely=0.05, freely=0.09, simply=0.1}
+glass : {some=0.09}
+perish : {not=14.01}
+last : {happen=0.02, some=0.04, probably=0.02, typically=0.02, maybe=0.02, again=0.12, ago=0.03, also=0.04, say=0.03, suddenly=0.02, something=0.02, lot=0.02, actually=0.01, o'clock=0.02, never=0.03, ever=0.01, twice=0.04, not=0.29, post=0.02, earlier=0.02, days=0.06, course=0.02, usually=0.03, together=0.04}
+trapped : {not=0.65, also=0.6}
+prosecute : {not=3.12}
+adapt : {not=1.69}
+labeled : {properly=0.75, not=1.11, neatly=1.01, clearly=2.15}
+wash : {always=0.68, never=0.55, not=1.37}
+weight : {some=1.1, not=0.09}
+doubt : {ever=0.13, some=0.69, never=0.19, not=0.76, rather=0.13, seriously=0.31, really=0.13}
+merit : {some=4.39, not=1.95}
+develop : {actually=0.1, never=0.24, gradually=0.08, not=1.29, quickly=0.12, eventually=0.17, also=0.47, usually=0.08, really=0.11, fully=0.21, jointly=0.08}
+warn : {not=1.19, also=1.36}
+warm : {always=0.19, slightly=0.22, some=0.34, unusually=0.36, someplace=0.16, really=0.26, something=0.4, not=0.24, too=1.03, surprisingly=0.13, quite=0.21, relatively=0.23, unseasonably=0.38}
+measure : {actually=0.16, precisely=0.11, some=2.48, never=0.11, not=0.9, also=0.15, accurately=0.38}
+dominated : {increasingly=1.09, not=1.21, traditionally=0.61, also=0.83, completely=0.72, totally=0.63}
+assume : {always=0.56, never=0.4, not=3.37, probably=0.22, automatically=0.59, also=0.93, reasonably=0.23, safely=0.35, simply=0.29}
+correlated : {moderately=2.0, not=3.66, positively=14.75, closely=1.27, negatively=10.62, strongly=3.92, also=2.14, significantly=13.85, highly=11.6}
+updated : {regularly=1.85, recently=1.49, constantly=1.85, continuously=1.6}
+swim : {not=1.67}
+full : {always=0.2, lot=0.05, not=0.2, almost=0.2, too=0.37, already=0.18, chock=0.23, nearly=0.28, quite=0.06, also=0.12, completely=0.06, suddenly=0.04}
+pepper : {some=0.16}
+curved : {slightly=2.76}
+squall : {summer=21.25}
+dried : {some=0.83}
+settling : {not=1.46, finally=3.68, eventually=1.56}
+exercising : {not=4.85}
+house : {some=0.05, supply=0.03, summer=0.11, stone=0.13}
+freak : {some=2.16}
+cared : {actually=0.59, properly=0.51, always=0.62, ever=1.14, never=4.09, not=0.57, really=5.44}
+stare : {not=0.58}
+denying : {not=6.04}
+retired : {some=0.24, not=0.28, already=0.44, recently=3.27, finally=0.26, officially=0.31}
+assembled : {ever=3.16, hastily=1.26, already=1.07, quickly=0.84, fully=1.52}
+vote : {always=0.1, actually=0.16, ever=0.08, never=0.21, not=1.82, probably=0.13, also=0.12, please=0.09}
+steady : {fairly=0.65, relatively=0.38}
+enhance : {actually=0.47, not=1.08, also=1.42, significantly=0.54, greatly=1.23}
+pain : {some=0.56, not=0.12}
+start : {always=0.21, some=0.03, maybe=0.05, probably=0.13, typically=0.04, finally=0.09, also=0.14, eventually=0.05, suddenly=0.09, really=0.33, soon=0.1, actually=0.18, ever=0.05, never=0.07, not=0.64, usually=0.14, simply=0.04}
+purchase : {not=0.72, also=0.48}
+enlarged : {greatly=3.38}
+grumbling : {some=22.68}
+engineer : {genetically=0.43}
+supper : {some=1.49}
+endorse : {not=11.43}
+manage : {actually=0.28, always=0.4, ever=0.34, never=0.26, not=1.48, effectively=0.6, barely=0.23, quite=0.27, somehow=0.62, also=0.29}
+budged : {not=19.69, barely=41.74}
+equal : {always=0.16, not=2.64, approximately=1.3, almost=0.93, nearly=0.96, roughly=1.77, relatively=0.34, exactly=0.2}
+fallen : {actually=0.3, never=0.35, ever=0.22, freshly=0.26, not=0.72, already=1.18, also=0.5}
+fund : {some=0.11, not=0.24, fully=0.35}
+spared : {not=2.43}
+paid : {always=0.3, probably=0.08, already=0.98, recently=0.19, reportedly=0.21, finally=0.19, eventually=0.11, also=0.72, ultimately=0.08, really=0.27, generally=0.08, actually=0.32, never=1.15, ever=0.43, not=1.49, usually=0.13, fully=0.16, highly=0.76}
+short : {always=0.05, some=0.14, remarkably=0.08, rather=0.14, comparatively=0.05, fairly=0.19, also=0.05, really=0.12, something=0.12, desperately=0.06, woefully=0.06, not=0.13, extremely=0.14, too=1.97, days=0.07, quite=0.11, relatively=1.24, somewhat=0.08}
+time : {always=0.01, needs=0.03, some=1.71, almost=0.03, probably=0.01, maybe=0.01, finally=0.02, part=0.12, also=0.01, say=0.01, really=0.01, summer=0.01, not=0.04, perhaps=0.01, post=0.01, definitely=0.01, earlier=0.03, too=0.01, barely=0.01, days=0.01}
+reducing : {gradually=0.32, not=0.38, thereby=2.79, sharply=0.3, drastically=0.49, dramatically=0.53, also=0.44, substantially=0.35, greatly=0.66, significantly=0.68}
+finance : {not=0.3}
+imitated : {widely=15.16}
+incur : {not=8.49}
+aroused : {sexually=11.8, also=3.21}
+shadow : {o'clock=0.55}
+regulate : {not=2.55, also=0.7}
+program : {abroad=0.04, developmental=0.03, some=0.05, summer=0.2}
+imagined : {always=1.4, ever=3.99, never=7.17, some=0.33, not=0.52, previously=0.33}
+required : {always=0.22, typically=0.13, already=0.11, sometimes=0.14, also=1.24, generally=0.15, actually=0.12, never=0.16, not=4.31, currently=0.08, legally=0.36, absolutely=0.12, constitutionally=0.14, course=0.09, usually=0.26, normally=0.14}
+put : {almost=0.04, quickly=0.1, sometimes=0.04, clearly=0.02, soon=0.04, basically=0.04, easily=0.03, quite=0.05, usually=0.05, possibly=0.03, always=0.23, briefly=0.02, carefully=0.04, already=0.16, literally=0.04, finally=0.15, temporarily=0.02, originally=0.02, please=0.09, slowly=0.02, never=0.38, ever=0.16, gently=0.03, some=0.03, maybe=0.04, hastily=0.02, probably=0.09, rather=0.04, eventually=0.05, necessarily=0.02, not=0.91, perhaps=0.02, somehow=0.02, certainly=0.05, deliberately=0.02, effectively=0.03, recently=0.09, again=0.05, obviously=0.02, also=0.4, suddenly=0.03, succinctly=0.03, really=0.33, generally=0.02, actually=0.24, definitely=0.02, barely=0.02, aptly=0.03, initially=0.02, essentially=0.02, simply=0.51, quietly=0.03}
+climb : {not=0.74}
+identified : {readily=0.24, frequently=0.21, quickly=0.17, clearly=0.87, newly=0.18, properly=0.17, correctly=0.79, positively=0.44, not=2.03, previously=0.55, easily=0.65, specifically=0.26, usually=0.21, fully=0.14, highly=0.49, always=0.18, needs=0.13, closely=0.66, commonly=0.18, already=0.55, recently=0.29, originally=0.13, also=1.75, accurately=0.14, publicly=0.26, really=0.14, incorrectly=0.35, never=0.28, strongly=0.24, mistakenly=0.19, consistently=0.14, initially=0.2}
+season : {summer=0.32}
+enter : {never=0.39, not=3.3, also=0.26}
+attain : {never=2.27, not=3.89}
+deprive : {not=6.59}
+pale : {too=0.41}
+struggle : {some=0.17, not=0.24, also=0.2}
+okay : {not=2.41, say=1.01, really=0.46}
+threw : {never=0.56, almost=0.43, finally=0.34, also=0.81, really=0.32}
+destroy : {not=3.03, eventually=0.27, also=0.34, ultimately=0.28}
+provide : {always=0.11, typically=0.07, probably=0.05, already=0.08, please=0.07, also=1.96, eventually=0.06, necessarily=0.06, really=0.09, generally=0.07, actually=0.13, never=0.06, not=3.57, currently=0.04, usually=0.07, simply=0.07}
+light : {some=0.68, not=0.13, extremely=0.06, too=0.25, surprisingly=0.05, fairly=0.04, relatively=0.15, really=0.05, something=0.07, summer=0.05}
+worship : {not=1.06}
+doubled : {almost=6.82, nearly=11.2, roughly=0.87, also=1.2}
+computed : {also=2.74}
+disqualify : {not=15.71}
+consume : {not=2.71, also=1.21}
+planned : {always=0.62, never=0.79, not=0.99, centrally=0.86, previously=0.21, carefully=1.99, already=0.59, initially=0.28, originally=1.69, also=0.93, really=0.18, meticulously=0.21}
+smart : {some=0.81, not=1.47, extremely=0.19, incredibly=0.27, too=3.02, also=0.44, really=2.0, something=0.24}
+alien : {some=1.09, completely=0.63, totally=0.63, something=0.5}
+lot : {pi=0.02}
+low : {some=0.17, moderately=0.12, abnormally=0.06, remarkably=0.08, sufficiently=0.05, rather=0.16, unreasonably=0.08, comparatively=0.16, ridiculously=0.09, unusually=0.13, artificially=0.23, dangerously=0.16, extraordinarily=0.05, naturally=0.05, not=0.13, extremely=0.75, abysmally=0.05, too=2.45, surprisingly=0.09, quite=0.38, particularly=0.07, already=0.16, fairly=0.3, exceptionally=0.05, also=0.09, really=0.18, generally=0.17, especially=0.06, incredibly=0.06, historically=0.12, relatively=2.56, consistently=0.07, unrealistically=0.05}
+emphasized : {always=0.98, repeatedly=0.89, not=1.47, strongly=0.84, also=5.99}
+assure : {not=1.51}
+consult : {not=2.54, also=1.14}
+confusing : {too=2.19, sometimes=0.94, somewhat=1.17}
+tire : {never=2.43, not=0.67}
+meant : {always=0.67, probably=0.41, originally=0.25, also=1.45, obviously=0.13, clearly=0.29, really=1.59, actually=0.29, never=1.65, ever=0.17, not=3.28, apparently=0.09, usually=0.3, truly=0.12, simply=0.24}
+chain : {supply=2.98}
+desire : {some=0.17, not=0.37}
+survive : {never=0.35, not=6.84, probably=0.2, somehow=0.17, possibly=0.17}
+terrified : {too=1.91, absolutely=1.58}
+initial : {some=1.32}
+blown : {not=0.63, completely=1.08, totally=0.81}
+reverse : {not=1.1}
+fellow : {some=0.62}
+foster : {not=0.65, also=0.57}
+organized : {some=0.25, neatly=0.3, already=0.23, carefully=0.3, recently=0.31, hierarchically=0.23, also=0.87, newly=0.28, not=0.99, tightly=0.25, loosely=0.74, formally=0.3, highly=1.31}
+advancing : {rapidly=1.86}
+garden : {some=0.13, summer=0.24}
+travel : {always=0.16, never=0.13, some=0.26, not=0.98, also=0.12, summer=0.31}
+renovated : {newly=13.5, recently=8.27, completely=2.41}
+hid : {never=1.6}
+dab : {smack=21.08}
+outlaw : {not=2.94}
+tell : {some=0.02, probably=0.09, sometimes=0.03, quickly=0.02, constantly=0.02, necessarily=0.02, not=1.74, basically=0.02, quite=0.04, easily=0.02, usually=0.06, possibly=0.02, always=0.56, certainly=0.02, honestly=0.03, briefly=0.03, already=0.04, finally=0.03, also=0.28, please=0.49, really=0.24, actually=0.07, never=0.49, ever=0.36, barely=0.02, hardly=0.05, simply=0.07}
+intensified : {also=3.35}
+replace : {never=0.6, ever=0.32, not=3.09, easily=0.23, eventually=0.38, completely=0.26, simply=0.29}
+recognizing : {not=5.98}
+experience : {actually=0.08, never=0.11, some=0.52, ever=0.07, not=0.45, typically=0.04, frequently=0.04, also=0.2, fully=0.05, really=0.05}
+listen : {always=0.31, actually=0.26, never=0.38, ever=0.26, not=1.47, please=0.36, also=0.22, really=0.61, simply=0.13}
+hit : {always=0.13, badly=0.05, almost=0.16, already=0.14, probably=0.1, recently=0.08, nearly=0.08, finally=0.25, sometimes=0.06, also=0.38, suddenly=0.09, something=0.14, accidentally=0.08, soon=0.06, really=0.66, summer=0.06, actually=0.21, never=0.51, ever=0.36, not=0.58, apparently=0.07, quite=0.06, usually=0.06, smash=0.23}
+outlined : {also=1.43, clearly=2.2}
+squash : {summer=7.77}
+major : {some=0.93, not=0.07, days=0.05, also=0.06, really=0.06, something=0.06}
+shown : {always=0.2, repeatedly=0.15, already=0.65, recently=0.27, also=1.71, clearly=0.28, really=0.11, actually=0.1, ever=0.28, never=0.7, not=3.62, previously=0.14, consistently=0.37}
+interrupt : {not=3.1}
+beat : {always=0.14, almost=0.11, probably=0.12, finally=0.12, lightly=0.19, also=0.24, handily=0.13, really=0.18, actually=0.18, never=0.32, gradually=0.36, ever=0.16, not=0.71, easily=0.14}
+bear : {never=0.16, not=4.65, also=0.55, please=0.19, hardly=0.48}
+consider : {always=0.22, certainly=0.1, some=0.44, carefully=0.39, probably=0.11, briefly=0.11, please=0.14, also=1.57, seriously=0.83, really=0.27, actually=0.08, ever=0.45, never=0.34, not=3.55, strongly=0.08}
+prescribe : {not=4.83}
+necessitate : {not=15.71}
+group : {some=0.11, developmental=0.04}
+obtain : {not=2.08, easily=0.31, also=0.39}
+bruised : {badly=5.6}
+fixing : {needs=4.53, not=1.86}
+gross : {too=0.5, really=0.79}
+island : {some=0.17}
+created : {probably=0.08, already=0.35, recently=0.29, originally=0.26, also=2.05, artificially=0.12, really=0.2, actually=0.28, newly=1.74, ever=0.43, never=0.11, not=0.94, initially=0.09, specially=0.11}
+resist : {not=6.81, also=0.42}
+dampen : {not=7.46}
+format : {course=0.91}
+tree : {some=0.14}
+straighten : {slowly=3.46}
+sacrifice : {some=0.64, not=1.53}
+pleaded : {already=1.23, also=1.55}
+disarm : {not=3.48}
+water : {needs=0.03, some=0.54, not=0.06, mostly=0.03, supply=0.04}
+done : {nicely=0.08, mostly=0.04, almost=0.24, probably=0.1, nearly=0.07, sometimes=0.03, clearly=0.03, lot=0.07, properly=0.03, not=1.95, previously=0.04, basically=0.03, quite=0.05, easily=0.07, usually=0.13, always=0.68, certainly=0.05, commonly=0.04, typically=0.04, already=0.94, carefully=0.03, recently=0.04, finally=0.08, obviously=0.03, also=0.23, really=0.32, something=0.44, generally=0.04, beautifully=0.05, actually=0.25, never=1.52, ever=1.62, traditionally=0.04, apparently=0.03, rarely=0.04, simply=0.05, normally=0.03}
+fried : {some=1.49, not=1.11}
+stimulate : {not=0.84, also=1.39}
+pause : {not=0.85}
+square : {not=0.53, perfectly=0.3}
+correlate : {not=22.78}
+sustain : {not=4.21}
+soap : {some=0.91}
+entertain : {not=2.16}
+concentrating : {not=2.53, really=1.94}
+ease : {not=0.49, also=0.36}
+request : {not=0.67, also=0.4}
+advocating : {not=11.4}
+mike : {not=0.19}
+relied : {always=2.36, also=2.95}
+part : {always=0.06, certainly=0.05, some=0.4, probably=0.04, maybe=0.03, already=0.04, originally=0.03, say=0.02, also=0.31, infra=0.03, clearly=0.03, really=0.08, actually=0.07, never=0.05, not=0.98, perhaps=0.03, earlier=0.04, definitely=0.03, supra=0.03, usually=0.02, merely=0.02, formerly=0.02, simply=0.05}
+affiliated : {not=13.6, closely=2.24, religiously=4.28, loosely=3.21}
+envision : {not=6.61}
+point : {always=0.04, some=4.09, not=0.08, earlier=0.06, also=0.3, clearly=0.03, really=0.02, simply=0.04}
+penetrate : {not=6.88}
+tend : {always=0.25, naturally=0.2, not=0.54, also=3.53, generally=0.25}
+declining : {steadily=2.28, rapidly=1.28}
+blaming : {not=15.73}
+induced : {chemically=3.92, experimentally=3.57, environmentally=2.74}
+uphold : {not=1.85}
+frighten : {not=4.61}
+banned : {not=0.86, also=1.45, officially=0.98}
+park : {some=0.12}
+applying : {not=1.09}
+deserve : {certainly=0.51, not=6.06, also=0.88, really=1.1}
+process : {developmental=0.13, some=0.06, not=0.05}
+restore : {not=1.05}
+revenge : {some=0.89, not=1.1}
+subscribe : {not=10.59}
+built : {always=0.09, slightly=0.22, solidly=0.29, probably=0.09, already=0.48, carefully=0.1, recently=0.31, sturdily=0.1, quickly=0.12, originally=0.48, also=0.83, powerfully=0.26, really=0.14, actually=0.25, newly=0.69, ever=1.14, never=0.46, gradually=0.09, not=0.87, strongly=0.11, specially=0.22}
+noticing : {not=10.17, really=2.0}
+clear : {increasingly=0.35, some=0.22, mostly=0.04, perfectly=0.52, rather=0.04, abundantly=0.44, equally=0.14, painfully=0.12, not=4.81, extremely=0.06, too=0.2, quite=1.22, totally=0.06, always=0.27, particularly=0.09, already=0.14, fairly=0.27, also=0.45, reasonably=0.07, exactly=0.12, suddenly=0.05, entirely=0.39, something=0.06, really=0.21, never=0.11, unmistakably=0.04, especially=0.06, absolutely=0.36, relatively=0.11, completely=0.13}
+confining : {too=19.38}
+encounter : {never=0.37, ever=0.44, not=1.09, also=0.43}
+invalidate : {not=18.92}
+clean : {always=0.23, some=0.21, not=0.45, perfectly=0.19, thoroughly=0.12, too=0.33, fairly=0.11, relatively=0.22, also=0.11, completely=0.19, spotlessly=0.19, really=0.24}
+seeking : {always=0.49, not=2.02, currently=0.28, actively=1.2, aggressively=0.23, also=0.98, constantly=0.32, simply=0.3, desperately=1.27}
+dope : {some=4.23}
+cooperated : {fully=7.2}
+build : {actually=0.16, never=0.08, gradually=0.12, not=0.77, also=0.24, eventually=0.1, slowly=0.07, really=0.14}
+mean : {always=0.09, some=0.02, certainly=0.02, item=0.02, probably=0.04, automatically=0.03, also=0.22, say=0.02, really=0.5, necessarily=0.52, something=0.02, actually=0.06, never=0.02, ever=0.02, not=2.21, too=0.02, usually=0.04, simply=0.05, possibly=0.03}
+approve : {never=0.67, not=8.4}
+earn : {not=1.37, typically=0.29, also=0.31}
+fulfilling : {not=4.52}
+glad : {always=1.04, actually=0.27, certainly=0.33, not=0.27, almost=0.31, awfully=0.33, too=0.63, also=0.32, really=3.04}
+chew : {not=2.29}
+nominated : {not=2.12, frequently=0.81, also=4.23}
+behaved : {badly=2.61}
+further : {needs=0.21, lot=0.25, some=0.38, ever=0.09, not=0.23, also=0.12, something=0.07}
+interfere : {not=14.85, also=0.91}
+hurry : {not=0.56, please=1.55}
+account : {not=1.66, adequately=0.1, probably=0.11, also=0.24, together=0.16, fully=0.22}
+tolerate : {never=1.46, not=23.48}
+been : {increasingly=0.02, surely=0.01, mostly=0.02, almost=0.02, reportedly=0.02, sometimes=0.04, ago=0.01, clearly=0.03, evidently=0.01, mainly=0.01, gradually=0.01, earlier=0.01, largely=0.06, basically=0.02, quite=0.01, easily=0.01, usually=0.03, truly=0.02, officially=0.01, possibly=0.01, always=2.06, repeatedly=0.02, commonly=0.01, already=0.87, typically=0.02, literally=0.01, finally=0.04, originally=0.03, allegedly=0.01, slowly=0.01, never=2.15, ever=0.81, twice=0.01, personally=0.01, apparently=0.04, historically=0.06, consistently=0.02, rarely=0.04, hardly=0.03, supposedly=0.01, probably=0.1, rather=0.01, frequently=0.03, nearly=0.01, part=0.01, subsequently=0.01, necessarily=0.01, primarily=0.01, not=2.83, perhaps=0.01, previously=0.12, seldom=0.02, occasionally=0.01, course=0.01, somehow=0.02, scarcely=0.01, merely=0.02, hitherto=0.01, certainly=0.06, recently=0.18, effectively=0.01, again=0.02, obviously=0.04, also=0.81, lately=0.02, indeed=0.04, exactly=0.02, instead=0.01, suddenly=0.02, really=0.22, generally=0.06, actually=0.15, traditionally=0.11, definitely=0.03, undoubtedly=0.01, barely=0.02, initially=0.01, essentially=0.02, formerly=0.01, simply=0.04}
+regulated : {not=5.63, closely=1.7, tightly=2.59, loosely=1.03, heavily=2.82, federally=1.79, strictly=2.24, highly=3.75}
+resent : {not=2.37, deeply=2.11, really=2.37}
+evolved : {gradually=0.69, not=0.99, also=0.97, eventually=0.64, really=0.59, highly=1.67}
+beef : {some=0.65}
+advance : {some=0.38, not=0.84}
+crack : {some=0.61, not=0.6}
+bind : {not=3.25}
+trip : {summer=0.11}
+appreciate : {always=0.44, certainly=0.67, not=2.06, especially=0.17, also=0.63, deeply=0.23, truly=0.54, greatly=0.61, fully=1.77, really=5.65}
+scanned : {quickly=2.34}
+record : {some=0.1, not=0.28, course=0.17, also=0.11}
+examining : {closely=0.62, carefully=0.67, also=0.86}
+endorsing : {not=14.97}
+abusing : {sexually=18.46, verbally=3.35}
+jump : {not=1.03, really=0.2}
+crisp : {slightly=0.68}
+prime : {some=0.14, also=0.14}
+happen : {always=0.22, probably=0.1, sometimes=0.05, eventually=0.06, also=0.31, indeed=0.05, something=0.55, really=0.35, actually=0.26, ever=0.66, never=1.39, not=2.47, easily=0.05, usually=0.07, possibly=0.14}
+fined : {also=2.49}
+pass : {actually=0.1, ever=0.08, never=0.31, not=2.14, probably=0.15, quickly=0.08, easily=0.22, days=0.25, please=0.25, also=0.21, soon=0.13}
+devised : {ever=3.56, also=2.57}
+impact : {some=0.6, positively=0.14, not=0.19, negatively=0.27, adversely=0.14, also=0.09, significantly=0.12}
+shock : {some=0.22, not=0.22}
+milk : {some=1.14, together=0.23}
+bill : {not=0.18, maybe=0.05, say=0.06, something=0.04}
+court : {some=0.06, tout=0.05}
+easy : {always=1.17, some=0.24, particularly=0.11, remarkably=0.1, rather=0.09, fairly=0.72, comparatively=0.08, ridiculously=0.06, also=0.27, something=0.09, necessarily=0.05, really=0.54, never=0.52, not=5.88, extremely=0.12, especially=0.08, incredibly=0.11, too=2.64, surprisingly=0.21, relatively=1.76, quite=0.34, usually=0.06}
+venture : {never=0.46, not=1.43}
+meddle : {not=12.84}
+disseminated : {widely=22.88}
+prejudiced : {not=24.58}
+smiled : {always=0.28, actually=0.3, never=0.36, almost=0.63, merely=0.34, simply=0.33}
+route : {supply=0.41}
+discern : {not=3.79}
+dealt : {always=0.52, ever=1.25, never=1.82, not=1.96, already=0.49, also=1.33, really=0.64}
+mowed : {freshly=18.31}
+compare : {not=2.21, also=0.46, really=0.35}
+mirror : {not=0.24}
+depict : {not=4.46}
+bodies : {some=0.39}
+cited : {not=0.6, commonly=1.63, previously=0.93, already=0.57, frequently=5.02, widely=1.67, also=3.94, specifically=0.45, usually=0.4, hereinafter=0.59}
+liquor : {some=1.13}
+reissued : {recently=20.46}
+grasp : {not=3.31, quite=1.2, fully=1.75, really=0.64}
+spark : {some=1.38}
+grass : {some=0.47, summer=0.21}
+override : {not=4.62}
+embedded : {firmly=1.65, culturally=1.34, deeply=11.42}
+enrolled : {never=0.74, not=2.25, currently=2.77, already=0.81, also=0.79}
+spare : {some=1.08, not=1.57}
+mine : {not=3.55, really=0.14}
+mind : {never=3.9, not=0.49, really=0.09}
+replicate : {not=3.44}
+committing : {not=2.59}
+staff : {some=0.27}
+right : {surely=0.01, some=0.03, perfectly=0.02, almost=0.03, maybe=0.01, probably=0.17, ahead=0.01, part=0.02, sometimes=0.02, ago=0.01, lot=0.02, not=0.71, too=0.02, basically=0.02, course=0.01, quite=0.31, usually=0.02, totally=0.01, together=0.03, always=0.12, needs=0.03, happen=0.04, certainly=0.03, literally=0.01, again=0.02, also=0.04, say=0.08, partly=0.02, exactly=0.58, entirely=0.02, morally=0.04, something=0.17, really=0.04, actually=0.03, ever=0.01, never=0.02, especially=0.02, absolutely=0.54, days=0.02, heads=0.02, completely=0.02}
+involve : {always=0.75, not=8.71, typically=0.77, also=1.8, usually=1.14, necessarily=0.8, generally=0.32}
+stealing : {not=2.16, allegedly=0.96}
+march : {not=0.14}
+taught : {always=0.68, actually=0.25, never=0.77, ever=0.44, not=1.03, previously=0.18, already=0.17, course=0.28, also=1.73, usually=0.13, really=0.22}
+stage : {developmental=0.38, some=0.46, earlier=0.39}
+meet : {always=0.11, adequately=0.05, probably=0.05, effectively=0.05, finally=0.21, eventually=0.05, also=0.28, please=0.11, soon=0.05, really=0.07, actually=0.14, never=0.46, ever=0.49, not=2.85, quite=0.07, easily=0.05, usually=0.07, possibly=0.05}
+answer : {always=0.08, some=0.07, never=0.11, correctly=0.05, not=2.09, please=0.14, also=0.05, really=0.12}
+underscore : {also=5.21}
+overrated : {highly=11.51}
+junk : {some=1.03}
+borrow : {not=1.33}
+restored : {newly=2.16, not=1.11, lovingly=1.25, recently=1.08, completely=0.79, fully=2.51, beautifully=1.73}
+aging : {rapidly=0.5}
+thrive : {not=2.15}
+desert : {some=0.25, not=0.28}
+polarized : {increasingly=6.38, racially=6.87, highly=7.6}
+did : {surely=0.02, mostly=0.01, almost=0.1, reportedly=0.01, sometimes=0.03, quickly=0.01, ago=0.03, clearly=0.05, evidently=0.02, soon=0.01, basically=0.02, specifically=0.01, usually=0.07, truly=0.03, always=0.25, typically=0.01, already=0.04, literally=0.01, finally=0.1, originally=0.01, allegedly=0.01, something=0.04, never=0.58, ever=0.22, especially=0.01, personally=0.01, apparently=0.08, absolutely=0.02, rarely=0.03, some=0.06, maybe=0.02, probably=0.21, frequently=0.01, part=0.01, nearly=0.02, eventually=0.03, summer=0.01, perhaps=0.02, previously=0.01, too=0.03, seldom=0.01, occasionally=0.01, course=0.01, somehow=0.02, together=0.01, certainly=0.28, honestly=0.02, deliberately=0.01, recently=0.03, again=0.01, unfortunately=0.01, obviously=0.05, also=0.19, say=0.01, exactly=0.05, indeed=0.01, ultimately=0.02, suddenly=0.01, really=0.8, generally=0.03, stone=0.01, actually=0.19, definitely=0.04, days=0.01, initially=0.01, essentially=0.01, simply=0.13, normally=0.01}
+represent : {actually=0.34, not=5.9, adequately=0.31, probably=0.22, also=1.17, truly=0.17, accurately=0.36, simply=0.26, necessarily=0.82, really=0.38}
+abused : {never=1.01, not=1.33, physically=4.82, sexually=19.63, emotionally=1.01, verbally=1.14}
+compete : {never=0.3, not=4.09, also=0.44, really=0.32}
+die : {surely=0.14, some=0.11, certainly=0.09, rather=0.72, probably=0.32, almost=0.09, say=0.12, also=0.1, eventually=0.28, soon=0.17, really=0.13, actually=0.14, never=0.72, ever=0.15, not=1.83, usually=0.08, simply=0.08}
+dig : {not=0.84, really=0.71}
+putting : {always=0.3, actually=0.37, not=2.34, thereby=0.13, already=0.21, finally=0.23, basically=0.16, also=0.4, really=0.39, simply=0.31}
+rubbed : {gently=0.87}
+reappear : {not=11.04}
+dim : {some=0.93, too=1.79}
+inclined : {naturally=0.9, not=6.52, musically=1.13, artistically=0.81}
+displaced : {internally=7.21}
+promise : {some=0.59, not=0.69, also=0.21}
+believing : {not=8.11, quite=1.4, really=1.28}
+down : {slightly=0.02, some=0.02, silently=0.02, probably=0.01, almost=0.02, maybe=0.01, sharply=0.01, quickly=0.04, part=0.01, lightly=0.01, smoothly=0.01, not=0.07, swiftly=0.01, briskly=0.02, steadily=0.01, course=0.01, safely=0.02, together=0.02, always=0.01, carefully=0.02, already=0.03, again=0.01, smack=0.01, also=0.02, plunk=0.03, slowly=0.12, something=0.06, backwards=0.01, really=0.03, rapidly=0.02, actually=0.01, especially=0.01, gently=0.02, days=0.02, heads=0.13, quietly=0.01}
+hold : {always=0.17, some=0.09, probably=0.05, already=0.08, also=0.36, please=0.16, really=0.13, actually=0.13, never=0.17, ever=0.09, not=2.16, currently=0.06, barely=0.11, easily=0.07, usually=0.07, hardly=0.05, forever=0.07, simply=0.08, possibly=0.06}
+designated : {newly=0.72, not=0.96, also=0.64, specially=1.21, specifically=0.8, federally=0.64, officially=2.31}
+clue : {some=1.89}
+club : {some=0.19}
+forgotten : {some=0.66, mostly=0.27, already=0.98, almost=2.95, quickly=0.7, nearly=0.97, entirely=0.4, soon=0.63, never=3.21, not=4.38, largely=1.34, apparently=0.26, quite=0.28, easily=0.66, completely=1.52, totally=0.43, simply=0.42}
+talk : {always=0.25, some=0.26, already=0.03, probably=0.04, rather=0.12, sometimes=0.04, also=0.29, please=0.04, really=0.27, actually=0.14, never=0.34, ever=0.28, not=1.13, barely=0.05, usually=0.05, rarely=0.03, hardly=0.05, simply=0.03}
+reply : {not=5.24}
+signal : {some=0.41, not=0.57, also=0.65}
+vanish : {not=4.39, simply=4.07}
+impair : {not=11.03}
+train : {not=0.21, also=0.18, supply=0.12}
+ignored : {mostly=0.7, virtually=1.82, frequently=0.32, widely=0.36, also=0.55, entirely=0.37, generally=0.92, not=0.81, routinely=0.53, previously=0.36, largely=5.58, usually=0.42, completely=1.62, totally=1.03, simply=1.45}
+stray : {some=2.49, never=1.68, not=2.96}
+test : {some=0.14, not=0.27, post=0.17, also=0.14, really=0.07}
+count : {actually=0.16, always=0.9, never=0.29, not=2.83, probably=0.15, also=0.2, really=0.73, snap=0.15}
+exhaust : {not=3.46}
+intriguing : {some=2.67, particularly=2.1, especially=1.19}
+brown : {some=0.19, not=0.34, too=0.15, lightly=0.19}
+interfered : {never=11.89, not=11.48}
+take : {some=0.04, surely=0.02, almost=0.01, rather=0.06, probably=0.14, maybe=0.05, frequently=0.02, automatically=0.02, quickly=0.03, sometimes=0.06, eventually=0.05, soon=0.04, necessarily=0.02, regularly=0.02, not=1.94, routinely=0.02, perhaps=0.02, occasionally=0.02, basically=0.02, quite=0.02, easily=0.05, somehow=0.02, usually=0.1, possibly=0.03, always=0.18, certainly=0.04, typically=0.04, literally=0.02, finally=0.04, again=0.02, please=0.14, say=0.02, also=0.34, indeed=0.01, instead=0.02, ultimately=0.02, suddenly=0.01, really=0.19, generally=0.03, actually=0.14, never=0.25, ever=0.12, definitely=0.02, gladly=0.02, rarely=0.02, hardly=0.02, simply=0.08, normally=0.03}
+vision : {some=0.23}
+accompany : {not=1.87}
+embraced : {never=1.01, wholeheartedly=0.8, not=1.84, eagerly=0.84, enthusiastically=1.25, quickly=0.9, widely=1.15, also=2.05, fully=1.8}
+puzzled : {genuinely=1.61}
+blame : {always=0.27, some=0.98, not=2.21, also=0.33, hardly=0.44, really=0.85}
+tackle : {not=0.51}
+distract : {not=3.77}
+carrying : {always=0.33, actually=0.25, some=0.29, not=1.6, already=0.27, also=0.46}
+squeeze : {gently=0.99}
+blank : {completely=0.6}
+back : {firmly=0.01, some=0.03, slightly=0.01, probably=0.01, almost=0.02, maybe=0.01, neatly=0.01, quickly=0.03, soon=0.01, lot=0.01, not=0.09, safely=0.03, together=0.01, fully=0.01, always=0.02, already=0.02, carefully=0.01, again=0.01, finally=0.02, say=0.02, also=0.02, suddenly=0.01, slowly=0.07, something=0.12, really=0.01, actually=0.01, never=0.01, awhile=0.02, gently=0.02, days=0.02, heads=0.08, quietly=0.01, snap=0.03}
+preempt : {not=9.88}
+miss : {always=0.22, ever=0.34, never=1.02, not=2.24, probably=0.16, sometimes=0.18, also=0.26, really=1.14}
+load : {not=0.77, course=1.28}
+deceived : {not=7.53}
+bite : {not=0.95}
+ignore : {never=0.28, not=5.84, largely=0.31, completely=0.5, totally=0.33, simply=1.12}
+company : {some=0.18, part=0.08, supply=0.14}
+soften : {not=1.96}
+deteriorating : {rapidly=5.12}
+notice : {always=0.2, ever=0.82, never=0.68, some=0.18, not=2.78, barely=0.32, days=0.2, also=0.51, hardly=0.48, really=0.52}
+bloody : {not=0.72, too=0.76}
+sold : {always=0.12, probably=0.13, already=0.75, typically=0.12, recently=0.82, finally=0.19, sometimes=0.14, quickly=0.19, nearly=0.1, originally=0.16, eventually=0.3, indirectly=0.12, also=1.14, allegedly=0.1, really=0.15, actually=0.2, never=0.53, ever=0.38, not=0.71, previously=0.11, usually=0.22, completely=0.14}
+relax : {not=0.83}
+monitor : {not=0.47, closely=0.92, carefully=0.45, also=0.44, constantly=0.47, continuously=0.38, continually=0.28}
+home : {always=0.03, some=0.07, almost=0.04, already=0.03, finally=0.02, say=0.02, also=0.12, really=0.02, summer=0.13, something=0.02, never=0.04, not=0.18, heads=0.03, usually=0.02, safely=0.04}
+print : {not=0.57}
+tame : {too=5.58, relatively=3.99}
+inherit : {not=5.71}
+interpret : {not=1.76}
+baby : {some=0.16}
+iron : {some=0.24}
+grant : {not=1.57}
+explain : {adequately=0.2, briefly=0.11, probably=0.08, also=0.69, please=0.56, clearly=0.11, partly=0.19, really=0.42, never=0.19, ever=0.1, not=3.13, quite=0.14, simply=0.08, partially=0.25, fully=0.4, possibly=0.09}
+lunch : {some=0.71}
+envy : {not=2.13}
+hypothesized : {also=3.93}
+arguing : {not=5.92}
+industrialized : {newly=3.26, heavily=2.06, highly=2.82}
+appreciating : {not=10.44}
+dropped : {almost=0.39, already=0.34, recently=0.21, nearly=0.36, quickly=0.31, finally=0.36, eventually=0.35, also=0.57, suddenly=0.29, subsequently=0.15, accidentally=0.19, actually=0.32, never=0.25, not=0.27, abruptly=0.13, simply=0.26, quietly=0.15}
+discount : {not=3.34}
+convert : {not=1.19}
+construct : {not=0.58}
+fascinated : {always=4.23, also=1.03, really=1.38}
+hope : {always=0.23, certainly=0.79, never=0.1, ever=0.25, some=0.74, sincerely=0.19, not=0.34, fervently=0.05, also=0.31, truly=0.05, really=0.37, possibly=0.05}
+attempt : {never=0.16, some=0.26, not=2.3, earlier=0.12, also=0.24}
+relish : {not=6.14}
+melt : {not=1.52}
+tape : {some=0.59}
+balance : {some=0.55, not=0.22}
+testified : {never=0.97, already=1.22, also=5.02}
+supplies : {some=0.51, also=0.8}
+fathom : {not=17.26}
+bend : {not=1.97, slowly=1.27}
+lock : {not=0.81}
+pitch : {not=0.44}
+anticipated : {ever=1.09, never=2.02, not=2.52, eagerly=1.97, already=0.56, widely=1.0, originally=0.98, also=0.79, highly=2.8}
+lying : {not=2.46, already=0.28, simply=0.24}
+fear : {always=0.08, never=0.29, ever=0.07, some=0.76, not=1.11, also=0.33, really=0.13}
+fired : {actually=0.26, ever=0.34, never=0.99, not=0.56, already=0.23, recently=0.39, promptly=0.23, also=0.45, really=0.23}
+gauge : {accurately=1.2}
+underwent : {recently=2.97, also=3.54}
+made : {increasingly=0.02, mostly=0.03, almost=0.12, reportedly=0.03, sometimes=0.07, quickly=0.07, ago=0.02, clearly=0.04, constantly=0.01, soon=0.04, newly=0.03, gradually=0.02, locally=0.04, largely=0.03, basically=0.03, easily=0.03, quite=0.03, usually=0.11, truly=0.02, always=0.42, cheaply=0.02, repeatedly=0.03, successfully=0.02, commonly=0.02, already=0.52, carefully=0.03, typically=0.04, literally=0.02, finally=0.23, originally=0.04, allegedly=0.03, slowly=0.03, something=0.08, ever=0.65, never=0.8, freshly=0.04, personally=0.02, apparently=0.05, consistently=0.02, rarely=0.03, completely=0.02, hardly=0.02, some=0.04, supposedly=0.02, perfectly=0.02, probably=0.14, neatly=0.02, frequently=0.03, nearly=0.04, eventually=0.08, subsequently=0.02, finely=0.02, primarily=0.02, commercially=0.02, seemingly=0.02, not=0.77, perhaps=0.02, previously=0.03, occasionally=0.02, course=0.02, somehow=0.06, together=0.02, certainly=0.08, deliberately=0.01, recently=0.13, effectively=0.01, again=0.05, obviously=0.03, also=0.98, indeed=0.02, instead=0.02, ultimately=0.03, suddenly=0.05, really=0.31, generally=0.03, beautifully=0.03, actually=0.25, definitely=0.03, traditionally=0.02, barely=0.09, initially=0.03, specially=0.05, essentially=0.02, simply=0.06, quietly=0.02}
+chop : {coarsely=8.96, roughly=1.72, finely=8.28}
+sense : {some=2.19, not=0.08, also=0.04}
+cream : {some=0.28}
+undercut : {not=3.33}
+protest : {not=1.09}
+removing : {not=0.82}
+hoping : {always=0.57, actually=0.35, perhaps=0.38, probably=0.41, also=1.26, clearly=0.39, really=1.49, desperately=0.36, secretly=0.35}
+accompanied : {always=1.54, not=2.15, sometimes=1.02, also=1.06, usually=1.5}
+scraping : {occasionally=11.85}
+afford : {actually=0.17, never=0.4, not=13.9, barely=0.32, easily=0.28, hardly=0.23, really=0.56, possibly=0.21}
+industrializing : {newly=70.0, rapidly=30.0}
+field : {some=0.1}
+explored : {never=0.71, not=2.27, thoroughly=1.08, also=3.46, fully=2.3}
+served : {always=0.3, probably=0.12, already=0.53, recently=0.25, also=3.72, really=0.1, actually=0.3, never=0.62, ever=0.27, not=0.65, traditionally=0.23, previously=0.44, usually=0.23, formerly=0.11}
+legitimate : {some=1.16, not=1.06, perfectly=1.67, quite=0.33, entirely=0.3}
+impede : {not=9.46}
+evaluate : {critically=0.79, properly=0.37, not=1.1, fully=0.4}
+dog : {some=0.14}
+shield : {not=0.8}
+upset : {particularly=0.5, already=0.21, terribly=0.56, also=0.55, obviously=0.27, clearly=0.38, really=3.36, not=1.65, extremely=0.7, too=1.17, visibly=0.6, quite=0.8, deeply=0.25, emotionally=0.28}
+enforcing : {not=7.11}
+curve : {supply=1.11}
+glanced : {barely=0.76}
+skin : {some=0.21}
+deliver : {actually=0.34, not=1.65, also=0.45, really=0.27}
+skip : {not=1.3}
+notify : {not=3.33, please=2.64}
+summer : {some=0.09}
+mention : {always=0.15, never=0.68, some=0.29, ever=0.34, not=4.96, also=0.68, specifically=0.16, rarely=0.15}
+mad : {some=0.42, not=2.21, too=0.36, quite=0.35, completely=0.29, really=2.23}
+file : {not=0.95}
+known : {some=0.05, sometimes=0.17, universally=0.06, primarily=0.05, not=3.21, locally=0.06, previously=0.24, usually=0.07, fully=0.1, officially=0.13, always=1.04, commonly=0.74, already=0.5, nationally=0.39, widely=1.08, originally=0.08, also=3.98, internationally=0.26, publicly=0.1, technically=0.05, exactly=0.05, really=0.2, something=0.07, generally=0.23, actually=0.06, never=1.78, ever=2.01, currently=0.09, popularly=0.26, affectionately=0.14, barely=0.07, hardly=0.07, collectively=0.16, formerly=0.57, formally=0.12, simply=0.06}
+advocated : {never=2.26, strongly=2.26, also=2.96}
+recur : {not=22.23}
+generalize : {not=14.45}
+accumulate : {not=2.48}
+man : {some=0.09, not=0.04}
+stand : {actually=0.08, always=0.16, never=0.16, ever=0.07, not=2.68, probably=0.06, barely=0.24, please=0.31, also=0.19, hardly=0.27, really=0.21, simply=0.08}
+competed : {also=3.14}
+grease : {generously=1.87, lightly=6.96}
+characterized : {not=0.52, also=1.96, generally=0.57}
+contemplated : {ever=4.04, never=4.34, not=4.19}
+may : {some=0.38, sometimes=0.02, part=0.02, ago=0.03, eventually=0.02, supply=0.02, soon=0.03, summer=0.01, not=0.01, perhaps=0.01, too=0.03, course=0.02, together=0.02, needs=0.03, certainly=0.02, item=0.01, already=0.02, again=0.02, finally=0.01, also=0.48, say=0.04, indeed=0.02, ultimately=0.03, something=0.04, really=0.02, actually=0.05, days=0.04, simply=0.02}
+supplied : {not=1.13, also=2.84}
+forward : {slightly=0.28, not=0.07, too=0.08, slowly=0.15}
+could : {some=0.03, surely=0.01, probably=0.14, maybe=0.01, almost=0.02, sometimes=0.01, quickly=0.01, part=0.01, ago=0.02, eventually=0.02, clearly=0.01, conceivably=0.02, supply=0.01, summer=0.01, soon=0.02, lot=0.01, perhaps=0.02, too=0.03, easily=0.05, course=0.02, somehow=0.01, together=0.02, possibly=0.08, needs=0.01, always=0.01, certainly=0.08, literally=0.02, again=0.01, finally=0.01, obviously=0.01, also=0.17, say=0.04, ultimately=0.02, suddenly=0.01, really=0.15, something=0.04, stone=0.01, actually=0.03, never=0.18, ever=0.06, definitely=0.01, apparently=0.01, absolutely=0.01, days=0.02, hardly=0.01, simply=0.12, potentially=0.02}
+strike : {not=1.47}
+trigger : {not=0.95, also=1.06}
+joking : {always=1.86, not=7.89}
+budging : {not=44.65}
+return : {always=0.16, never=0.59, some=0.07, ever=0.22, not=2.99, please=0.12, eventually=0.15, also=0.14, slowly=0.17, simply=0.06, soon=0.09}
+forged : {also=1.99}
+approximating : {something=100.0}
+mail : {some=0.47, please=0.29}
+use : {increasingly=0.02, some=0.13, maybe=0.02, rather=0.03, probably=0.07, frequently=0.05, sometimes=0.08, regularly=0.04, not=1.3, routinely=0.05, actively=0.02, easily=0.02, usually=0.06, possibly=0.02, always=0.22, certainly=0.03, successfully=0.02, commonly=0.03, typically=0.06, already=0.05, effectively=0.04, again=0.02, please=0.05, also=0.53, instead=0.02, really=0.11, generally=0.05, actually=0.16, ever=0.11, never=0.3, definitely=0.02, currently=0.04, rarely=0.04, simply=0.05, normally=0.04}
+subject : {always=0.15, not=1.62, also=0.27}
+eliminating : {not=1.46, thereby=2.39, virtually=1.02}
+feel : {some=0.12, almost=0.33, probably=0.11, frequently=0.02, sometimes=0.19, practically=0.02, clearly=0.03, necessarily=0.03, soon=0.03, not=1.73, somehow=0.03, usually=0.04, truly=0.06, always=0.4, certainly=0.08, honestly=0.03, already=0.11, literally=0.03, again=0.03, finally=0.05, please=0.04, also=0.37, suddenly=0.07, really=0.94, generally=0.04, actually=0.23, never=0.25, ever=0.3, definitely=0.07, personally=0.08, strongly=0.02, barely=0.03, hardly=0.03, simply=0.04}
+serve : {actually=0.23, always=0.13, never=0.13, not=2.07, probably=0.09, effectively=0.13, also=2.02, ultimately=0.08, really=0.09}
+drown : {not=2.86}
+liked : {always=3.74, actually=0.43, ever=0.12, never=3.2, not=0.37, particularly=0.54, especially=0.61, rather=0.25, genuinely=0.15, quite=0.14, also=1.34, really=3.44}
+smile : {always=0.13, never=0.13, not=0.59}
+radio : {some=0.21}
+confused : {slightly=0.37, thoroughly=0.35, sometimes=0.64, hopelessly=0.35, also=0.37, really=0.88, not=0.71, too=0.84, easily=0.47, somewhat=0.64, completely=0.44, momentarily=0.45, totally=1.04}
+individualized : {highly=6.47}
+fine : {some=0.66, not=0.34, perfectly=0.83, extremely=0.12, particularly=0.14, especially=0.08, too=0.44, absolutely=0.19, also=0.09, say=0.08, totally=0.08, really=0.33}
+concentrated : {increasingly=0.74, not=0.9, heavily=1.2, highly=4.16}
+find : {some=0.08, increasingly=0.03, surely=0.03, probably=0.2, maybe=0.03, frequently=0.04, sometimes=0.1, quickly=0.07, eventually=0.1, soon=0.14, not=1.78, perhaps=0.02, occasionally=0.02, easily=0.1, somehow=0.05, usually=0.13, possibly=0.04, always=0.35, certainly=0.04, typically=0.03, again=0.03, finally=0.07, also=0.55, please=0.04, suddenly=0.1, really=0.11, generally=0.04, actually=0.12, never=0.49, ever=0.31, personally=0.02, consistently=0.02, rarely=0.04, hardly=0.04, simply=0.04, normally=0.02}
+host : {also=0.33}
+grain : {some=0.55}
+credit : {some=1.15, not=0.17, course=0.5, also=0.11}
+combine : {also=0.64}
+alter : {fundamentally=1.75, not=7.07, drastically=0.8, also=1.0, dramatically=1.24, substantially=0.54, significantly=1.86, radically=1.49}
+waste : {not=1.14}
+motivated : {not=3.04, ideologically=0.69, religiously=1.11, extrinsically=0.54, strongly=0.65, intrinsically=1.69, also=0.98, racially=3.1, politically=8.75, really=0.81, primarily=0.63, highly=6.75}
+occur : {always=0.25, commonly=0.18, typically=0.44, frequently=0.23, sometimes=0.32, also=1.64, generally=0.18, actually=0.3, ever=0.79, never=0.72, naturally=0.18, not=8.53, usually=0.69, rarely=0.17}
+drove : {actually=0.18, always=0.33, never=0.22, almost=0.24, recently=0.18, nearly=0.42, finally=0.3, also=0.3, really=0.19}
+spurred : {also=6.72}
+illustrate : {also=1.56, clearly=0.77}
+dry : {some=0.43, not=0.44, extremely=0.17, thoroughly=0.15, too=1.08, almost=0.25, nearly=0.15, relatively=0.27, quite=0.17, completely=0.6, suddenly=0.15, really=0.15}
+sort : {actually=0.12, always=0.17, some=13.92, not=0.17, already=0.05, basically=0.05, also=0.11, really=0.53, something=0.06}
+pressure : {some=0.65, not=0.11, also=0.07}
+breeze : {summer=1.46}
+film : {some=0.21, earlier=0.08}
+fill : {never=0.18, not=0.85, also=0.24, please=0.16, simply=0.16}
+heart : {some=0.09}
+numb : {too=4.21}
+trash : {some=0.63}
+undergone : {not=2.15, already=2.04, recently=1.47, also=1.36}
+feed : {not=1.02, also=0.38}
+forget : {always=0.3, ever=1.59, never=13.92, not=6.92, almost=0.31, rather=0.3, quickly=0.16, sometimes=0.53, easily=0.18, say=0.15, completely=0.12, soon=0.67}
+eroded : {seriously=2.68}
+originate : {not=18.23}
+task : {some=0.14, developmental=0.2}
+dubbed : {affectionately=2.03, quickly=2.53}
+infer : {not=4.9}
+remarried : {never=13.49}
+position : {o'clock=0.05, some=0.06, post=0.05}
+present : {always=0.52, typically=0.06, already=0.35, also=0.8, clearly=0.07, really=0.07, actually=0.12, naturally=0.07, ever=0.35, not=1.74, physically=0.19, usually=0.12, fully=0.11}
+belong : {actually=0.38, not=10.74, also=0.77, really=1.27}
+best : {always=0.07, not=0.05, perhaps=0.27, probably=0.21, also=0.03, usually=0.04, really=0.02}
+mess : {not=0.68, really=0.34}
+conceive : {not=11.63}
+sour : {slightly=0.77, something=0.8}
+navigated : {successfully=25.0}
+ball : {some=0.09, stone=0.08}
+transform : {not=1.08, completely=0.55, radically=0.6}
+advise : {not=1.79, strongly=1.09, please=1.62, also=1.66}
+repeat : {never=0.51, not=3.02, please=0.5, simply=0.43}
+smoking : {not=1.84}
+troubled : {not=1.22, particularly=0.56, already=0.47, also=0.6, deeply=3.36, emotionally=0.42, financially=1.71}
+make : {surely=0.01, almost=0.03, quickly=0.02, sometimes=0.05, clearly=0.01, soon=0.03, regularly=0.01, inevitably=0.01, easily=0.05, quite=0.06, usually=0.05, truly=0.02, possibly=0.05, always=0.2, successfully=0.01, typically=0.02, already=0.02, literally=0.02, finally=0.04, please=0.06, slowly=0.01, someday=0.01, ever=0.13, never=0.29, rarely=0.03, hardly=0.03, some=0.03, probably=0.09, rather=0.02, maybe=0.03, frequently=0.01, automatically=0.02, eventually=0.05, necessarily=0.06, not=1.66, perhaps=0.02, occasionally=0.02, hopefully=0.01, somehow=0.04, together=0.03, certainly=0.05, again=0.02, say=0.02, obviously=0.01, also=0.43, exactly=0.02, indeed=0.02, ultimately=0.03, suddenly=0.01, really=0.28, generally=0.02, actually=0.18, definitely=0.02, barely=0.07, simply=0.04, normally=0.01}
+met : {needs=0.28, always=0.1, already=0.36, probably=0.07, recently=0.23, finally=0.39, also=0.76, really=0.1, actually=0.42, ever=2.89, never=6.19, not=1.16, rarely=0.09, fully=0.07}
+mesh : {not=2.48}
+heard : {always=0.25, certainly=0.08, commonly=0.05, already=0.42, probably=0.33, recently=0.09, frequently=0.06, finally=0.09, again=0.04, sometimes=0.05, also=0.67, clearly=0.06, distinctly=0.04, suddenly=0.06, really=0.15, actually=0.19, never=6.62, ever=3.44, not=1.37, seldom=0.05, barely=0.17, rarely=0.1, hardly=0.06}
+repeal : {not=1.86}
+falling : {actually=0.28, always=0.29, not=1.25, already=0.35, almost=0.45, literally=0.24, nearly=0.31, slowly=0.19, rapidly=0.21, really=0.23}
+diversified : {highly=3.85}
+sought : {always=0.56, recently=0.32, originally=0.24, aggressively=0.29, also=3.31, unsuccessfully=0.26, desperately=0.35, never=1.18, ever=0.24, not=0.88, eagerly=0.54, actively=1.03, initially=0.25, highly=0.45}
+structure : {some=0.26, course=0.2, stone=0.28}
+master : {some=0.22, not=0.3}
+witness : {not=0.47, also=0.23}
+jibe : {not=31.47}
+conform : {not=14.25}
+dug : {newly=0.81, freshly=1.77, already=0.94, also=0.81, really=0.81}
+relent : {not=37.64}
+breast : {some=0.25}
+fence : {stone=0.45}
+curl : {slowly=2.64}
+inform : {not=2.46, please=0.83, also=1.12}
+depend : {always=0.4, not=6.76, also=2.02, ultimately=0.63, really=0.49}
+woke : {never=1.24, finally=0.51}
+glue : {some=1.21}
+intertwined : {closely=9.31, inextricably=9.31, deeply=4.17}
+commit : {never=0.5, not=6.04}
+scream : {not=1.24}
+cure : {not=2.11}
+giddy : {almost=11.02}
+bullshit : {some=4.31}
+observed : {closely=0.42, commonly=0.29, carefully=0.32, already=0.28, frequently=0.49, recently=0.56, widely=0.2, also=2.36, actually=0.26, never=0.44, ever=0.43, not=1.64, previously=0.31, easily=0.33}
+quoted : {frequently=0.83, widely=2.24, also=1.77}
+cover : {always=0.09, some=0.2, not=1.51, loosely=0.09, barely=0.14, also=0.44, completely=0.19, really=0.08, partially=0.17, stone=0.09}
+firm : {some=0.1, slightly=0.12, not=0.08, too=0.12}
+bank : {some=0.11}
+reflect : {always=0.37, adequately=0.21, closely=0.23, probably=0.27, also=2.3, clearly=0.26, accurately=1.52, necessarily=1.55, really=0.43, actually=0.22, not=6.64, truly=0.2, merely=0.36, simply=0.99, fully=0.21}
+character : {some=0.26}
+bang : {bang=3.95}
+divulge : {not=14.01}
+eluded : {always=6.46}
+fire : {some=0.15, not=0.33}
+stick : {always=0.33, not=0.72, please=0.17, really=0.24}
+dissolved : {completely=2.89}
+covet : {not=36.99}
+released : {already=0.27, recently=3.21, finally=0.75, eventually=0.3, also=0.74, publicly=0.16, suddenly=0.16, newly=1.2, ever=0.18, never=0.36, not=1.44, previously=0.18, officially=0.18}
+sticking : {not=2.02}
+moderate : {some=0.67, not=0.44, too=0.43, relatively=0.69}
+comprise : {together=3.29}
+based : {mostly=0.1, academically=0.06, probably=0.08, part=0.1, clearly=0.08, genetically=0.14, continually=0.23, regionally=0.07, mainly=0.07, primarily=0.18, not=1.81, locally=0.3, differently=0.06, largely=0.41, culturally=0.19, course=0.07, biologically=0.15, usually=0.24, empirically=0.3, always=0.09, religiously=0.12, typically=0.06, spiritually=0.07, also=0.47, racially=0.1, partly=0.15, solely=0.08, really=0.16, generally=0.08, actually=0.08, biblically=0.09, currently=0.07, apparently=0.08, ethnically=0.12, loosely=0.41, broadly=0.26, scientifically=0.19, simply=0.07}
+sleeps : {never=12.75}
+spray : {lightly=1.06}
+distinguish : {not=6.54, easily=0.51, also=0.59, clearly=0.79}
+invent : {not=7.6}
+savvy : {some=1.81, politically=6.12, technologically=2.75}
+frozen : {some=0.46, not=0.64, nearly=0.31, partially=0.38}
+received : {always=0.15, already=0.67, recently=0.93, reportedly=0.12, finally=0.25, also=2.14, eventually=0.11, allegedly=0.08, subsequently=0.09, warmly=0.21, actually=0.23, ever=0.64, never=1.38, not=2.01, previously=0.13, enthusiastically=0.1, initially=0.08}
+execute : {not=2.43, faithfully=1.81}
+demarcated : {clearly=100.0}
+flood : {not=0.5}
+benefit : {actually=0.33, some=0.67, not=1.24, also=1.28, clearly=0.12, ultimately=0.15, greatly=0.23, really=0.3}
+labor : {some=0.23}
+wield : {not=4.37}
+boost : {also=0.81, significantly=0.39}
+except : {everywhere=1.08, again=0.44, say=0.52, anywhere=1.17}
+shower : {summer=0.37}
+shelter : {some=0.54}
+examine : {critically=0.56, not=1.18, closely=0.53, carefully=0.46, briefly=0.19, also=0.99}
+participated : {actually=0.71, never=1.31, ever=0.69, not=1.95, actively=1.97, also=4.02}
+eliminate : {not=4.29, virtually=0.58, eventually=0.34, also=0.66, completely=1.08}
+believe : {firmly=0.29, some=0.43, sincerely=0.09, rather=0.03, almost=0.07, genuinely=0.05, clearly=0.03, necessarily=0.05, not=4.08, quite=0.14, deeply=0.04, scarcely=0.07, truly=0.37, totally=0.04, fully=0.04, possibly=0.03, always=0.09, certainly=0.07, honestly=0.2, already=0.06, please=0.05, also=0.64, seriously=0.04, really=1.5, generally=0.06, actually=0.19, ever=0.08, never=0.19, personally=0.15, definitely=0.03, apparently=0.03, strongly=0.16, absolutely=0.06, mistakenly=0.04, barely=0.03, hardly=0.28, simply=0.04}
+long : {some=0.09, sufficiently=0.02, rather=0.04, equally=0.02, sometimes=0.02, ridiculously=0.02, unusually=0.04, summer=0.08, extraordinarily=0.02, not=1.7, extremely=0.04, too=3.0, surprisingly=0.03, quite=0.04, together=0.04, particularly=0.02, already=0.03, fairly=0.04, exceptionally=0.02, also=0.03, really=0.12, something=0.04, incredibly=0.03, especially=0.02, impossibly=0.04, awfully=0.04, days=0.03, relatively=0.06, overly=0.02}
+remember : {always=1.06, certainly=0.05, probably=0.16, almost=0.04, also=0.51, please=0.27, clearly=0.09, distinctly=0.08, suddenly=0.06, really=0.28, actually=0.1, ever=0.29, never=0.3, fondly=0.07, not=2.14, vividly=0.11, barely=0.17, quite=0.11, hardly=0.12, vaguely=0.08}
+fell : {always=0.21, some=0.11, almost=1.09, literally=0.11, quickly=0.35, again=0.13, nearly=0.69, finally=0.57, also=0.59, eventually=0.2, suddenly=0.24, soon=0.33, really=0.18, something=0.16, actually=0.44, never=0.38, ever=0.12, apparently=0.13, promptly=0.15, simply=0.19}
+entitle : {not=32.88}
+outline : {course=1.01}
+fade : {never=1.41, not=3.5, slowly=1.51}
+retaliate : {not=7.8}
+examined : {never=0.25, not=1.2, thoroughly=0.35, closely=0.7, carefully=0.74, recently=0.3, specifically=0.33, also=3.42}
+free : {always=0.08, some=0.29, mostly=0.04, perfectly=0.06, remarkably=0.07, almost=0.08, virtually=0.13, nearly=0.07, finally=0.12, also=0.17, entirely=0.13, suddenly=0.05, really=0.11, generally=0.04, never=0.06, not=0.87, too=0.06, largely=0.11, absolutely=0.12, relatively=0.3, essentially=0.06, completely=0.29, truly=0.16, totally=0.14}
+mix : {some=0.22, never=0.21, not=0.97, gently=0.37, also=0.25}
+ought : {probably=0.5, also=0.3, really=1.97}
+dirty : {some=0.63, not=0.57, too=0.84, something=0.34, really=0.44}
+bother : {never=0.75, ever=0.48, not=5.72, really=1.02}
+prosper : {not=3.58}
+invade : {not=4.34}
+middle : {solidly=0.04, some=0.19}
+star : {some=0.11, also=0.13}
+intervening : {not=2.52}
+weary : {too=2.94}
+toppled : {nearly=4.41}
+appeal : {some=0.37, not=1.23, also=0.29}
+people : {some=3.29, mostly=0.01, probably=0.01, maybe=0.05, sometimes=0.1, ago=0.01, eventually=0.01, clearly=0.01, summer=0.02, soon=0.01, lot=0.02, not=0.08, perhaps=0.02, basically=0.01, course=0.01, somehow=0.01, usually=0.02, together=0.01, always=0.02, needs=0.01, certainly=0.02, particularly=0.01, already=0.01, say=0.04, also=0.03, obviously=0.01, please=0.01, suddenly=0.01, something=0.04, really=0.01, generally=0.01, especially=0.02, days=0.01, whereby=0.01}
+stay : {always=0.24, never=0.13, ever=0.05, some=0.05, not=1.06, probably=0.13, rather=0.22, please=0.74, also=0.09, usually=0.1, really=0.07, simply=0.07}
+controlled : {closely=0.34, centrally=0.42, democratically=0.53, carefully=1.9, numerically=0.46, effectively=0.46, also=0.71, strictly=0.92, precisely=0.29, not=2.17, largely=0.44, tightly=2.94, electronically=1.01, barely=0.48, easily=0.73, completely=0.42, totally=0.28, remotely=0.43, highly=0.48}
+evolve : {not=2.92}
+appear : {always=0.19, magically=0.14, some=0.18, already=0.1, frequently=0.14, sometimes=0.3, also=1.48, indeed=0.1, suddenly=0.39, soon=0.13, actually=0.17, never=0.33, ever=0.13, not=10.35, initially=0.12, usually=0.29}
+face : {always=0.02, some=0.04, ever=0.05, never=0.03, not=0.26, rather=0.03, already=0.03, again=0.03, sometimes=0.03, also=0.22, soon=0.05, stone=0.08}
+abandon : {never=1.26, not=6.49}
+negate : {not=27.84}
+inspire : {not=3.42, also=1.02}
+associated : {frequently=0.31, sometimes=0.11, clearly=0.13, primarily=0.11, necessarily=0.1, not=1.8, positively=1.18, previously=0.12, negatively=0.75, usually=1.05, highly=0.14, always=0.35, closely=1.84, particularly=0.1, commonly=0.81, typically=0.56, intimately=0.15, also=0.97, generally=0.41, traditionally=0.38, strongly=0.81, consistently=0.17, independently=0.13, inversely=0.16, significantly=1.66, normally=0.46}
+fish : {some=0.61, not=0.14}
+showed : {always=0.21, certainly=0.12, already=0.1, recently=0.21, again=0.18, finally=0.28, ago=0.12, also=3.59, clearly=0.4, suddenly=0.1, really=0.33, actually=0.28, never=1.7, ever=0.21, consistently=0.14, proudly=0.15}
+progress : {some=2.74, not=0.39}
+invite : {not=2.28, also=1.17}
+open : {increasingly=0.03, some=0.06, slightly=0.16, maybe=0.03, soon=0.03, not=0.78, too=0.06, quite=0.08, usually=0.04, truly=0.04, totally=0.03, fully=0.09, officially=0.04, always=0.27, already=0.08, fairly=0.04, finally=0.04, please=0.05, also=0.2, partly=0.07, entirely=0.03, suddenly=0.05, slowly=0.05, really=0.1, generally=0.03, actually=0.05, never=0.1, ever=0.04, barely=0.04, relatively=0.1, completely=0.12, partially=0.09, simply=0.04, normally=0.03, snap=0.06}
+justifying : {not=8.99}
+coordinated : {not=2.07, carefully=1.64}
+devote : {not=2.28}
+treat : {always=0.2, never=0.19, not=1.89, also=0.17}
+starving : {not=3.1}
+approximate : {closely=4.18}
+invest : {not=1.46, also=0.48}
+project : {some=0.12, not=0.09}
+ice : {some=1.08}
+budge : {not=13.71}
+restrain : {not=3.51}
+wood : {some=0.34}
+bare : {almost=0.42, nearly=0.51, completely=0.48}
+ruin : {not=1.42}
+hesitated : {never=4.23, not=2.51}
+surprise : {some=0.62, not=1.51, really=0.14}
+admitted : {newly=0.36, never=1.54, ever=0.47, not=1.15, openly=0.52, readily=0.69, already=0.45, recently=0.52, finally=1.88, also=1.58, publicly=0.36, freely=0.59}
+celebrate : {not=1.07, also=0.76}
+spill : {not=0.91}
+sealed : {tightly=3.59, completely=1.16, hermetically=6.33}
+invited : {actually=0.23, always=0.29, ever=0.3, never=0.74, not=2.62, recently=0.37, also=1.07}
+felt : {some=0.1, keenly=0.06, almost=0.19, probably=0.11, sometimes=0.15, clearly=0.08, soon=0.06, instantly=0.04, not=0.27, too=0.05, somehow=0.04, deeply=0.26, usually=0.04, truly=0.07, always=1.8, certainly=0.09, honestly=0.04, already=0.14, finally=0.08, widely=0.05, again=0.06, obviously=0.05, also=0.71, suddenly=0.51, really=0.73, something=0.04, generally=0.05, actually=0.23, never=2.06, ever=0.57, definitely=0.05, apparently=0.07, strongly=0.07, barely=0.06, rarely=0.03, hardly=0.04, simply=0.06}
+alienated : {increasingly=3.76}
+wont : {probably=2.1}
+please : {not=1.2, say=0.8, please=0.97}
+replacing : {not=2.05}
+finding : {always=0.28, actually=0.11, increasingly=0.11, never=0.11, ever=0.17, not=1.28, finally=0.22, also=0.39, suddenly=0.16, simply=0.16}
+look : {some=0.04, increasingly=0.02, almost=0.03, probably=0.06, rather=0.02, maybe=0.02, sometimes=0.03, quickly=0.02, necessarily=0.02, not=1.32, quite=0.02, usually=0.04, always=0.31, certainly=0.04, already=0.02, finally=0.02, again=0.02, please=0.05, say=0.08, also=0.28, exactly=0.02, suddenly=0.02, really=0.31, generally=0.02, actually=0.12, never=0.19, ever=0.1, definitely=0.02, barely=0.02, hardly=0.03, simply=0.05}
+troubling : {some=2.4, particularly=2.71, especially=2.48, equally=1.52, also=1.16, deeply=2.2, something=0.92}
+injuring : {seriously=7.02}
+announced : {not=0.68, previously=0.63, already=1.07, recently=3.65, finally=0.32, also=2.19, publicly=0.68, proudly=0.27, suddenly=0.25, formally=0.52, officially=0.56}
+achieving : {not=1.41}
+disrupt : {not=3.63, also=1.49}
+slept : {actually=0.38, always=0.8, never=2.75, ever=0.84, not=1.44, barely=0.54, hardly=0.78}
+campaign : {some=0.12, not=0.13}
+judging : {not=3.84}
+staring : {not=0.4}
+trimmed : {neatly=14.24}
+conflict : {some=0.26, not=0.46}
+farewell : {say=6.57}
+allow : {always=0.16, actually=0.08, never=0.7, ever=0.13, not=8.55, probably=0.07, also=1.02, eventually=0.08, please=0.16, really=0.09, simply=0.11}
+installed : {newly=2.99, properly=0.58, not=0.69, already=1.6, recently=2.3, originally=0.48, also=1.35, permanently=0.61}
+defer : {not=3.47}
+rough : {some=2.25, particularly=0.25, too=1.84, really=1.1}
+knock : {not=0.57}
+scheduled : {regularly=3.37, not=1.13, currently=0.24, previously=0.46, already=0.65, originally=1.25, also=0.98}
+begging : {not=2.33, practically=2.73}
+mass : {o'clock=0.18, some=0.15, not=0.11, say=0.16}
+detect : {not=2.92, also=0.58}
+rule : {some=0.15, not=2.19, ja=0.33}
+condemn : {not=7.25}
+bitter : {increasingly=0.66, some=0.6, slightly=0.93, not=2.07, particularly=0.5, too=0.68}
+speed : {some=0.21, not=0.13}
+gesture : {some=0.78}
+admit : {never=1.37, ever=0.49, not=3.13, openly=0.22, readily=0.72, also=0.48, publicly=0.19, freely=0.53}
+damaging : {extremely=1.09, particularly=1.21, especially=1.25, environmentally=2.42, politically=0.94, seriously=0.9, potentially=5.06}
+interest : {some=0.52, not=0.14}
+wonder : {always=0.49, some=0.53, ever=1.12, not=0.2, sometimes=0.48, also=0.33, really=0.19}
+mask : {not=0.66}
+entail : {not=14.18, also=3.14, necessarily=4.27}
+surfaced : {also=2.45}
+apply : {always=0.21, actually=0.21, not=8.35, easily=0.18, also=1.37, necessarily=0.24, really=0.26, simply=0.19}
+overlook : {not=7.04}
+starved : {nearly=6.63}
+disclosing : {not=16.72}
+separated : {not=1.33, physically=0.63, legally=0.47, recently=0.63, widely=2.27, easily=0.48, completely=0.56}
+ratified : {not=8.25}
+foreseen : {not=9.53}
+raped : {repeatedly=1.35, brutally=1.24, allegedly=0.88}
+disagree : {not=1.77, strongly=10.22, also=0.49, completely=0.76, totally=1.18, really=0.6, respectfully=1.3}
+step : {never=0.09, not=0.33, please=0.13, really=0.07}
+comment : {some=0.45, not=4.79, also=0.16, really=0.17}
+mark : {not=0.4, also=0.25}
+stem : {not=1.18, also=0.47}
+base : {not=0.2, supply=0.09}
+endanger : {not=6.88}
+employ : {not=3.41, also=1.57}
+guns : {some=0.39}
+diffused : {widely=20.0}
+fair : {always=0.2, some=0.11, not=6.56, perfectly=0.13, probably=0.2, quite=0.18, also=0.17, hardly=0.12, entirely=0.15, really=0.35}
+stepping : {not=2.1}
+consist : {not=6.02, usually=2.41}
+humor : {some=1.17}
+relate : {not=3.47, also=0.83, really=1.21}
+enable : {not=1.24, also=1.84}
+price : {some=0.1, not=0.08}
+controlling : {not=1.29}
+competing : {not=1.85, sometimes=0.57, also=0.85}
+still : {some=0.15, perfectly=0.16, probably=0.26, maybe=0.02, sometimes=0.03, ago=0.02, clearly=0.03, lot=0.02, not=0.09, utterly=0.03, perhaps=0.03, too=0.02, quite=0.04, somehow=0.03, certainly=0.03, say=0.02, also=0.1, obviously=0.04, indeed=0.02, suddenly=0.02, something=0.04, really=0.05, actually=0.04, never=0.02, definitely=0.02, apparently=0.05, absolutely=0.06, days=0.02, completely=0.05}
+worn : {badly=0.48, always=0.87, ever=1.14, never=1.83, not=1.26, too=0.8, already=0.48}
+dizzy : {too=2.16}
+work : {some=0.34, rather=0.03, probably=0.03, sometimes=0.02, eventually=0.02, necessarily=0.03, summer=0.02, gradually=0.02, not=0.97, earlier=0.13, freelance=0.02, actively=0.02, quite=0.04, course=0.17, usually=0.05, possibly=0.02, always=0.16, needs=0.05, typically=0.02, already=0.01, also=0.19, slowly=0.02, really=0.21, generally=0.02, actually=0.13, ever=0.05, never=0.14, currently=0.01, days=0.02, rarely=0.01}
+arise : {not=4.6, inevitably=0.84, also=1.48}
+lose : {always=0.23, certainly=0.08, rather=0.16, probably=0.34, quickly=0.11, sometimes=0.13, eventually=0.16, also=0.39, slowly=0.08, suddenly=0.1, really=0.17, soon=0.13, actually=0.19, ever=0.21, never=0.86, gradually=0.1, not=2.25, easily=0.15, completely=0.1, possibly=0.09}
+constitute : {not=17.84, also=0.95, together=0.79}
+focusing : {not=2.39, also=0.63, really=1.22}
+agree : {probably=0.37, readily=0.09, necessarily=0.32, not=4.24, wholeheartedly=0.12, largely=0.08, basically=0.1, quite=0.2, usually=0.08, totally=0.63, fully=0.23, always=0.63, certainly=0.47, finally=0.11, also=0.68, entirely=0.08, really=0.19, generally=0.44, actually=0.21, ever=0.14, never=0.28, definitely=0.15, strongly=1.94, absolutely=0.35, completely=0.45}
+facilitating : {thereby=3.19}
+filing : {not=1.13}
+fail : {always=0.34, never=1.43, not=3.93, probably=0.35, sometimes=0.53, also=0.9, usually=0.31, ultimately=0.42, simply=0.32}
+indict : {not=6.48}
+hydrogenated : {partially=100.0}
+convince : {never=0.33, ever=0.3, not=1.59}
+pride : {some=0.94}
+terminate : {not=2.96}
+breakfast : {some=1.36}
+wore : {always=3.04, actually=0.19, ever=0.31, never=1.39, some=0.3, also=0.81, rarely=0.2, usually=0.5}
+word : {some=0.11, almost=0.05}
+danced : {never=1.43}
+love : {always=0.28, some=0.11, probably=0.03, say=0.03, also=0.22, really=0.75, actually=0.04, never=0.08, ever=0.07, not=0.51, especially=0.05, absolutely=0.14, truly=0.09, simply=0.04, dearly=0.08}
+broadcast : {not=0.56, also=0.37}
+steep : {too=3.73}
+quadrupled : {nearly=14.72}
+hoped : {always=1.19, ever=0.48, originally=0.24, also=0.77, really=0.27}
+seize : {not=1.21}
+church : {some=0.18, stone=0.1}
+isolated : {some=0.78, increasingly=1.28, not=2.52, too=0.63, socially=1.71, largely=0.35, relatively=0.85, somewhat=0.46, completely=1.06, geographically=0.61, totally=0.55}
+enjoy : {always=0.48, thoroughly=0.17, particularly=0.22, already=0.16, probably=0.15, also=0.97, really=2.83, actually=0.47, never=0.12, not=2.27, especially=0.16, currently=0.18, truly=0.26, simply=0.2, fully=0.15}
+substitute : {not=2.08}
+specified : {some=1.44, not=6.32, also=1.54, clearly=1.3}
+punch : {some=0.82}
+uniform : {not=1.34, fairly=0.51, relatively=0.49}
+fall : {always=0.16, some=0.06, probably=0.08, finally=0.05, sometimes=0.05, also=0.14, eventually=0.08, really=0.07, soon=0.05, generally=0.09, actually=0.06, never=0.17, ever=0.07, not=1.34, easily=0.09, usually=0.08, simply=0.06}
+violate : {not=18.29}
+verify : {not=1.76}
+eat : {actually=0.23, always=0.22, ever=0.21, never=0.49, not=1.72, rather=0.17, probably=0.11, also=0.21, usually=0.1, rarely=0.08, really=0.14, possibly=0.07}
+believed : {firmly=0.46, some=0.32, sincerely=0.19, probably=0.11, almost=0.18, genuinely=0.15, clearly=0.16, not=0.48, previously=0.43, truly=0.56, always=2.56, commonly=0.27, honestly=0.21, already=0.12, widely=1.4, also=1.62, really=1.5, generally=0.59, actually=0.57, never=1.68, ever=0.25, strongly=0.22, apparently=0.22, mistakenly=0.14, initially=0.12}
+demonstrated : {never=0.3, repeatedly=0.56, successfully=0.35, not=0.9, previously=0.32, already=1.32, recently=0.72, consistently=0.63, also=3.24, amply=0.79, clearly=2.17, convincingly=0.36}
+muted : {somewhat=2.3}
+pictured : {always=2.48, never=1.42, not=3.78, also=7.85}
+undergo : {not=3.41, also=1.34}
+reward : {some=0.62, not=0.88}
+include : {always=0.16, some=0.07, certainly=0.06, not=5.16, probably=0.08, typically=0.24, sometimes=0.06, eventually=0.06, please=0.84, also=2.29, usually=0.23, generally=0.11}
+erase : {not=6.76}
+swallow : {not=1.73}
+caused : {always=0.18, already=0.32, almost=0.26, probably=0.6, sometimes=0.16, nearly=0.17, eventually=0.14, also=1.07, partly=0.14, really=0.32, actually=0.43, never=0.27, not=1.34, apparently=0.21, usually=0.44}
+abstract : {some=1.62, purely=0.6, not=0.99, almost=0.74, rather=0.53, too=1.25, highly=0.97}
+evolving : {always=1.28, constantly=5.26, continually=1.39, rapidly=3.93}
+culture : {some=0.06}
+damaged : {badly=6.08, slightly=0.49, not=1.38, too=0.59, already=0.66, irreparably=0.68, easily=0.66, also=0.68, seriously=2.19, heavily=2.85, severely=4.63, permanently=0.9}
+fake : {some=0.77, not=1.38}
+stir : {gradually=2.16, not=2.52, gently=2.43, slowly=0.76}
+forgot : {never=8.26, almost=4.37, nearly=0.69, promptly=0.53, completely=1.5, soon=0.73, simply=0.45}
+insult : {not=1.81}
+voice : {some=0.08, not=0.06}
+prefer : {always=0.41, actually=0.52, some=0.59, not=0.44, probably=0.44, strongly=0.27, also=0.62, usually=0.36, really=0.54, generally=0.67}
+perfect : {seemingly=0.08, always=0.15, never=0.12, some=0.09, not=2.5, almost=0.64, too=0.57, absolutely=0.43, nearly=0.62}
+struggled : {always=0.78, also=0.94, really=0.65}
+poll : {post=1.22}
+declassified : {recently=46.54}
+float : {not=1.41}
+space : {some=0.43, not=0.05}
+reference : {some=0.8}
+arrange : {also=1.02}
+evade : {not=4.6}
+depart : {not=4.1}
+exaggerate : {not=8.21}
+divorced : {newly=1.03, twice=1.46, not=1.14, recently=2.88}
+withstanding : {not=56.96}
+spell : {not=1.85}
+discover : {not=1.03, quickly=0.61, also=0.63, suddenly=0.31, soon=1.16}
+imply : {not=18.49, also=1.9, necessarily=4.27}
+bench : {stone=1.32}
+offset : {not=1.37, partly=0.98, partially=1.84}
+scrubbed : {freshly=6.69}
+capture : {not=1.59, fully=0.37, really=0.29}
+excite : {not=5.8}
+manufacture : {not=1.69}
+preparing : {not=0.73, currently=0.33, already=0.77, also=0.73}
+provision : {some=0.76}
+recruit : {not=0.95, actively=1.07}
+thrust : {suddenly=1.27}
+mud : {some=0.63}
+coerced : {violently=4.93}
+repair : {not=0.6}
+solving : {not=1.0}
+steal : {not=2.2}
+accommodated : {easily=7.06}
+disputing : {not=41.47}
+frequent : {increasingly=0.79, not=0.35, too=0.51, relatively=0.34}
+winter : {some=0.17}
+interact : {not=2.73}
+denounced : {also=4.6, publicly=4.6}
+powder : {some=0.47}
+prescribed : {not=1.01, commonly=4.44, socially=5.36, frequently=0.97, widely=2.89, also=1.01}
+trace : {some=0.77, not=0.52}
+stylized : {highly=18.11}
+paper : {some=0.32, not=0.05, earlier=0.06}
+spend : {always=0.09, already=0.1, probably=0.26, rather=0.35, typically=0.17, also=0.3, really=0.11, actually=0.18, ever=0.09, never=0.15, not=1.21, easily=0.15, usually=0.13}
+steam : {some=1.96}
+discriminate : {not=24.76}
+track : {not=0.34, also=0.14}
+value : {some=0.44, not=0.28, also=0.11, really=0.12, highly=0.08}
+degrade : {not=6.46}
+enforced : {not=4.51, rigidly=1.71, rarely=2.87, strictly=7.25}
+repay : {never=2.27, ever=2.09, not=3.31}
+grave : {some=0.39}
+stifle : {not=4.82}
+notified : {never=2.29, not=3.11}
+advantage : {some=0.36}
+spent : {always=0.1, probably=0.27, already=0.75, recently=0.32, reportedly=0.09, also=0.78, instead=0.06, really=0.07, actually=0.25, ever=0.32, never=0.33, not=0.36, previously=0.06, nights=0.13, days=0.28, usually=0.09}
+charging : {not=2.37}
+verified : {not=3.72, independently=4.39}
+staged : {ever=2.23, also=1.86}
+rush : {not=1.08}
+command : {not=0.87}
+jack : {not=0.26}
+stolen : {not=0.62}
+trade : {never=0.07, some=0.14, not=0.28, gladly=0.06}
+round : {perfectly=0.6}
+anticipate : {not=8.41, also=1.01}
+underscored : {also=7.51}
+overmix : {not=100.0}
+revised : {newly=1.19, recently=1.43}
+sweating : {not=2.17}
+fare : {not=6.55}
+egg : {some=0.44, together=0.73}
+saved : {always=0.3, actually=0.31, not=0.57, already=0.36, probably=1.31, literally=0.27, also=0.47, really=0.48}
+staying : {not=2.5, also=0.32}
+shaken : {badly=3.48, not=1.2, too=1.3, visibly=3.43, deeply=1.41, really=1.77}
+ignoring : {not=2.6, largely=1.47, completely=1.94, totally=1.18, simply=1.42}
+urge : {strongly=1.48, also=0.8}
+slab : {stone=4.5}
+score : {not=0.63}
+quote : {not=0.8}
+graduate : {some=0.33, not=0.76}
+absent : {not=1.0, largely=2.95, virtually=1.0, notably=2.34, frequently=0.84, completely=1.41, totally=1.32, entirely=1.38, conspicuously=6.22}
+farm : {some=0.21}
+near : {always=0.11, particularly=0.07, already=0.07, again=0.07, ago=0.06, also=0.11, anywhere=3.09, something=0.11, lot=0.19, not=0.35, especially=0.19, post=0.08, too=0.44, quite=0.16, relatively=0.07, course=0.11, together=0.07}
+ran : {always=0.17, almost=0.31, literally=0.14, recently=0.25, quickly=0.17, finally=0.23, practically=0.11, nearly=0.19, eventually=0.12, also=0.74, really=0.09, soon=0.14, actually=0.27, ever=0.16, never=0.45, simply=0.14}
+packaged : {neatly=3.62}
+navigate : {successfully=2.38}
+behaving : {not=5.0}
+pool : {some=0.19}
+inspired : {not=0.68, perhaps=0.43, religiously=0.42, divinely=0.92, classically=0.48, also=2.05, clearly=0.39, partly=0.58, politically=0.58, truly=0.36, really=0.79}
+sprinkle : {lightly=1.8}
+shaking : {not=0.7, already=0.51}
+planning : {always=0.1, some=0.23, not=1.14, already=0.57, also=0.42, really=0.14}
+stop : {always=0.11, probably=0.06, finally=0.09, eventually=0.04, say=0.09, also=0.09, please=0.5, suddenly=0.07, really=0.12, soon=0.04, actually=0.1, ever=0.32, never=0.93, not=2.99, usually=0.05, simply=0.11}
+guess : {never=0.54, ever=0.07, not=0.21, probably=0.1}
+guest : {some=0.21}
+institute : {summer=1.21}
+contaminated : {not=1.4, heavily=1.6, highly=1.2}
+detail : {some=2.88, not=0.22}
+endure : {not=4.19}
+fared : {not=14.49}
+charged : {already=0.2, sexually=0.4, originally=0.18, racially=0.71, also=1.56, electrically=0.52, politically=1.5, actually=0.18, never=1.12, ever=0.21, positively=0.57, not=1.63, negatively=0.58, initially=0.17, criminally=0.25, emotionally=1.97, formally=0.6, fully=0.65, highly=1.99}
+appropriate : {always=0.19, certainly=0.12, some=0.18, perfectly=0.32, particularly=0.46, socially=0.24, also=0.15, entirely=0.56, something=0.15, really=0.14, not=2.53, especially=0.33, culturally=0.68, quite=0.25, totally=0.16, highly=0.1}
+debated : {widely=1.47, hotly=13.58}
+sleep : {always=0.09, never=0.33, ever=0.12, some=1.93, not=1.51, rather=0.08, really=0.09}
+swimming : {not=0.52}
+begrudge : {not=16.39}
+refuse : {not=3.45, absolutely=0.47, simply=1.59}
+retire : {never=0.69, not=0.9}
+devastated : {absolutely=2.14, completely=1.67, totally=1.81}
+intimidated : {not=6.63, too=3.66, easily=1.83}
+close : {tantalizingly=0.05, increasingly=0.05, some=0.14, remarkably=0.06, probably=0.11, rather=0.06, almost=0.05, uncomfortably=0.12, unusually=0.05, anywhere=0.23, dangerously=0.36, not=0.63, extremely=0.23, too=3.86, surprisingly=0.05, quite=0.35, geographically=0.04, always=0.09, particularly=0.15, already=0.06, finally=0.04, fairly=0.26, also=0.09, reasonably=0.07, slowly=0.03, something=0.35, perilously=0.25, really=0.44, actually=0.04, never=0.11, ever=0.04, physically=0.05, incredibly=0.06, especially=0.11, awfully=0.1, relatively=0.18, precariously=0.04, remotely=0.05, simply=0.04}
+minimize : {not=0.65}
+sweep : {not=1.01}
+descend : {not=2.17}
+learn : {always=0.1, probably=0.05, finally=0.07, quickly=0.3, eventually=0.1, also=0.68, really=0.29, soon=0.26, actually=0.18, never=0.59, gradually=0.06, ever=0.24, not=0.94, easily=0.07}
+decreased : {actually=2.73, not=1.66, also=2.24, significantly=3.27}
+highlighted : {also=6.47}
+signify : {not=8.23}
+accelerated : {greatly=1.92}
+oblige : {not=5.95}
+characterize : {not=2.15, also=1.12}
+swing : {not=0.43}
+fast : {happen=0.13, some=0.2, particularly=0.09, fairly=0.12, really=1.08, something=0.19, not=0.61, extremely=0.3, incredibly=0.22, too=7.98, awfully=0.13, surprisingly=0.1, quite=0.14, relatively=0.2}
+refute : {not=8.32}
+sensed : {always=1.52, also=1.94, remotely=1.25}
+spin : {not=0.66}
+emerge : {not=3.2, eventually=0.47, also=0.53}
+apologized : {never=3.69, also=1.6, publicly=2.02}
+shallow : {too=2.35, relatively=1.44}
+exploit : {not=1.64, fully=1.52}
+register : {not=2.13}
+addressing : {not=3.42, also=0.65, specifically=0.89, really=0.58}
+communicate : {not=2.06, effectively=0.92, also=0.5, clearly=0.36}
+fledged : {fully=44.12}
+evidence : {some=1.99, not=0.22, also=0.28}
+jerk : {some=3.08}
+moved : {profoundly=0.07, probably=0.06, quickly=0.34, eventually=0.28, clearly=0.07, soon=0.15, gradually=0.11, not=0.65, visibly=0.09, easily=0.1, deeply=0.35, always=0.13, already=0.4, recently=0.78, finally=0.26, also=0.55, slowly=0.14, suddenly=0.06, really=0.19, something=0.18, actually=0.18, never=0.39, ever=0.07, barely=0.17, hardly=0.09, simply=0.16}
+remodeled : {newly=17.02}
+agreeing : {not=4.82}
+spring : {some=0.09, not=0.17}
+red : {some=0.31, not=0.12, too=0.06, really=0.05, something=0.08}
+act : {actually=0.09, always=0.15, some=0.13, never=0.09, not=1.42, sometimes=0.11, also=0.36, really=0.11}
+post : {not=0.19, also=0.16}
+generated : {not=0.96, internally=0.89, also=1.64, randomly=0.75}
+leave : {always=0.22, some=0.05, probably=0.07, rather=0.06, finally=0.06, sometimes=0.07, also=0.19, eventually=0.06, please=0.4, soon=0.09, really=0.1, actually=0.08, never=1.25, ever=0.23, not=2.23, rarely=0.06, usually=0.1, simply=0.13}
+excluding : {not=9.12}
+finish : {always=0.17, never=0.56, not=1.66, please=0.2}
+helped : {always=0.23, certainly=0.34, probably=0.32, already=0.19, recently=0.19, sometimes=0.09, also=3.27, eventually=0.13, allegedly=0.11, ultimately=0.08, really=1.51, actually=0.54, ever=0.08, never=0.17, not=0.75, definitely=0.15, greatly=0.11}
+faint : {some=0.93, extremely=0.91, too=1.77}
+surrender : {never=1.38, not=4.48}
+add : {always=0.3, carefully=0.16, maybe=0.09, probably=0.1, quickly=0.21, also=1.24, slowly=0.68, really=0.27, actually=0.12, gradually=1.51, not=1.76, easily=0.17, simply=0.33}
+dreaming : {never=1.48, not=3.29}
+need : {badly=0.04, some=0.05, probably=0.18, sometimes=0.03, eventually=0.03, clearly=0.03, necessarily=0.07, soon=0.03, desperately=0.18, not=1.45, usually=0.04, truly=0.03, possibly=0.03, always=0.11, certainly=0.05, typically=0.02, obviously=0.03, also=0.87, really=1.5, generally=0.03, actually=0.08, never=0.11, ever=0.17, especially=0.02, definitely=0.07, absolutely=0.04, urgently=0.03, rarely=0.02, hardly=0.04, simply=0.06}
+pose : {not=5.08, also=1.71}
+wrote : {always=0.11, actually=0.41, ever=0.39, never=0.68, literally=0.11, recently=0.81, finally=0.09, also=2.18, really=0.09, famously=0.09}
+shade : {some=1.31, part=0.5}
+gather : {not=0.47}
+insist : {always=0.61, some=0.86, not=2.16, also=1.49}
+consent : {not=1.27}
+respect : {always=0.13, some=0.88, certainly=0.09, not=0.64, also=0.09, really=0.31}
+article : {earlier=0.15}
+retreat : {not=2.06, summer=1.36}
+escaped : {not=2.98, already=0.67, narrowly=3.35, barely=2.75, somehow=1.39}
+risen : {not=1.64, already=0.88, steadily=0.62}
+loose : {some=0.88, not=0.24, too=1.29, something=0.27}
+exchange : {not=0.14}
+hesitate : {never=1.2, not=27.97}
+bored : {never=1.14, not=0.92, already=0.85, easily=1.07, really=0.92}
+trust : {always=0.23, never=0.6, some=0.13, ever=0.26, not=2.46, quite=0.12, completely=0.12, fully=0.11, really=0.61}
+choose : {always=0.35, actually=0.14, never=0.18, some=0.15, not=1.89, also=0.41, usually=0.17, freely=0.12, simply=0.19}
+greased : {lightly=55.97}
+ride : {never=0.21, not=0.44}
+sleeping : {some=0.38, not=2.46}
+overnight : {seemingly=0.81, happen=6.46, not=0.63, virtually=1.59, almost=6.61, literally=0.61, practically=0.93}
+foreclose : {not=20.57}
+prevent : {actually=0.18, not=2.63, effectively=0.15, also=0.49}
+stretch : {not=0.38}
+behave : {always=0.8, not=2.85}
+undo : {not=4.5}
+lined : {already=0.98, neatly=0.59, deeply=1.11}
+accomplish : {actually=0.55, not=1.89, really=0.43}
+nurtured : {carefully=3.27}
+end : {always=0.12, some=0.03, probably=0.11, sometimes=0.02, finally=0.05, eventually=0.05, also=0.04, ultimately=0.02, soon=0.03, really=0.04, actually=0.05, ever=0.05, never=0.2, not=0.62, easily=0.02, usually=0.08}
+dating : {some=0.87, not=1.85}
+satellite : {some=0.41}
+mistake : {some=0.68, never=0.14, not=0.28}
+embrace : {not=2.14, fully=0.77}
+identify : {correctly=0.4, not=3.33, positively=0.32, readily=0.17, quickly=0.23, easily=0.32, please=0.15, also=0.42, clearly=0.29, accurately=0.27, really=0.17}
+practicing : {not=2.08}
+pour : {carefully=1.5, slowly=2.27}
+label : {not=0.52}
+rice : {some=0.65}
+message : {some=0.14}
+joked : {always=3.25}
+praise : {some=0.8}
+prodding : {some=14.64}
+modify : {not=1.42}
+supervised : {closely=5.66}
+sweat : {some=0.42, not=0.44}
+achieved : {actually=0.51, never=1.27, ever=0.65, not=2.4, already=1.3, finally=0.64, easily=0.39, also=0.53, fully=0.27}
+betray : {never=4.17, not=13.26}
+exempt : {not=8.63}
+pronounce : {not=4.77}
+deliberate : {not=1.5}
+crab : {stone=1.94}
+age : {some=0.07, not=0.08, earlier=0.25, stone=0.57}
+swear : {solemnly=3.84}
+segregated : {racially=6.69}
+referred : {always=1.44, repeatedly=0.38, commonly=3.4, typically=0.32, already=0.36, frequently=1.04, sometimes=3.84, also=3.23, generally=0.7, never=0.63, not=0.45, affectionately=0.33, specifically=0.31, usually=0.98, hereinafter=0.33}
+gift : {some=0.24}
+slid : {slowly=0.92}
+tries : {always=0.95, also=1.12, desperately=0.48}
+career : {some=0.09}
+told : {some=0.02, explicitly=0.03, probably=0.06, almost=0.04, reportedly=0.13, sometimes=0.02, quickly=0.03, eventually=0.03, clearly=0.02, constantly=0.04, not=0.4, calmly=0.02, basically=0.09, specifically=0.04, proudly=0.03, always=0.58, repeatedly=0.09, already=0.4, recently=0.37, again=0.03, finally=0.17, originally=0.03, also=0.76, bluntly=0.03, allegedly=0.06, really=0.05, something=0.07, actually=0.09, never=1.26, ever=0.39, apparently=0.03, initially=0.04, essentially=0.03, simply=0.08, quietly=0.03}
+release : {not=1.69, also=0.22}
+rid : {not=0.32}
+number : {lot=0.04, some=0.07, item=0.07, not=0.03}
+aspire : {not=8.18}
+experiencing : {not=1.43, currently=1.25, already=1.35, also=1.07}
+tried : {always=0.82, some=0.08, certainly=0.06, repeatedly=0.14, deliberately=0.05, probably=0.06, already=0.28, recently=0.11, sometimes=0.06, again=0.1, also=0.8, allegedly=0.08, frantically=0.06, really=0.44, unsuccessfully=0.11, desperately=0.13, actually=0.29, ever=0.75, never=1.22, not=0.3, apparently=0.06, basically=0.05, initially=0.07, simply=0.06}
+explode : {not=2.89}
+reinforce : {also=1.58}
+punish : {not=3.96}
+slack : {some=13.18}
+decline : {not=0.61, respectfully=0.23}
+brave : {some=0.69, not=0.65, really=0.89}
+narrow : {some=0.2, extremely=0.31, rather=0.43, too=2.93, fairly=0.43, quite=0.26, relatively=0.88}
+judge : {never=0.08, not=0.56, accurately=0.08, really=0.1}
+manipulate : {not=1.16}
+conceded : {finally=3.52}
+contradict : {not=13.18}
+wiggle : {some=10.06}
+shape : {some=0.2, not=0.15, also=0.14}
+extradite : {not=12.17}
+specify : {not=21.74, please=1.58, also=1.77}
+distributed : {evenly=5.32, not=1.14, equally=1.56, nationally=0.6, widely=5.88, uniformly=0.76, equitably=0.54, also=0.8, broadly=0.71, randomly=1.27, unevenly=1.2, normally=2.64}
+educating : {not=2.0}
+handle : {not=1.21, easily=0.18, really=0.16}
+urged : {repeatedly=0.73, strongly=1.19, also=4.01}
+spot : {easily=0.14}
+driven : {always=0.36, never=0.78, ever=0.54, not=1.59, ideologically=0.69, already=0.36, largely=0.58, finally=0.3, also=0.56, politically=0.56}
+programmed : {not=2.25, genetically=4.5}
+silver : {some=0.36}
+carved : {elaborately=2.18, exquisitely=0.82, also=1.17, intricately=2.44, finely=1.46, ornately=1.85, beautifully=1.07}
+aid : {some=0.28, not=0.28, also=0.25}
+depleted : {severely=4.84}
+indicated : {never=0.2, not=0.72, previously=0.21, already=0.87, also=4.56, clearly=1.09}
+aim : {not=1.16, also=0.34}
+retain : {not=1.28, also=0.57}
+doubling : {almost=2.95, nearly=6.69}
+air : {some=0.37, not=0.07, summer=0.11}
+holiday : {some=0.61, summer=0.46}
+retail : {some=0.62}
+crew : {some=0.17}
+remind : {always=0.69, not=0.53, also=1.14, constantly=0.72}
+defeat : {not=1.25}
+withstand : {not=5.33}
+dazed : {slightly=4.35, too=5.3}
+encourage : {always=0.22, actually=0.38, not=1.89, strongly=0.48, actively=0.3, also=1.48, really=0.34}
+accommodate : {not=2.03, easily=0.76}
+advertised : {widely=2.36, heavily=3.17}
+yield : {not=5.59, also=0.89}
+administer : {not=1.65}
+vacation : {some=0.33, summer=6.52}
+share : {always=0.09, never=0.13, some=0.07, not=2.43, please=0.13, also=0.59, necessarily=0.08, fully=0.06, really=0.07}
+speak : {actually=0.14, always=0.15, never=0.6, ever=0.18, not=4.79, sometimes=0.08, finally=0.06, barely=0.33, also=0.27, please=0.11, hardly=0.17, really=0.26}
+climbed : {never=0.43, already=0.42, slowly=0.5}
+manufactured : {not=1.53}
+tender : {some=0.43, almost=0.82, barely=0.81}
+linger : {not=5.52}
+sharp : {o'clock=0.38, some=0.51, not=0.3, particularly=0.19, extremely=0.25, too=0.67, mentally=0.2, really=0.28, something=0.55}
+slip : {not=0.95, easily=0.87}
+stored : {not=1.04}
+cite : {not=3.26, also=3.93}
+pertain : {not=16.57}
+excelled : {also=7.32}
+shed : {never=0.48, not=1.01, also=1.39}
+shake : {never=0.54, not=1.87}
+materialize : {never=4.33, not=22.53}
+stimulated : {also=2.89}
+impressed : {always=0.96, particularly=1.21, suitably=0.42, genuinely=0.38, also=1.37, clearly=0.38, really=2.87, duly=0.47, not=4.71, especially=0.62, too=0.6, quite=0.84, easily=0.62, overly=0.49, deeply=0.97, greatly=0.5}
+honor : {not=0.56}
+stratified : {highly=17.26}
+body : {some=0.11}
+correspond : {not=25.7}
+decorated : {elaborately=2.58, richly=1.37, also=1.05, lavishly=1.45, sparsely=1.09, beautifully=1.94, tastefully=0.97, highly=4.63, ornately=0.97}
+undertake : {not=3.5}
+modified : {slightly=2.29, easily=0.68, genetically=13.34}
+presume : {not=7.3}
+qualify : {not=9.69, also=0.79}
+cable : {some=0.4}
+closure : {some=4.19}
+border : {some=0.15}
+bode : {not=49.68}
+took : {some=0.07, almost=0.08, probably=0.11, reportedly=0.03, sometimes=0.07, quickly=0.12, nearly=0.06, ago=0.03, eventually=0.13, clearly=0.03, soon=0.06, gradually=0.04, basically=0.04, promptly=0.03, usually=0.12, always=0.31, certainly=0.05, already=0.06, typically=0.03, recently=0.18, literally=0.04, again=0.07, finally=0.23, also=0.9, instead=0.03, allegedly=0.05, slowly=0.04, suddenly=0.06, ultimately=0.03, really=0.32, generally=0.04, actually=0.26, ever=0.17, never=0.79, definitely=0.03, apparently=0.07, gently=0.05, initially=0.03, rarely=0.04, simply=0.1, quietly=0.03}
+read : {some=0.04, almost=0.05, rather=0.06, probably=0.11, sometimes=0.04, quickly=0.04, regularly=0.04, not=1.54, easily=0.1, usually=0.06, always=0.19, carefully=0.09, already=0.16, recently=0.14, widely=0.41, finally=0.06, please=0.11, also=0.4, really=0.12, actually=0.37, ever=0.7, never=0.77, barely=0.07, rarely=0.06, simply=0.11}
+surviving : {barely=1.48}
+touch : {actually=0.22, never=0.84, ever=0.32, not=2.19, almost=0.23, barely=0.14, really=0.1}
+articulate : {not=2.66, clearly=1.23}
+shall : {never=0.3, too=0.51}
+adhere : {not=6.54}
+tool : {stone=0.25}
+yell : {not=1.25}
+stimulating : {intellectually=5.93}
+ginger : {some=0.84}
+coupled : {tightly=5.53}
+collect : {not=1.65, also=0.34}
+facilitate : {not=0.94, also=1.17, greatly=0.51}
+torn : {not=0.63, really=0.67, partially=0.72}
+shame : {not=0.41}
+mandate : {not=2.1}
+singled : {also=2.67}
+hiring : {not=2.15}
+rob : {not=0.98}
+interfering : {not=7.83}
+equipped : {properly=1.44, not=7.82, similarly=1.44, specially=1.55, also=1.15, fully=6.81}
+influenced : {certainly=0.4, profoundly=1.63, probably=0.52, also=3.56, clearly=0.54, heavily=4.26, really=0.35, positively=0.7, not=1.75, unduly=0.54, negatively=0.35, strongly=4.67, easily=0.57, deeply=1.45, greatly=3.12, significantly=1.72, highly=0.49}
+dreamt : {never=9.92}
+trick : {some=1.15}
+disappoint : {not=18.83}
+define : {not=2.66, also=0.27, clearly=0.91}
+chose : {always=0.35, some=0.28, deliberately=0.44, finally=0.23, eventually=0.26, also=1.09, usually=0.24, instead=0.38, simply=0.37}
+predict : {some=0.59, never=0.54, not=4.35, also=0.67, accurately=1.36, significantly=0.82}
+dictate : {not=7.35}
+render : {not=3.42}
+stepped : {ever=0.25, never=0.42, not=0.34, already=0.24, recently=0.33, quickly=0.32, finally=0.36, also=0.31, really=0.37}
+undermine : {actually=0.83, not=4.01, also=1.39}
+manifest : {not=3.66}
+blunt : {too=2.15}
+relieve : {not=1.89}
+formulated : {specially=5.77}
+complying : {not=22.89}
+rated : {not=11.71, consistently=0.59, also=2.4, highly=3.58}
+caring : {not=6.96, really=0.75}
+engage : {actually=0.29, not=4.04, actively=0.75, also=0.73, fully=0.31, really=0.26}
+communicated : {not=2.93, clearly=2.54}
+starring : {currently=2.7, also=2.97}
+dull : {never=1.4, not=0.89, too=1.43, rather=1.32}
+collapse : {not=0.82}
+comprehend : {not=9.41, fully=5.1}
+summon : {not=3.53}
+reason : {some=5.24, not=0.1}
+thought : {some=0.36, probably=0.18, rather=0.02, almost=0.03, sometimes=0.08, clearly=0.03, not=0.23, previously=0.21, usually=0.05, always=1.4, certainly=0.04, honestly=0.05, commonly=0.04, already=0.07, carefully=0.04, widely=0.05, finally=0.02, originally=0.13, also=0.23, obviously=0.03, seriously=0.02, suddenly=0.04, really=0.59, generally=0.09, actually=0.14, ever=0.56, never=2.21, traditionally=0.02, apparently=0.05, mistakenly=0.05, initially=0.08, rarely=0.03, simply=0.03}
+ring : {not=0.35}
+maintain : {always=0.15, not=1.14, also=0.46}
+taste : {actually=0.16, not=0.34, almost=0.37, really=0.16}
+shift : {not=0.34, also=0.23}
+ship : {not=0.11, supply=0.38}
+cheese : {some=0.69, say=0.38}
+cake : {some=0.44, upside-down=0.54}
+hired : {newly=1.34, never=0.31, ever=0.26, not=0.55, already=0.45, recently=1.52, originally=0.24, also=1.36, eventually=0.26}
+gentle : {some=0.89, too=0.51}
+resort : {not=0.63, summer=1.14}
+testify : {not=2.61}
+manipulated : {easily=6.99}
+dance : {some=0.16, not=0.4, really=0.14}
+boil : {not=1.49}
+dissuade : {not=10.72}
+encompass : {not=5.18}
+flinch : {not=17.84}
+eliminated : {not=2.17, virtually=1.99, largely=0.69, effectively=0.71, nearly=0.53, also=1.83, completely=1.81, totally=0.57}
+using : {always=0.09, increasingly=0.08, already=0.25, effectively=0.06, again=0.18, sometimes=0.11, also=0.37, really=0.07, actually=0.22, never=0.06, ever=0.07, not=1.76, perhaps=0.09, currently=0.21, simply=0.16, together=0.11, possibly=0.05}
+waver : {not=25.24}
+broke : {always=0.23, almost=0.72, recently=0.33, finally=1.58, nearly=0.67, quickly=0.19, eventually=0.25, also=0.82, suddenly=0.28, something=0.25, really=0.43, actually=0.4, never=0.71, ever=0.19, not=0.22, too=0.28, barely=0.17, completely=0.21}
+remain : {always=0.9, some=0.14, not=1.62, probably=0.27, please=0.1, also=0.46, usually=0.13, forever=0.17}
+investigating : {not=0.93, currently=1.02, actively=0.6, also=1.54}
+bandaged : {heavily=9.66}
+completed : {newly=0.27, never=0.87, not=1.53, successfully=1.27, almost=0.33, already=0.74, recently=3.59, finally=0.33, nearly=0.75, also=0.98, fully=0.21, partially=0.33}
+toss : {gently=2.96}
+mount : {not=0.89}
+demand : {not=0.92, also=0.25}
+liberated : {newly=6.75}
+eye : {some=0.1}
+coexist : {not=11.37}
+slow : {some=0.12, excruciatingly=0.19, agonizingly=0.25, rather=0.17, also=0.21, painfully=0.41, really=0.28, actually=0.13, not=0.54, extremely=0.27, too=3.01, quite=0.12, relatively=0.58}
+angled : {sharply=6.9}
+letter : {earlier=0.09}
+grade : {course=0.44}
+accuse : {not=3.82}
+argued : {always=0.31, never=0.47, some=0.57, successfully=0.62, persuasively=0.24, recently=0.68, also=2.42, convincingly=0.25}
+increased : {slightly=0.2, some=0.13, probably=0.1, already=0.11, sharply=0.22, recently=0.15, also=1.62, rapidly=0.09, actually=0.75, gradually=0.33, vastly=0.26, not=0.5, steadily=0.51, dramatically=0.73, substantially=0.37, significantly=1.4, greatly=1.08}
+guarantee : {not=7.46, almost=0.56, virtually=0.31, necessarily=0.46}
+recommend : {always=0.45, never=0.38, not=3.96, strongly=1.28, also=1.87, usually=0.52, generally=0.41, highly=2.36}
+inspiring : {really=1.76}
+acquire : {not=1.44}
+worth : {always=0.28, certainly=0.34, probably=0.4, almost=0.12, recently=0.2, reportedly=0.11, also=0.8, something=0.71, really=1.09, actually=0.14, not=5.96, currently=0.1, definitely=0.5, days=0.23, hardly=0.41, potentially=0.12}
+cried : {never=1.42, almost=1.18}
+releasing : {not=5.3}
+gray : {some=0.36, not=0.15, prematurely=0.27}
+permitted : {never=1.09, not=14.17, legally=0.56, also=1.24}
+varying : {widely=3.72, wildly=0.68}
+amused : {always=1.75, not=13.29, almost=1.89}
+are : {increasingly=0.02, surely=0.01, weekends=0.01, mostly=0.01, presumably=0.01, reportedly=0.01, quickly=0.01, sometimes=0.02, ago=0.02, clearly=0.02, constantly=0.01, supply=0.01, soon=0.01, regularly=0.01, earlier=0.01, inevitably=0.01, basically=0.01, specifically=0.01, usually=0.04, truly=0.02, always=0.02, needs=0.06, happen=0.01, commonly=0.01, already=0.06, typically=0.02, literally=0.01, finally=0.01, herein=0.01, ever=0.01, never=0.01, especially=0.01, everywhere=0.01, apparently=0.01, absolutely=0.01, rarely=0.01, invariably=0.01, some=0.28, rather=0.01, probably=0.04, maybe=0.01, frequently=0.02, ahead=0.01, part=0.01, eventually=0.01, elsewhere=0.01, primarily=0.01, summer=0.01, lot=0.01, not=0.01, perhaps=0.01, mornings=0.01, too=0.03, seldom=0.01, occasionally=0.01, course=0.01, somehow=0.01, together=0.02, apart=0.01, certainly=0.04, abroad=0.01, particularly=0.01, evenings=0.01, recently=0.01, again=0.01, unfortunately=0.01, also=0.19, say=0.03, obviously=0.01, indeed=0.01, exactly=0.02, instead=0.01, ultimately=0.01, suddenly=0.01, really=0.18, stone=0.01, generally=0.03, actually=0.04, alike=0.02, currently=0.02, definitely=0.01, traditionally=0.01, nights=0.02, afternoons=0.01, days=0.1, essentially=0.01, heads=0.03, simply=0.03, normally=0.01}
+taken : {almost=0.05, probably=0.09, quickly=0.04, sometimes=0.06, clearly=0.06, not=1.69, previously=0.07, largely=0.05, easily=0.06, course=0.04, quite=0.09, usually=0.09, always=0.35, certainly=0.05, particularly=0.04, already=1.0, recently=0.18, finally=0.11, again=0.05, also=0.54, suddenly=0.06, really=0.32, generally=0.06, actually=0.17, never=0.77, ever=0.5, apparently=0.06, somewhat=0.05, rarely=0.04, completely=0.1, simply=0.1}
+came : {some=0.08, increasingly=0.02, almost=0.05, probably=0.12, nearly=0.04, quickly=0.11, part=0.03, sometimes=0.05, ago=0.03, eventually=0.14, summer=0.04, soon=0.14, gradually=0.05, basically=0.03, usually=0.07, always=0.29, certainly=0.04, recently=0.09, finally=0.62, again=0.07, originally=0.08, also=0.43, slowly=0.04, suddenly=0.11, ultimately=0.04, something=0.11, really=0.25, actually=0.26, o'clock=0.02, never=1.11, ever=0.35, apparently=0.04, barely=0.03, days=0.03, rarely=0.04, simply=0.03}
+grace : {say=0.65}
+structured : {not=1.02, carefully=1.5, tightly=1.1, loosely=1.3, highly=7.36}
+disabled : {not=0.84, physically=2.33, totally=0.54, mentally=3.12, severely=2.43, permanently=1.16}
+attribute : {some=1.84, not=2.82}
+stirred : {not=3.14, something=2.42}
+broken : {badly=0.23, some=0.31, never=0.31, ever=0.14, not=1.29, already=0.65, finally=0.36, easily=0.29, also=0.13, completely=0.2, really=0.16}
+art : {some=0.14, not=0.15, part=0.04}
+outweigh : {not=7.71}
+deteriorated : {badly=3.95}
+noticed : {always=0.22, already=0.38, probably=0.37, quickly=0.15, finally=0.24, also=1.41, suddenly=0.32, really=0.56, never=2.38, ever=0.82, not=1.5, definitely=0.15, barely=1.15, scarcely=0.26, hardly=1.08}
+black : {always=0.03, some=0.48, mostly=0.26, predominantly=0.33, particularly=0.04, almost=0.16, nearly=0.07, also=0.06, say=0.04, entirely=0.03, something=0.06, mainly=0.03, really=0.03, predominately=0.04, primarily=0.03, overwhelmingly=0.03, not=0.22, especially=0.06, traditionally=0.03, largely=0.07, too=0.05, historically=0.44, completely=0.04, totally=0.03}
+arouse : {not=9.67}
+suppress : {not=2.96}
+tour : {summer=0.39}
+persuade : {not=1.62}
+call : {always=0.15, some=0.45, probably=0.07, almost=0.03, sometimes=0.07, please=0.61, also=0.23, jokingly=0.03, really=0.08, actually=0.08, ever=0.12, never=0.19, not=0.83, affectionately=0.03, usually=0.07, hardly=0.05, simply=0.09}
+cleansed : {ethnically=34.91}
+calm : {outwardly=0.27, not=0.37, perfectly=0.38, remarkably=0.38, too=0.45, surprisingly=0.38, strangely=0.4, quite=0.26, relatively=0.89, really=0.28}
+kick : {not=0.71, really=0.43}
+stayed : {actually=0.19, always=0.81, never=0.78, ever=0.25, not=0.32, mostly=0.28, also=0.35, usually=0.24}
+shit : {some=1.36}
+ask : {always=0.56, some=0.05, probably=0.07, frequently=0.04, sometimes=0.09, finally=0.04, also=0.4, reasonably=0.04, please=0.1, really=0.11, actually=0.08, never=0.37, ever=0.29, not=1.45, specifically=0.04, usually=0.06, simply=0.12}
+describe : {some=0.22, not=1.93, adequately=0.28, briefly=0.41, please=0.42, also=0.52, accurately=0.43, really=0.27}
+understood : {always=0.7, certainly=0.17, commonly=0.44, already=0.25, readily=0.27, rightly=0.27, finally=0.67, widely=0.47, quickly=0.17, also=0.91, clearly=1.07, suddenly=0.35, really=1.59, generally=0.56, properly=0.73, never=3.36, ever=0.25, not=1.46, barely=0.18, quite=0.4, easily=1.06, completely=0.38, truly=0.3, fully=2.05}
+rub : {gently=0.92}
+countenance : {not=25.8}
+solace : {some=8.78}
+longed : {always=4.75}
+featured : {recently=1.07, also=5.95}
+disregard : {not=3.2}
+jazz : {some=0.64}
+solved : {never=1.95, not=3.22, finally=0.65, easily=1.03}
+developing : {newly=0.13, some=0.32, not=0.23, currently=0.27, typically=0.26, already=0.15, also=0.57, slowly=0.14, rapidly=0.55}
+cant : {really=1.19}
+run : {some=0.04, rather=0.05, probably=0.11, almost=0.07, sometimes=0.05, nearly=0.04, quickly=0.05, eventually=0.06, soon=0.04, not=1.32, basically=0.04, easily=0.06, usually=0.1, privately=0.1, always=0.17, already=0.13, typically=0.08, finally=0.05, also=0.28, please=0.03, really=0.13, generally=0.05, actually=0.13, ever=0.28, never=0.48, simply=0.1}
+dwell : {not=10.69}
+justified : {not=4.18, also=0.81, completely=0.75, entirely=0.85, morally=1.53, fully=1.49}
+enact : {not=2.93}
+incorporate : {not=2.3, also=2.08}
+arriving : {newly=0.82, finally=0.92}
+boast : {not=3.26}
+research : {some=0.83, not=0.03, earlier=0.22, summer=0.04}
+escalating : {rapidly=3.58}
+housed : {also=2.61}
+debate : {some=0.63, not=0.13}
+mother : {some=0.02, not=0.03}
+forgetting : {never=3.91, not=6.71}
+view : {some=0.15, not=0.46, also=0.11, generally=0.05}
+ate : {always=0.66, never=1.24, ever=0.5, already=0.38, also=0.42}
+white : {some=0.34, mostly=0.28, predominantly=0.39, perfectly=0.02, almost=0.08, nearly=0.03, primarily=0.05, mainly=0.04, overwhelmingly=0.09, not=0.18, too=0.05, largely=0.09, usually=0.02, blindingly=0.03, always=0.02, particularly=0.02, also=0.03, say=0.03, entirely=0.02, something=0.05, predominately=0.05, really=0.03, especially=0.03, traditionally=0.02, historically=0.03, exclusively=0.03, completely=0.05}
+textured : {richly=28.68}
+preach : {not=2.35}
+segment : {earlier=0.59}
+chopped : {some=0.45, freshly=0.27, coarsely=8.31, roughly=1.71, finely=20.17}
+delegated : {not=22.32}
+dust : {some=0.42, lightly=0.2}
+worry : {always=0.25, ever=0.4, some=0.53, never=0.22, not=2.5, also=0.6, really=0.37}
+imagine : {ever=0.83, never=0.43, not=3.9, almost=0.23, easily=0.51, quite=0.13, also=0.15, scarcely=0.1, hardly=0.27, really=0.26, possibly=0.42}
+might : {needs=0.02, some=0.57, part=0.02, ago=0.02, also=0.25, say=0.03, really=0.04, something=0.15, actually=0.05, perhaps=0.02, too=0.04, days=0.03, course=0.02, together=0.02}
+telephone : {some=0.17}
+duplicate : {not=4.01}
+bleed : {not=3.91}
+whisk : {gradually=11.76, slowly=7.78}
+decrease : {actually=0.53, not=1.67, also=0.95, significantly=0.63}
+camp : {summer=3.53}
+improving : {actually=0.35, not=0.94, thereby=0.69, steadily=0.51, also=0.52, constantly=0.46, slowly=0.34, rapidly=0.51}
+overlap : {some=6.52, not=6.03}
+volunteer : {some=0.47, not=1.09}
+eradicate : {not=4.77}
+sued : {successfully=3.58, also=1.73}
+name : {some=0.04, not=0.35}
+marrying : {not=3.47}
+selling : {actually=0.25, not=1.68, already=0.25, also=0.35, really=0.19}
+worst : {perhaps=0.11}
+mourn : {not=4.51}
+leaving : {always=0.2, actually=0.16, never=0.71, ever=0.46, not=3.01, thereby=0.14, already=0.17, finally=0.14, sometimes=0.14, also=0.24, really=0.2}
+migrate : {not=5.51}
+involving : {some=0.41, not=1.11, usually=0.71, something=0.47}
+blind : {some=0.26, not=1.49, congenitally=0.47, legally=2.09, almost=0.48, nearly=0.88, completely=0.5, totally=0.93, functionally=0.29}
+shop : {not=0.15}
+occupy : {not=2.1}
+submit : {not=2.85}
+color : {some=0.4, not=0.1}
+distance : {some=3.1}
+import : {not=1.03}
+hidden : {some=1.42, mostly=0.29, carefully=0.34, almost=0.68, nearly=0.3, partly=0.23, something=0.43, never=0.23, not=0.59, previously=0.28, largely=0.45, usually=0.27, completely=0.46, partially=0.45}
+smelled : {always=1.61, ever=0.75, never=0.86}
+abolish : {not=3.08}
+materialized : {never=51.4, not=17.56}
+book : {some=0.06, earlier=0.07}
+attract : {not=1.48, also=0.74}
+intrude : {not=16.44}
+show : {always=0.08, some=0.06, already=0.02, probably=0.03, typically=0.03, sometimes=0.03, eventually=0.02, also=0.5, please=0.04, clearly=0.12, really=0.08, necessarily=0.02, summer=0.03, generally=0.03, actually=0.08, ever=0.05, never=0.13, not=1.05, consistently=0.07, usually=0.04, simply=0.03}
+generating : {not=1.53, already=1.14}
+penalized : {not=8.2}
+blink : {not=4.34}
+disappear : {never=0.64, not=4.24, quickly=0.58, eventually=0.95, completely=0.54, suddenly=0.75, soon=0.89, simply=1.33}
+lipstick : {some=1.67}
+forgave : {never=29.22}
+situated : {similarly=6.78, ideally=2.65}
+shot : {fatally=0.43, already=0.13, probably=0.07, almost=0.08, reportedly=0.07, recently=0.08, also=0.24, allegedly=0.1, accidentally=0.25, really=0.06, actually=0.13, ever=0.15, never=0.19, not=0.11, apparently=0.07, slap=0.14}
+negative : {increasingly=0.14, slightly=0.12, some=0.76, mostly=0.2, also=0.11, entirely=0.12, something=0.41, really=0.11, overwhelmingly=0.18, generally=0.16, not=0.25, extremely=0.25, too=0.33, largely=0.19, strongly=0.14, quite=0.12, totally=0.13, significantly=0.14, potentially=0.27, highly=0.14}
+aspired : {never=11.83}
+impose : {not=4.77, also=0.85}
+defend : {vigorously=0.35, not=1.55, successfully=0.29}
+intrigued : {always=2.47, particularly=1.98, also=2.82, really=2.82}
+arrive : {never=0.61, not=2.64, finally=0.67, soon=0.44}
+shied : {never=29.93}
+transcribed : {not=45.32, professionally=13.7}
+lived : {actually=0.43, always=0.67, ever=1.74, never=1.36, not=0.57, previously=0.09, already=0.34, probably=0.14, practically=0.09, also=0.42, really=0.25}
+factor : {some=0.14, not=0.15}
+derived : {not=1.54, also=0.88, empirically=1.3}
+postponed : {indefinitely=3.37}
+sensing : {perhaps=7.49}
+green : {some=0.29, not=0.13, too=0.09, something=0.08}
+race : {not=0.25}
+conquer : {not=1.88}
+introduce : {not=1.12, also=0.81}
+estimated : {currently=0.24, previously=0.27, recently=0.36, initially=0.18, originally=0.24, also=0.41, conservatively=0.26}
+was : {surely=0.01, mostly=0.0, presumably=0.0, almost=0.01, reportedly=0.01, quickly=0.01, sometimes=0.01, afterward=0.01, ago=0.03, clearly=0.02, evidently=0.01, supply=0.01, soon=0.01, barr=0.0, post=0.01, earlier=0.01, basically=0.01, usually=0.01, truly=0.01, possibly=0.0, needs=0.01, always=0.03, happen=0.01, item=0.02, already=0.02, literally=0.01, finally=0.01, originally=0.01, thereafter=0.0, allegedly=0.01, something=0.13, never=0.05, ever=0.04, twice=0.01, personally=0.01, especially=0.01, everywhere=0.01, apparently=0.02, absolutely=0.01, bolt=0.0, rarely=0.01, some=0.01, supposedly=0.01, maybe=0.01, rather=0.01, probably=0.04, frequently=0.01, ahead=0.01, nearly=0.01, part=0.04, eventually=0.01, subsequently=0.01, ava=0.01, summer=0.02, lot=0.02, not=0.01, perhaps=0.01, previously=0.01, too=0.03, course=0.04, somehow=0.01, together=0.02, apart=0.01, abroad=0.01, certainly=0.05, recently=0.02, again=0.02, unfortunately=0.01, also=0.11, say=0.03, obviously=0.01, indeed=0.01, exactly=0.01, instead=0.01, suddenly=0.01, ultimately=0.01, really=0.15, generally=0.01, stone=0.01, o'clock=0.0, actually=0.03, definitely=0.01, undoubtedly=0.01, initially=0.01, days=0.02, essentially=0.01, heads=0.01, forever=0.0, formerly=0.01, simply=0.02}
+war : {some=0.05, not=0.12, post=0.1}
+bone : {some=0.29}
+sculpture : {stone=0.91}
+bond : {some=0.28}
+grew : {actually=0.31, gradually=0.21, never=0.56, quickly=0.55, days=0.18, also=0.67, eventually=0.33, suddenly=0.16, soon=0.4, really=0.21}
+target : {not=0.47, specifically=0.25, also=0.17}
+compensated : {not=3.88, fully=2.85, highly=2.74}
+obstruct : {not=8.13}
+ensured : {also=4.38}
+refer : {always=0.84, not=4.52, sometimes=0.71, please=0.47, also=1.6, usually=0.45, simply=0.58}
+discomfort : {some=4.1}
+fortified : {heavily=23.73}
+risk : {some=0.52, never=0.06, not=0.42, also=0.08}
+window : {some=0.06}
+rise : {never=0.17, not=1.38, also=0.14, please=0.17, slowly=0.12}
+play : {always=0.14, certainly=0.04, some=0.07, rather=0.1, probably=0.06, again=0.04, sometimes=0.05, also=0.55, really=0.15, actually=0.1, never=0.2, ever=0.19, not=1.16, usually=0.06}
+discard : {not=1.98}
+fancy : {some=2.58, not=1.52, too=1.19, really=0.5}
+disciplined : {highly=3.7}
+differentiated : {clearly=6.73, highly=5.85}
+prized : {highly=16.23}
+bounce : {not=1.52}
+fought : {always=0.45, never=1.14, ever=0.69, successfully=0.56, not=0.54, bitterly=0.28, also=0.83, really=0.24}
+pledged : {already=1.87, also=5.43}
+delineated : {clearly=53.44}
+tissue : {some=0.52}
+decide : {actually=0.11, ever=0.2, not=1.11, finally=0.3, also=0.32, eventually=0.15, suddenly=0.19, ultimately=0.27, really=0.14, soon=0.11, simply=0.14}
+rent : {not=0.57, also=0.43}
+excluded : {not=2.06, previously=0.87, largely=1.26, systematically=0.81, specifically=1.4, also=2.74}
+cast : {not=0.79, perfectly=0.18, already=0.2, also=0.51}
+crush : {not=0.96}
+humiliated : {publicly=5.16}
+slice : {thinly=4.49}
+endured : {already=1.59, also=1.49}
+stuck : {always=0.58, never=0.24, not=0.86, something=0.32, really=0.66}
+participating : {not=3.5, actively=1.47, also=0.59, fully=0.51}
+struggling : {always=0.35, not=0.39, already=1.23, also=0.87, really=1.22}
+catch : {always=0.17, never=0.76, ever=0.42, not=0.87, probably=0.11, finally=0.12, quite=0.22, also=0.19, eventually=0.13, really=0.16}
+issued : {newly=0.71, never=0.52, not=0.84, already=0.49, recently=1.52, finally=0.38, also=1.48}
+syndicated : {nationally=22.91}
+cash : {some=1.65, not=0.39}
+plan : {always=0.04, never=0.05, ever=0.05, some=0.13, not=0.44, carefully=0.04, also=0.18}
+utilized : {not=2.22, also=2.4, fully=1.87}
+case : {some=0.05, earlier=0.03}
+slick : {too=2.68}
+admired : {always=6.32, particularly=0.9, widely=3.0, also=1.2, greatly=2.77, really=1.24}
+give : {some=0.06, maybe=0.05, rather=0.04, probably=0.12, sometimes=0.05, quickly=0.03, eventually=0.05, necessarily=0.03, soon=0.05, not=2.36, perhaps=0.02, occasionally=0.02, easily=0.02, usually=0.06, possibly=0.04, always=0.2, certainly=0.05, already=0.03, finally=0.07, say=0.05, please=0.27, also=0.48, voluntarily=0.02, ultimately=0.03, really=0.22, generally=0.03, actually=0.11, ever=0.2, never=0.63, gladly=0.04, rarely=0.03, simply=0.09}
+double : {not=0.2, probably=0.14, almost=1.53, roughly=0.4, nearly=2.08, easily=0.2, also=0.2}
+instituted : {also=5.24}
+survived : {ever=0.35, not=1.09, already=0.51, barely=1.09, somehow=0.92, also=0.76}
+phone : {some=0.37}
+rely : {always=0.36, increasingly=0.65, not=5.14, typically=0.3, also=1.02}
+utilize : {not=2.91, fully=1.76}
+sticky : {slightly=2.11, not=1.37, too=2.22}
+prevail : {not=5.4, ultimately=1.43}
+style : {some=0.15}
+suit : {not=0.55, summer=0.15}
+card : {post=0.17}
+care : {actually=0.04, ever=0.03, some=0.08, not=0.95, particularly=0.09, also=0.03, truly=0.03, really=0.87}
+assault : {sexually=0.57}
+damage : {some=1.4, not=0.39, also=0.23, seriously=0.16, severely=0.15, permanently=0.15}
+study : {some=0.04, not=0.09, earlier=0.19, also=0.05, summer=0.03, really=0.04}
+guard : {jealously=0.15}
+portion : {some=2.04}
+localized : {highly=8.31}
+fulfilled : {never=2.43, not=7.68}
+pattern : {some=0.26}
+direct : {some=0.34, not=0.53, also=0.13}
+settle : {never=0.51, not=1.68, finally=0.4, eventually=0.33}
+exercise : {some=0.52, not=0.73, post=0.13}
+enabled : {also=3.84}
+medicated : {heavily=100.0}
+gain : {never=0.17, not=1.08, also=0.46}
+receiving : {not=3.26, currently=0.65, already=0.37, also=0.63}
+confuse : {not=7.98}
+web : {some=0.34}
+abate : {not=17.6}
+acknowledging : {not=4.83, also=2.02}
+dared : {never=5.23, ever=2.62, not=1.55, hardly=1.28}
+protect : {always=0.14, actually=0.08, not=1.28, adequately=0.19, also=0.45, really=0.13}
+criticized : {repeatedly=0.6, sharply=2.69, frequently=0.47, widely=2.52, sometimes=0.55, also=3.81, heavily=1.05, publicly=1.24, roundly=2.07, harshly=1.59, never=0.62, openly=0.69, strongly=1.22, severely=1.44, highly=0.6}
+minimizing : {thereby=3.52}
+relieved : {not=0.73, almost=0.99, somewhat=0.7, also=0.96, clearly=0.82, greatly=1.31, secretly=0.88}
+deign : {not=100.0}
+stress : {some=0.33, not=0.46, also=0.36}
+explore : {not=0.66, also=0.72, fully=0.53}
+born : {actually=0.17, newly=0.14, never=0.12, ever=0.26, not=1.13, probably=0.1, already=0.09, also=0.19}
+display : {not=0.95, also=0.48}
+wet : {always=0.21, some=0.26, not=0.47, too=1.37, something=0.3}
+kill : {actually=0.21, always=0.1, ever=0.09, never=0.25, not=2.42, probably=0.19, eventually=0.12, also=0.23, really=0.13}
+bore : {also=1.35}
+wrong : {badly=0.06, some=0.07, probably=0.09, profoundly=0.05, inherently=0.11, terribly=0.7, clearly=0.08, fundamentally=0.16, not=0.45, quite=0.12, deeply=0.04, usually=0.04, totally=0.31, always=0.25, horribly=0.21, also=0.09, obviously=0.08, seriously=0.26, exactly=0.07, morally=0.4, entirely=0.1, really=0.36, something=5.03, never=0.1, physically=0.06, definitely=0.07, ethically=0.06, absolutely=0.4, drastically=0.06, completely=0.31, simply=0.25}
+disorder : {developmental=0.6}
+criticize : {never=1.0, not=3.42, openly=1.31, publicly=1.08}
+cured : {not=3.67}
+board : {some=0.1}
+stuff : {some=1.52, say=0.24}
+shut : {firmly=0.17, almost=0.2, virtually=0.2, already=0.14, effectively=0.21, automatically=0.14, finally=0.17, quickly=0.16, nearly=0.18, temporarily=0.3, also=0.2, please=0.18, never=0.33, not=0.68, tightly=0.42, completely=0.42, simply=0.23, snap=0.22}
+pursuing : {not=2.09, currently=0.8, actively=1.94, aggressively=1.54, also=1.15}
+luck : {some=0.74, not=0.19}
+fed : {not=0.54, also=0.5}
+arrest : {not=0.56}
+mature : {not=1.59, too=0.75, sexually=1.64, fully=1.27}
+section : {supra=0.17, infra=0.16}
+alleviate : {not=1.73}
+nut : {some=3.18}
+choking : {nearly=3.25}
+centralized : {highly=10.86}
+originated : {actually=2.64, probably=2.96}
+influence : {some=0.68, not=0.81, positively=0.3, negatively=0.12, strongly=0.28, also=0.67, indirectly=0.09, heavily=0.1, greatly=0.23, significantly=0.25}
+provoke : {not=3.15}
+threaten : {not=6.13, also=1.43, seriously=0.69}
+letting : {never=1.13, not=8.55, finally=0.37, simply=0.32}
+videotape : {some=0.52}
+wrapped : {too=0.84, brightly=0.48, neatly=0.55, carefully=1.04, recently=0.51, tightly=1.65, individually=0.98}
+described : {some=0.11, frequently=0.23, sometimes=0.35, clearly=0.14, famously=0.11, not=0.35, previously=0.92, usually=0.23, fully=0.11, always=0.25, repeatedly=0.12, adequately=0.12, commonly=0.13, typically=0.12, already=0.28, briefly=0.3, recently=0.39, widely=0.12, originally=0.18, also=1.37, accurately=0.42, generally=0.17, never=0.15, vividly=0.12, consistently=0.12, aptly=0.33, simply=0.13}
+ridden : {ever=6.33, never=9.57}
+strain : {some=0.67}
+negotiate : {not=2.63}
+rain : {some=0.73, not=0.16, summer=0.32}
+hunt : {not=0.63}
+king : {say=0.09}
+forgiven : {never=4.81, not=3.26}
+borne : {not=5.42}
+sunk : {already=1.96, really=1.96}
+sung : {ever=1.68, never=2.78}
+produced : {always=0.23, already=0.63, probably=0.15, recently=0.22, finally=0.2, originally=0.19, eventually=0.27, also=2.33, domestically=0.34, commercially=0.34, actually=0.45, naturally=0.19, never=0.58, ever=1.09, not=1.12, locally=0.86}
+market : {some=0.09, not=0.06}
+keen : {not=1.95, particularly=1.46, especially=1.37, too=3.4, also=1.06}
+transfer : {not=0.72, carefully=0.44}
+slated : {originally=3.07, also=3.19}
+keep : {always=0.35, certainly=0.03, rather=0.07, probably=0.08, say=0.04, also=0.29, please=0.17, really=0.08, actually=0.05, never=0.07, ever=0.03, not=0.95, barely=0.12, quite=0.03, somehow=0.02, usually=0.05, hardly=0.07, simply=0.05, possibly=0.05}
+hung : {always=0.39, never=0.36, not=0.29, already=0.33, too=0.26, also=0.26, really=0.27}
+nerve : {some=1.09}
+effect : {some=0.45, not=0.05}
+job : {some=0.09, not=0.03, summer=0.25}
+eaten : {ever=2.69, never=2.23, not=3.41, already=1.99}
+sugar : {some=0.6, together=0.22}
+choked : {almost=6.28, nearly=5.5}
+perceive : {not=6.03, also=0.67}
+embarrass : {not=3.17}
+weigh : {not=1.43, carefully=0.7, also=1.05}
+diluted : {fully=5.74}
+game : {some=0.08, overtime=0.03}
+relocated : {recently=4.96}
+contribute : {actually=0.36, not=3.8, also=4.0, significantly=0.63}
+awaken : {not=4.06}
+forbid : {not=4.92}
+died : {some=0.14, already=0.38, almost=0.73, probably=0.13, recently=0.3, finally=0.22, nearly=0.57, eventually=0.17, also=0.44, subsequently=0.09, suddenly=0.09, really=0.07, soon=0.09, actually=0.23, ever=0.15, never=0.16, not=0.27, apparently=0.08, simply=0.08}
+collaborated : {also=8.48}
+integrated : {increasingly=0.66, successfully=0.53, not=0.87, vertically=1.9, closely=0.41, thoroughly=0.41, tightly=0.64, racially=0.81, truly=0.69, totally=0.4, fully=3.88, highly=0.84}
+highlight : {also=2.63}
+strive : {always=1.88, not=1.74, also=1.68}
+causing : {not=1.52, thereby=1.03, already=0.71, also=0.81, possibly=0.69}
+parallel : {not=0.6, closely=0.58, almost=1.4, nearly=0.56, roughly=0.58, massively=1.24}
+joy : {some=0.34}
+reject : {not=3.47, also=0.78}
+dialogue : {some=0.34}
+dies : {never=3.5}
+profit : {some=0.38, not=0.74}
+win : {always=0.39, probably=0.18, finally=0.11, also=0.12, eventually=0.08, ultimately=0.07, really=0.1, actually=0.16, ever=0.18, never=0.48, not=1.8, overtime=0.13, easily=0.07, usually=0.07, possibly=0.11}
+lawyer : {some=0.16}
+clout : {some=2.1}
+rest : {some=0.53, never=0.08, not=0.45}
+move : {always=0.07, some=0.06, probably=0.08, quickly=0.12, finally=0.06, eventually=0.09, also=0.12, please=0.05, slowly=0.07, soon=0.06, something=0.06, really=0.13, actually=0.1, gradually=0.06, ever=0.05, never=0.13, not=1.9, barely=0.13, easily=0.05, usually=0.04, hardly=0.1, simply=0.12}
+amount : {never=0.16, some=0.29, not=0.27}
+butter : {some=0.38, generously=0.19, lightly=0.37, together=0.27}
+disclosed : {never=2.85, not=21.22, previously=1.9, also=2.92, publicly=2.09, fully=3.74}
+comply : {not=7.34, fully=1.05}
+deviate : {not=25.26}
+sat : {always=0.32, recently=0.14, finally=0.21, also=0.16, slowly=0.08, suddenly=0.08, really=0.08, actually=0.17, never=0.36, ever=0.19, not=0.07, usually=0.12, simply=0.19}
+saw : {some=0.07, probably=0.12, quickly=0.04, sometimes=0.04, eventually=0.03, clearly=0.08, soon=0.07, seldom=0.05, always=0.14, certainly=0.04, already=0.04, recently=0.08, again=0.04, finally=0.19, also=0.77, suddenly=0.1, really=0.15, actually=0.36, never=2.97, ever=1.1, apparently=0.04, barely=0.04, initially=0.03, rarely=0.13, hardly=0.04}
+say : {some=0.8, explicitly=0.01, maybe=0.01, almost=0.03, probably=0.08, rather=0.01, quickly=0.01, sometimes=0.03, clearly=0.02, necessarily=0.02, not=1.07, basically=0.04, quite=0.02, specifically=0.01, usually=0.03, merely=0.01, truly=0.01, privately=0.01, safely=0.03, possibly=0.03, always=0.44, certainly=0.02, honestly=0.08, already=0.02, rightly=0.01, fairly=0.01, finally=0.04, again=0.02, also=0.41, please=0.03, publicly=0.01, exactly=0.02, suddenly=0.02, really=0.14, generally=0.01, actually=0.08, never=0.28, ever=0.16, definitely=0.02, truthfully=0.01, essentially=0.01, rarely=0.01, hardly=0.02, simply=0.13}
+increase : {certainly=0.06, some=0.14, slightly=0.06, probably=0.09, sharply=0.07, also=0.78, necessarily=0.06, actually=0.46, gradually=0.32, vastly=0.08, not=0.94, thereby=0.09, steadily=0.06, dramatically=0.32, substantially=0.21, greatly=0.38, significantly=0.42, simply=0.06}
+adhering : {not=13.38}
+differ : {not=22.81, also=2.92, significantly=1.13}
+diminish : {not=12.06, also=1.27}
+shine : {not=1.33, really=1.79}
+spread : {evenly=0.28, already=0.38, quickly=0.65, widely=0.19, eventually=0.13, also=0.49, slowly=0.13, really=0.14, soon=0.32, gradually=0.13, not=0.94, easily=0.13, thinly=0.15}
+favor : {some=0.2, not=1.06, strongly=0.24, also=0.21, generally=0.16}
+visit : {actually=0.08, never=0.17, regularly=0.09, ever=0.1, not=0.45, earlier=0.1, also=0.33, please=0.51, summer=0.08}
+denied : {always=0.96, repeatedly=1.01, flatly=0.73, also=1.46, vigorously=0.32, never=1.21, not=0.76, previously=0.38, strongly=0.5, initially=0.54, consistently=0.54, categorically=0.31, vehemently=0.84}
+succumb : {not=17.6}
+bad : {notoriously=0.05, always=0.11, some=1.06, particularly=0.23, rather=0.04, already=0.06, equally=0.06, inherently=0.03, also=0.06, terribly=0.04, say=0.07, necessarily=0.13, something=1.03, really=1.89, not=2.77, extremely=0.06, incredibly=0.04, especially=0.12, too=4.08, quite=0.05, truly=0.05, simply=0.05}
+bring : {always=0.31, certainly=0.06, probably=0.09, quickly=0.05, sometimes=0.05, finally=0.11, please=0.15, eventually=0.1, say=0.05, also=0.54, slowly=0.05, ultimately=0.05, really=0.19, necessarily=0.05, soon=0.05, actually=0.15, ever=0.13, never=0.21, not=1.72, inevitably=0.04, quite=0.07, usually=0.07, simply=0.05}
+voted : {always=0.52, actually=0.5, never=1.37, not=0.65, unanimously=0.37, already=0.61, recently=0.79, also=1.52, overwhelmingly=0.27}
+alienate : {not=6.58}
+sauce : {some=0.24}
+awake : {not=0.68, already=0.76, barely=0.5, fully=3.11}
+completing : {successfully=1.36, not=1.79, currently=1.11}
+kiss : {not=0.48}
+promoted : {vigorously=0.61, not=0.72, recently=0.74, widely=0.61, actively=1.85, aggressively=0.77, also=2.57, heavily=1.67}
+ban : {not=0.94}
+fit : {always=0.21, certainly=0.13, perfectly=0.11, also=0.27, reasonably=0.12, mentally=0.14, exactly=0.11, really=0.58, actually=0.14, never=0.33, not=5.12, physically=1.01, barely=0.21, easily=0.31, quite=0.63, hardly=0.11, aerobically=0.11}
+offer : {always=0.13, some=0.22, typically=0.15, already=0.13, sometimes=0.09, also=1.7, soon=0.08, really=0.08, generally=0.07, actually=0.09, never=0.07, not=2.37, currently=0.07, usually=0.15}
+bar : {some=0.13, not=0.31}
+suffer : {never=0.31, not=4.51, also=1.61}
+partake : {not=8.76}
+fix : {not=0.89}
+draft : {earlier=1.16}
+manufacturing : {some=0.6}
+rank : {not=1.54}
+evaluated : {not=1.39, carefully=1.07, also=2.01}
+resonate : {not=5.63}
+investigated : {never=0.78, not=1.29, thoroughly=1.43, also=3.23, fully=0.92}
+neglect : {not=2.66}
+violated : {not=2.45, repeatedly=0.88}
+promoting : {not=1.11, thereby=0.6, actively=0.8, also=0.6}
+gang : {some=0.51}
+grow : {actually=0.16, ever=0.14, never=0.62, not=1.37, probably=0.12, quickly=0.14, days=0.1, eventually=0.17, also=0.31, really=0.14, soon=0.09}
+shrink : {not=4.24}
+league : {summer=0.57}
+am : {actually=0.06, always=0.04, certainly=0.12, personally=0.06, probably=0.05, too=0.07, already=0.03, also=0.1, usually=0.03, truly=0.05, really=0.62}
+inseminated : {artificially=100.0}
+panic : {not=1.8}
+underestimate : {never=13.04, not=12.43}
+extend : {not=5.45, also=1.03}
+canceled : {not=0.99, abruptly=1.38}
+fold : {not=0.91, gently=4.95}
+blowing : {not=1.12}
+submitted : {never=1.1, not=1.73, recently=0.9, also=0.9}
+delay : {developmental=0.94, some=0.45, not=1.05}
+plant : {some=0.16, not=0.16}
+peace : {some=0.66, not=0.12}
+drive : {actually=0.13, never=0.15, not=0.7, also=0.19, simply=0.1, really=0.14}
+hurt : {always=0.13, badly=0.68, certainly=0.11, probably=0.16, almost=0.1, also=0.32, seriously=0.58, really=1.88, actually=0.27, ever=0.24, never=1.38, not=2.19, physically=0.17, easily=0.09, deeply=0.22, severely=0.1}
+frank : {perfectly=0.31, brutally=0.23, quite=0.48}
+deal : {actually=0.04, some=0.06, not=0.51, rather=0.05, effectively=0.07, also=0.11, really=0.11}
+implying : {not=15.11}
+be : {increasingly=0.01, mostly=0.01, profitably=0.01, readily=0.01, quickly=0.01, conceivably=0.01, continually=0.01, soon=0.17, properly=0.01, gradually=0.01, largely=0.01, inevitably=0.01, easily=0.1, usually=0.02, truly=0.02, safely=0.01, fully=0.01, usefully=0.01, literally=0.01, rightly=0.01, fairly=0.01, ordinarily=0.01, accurately=0.01, someday=0.02, something=0.01, ever=0.16, thereby=0.01, apparently=0.01, simultaneously=0.01, shortly=0.01, maybe=0.01, probably=0.21, frequently=0.01, automatically=0.01, eventually=0.06, subsequently=0.01, naturally=0.01, realistically=0.01, legally=0.01, seldom=0.01, occasionally=0.01, course=0.01, hopefully=0.01, scarcely=0.01, merely=0.01, ought=0.01, henceforth=0.01, partly=0.01, ideally=0.01, generally=0.02, actually=0.11, likewise=0.01, definitely=0.02, undoubtedly=0.02, barely=0.01, surely=0.03, presumably=0.01, almost=0.02, sometimes=0.03, clearly=0.01, constantly=0.01, instantly=0.01, basically=0.01, quite=0.01, officially=0.01, possibly=0.09, always=0.32, needs=0.01, typically=0.01, already=0.04, logically=0.01, finally=0.03, please=0.03, reasonably=0.02, never=0.46, absolutely=0.01, rarely=0.01, hardly=0.05, invariably=0.01, potentially=0.02, rather=0.08, part=0.01, primarily=0.01, necessarily=0.04, not=3.92, perhaps=0.02, similarly=0.01, somehow=0.02, certainly=0.07, effectively=0.01, appropriately=0.01, again=0.04, say=0.01, obviously=0.01, also=0.74, instead=0.01, indeed=0.04, legitimately=0.01, exactly=0.01, ultimately=0.04, suddenly=0.01, really=0.11, justly=0.01, currently=0.01, initially=0.01, essentially=0.01, forever=0.02, simply=0.06, normally=0.02}
+prove : {actually=0.22, never=0.18, not=2.79, also=0.71, eventually=0.21, ultimately=0.39, really=0.22}
+abuse : {some=0.16, not=0.39, sexually=0.16}
+affect : {certainly=0.16, profoundly=0.43, adversely=2.03, indirectly=0.23, also=2.1, eventually=0.17, seriously=0.29, ultimately=0.25, really=0.63, actually=0.26, not=5.75, positively=0.6, strongly=0.16, negatively=1.05, dramatically=0.25, deeply=0.14, substantially=0.18, disproportionately=0.18, significantly=1.15, greatly=0.37, potentially=0.23}
+admire : {not=0.87, also=0.93, really=2.81}
+proven : {never=0.62, not=3.13, already=1.55, also=0.6, scientifically=1.01}
+drain : {not=0.9}
+rape : {not=0.89}
+isolate : {not=2.87}
+accusing : {not=7.77}
+see : {surely=0.01, increasingly=0.01, some=0.1, probably=0.07, rather=0.11, almost=0.12, readily=0.02, maybe=0.02, frequently=0.01, practically=0.02, quickly=0.02, sometimes=0.04, eventually=0.02, clearly=0.08, necessarily=0.03, soon=0.05, not=1.59, seldom=0.02, occasionally=0.01, quite=0.04, easily=0.06, plainly=0.02, scarcely=0.01, usually=0.04, truly=0.01, possibly=0.02, always=0.1, certainly=0.04, already=0.06, typically=0.02, literally=0.01, finally=0.05, again=0.03, please=0.18, also=0.34, suddenly=0.02, really=0.26, generally=0.02, actually=0.25, ever=0.39, never=0.7, definitely=0.03, personally=0.01, barely=0.1, rarely=0.06, hardly=0.07, simply=0.01, normally=0.02}
+search : {not=0.17, also=0.19}
+fool : {some=1.21, not=0.78}
+relinquish : {not=5.8}
+indicate : {not=3.63, strongly=0.19, please=0.38, also=2.7, clearly=1.28, necessarily=0.56}
+compared : {not=0.37, particularly=0.2, especially=0.7, recently=0.19, sometimes=0.19, also=0.94}
+nodded : {finally=0.28, heads=0.26, merely=0.72, slowly=0.24, simply=0.45}
+scoring : {not=0.98}
+contain : {actually=0.42, some=0.29, not=6.69, typically=0.5, already=0.27, barely=1.08, also=3.42, usually=0.6, hardly=0.7}
+set : {firmly=0.04, some=0.07, probably=0.07, almost=0.05, quickly=0.08, eventually=0.04, clearly=0.06, soon=0.04, properly=0.04, not=0.63, previously=0.03, intentionally=0.03, too=0.03, easily=0.04, course=0.03, usually=0.06, always=0.09, deliberately=0.11, already=0.26, carefully=0.06, typically=0.04, recently=0.08, finally=0.09, again=0.04, originally=0.08, also=0.5, really=0.17, generally=0.03, actually=0.1, ever=0.11, never=0.34, apparently=0.03, initially=0.04, simply=0.06}
+charge : {some=0.2, not=0.58, typically=0.16, also=0.18, usually=0.12}
+sex : {some=0.22, not=0.31}
+benefited : {actually=1.51, not=2.44, also=7.47, greatly=1.63}
+bobbing : {heads=8.1}
+breathe : {not=2.42, barely=1.54, hardly=1.82}
+sample : {some=0.23}
+integrate : {not=0.99, fully=1.16}
+fly : {actually=0.22, never=0.44, not=1.32, really=0.16}
+decipher : {not=3.4}
+fueled : {also=3.19}
+interview : {not=0.12, earlier=0.17, stone=0.09}
+practiced : {actually=0.87, never=1.85, not=1.55, currently=0.9, widely=1.88, also=1.17}
+clarify : {not=1.24}
+transferred : {not=0.61, easily=0.63}
+scare : {not=1.4}
+ensconced : {firmly=22.0, comfortably=15.34, safely=22.0}
+do : {surely=0.02, mostly=0.01, almost=0.01, quickly=0.01, sometimes=0.04, clearly=0.02, soon=0.01, regularly=0.01, basically=0.01, quite=0.01, easily=0.01, specifically=0.01, usually=0.1, truly=0.02, totally=0.01, possibly=0.03, always=0.11, typically=0.03, already=0.02, literally=0.01, finally=0.02, ordinarily=0.01, please=0.24, seriously=0.01, ever=0.09, never=0.16, personally=0.02, especially=0.01, apparently=0.01, absolutely=0.02, rarely=0.04, hardly=0.01, some=0.07, maybe=0.02, rather=0.03, probably=0.11, frequently=0.01, part=0.01, eventually=0.01, necessarily=0.01, lot=0.01, frankly=0.01, not=0.5, perhaps=0.01, too=0.01, seldom=0.01, occasionally=0.01, course=0.01, somehow=0.01, together=0.01, certainly=0.14, honestly=0.03, again=0.01, also=0.11, obviously=0.02, say=0.03, indeed=0.01, exactly=0.02, ultimately=0.01, really=0.73, generally=0.06, actually=0.12, traditionally=0.01, currently=0.01, definitely=0.03, barely=0.01, days=0.01, essentially=0.01, simply=0.11, normally=0.04}
+developed : {some=0.08, quickly=0.25, eventually=0.16, clearly=0.08, subsequently=0.14, soon=0.16, newly=0.61, gradually=0.18, not=0.79, economically=0.13, previously=0.12, specifically=0.09, fully=1.3, highly=1.12, successfully=0.09, already=0.57, carefully=0.11, recently=0.71, finally=0.08, originally=0.89, also=1.5, suddenly=0.11, really=0.15, jointly=0.12, actually=0.13, never=0.42, ever=0.17, initially=0.19, specially=0.1}
+observe : {actually=0.48, not=2.39, also=0.58}
+bet : {never=0.26, not=0.32}
+differentiate : {not=8.11}
+contact : {some=0.33, not=0.29, also=0.18, please=1.07}
+won : {always=0.28, already=0.96, probably=0.08, almost=0.14, recently=0.66, nearly=0.14, quickly=0.11, finally=0.55, narrowly=0.15, eventually=0.41, also=1.67, ultimately=0.14, really=0.22, newly=0.11, actually=0.3, never=1.39, ever=0.5, twice=0.07, not=0.86, previously=0.08, barely=0.09, easily=0.31, usually=0.08}
+exclude : {not=11.95}
+preceded : {always=1.97}
+celebrating : {not=1.22}
+programming : {some=0.65}
+image : {some=0.09}
+faded : {gradually=0.76, not=0.71, quickly=1.47, slowly=0.91, soon=0.74}
+portray : {not=2.48, accurately=1.69}
+complain : {always=0.51, some=0.82, never=1.39, not=3.47, also=1.67}
+financed : {publicly=6.06, federally=4.38, privately=6.28}
+articulated : {not=2.54, clearly=10.39, fully=4.34}
+knife : {stone=0.24}
+condone : {not=37.19}
+piece : {some=0.36}
+adjust : {not=1.34, automatically=0.58}
+intervened : {not=14.03}
+burst : {not=0.49, nearly=0.51, suddenly=1.06}
+carry : {actually=0.2, always=0.76, some=0.1, never=0.19, not=2.04, already=0.11, typically=0.11, easily=0.11, also=0.88, usually=0.19, really=0.14}
+stared : {merely=0.31, simply=0.61}
+arose : {also=2.04}
+identifying : {not=0.92}
+shy : {never=0.78, not=6.51, extremely=0.54, too=5.22, almost=0.54, days=0.69, suddenly=0.63, painfully=1.82, really=0.67}
+forgive : {never=8.12, ever=1.81, not=3.98, please=5.65}
+compel : {not=8.46}
+overturn : {not=3.0}
+content : {never=0.16, some=0.17, not=2.15, item=0.15, perfectly=0.54, quite=0.45, course=2.04}
+burden : {not=0.3}
+sanction : {not=5.73}
+rate : {not=0.12}
+alert : {always=0.63, not=0.53, mentally=0.55, suddenly=0.55}
+skill : {some=0.54}
+captured : {not=1.33, perfectly=0.41, already=0.48, recently=0.44, finally=0.51, easily=0.42, also=1.36, really=0.61}
+await : {eagerly=5.52}
+sin : {not=0.53}
+trouble : {some=1.5, not=0.27}
+divide : {evenly=0.54, not=1.62}
+class : {needs=0.05, some=0.11, not=0.05}
+contend : {some=2.02, also=2.98}
+sit : {always=0.2, probably=0.08, rather=0.15, sometimes=0.08, also=0.12, please=0.36, really=0.15, actually=0.24, ever=0.1, never=0.29, not=1.67, barely=0.09, usually=0.09, simply=0.23}
+undermined : {also=2.9, seriously=3.58, severely=1.91}
+bound : {gravitationally=0.55, not=3.76, closely=0.48, inextricably=1.27, legally=0.52, intimately=0.64, loosely=0.43, tightly=1.54, also=0.51}
+falter : {not=17.47}
+go : {some=0.04, probably=0.13, maybe=0.04, rather=0.08, sometimes=0.05, automatically=0.02, quickly=0.02, eventually=0.04, soon=0.03, necessarily=0.03, not=1.61, perhaps=0.02, seldom=0.01, basically=0.02, occasionally=0.01, easily=0.03, boldly=0.02, usually=0.08, possibly=0.03, always=0.2, certainly=0.02, typically=0.02, literally=0.02, again=0.02, finally=0.02, also=0.12, say=0.04, please=0.1, instead=0.02, indeed=0.01, exactly=0.01, ultimately=0.01, suddenly=0.02, something=0.03, really=0.16, generally=0.02, actually=0.17, never=0.42, ever=0.17, definitely=0.02, days=0.03, rarely=0.03, hardly=0.01, simply=0.08, normally=0.03}
+merged : {recently=3.16}
+kept : {always=1.11, mostly=0.08, deliberately=0.11, carefully=0.07, neatly=0.06, probably=0.07, sometimes=0.06, also=0.67, something=0.06, really=0.15, generally=0.1, ever=0.1, never=0.26, not=0.79, barely=0.1, usually=0.15, simply=0.1, normally=0.06}
+breed : {not=1.47}
+form : {actually=0.05, some=4.67, not=0.38, eventually=0.05, also=0.12, together=0.08}
+implicate : {not=11.42}
+publish : {not=4.44}
+avoid : {always=0.1, not=1.0, rather=0.15, also=0.39, usually=0.12, generally=0.11}
+renew : {not=4.84}
+fresh : {always=0.15, some=1.95, not=0.13, too=0.21, relatively=0.11, really=0.16, something=0.32}
+orchestrated : {carefully=18.77}
+assign : {not=4.08, randomly=1.86}
+withdraw : {not=2.56}
+elaborate : {some=0.85, increasingly=0.46, not=3.24}
+practice : {actually=0.09, some=0.26, not=0.39, also=0.09}
+frustrated : {increasingly=2.18, extremely=0.8, sexually=0.56, easily=0.65, also=0.52, clearly=0.61, really=1.12}
+placed : {always=0.24, perfectly=0.21, centrally=0.15, already=0.22, carefully=0.78, conveniently=0.14, recently=0.19, also=0.79, actually=0.14, properly=0.15, not=0.45, gently=0.27, usually=0.14, randomly=0.18, highly=0.57}
+select : {not=0.84, carefully=0.48, also=0.42}
+fulfill : {not=4.13}
+crowd : {not=0.13}
+invoke : {not=5.42}
+sick : {some=0.32, slightly=0.14, not=1.2, physically=0.16, almost=0.14, already=0.27, too=1.69, really=1.36}
+bit : {some=0.07}
+divine : {some=0.59, not=0.44}
+coincided : {also=13.67}
+flourish : {not=3.1}
+foul : {some=1.26}
+ski : {some=0.34}
+improved : {actually=0.62, markedly=0.31, gradually=0.26, vastly=1.44, not=1.75, steadily=0.37, dramatically=1.14, also=1.32, substantially=0.54, greatly=2.35, significantly=1.96, really=0.43}
+upgraded : {recently=3.8}
+corner : {some=0.21}
+convinced : {firmly=0.74, increasingly=0.34, thoroughly=0.22, almost=0.39, already=0.47, equally=0.21, finally=1.25, also=0.83, entirely=0.46, really=0.4, not=6.2, utterly=0.27, absolutely=2.21, quite=0.39, completely=0.41, totally=0.59, fully=0.45}
+contemplate : {not=2.84}
+model : {developmental=0.08, not=0.07}
+drag : {not=0.7}
+intimidating : {not=2.48, too=2.04}
+join : {never=0.14, not=1.49, please=0.85, also=1.02, soon=0.2}
+augur : {not=100.0}
+sky : {summer=0.42}
+reduce : {probably=0.11, effectively=0.14, sharply=0.3, also=1.2, radically=0.13, actually=0.31, gradually=0.2, not=1.19, thereby=0.14, drastically=0.33, dramatically=0.6, substantially=0.44, greatly=0.73, significantly=1.11, potentially=0.1}
+encouraging : {some=1.32, not=3.3, thereby=0.54, also=0.9}
+inquire : {not=5.79}
+disputed : {not=2.59, hotly=3.03}
+surface : {some=0.11, not=0.15}
+issue : {some=0.08, not=0.14}
+satisfied : {perfectly=0.39, entirely=0.38, generally=0.52, never=2.24, not=10.12, extremely=0.65, apparently=0.48, easily=0.38, quite=1.0, somewhat=0.42, completely=1.59, fully=0.8, highly=0.44}
+chasing : {always=1.32, not=2.64}
+lower : {slightly=0.88, some=0.11, markedly=0.07, sharply=0.15, considerably=0.38, also=0.23, slowly=0.61, generally=0.17, lot=0.11, actually=0.18, ever=0.07, not=0.24, consistently=0.1, relatively=0.13, somewhat=0.32, dramatically=0.14, usually=0.07, substantially=0.36, significantly=2.27}
+metal : {some=0.35, something=0.16}
+is : {increasingly=0.01, mostly=0.01, therein=0.0, quickly=0.01, ago=0.02, politically=0.01, anywhere=0.01, supply=0.02, soon=0.01, properly=0.01, differently=0.01, largely=0.0, inevitably=0.0, bang=0.0, specifically=0.01, usually=0.02, truly=0.02, happen=0.03, item=0.02, successfully=0.0, closely=0.0, nationally=0.01, literally=0.01, herein=0.0, slowly=0.0, something=0.1, ever=0.01, apparently=0.02, historically=0.0, consistently=0.0, overtime=0.0, annually=0.0, maybe=0.01, probably=0.04, frequently=0.01, ahead=0.01, eventually=0.01, summer=0.02, anyway=0.0, lot=0.02, naturally=0.0, frankly=0.0, too=0.02, seldom=0.01, course=0.05, together=0.02, apart=0.01, unfortunately=0.01, lately=0.01, generally=0.01, o'clock=0.01, actually=0.03, traditionally=0.01, definitely=0.01, undoubtedly=0.0, days=0.04, heads=0.01, surely=0.01, presently=0.0, presumably=0.01, almost=0.01, reportedly=0.01, sometimes=0.01, clearly=0.02, constantly=0.0, correctly=0.0, barr=0.01, regularly=0.0, earlier=0.01, post=0.01, basically=0.01, needs=0.03, always=0.02, repeatedly=0.0, commonly=0.0, already=0.03, typically=0.01, finally=0.01, seriously=0.01, publicly=0.0, never=0.01, twice=0.0, personally=0.01, especially=0.01, everywhere=0.01, absolutely=0.01, rarely=0.01, hardly=0.01, invariably=0.0, badly=0.0, some=0.01, supposedly=0.01, rather=0.01, part=0.06, elsewhere=0.01, primarily=0.01, necessarily=0.0, fundamentally=0.0, precisely=0.01, not=0.02, perhaps=0.01, somehow=0.01, abroad=0.01, certainly=0.06, wit=0.01, recently=0.01, effectively=0.01, again=0.04, say=0.12, obviously=0.02, also=0.15, indeed=0.01, instead=0.01, exactly=0.02, technically=0.0, suddenly=0.01, ultimately=0.01, really=0.23, stone=0.02, alike=0.01, currently=0.02, nights=0.01, essentially=0.01, forever=0.01, simply=0.02, normally=0.01}
+dictated : {not=4.22}
+drink : {always=0.12, ever=0.11, never=0.31, not=1.1, usually=0.11}
+announce : {not=1.51, publicly=0.66, formally=0.74}
+finalized : {not=5.83}
+operate : {not=3.04, typically=0.29, also=0.76}
+vintage : {some=1.2}
+gave : {probably=0.1, almost=0.13, reportedly=0.05, sometimes=0.05, quickly=0.13, nearly=0.06, ago=0.08, eventually=0.22, soon=0.15, gradually=0.07, basically=0.07, usually=0.06, always=0.41, certainly=0.06, already=0.07, recently=0.24, finally=0.55, also=1.66, suddenly=0.08, ultimately=0.05, allegedly=0.06, really=0.28, actually=0.25, ever=0.34, never=1.44, apparently=0.06, essentially=0.05, rarely=0.06, simply=0.12}
+defy : {not=2.66}
+compromised : {never=1.51, not=4.47, already=1.58, seriously=2.52, severely=2.27}
+continuing : {not=0.25, also=0.32}
+begin : {always=0.17, probably=0.1, typically=0.11, quickly=0.06, finally=0.12, eventually=0.06, also=0.31, slowly=0.09, suddenly=0.06, really=0.28, soon=0.33, actually=0.19, never=0.08, not=1.99, days=0.06, usually=0.2, officially=0.06}
+diagnosed : {properly=0.61, newly=2.45, correctly=0.59, not=1.02, recently=1.35, finally=0.63, triply=0.52}
+alluded : {also=8.49}
+become : {surely=0.02, increasingly=0.1, some=0.04, almost=0.08, probably=0.1, frequently=0.03, sometimes=0.06, quickly=0.27, automatically=0.04, eventually=0.31, clearly=0.03, necessarily=0.03, soon=0.32, gradually=0.08, instantly=0.02, not=1.3, inevitably=0.03, easily=0.17, somehow=0.08, truly=0.05, certainly=0.04, already=0.23, recently=0.2, again=0.14, finally=0.08, also=0.74, lately=0.04, indeed=0.06, instead=0.03, someday=0.05, slowly=0.03, ultimately=0.08, suddenly=0.37, really=0.16, rapidly=0.04, generally=0.03, actually=0.15, never=0.23, ever=0.17, definitely=0.02, thereby=0.04, essentially=0.04, simply=0.09}
+brought : {probably=0.09, almost=0.09, sometimes=0.09, quickly=0.11, nearly=0.09, eventually=0.17, soon=0.07, not=0.54, usually=0.08, always=0.33, certainly=0.07, already=0.2, recently=0.18, again=0.08, finally=0.36, originally=0.08, also=1.31, suddenly=0.06, slowly=0.06, ultimately=0.07, really=0.3, actually=0.24, never=0.45, ever=0.23, initially=0.05}
+rumpled : {slightly=5.4}
+weekend : {some=0.15, summer=0.18}
+emerged : {newly=0.39, never=0.38, not=0.5, already=0.42, recently=1.01, finally=1.2, quickly=0.61, also=1.95, suddenly=0.31, soon=0.53}
+dissolve : {not=3.0}
+digest : {not=2.94}
+prejudice : {not=1.18}
+sending : {not=1.87, also=0.71}
+bread : {some=1.28}
+side : {some=0.05, supply=0.16}
+counseling : {some=0.83}
+break : {actually=0.05, always=0.06, ever=0.06, never=0.16, not=0.82, probably=0.06, finally=0.08, sometimes=0.04, also=0.06, eventually=0.05, summer=0.2, really=0.06}
+knew : {always=0.88, surely=0.04, certainly=0.12, probably=0.18, already=1.32, finally=0.03, obviously=0.06, also=0.99, clearly=0.05, instinctively=0.04, suddenly=0.08, really=0.57, actually=0.14, ever=0.38, never=2.44, personally=0.03, definitely=0.03, apparently=0.03, barely=0.21, quite=0.04, somehow=0.05, scarcely=0.05, hardly=0.25, simply=0.03}
+change : {some=0.28, developmental=0.04, probably=0.03, maybe=0.03, profoundly=0.03, sometimes=0.04, quickly=0.05, eventually=0.03, constantly=0.04, soon=0.09, necessarily=0.03, fundamentally=0.12, not=1.72, course=0.04, easily=0.04, somehow=0.03, dramatically=0.09, totally=0.03, needs=0.05, always=0.06, certainly=0.03, also=0.16, please=0.03, suddenly=0.03, really=0.22, radically=0.08, actually=0.1, never=0.35, ever=0.12, drastically=0.04, completely=0.07, forever=0.05, significantly=0.06, simply=0.03}
+draw : {always=0.24, not=1.54, also=0.55, really=0.18}
+off : {badly=0.02, slightly=0.07, some=0.02, mostly=0.01, weekends=0.02, almost=0.01, summer=0.02, lot=0.02, not=0.05, easily=0.01, totally=0.03, wildly=0.02, together=0.02, always=0.02, already=0.03, also=0.02, entirely=0.02, slowly=0.02, something=0.09, really=0.02, nights=0.02, days=0.26, completely=0.08, heads=0.18, snap=0.05}
+comfort : {some=2.91, not=0.35}
+joke : {always=0.31, some=0.5}
+hide : {never=0.23, not=2.51}
+exploring : {currently=0.68, also=1.52}
+overlapping : {slightly=3.88}
+wooden : {some=0.28}
+report : {some=0.05, not=0.93, earlier=0.08, please=0.06, also=0.33}
+complete : {never=0.18, successfully=0.39, not=1.79, virtually=0.09, almost=0.97, nearly=0.67, finally=0.09, also=0.1}
+compensate : {not=2.24}
+fun : {always=0.43, actually=0.08, some=2.41, not=0.84, quite=0.1, also=0.19, summer=0.17, something=0.46, really=1.53}
+mislead : {not=9.01}
+sign : {some=0.6, never=0.1, not=0.78, also=0.1, please=0.1}
+bragging : {not=11.07}
+while : {some=0.09, silently=0.03, ahead=0.03, quickly=0.05, sometimes=0.04, ago=0.13, summer=0.06, lot=0.06, not=0.19, earlier=0.04, patiently=0.04, course=0.04, together=0.15, apart=0.04, needs=0.06, happen=0.06, recently=0.03, again=0.15, say=0.07, slowly=0.05, something=0.09, twice=0.04, especially=0.05, days=0.13, heads=0.04, quietly=0.08}
+overcook : {not=39.19}
+anger : {some=0.68, not=0.37}
+second : {some=0.05}
+split : {evenly=1.5, not=0.5, already=0.31, also=0.44}
+limit : {some=0.29, not=1.6, sharply=0.25, also=0.54, severely=0.58, strictly=0.18}
+claim : {always=0.16, never=0.13, some=0.9, not=2.15, also=0.7, legitimately=0.14}
+contest : {not=0.9}
+level : {developmental=0.17, some=1.6, not=0.06, fairly=0.04}
+author : {also=0.25}
+thrown : {ever=0.32, never=0.4, not=0.82, already=0.39, simply=0.37}
+preserve : {not=0.48}
+priced : {moderately=11.16, similarly=2.19, competitively=3.01, fairly=1.81, attractively=1.32, comparably=1.37, reasonably=19.32, modestly=3.34}
+establish : {not=1.43, quickly=0.17, also=0.45, clearly=0.22}
+chosen : {always=0.22, not=1.62, consciously=0.2, deliberately=0.27, carefully=1.98, already=0.42, also=0.5, randomly=1.27, freely=0.57}
+deter : {not=10.96}
+collided : {nearly=12.13}
+coat : {lightly=1.29}
+expand : {not=0.96, dramatically=0.28, also=0.44, greatly=0.77, significantly=0.25}
+bob : {not=0.33}
+dream : {ever=0.36, some=0.16, never=0.46, not=0.48}
+focused : {always=0.36, increasingly=0.33, particularly=0.15, sharply=0.29, again=0.16, narrowly=0.88, also=0.84, clearly=0.25, instead=0.23, primarily=0.44, really=0.99, mainly=0.27, generally=0.21, not=1.18, intensely=0.3, traditionally=0.2, largely=0.26, too=0.71, tightly=0.41, initially=0.2, specifically=0.25, completely=0.19, totally=0.5, highly=0.42}
+survey : {earlier=0.16}
+devastating : {absolutely=0.88, really=0.72, potentially=1.88}
+tense : {some=1.03, increasingly=1.09, already=1.09, too=1.29}
+jeopardize : {not=8.4, seriously=2.25}
+consumed : {not=1.66, already=0.87, also=0.95}
+heat : {some=0.59, not=0.09, summer=1.01}
+boo : {say=17.37}
+scores : {item=0.33}
+candy : {some=1.76}
+seal : {not=0.82}
+bow : {not=0.89}
+investigate : {not=1.2, thoroughly=0.5, also=0.75, fully=0.35}
+switch : {not=0.38}
+head : {some=0.03, not=0.03, also=0.03, formerly=0.02}
+total : {not=0.22, almost=0.54, nearly=0.11}
+tasted : {never=7.83, ever=9.09}
+kidding : {not=11.58}
+oil : {some=0.27, not=0.07, especially=0.04, lightly=0.13, together=0.08}
+pursued : {vigorously=1.34, never=1.37, not=2.31, actively=1.57, aggressively=1.91, also=1.68}
+dreamed : {always=6.3, never=12.42, ever=6.04}
+heal : {never=1.51, not=3.1}
+fight : {always=0.1, never=0.16, some=0.08, ever=0.07, not=0.96, rather=0.1, also=0.06, really=0.11}
+hear : {rather=0.08, almost=0.51, probably=0.1, practically=0.06, sometimes=0.07, clearly=0.04, soon=0.05, not=1.58, quite=0.07, usually=0.05, faintly=0.04, always=0.27, certainly=0.04, already=0.07, again=0.04, finally=0.04, also=0.33, suddenly=0.04, really=0.18, actually=0.16, ever=0.67, never=0.61, barely=0.27, rarely=0.06, hardly=0.14}
+allocated : {randomly=2.5}
+brief : {some=0.46, too=0.51, relatively=0.74}
+recover : {ever=0.72, never=2.53, not=3.09, fully=1.64}
+chance : {some=0.3}
+determine : {actually=0.12, not=1.38, largely=0.17, also=0.35, accurately=0.16, ultimately=0.22, really=0.13}
+raised : {always=0.1, slightly=0.23, already=0.36, recently=0.18, quickly=0.09, finally=0.1, again=0.21, also=1.19, suddenly=0.1, slowly=0.19, really=0.11, actually=0.12, never=0.53, ever=0.12, not=0.57}
+cross : {never=0.35, ever=0.29, not=1.51}
+relying : {not=3.16}
+control : {always=0.04, needs=0.03, actually=0.03, some=0.45, not=0.68, effectively=0.05, also=0.09, completely=0.03, really=0.06}
+decreasing : {thereby=2.05}
+confer : {not=10.07}
+drew : {always=0.25, never=0.29, quickly=0.32, also=1.64}
+wrought : {finely=6.93}
+conjure : {not=4.53}
+declined : {actually=1.77, gradually=0.43, not=0.56, steadily=1.38, also=3.54, politely=1.09}
+acknowledge : {not=3.81, openly=0.4, readily=0.65, also=1.72, gratefully=1.88, publicly=0.65}
+lobby : {not=0.44}
+scored : {not=0.96, also=3.81}
+implicated : {not=3.48, also=3.58, deeply=2.72}
+communicating : {not=3.23}
+knit : {closely=9.86, tightly=18.43, loosely=5.29}
+inflict : {not=3.02}
+dancing : {some=0.35, not=0.7}
+exercised : {never=2.82, not=3.23}
+vary : {not=3.95, also=3.13}
+rocket : {not=3.03}
+buried : {not=0.68, deeply=0.9, also=0.31, partially=0.59}
+stood : {actually=0.12, always=0.46, ever=0.2, never=0.24, not=0.12, finally=0.19, also=0.22, suddenly=0.08, slowly=0.12, simply=0.2, really=0.2}
+paint : {some=0.32, not=0.62}
+fighting : {always=0.32, actually=0.16, some=0.15, not=1.28, also=0.28, constantly=0.14, really=0.21}
+facilitated : {also=5.75, greatly=5.32}
+discipline : {some=0.67, not=0.3}
+promised : {always=0.37, never=0.51, not=0.26, repeatedly=0.21, already=0.57, also=1.72}
+fucking : {some=1.35, not=1.31, too=0.89}
+endear : {not=46.92}
+injure : {not=5.53, seriously=6.01}
+deterred : {not=21.4}
+sedated : {heavily=30.71}
+freeze : {not=1.5}
+exert : {not=2.75, also=1.76}
+encouraged : {actually=0.47, always=0.82, never=0.27, not=1.49, strongly=1.06, actively=0.51, also=3.17, greatly=0.27, really=0.41}
+reunited : {finally=2.88}
+hinder : {not=8.14}
+strengthen : {also=1.38}
+friend : {some=0.11}
+estimate : {some=0.66, not=0.5}
+grabbed : {quickly=0.49, also=0.38}
+exhibit : {not=2.6, also=1.07}
+brand : {some=0.39, something=0.35}
+tripped : {almost=6.95, nearly=7.12}
+pinpoint : {not=2.16}
+excavated : {recently=5.6}
+lighted : {brightly=4.54, dimly=6.0}
+deny : {never=0.44, not=9.88, categorically=0.47, also=0.33, vehemently=0.33, simply=0.33}
+pleasure : {some=0.41}
+settled : {never=0.4, not=0.97, already=0.65, recently=0.41, quickly=0.44, finally=1.96, also=0.34, eventually=1.04, ultimately=0.26, sparsely=0.34}
+decentralized : {highly=8.41}
+accept : {ever=0.11, never=0.71, not=6.7, readily=0.22, gladly=0.12, easily=0.12, please=0.39, also=0.37, simply=0.3, really=0.14, fully=0.21, willingly=0.1}
+horse : {some=0.16}
+fazed : {not=35.62}
+appreciated : {always=2.25, never=1.19, not=3.03, widely=1.13, also=1.77, truly=0.79, greatly=3.51, really=3.47, fully=4.29}
+adopt : {not=2.08, also=0.39}
+wander : {not=2.03}
+oppose : {vigorously=0.77, not=4.7, strongly=1.85, also=1.43, vehemently=0.62}
+invoked : {repeatedly=2.96, frequently=3.62, also=3.29}
+bridge : {stone=0.61}
+donated : {recently=1.99, also=3.57}
+sue : {not=1.46}
+access : {some=0.16, not=0.18, easily=0.1, also=0.13}
+seed : {some=0.83}
+cooperate : {not=5.02, fully=1.06}
+overcome : {not=1.53, easily=0.42, suddenly=0.36}
+cabin : {summer=0.4}
+executed : {properly=0.83, not=1.53, faithfully=0.9, perfectly=1.13, summarily=1.2}
+sun : {some=0.2, summer=0.76}
+seek : {always=0.31, never=0.25, some=0.18, not=4.84, actively=0.61, aggressively=0.2, also=0.81, constantly=0.15}
+seen : {increasingly=0.08, readily=0.04, probably=0.19, frequently=0.09, sometimes=0.07, clearly=0.16, not=3.11, previously=0.09, seldom=0.15, occasionally=0.03, easily=0.1, usually=0.12, always=0.25, certainly=0.07, commonly=0.12, typically=0.05, already=0.8, recently=0.08, finally=0.03, widely=0.26, also=0.66, really=0.22, generally=0.07, actually=0.35, never=9.67, ever=7.11, definitely=0.03, traditionally=0.05, personally=0.03, barely=0.04, rarely=0.45, hardly=0.04, normally=0.03}
+seem : {always=0.88, some=0.16, certainly=0.12, almost=0.14, already=0.06, sometimes=0.25, also=0.51, indeed=0.09, suddenly=0.11, really=0.3, actually=0.08, never=0.64, ever=0.12, not=7.09, initially=0.05, days=0.08, hardly=0.13}
+referring : {not=4.09}
+blew : {almost=0.58, nearly=0.5, also=0.56, really=1.2}
+compelled : {not=1.94}
+managed : {badly=0.22, always=1.1, successfully=0.29, carefully=0.26, already=0.19, finally=1.45, also=1.25, eventually=0.17, professionally=0.19, properly=0.33, actually=0.38, ever=0.5, never=1.03, not=0.65, intensively=0.24, actively=0.49, barely=0.61, easily=0.24, somehow=2.22, usually=0.16}
+disturb : {not=16.36}
+adore : {absolutely=3.77}
+persist : {not=4.36}
+paved : {newly=2.21}
+caution : {some=2.8}
+key : {some=1.22, absolutely=0.07, also=0.23, really=0.14}
+preferred : {actually=0.47, always=1.61, also=0.6, clearly=0.38, generally=0.38}
+surprised : {always=0.68, slightly=0.11, particularly=0.23, almost=0.12, rather=0.21, genuinely=0.35, also=0.41, terribly=0.13, entirely=0.15, really=1.63, actually=0.22, happily=0.11, never=0.18, not=6.72, too=0.49, quite=0.63, somewhat=0.49, completely=0.18, mildly=0.26, totally=0.25, hardly=0.16}
+storm : {summer=0.26}
+intern : {summer=3.77}
+analyzed : {not=1.25, carefully=0.57, recently=0.6, also=2.59, statistically=0.6}
+speculate : {some=2.08, not=3.1}
+closet : {supply=0.81}
+launch : {not=0.46}
+store : {some=0.11, not=0.13, also=0.11, supply=0.59}
+heed : {not=6.14}
+closer : {lot=1.14, actually=0.16, slightly=0.16, ever=1.07, perhaps=0.12, probably=0.43, somewhat=0.15, something=0.46}
+single : {newly=0.06, some=0.12, not=0.11, mostly=0.04}
+confirm : {not=6.13, also=0.83}
+pull : {actually=0.18, always=0.17, never=0.17, not=0.92, gently=0.37, also=0.13, slowly=0.28, really=0.16, simply=0.14}
+handled : {always=0.46, properly=0.66, ever=0.46, never=0.46, not=1.37, easily=0.66, also=0.6}
+buying : {actually=0.31, not=3.46, also=0.3, simply=0.21}
+appoint : {not=2.76}
+assist : {not=0.63, also=0.93}
+intervene : {not=6.18}
+story : {some=0.09, earlier=0.04, post=0.03}
+joint : {some=0.28}
+separate : {not=1.31, quite=0.26, also=0.11, completely=0.5, totally=0.35, entirely=0.36, really=0.13, something=0.15}
+declare : {not=2.43}
+dislike : {really=2.17}
+buy : {always=0.22, actually=0.2, never=0.32, ever=0.14, not=1.06, maybe=0.05, rather=0.07, probably=0.09, also=0.34, usually=0.08, simply=0.1, really=0.09}
+express : {ever=0.27, not=2.51, also=0.78, clearly=0.24, freely=0.24, really=0.25}
+confine : {not=9.53}
+advocate : {not=2.89, strongly=0.55, also=0.62}
+enclosed : {completely=2.11, fully=3.8}
+stunned : {too=3.07, absolutely=0.82, momentarily=0.69}
+elicit : {not=2.65}
+ruled : {never=0.54, not=2.83, already=0.83, recently=0.44, also=1.57}
+embracing : {not=2.64}
+up : {silently=0.01, some=0.02, slightly=0.01, mostly=0.01, maybe=0.01, almost=0.02, probably=0.01, quickly=0.01, sometimes=0.01, not=0.11, perhaps=0.01, post=0.01, steadily=0.01, quite=0.01, usually=0.01, totally=0.01, fully=0.01, together=0.01, always=0.02, certainly=0.01, fined=0.01, carefully=0.01, already=0.03, again=0.01, finally=0.01, also=0.02, say=0.01, slowly=0.03, entirely=0.02, something=0.07, really=0.03, rapidly=0.01, stone=0.01, actually=0.01, especially=0.01, definitely=0.01, gently=0.01, barely=0.01, days=0.01, heads=0.08, completely=0.01, snap=0.02}
+written : {badly=0.12, always=0.16, some=0.13, already=0.63, carefully=0.1, probably=0.12, recently=0.17, originally=0.37, also=0.82, clearly=0.24, something=0.16, beautifully=0.27, actually=0.34, never=1.1, ever=1.46, not=1.01, previously=0.09, usually=0.1}
+generate : {not=1.8, also=1.16}
+smiling : {always=2.07, not=2.83, almost=0.46}
+praised : {critically=1.31, widely=6.11, also=4.46, highly=3.86}
+ensure : {not=1.05, also=0.48}
+smoked : {never=6.1, ever=1.05}
+exploded : {suddenly=1.21}
+sink : {not=0.67, really=0.47}
+politicized : {highly=28.01}
+stole : {never=0.83, allegedly=0.83}
+suppose : {not=0.43}
+upright : {bolt=7.21}
+thin : {some=0.21, not=0.19, extremely=0.43, too=3.36, rather=0.19, already=0.13, fairly=0.16, quite=0.17, relatively=0.27, painfully=0.21, really=0.23}
+flavor : {some=0.48}
+opt : {not=2.3}
+recess : {summer=5.27}
+obscure : {some=4.84, not=3.05, too=1.02, relatively=3.09}
+solve : {actually=0.27, never=0.3, not=4.38, really=0.39}
+hint : {some=1.04}
+know : {surely=0.01, rather=0.01, probably=0.09, clearly=0.01, soon=0.01, necessarily=0.02, instantly=0.01, not=1.84, quite=0.06, somehow=0.01, usually=0.01, truly=0.02, fully=0.01, possibly=0.03, always=0.1, certainly=0.03, already=0.32, rightly=0.01, finally=0.01, obviously=0.01, also=0.22, please=0.01, instinctively=0.01, exactly=0.02, indeed=0.01, really=0.47, generally=0.01, actually=0.05, never=0.77, ever=0.12, definitely=0.01, personally=0.02, absolutely=0.01, barely=0.02, rarely=0.01, hardly=0.04}
+sing : {always=0.24, actually=0.31, never=0.26, not=1.23, also=0.29, really=0.33}
+demonstrate : {not=1.93, also=1.66, clearly=0.99}
+support : {always=0.03, needs=0.05, some=0.45, certainly=0.06, adequately=0.03, also=0.3, necessarily=0.03, really=0.06, overwhelmingly=0.03, generally=0.07, actually=0.04, never=0.04, not=1.64, wholeheartedly=0.03, strongly=0.2, actively=0.06, financially=0.05, fully=0.13}
+deceive : {not=5.49}
+changed : {profoundly=0.15, probably=0.07, quickly=0.29, soon=0.08, gradually=0.12, fundamentally=0.32, not=2.78, legally=0.09, abruptly=0.17, easily=0.07, dramatically=0.39, totally=0.22, certainly=0.18, already=0.31, recently=0.2, literally=0.08, irrevocably=0.08, finally=0.09, also=0.87, indeed=0.07, suddenly=0.23, slowly=0.07, permanently=0.07, something=0.27, really=1.13, radically=0.39, actually=0.21, never=0.84, ever=0.15, definitely=0.13, apparently=0.07, barely=0.11, drastically=0.21, completely=0.49, substantially=0.11, forever=0.49, hardly=0.14, significantly=0.16, greatly=0.1, simply=0.09}
+drop : {not=0.73, probably=0.16, also=0.16, suddenly=0.14, simply=0.27}
+curving : {gently=8.19}
+hire : {not=1.59, knowingly=0.4}
+shaped : {perfectly=1.44, largely=0.79, similarly=0.56, profoundly=0.68, oddly=2.11, also=1.4, irregularly=2.16}
+kid : {some=0.94, not=0.28, forever=0.25}
+honed : {finely=20.65}
+frustrating : {extremely=1.78, particularly=1.36, incredibly=1.4, sometimes=1.06, really=1.86}
+damp : {slightly=1.46}
+honey : {some=0.86}
+screw : {not=1.32}
+gap : {stone=0.43}
+gas : {some=0.3}
+mandated : {not=3.73, legally=3.12, constitutionally=2.98, also=1.97, federally=8.6, congressionally=3.66}
+emphasize : {not=2.02, also=1.72}
+overweight : {slightly=2.97, not=2.23, severely=1.12, significantly=1.4}
+figure : {always=0.08, ever=0.1, never=0.22, not=0.44, probably=0.06, quite=0.18, also=0.15, really=0.1}
+preclude : {not=36.52}
+slight : {some=1.67, too=0.38}
+corrupt : {not=1.38}
+teach : {actually=0.16, ever=0.14, not=1.48, effectively=0.14, also=0.73, really=0.15}
+transmit : {not=2.43}
+coke : {some=5.21}
+argue : {always=0.18, never=0.24, some=2.44, not=1.76, also=1.54, really=0.22}
+weaken : {not=3.65}
+damn : {some=1.3, too=3.01}
+typed : {neatly=3.04}
+stroked : {gently=2.62}
+succeed : {always=0.41, never=0.66, not=6.7, eventually=0.32}
+bankrupt : {nearly=2.4, morally=3.26}
+compromise : {some=1.07, not=2.49}
+advertise : {not=4.83}
+held : {firmly=0.08, some=0.05, probably=0.06, sometimes=0.05, not=0.54, previously=0.23, deeply=0.38, usually=0.15, privately=0.92, always=0.38, closely=0.31, commonly=0.37, already=0.17, briefly=0.05, recently=0.19, widely=0.95, finally=0.05, also=0.69, publicly=0.34, something=0.05, really=0.09, generally=0.17, actually=0.11, never=0.58, ever=0.34, currently=0.15, traditionally=0.11, apparently=0.05, strongly=0.2, tightly=0.07, barely=0.09, consistently=0.06, heads=0.05, formerly=0.06, simply=0.07}
+woven : {loosely=2.47, tightly=9.18, intricately=2.47, finely=2.63}
+reach : {always=0.12, probably=0.1, almost=0.1, quickly=0.09, finally=0.21, also=0.13, eventually=0.2, really=0.1, soon=0.1, actually=0.14, never=0.69, ever=0.25, not=2.45, easily=0.16, quite=0.17}
+react : {not=3.88}
+type : {some=4.21}
+calibrated : {carefully=16.84, finely=9.43}
+feedback : {some=1.44}
+tripled : {almost=6.71, nearly=18.27}
+closing : {some=0.66, not=0.8, finally=0.34, slowly=0.36}
+review : {not=0.25, carefully=0.13, briefly=0.21, also=0.21}
+justify : {not=5.68}
+weather : {some=0.16, summer=0.44}
+proof : {some=0.87, not=0.98}
+seized : {not=0.77, quickly=0.81, also=1.71}
+guide : {not=0.18, also=0.26}
+phase : {earlier=0.35}
+convoy : {supply=2.93}
+lending : {not=1.75}
+drank : {never=2.2}
+contract : {not=0.24}
+conclude : {not=2.54, also=0.57, reasonably=0.66}
+come : {surely=0.03, increasingly=0.03, almost=0.02, sometimes=0.05, quickly=0.03, clearly=0.02, soon=0.06, gradually=0.02, inevitably=0.03, basically=0.02, easily=0.03, quite=0.02, usually=0.1, truly=0.02, possibly=0.03, always=0.32, already=0.13, typically=0.03, finally=0.19, please=0.27, slowly=0.02, something=0.02, ever=0.39, never=0.6, apparently=0.02, rarely=0.03, some=0.07, maybe=0.02, probably=0.11, frequently=0.02, eventually=0.11, necessarily=0.03, not=2.01, somehow=0.03, certainly=0.04, recently=0.08, again=0.02, say=0.03, also=0.31, indeed=0.03, ultimately=0.03, suddenly=0.04, really=0.23, generally=0.03, actually=0.14, definitely=0.02, days=0.02, simply=0.03, normally=0.02}
+benefiting : {not=8.16}
+push : {always=0.16, never=0.14, not=1.04, gently=0.24, also=0.23, slowly=0.15, really=0.49}
+exist : {actually=0.66, always=0.33, not=15.91, currently=0.67, already=1.63, also=1.0, indeed=0.23, really=1.23}
+exact : {not=0.82}
+lift : {not=1.47, carefully=0.41, gently=0.29, barely=0.44, slowly=0.47}
+force : {some=0.17, never=0.06, not=0.47, also=0.08, eventually=0.06}
+scared : {always=0.6, never=0.26, ever=0.26, not=3.16, too=3.77, also=0.29, really=3.21}
+provoked : {also=3.12}
+conceived : {ever=1.71, never=1.14, not=1.26, originally=4.44, also=0.92, broadly=1.41}
+wear : {always=1.23, actually=0.23, never=1.1, ever=0.31, some=0.23, not=2.04, also=0.33, usually=0.27, really=0.13, normally=0.13}
+range : {typically=0.15, summer=0.1, generally=0.09}
+rode : {never=0.79}
+evidenced : {also=2.24}
+disprove : {not=10.12}
+derive : {not=6.11, also=1.8}
+cope : {not=1.8}
+out : {silently=0.01, increasingly=0.01, slightly=0.02, mostly=0.02, almost=0.06, quickly=0.02, sometimes=0.01, ago=0.01, clearly=0.01, soon=0.01, mainly=0.01, utterly=0.01, largely=0.02, bang=0.01, basically=0.01, quite=0.01, blankly=0.01, usually=0.01, truly=0.01, totally=0.05, safely=0.02, fully=0.01, always=0.02, happen=0.01, parcel=0.01, virtually=0.01, carefully=0.01, already=0.05, literally=0.01, finally=0.02, temporarily=0.01, seriously=0.01, slowly=0.02, something=0.21, never=0.02, ever=0.01, especially=0.01, apparently=0.01, oddly=0.01, absolutely=0.01, gently=0.01, completely=0.08, bolt=0.01, hardly=0.01, badly=0.01, some=0.02, purely=0.01, rather=0.01, maybe=0.01, probably=0.02, nearly=0.01, part=0.02, hopelessly=0.01, primarily=0.01, lot=0.03, seemingly=0.01, naturally=0.01, not=0.18, perhaps=0.01, too=0.01, course=0.01, somehow=0.01, wildly=0.01, together=0.02, sadly=0.01, certainly=0.01, recently=0.01, again=0.01, say=0.02, also=0.02, obviously=0.01, partly=0.02, suddenly=0.01, entirely=0.02, really=0.03, stone=0.01, woefully=0.01, actually=0.01, definitely=0.01, currently=0.01, nights=0.02, barely=0.02, days=0.03, somewhat=0.01, heads=0.04, simply=0.02, snap=0.02, quietly=0.01}
+rock : {some=0.25, not=0.16}
+consuming : {not=1.72}
+leak : {not=1.72}
+confess : {not=1.31}
+impress : {not=3.32}
+flaw : {some=2.43}
+lean : {not=0.47}
+feature : {some=0.28, not=0.45, also=1.24}
+assert : {not=1.74, also=1.59}
+flat : {mostly=0.26, not=0.35, perfectly=0.37, almost=0.28, too=0.48, rather=0.23, virtually=0.18, fairly=0.22, nearly=0.39, relatively=1.06, essentially=0.31, completely=0.21}
+darn : {too=7.45}
+get : {surely=0.01, almost=0.02, quickly=0.03, sometimes=0.06, soon=0.03, gradually=0.01, routinely=0.01, basically=0.01, quite=0.06, easily=0.04, usually=0.09, truly=0.01, totally=0.01, possibly=0.05, always=0.23, already=0.02, typically=0.02, literally=0.01, finally=0.15, please=0.05, slowly=0.01, ever=0.43, never=0.75, rarely=0.04, hardly=0.03, some=0.02, maybe=0.06, probably=0.16, rather=0.03, frequently=0.01, automatically=0.01, eventually=0.06, necessarily=0.02, not=1.33, perhaps=0.01, seldom=0.01, occasionally=0.01, hopefully=0.02, somehow=0.03, certainly=0.03, again=0.01, say=0.02, also=0.23, indeed=0.01, suddenly=0.02, ultimately=0.01, really=0.36, generally=0.02, actually=0.19, definitely=0.03, barely=0.04, days=0.01, simply=0.03, normally=0.02}
+recall : {ever=0.28, not=4.89, vividly=0.38, also=0.62, vaguely=0.23}
+resembling : {closely=11.86, remotely=8.94, something=30.98}
+dark : {always=0.07, some=0.47, mostly=0.07, almost=0.26, already=0.15, rather=0.06, nearly=0.14, really=0.18, something=0.2, not=0.12, extremely=0.06, too=1.06, quite=0.11, completely=0.26, totally=0.11, fully=0.06}
+course : {summer=0.03}
+leap : {not=0.73}
+power : {some=0.24, not=0.06, supply=0.03}
+copy : {not=0.41}
+place : {some=0.41, not=0.13, carefully=0.02, quite=0.04, also=0.04, summer=0.04, simply=0.02}
+dare : {never=1.27, not=5.86}
+dispute : {some=1.47, not=2.06}
+overstate : {not=8.65}
+cook : {not=0.46}
+apologizing : {not=14.4}
+cool : {always=0.17, some=0.32, not=0.87, too=0.77, relatively=0.23, completely=0.21, totally=0.24, really=2.73, something=0.39}
+sell : {actually=0.13, always=0.15, never=0.39, ever=0.13, not=1.44, probably=0.17, typically=0.1, eventually=0.11, also=0.49, really=0.11, generally=0.09}
+tired : {always=0.29, never=0.9, not=0.74, extremely=0.23, physically=0.18, awfully=0.17, already=0.29, too=6.81, suddenly=0.18, simply=0.19, really=1.44}
+continued : {some=0.12, not=0.11, also=0.8, simply=0.14}
+suggest : {some=0.62, never=0.14, not=1.61, strongly=1.02, also=2.34, clearly=0.11}
+suspect : {always=0.27, some=0.38, ever=0.27, never=0.4, not=0.49, rather=0.32, already=0.2, strongly=0.43, also=0.54, morally=0.18, highly=0.49}
+brain : {some=0.22, not=0.2}
+abide : {not=13.94}
+apologize : {sincerely=0.76, never=0.63, not=2.56}
+lead : {always=0.18, surely=0.05, some=0.07, certainly=0.09, probably=0.13, automatically=0.07, quickly=0.06, sometimes=0.14, eventually=0.56, also=0.83, ultimately=0.3, someday=0.06, really=0.08, soon=0.07, necessarily=0.28, actually=0.14, never=0.07, not=1.58, inevitably=0.26, easily=0.13, usually=0.06, potentially=0.07, possibly=0.11}
+fraction : {some=0.79}
+amazed : {always=4.19, absolutely=0.81, truly=0.84, constantly=1.41, really=1.08}
+expect : {always=0.17, certainly=0.1, some=0.09, almost=0.1, probably=0.08, also=0.54, reasonably=0.39, necessarily=0.09, really=0.73, generally=0.07, actually=0.1, never=0.39, ever=0.28, not=4.94, realistically=0.11, usuall

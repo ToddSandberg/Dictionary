@@ -127,6 +127,12 @@ public class Accesser {
         /*Diminutive*/
         if(rf.diminutives().length()>1)
             result += "Diminutives: "+rf.diminutives() + "\n";
+        /*Adverbs*/
+        if(rf.adverb_ly().length()>1)
+            result += "Adverbs: "+rf.adverb_ly() + "\n";
+        /*Diminutive*/
+        if(rf.toVerb().length()>1)
+            result += "Verbs: "+rf.toVerb() + "\n";
         return result;
     }
 }

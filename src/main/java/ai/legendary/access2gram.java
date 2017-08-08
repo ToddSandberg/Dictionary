@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -51,7 +53,8 @@ public class access2gram {
     public static void writeMostCommonLists(
             HashMap<String, HashMap<String, Integer>> twograms) {
         try {
-            
+            DecimalFormat df = new DecimalFormat("#.##");
+            df.setRoundingMode(RoundingMode.CEILING);
             HashMap<String, HashMap<String, Double>> adjnhash= new HashMap<String, HashMap<String, Double>>();
             HashMap<String, HashMap<String, Double>> adjadvhash= new HashMap<String, HashMap<String, Double>>();
             HashMap<String, HashMap<String, Double>> prepnhash= new HashMap<String, HashMap<String, Double>>();
@@ -85,108 +88,111 @@ public class access2gram {
                         Entry<String, Integer> pair2 = it2.next();
                         if (noundict.containsKey(word)) {
                             String key = pair2.getKey();
+                            Double percent = Double.parseDouble(df.format(percentages.get(key)));
                             String beginword = key.split("\\|")[0];
                             if (adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !conjdict.containsKey(beginword) && !prondict.containsKey(beginword)) {
                                 if(adjnhash.containsKey(word)){
                                     HashMap<String,Double> temp = adjnhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     adjnhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     adjnhash.put(word, temp);
                                 }
                             }
                             else if(detdict.containsKey(beginword)){
                                 if(detnhash.containsKey(word)){
                                     HashMap<String,Double> temp = detnhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     detnhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     detnhash.put(word, temp);
                                 }
                             }
                             else if(prepdict.containsKey(beginword)){
                                 if(prepnhash.containsKey(word)){
                                     HashMap<String,Double> temp = prepnhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     prepnhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     prepnhash.put(word, temp);
                                 }
                             }
                             else if(verbdict.containsKey(beginword) && !conjdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !adjdict.containsKey(beginword) && !beginword.equals("is") && !beginword.equals("be") && !beginword.equals("was")){
                                 if(vobjhash.containsKey(word)){
                                     HashMap<String,Double> temp = vobjhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     vobjhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     vobjhash.put(word, temp);
                                 }
                             }
                         }
                         if(adjdict.containsKey(word)){
                             String key =pair2.getKey();
+                            Double percent = Double.parseDouble(df.format(percentages.get(key)));
                             String beginword = key.split("\\|")[0];
                             if (advdict.containsKey(beginword)&& !detdict.containsKey(beginword)&& !prepdict.containsKey(beginword) && !prondict.containsKey(beginword) && !conjdict.containsKey(beginword)) {
                                 if(adjadvhash.containsKey(word)){
                                     HashMap<String, Double> temp = adjadvhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     adjadvhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String, Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     adjadvhash.put(word, temp);
                                 }
                             }
                         }
                         if(verbdict.containsKey(word)){
                             String key = pair2.getKey();
+                            Double percent = Double.parseDouble(df.format(percentages.get(key)));
                             String beginword = key.split("\\|")[0];
                             if (prepdict.containsKey(beginword)) {
                                 if(prepvhash.containsKey(word)){
                                     HashMap<String,Double> temp = prepvhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     prepvhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     prepvhash.put(word, temp);
                                 }
                             }
                             else if (noundict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !conjdict.containsKey(beginword) && !verbdict.containsKey(beginword)) {
                                 if(nounvhash.containsKey(word)){
                                     HashMap<String,Double> temp = nounvhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     nounvhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     nounvhash.put(word, temp);
                                 }
                             }
                             else if(advdict.containsKey(beginword) && !adjdict.containsKey(beginword) && !detdict.containsKey(beginword) && !conjdict.containsKey(beginword)){
                                 if(advvhash.containsKey(word)){
                                     HashMap<String,Double> temp = advvhash.get(word);
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     advvhash.put(word, temp);
                                 }
                                 else{
                                     HashMap<String,Double> temp = new HashMap<String,Double>();
-                                    temp.put(beginword,percentages.get(key));
+                                    temp.put(beginword,percent);
                                     advvhash.put(word, temp);
                                 }
                             }
@@ -199,18 +205,19 @@ public class access2gram {
                         while(it3.hasNext()){
                             Entry<String, Integer> pair2 = it3.next();
                             String key = pair2.getKey();
+                            Double percent = Double.parseDouble(df.format(percentages2.get(key)));
                             String beginword = key.split("\\|")[0];
                             String middleword = key.split("\\|")[1];
                             if(verbdict.containsKey(beginword) && !prepdict.containsKey(beginword) && !conjdict.containsKey(beginword)){
                                 if(noundict.containsKey(word)){
                                     if(vobjhash.containsKey(word)){
                                         HashMap<String, Double> temp = vobjhash.get(word);
-                                        temp.put(beginword + " " + middleword, percentages2.get(key));
+                                        temp.put(beginword + " " + middleword, percent);
                                         vobjhash.put(word, temp);
                                     }
                                     else{
                                         HashMap<String, Double> temp = new HashMap<String,Double>();
-                                        temp.put(beginword + " " + middleword, percentages2.get(key));
+                                        temp.put(beginword + " " + middleword, percent);
                                         vobjhash.put(word, temp);
                                     }
                                 }
@@ -219,14 +226,14 @@ public class access2gram {
                     }
                 }
             }
-            printHashMaps(adjnhash,new File("outputs/adjtonoun.txt"));
-            printHashMaps(prepnhash,new File("outputs/preptonoun.txt"));
-            printHashMaps(adjadvhash,new File("outputs/advtoadj.txt"));
-            printHashMaps(detnhash, new File("outputs/dettonoun.txt"));
-            printHashMaps(prepvhash,new File("outputs/preptoverb.txt"));
-            printHashMaps(advvhash, new File("outputs/advtoverb.txt"));
-            printHashMaps(nounvhash, new File("outputs/nountoverb.txt"));
-            printHashMaps(vobjhash, new File("outputs/verbtoobject.txt"));
+            printHashMaps(adjnhash,new File("outputs/MostCommonAdjectiveToNoun.txt"));
+            printHashMaps(prepnhash,new File("outputs/MostCommonPrepositionToNoun.txt"));
+            printHashMaps(adjadvhash,new File("outputs/MostCommonAdjectiveToAdverb.txt"));
+            printHashMaps(detnhash, new File("outputs/MostCommonDeterminerToNoun.txt"));
+            printHashMaps(prepvhash,new File("outputs/MostCommonPrepositionToVerb.txt"));
+            printHashMaps(advvhash, new File("outputs/MostCommonAdverbToVerb.txt"));
+            printHashMaps(nounvhash, new File("outputs/MostCommonNounToVerb.txt"));
+            printHashMaps(vobjhash, new File("outputs/MostCommonVerbToObject.txt"));
         }
         catch (Exception e) {
             e.printStackTrace();

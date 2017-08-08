@@ -169,6 +169,8 @@ public class WriteDictionary {
                     "- tsv files for each part of speech with words and their properties");
             printer.println(
                     "- serialized dictionary HashMap's for each part of speech");
+            printer.println(
+                    "- Lists of the most common word combinations in the format pos2 : {pos1=howCommon}");
             printer.println("## Accessing the Dictionary");
             printer.println("- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.");
             printer.println("- The DictionaryAccess class provides access to many features of the dictionary. "
