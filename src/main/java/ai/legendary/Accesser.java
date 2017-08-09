@@ -16,11 +16,10 @@ public class Accesser {
             .getLemma());
         }
         catch (JWNLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }*/
-        //DictionaryAccess acc = new DictionaryAccess();
-        /*MorphologyFinder mf = new MorphologyFinder("realizably");
+        DictionaryAccess acc = new DictionaryAccess();
+        /*MorphologyFinder mf = new MorphologyFinder("realizably"); //access the morphology finder used in the dictionary
         mf.loadDictionary(acc.getNounDictionary());
         mf.loadDictionary(acc.getAdjectiveDictionary());
         mf.loadDictionary(acc.getAdverbDictionary());
@@ -34,7 +33,8 @@ public class Accesser {
             String word = JOptionPane.showInputDialog("enter a word");
             System.out.println(acc.getWordInfo(word));
         }*/
-        //System.out.println(acc.getWordInfo("alcoholic","adjective"));
+        //System.out.println(acc.getWordInfo("make")); //nonspecific pos
+        //System.out.println(acc.getWordInfo("alcoholic","adjective")); //specific pos
         /*Example usage of changePOS*/
         //System.out.println(acc.changePOS("gaming", "noun", "verb").toString());
         //System.out.println(acc.changePOS("forgivable", "adjective", "noun").toString());
@@ -42,24 +42,26 @@ public class Accesser {
         /*Unfinished methods - formats light verbs*/
         //System.out.println(acc.getWordInfo("bath"));
         //System.out.println(acc.changeVerbTense("walk", "Past"));
-        //System.out.println(acc.clean("I make the bass drop"));
-        //System.out.println(acc.clean("I made the door close"));
-        //System.out.println(acc.clean("we did a test of it"));
-        //System.out.println(acc.clean("I gave him a bath"));
-        //System.out.println(acc.clean("Sam did a revision of his paper"));
-        //System.out.println(acc.clean("Jim made a gesture to the door"));
+        //System.out.println(acc.fromLightVerb("I make the bass drop"));
+        //System.out.println(acc.fromLightVerb("I made the door close"));
+        //System.out.println(acc.fromLightVerb("we did a test of it"));
+        //System.out.println(acc.fromLightVerb("I gave him a bath"));
+        //System.out.println(acc.fromLightVerb("Sam did a revision of his paper"));
+        //System.out.println(acc.fromLightVerb("Jim made a gesture to the door"));
+        //System.out.println(acc.fromLightVerb("had a bath"));
+        System.out.println(acc.toLightVerb("bathed"));
         /*Example usage of getMultipleWordInfo*/
         //System.out.println(acc.getMultipleWordInfo("I like big pizza"));
         //System.out.println(acc.getMultipleWordInfo("you are a person"));
         //System.out.println(acc.getMultipleWordInfo("there must be a bath telephone and TV in the room"));
         //System.out.println(acc.getMultipleWordInfo("what is going on ?"));
         /*Testing Reformatter class*/
-        Reformatter rf = new Reformatter();
+        /*Reformatter rf = new Reformatter();
         while(true){
             String word = JOptionPane.showInputDialog("enter a word");
             String pos = JOptionPane.showInputDialog("enter a part of speech");
             System.out.println(getAllReformatted(word,rf,pos));
-        }
+        }*/
         //acc.getBaseWords('g');
     }
     /**
@@ -130,7 +132,7 @@ public class Accesser {
         /*Adverbs*/
         if(rf.adverb_ly().length()>1)
             result += "Adverbs: "+rf.adverb_ly() + "\n";
-        /*Diminutive*/
+        /*Verbs*/
         if(rf.toVerb().length()>1)
             result += "Verbs: "+rf.toVerb() + "\n";
         return result;

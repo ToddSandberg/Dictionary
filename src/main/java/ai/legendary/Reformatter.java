@@ -1308,12 +1308,14 @@ public class Reformatter {
         String newwords = "";
         ArrayList<String> adverbs = acc.changePOS(word, pos, "verb");
         for(int x=0;x<adverbs.size();x++){
+            if(!adverbs.get(x).startsWith("no verbs relating")){
                 if (newwords.length() > 1) {
                     newwords += " or " + adverbs.get(x);
                 }
                 else {
                     newwords += adverbs.get(x);
                 }
+            }
         }
         return newwords;
     }

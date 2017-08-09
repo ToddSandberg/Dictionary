@@ -24,6 +24,11 @@ public class Verb implements PartOfSpeech ,Serializable{
     public String wordNetID = "--";
     public String propbank = "--";
     public String frame = "--";
+    /**
+     * base ID = 2;
+     * higher the number, higher the intensity
+     */
+    public int verbIntensifierID = -1;
     public Verb() {
         this("");
     }
@@ -240,6 +245,6 @@ public class Verb implements PartOfSpeech ,Serializable{
                 + transivity + ", Tense=" + tense + ", Aspect=" + aspect
                 + ", Person=" + person + ", Phrasal=" + phrasal + ", isInfinitive="
                 + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank 
-                +", baseForm="+baseForm + ", light="+light + ", verbnet="+verbnet + ", wordNetID="+wordNetID+", propBank="+propbank+", frame="+frame;
+                +", baseForm="+baseForm + ", light="+light + ", verbnet="+verbnet + ", wordNetID="+wordNetID+", propBank="+propbank+", frame="+frame + ", Itensifier ID="+verbIntensifierID;
     }
 }

@@ -163,6 +163,9 @@ public class WriteDictionary {
             // implements which words are common
             frequency();
             printer.println("- Word_frequency_list.txt implemented");
+            //implements word Scales
+            wordScales();
+            printer.println("- Word Scales have been implemented");
             
             printer.println("## Document Output Formats:");
             printer.println(
@@ -231,6 +234,73 @@ public class WriteDictionary {
             time.cancel();
         }
         catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void wordScales() {
+        try{
+            Scanner scan = new Scanner(new File("inputs/WordScales.csv"));
+            while(scan.hasNextLine()){
+            String line = scan.nextLine();
+            String word = line.split(",")[0].toLowerCase();
+            String scale = line.split(",")[0];
+            if(adjectiveDictionary.containsKey(word)){
+                Adjective a = new Adjective(word);
+                if(scale.endsWith("VL")){
+                    a.adjectiveIntensifierID = 0;
+                }
+                else if(scale.endsWith("L")){
+                    a.adjectiveIntensifierID = 1;
+                }
+                else if(scale.endsWith("H")){
+                    a.adjectiveIntensifierID = 3;
+                }
+                else if(scale.endsWith("VH")){
+                    a.adjectiveIntensifierID = 4;
+                }
+                merge(word,a);
+            }
+            if(adverbDictionary.containsKey(word)){
+                Adverb a = new Adverb(word);
+                if(scale.endsWith("VL")){
+                    a.advIntensiferID = 0;
+                    a.advIntensifier = scale.split("_")[0];
+                }
+                else if(scale.endsWith("L")){
+                    a.advIntensiferID = 1;
+                    a.advIntensifier = scale.split("_")[0];
+                }
+                else if(scale.endsWith("H")){
+                    a.advIntensiferID = 3;
+                    a.advIntensifier = scale.split("_")[0];
+                }
+                else if(scale.endsWith("VH")){
+                    a.advIntensiferID = 4;
+                    a.advIntensifier = scale.split("_")[0];
+                }
+                merge(word,a);
+            }
+            if(verbDictionary.containsKey(word)){
+                Verb v = new Verb(word);
+                if(scale.endsWith("VL")){
+                    v.verbIntensifierID = 0;
+                }
+                else if(scale.endsWith("L")){
+                    v.verbIntensifierID = 1;
+                }
+                else if(scale.endsWith("H")){
+                    v.verbIntensifierID = 3;
+                }
+                else if(scale.endsWith("VH")){
+                    v.verbIntensifierID = 4;
+                }
+                merge(word,v);
+            }
+            }
+            scan.close();
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
     }
@@ -567,7 +637,7 @@ public class WriteDictionary {
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tverbNet\twordNetID\tpropBank\tframe");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tverbNet\twordNetID\tpropBank\tframe\tverbIntensifierID");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
@@ -718,7 +788,7 @@ public class WriteDictionary {
                         + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
                         + "\t" + v.phrasal + "\t" + v.isInfinitive + "\t"
                         + v.howCommon + "\t" + v.commonRank + "\t"
-                        + v.baseForm + "\t" + v.light + "\t" + v.verbnet + "\t" + v.wordNetID +"\t"+v.propbank +"\t"+v.frame);
+                        + v.baseForm + "\t" + v.light + "\t" + v.verbnet + "\t" + v.wordNetID +"\t"+v.propbank +"\t"+v.frame+"\t"+v.verbIntensifierID);
             }
             Iterator advit = adverbDictionary.entrySet().iterator();
             while (advit.hasNext()) {
@@ -1285,6 +1355,9 @@ public class WriteDictionary {
                     }
                     if (p.howCommon == -1) {
                         p.howCommon = ((Verb) part).howCommon;
+                    }
+                    if (p.verbIntensifierID == -1) {
+                        p.verbIntensifierID = ((Verb) part).verbIntensifierID;
                     }
                     if(!((Verb) part).baseForm.equals("--")){
                         p.baseForm = ((Verb) part).baseForm;

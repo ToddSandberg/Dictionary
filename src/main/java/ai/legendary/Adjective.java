@@ -16,6 +16,7 @@ public class Adjective implements PartOfSpeech, Serializable {
     public int adjectiveOrderID = -1;
     /**
      * base ID = 2
+     * the higher the number, the more intense
      */
     public int adjectiveIntensifierID = -1;
     public String comparisonType = "--", quantifier = "--";

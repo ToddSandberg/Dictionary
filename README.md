@@ -23,6 +23,7 @@
 - Percentage of verb phrasal Defined: 100%
 - Percentage of verb isInfinitive Defined: 0.1%
 - Percentage of verb base form Defined: 100%
+- Percentage of verbIntensifierID Defined: 0%
 ### Adjective analysis (Total Adjectives: 50,723):
 - Percentage of Position (Works in predicative and Attributive) Defined for Adjectives : 74.15%
 - Percentage of isQualitative defined: 37.51%
@@ -79,6 +80,7 @@
 - colors.txt implemented
 - LEXICON.txt implemented
 - Word_frequency_list.txt implemented
+- Word Scales have been implemented
 ## Document Output Formats:
 - tsv files for each part of speech with words and their properties
 - serialized dictionary HashMap's for each part of speech
@@ -89,4 +91,4 @@
 - The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.
 - This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
 - The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary.
-## Current Dictionary Write Time: 139 minutes and 15 seconds
+## Current Dictionary Write Time: 147 minutes and 10 seconds

@@ -34,6 +34,8 @@ public class access2gram {
                     .readObject();
             System.out.println("Loaded");
             in.close();
+            in2.close();
+            System.out.print(threegrams.get("-door")); //this is how you call threegrams
             /*
              * while(true){ String word =
              * JOptionPane.showInputDialog("insert a word"); String sentence =
@@ -42,7 +44,7 @@ public class access2gram {
              * word = otherword; sentence += word + " "; }
              * System.out.println(sentence); }
              */
-            writeMostCommonLists(twograms);
+            //writeMostCommonLists(twograms);
 
         }
         catch (Exception e) {
@@ -228,7 +230,7 @@ public class access2gram {
             }
             printHashMaps(adjnhash,new File("outputs/MostCommonAdjectiveToNoun.txt"));
             printHashMaps(prepnhash,new File("outputs/MostCommonPrepositionToNoun.txt"));
-            printHashMaps(adjadvhash,new File("outputs/MostCommonAdjectiveToAdverb.txt"));
+            printHashMaps(adjadvhash,new File("outputs/MostCommonAdverbToAdjective.txt"));
             printHashMaps(detnhash, new File("outputs/MostCommonDeterminerToNoun.txt"));
             printHashMaps(prepvhash,new File("outputs/MostCommonPrepositionToVerb.txt"));
             printHashMaps(advvhash, new File("outputs/MostCommonAdverbToVerb.txt"));
