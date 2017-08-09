@@ -41,7 +41,8 @@ public class DictionaryAccess {
     public static HashMap<String, Noun> firstNameDictionary;
     public static HashMap<String, Noun> lastNameDictionary;
     public static HashMap<String, Noun> properPlaceDictionary;
-
+    public static HashMap<String, HashMap<String, Integer>> threegrams;
+    public static HashMap<String, HashMap<String, Integer>> twograms;
     /*
      * Loads the Dictionarys into hashmaps for easy access
      */
@@ -141,7 +142,19 @@ public class DictionaryAccess {
             System.out.println("Loading proper places...");
             properPlaceDictionary = (HashMap<String, Noun>) in.readObject();
             in.close();
-
+            //3grams
+            ObjectInputStream in2 = new ObjectInputStream(
+                    new FileInputStream("outputs/preprocessed3gram.ser"));
+            System.out.println("Loading 3grams");
+            threegrams = (HashMap<String, HashMap<String, Integer>>) in2
+                    .readObject();
+            in2.close();
+            in = new ObjectInputStream(
+                    new FileInputStream("outputs/preprocessed2gram.ser"));
+            System.out.println("Loading 2grams");
+            twograms = (HashMap<String, HashMap<String, Integer>>) in
+                    .readObject();
+            in.close();
             System.out.println("Loaded");
         }
         catch (Exception e) {
@@ -587,7 +600,7 @@ public class DictionaryAccess {
                 Map.Entry pair = (Map.Entry) it.next();
                 if (((Verb) pair.getValue()).baseForm.equals(base)
                         && !base.equals("--")) {
-                    if (((Verb) pair.getValue()).tense.equals(tense)) {
+                    if (((Verb) pair.getValue()).tense.equals(tense) &&((String) pair.getKey()).startsWith(word) ) {
                         return (String) pair.getKey();
                     }
                 }
@@ -811,7 +824,21 @@ public class DictionaryAccess {
         sentences.clear();
         return output;
     }
-
+    /**
+     * Paraphrases light verb phrases. If one of the params are not necessary just put ""
+     * 
+     * @param subj = subject of sentence
+     * @return paraphrased light verb phrase
+     */
+    public String fromLightVerb(String subj,String lightverb,String actionverb, String directobj) {
+        String result = "";
+        String tense = verbDictionary.get(lightverb).tense;
+        if(directobj.length()>0)
+            result = subj + " " + changeVerbTense(actionverb,tense)+ " " +directobj; 
+        else
+            result = subj + " " + changeVerbTense(actionverb,tense); 
+        return result;
+    }
     public void getBaseWords(char c) {
         HashMap<String, String> temp = new HashMap<String, String>();
         Iterator it = nounDictionary.entrySet().iterator();
@@ -890,16 +917,15 @@ public class DictionaryAccess {
             e.printStackTrace();
         }
     }
-
+    /**
+     * paraphrase a sentence to a light verb sentence
+     * @param sent = the setence to be paraphrased
+     * @return light verb sentence
+     */
     public String toLightVerb(String sent) {
         String result = "";
         try {
-            ObjectInputStream in2 = new ObjectInputStream(
-                    new FileInputStream("outputs/preprocessed3gram.ser"));
-            // System.out.println("Loading 3grams");
-            HashMap<String, HashMap<String, Integer>> threegrams = (HashMap<String, HashMap<String, Integer>>) in2
-                    .readObject();
-            // System.out.println("Loaded");
+            
             Properties props = new Properties();
             props.setProperty("annotators", "tokenize, ssplit, pos, parse");
             StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
@@ -919,6 +945,10 @@ public class DictionaryAccess {
                         if (getdictionary(convertnlp(pos), w).containsKey(w)) {
                             if (convertnlp(pos).equals("verb")) {
                                 ArrayList<String> others = changePOS(w, "verb", "noun");
+                                //System.out.println(others.get(0));
+                                /*if(others.size() == 0 || others.get(0).startsWith("no nouns")){
+                                    others = changePOS(w,"verb","adjective");
+                                }*/
                                 boolean found = false;
                                 int i =0;
                                 while(found == false && i<others.size()){
@@ -971,10 +1001,14 @@ public class DictionaryAccess {
                                     }
                                 }
                                 }
+                                else{
+                                    
+                                }
                                 }
                             }
                             else if(light && nounDictionary.containsKey(w) && !determinerDictionary.containsKey(w)){
                                 //System.out.println(w);
+                                if(determiner.length()>0){
                                 HashMap<String, Integer> possibilities = threegrams.get("-" + w);
                                 boolean found = false;
                                 Iterator it = possibilities.entrySet()
@@ -989,7 +1023,23 @@ public class DictionaryAccess {
                                             result+=key.split("\\|")[0]+" "+key.split("\\|")[1]+" "+key.split("\\|")[2];
                                             found = true;
                                         }
-                                        
+                                    }
+                                }
+                                }
+                                else{
+                                    HashMap<String, Integer> possibilities = twograms.get("-" + w);
+                                    boolean found = false;
+                                    Iterator it = possibilities.entrySet()
+                                            .iterator();
+                                    while (it.hasNext() && found == false) {
+                                        Map.Entry pair = (Entry) it.next();
+                                        String key = ((String) pair.getKey());
+                                        if (key.contains("|") &&prepositionDictionary.containsKey(
+                                                key.split("\\|")[0]) ) {
+                                            //System.out.println(key + " : " + determiner);
+                                                result+=key.split("\\|")[0]+" "+key.split("\\|")[1];
+                                                found = true;
+                                        }
                                     }
                                 }
                             }
@@ -1007,6 +1057,101 @@ public class DictionaryAccess {
         catch (Exception e) {
             e.printStackTrace();
         }
+        return result;
+    }
+    /**
+     * paraphrase to a light verb sentence
+     * @param subj
+     * @param actionverb
+     * @param obj
+     * @return
+     */
+    public String toLightVerb(String subj,String actionverb, String obj){
+        String result = subj + " ";
+        ArrayList<String> others = changePOS(actionverb, "verb", "noun");
+        boolean found = false;
+        int i =0;
+        while(found == false && i<others.size()){
+        String newone = others.get(i);
+        i++;
+        HashMap<String, Integer> possibilities = threegrams
+                .get("-" + newone);
+        if(possibilities != null && !possibilities.isEmpty()){
+        if (actionverb.endsWith("ed")) {
+            Iterator it = possibilities.entrySet()
+                    .iterator();
+            while (it.hasNext() && found == false) {
+                Map.Entry pair = (Entry) it.next();
+                String key = ((String) pair.getKey());
+                //System.out.println(key.split("\\|")[0]);
+                if (key.contains("|") && verbDictionary.containsKey(
+                        key.split("\\|")[0]) && determinerDictionary.containsKey(key.split("\\|")[1])) {
+                   
+                    if (verbDictionary
+                            .get(key.split("\\|")[0]).light == true
+                            && verbDictionary.get(
+                                    key.split("\\|")[0]).tense.equals(
+                                            "Past")) {
+                        result+= "|" + key.split("\\|")[0]+" "+key.split("\\|")[1]+" "+key.split("\\|")[2] + "| ";
+                    }
+                }
+            }
+        }
+        else {
+            Iterator it = possibilities.entrySet()
+                    .iterator();
+            while (it.hasNext()&& found == false) {
+                Map.Entry pair = (Entry) it.next();
+                String key = ((String) pair.getKey());
+                if (key.contains("|") &&verbDictionary.containsKey(
+                        key.split("\\|")[0])) {
+                    if (verbDictionary
+                            .get(key.split("\\|")[0]).light == true
+                            && !verbDictionary.get(
+                                    key.split("\\|")[0]).tense.equals(
+                                            "Past") && determinerDictionary.containsKey(key.split("\\|")[1])) {
+                        result+= "|" +key.split("\\|")[0]+" "+key.split("\\|")[1]+" "+key.split("\\|")[2] + "| ";
+                        found = true;
+                    }
+                }
+            }
+        }
+        }
+        }
+        if(!obj.equals("") && obj.split(" ").length==2){
+            HashMap<String, Integer> possibilities = threegrams.get("-" + obj.split(" ")[1]);
+            found = false;
+            Iterator it = possibilities.entrySet()
+                    .iterator();
+            while (it.hasNext() && found == false) {
+                Map.Entry pair = (Entry) it.next();
+                String key = ((String) pair.getKey());
+                if (key.contains("|") &&prepositionDictionary.containsKey(
+                        key.split("\\|")[0]) ) {
+                    //System.out.println(key + " : " + determiner);
+                    if(key.split("\\|")[1].equals(obj.split(" ")[0])){
+                        result+=key.split("\\|")[0]+" "+key.split("\\|")[1]+" "+key.split("\\|")[2];
+                        found = true;
+                    }
+                }
+            }
+            }
+            else if(!obj.equals("") && obj.length()>1){
+                HashMap<String, Integer> possibilities = twograms.get("-" + obj);
+                found = false;
+                Iterator it = possibilities.entrySet()
+                        .iterator();
+                while (it.hasNext() && found == false) {
+                    Map.Entry pair = (Entry) it.next();
+                    String key = ((String) pair.getKey());
+                    if (key.contains("|") &&prepositionDictionary.containsKey(
+                            key.split("\\|")[0]) ) {
+                        //System.out.println(key + " : " + determiner);
+                            result+=key.split("\\|")[0]+" "+key.split("\\|")[1];
+                            found = true;
+                    }
+                }
+            }
         return result;
     }
 }

@@ -180,7 +180,7 @@ public class WriteDictionary {
                     + "There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. "
                     + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
                     + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
-                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. ");
+                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.");
             printer.println("- The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
             printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
             printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary.");
@@ -632,12 +632,12 @@ public class WriteDictionary {
             File adjectives = new File("outputs/adjectives.tsv");
             PrintWriter adjectiveprinter = new PrintWriter(adjectives);
             adjectiveprinter.println(
-                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm\tlight\tpropBank\tframe");
+                    "Word\tAdjectiveOrderID\tComparisonType\tQuantifier\tIsQualitative\tIsClassifying\tCommonlyPrecededWithAnd\tWorksInAttributivePosition\tWorksInPredicativePosition\tHasDiminutiveSuffix\tIsProper\tCompliments\tMustUseMoreMost\tAdjectiveIntensifierID\thowCommon\tcommonRank\tbaseForm\tpropBank\tframe");
             // verbprinter setup
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tverbNet\twordNetID\tpropBank\tframe\tverbIntensifierID");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tlight\tverbNet\twordNetID\tpropBank\tframe\tverbIntensifierID");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
@@ -774,7 +774,7 @@ public class WriteDictionary {
                         + a.hasDiminutiveSuffix + "\t" + a.isProper + "\t"
                         + a.compliments + "\t" + a.mustUseMoreMost + "\t"
                         + a.adjectiveIntensifierID + "\t" + a.howCommon + "\t"
-                        + a.commonRank + "\t" + a.baseForm + "\t" + a.frame);
+                        + a.commonRank + "\t" + a.baseForm + "\t"+ a.propbank+ "\t" + a.frame);
             }
             Iterator verbit = verbDictionary.entrySet().iterator();
             while (verbit.hasNext()) {
