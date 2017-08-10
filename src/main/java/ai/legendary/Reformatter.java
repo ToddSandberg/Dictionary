@@ -2,9 +2,10 @@ package ai.legendary;
 
 import java.util.ArrayList;
 /**
- * reformats words to other words depending on the method called
- * @author Todd Sandberg
- *
+ * Reformats words to other words depending on the method called. Creates a DictionaryAccess class on initialization, which loads 
+ * everything into HashMaps, so try to only initialize it once.
+ * @author ToddSandberg
+ * @version 8/10/2017
  */
 public class Reformatter {
     DictionaryAccess acc = new DictionaryAccess();
@@ -16,8 +17,8 @@ public class Reformatter {
     }
     /**
      * adds the word to the Reformatter class which allows conversion
-     * @param w
-     * @param p
+     * @param w = the word to be reformatted
+     * @param p = the part of speech of w
      */
     public void addWord(String w, String p) {
         word = w;
@@ -1221,7 +1222,10 @@ public class Reformatter {
         suffs.add("less");
         return checkSuffixesAdjectives(suffs);
     }
-    
+    /**
+     * converts the word into diminutive form
+     * @return new words
+     */
     public String diminutives(){
         String newwords = "";
         ArrayList<String> nouns = acc.changePOS(word, pos, "noun");
@@ -1290,7 +1294,7 @@ public class Reformatter {
     
     /**
      * adverb 
-     * @return
+     * @return the adverb form of the word
      */
     public String adverb_ly(){
         String newwords = "";
@@ -1310,7 +1314,7 @@ public class Reformatter {
     
     /**
      * adverb 
-     * @return
+     * @return the verb form of the word
      */
     public String toVerb(){
         String newwords = "";
@@ -1330,6 +1334,8 @@ public class Reformatter {
     
     /**
      * checks the given suffixes
+     * @param suffs = suffixes to be checked
+     * @return string of words found
      */
     public String checkSuffixesAdjectives(ArrayList<String> suffs) {
         String newwords = "";
@@ -1355,6 +1361,8 @@ public class Reformatter {
     }
     /**
      * checks the given suffixes
+     * @param suffs = Suffixes to be checked
+     * @return string of words found
      */
     public String checkSuffixesNouns(ArrayList<String> suffs) {
         String newwords = "";

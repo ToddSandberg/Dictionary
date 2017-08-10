@@ -23,13 +23,14 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 /**
- * provides various methods for access and paraphrasing using the dictionary
+ * Provides various methods for accessing the dictionary and paraphrasing using the dictionary. When the class is initialized it loads 
+ * everything into HashMaps, so try to only initialize it once.
  * @author ToddSandberg
- *
+ * @version 8/10/2017
  */
 public class DictionaryAccess {
     /*
-     * dictionarys seperated into their parts of speech
+     * dictionaries separated into their parts of speech
      */
     public static HashMap<String, Noun> nounDictionary;
     public static HashMap<String, Verb> verbDictionary;
@@ -48,7 +49,7 @@ public class DictionaryAccess {
     public static HashMap<String, HashMap<String, Integer>> threegrams;
     public static HashMap<String, HashMap<String, Integer>> twograms;
     /*
-     * Loads the Dictionarys into hashmaps for easy access
+     * Loads the Dictionaries into HashMaps for easy access
      */
     public DictionaryAccess() {
         ObjectInputStream in;
@@ -167,7 +168,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * returns the noun dictionary
      * @return the noun dictionary
      */
     public HashMap<String, Noun> getNounDictionary() {
@@ -175,7 +176,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the verb dictionary
      * @return the verb dictionary
      */
     public static HashMap<String, Verb> getVerbDictionary() {
@@ -183,7 +184,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the adjective dictionary
      * @return the adjective dictionary
      */
     public static HashMap<String, Adjective> getAdjectiveDictionary() {
@@ -191,7 +192,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the adverb dictionary
      * @return the adverb dictionary
      */
     public static HashMap<String, Adverb> getAdverbDictionary() {
@@ -199,7 +200,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the conjunction dictionary
      * @return the conjunction dictionary
      */
     public static HashMap<String, Conjunction> getConjunctionDictionary() {
@@ -207,7 +208,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the determiner dictionary
      * @return the determiner dictionary
      */
     public static HashMap<String, Determiner> getDeterminerDictionary() {
@@ -215,15 +216,15 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
-     * @return the Interjection dictionary
+     * Returns the interjection dictionary "Wow!"
+     * @return the interjection dictionary
      */
     public static HashMap<String, Interjection> getInterjectionDictionary() {
         return interjectionDictionary;
     }
 
     /**
-     * 
+     * Returns the preposition dictionary
      * @return the preposition dictionary
      */
     public static HashMap<String, Preposition> getPrepositionDictionary() {
@@ -231,7 +232,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the pronoun dictionary
      * @return the pronoun dictionary
      */
     public static HashMap<String, Pronoun> getPronounDictionary() {
@@ -239,7 +240,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the quantifier dictionary
      * @return the quantifier dictionary
      */
     public static HashMap<String, Quantifier> getQuantifierDictionary() {
@@ -247,7 +248,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the list of roots in the dictionary
      * @return the list of roots in the dictionary
      */
     public static HashMap<String, String> getRoots() {
@@ -255,7 +256,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the list of first names in the dictionary
      * @return the list of first names in the dictionary
      */
     public static HashMap<String, Noun> getFirstNameDictionary() {
@@ -263,7 +264,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the list of last names in the dictionary
      * @return the list of last names in the dictionary
      */
     public static HashMap<String, Noun> getLastNameDictionary() {
@@ -271,7 +272,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * 
+     * Returns the list of proper places in the dictionary
      * @return the list of proper places in the dictionary
      */
     public static HashMap<String, Noun> getProperPlaces() {
@@ -593,8 +594,8 @@ public class DictionaryAccess {
     }
     /**
      * changes the tense of verbs
-     * @param word
-     * @param tense
+     * @param word verb to be changed
+     * @param tense the intended tense
      * @return new word
      */
     public String changeVerbTense(String word, String tense) {
@@ -622,7 +623,7 @@ public class DictionaryAccess {
         return null;
     }
     /**
-     * Paraphrases light verb phrases
+     * Paraphrases light verb phrases using CoreNLP
      * 
      * @param s
      *            the phrase to be paraphrased
@@ -801,9 +802,12 @@ public class DictionaryAccess {
         return output;
     }
     /**
-     * Paraphrases light verb phrases. If one of the params are not necessary just put ""
+     * Paraphrases light verb phrases using sentence components. If one of the params are not necessary just put ""
      * 
-     * @param subj = subject of sentence
+     * @param subj = subject of sentence "*I* gave him a bath"
+     * @param lightverb = the light verb used in the sentence "I *gave* him a bath"
+     * @param actionverb = the verb or noun to be verb used in the sentence "I gave him a *bath*"
+     * @param directobj = the direct object of the light verb phrase "I gave *him* a bath"
      * @return paraphrased light verb phrase
      */
     public String fromLightVerb(String subj,String lightverb,String actionverb, String directobj) {
@@ -817,7 +821,7 @@ public class DictionaryAccess {
     }
     /**
      * prints baseword of the given char to basewords.csv in the outputs folder
-     * @param c
+     * @param c = the character to print the basewords
      */
     public void getBaseWords(char c) {
         HashMap<String, String> temp = new HashMap<String, String>();
@@ -898,7 +902,7 @@ public class DictionaryAccess {
         }
     }
     /**
-     * paraphrase a sentence to a light verb sentence
+     * paraphrase a sentence to a light verb sentence using CoreNLP
      * @param sent = the setence to be paraphrased
      * @return light verb sentence
      */
@@ -1040,11 +1044,11 @@ public class DictionaryAccess {
         return result;
     }
     /**
-     * paraphrase to a light verb sentence
-     * @param subj
-     * @param actionverb
-     * @param obj
-     * @return
+     * paraphrase to a light verb sentence using sentence components. If a field is not used input "" for it.
+     * @param subj = the subject of the sentence "*I* bathed him"
+     * @param actionverb = the verb of the sentence "I *bathed* him"
+     * @param obj = the object of the sentence "I bathed *him*"
+     * @return the paraphrased light verb sentence
      */
     public String toLightVerb(String subj,String actionverb, String obj){
         String result = subj + " ";

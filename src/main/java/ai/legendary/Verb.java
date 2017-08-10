@@ -18,7 +18,7 @@ public class Verb implements PartOfSpeech ,Serializable{
     private static final long serialVersionUID = -7980913079391599406L;
     public String Verb = "Verb";
     public String verbType = "--", transivity = "--", tense = "--",
-            aspect = "--", person = "--", phrasal = "--";
+            aspect = "--", person = "--", phrasal = "--", phrasalParaphrase="--";
     public Boolean isInfinitive;
     public float howCommon = -1;
     public long commonRank = -1;
@@ -61,19 +61,19 @@ public class Verb implements PartOfSpeech ,Serializable{
         if (s.split(" ").length > 1) {
             String[] p = s.split(" ");
             if (p.length == 2 && !check3gram(p)) {
-                phrasal = "NotSeperable";
+                phrasal = "NotSeparable";
             }
             else if(p.length == 2 && check3gram(p) && !check2gram(p)){
-                phrasal = "MustBeSeperated";
+                phrasal = "MustBeSeparated";
             }
             else if(p.length == 2 && check3gram(p)){
-                phrasal = "Seperable";
+                phrasal = "Separable";
             }
             else if(s.equals("drag out of") || s.equals("grow out of")){
-                phrasal = "Seperable";
+                phrasal = "Separable";
             }
             else{
-                phrasal = "NotSeperable";
+                phrasal = "NotSaperable";
             }
 
         }
@@ -247,7 +247,7 @@ public class Verb implements PartOfSpeech ,Serializable{
     public String toString(){
         return "Verb: VerbType="+verbType + ", Transivity="
                 + transivity + ", Tense=" + tense + ", Aspect=" + aspect
-                + ", Person=" + person + ", Phrasal=" + phrasal + ", isInfinitive="
+                + ", Person=" + person + ", Phrasal=" + phrasal + ", PhrasalParaphrase=" + phrasalParaphrase+ ", isInfinitive="
                 + isInfinitive + ", howCommon="+howCommon+ ", commonRank="+commonRank 
                 +", baseForm="+baseForm + ", light="+light + ", verbnet="+verbnet + ", wordNetID="+wordNetID+", propBank="+propbank+", frame="+frame + ", Itensifier ID="+verbIntensifierID;
     }

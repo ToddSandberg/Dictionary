@@ -109,6 +109,35 @@ public class WriteDictionary {
             FileWriter fw = new FileWriter(f, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter printer = new PrintWriter(bw);
+            
+            printer.println("## Dictionary Overview");
+            printer.println(" This dictionary is a compilation of multiple lexicons and their data. The lexicons"
+                    + " that are inside of the dictionary can be seen in the inputs folder, and under the Document"
+                    + " Implementation section. The problems with this dictionary and the dictionary access methods"
+                    + " are mainly to do with the inability to get 100% accurate base words, and not having 100% of the data we need."
+                    + " Base words are found by removing suffixes and then checking if the word that is left is contained"
+                    + " in the dictionary. This leads to some problems. Either the original base word is not in the dictionary"
+                    + " so suffixes and prefixes are not removed, or meaningful suffixes and prefixes are removed, causing"
+                    + " words to have incorrect base words. However, we concluded that this method was the most accurate"
+                    + " way to identify these base words. Keep this in mind when using methods that convert words, and"
+                    + " possibly implement a backoff check of your own. The Analysis section shows the percentage of each"
+                    + " field that we have defined. This gives you an idea of how useful the dictionary will be for your"
+                    + " personal needs.\n\n"
+                    + " JavaDoc: https://toddsandberg.github.io/Dictionary/doc/");
+            
+            printer.println("## Accessing the Dictionary");
+            printer.println("- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps. To rewrite the dictionary simply run this class.");
+            printer.println("- The DictionaryAccess class provides access to many features of the dictionary. "
+                    + "There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. "
+                    + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
+                    + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
+                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.");
+            printer.println("- (Look at this class to get started -->) The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
+            printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
+            printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary. There is a list of existing methods in the Accesser class under the getAllReformatted method.");
+            printer.println("- The various part of speech classes act as containers for the properties of words.");
+            printer.println("- MorphologyFinder is used to find the base word of each word in the dictionary.");
+            
             printer.println("## Document Implementation");
             // Adds all subordinate conjunctions to the dictionary
             subordinateConjunctions();
@@ -176,6 +205,9 @@ public class WriteDictionary {
             //implements word Scales
             wordScales();
             printer.println("- Word Scales have been implemented");
+            //implements phrasal verbs
+            //phrasalVerbs();
+            //printer.println("- Phrasal Verbs implemented");
             
             printer.println("## Document Output Formats:");
             printer.println(
@@ -184,16 +216,7 @@ public class WriteDictionary {
                     "- serialized dictionary HashMap's for each part of speech");
             printer.println(
                     "- Lists of the most common word combinations in the format pos2 : {pos1=howCommon}");
-            printer.println("## Accessing the Dictionary");
-            printer.println("- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.");
-            printer.println("- The DictionaryAccess class provides access to many features of the dictionary. "
-                    + "There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. "
-                    + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
-                    + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
-                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.");
-            printer.println("- (Look at this class to get start -->) The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
-            printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
-            printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary. There is a list of existing methods in the Accesser class under the getAllReformatted method.");
+            
             //print out roots HashMap
             try {
                 FileOutputStream fout = new FileOutputStream(
@@ -663,7 +686,7 @@ public class WriteDictionary {
             File verbs = new File("outputs/verbs.tsv");
             PrintWriter verbprinter = new PrintWriter(verbs);
             verbprinter.println(
-                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tlight\tverbNet\twordNetID\tpropBank\tframe\tverbIntensifierID");
+                    "Word\tVerbType\tTransivity\tTense\tAspect\tPerson\tPhrasal\tPhrasalParaphrase\tIsInfinitive\thowCommon\tcommonRank\tbaseForm\tlight\tverbNet\twordNetID\tpropBank\tframe\tverbIntensifierID");
             // adverbprinter setup
             File adverbs = new File("outputs/adverbs.tsv");
             PrintWriter adverbprinter = new PrintWriter(adverbs);
@@ -812,7 +835,7 @@ public class WriteDictionary {
                 }
                 verbprinter.println(w + "\t" + v.verbType + "\t" + v.transivity
                         + "\t" + v.tense + "\t" + v.aspect + "\t" + v.person
-                        + "\t" + v.phrasal + "\t" + v.isInfinitive + "\t"
+                        + "\t" + v.phrasal + "\t" +v.phrasalParaphrase+"\t"+ v.isInfinitive + "\t"
                         + v.howCommon + "\t" + v.commonRank + "\t"
                         + v.baseForm + "\t" + v.light + "\t" + v.verbnet + "\t" + v.wordNetID +"\t"+v.propbank +"\t"+v.frame+"\t"+v.verbIntensifierID);
             }
@@ -1411,6 +1434,9 @@ public class WriteDictionary {
                             p.frame = ((Verb) part).frame;
                         else
                             p.frame += "|" +((Verb) part).frame;
+                    }
+                    if(p.phrasalParaphrase.equals("--")){
+                        p.phrasalParaphrase = ((Verb) part).phrasalParaphrase;
                     }
                         verbDictionary.put(w, p);
                 }
@@ -3345,6 +3371,37 @@ public class WriteDictionary {
                 }
             }
         }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    /**
+     * implements phrasalVerbs
+     */
+    public static void phrasalVerbs(){
+        try{
+            Scanner scan = new Scanner(new File("inputs/phrasals"));
+            while(scan.hasNextLine()){
+                String line = scan.nextLine();
+                String [] split = line.split("\t");
+                boolean separable = false;
+                if(split[1].startsWith("*")){
+                    separable = true;
+                    split[1] = split[1].substring(2, split[1].length());
+                }
+                String phrasal = split[0] + " " + split[1];
+                Verb v = new Verb(phrasal);
+                /*if(separable){
+                    
+                }
+                else{
+                    v.phrasal = "NotSeparable";
+                }*/
+                v.phrasalParaphrase = split[2];
+                merge(phrasal,v);
+            }
+            scan.close();
         }
         catch(Exception e){
             e.printStackTrace();

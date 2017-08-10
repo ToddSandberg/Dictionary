@@ -63,6 +63,16 @@
 - Percentage of hadAdverbForm defined: 0%
 ### Quantifier Analysis (Total Quantifiers: 45): 
 - Percentage of quantifierID defined: 100%
+## Dictionary Overview
+ This dictionary is a compilation of multiple lexicons and their data. The lexicons that are inside of the dictionary can be seen in the inputs folder, and under the Document Implementation section. The problems with this dictionary and the dictionary access methods are mainly to do with the inability to get 100% accurate base words, and not having 100% of the data we need. Base words are found by removing suffixes and then checking if the word that is left is contained in the dictionary. This leads to some problems. Either the original base word is not in the dictionary so suffixes and prefixes are not removed, or meaningful suffixes and prefixes are removed, causing words to have incorrect base words. However, we concluded that this method was the most accurate way to identify these base words. Keep this in mind when using methods that convert words, and possibly implement a backoff check of your own. The Analysis section shows the percentage of each field that we have defined. This gives you an idea of how useful the dictionary will be for your personal needs.
+
+ JavaDoc: https://toddsandberg.github.io/Dictionary/doc/
+## Accessing the Dictionary
+- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.
+- The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.
+- (Look at this class to get started -->) The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.
+- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
+- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary. There is a list of existing methods in the Accesser class under the getAllReformatted method.
 ## Document Implementation
 - subordinateConjunctions.txt Implemented
 - nounGenderList.txt Implemented 
@@ -85,10 +95,4 @@
 - tsv files for each part of speech with words and their properties
 - serialized dictionary HashMap's for each part of speech
 - Lists of the most common word combinations in the format pos2 : {pos1=howCommon}
-## Accessing the Dictionary
-- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps.
-- The DictionaryAccess class provides access to many features of the dictionary. There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.
-- (Look at this class to get start -->) The Accesser class is an example usage of the DictionaryAccess class and the Reformatter class.
-- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.
-- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary. There is a list of existing methods in the Accesser class under the getAllReformatted method.
-## Current Dictionary Write Time: 147 minutes and 10 seconds
+## Current Dictionary Write Time: 142 minutes and 33 seconds
