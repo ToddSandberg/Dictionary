@@ -83,8 +83,8 @@ public class Accesser {
             result += "One who does: "+rf.oneWhoDoes() + "\n";
         if(rf.oneWhoPractices().length()>1)
             result += "One who practices: "+rf.oneWhoPractices() + "\n";
-        if(rf.oneWhoRecieves().length()>1)
-            result += "One who recieves: "+rf.oneWhoRecieves() + "\n";
+        if(rf.oneWhoReceives().length()>1)
+            result += "One who recieves: "+rf.oneWhoReceives() + "\n";
         if(rf.personOf().length()>1)
             result += "Person of: "+rf.personOf() + "\n";
         if(rf.resultEventState().length()>1)

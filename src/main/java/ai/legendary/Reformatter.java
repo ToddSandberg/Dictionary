@@ -2,7 +2,7 @@ package ai.legendary;
 
 import java.util.ArrayList;
 /**
- * Reformats words to other words depending on the method called. Creates a DictionaryAccess class on initialization, which loads 
+ * This method finds the base word of intended word, then adds suffixes and prefixes to change various features, such as part of speech and meaning. It only returns the words that are in the dictionary. Creates a DictionaryAccess class on initialization, which loads 
  * everything into HashMaps, so try to only initialize it once.
  * @author ToddSandberg
  * @version 8/10/2017
@@ -16,7 +16,7 @@ public class Reformatter {
 
     }
     /**
-     * adds the word to the Reformatter class which allows conversion
+     * Adds the word to the Reformatter class which allows conversion
      * @param w = the word to be reformatted
      * @param p = the part of speech of w
      */
@@ -54,11 +54,11 @@ public class Reformatter {
     }
 
     /**
-     * Converts the word to one who recieves
+     * Converts the word to one who receives
      * 
      * @return new word
      */
-    public String oneWhoRecieves() {
+    public String oneWhoReceives() {
         ArrayList<String> suffs = new ArrayList<String>();
         suffs.add("ee");
         return checkSuffixesNouns(suffs);
@@ -1223,7 +1223,7 @@ public class Reformatter {
         return checkSuffixesAdjectives(suffs);
     }
     /**
-     * converts the word into diminutive form
+     * Converts the word into diminutive form
      * @return new words
      */
     public String diminutives(){
@@ -1293,7 +1293,7 @@ public class Reformatter {
     }
     
     /**
-     * adverb 
+     * Converts to the adverb form of the word
      * @return the adverb form of the word
      */
     public String adverb_ly(){
@@ -1313,7 +1313,7 @@ public class Reformatter {
     }
     
     /**
-     * adverb 
+     * Converts to the verb form of the word
      * @return the verb form of the word
      */
     public String toVerb(){
@@ -1333,7 +1333,7 @@ public class Reformatter {
     }
     
     /**
-     * checks the given suffixes
+     * Checks the given suffixes
      * @param suffs = suffixes to be checked
      * @return string of words found
      */
@@ -1360,7 +1360,7 @@ public class Reformatter {
         return newwords;
     }
     /**
-     * checks the given suffixes
+     * Checks the given suffixes
      * @param suffs = Suffixes to be checked
      * @return string of words found
      */

@@ -168,7 +168,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * returns the noun dictionary
+     * 
      * @return the noun dictionary
      */
     public HashMap<String, Noun> getNounDictionary() {
@@ -176,7 +176,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the verb dictionary
+     * 
      * @return the verb dictionary
      */
     public static HashMap<String, Verb> getVerbDictionary() {
@@ -184,7 +184,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the adjective dictionary
+     * 
      * @return the adjective dictionary
      */
     public static HashMap<String, Adjective> getAdjectiveDictionary() {
@@ -192,7 +192,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the adverb dictionary
+     * 
      * @return the adverb dictionary
      */
     public static HashMap<String, Adverb> getAdverbDictionary() {
@@ -200,7 +200,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the conjunction dictionary
+     * 
      * @return the conjunction dictionary
      */
     public static HashMap<String, Conjunction> getConjunctionDictionary() {
@@ -208,7 +208,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the determiner dictionary
+     * 
      * @return the determiner dictionary
      */
     public static HashMap<String, Determiner> getDeterminerDictionary() {
@@ -216,7 +216,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the interjection dictionary "Wow!"
+     * 
      * @return the interjection dictionary
      */
     public static HashMap<String, Interjection> getInterjectionDictionary() {
@@ -224,7 +224,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the preposition dictionary
+     * 
      * @return the preposition dictionary
      */
     public static HashMap<String, Preposition> getPrepositionDictionary() {
@@ -232,7 +232,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the pronoun dictionary
+     * 
      * @return the pronoun dictionary
      */
     public static HashMap<String, Pronoun> getPronounDictionary() {
@@ -240,7 +240,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the quantifier dictionary
+     * 
      * @return the quantifier dictionary
      */
     public static HashMap<String, Quantifier> getQuantifierDictionary() {
@@ -248,7 +248,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the list of roots in the dictionary
+     * 
      * @return the list of roots in the dictionary
      */
     public static HashMap<String, String> getRoots() {
@@ -256,7 +256,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the list of first names in the dictionary
+     * 
      * @return the list of first names in the dictionary
      */
     public static HashMap<String, Noun> getFirstNameDictionary() {
@@ -264,7 +264,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the list of last names in the dictionary
+     * 
      * @return the list of last names in the dictionary
      */
     public static HashMap<String, Noun> getLastNameDictionary() {
@@ -272,7 +272,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * Returns the list of proper places in the dictionary
+     * 
      * @return the list of proper places in the dictionary
      */
     public static HashMap<String, Noun> getProperPlaces() {
@@ -280,7 +280,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * gets the info on a singular word with a specific part of speech
+     * Gets the info on a singular word with a specific part of speech
      * 
      * @param word
      *            is the word to get info on
@@ -321,7 +321,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * gets the info on a singular word with any part of speech
+     * Gets the info on a singular word with any part of speech
      * 
      * @param word
      *            is the word to get info on
@@ -377,7 +377,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * gets the info on multiple words with part of speech given by CoreNLP
+     * Gets the info on multiple words with part of speech given by CoreNLP
      * 
      * @param word
      *            is the sentence to be given
@@ -407,7 +407,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * converts the corenlp return to a readable part of speech for the program
+     * Converts the CoreNLP return to a readable part of speech for the program
      * 
      * @param pos
      *            is what coreNLP returned
@@ -449,7 +449,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * gets the dictionary based on a part of speech string
+     * Gets the dictionary based on a part of speech string
      * 
      * @param pos
      *            the part of speech of the intended dictionary
@@ -505,7 +505,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * changes the word from one part of speech to another
+     * Changes the word from one part of speech to another
      * 
      * @param word1
      *            original word
@@ -536,7 +536,6 @@ public class DictionaryAccess {
                 base = ((Adjective) getdictionary(pos1, word1)
                         .get(word1)).baseForm;
             }
-            // System.out.println(word1+" converted to a "+pos2);
             if (roots.containsKey(base + ":" + pos2)) {
                 results = roots.get(base + ":" + pos2);
             }
@@ -562,7 +561,7 @@ public class DictionaryAccess {
     }
 
     /**
-     * changes the tense of target noun
+     * Changes the tense of target noun
      * 
      * @param word
      *            noun to be changed
@@ -593,15 +592,13 @@ public class DictionaryAccess {
         return null;
     }
     /**
-     * changes the tense of verbs
+     * Changes the tense of verbs
      * @param word verb to be changed
      * @param tense the intended tense
      * @return new word
      */
     public String changeVerbTense(String word, String tense) {
-        // System.out.println(word);
         Verb v = (Verb) verbDictionary.get(word);
-        // System.out.println(v.toString());
         try {
             String base = v.baseForm;
             HashMap<String, Verb> temp = verbDictionary;
@@ -614,7 +611,6 @@ public class DictionaryAccess {
                         return (String) pair.getKey();
                     }
                 }
-                // it.remove(); // avoids a ConcurrentModificationException
             }
         }
         catch (Exception e) {
@@ -658,12 +654,6 @@ public class DictionaryAccess {
                 /* part of speech */
                 String pos = token.get(PartOfSpeechAnnotation.class);
                 if (convertnlp(pos) != null) {
-                    // System.out.println(output+" + "+w+" ("+convertnlp(pos)+")
-                    // light:" + lightsentence + " dettrigger:"+dettrigger+ "
-                    // object:"+object+" determiner:"+determiner + "
-                    // lastItem?:"+(temp.indexOf(token)<temp.size()-1));
-                    // System.out.println(w + " : " +
-                    // getdictionary(convertnlp(pos)).containsKey(w));
                     if (getdictionary(convertnlp(pos), w).containsKey(w)) {
                         if ((convertnlp(pos).equals("noun")
                                 || convertnlp(pos).equals("pronoun")
@@ -671,8 +661,6 @@ public class DictionaryAccess {
                                 && !determinerDictionary.containsKey(w)) {
                             if (lightsentence) {
                                 if (dettrigger) {
-                                    // System.out.println(("" +(temp.size()-1))
-                                    // + " : "+ temp.indexOf(token));
                                     if (!oldobj.equals("")) {
                                         if (!determiner.equals(""))
                                             object += determiner + " " + w;
@@ -682,7 +670,6 @@ public class DictionaryAccess {
 
                                     else if (temp.indexOf(token) < temp.size()
                                             - 1 && object.equals("")) {
-                                        // System.out.println(w);
                                         object = determiner + " " + w;
                                         determiner = "";
                                     }
@@ -692,13 +679,9 @@ public class DictionaryAccess {
                                             changed = changeVerbTense(w,
                                                     tense);
                                         }
-                                        // System.out.println(changed);
                                         if (changed == null) {
                                             if (convertnlp(pos)
                                                     .equals("verb")) {
-                                                // System.out.println(w);
-                                                // changed =
-                                                // changeVerbTense(w,tense);
                                                 if (changed == null) {
                                                     changed = w;
                                                 }
@@ -804,10 +787,10 @@ public class DictionaryAccess {
     /**
      * Paraphrases light verb phrases using sentence components. If one of the params are not necessary just put ""
      * 
-     * @param subj = subject of sentence "*I* gave him a bath"
-     * @param lightverb = the light verb used in the sentence "I *gave* him a bath"
-     * @param actionverb = the verb or noun to be verb used in the sentence "I gave him a *bath*"
-     * @param directobj = the direct object of the light verb phrase "I gave *him* a bath"
+     * @param subj subject of sentence "*I* gave him a bath"
+     * @param lightverb the light verb used in the sentence "I *gave* him a bath"
+     * @param actionverb the verb or noun to be verb used in the sentence "I gave him a *bath*"
+     * @param directobj the direct object of the light verb phrase "I gave *him* a bath"
      * @return paraphrased light verb phrase
      */
     public String fromLightVerb(String subj,String lightverb,String actionverb, String directobj) {
@@ -820,8 +803,8 @@ public class DictionaryAccess {
         return result;
     }
     /**
-     * prints baseword of the given char to basewords.csv in the outputs folder
-     * @param c = the character to print the basewords
+     * Prints base word of the given char to basewords.csv in the outputs folder
+     * @param c the character to print the base words
      */
     public void getBaseWords(char c) {
         HashMap<String, String> temp = new HashMap<String, String>();
@@ -902,8 +885,8 @@ public class DictionaryAccess {
         }
     }
     /**
-     * paraphrase a sentence to a light verb sentence using CoreNLP
-     * @param sent = the setence to be paraphrased
+     * Paraphrase a sentence to a light verb sentence using CoreNLP
+     * @param sent the sentence to be paraphrased
      * @return light verb sentence
      */
     public String toLightVerb(String sent) {
@@ -929,10 +912,6 @@ public class DictionaryAccess {
                         if (getdictionary(convertnlp(pos), w).containsKey(w)) {
                             if (convertnlp(pos).equals("verb")) {
                                 ArrayList<String> others = changePOS(w, "verb", "noun");
-                                //System.out.println(others.get(0));
-                                /*if(others.size() == 0 || others.get(0).startsWith("no nouns")){
-                                    others = changePOS(w,"verb","adjective");
-                                }*/
                                 boolean found = false;
                                 int i =0;
                                 while(found == false && i<others.size()){
@@ -940,8 +919,6 @@ public class DictionaryAccess {
                                 i++;
                                 HashMap<String, Integer> possibilities = threegrams
                                         .get("-" + newone);
-                                //System.out.println(newone + " : ");
-                                //System.out.println(possibilities);
                                 if(possibilities != null && !possibilities.isEmpty()){
                                 if (w.endsWith("ed")) {
                                     Iterator it = possibilities.entrySet()
@@ -949,7 +926,6 @@ public class DictionaryAccess {
                                     while (it.hasNext() && found == false) {
                                         Map.Entry pair = (Entry) it.next();
                                         String key = ((String) pair.getKey());
-                                        //System.out.println(key.split("\\|")[0]);
                                         if (key.contains("|") && verbDictionary.containsKey(
                                                 key.split("\\|")[0]) && determinerDictionary.containsKey(key.split("\\|")[1])) {
                                            
@@ -991,7 +967,6 @@ public class DictionaryAccess {
                                 }
                             }
                             else if(light && nounDictionary.containsKey(w) && !determinerDictionary.containsKey(w)){
-                                //System.out.println(w);
                                 if(determiner.length()>0){
                                 HashMap<String, Integer> possibilities = threegrams.get("-" + w);
                                 boolean found = false;
@@ -1002,7 +977,6 @@ public class DictionaryAccess {
                                     String key = ((String) pair.getKey());
                                     if (key.contains("|") &&prepositionDictionary.containsKey(
                                             key.split("\\|")[0]) ) {
-                                        //System.out.println(key + " : " + determiner);
                                         if(key.split("\\|")[1].equals(determiner)){
                                             result+=key.split("\\|")[0]+" "+key.split("\\|")[1]+" "+key.split("\\|")[2];
                                             found = true;
@@ -1044,10 +1018,10 @@ public class DictionaryAccess {
         return result;
     }
     /**
-     * paraphrase to a light verb sentence using sentence components. If a field is not used input "" for it.
-     * @param subj = the subject of the sentence "*I* bathed him"
-     * @param actionverb = the verb of the sentence "I *bathed* him"
-     * @param obj = the object of the sentence "I bathed *him*"
+     * Paraphrase to a light verb sentence using sentence components. If a field is not used input "" for it.
+     * @param subj the subject of the sentence "*I* bathed him"
+     * @param actionverb the verb of the sentence "I *bathed* him"
+     * @param obj the object of the sentence "I bathed *him*"
      * @return the paraphrased light verb sentence
      */
     public String toLightVerb(String subj,String actionverb, String obj){
