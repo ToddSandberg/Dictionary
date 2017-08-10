@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all conjunctions and their data
+ * @author ToddSandberg
+ *
+ */
 public class Conjunction implements PartOfSpeech,Serializable{
     /**
      * 

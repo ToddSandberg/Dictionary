@@ -13,7 +13,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.swing.JOptionPane;
-
+/**
+ * this file is used for accessing twograms and threegrams. It writes the MostCommon lists
+ * @author ToddSandberg
+ *
+ */
 public class access2gram {
     public static HashMap<String, HashMap<String, Integer>> twograms = new HashMap<String, HashMap<String, Integer>>();
     public static HashMap<String, HashMap<String, Integer>> threegrams = new HashMap<String, HashMap<String, Integer>>();

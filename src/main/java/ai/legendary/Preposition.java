@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all prepositions and their data
+ * @author ToddSandberg
+ *
+ */
 public class Preposition implements PartOfSpeech,Serializable{
     /**
      * 

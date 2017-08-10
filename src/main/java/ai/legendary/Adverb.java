@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all Adverbs and their data
+ * @author ToddSandberg
+ *
+ */
 public class Adverb implements PartOfSpeech,Serializable{
     /**
      * 

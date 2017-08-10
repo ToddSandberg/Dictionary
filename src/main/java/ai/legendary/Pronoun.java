@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all pronouns and their data
+ * @author ToddSandberg
+ *
+ */
 public class Pronoun implements PartOfSpeech,Serializable {
     /**
      * 

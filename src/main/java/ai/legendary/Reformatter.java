@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.util.ArrayList;
-
+/**
+ * reformats words to other words depending on the method called
+ * @author Todd Sandberg
+ *
+ */
 public class Reformatter {
     DictionaryAccess acc = new DictionaryAccess();
     String word = "";
@@ -10,7 +14,11 @@ public class Reformatter {
     public Reformatter() {
 
     }
-
+    /**
+     * adds the word to the Reformatter class which allows conversion
+     * @param w
+     * @param p
+     */
     public void addWord(String w, String p) {
         word = w;
         pos = p;

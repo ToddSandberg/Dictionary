@@ -22,7 +22,11 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
-
+/**
+ * provides various methods for access and paraphrasing using the dictionary
+ * @author ToddSandberg
+ *
+ */
 public class DictionaryAccess {
     /*
      * dictionarys seperated into their parts of speech
@@ -587,7 +591,12 @@ public class DictionaryAccess {
         }
         return null;
     }
-
+    /**
+     * changes the tense of verbs
+     * @param word
+     * @param tense
+     * @return new word
+     */
     public String changeVerbTense(String word, String tense) {
         // System.out.println(word);
         Verb v = (Verb) verbDictionary.get(word);
@@ -612,39 +621,6 @@ public class DictionaryAccess {
         }
         return null;
     }
-    /**
-     * Only gets adjectives at the moment
-     * 
-     * @return
-     */
-    /*
-     * public HashMap<Long,String> getMostFrequent(){ HashMap<String,Adjective>
-     * adj = adjectiveDictionary; HashMap<Long,String> temp = new
-     * HashMap<Long,String>(); Iterator it = adj.entrySet().iterator(); while
-     * (it.hasNext()) { Map.Entry pair = (Map.Entry)it.next();
-     * temp.put(((Adjective)pair.getValue()).commonRank,(String) pair.getKey());
-     * it.remove(); } return temp; }
-     */
-    /**
-     * based only on the most frequent method
-     * 
-     * @param temp
-     */
-
-    /*
-     * public void sortAndPrintHashMap(HashMap temp){ Object[] a =
-     * temp.entrySet().toArray(); Arrays.sort(a, new Comparator<Object>() {
-     * public int compare(Object o1, Object o2) { return (((Map.Entry<Long,
-     * String>) o1).getKey() .compareTo(((Map.Entry<Long, String>)
-     * o2).getKey())); } }); try{ PrintWriter print = new PrintWriter(new
-     * File("outputs/MostCommonAdjective.txt"));
-     * print.println("Top 500 Adjectives From Most Common to Least"); int y=1;
-     * int z=500; for (int x=0;x<z;x++) { if(((Map.Entry<Long, String>)
-     * a[x]).getKey()!=-1){ print.println( y + " : " + ((Map.Entry<Long,
-     * String>) a[x]).getValue()); y++; } else{ z++; } } print.close(); }
-     * catch(Exception e){ e.printStackTrace(); } }
-     */
-    
     /**
      * Paraphrases light verb phrases
      * 
@@ -839,6 +815,10 @@ public class DictionaryAccess {
             result = subj + " " + changeVerbTense(actionverb,tense); 
         return result;
     }
+    /**
+     * prints baseword of the given char to basewords.csv in the outputs folder
+     * @param c
+     */
     public void getBaseWords(char c) {
         HashMap<String, String> temp = new HashMap<String, String>();
         Iterator it = nounDictionary.entrySet().iterator();

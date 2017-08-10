@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all Interjections and their data
+ * @author ToddSandberg
+ *
+ */
 public class Interjection implements PartOfSpeech,Serializable{
     /**
      * 

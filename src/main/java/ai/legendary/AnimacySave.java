@@ -2,7 +2,11 @@ package ai.legendary;
 
 import java.io.Serializable;
 import java.util.HashMap;
-
+/**
+ * saves animacyHashMap
+ * @author ToddSandberg
+ *
+ */
 public class AnimacySave implements Serializable{
     /**
      * 

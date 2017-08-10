@@ -6,7 +6,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-
+/**
+ * class for all verbs and their data
+ * @author ToddSandberg
+ *
+ */
 public class Verb implements PartOfSpeech ,Serializable{
     /**
      * 

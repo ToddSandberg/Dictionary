@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all quantifiers and their data
+ * @author ToddSandberg
+ *
+ */
 public class Quantifier implements PartOfSpeech,Serializable {
     /**
      * 

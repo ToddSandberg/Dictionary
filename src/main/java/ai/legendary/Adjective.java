@@ -2,7 +2,11 @@ package ai.legendary;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
+/**
+ * class for Adjectives and their data
+ * @author ToddSandberg
+ *
+ */
 public class Adjective implements PartOfSpeech, Serializable {
     /**
      * 

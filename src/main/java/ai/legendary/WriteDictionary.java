@@ -40,7 +40,11 @@ import edu.mit.jverbnet.index.IVerbIndex;
 import edu.mit.jverbnet.index.VerbIndex;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
-
+/**
+ * Writes the dictionary from the input files
+ * @author ToddSandberg
+ * @version 08/09/2017
+ */
 public class WriteDictionary {
     /**
      * Dictionarys
@@ -62,6 +66,9 @@ public class WriteDictionary {
      * Saves progress in animacy from concept net
      */
     static AnimacySave animacy = new AnimacySave();
+    /**
+     * all basewords found by MorphologyFinder
+     */
     public static HashMap<String,String> roots = new HashMap<String,String>();
     static FileOutputStream fout;
     static ObjectOutputStream out;
@@ -80,6 +87,9 @@ public class WriteDictionary {
     public static void main(String[] args) {
         try {
             dictionary = Dictionary.getDefaultResourceInstance();
+            /**
+             * imports animacy list
+             */
             try {
                 ObjectInputStream in = new ObjectInputStream(
                         new FileInputStream("outputs/animacyquery.ser"));
@@ -181,9 +191,9 @@ public class WriteDictionary {
                     + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
                     + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
                     + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.");
-            printer.println("- The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
+            printer.println("- (Look at this class to get start -->) The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
             printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
-            printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary.");
+            printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary. There is a list of existing methods in the Accesser class under the getAllReformatted method.");
             //print out roots HashMap
             try {
                 FileOutputStream fout = new FileOutputStream(
@@ -237,7 +247,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * implements WordScales.csv
+     */
     private static void wordScales() {
         try{
             Scanner scan = new Scanner(new File("inputs/WordScales.csv"));
@@ -304,7 +316,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * implements proper names
+     */
     private static void properNames() {
         try{
             HashMap<String, String> firstnames = new HashMap<String,String>();
@@ -379,7 +393,11 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * used for merging proper places into the dictionary
+     * @param w
+     * @param part
+     */
     private static void mergeProperPlace(String w, Noun part) {
         if (properPlaceDictionary.containsKey(w)) {
             Noun p = (Noun) properPlaceDictionary.get(w);
@@ -451,7 +469,11 @@ public class WriteDictionary {
             properPlaceDictionary.put(w, (Noun) part);
         }
     }
-
+    /**
+     * used for mergin last names into the dictionary
+     * @param w
+     * @param part
+     */
     private static void mergeLastName(String w, Noun part) {
         if (lastNameDictionary.containsKey(w)) {
             Noun p = (Noun) lastNameDictionary.get(w);
@@ -523,7 +545,11 @@ public class WriteDictionary {
             lastNameDictionary.put(w, (Noun) part);
         }
     }
-
+    /**
+     * used for mergin first names into the dictionary
+     * @param w
+     * @param part
+     */
     private static void mergeFirstName(String w, Noun part) {
         if (firstNameDictionary.containsKey(w)) {
             Noun p = (Noun) firstNameDictionary.get(w);
@@ -1834,7 +1860,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * implements SimpleNLG lexicon
+     */
     private static void defLexicon() {
         File f = new File("inputs/default-lexicon.xml");
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory
@@ -2339,7 +2367,9 @@ public class WriteDictionary {
             System.out.println("filenotfound");
         }
     }
-
+    /**
+     * implements Specialist Lexicon
+     */
     private static void speclexicon() {
         File f = new File("inputs/LEXICON.txt");
         try {
@@ -2590,7 +2620,9 @@ public class WriteDictionary {
         }
 
     }
-
+    /**
+     * implements adverb scales
+     */
     public static void adverbIntensifiers() {
         try {
             Scanner scan = new Scanner(
@@ -2620,7 +2652,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * implements locations.txt
+     */
     public static void locations() {
         try {
             Scanner s = new Scanner(new File("inputs/locations.txt"));
@@ -2671,7 +2705,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-
+    /**
+     * implements frequency list
+     */
     public static void frequency() {
         try {
             Scanner s = new Scanner(
@@ -2888,6 +2924,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
+    /**
+     * implements colors.txt
+     */
     public static void colors(){
         try{
             Scanner scan = new Scanner(new File("inputs/colors.txt"));
@@ -2920,7 +2959,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-    
+    /**
+     * implements verbnet
+     */
     public static void verbnet(){
         try{
             String pathToVerbnet = "inputs/verbnet";
@@ -3009,7 +3050,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-    
+    /**
+     * implements ADJADV.txt
+     */
     public static void adjadv(){
         try{
             Scanner s = new Scanner(new File("inputs/ADJADV.txt"));
@@ -3105,7 +3148,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-    
+    /**
+     * implements propbank
+     */
     public static void propBank(){
         File path = new File("inputs/frames");
         File[] files = path.listFiles();
@@ -3207,7 +3252,9 @@ public class WriteDictionary {
             }
         }
     }
-    
+    /**
+     * implements shapes.csv
+     */
     public static void shapes(){
         try{
         Scanner scan = new Scanner(new File("inputs/Shapes.csv"));
@@ -3223,7 +3270,9 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-    
+    /**
+     * implements framenet
+     */
     public static void framenet(){
         try{
         Scanner scan = new Scanner(new File("inputs/fn16lexunits.ttl"));
@@ -3301,7 +3350,11 @@ public class WriteDictionary {
             e.printStackTrace();
         }
     }
-    
+    /**
+     * used to sort through determiners and splt between determiners, quantifiers, and adjectives
+     * @param s
+     * @return
+     */
     public static PartOfSpeech determinerSorter(String s) {
         if (s.equals("a") || s.equals("an") || s.equals("the")
                 || s.equals("this") || s.equals("these") || s.equals("that")
@@ -3341,7 +3394,11 @@ public class WriteDictionary {
             return new Adjective(s + "~~~");
         }
     }
-
+    /**
+     * used to get the dictionary hashmap based on a part of speech string
+     * @param pos
+     * @return
+     */
     public static HashMap getdictionary(String pos) {
         if (pos.equals("noun")) {
             return nounDictionary;
@@ -3385,7 +3442,11 @@ public class WriteDictionary {
         else
             return null;
     }
-    
+    /**
+     * converts spaces to underscores
+     * @param s
+     * @return
+     */
     public static String fixSpaces(String s){
         String temp = "";
         for(int i=0;i<s.length();i++){
@@ -3398,6 +3459,11 @@ public class WriteDictionary {
         }
         return temp;
     }
+    /**
+     * finds the verbnetType based on its number
+     * @param s
+     * @return
+     */
     public static String verbnetType(String s){
         String type = "";
         String[]split = s.split("-");

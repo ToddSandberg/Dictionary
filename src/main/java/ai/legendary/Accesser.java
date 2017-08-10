@@ -5,20 +5,15 @@ import javax.swing.JOptionPane;
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
-
+/**
+ * Example uses of the DictionaryAccess class
+ * @author ToddSandberg
+ *
+ */
 public class Accesser {
     public static void main(String [] args){
-        /*try {
-            Dictionary dictionary = Dictionary.getDefaultResourceInstance();
-            System.out.print(dictionary
-            .lookupIndexWord(POS.NOUN,
-                    "discuss")
-            .getLemma());
-        }
-        catch (JWNLException e) {
-            e.printStackTrace();
-        }*/
-        DictionaryAccess acc = new DictionaryAccess();
+        DictionaryAccess acc = new DictionaryAccess(); //create a DictionaryAccess to access most feature of the program
+        
         /*MorphologyFinder mf = new MorphologyFinder("realizably"); //access the morphology finder used in the dictionary
         mf.loadDictionary(acc.getNounDictionary());
         mf.loadDictionary(acc.getAdjectiveDictionary());
@@ -28,6 +23,7 @@ public class Accesser {
         System.out.println(mf.getSuffixes());
         System.out.println(mf.getPrefixes());
         System.out.println(mf.getRoot());*/
+        
         /*example usage of getWordInfo*/
         /*while(true){
             String word = JOptionPane.showInputDialog("enter a word");
@@ -35,29 +31,33 @@ public class Accesser {
         }*/
         //System.out.println(acc.getWordInfo("shatter")); //nonspecific pos
         //System.out.println(acc.getWordInfo("alcoholic","adjective")); //specific pos
+        
         /*Example usage of changePOS*/
         //System.out.println(acc.changePOS("gaming", "noun", "verb").toString());
         //System.out.println(acc.changePOS("forgivable", "adjective", "noun").toString());
         //System.out.println(acc.changePOS("cat", "noun", "adjective").toString());
-        /*Unfinished methods - formats light verbs*/
+        
+        /*formats light verbs (does not work 100%)*/
         //System.out.println(acc.changeVerbTense("walk", "Past"));
         //System.out.println(acc.fromLightVerb("I make the bass drop"));
         //System.out.println(acc.fromLightVerb("I gave him a bath"));
         //System.out.println(acc.fromLightVerb("Sam did a revision of his paper"));
         //System.out.println(acc.fromLightVerb("had a bath"));
-        System.out.println(acc.fromLightVerb("I","had","bath",""));
-        System.out.println(acc.fromLightVerb("I", "made", "drop", "the bass"));
+        //System.out.println(acc.fromLightVerb("I","had","bath",""));
+        //System.out.println(acc.fromLightVerb("I", "made", "drop", "the bass"));
         //System.out.println(acc.toLightVerb("bathed"));
-        System.out.println(acc.toLightVerb("I", "bathed", ""));
-        System.out.println(acc.toLightVerb("Sam", "revised", "the paper")); //this version takes the components
+        //System.out.println(acc.toLightVerb("I", "bathed", ""));
+        //System.out.println(acc.toLightVerb("Sam", "revised", "the paper")); //this version takes the components
         //System.out.println(acc.toLightVerb("I bathed him"));
         //System.out.println(acc.toLightVerb("Sam revised the paper"));
         //System.out.println(acc.toLightVerb("they closed the door")); //example of when it doesnt work
+        
         /*Example usage of getMultipleWordInfo*/
         //System.out.println(acc.getMultipleWordInfo("I like big pizza"));
         //System.out.println(acc.getMultipleWordInfo("you are a person"));
         //System.out.println(acc.getMultipleWordInfo("there must be a bath telephone and TV in the room"));
         //System.out.println(acc.getMultipleWordInfo("what is going on ?"));
+        
         /*Testing Reformatter class*/
         /*Reformatter rf = new Reformatter();
         while(true){
@@ -65,6 +65,8 @@ public class Accesser {
             String pos = JOptionPane.showInputDialog("enter a part of speech");
             System.out.println(getAllReformatted(word,rf,pos));
         }*/
+        
+        /*Prints basewords that start with the given character to a file called baseword.csv in outputs*/
         //acc.getBaseWords('g');
     }
     /**

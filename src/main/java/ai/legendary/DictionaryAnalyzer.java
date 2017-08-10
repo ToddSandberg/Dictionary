@@ -10,7 +10,11 @@ import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
-
+/**
+ * Analyzes the Dictionary contents for the README
+ * @author ToddSandberg
+ *
+ */
 public class DictionaryAnalyzer {
 	public double adjectivePercentWorksInPredicativeAndAttributivePositionIdentified;
 	public double verbTransitivityPercentIdentified;

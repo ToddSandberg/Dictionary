@@ -1,7 +1,11 @@
 package ai.legendary;
 
 import java.io.Serializable;
-
+/**
+ * class for all determiners and their data
+ * @author ToddSandberg
+ *
+ */
 public class Determiner implements PartOfSpeech,Serializable{
     /**
      * 

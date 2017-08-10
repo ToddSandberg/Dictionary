@@ -3,7 +3,11 @@ package ai.legendary;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-
+/**
+ * finds the baseword of given words by removing suffixes and prefixes
+ * @author ToddSandberg
+ *
+ */
 public class MorphologyFinder {
     /**
      * letters of the word that is to be broken apart.
@@ -880,8 +884,7 @@ public class MorphologyFinder {
             traits.add("superlative");
         }
         if (ends("ful")) {
-            suffs.add("ful");
-            removeX(3);
+            checkSuff("ful");
             /*if (ends("i")) {
                 removeX(1);
                 letters.add('y');

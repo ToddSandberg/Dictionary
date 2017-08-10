@@ -16,7 +16,11 @@ import org.json.JSONTokener;
 import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
-
+/**
+ * class for all nouns and their data
+ * @author ToddSandberg
+ *
+ */
 public class Noun implements PartOfSpeech,Serializable{
     /**
      * 
@@ -114,6 +118,10 @@ public class Noun implements PartOfSpeech,Serializable{
         }
         return false;
     }
+	/**
+	 * adds to the compliments field
+	 * @param comp
+	 */
 	public void addCompliments(ArrayList<String> comp){
 	   for(int x=0;x<comp.size();x++){
 	       String s = comp.get(x);
@@ -170,6 +178,11 @@ public class Noun implements PartOfSpeech,Serializable{
                 + isCountable + ", acceptsZeroArticle=" + acceptsZeroArticle + ", IsProperName="
                 + isProperName + ", Compliments=" + compliments + ", BaseForm="+baseForm + ", Animacy=" + animacy + ", location="+location+", howCommon="+howCommon+ ", commonRank="+commonRank + ", propBank=" + propbank + ", frame="+ frame;
 	}
+	/**
+	 * checks animacy of add
+	 * @param add
+	 * @return
+	 */
 	public static String checker(String add){
         try {
             //if compound noun then format correctly
@@ -264,6 +277,11 @@ public class Noun implements PartOfSpeech,Serializable{
             return null;
         }
     }
+	/**
+	 * checks the return of conceptnet
+	 * @param in
+	 * @return
+	 */
     public static boolean checkString(String in) {
         /*if (s.endsWith("is related to [[" + in + "]]")
                 || s.endsWith("is a type of [[" + in + "]]")
