@@ -6,16 +6,16 @@ ye	Singular/Plural	Neuter Nominative/Accusative	Personal	0.001789	4862
 yous	Singular/Plural	Neuter Nominative/Accusative	Personal	1.14E-4	28101
 when	Singular/Plural	Neuter N/A	Interrogative/Relative	0.225465	48
 wherein	Singular/Plural	Neuter N/A	Interrogative/Relative	1.69E-4	22474
-her	Singular	Feminine Possesive/Accusative	Personal	0.344082	35
+her	Singular	Feminine Possessive/Accusative	Personal	0.344082	35
 whoever	Singular/Plural	Neuter N/A	Interrogative/Relative	0.001552	5401
-her'n	Plural	Feminine Possesive	Personal	-1.0	-1
+her'n	Plural	Feminine Possessive	Personal	-1.0	-1
 whate'er	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1
 yours truly	Singular	Neuter Nominative/Accusative	Personal	-1.0	-1
 nobody	Singular	Neuter N/A	Indefinite	0.006554	1657
 they	Plural	Neuter Nominative	Personal	0.456099	27
 you	Singular/Plural	Neuter Nominative/Accusative	Personal	0.7319	13
 whosoever	Singular/Plural	Neuter N/A	Interrogative/Relative	1.8E-5	67919
-our'n	Plural	neuter Possesive	Personal	-1.0	-1
+our'n	Plural	neuter Possessive	Personal	-1.0	-1
 whatsoever	Singular/Plural	Neuter N/A	Interrogative/Relative	0.001021	7235
 thee	Plural	Neuter Accusative	Personal	6.84E-4	9516
 myself	Singular	Neuter Reflexive	Personal	0.013196	783
@@ -43,7 +43,7 @@ I	Singular	Neuter Nominative	Personal	-1.0	-1
 ourselves	Plural	neuter Reflexive	Personal	0.004751	2234
 lot	Singular	Neuter N/A	Indefinite	0.019447	518
 wherewithal	Singular/Plural	Neuter N/A	Interrogative/Relative	6.6E-5	37054
-your'n	Singular/Plural	Neuter Possesive	Personal	-1.0	-1
+your'n	Singular/Plural	Neuter Possessive	Personal	-1.0	-1
 whom	Singular/Plural	Neuter N/A	Interrogative/Relative	0.013601	765
 tother	Singular	Neuter N/A	Indefinite	-1.0	-1
 where	Singular/Plural	Neuter N/A	Interrogative/Relative	0.114289	90
@@ -51,7 +51,7 @@ everything	Singular	Neuter N/A	Indefinite	0.01965	511
 so	Singular	Neuter N/A	Indefinite	0.22323	49
 whosesoever	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1
 theirself	Plural	neuter Reflexive	Personal	1.7E-5	70259
-mine	Singular	Neuter Possesive	Personal	0.006674	1624
+mine	Singular	Neuter Possessive	Personal	0.006674	1624
 one	Singular	Neuter N/A	Indefinite	0.306611	37
 haec	Singular	Feminine Nominative	Personal	-1.0	-1
 one another	Singular	Neuter N/A	Reciprocal	-1.0	-1
@@ -64,8 +64,8 @@ aught	Singular	Neuter N/A	Indefinite	6.5E-5	37385
 allyou	Plural	Neuter Nominative	Personal	-1.0	-1
 wherefrom	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1
 self	Singular	Neuter Reflexive	Personal	0.003868	2682
-yours	Singular/Plural	Neuter Possesive	Personal	0.004462	2375
-theirs	Plural	neuter Possesive	Personal	0.001089	6910
+yours	Singular/Plural	Neuter Possessive	Personal	0.004462	2375
+theirs	Plural	neuter Possessive	Personal	0.001089	6910
 couple	Plural	Neuter N/A	Indefinite	0.013081	793
 fewer	Plural	Neuter N/A	Indefinite	0.003263	3102
 ilka	Singular	Neuter N/A	Indefinite	-1.0	-1
@@ -74,8 +74,8 @@ whichsoever	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1
 him	Singular	Masculine Accusative	Personal	0.173627	59
 owt	Singular	Neuter N/A	Indefinite	1.66E-4	22763
 that	Singular	Neuter N/A	Relative	1.173595	6
-his	Singular/Plural	Masculine Possesive	Personal	0.45623	26
-ours	Plural	neuter Possesive	Personal	0.001809	4827
+his	Singular/Plural	Masculine Possessive	Personal	0.45623	26
+ours	Plural	neuter Possessive	Personal	0.001809	4827
 whether	Singular/Plural	Neuter N/A	Interrogative/Relative	0.0349	261
 me	Singular	Neuter Accusative	Personal	0.146284	71
 nane	Singular/Plural	Neuter N/A	Indefinite	-1.0	-1
@@ -87,7 +87,7 @@ which	Singular/Plural	Neuter N/A	Interrogative/Relative	0.391452	30
 everyone	Singular	Neuter N/A	Indefinite	0.014033	731
 plenty	Plural	Neuter N/A	Indefinite	0.005174	2065
 thir	Plural	Neuter N/A	Relative	3.6E-5	49854
-my	Singular	Neuter Possesive	Personal	0.160592	68
+my	Singular	Neuter Possessive	Personal	0.160592	68
 thae	Plural	Neuter Nominative	Personal	-1.0	-1
 whatever	Singular/Plural	Neuter N/A	Interrogative/Relative	0.013927	740
 whereinto	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1
@@ -100,10 +100,10 @@ no-one	Singular	Neuter N/A	Indefinite	-1.0	-1
 who	Singular/Plural	Neuter N/A	Interrogative/Relative	0.217411	52
 whomever	Singular/Plural	Neuter N/A	Interrogative/Relative	2.9E-5	54563
 everybody	Singular	Neuter N/A	Indefinite	0.006402	1687
-hers	Plural	Feminine Possesive	Personal	0.002657	3612
+hers	Plural	Feminine Possessive	Personal	0.002657	3612
 we	Plural	Neuter Nominative	Personal	0.377518	32
 anything	Singular	Neuter N/A	Indefinite	0.029799	300
-his'n	Singular/Plural	Masculine Possesive	Personal	-1.0	-1
+his'n	Singular/Plural	Masculine Possessive	Personal	-1.0	-1
 themselves	Plural	Neuter Nominative	Personal	0.024912	380
 ane	Singular	Neuter N/A	Indefinite	1.3E-5	78889
 whereto	Singular/Plural	Neuter N/A	Interrogative/Relative	-1.0	-1
