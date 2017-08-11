@@ -17,7 +17,7 @@ import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
 /**
- * class for all nouns and their data
+ * Class for all nouns and their data
  * @author ToddSandberg
  *
  */
@@ -27,16 +27,68 @@ public class Noun implements PartOfSpeech,Serializable{
      */
     private static final long serialVersionUID = -8185217038014096172L;
     public String Noun = "Noun";
-	public String plurality = "--",gender= "--",anAbbreviationFor="--", abbreviatedFrom="--",anAcronymFor="--",irregularPluralForm="--";
-	public Boolean isCompound=null,isCountable=null,acceptsZeroArticle=null,isProperName=null,location=null;
+    /**
+     * Determines whether the word is "Plural" or "Singular"
+     */
+	public String plurality = "--";
+	/**
+	 * Determines whether the word is "Masculine", "Feminine", or "Neuter"
+	 */
+	public String gender= "--";
+	/**
+	 * Determines if the word is an abbreviation, and if so, this contains the words it is an abbreviation for
+	 */
+	public String anAbbreviationFor="--";
+	/**
+	 * If the word has an abbreviate form, this field will contain the abbreviated form of the word.
+	 */
+	public String abbreviatedFrom="--";
+	/**
+	 * If the word is an acronym, this contains what the acronym stands for.
+	 */
+	public String anAcronymFor="--";
+	/**
+	 * Contains the words irregular plural form. This information is taken from the Specialist Lexicon
+	 */
+	public String irregularPluralForm="--";
+	public Boolean isCompound=null;
+	public Boolean isCountable=null;
+	public Boolean acceptsZeroArticle=null;
+	public Boolean isProperName=null;
+	/**
+	 * Determines if the word is a location
+	 */
+	public Boolean location=null;
 	private transient static boolean l =false;
+	/**
+	 * List of the compliments to the word. They are separated from the '+' character/
+	 */
 	public String compliments = "--";
-    public String baseForm= "--" ,animacy = null;
+	/**
+     * The base form after suffixes and prefixes have been removed from the word.
+     */
+    public String baseForm= "--";
+    /**
+     * Contains if the word is "Human", "Animate but not human", or "Inanimate"
+     */
+    public String animacy = null;
+    /**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
+    /**
+     * The information from propBank including wordnet ID, description, form and alias
+     */
     public String propbank = "--";
+    /**
+     * The frame from frameNet of the word
+     */
     public String frame = "--";
-    public transient static String c = "";
+    private transient static String c = "";
 	public Noun(){
 		this("");
 	}

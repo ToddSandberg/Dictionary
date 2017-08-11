@@ -8,9 +8,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 /**
- * converts 3Grams into a nice HashMap format, the keys are the words
- * "word-" is the format if searching for something at the start of a 3Gram
- * "-word" is the format if searching for something at the end of a 3Gram
+ * Converts 3Grams into a nice HashMap format, the keys are the words.
+ * "word-" is the format if searching for something at the start of a 3Gram.
+ * "-word" is the format if searching for something at the end of a 3Gram.
  * @author ToddSandberg
  *
  */

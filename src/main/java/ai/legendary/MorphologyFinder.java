@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 /**
- * finds the baseword of given words by removing suffixes and prefixes
+ * Finds the baseword of given words by removing suffixes and prefixes
  * @author ToddSandberg
  *
  */

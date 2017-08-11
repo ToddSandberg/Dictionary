@@ -3,7 +3,7 @@ package ai.legendary;
 import java.io.Serializable;
 import java.util.HashMap;
 /**
- * saves animacyHashMap
+ * Saves animacyHashMap to prevent the need for future rewrites.
  * @author ToddSandberg
  *
  */

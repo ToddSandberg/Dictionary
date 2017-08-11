@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 
 import javax.swing.JOptionPane;
 /**
- * this file is used for accessing twograms and threegrams. It writes the MostCommon lists
+ * This file is used to access twograms and threegrams. It writes the MostCommon lists and can be used for NLG.
  * @author ToddSandberg
  *
  */

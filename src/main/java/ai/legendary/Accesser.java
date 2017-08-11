@@ -6,7 +6,7 @@ import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.dictionary.Dictionary;
 /**
- * Example uses of the DictionaryAccess class
+ * Example uses of the DictionaryAccess class and the Reformatter class.
  * @author ToddSandberg
  *
  */

@@ -3,7 +3,7 @@ package ai.legendary;
 import java.io.Serializable;
 import java.util.ArrayList;
 /**
- * class for Adjectives and their data
+ * Class for Adjectives and their properties.
  * @author ToddSandberg
  *
  */
@@ -23,22 +23,57 @@ public class Adjective implements PartOfSpeech, Serializable {
      * the higher the number, the more intense
      */
     public int adjectiveIntensifierID = -1;
-    public String comparisonType = "--", quantifier = "--";
-    public Boolean isQualitative = null, isClassifying = null,
-            commonlyPrecededWithAnd = null, worksInAttributivePosition = null,
-            worksInPredicativePosition = null, hasDiminutiveSuffix = null,
-            isProper = null, mustUseMoreMost=null;
+    /**
+     * Determines whether it's "Superlative", "Comparative", or "Absolute"
+     */
+    public String comparisonType = "--";
+    /**
+     * Determine if the Adjective indicates singular or plural meaning.
+     */
+    public String quantifier = "--";
+    public Boolean isQualitative = null;
+    public Boolean isClassifying = null;
+    public Boolean commonlyPrecededWithAnd = null;
+    public Boolean worksInAttributivePosition = null;
+    public Boolean worksInPredicativePosition = null;
+    public Boolean hasDiminutiveSuffix = null;
+    public Boolean isProper = null;
+    /**
+     * Determine whether the adjective uses more or most in its Comparative and Superlative forms
+     */
+    public Boolean mustUseMoreMost=null;
+    /**
+     * The compliments to the Adjective
+     */
     public String compliments = "";
+    /**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
+    /**
+     * The base form after suffixes and prefixes have been removed from the word.
+     */
     public String baseForm = "--";
+    /**
+     * The information from propBank including wordnet ID, description, form and alias
+     */
     public String propbank = "--";
+    /**
+     * The frame from frameNet of the word
+     */
     public String frame = "--";
 
     public Adjective() {
         this("");
     }
-
+    /**
+     * Adjective part of speech with Adjective properties
+     * @param s the word that is an adjective
+     */
     public Adjective(String s) {
         /* Is Qualitative */
         if (s.charAt(s.length() - 1) == '@') {
@@ -114,7 +149,10 @@ public class Adjective implements PartOfSpeech, Serializable {
             isProper = false;
         }
     }
-
+    /**
+     * Adds compliments to the Adjective.
+     * @param comp
+     */
     public void addCompliments(ArrayList<String> comp) {
         for (int x = 0; x < comp.size(); x++) {
             String s = comp.get(x);
@@ -137,6 +175,10 @@ public class Adjective implements PartOfSpeech, Serializable {
 
         }
     }
+    /**
+     * Adds the AdjectiveOrderID to the Adjective.
+     * @param i the adjectiveOrderID
+     */
     public void addAdjectiveOrderID(int i){
         adjectiveOrderID = i;
     }

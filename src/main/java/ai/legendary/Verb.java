@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 /**
- * class for all verbs and their data
+ * Class for all verbs and their data
  * @author ToddSandberg
  *
  */
@@ -17,20 +17,64 @@ public class Verb implements PartOfSpeech ,Serializable{
      */
     private static final long serialVersionUID = -7980913079391599406L;
     public String Verb = "Verb";
-    public String verbType = "--", transivity = "--", tense = "--",
-            aspect = "--", person = "--", phrasal = "--", phrasalParaphrase="--";
+    /**
+     * Contains whether the word is "Auxiliary" or "Modal"
+     */
+    public String verbType = "--";
+    /**
+     * Determines the transivity of the word, as well as it's context sometimes. These are separate by the '|' character.
+     */
+    public String transivity = "--";
+    /**
+     * Contains whether the word is "Present" or "Past" tense
+     */
+    public String tense = "--";
+    public String aspect = "--";
+    /**
+     * Contains whether the word is "First","Second" or "Third" person or a combination of these seperated by the / character
+     */
+    public String person = "--";
+    /**
+     * Determines whether the word if a phrasal. If it isnt, it gets a "No". If it is, it gets either "Separable" if it can be seperated but does not have to be, a "MustBeSeparated" if the word must be separated, and a "NotSeparable" if it cannot be separated.
+     */
+    public String phrasal = "--";
+    /**
+     * Defines 1 or 2 single words that are synonyms for the word if it is a phrasal verb.
+     */
+    public String phrasalParaphrase="--";
     public Boolean isInfinitive;
+    /**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
+    /**
+     * The base form after suffixes and prefixes have been removed from the word.
+     */
     public String baseForm = "--";
+    /**
+     * Determines if the verb is a light verb or not
+     */
     public boolean light = false;
+    /**
+     * Lot's of information from verbnet
+     */
     public String verbnet = "--";
     public String wordNetID = "--";
+    /**
+     * The information from propBank including wordnet ID, description, form and alias
+     */
     public String propbank = "--";
+    /**
+     * The frame from frameNet of the word
+     */
     public String frame = "--";
     /**
      * base ID = 2;
-     * higher the number, higher the intensity
+     * higher the number, higher the intensity, -1 = undefined
      */
     public int verbIntensifierID = -1;
     public Verb() {
@@ -176,7 +220,11 @@ public class Verb implements PartOfSpeech ,Serializable{
         }
         
     }
-
+    /**
+     * Checks if a phrasal verb can be separated by looking if there ever exists something in the middle of the two words.
+     * @param s array of the words in the phrasal
+     * @return if separable
+     */
     private boolean check3gram(String [] s) {
         try{
         Connection conn = DriverManager.getConnection(
@@ -198,6 +246,11 @@ public class Verb implements PartOfSpeech ,Serializable{
             return false;
         }
     }
+    /**
+     * Checks if the phrasal verb is separable or not by using 2grams
+     * @param s is the array of words in the phrasal 
+     * @return if the word is separable
+     */
     private boolean check2gram(String[] s){
         try{
             Connection conn = DriverManager.getConnection(
@@ -219,6 +272,10 @@ public class Verb implements PartOfSpeech ,Serializable{
                 return false;
             }
     }
+    /**
+     * Adds transivity to the word separated by the '|' character.
+     * @param array of examples of the transivity
+     */
     public void addCompliments(ArrayList<String> comp){
         for(int x=0;x<comp.size();x++){
             String s = comp.get(x);

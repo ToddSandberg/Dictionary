@@ -10,9 +10,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 /**
- * converts 2Grams into a nice HashMap format, the keys are the words
- * "word-" is the format if searching for something at the start of a 2Gram
- * "-word" is the format if searching for something at the end of a 2Gram
+ * Converts 2Grams into a nice HashMap format, the keys are the words.
+ * "word-" is the format if searching for something at the start of a 2Gram.
+ * "-word" is the format if searching for something at the end of a 2Gram.
  * @author ToddSandberg
  *
  */

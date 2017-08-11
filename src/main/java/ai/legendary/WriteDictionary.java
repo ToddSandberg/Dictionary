@@ -67,7 +67,7 @@ public class WriteDictionary {
      */
     static AnimacySave animacy = new AnimacySave();
     /**
-     * all basewords found by MorphologyFinder
+     * all basewords found by MorphologyFinder, Contains the original word and the base word
      */
     public static HashMap<String,String> roots = new HashMap<String,String>();
     static FileOutputStream fout;
@@ -116,9 +116,9 @@ public class WriteDictionary {
                     + " Implementation section. The problems with this dictionary and the dictionary access methods"
                     + " are mainly to do with the inability to get 100% accurate base words, and not having 100% of the data we need."
                     + " Base words are found by removing suffixes and then checking if the word that is left is contained"
-                    + " in the dictionary. This leads to some problems. Either the original base word is not in the dictionary"
-                    + " so suffixes and prefixes are not removed, or meaningful suffixes and prefixes are removed, causing"
-                    + " words to have incorrect base words. However, we concluded that this method was the most accurate"
+                    + " in the dictionary. This leads to some problems. If the original base word is not in the dictionary,"
+                    + " suffixes and prefixes are not removed (For example if the 's' was removed from 'cookies' but 'cookie' was not in the dictionary yet, the base word would still be 'cookies'). Also if meaningful suffixes and prefixes are removed, it can cause"
+                    + " words to have incorrect base words (For example 'revision' goes to have a base word of 'vision'). However, we concluded that this method was the most accurate"
                     + " way to identify these base words. Keep this in mind when using methods that convert words, and"
                     + " possibly implement a backoff check of your own. The Analysis section shows the percentage of each"
                     + " field that we have defined. This gives you an idea of how useful the dictionary will be for your"
@@ -126,22 +126,22 @@ public class WriteDictionary {
                     + " JavaDoc: https://toddsandberg.github.io/Dictionary/doc/");
             
             printer.println("## Accessing the Dictionary");
-            printer.println("- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps. To rewrite the dictionary simply run this class.");
+            //printer.println("- The WriteDictionary class takes all of the inputs and writes them to .tsv files and hashmaps. To rewrite the dictionary simply run this class.");
             printer.println("- The DictionaryAccess class provides access to many features of the dictionary. "
                     + "There are getter methods for each partOfSpeech dictionary ex. getNounDictionary. "
                     + "getWordInfo(word) allows for a term look up and returns all part of speech's for the word, while getWordInfo(word,pos) returns the info on a specific part of speech. "
-                    + "getMultipleWordInfo(sentence) uses coreNLP to lookup words based on the part of speech in the sentence. "
-                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which paraphrases from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.");
+                    + "getMultipleWordInfo(sentence) uses coreNLP to look up words based on the part of speech in the sentence. "
+                    + "DictionaryAccess also has a changePOS method which converts a word from one part of speech to another. It also has a light verb converter which converts from light verb sentences and to light verb sentences. You can either feed it a whole sentence or the parts of the sentence.");
             printer.println("- (Look at this class to get started -->) The Accessor class is an example usage of the DictionaryAccess class and the Reformatter class.");
             printer.println("- This repository also contains access to Most Common Lists based on 2grams and 3grams, which are written in the access2gram class.");
             printer.println("- The Reformatter class allows the user to reformat a word depending on the words in the dictionary and the method called. These methods are based off of morphology and the words contained in the dictionary. There is a list of existing methods in the Accesser class under the getAllReformatted method.");
             printer.println("- The various part of speech classes act as containers for the properties of words.");
             printer.println("- MorphologyFinder is used to find the base word of each word in the dictionary.");
             
-            printer.println("## Document Implementation");
+            printer.println("## Building the Dictionary");
+            printer.println("To build the dictionary, all one needs to do is run the WriteDictionary class. However, this is usually unnecessary, since the dictionary comes prebuilt in the form of HashMaps and tsv's in the output's folder. The only times you would need to rebuild the dictionary is if the files got corrupted, or you wanted to add a document to it. To add a document you should read each word from the document. For each word you need to create a part of speech class that correlates with it, then call the merge(word,pos) method. This will automatically merge your words properties into the existing dictionary. It is recommended that you create a new method in WriteDictionary that reads in the document and merges, then call said method from the main.");
             // Adds all subordinate conjunctions to the dictionary
             subordinateConjunctions();
-            printer.println("- subordinateConjunctions.txt Implemented");
             /* store animacy querys for future runs */
             fout = new FileOutputStream("outputs/animacyquery.ser");
             out = new ObjectOutputStream(fout);
@@ -151,7 +151,6 @@ public class WriteDictionary {
             fout.close();
             // Adds all specific gender nouns to the dictionary
             nounGender();
-            printer.println("- nounGenderList.txt Implemented ");
             /* store animacy querys for future runs */
             fout = new FileOutputStream("outputs/animacyquery.ser");
             out = new ObjectOutputStream(fout);
@@ -161,53 +160,36 @@ public class WriteDictionary {
             fout.close();
             // Implements First Names and Last Names and Proper Places
             properNames();
-            printer.println("- First_Names.ser and Last_Names.ser and Proper_Places.ser Implemented");
             // Implements default-lexion.xml
             defLexicon();
-            printer.println("- default-lexicon.xml Implemented");
             // adds count nouns and non count nouns to the dictionary
             countNounOrNot();
-            printer.println(
-                    "- NounList_CountNounsOnly.txt and NounsList_MassNounsOnly.txt Implemented");
             // Implements MobyWordListWithPOS.txt to the dictionary
             mobyListPOS();
-            printer.println("- MobyWordListWithPOS.txt Implemented");
             // Implements Adverb Scales
             adverbIntensifiers();
-            printer.println("- AdverbScales-Manual.csv Implemented");
             // Implements locations
             locations();
-            printer.println("- locations.txt implemented");
             //implement verbnet
             verbnet();
-            printer.println("- verbnet implemented");
             //implements ADJADV.txt from nombank
             adjadv();
-            printer.println("- ADJADV.txt from nombank implemented");
             //Implements propBank
             propBank();
-            printer.println("- propBank implemented");
             //implements shapes
             shapes();
-            printer.println("- shapes.csv implemented");
             //implements framenet
             framenet();
-            printer.println("- fn16lexunits.ttl implemented");
             // implements colors
             colors();
-            printer.println("- colors.txt implemented");
             // Implements SPECIALIST LEXICON
             speclexicon();
-            printer.println("- LEXICON.txt implemented");
             // implements which words are common
             frequency();
-            printer.println("- Word_frequency_list.txt implemented");
             //implements word Scales
             wordScales();
-            printer.println("- Word Scales have been implemented");
             //implements phrasal verbs
-            //phrasalVerbs();
-            //printer.println("- Phrasal Verbs implemented");
+            phrasalVerbs();
             
             printer.println("## Document Output Formats:");
             printer.println(
@@ -216,6 +198,9 @@ public class WriteDictionary {
                     "- serialized dictionary HashMap's for each part of speech");
             printer.println(
                     "- Lists of the most common word combinations in the format pos2 : {pos1=howCommon}");
+            printer.println("## Current Dictionary Write Time: " + seconds / 60
+                    + " minutes and " + seconds % 60 + " seconds");
+            printer.close();
             
             //print out roots HashMap
             try {
@@ -259,10 +244,8 @@ public class WriteDictionary {
                     conjunctionDictionary, determinerDictionary,
                     interjectionDictionary, prepositionDictionary,
                     pronounDictionary, quantifierDictionary, firstNameDictionary, lastNameDictionary,properPlaceDictionary);
-
-            printer.println("## Current Dictionary Write Time: " + seconds / 60
-                    + " minutes and " + seconds % 60 + " seconds");
-            printer.close();
+            
+            
             ttask.cancel();
             time.cancel();
         }
@@ -2649,7 +2632,7 @@ public class WriteDictionary {
     /**
      * implements adverb scales
      */
-    public static void adverbIntensifiers() {
+    private static void adverbIntensifiers() {
         try {
             Scanner scan = new Scanner(
                     new File("inputs/AdverbScales-Manual.csv"));
@@ -2681,7 +2664,7 @@ public class WriteDictionary {
     /**
      * implements locations.txt
      */
-    public static void locations() {
+    private static void locations() {
         try {
             Scanner s = new Scanner(new File("inputs/locations.txt"));
             while (s.hasNext()) {
@@ -2734,7 +2717,7 @@ public class WriteDictionary {
     /**
      * implements frequency list
      */
-    public static void frequency() {
+    private static void frequency() {
         try {
             Scanner s = new Scanner(
                     new File("inputs/Word_frequency_list.txt"));
@@ -2953,7 +2936,7 @@ public class WriteDictionary {
     /**
      * implements colors.txt
      */
-    public static void colors(){
+    private static void colors(){
         try{
             Scanner scan = new Scanner(new File("inputs/colors.txt"));
             while(scan.hasNextLine()){
@@ -2988,7 +2971,7 @@ public class WriteDictionary {
     /**
      * implements verbnet
      */
-    public static void verbnet(){
+    private static void verbnet(){
         try{
             String pathToVerbnet = "inputs/verbnet";
             URL url = new URL("file", null, pathToVerbnet);
@@ -3002,7 +2985,7 @@ public class WriteDictionary {
             String ID = verb.getID();
             System.out.println(ID);
             String IDtype = verbnetType(ID);
-            String format = "\"Type\":\""+IDtype+"\"{\n";
+            String format = "\"Type\":\""+IDtype+"\"{";
             List l = verb.getFrames();
             for(int x=0;x<l.size();x++){
                 IFrame frame = (IFrame) l.get(x);
@@ -3021,13 +3004,13 @@ public class WriteDictionary {
                 for(int i=0;i<post.size();i++){
                     postsyntax += post.get(i).getValue()+" ";
                 }
-                format+="\"frame id\":\""+type.getID()+"\":{\n";
+                format+="\"frame id\":\""+type.getID()+"\":{";
                 format+="\"semantics\":\""+semantic+"\",";
                 format+="\"presyntax\":\""+presyntax+"\",";
                 format+="\"postsyntax\":\""+postsyntax+"\",";
-                format+="\n},\n";
+                format+="},";
             }
-            format+="}\n";
+            format+="}";
             List members = verb.getMembers();
             for(int x=0;x<members.size();x++){
                 IMember member = (IMember) members.get(x);
@@ -3079,7 +3062,7 @@ public class WriteDictionary {
     /**
      * implements ADJADV.txt
      */
-    public static void adjadv(){
+    private static void adjadv(){
         try{
             Scanner s = new Scanner(new File("inputs/ADJADV.txt"));
             String adj = "";
@@ -3177,7 +3160,7 @@ public class WriteDictionary {
     /**
      * implements propbank
      */
-    public static void propBank(){
+    private static void propBank(){
         File path = new File("inputs/frames");
         File[] files = path.listFiles();
         for (int i = 0; i < files.length; i++) {
@@ -3281,7 +3264,7 @@ public class WriteDictionary {
     /**
      * implements shapes.csv
      */
-    public static void shapes(){
+    private static void shapes(){
         try{
         Scanner scan = new Scanner(new File("inputs/Shapes.csv"));
         while(scan.hasNextLine()){
@@ -3299,7 +3282,7 @@ public class WriteDictionary {
     /**
      * implements framenet
      */
-    public static void framenet(){
+    private static void framenet(){
         try{
         Scanner scan = new Scanner(new File("inputs/fn16lexunits.ttl"));
         while(scan.hasNextLine()){
@@ -3379,9 +3362,10 @@ public class WriteDictionary {
     /**
      * implements phrasalVerbs
      */
-    public static void phrasalVerbs(){
+    private static void phrasalVerbs(){
         try{
-            Scanner scan = new Scanner(new File("inputs/phrasals"));
+            Scanner scan = new Scanner(new File("inputs/PhrasalVerbs.tsv"));
+            scan.nextLine();
             while(scan.hasNextLine()){
                 String line = scan.nextLine();
                 String [] split = line.split("\t");
@@ -3392,13 +3376,11 @@ public class WriteDictionary {
                 }
                 String phrasal = split[0] + " " + split[1];
                 Verb v = new Verb(phrasal);
-                /*if(separable){
-                    
+                if(split.length>2)
+                    v.phrasalParaphrase = split[2];
+                if(split.length==4){
+                    v.phrasalParaphrase+="|"+split[3];
                 }
-                else{
-                    v.phrasal = "NotSeparable";
-                }*/
-                v.phrasalParaphrase = split[2];
                 merge(phrasal,v);
             }
             scan.close();
@@ -3412,7 +3394,7 @@ public class WriteDictionary {
      * @param s
      * @return
      */
-    public static PartOfSpeech determinerSorter(String s) {
+    private static PartOfSpeech determinerSorter(String s) {
         if (s.equals("a") || s.equals("an") || s.equals("the")
                 || s.equals("this") || s.equals("these") || s.equals("that")
                 || s.equals("those") || s.equals("what")
@@ -3456,7 +3438,7 @@ public class WriteDictionary {
      * @param pos
      * @return
      */
-    public static HashMap getdictionary(String pos) {
+    private static HashMap getdictionary(String pos) {
         if (pos.equals("noun")) {
             return nounDictionary;
         }
@@ -3504,7 +3486,7 @@ public class WriteDictionary {
      * @param s
      * @return
      */
-    public static String fixSpaces(String s){
+    private static String fixSpaces(String s){
         String temp = "";
         for(int i=0;i<s.length();i++){
             if(s.charAt(i) == '_'){
@@ -3521,7 +3503,7 @@ public class WriteDictionary {
      * @param s
      * @return
      */
-    public static String verbnetType(String s){
+    private static String verbnetType(String s){
         String type = "";
         String[]split = s.split("-");
         String[] num = split[1].split("\\.");

@@ -2,7 +2,7 @@ package ai.legendary;
 
 import java.io.Serializable;
 /**
- * class for all pronouns and their data
+ * Class for all pronouns and their data
  * @author ToddSandberg
  *
  */
@@ -12,8 +12,29 @@ public class Pronoun implements PartOfSpeech,Serializable {
      */
     private static final long serialVersionUID = -3166547793615971528L;
     public String Pronoun = "Pronoun";
-	public String plurality="--",gender="--",pronounCase="--",type="--";
+    /**
+     * Contains if the word is "Plural" or "Singular"
+     */
+	public String plurality="--";
+	/**
+	 * Contains if the word is "Masculine" or "Feminine" or "Neuter"
+	 */
+	public String gender="--";
+	/**
+	 * Contains if the word is "Reflexive" or "Possessive" or "Accusative" or "Nominative" or "N/A"
+	 */
+	public String pronounCase="--";
+	/**
+	 * Contains if the word is "Personal" or "Indefinite" or "Reciprocal"
+	 */
+	public String type="--";
+	/**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
 	public Pronoun(){
 		this("");
@@ -79,7 +100,7 @@ public class Pronoun implements PartOfSpeech,Serializable {
         }
 	    else if(word.equals("my") || word.equals("its") || word.equals("mine")){
 	        if(pronounCase.equals("--"))
-	        pronounCase = "Possesive";
+	        pronounCase = "Possessive";
 	        plurality = "Singular";
 	        gender = "Neuter";
 	        type = "Personal";
@@ -87,34 +108,34 @@ public class Pronoun implements PartOfSpeech,Serializable {
 	    else if(word.equals("our") ||word.equals("their")  || word.equals("ours") || word.equals("theirs") || word.equals("our'n")){
 	        gender = "neuter";
 	        if(pronounCase.equals("--"))
-	        pronounCase = "Possesive";
+	        pronounCase = "Possessive";
 	        plurality = "Plural";
 	        type = "Personal";
 	    }
 	    else if(word.equals("his") || word.equals("his'n")){
 	        if(pronounCase.equals("--"))
-	        pronounCase="Possesive";
+	        pronounCase="Possessive";
 	        plurality = "Singular/Plural";
 	        gender = "Masculine";
 	        type = "Personal";
 	    }
 	    else if(word.equals("her")){
 	        if(pronounCase.equals("--"))
-	        pronounCase="Possesive/Accusative";
+	        pronounCase="Possessive/Accusative";
 	        plurality="Singular";
 	        gender = "Feminine";
 	        type = "Personal";
 	    }
 	    else if(word.equals("hers") || word.equals("her'n")){
 	        if(pronounCase.equals("--"))
-	        pronounCase="Possesive";
+	        pronounCase="Possessive";
 	        plurality = "Plural";
 	        gender = "Feminine";
 	        type = "Personal";
 	    }
 	    else if(word.equals("your") || word.equals("yours") || word.equals("thy") || word.equals("your'n")){
 	        if(pronounCase.equals("--"))
-	        pronounCase = "Possesive";
+	        pronounCase = "Possessive";
 	        plurality = "Singular/Plural";
 	        gender = "Neuter";
 	        type = "Personal";

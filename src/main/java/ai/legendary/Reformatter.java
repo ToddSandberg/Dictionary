@@ -17,8 +17,8 @@ public class Reformatter {
     }
     /**
      * Adds the word to the Reformatter class which allows conversion
-     * @param w = the word to be reformatted
-     * @param p = the part of speech of w
+     * @param w the word to be reformatted
+     * @param p the part of speech of w
      */
     public void addWord(String w, String p) {
         word = w;
@@ -28,7 +28,7 @@ public class Reformatter {
     /**
      * Converts the word to one who does
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String oneWhoDoes() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -41,7 +41,7 @@ public class Reformatter {
     /**
      * Converts the word to one who practices
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String oneWhoPractices() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -56,7 +56,7 @@ public class Reformatter {
     /**
      * Converts the word to one who receives
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String oneWhoReceives() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -67,7 +67,7 @@ public class Reformatter {
     /**
      * Converts the word to person of
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String personOf() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -80,7 +80,7 @@ public class Reformatter {
     /**
      * Converts the word to result/event/state
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String resultEventState() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -100,7 +100,7 @@ public class Reformatter {
     /**
      * Converts the word to quality (mostly adjective to noun)
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String quality() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -112,7 +112,7 @@ public class Reformatter {
     /**
      * Converts the word to collectives/locations/behaviors
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String collectivesLocationsBehaviors() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -129,7 +129,7 @@ public class Reformatter {
     /**
      * Converts the word to fields of study
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String fieldsOfStudy() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -141,7 +141,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning in
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String in_intraPrefix() {
         String newwords = "";
@@ -216,7 +216,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning out
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String out_extraPrefix() {
         String newwords = "";
@@ -291,7 +291,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning around
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String aroundPrefix() {
         String newwords = "";
@@ -370,7 +370,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning off
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String offPrefix() {
         String newwords = "";
@@ -441,7 +441,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning on
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String on_epiPrefix() {
         String newwords = "";
@@ -516,7 +516,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning together
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String togetherPrefix() {
         String newwords = "";
@@ -595,7 +595,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning negative
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String negativePrefix() {
         String newwords = "";
@@ -690,7 +690,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning above
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String abovePrefix() {
         String newwords = "";
@@ -777,7 +777,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning before
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String beforePrefix() {
         String newwords = "";
@@ -856,7 +856,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning below
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String belowPrefix() {
         String newwords = "";
@@ -931,7 +931,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning after
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String after_postPrefix() {
         String newwords = "";
@@ -1006,7 +1006,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning against
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String againstPrefix() {
         String newwords = "";
@@ -1081,7 +1081,7 @@ public class Reformatter {
     /**
      * Converts the word to have prefix meaning do something again
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String doAgainPrefix() {
         String newwords = "";
@@ -1152,7 +1152,7 @@ public class Reformatter {
     /**
      * Converts the word to resembling
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String resembling() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -1176,7 +1176,7 @@ public class Reformatter {
     /**
      * Converts the word to thing of
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String thingOf() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -1189,7 +1189,7 @@ public class Reformatter {
     /**
      * Converts the word to possessing/full of
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String possessing() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -1203,7 +1203,7 @@ public class Reformatter {
     /**
      * Converts the word to capable of
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String capableOf() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -1215,7 +1215,7 @@ public class Reformatter {
     /**
      * Converts the word to without
      * 
-     * @return new word
+     * @return string containing new words
      */
     public String without() {
         ArrayList<String> suffs = new ArrayList<String>();
@@ -1224,7 +1224,7 @@ public class Reformatter {
     }
     /**
      * Converts the word into diminutive form
-     * @return new words
+     * @return string containing new words
      */
     public String diminutives(){
         String newwords = "";
@@ -1334,7 +1334,7 @@ public class Reformatter {
     
     /**
      * Checks the given suffixes
-     * @param suffs = suffixes to be checked
+     * @param suffs suffixes to be checked
      * @return string of words found
      */
     public String checkSuffixesAdjectives(ArrayList<String> suffs) {
@@ -1361,7 +1361,7 @@ public class Reformatter {
     }
     /**
      * Checks the given suffixes
-     * @param suffs = Suffixes to be checked
+     * @param suffs Suffixes to be checked
      * @return string of words found
      */
     public String checkSuffixesNouns(ArrayList<String> suffs) {

@@ -2,7 +2,7 @@ package ai.legendary;
 
 import java.io.Serializable;
 /**
- * class for all Interjections and their data
+ * Class for all Interjections and their data
  * @author ToddSandberg
  *
  */
@@ -19,13 +19,18 @@ public class Interjection implements PartOfSpeech,Serializable{
      * 4 Happy or Excited
      */
 	public int interjectionTypeID = -1;
+	/**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
 	public Interjection(){
 		this("");
 	}
 	public Interjection(String word) {
-		// TODO Auto-generated constructor stub
 	}
 	public String toString(){
 	    return "Interjection: InterjectionTypeID=" + interjectionTypeID + ", howCommon="+howCommon+ ", commonRank="+commonRank;

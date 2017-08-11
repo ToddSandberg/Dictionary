@@ -2,7 +2,7 @@ package ai.legendary;
 
 import java.io.Serializable;
 /**
- * class for all Adverbs and their data
+ * Class for all Adverbs and their data
  * @author ToddSandberg
  *
  */
@@ -27,11 +27,30 @@ public class Adverb implements PartOfSpeech,Serializable{
      * Base ID = 2
      */
 	public int advIntensiferID = -1;
-	public Boolean isRelativeAdverb=false,isComparativeAdverb=null,isSuperlativeAdverb=null,noCompOrSuperForm=null,mustUseMoreMost=null;
+	public Boolean isRelativeAdverb=false;
+	public Boolean isComparativeAdverb=null;
+	public Boolean isSuperlativeAdverb=null;
+	public Boolean noCompOrSuperForm=null;
+	public Boolean mustUseMoreMost=null;
+	/**
+	 * Determines what type of intensifier the Adverb is. Ex. "Manner","Time","Place,etc.
+	 */
 	public String advIntensifier = "--";
+	/**
+	 * Determines the irregular form of the word. This info is currently from the Specialist Lexicon.
+	 */
     public String irregularForm = "--";
+    /**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
+    /**
+     * The information from propBank including wordnet ID, description, form and alias
+     */
     public String baseForm = "--";
 	public Adverb(){
 		this("");

@@ -2,7 +2,7 @@ package ai.legendary;
 
 import java.io.Serializable;
 /**
- * class for all quantifiers and their data
+ * Class for all quantifiers and their data
  * @author ToddSandberg
  *
  */
@@ -17,7 +17,13 @@ public class Quantifier implements PartOfSpeech,Serializable {
      *  2 = cardinal number
      */
     public int quantifierID = -1;
+    /**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
     public Quantifier(String s) {
         if(s.endsWith("one")||s.endsWith("two")||s.endsWith("three")||s.endsWith("four")||s.endsWith("five")||s.endsWith("six")||s.endsWith("seven")||s.endsWith("eight")||s.endsWith("nine")||s.endsWith("zero")||s.endsWith("ten")||s.endsWith("eleven")||s.endsWith("twelve")||s.endsWith("teen")||s.contains("billion")||s.endsWith("dozen")||s.endsWith("ty")||s.endsWith("trillion")||s.endsWith("thousand")||s.endsWith("quadrillion")||s.endsWith("zillion")||s.equals("ane")||s.equals("fourscore")||s.endsWith("hundred")||s.endsWith("million")||s.endsWith("threescore")){

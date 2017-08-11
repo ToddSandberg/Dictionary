@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 /**
- * Analyzes the Dictionary contents for the README
+ * Analyzes the Dictionary contents for the README. To run this simply create the class and pass all arguments.
  * @author ToddSandberg
  *
  */

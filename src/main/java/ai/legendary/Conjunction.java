@@ -2,7 +2,7 @@ package ai.legendary;
 
 import java.io.Serializable;
 /**
- * class for all conjunctions and their data
+ * Class for all conjunctions and their data
  * @author ToddSandberg
  *
  */
@@ -12,8 +12,17 @@ public class Conjunction implements PartOfSpeech,Serializable{
      */
     private static final long serialVersionUID = 5399780922764479253L;
     public String Conjunction = "Conjunction";
+    /**
+     * Whether the conjunction is a "Coordinating Conjunction", "Correlative Conjunction", or a "Subordinate Conjunction"
+     */
 	public String conjunctionType = "--";
+	/**
+     * Percentage of use in the Frequency list, -1 = undefined
+     */
     public float howCommon = -1;
+    /**
+     * The rank in the Frequency list, -1 = undefined
+     */
     public long commonRank = -1;
 	public Conjunction(){
 	}
